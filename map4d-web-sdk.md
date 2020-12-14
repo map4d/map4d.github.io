@@ -1,3 +1,3 @@
 ---
-permalink: /map4d-web-sdk/v1.5/index.html
+permalink: /map4d-web-sdk/v1.5/#/
 ---
