@@ -1,0 +1,225 @@
+/* header */
+.banner {
+  width: 100%;
+  background-color: rgba(28, 117, 188, 0.78);
+  position: relative;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+.banner::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  content: "";
+  top: 0;
+  background-color: #ffffff;
+  transform: skew(-87deg);
+  transform-origin: left bottom;
+}
+
+.banner::before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #1c75bc;
+  background-image: url("../../public/images/background.png");
+  background-repeat: no-repeat;
+  background-position: 50% 55%;
+  background-size: cover;
+  z-index: -1;
+}
+
+.banner .navbar-collapse {
+  flex-grow: unset;
+  width: 1050px;
+  max-width: 100%;
+}
+.menuHeader .navbar .navbar-brand {
+  cursor: pointer;
+  width: 240px;
+}
+.menuHeader .navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+#itemDropdown .dropdown-menu {
+  padding: 0px;
+  border-radius: 10px;
+  padding: 0;
+  left: 0;
+  margin-top: 0;
+}
+
+#itemDropdown .dropdown-menu > li {
+  padding: 11px 30px;
+  text-align: left;
+}
+#itemDropdown .dropdown-menu > li > a {
+  text-decoration: none;
+  font: normal normal bold 20px/28px Roboto;
+  color: #1c75bc;
+  text-transform: uppercase;
+}
+.menuHeader .navbar .navbar-toggler {
+  border-color: #ffffff;
+}
+.menuHeader .navbar .navbar-nav .nav-item .nav-link {
+  color: #ffffff;
+  font: normal normal bold 24px/32px Roboto;
+  text-transform: uppercase;
+}
+.menuHeader .navbar .navbar-nav .nav-item .navLinkDropdown {
+  color: #ffffff;
+  font: normal normal bold 24px/32px Roboto;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.menuHeader .navbar .navbar-nav .nav-item .nav-link::after {
+  content: none;
+}
+.menuHeader .navbar .navbar-nav .nav-item .nav-link:not(.dropdown-toggle):hover::before {
+  position: absolute;
+  border-bottom: 2px solid #ffffff;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.banner .titleUppercase {
+  text-align: center;
+  font: normal normal bold 80px/130px Roboto;
+  text-transform: uppercase;
+  padding: 100px 0 250px 0;
+}
+/* main content */
+.main {
+  margin-top: 50px;
+}
+.main .solution .contentSolution {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.main .solution .contentSolution .text span {
+  font: italic normal 900 20px/38px Roboto;
+}
+.menuDocument {
+  margin-top: 98px;
+}
+.menuDocument .menuItem {
+  width: 100%;
+  height: 456px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 15px #00000029;
+  border-radius: 10px;
+  opacity: 1;
+  text-align: center;
+  padding: 0 30px;
+  margin-top: 10px;
+}
+.menuDocument .menuItem .icon {
+  padding: 20px 0;
+  border-bottom: 2px solid #1c75bc;
+}
+.menuDocument .menuItem .content {
+  height: 300px;
+}
+.menuDocument .menuItem .content .title {
+  text-transform: uppercase;
+}
+.menuDocument .menuItem .content {
+  padding-top: 17px;
+  font: normal normal medium 18px/32px Roboto;
+  font-weight: 600;
+}
+.menuDocument .menuItem .content .text {
+  padding-top: 17px;
+}
+.menuDocument .menuItem a {
+  width: 100%;
+  background-color: #1c75bc;
+  border: none;
+  font: normal normal 600 18px/22px Segoe UI;
+}
+/* footer */
+footer {
+  margin-top: 100px;
+  background-color: #1c75bc;
+  color: #ffffff;
+}
+.contact .logo {
+  padding-top: 100px;
+  text-align: center;
+}
+.contact .linkContact {
+  margin-top: 30px;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #ffffff;
+}
+.contact .contactItems {
+  width: 620px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+.contact .linkContact .contactItems .contactItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.contact .linkContact .contactItems .contactItem .iconCircle {
+  width: 73px;
+  height: 73px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.contact .linkContact .contactItems .contactItem a {
+  text-decoration: none;
+  font: normal normal 900 24px/24px Roboto;
+  color: #ffffff;
+}
+.contactInfor {
+  margin-top: 40px;
+}
+.contactInfor .headquarters {
+  text-align: center;
+  padding: 0 15px;
+}
+.contactInfor .headquarters .titleUppercase {
+  font: normal normal 500 28px/37px Roboto;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.contactInfor .headquarters a {
+  color: #ffffff;
+  font: normal normal 300 16px/24px Roboto;
+}
+.contactInfor .headquarters p {
+  margin-top: 1rem;
+  font: normal normal 300 16px/24px Roboto;
+}
+.copyRight {
+  margin-top: 34px;
+  border-top: 2px solid #ffffff;
+  padding: 15px 0;
+}
+.copyRight .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copyRight .container .link span {
+  font: italic normal normal 16px/24px Roboto;
+}
