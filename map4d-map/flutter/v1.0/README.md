@@ -1,7 +1,7 @@
 # Map4dMap Flutter
-[![map4d](https://img.shields.io/badge/map4d-map-success)](https://map4d.vn/)
+[![map4d](https://img.shields.io/badge/map4d-map-orange)](https://map4d.vn/)
+[![platform](https://img.shields.io/badge/platform-flutter-45d2fd.svg)](https://flutter.dev/)
 [![pub package](https://img.shields.io/pub/v/map4d_map.svg)](https://pub.dev/packages/map4d_map)
-[![platform flutter](https://img.shields.io/badge/platform-flutter-orange.svg)](https://flutter.dev/)
 
 > **Map4dMap Flutter package** cung cấp Map4dMap SDK cho cả thiết bị Android và iOS, cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
 > Map4dMap plugin dựa trên cơ chế của Flutter để bổ sung các màn hình hiển thị cho Android và iOS.

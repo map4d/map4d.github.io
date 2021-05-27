@@ -1,7 +1,7 @@
 # Map4dMap iOS SDK
-[![map4d](https://img.shields.io/badge/map4d-map-success)](https://map4d.vn/)
+[![map4d](https://img.shields.io/badge/map4d-map-orange)](https://map4d.vn/)
+[![platform](https://img.shields.io/cocoapods/p/Map4dMap)](https://www.apple.com/ios/)
 [![cocoapods](https://img.shields.io/cocoapods/v/Map4dMap)](https://cocoapods.org/pods/Map4dMap)
-[![platform](https://img.shields.io/cocoapods/p/Map4dMap)](https://map4d.vn/)
 
 > **Map4D iOS SDK** cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên iPhone, iPad.  
 > **Map4D iOS SDK** không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn

@@ -1,5 +1,5 @@
 # Map4dMap JavaScript SDK
-[![map4d](https://img.shields.io/badge/map4d-map-success)](https://map4d.vn/)
+[![map4d](https://img.shields.io/badge/map4d-map-orange)](https://map4d.vn/)
 [![platform](https://img.shields.io/badge/platform-js-ff69b4.svg)](https://map.map4d.vn/)
 
 Map4dMap JavaScript SDK cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên các trang web và thiết bị di động.

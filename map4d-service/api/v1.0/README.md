@@ -1,6 +1,6 @@
 # Map4dService API
-[![map4d](https://img.shields.io/badge/map4d-service-success)](https://map4d.vn/)
-[![platform](https://img.shields.io/badge/platform-api-blueviolet.svg)](https://map.map4d.vn/)
+[![map4d](https://img.shields.io/badge/map4d-service-orange)](https://map4d.vn/)
+[![platform](https://img.shields.io/badge/platform-api-blueviolet.svg)](https://map4d.vn/)
 
 Map4D API Service cung cấp nền tảng cho Web, iOS, Android,
 
