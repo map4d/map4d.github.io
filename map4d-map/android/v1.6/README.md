@@ -24,8 +24,7 @@ allprojects {
 }
 ```
 
-<!-- tabs:start -->
-#### ** Gradle **
+Thêm vào dependencies:
 
 ```xml
 dependencies {
@@ -33,18 +32,6 @@ dependencies {
   implementation 'vn.map4d:Map4dMap:1.6.0'
 }
 ```
-
-#### ** Maven **
-
-```xml
-<dependency>
-	<groupId>vn.map4d</groupId>
-	<artifactId>Map4dMap</artifactId>
-	<version>1.5.0</version>
-	<type>pom</type>
-</dependency>
-```
-<!-- tabs:end -->
 
 ## Using
 
