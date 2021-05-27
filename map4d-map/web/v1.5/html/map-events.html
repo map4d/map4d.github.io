@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="iframe-contents">
+    <div id="map" style="position: relative; overflow: hidden;"></div>
+    <div id="events"></div>
+  </div>
+  <script>
+    var events = [
+      "cameraWillChange",
+      "cameraChanging",
+      "idle",
+      "hover",
+      "click",
+      "dblClick",
+      "drag",
+      "dragEnd",
+      "dragStart",
+      "mouseMove",
+      "mouseOut",
+      "mouseOver",
+      "rightClick",
+      "tilesLoaded",
+      "modeChanged",
+      "longClick",
+      "boundsChanged"
+    ];
+
+    function populateTable() {
+      var eventsTable = document.getElementById("events");
+      var content = "";
+      for (var i = 0; i < events.length; i++) {
+        content += '<div class="event" id="' + events[i] + '">' + events[i] + "</div>";
+      }
+      eventsTable.innerHTML = content;
+    }
+
+    function setupListener(map, name) {
+      var eventRow = document.getElementById(name);
+      map.addListener(name, function (args) {
+        eventRow.className = "event active";
+        var timeout = setTimeout(function () {
+          eventRow.className = "event inactive";
+        }, 1000);
+      });
+    }
+
+    function initMap() {
+      populateTable()
+      let options = {
+        center: { lat: 16.072163491469226, lng: 108.22690536081757 },
+        zoom: 15,
+        controls: true
+      }
+      let map = new map4d.Map(document.getElementById("map"), options)
+      for (var i = 0; i < events.length; i++) {
+        setupListener(map, events[i]);
+      }
+    }
+  </script>
+  <script src="https://api.map4d.vn/sdk/map/js?version=1.5.0&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+  <style type="text/css">
+    html,
+
+    #iframe-contents {
+      height: 400px;
+      overflow: auto;
+    }
+
+    #map {
+      float: left;
+      width: 725px;
+      height: 400px;
+      margin-right: 10px;
+    }
+
+    #events {
+      padding: 2px;
+      overflow: hidden;
+      font-size: 15px;
+      font-family: "Droid Sans Mono", monospace;
+    }
+
+    .event {
+      transition: background-color 0.5s ease-out;
+      padding-bottom: 2px;
+    }
+
+    .active {
+      background-color: #99ccff;
+    }
+
+    .inactive {
+      background-color: white;
+    }
+  </style>
+
+</body>
+
+</html>

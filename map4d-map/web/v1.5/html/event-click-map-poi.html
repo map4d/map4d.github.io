@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script defer
+    src="https://api.map4d.vn/sdk/map/js?version=1.5.0&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+</head>
+
+<body>
+  <div id="map">
+    <div id="info">
+      <div>
+        <div id="title"></div>
+        <div id="subtitle"></div>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="http://localhost:6969/dist/map4dsdk@1.5.0.dev.js"></script> -->
+  <script>
+    let map;
+    let infoWindow
+
+    function initMap() {
+      let options = {
+        center: { lat: 16.072163491469226, lng: 108.22690536081757 },
+        zoom: 15,
+        controls: true
+      }
+      map = new map4d.Map(document.getElementById("map"), options)
+      infoWindow = document.getElementById("info")
+
+      map.addListener(
+        "click",
+        function (args) {
+          let poi = args.poi
+          document.getElementById("title").innerText = "Name: " + poi.name
+          document.getElementById("subtitle").innerText = "ID: " + poi.id
+
+          let pixel =  args.pixel
+          infoWindow.style.left = pixel.x + "px"
+          infoWindow.style.top = pixel.y + "px"
+          infoWindow.style.visibility = "visible"
+        },
+        {mappoi: true}
+      )
+    }
+    // initMap()
+  </script>
+  <style>
+    #map {
+      height: 100%;
+    }
+
+    #info {
+      position: absolute;
+      z-index: 1;
+      background-color: white;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px;
+      transform: translate(-50%, -100%);
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</body>
+
+</html>
