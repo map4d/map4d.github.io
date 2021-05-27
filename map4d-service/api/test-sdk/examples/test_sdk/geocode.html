@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body class="bodyrange">
+<p>Key (*):<input class="input" id="inputKey" placeholder="Nhập key"/></p>
+<p>Lat (*): <input class="input" id="inputLat" placeholder="Nhập vĩ độ"/></p>
+<p>Lng (*): <input class="input" id="inputLng" placeholder="Nhập kinh độ"></p>
+<p><button onclick="autoSuggest_Run();">Submit</button></p>
+<pre id="displayResult"></pre>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="./js/resultjson.js"></script>
+<script>
+    var displayResult = document.getElementById("displayResult");
+    function autoSuggest_Run() {
+        var inputLat = document.getElementById("inputLat").value;
+        var inputLng = document.getElementById("inputLng").value;
+        var key= document.getElementById("inputKey").value;
+        if (inputLat==null || inputLat=="" || inputLng==null || inputLng=="" || key==null || key=="" ){
+            displayResult.innerHTML = "(*) là bắt buộc";
+            return;
+        }
+        $.getJSON('https://api-test.map4d.vn/sdk/geocode?key='+key+'&lat='+inputLat+'&lng='+inputLng, function(data) {
+            displayResult.innerHTML =syntaxHighlight(JSON.stringify(data, null, 2)) ;
+        })
+    }
+
+</script>
+
+</body>
+</html>

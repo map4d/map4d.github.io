@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body class="bodyrange">
+<p>Key (*):<input class="input" id="inputKey" placeholder="Nhập key"/></p>
+<p>Origin: <input class="input" id="inputOrigin" placeholder="Vị trí lat, lng của địa điểm bắt đầu. VD:16.024634,108.209217"/></p>
+<p>Destination: <input class="input" id="inputDestination" placeholder="Vị trí lat,lng của địa điểm kết thúc. VD:16.020179,108.211212"/></p>
+<p>Points: <input class="input" id="inputPoints" placeholder="Danh sách các lat, lng mà muốn đi qua. VD:16.039173,108.210912;16.044597,108.217263"/></p>
+<p>Mode (*): <select id="inputMode" class="input">
+    <option value="car">Car (xe hơi)</option>
+    <option value="bike" >Bike (xe đạp)</option>
+    <option value="foot">Foot (đi bộ)</option>
+    <option value="motorcycle">Motorcycle (xe máy)</option>
+</select></p>
+<p>Language: <select class="input" id="inputLanguage">
+    <option value="vi">Tiếng Việt (vi)</option>
+    <option value="en">Tiếng Anh (en)</option>
+</select></p>
+<p>Weighting: <select class="input" id="inputWeighting">
+    <option value="0">Tìm đường đi ngắn nhất</option>
+    <option value="1">Tìm đường đi nhanh nhất</option>
+    <option value="2">Cân bằng giữa ngắn nhất và nhanh nhất</option>
+</select> </p>
+<p><button onclick="textSearch_Run();">Submit</button></p>
+
+<pre id="displayResult"></pre>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script>
+    function syntaxHighlight(json) {
+        json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+            var cls = 'number';
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) {
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) {
+                cls = 'null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
+    var displayResult = document.getElementById("displayResult");
+    function textSearch_Run() {
+        var key= document.getElementById("inputKey").value;
+        var origin = document.getElementById("inputOrigin").value;
+        var destination = document.getElementById("inputDestination").value;
+        var points = document.getElementById("inputPoints").value;
+        var mode = document.getElementById("inputMode");
+        var language = document.getElementById("inputLanguage");
+        var weighting = document.getElementById("inputWeighting");
+        if(key == null|| key==""){
+            displayResult.innerHTML="(*) là bắt buộc";
+            return;
+        }
+        let selectedMode = mode.options[mode.selectedIndex].value;
+        let selectedLanguage = language.options[language.selectedIndex].value;
+        let selectedWeighting = weighting.options[weighting.selectedIndex].value;
+        $.getJSON('https://api.map4d.vn/sdk/route?key='+key+'&origin='+origin+'&destination='+destination+'&points='+points+'&mode='+selectedMode+'&language='+selectedLanguage+'&weighting=' + selectedWeighting, function(data) {
+
+            displayResult.innerHTML = syntaxHighlight(JSON.stringify(data, null, 2));
+        })
+    }
+</script>
+
+</body>
+</html>

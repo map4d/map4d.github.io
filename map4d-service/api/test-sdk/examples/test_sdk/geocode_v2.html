@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body class="bodyrange">
+<p>Key (*):<input class="input" id="inputKey" placeholder="Nhập key"/></p>
+<p>Location: <input class="input" id="inputLocation" placeholder="Tọa độ lat,lng. VD: 16.036505,108.218186"/></p>
+<p>Address: <input class="input" id="inputAddress" placeholder="Địa chỉ của địa điểm. VD: 31 Lê Văn Duyệt, Phường Nai Hiên Đông, Quận Sơn Trà, Thành phố Đà Nẵng"></p>
+<p>ViewBox: <input class="input" id="inputViewBox" placeholder="Khung muốn tìm kiếm. VD: 16.056453967981348,108.19387435913086,16.093031550262133,108.25927734375"></p>
+<p><button onclick="autoSuggest_Run();">Submit</button></p>
+<pre id="displayResult"></pre>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script src="./js/resultjson.js"></script>
+<script>
+    var displayResult = document.getElementById("displayResult");
+    function autoSuggest_Run() {
+        var key= document.getElementById("inputKey").value;
+        var inputLocation = document.getElementById("inputLocation").value;
+        let inputAddress = document.getElementById("inputAddress").value;
+        var inputViewBox = document.getElementById("inputViewBox").value;
+        if (key==null || key=="" ){
+            displayResult.innerHTML = "(*) là bắt buộc";
+            return;
+        }
+        $.getJSON('https://api-test.map4d.vn/sdk/v2/geocode?key='+key+'&location='+inputLocation+'&address='+inputAddress+'&viewbox='+inputViewBox, function(data) {
+            displayResult.innerHTML =syntaxHighlight(JSON.stringify(data, null, 2)) ;
+        })
+    }
+
+</script>
+
+</body>
+</html>

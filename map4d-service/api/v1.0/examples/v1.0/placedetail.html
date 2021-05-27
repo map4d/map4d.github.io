@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body class="bodyrange">
+<p>Key (*):<input class="input" id="inputKey" placeholder="Nhập key"/></p>
+<p>Id (*): <input class="input" id="inputId" placeholder="Nhập id của địa điểm"/></p>
+<p><button onclick="nearBySearch_Run();">Submit</button></p>
+<pre id="displayResult"></pre>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script>
+    var displayResult = document.getElementById("displayResult");
+    function syntaxHighlight(json) {
+        json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+            var cls = 'number';
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) {
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) {
+                cls = 'null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
+    function nearBySearch_Run() {
+        var key= document.getElementById("inputKey").value;
+        var inputId = document.getElementById("inputId").value;
+        if(inputId == null|| inputId==""||key==null||key==""){
+            displayResult.innerHTML="(*) là bắt buộc";
+            return;
+        }
+        $.getJSON('https://api.map4d.vn/sdk/place/detail/'+inputId+'?key='+key, function(data) {
+            displayResult.innerHTML = syntaxHighlight(JSON.stringify(data, null, 2));
+        })
+    }
+</script>
+
+</body>
+</html>

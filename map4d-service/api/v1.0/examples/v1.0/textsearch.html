@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body class="bodyrange">
+<p>Key (*):<input class="input" id="inputKey" placeholder="Nhập key"/></p>
+<p>Text (*): <input class="input" id="inputText"  placeholder="Nội dung muốn tìm"/></p>
+<p>Types: <input class="input" id="inputType" placeholder="Kiểu của địa điểm. VD: cafe, atm"/></p>
+<p>DateTime: <input class="input" id="inputDate" placeholder="Thời gian (đơn vị miliseconds)"/></p>
+<p>Location: <input class="input" id="inputLocation" placeholder="Tọa độ lat, lng. VD: 16.036505,108.218186"/></p>
+<p>Accuracy: <select  class="input" id="inputAccuracy">
+    <option value="0">Tìm chính xác</option>
+    <option value="1">Tìm tương đối</option>
+</select></p>
+<p><button onclick="textSearch_Run();">Submit</button></p>
+<pre id="displayResult"></pre>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script>
+    function syntaxHighlight(json) {
+        json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+            var cls = 'number';
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) {
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) {
+                cls = 'null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
+    let displayResult = document.getElementById("displayResult");
+    function textSearch_Run() {
+        var key= document.getElementById("inputKey").value;
+        var inputText = document.getElementById("inputText").value;
+        var inputTypes = document.getElementById("inputType").value;
+        var inputDate = document.getElementById("inputDate").value;
+        var inputLocation = document.getElementById("inputLocation").value;
+        var inputAccuracy = document.getElementById("inputAccuracy");
+        if(inputText == null|| inputText=="" ||key==null||key==""){
+            displayResult.innerHTML="(*) là bắt buộc";
+            return;
+        }
+        let types="";
+        inputTypes=inputTypes.split(",");
+        for (var i in inputTypes){
+            types += "&types="+inputTypes[i];
+        }
+        let selectedAccuracy = inputAccuracy.options[inputAccuracy.selectedIndex].value;
+        $.getJSON('https://api.map4d.vn/sdk/place/text-search?key='+key+'&text='+inputText +types+ '&datetime='+inputDate+'&location='+inputLocation+'&accuracy=' +selectedAccuracy, function(data) {
+            var limit =5;
+            var result;
+            if(data.result != null){
+                result = data.result.slice(0,limit);
+                data.result=result;
+            }
+            displayResult.innerHTML = syntaxHighlight(JSON.stringify(data, null, 2));
+        })
+    }
+</script>
+
+</body>
+</html>

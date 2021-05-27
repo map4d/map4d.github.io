@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+    <title>GeoCode</title>
+    <link rel="stylesheet" type="text/css" href="../css/me-ui.css">    
+    <link rel="stylesheet" type="text/css" href="css/ui.css">
+    
+</head>
+
+<body>
+    <div id="swagger-ui"></div>
+    <script>	
+		var api = "/sdk/weather";
+        if (window.navigator.userAgent.indexOf("Edge") > -1) {
+            console.log("Removing native Edge fetch in favor of swagger-ui's polyfill")
+            window.fetch = undefined;
+        }
+    </script>
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/me-ui-bundle.js"></script>
+    <script src="../js/me-ui-standalone-preset.js"></script>
+    <script src="js/doc.js"></script>
+
+</body></html>
