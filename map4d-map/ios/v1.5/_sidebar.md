@@ -1,4 +1,4 @@
-- [Overview](/)
+- [Overview](/ "Map4dMap iOS SDK")
 - [Changelog](changelog.md)
 - [Samples](samples.md)
 
