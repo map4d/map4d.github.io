@@ -9,7 +9,7 @@ những điểm có sẵn đó thì bạn có thể dùng lớp **MFPOI**. Các 
 
 | Name                       |Description                                                                                                              |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| **position**               | Chỉ định một **CLLocationCoordinate2D** để xác định vị trí ban đầu của **POI**.                                         |
+| **position**               | Chỉ định một [MFLatLng](//pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html) để xác định vị trí ban đầu của **POI**.|
 | **title**                  | Chỉ định tiêu đề của **POI**. Tiêu đề sẽ hiển thị thông tin của **POI** mà bạn muốn hiển thị cho người dùng.            |
 | **titleColor**             | Chỉ định màu tiêu đề của **POI**.                                                                                       |
 | **subtitle**               | Chỉ định thông tin mô tả của **POI**.                                                                                   |
@@ -41,8 +41,6 @@ void _add() {
     position: MFLatLng(16.0324816, 108.132791),
     title: "IOT Link",
     titleColor: Colors.red,
-    // subtitle: WordPair.random().asLowerCase,
-    // icon: _markerIcon!,
     type: "hospital",
     onTap: () {
       _onPOITapped(poiId);
