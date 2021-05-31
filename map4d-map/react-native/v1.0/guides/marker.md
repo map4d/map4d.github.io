@@ -69,6 +69,41 @@ render() {
 }
 ```
 
+### 3. Render Marker với custom view
+
+Ngoài việc tùy chỉnh icon cho Marker, bạn còn có thể dùng custom view để thay đổi hình ảnh của Marker như hình dưới:
+
+![CustomViewMarker](../../resources/view-marker.png)
+
+> Các children components có thể được thêm vào trong Marker và nội dung được hiển thị sẽ thay thế cho icon marker.
+
+```javascript
+render() {
+  return (
+    <MFMapView ref={ref => this.map = ref} >
+      <MFMarker
+        coordinate={{latitude: 16.071364, longitude: 108.224487}}
+        zIndex={3.0}
+        visible={true} >
+          <View style={{
+            width: 120,
+            height: 60,
+            backgroundColor: 'blue',
+            flexDirection: 'row'
+          }}>
+            <Image source={{uri: 'https://b.thumbs.redditmedia.com/F82n9T2HtoYxNmxbe1CL0RKxBdeUEw-HVyd-F-Lb91o.png'}}
+              style={{ borderColor: "red", borderWidth: 5, height: 60, width: 60 }} />
+
+            <Text style={{ fontWeight: 'bold', color: 'black' }}>
+              {"12:09"}
+            </Text>
+        </View>
+      </MFMarker>
+    </MFMapView>
+  );
+}
+```
+
 ### Methods
 
 | Name                   | Parameters                           | Description                                                                            |
