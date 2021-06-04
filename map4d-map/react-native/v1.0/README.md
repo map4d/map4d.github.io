@@ -20,17 +20,14 @@ npm install react-native-map4d-map --save
 Import `react-native-map4d-map` vào project files.
 
 ```js
-import {MFMapView, MFMarker, MFCircle, MFPOI} from 'react-native-map4d-map'
+import {MFMapView, MFMarker, MFCircle, MFPolyline, MFPolygon, MFPOI} from 'react-native-map4d-map'
 ```
 
 ### Phiên bản Android/iOS hỗ trợ
 
 * Android: yêu cầu Android SDK 21 trở lên
-* iOS: yêu cầu phiên bản iOS 10.0 trở lên  
-  * Thay đổi version trong file: `ios/Podfile`
-    ```podfile
-    platform :ios, '10.0'
-    ```
+* iOS: yêu cầu phiên bản iOS 9.0 trở lên
+  * Đối với `react-native-map4d-map` version từ `1.0.9` trở về trước yêu cầu iOS 10.0  trở lên
 
 ### API key
 

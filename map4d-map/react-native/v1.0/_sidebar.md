@@ -8,4 +8,5 @@
   - [Marker](guides/marker.md)
   - [Circle](guides/circle.md)
   - [Polyline](guides/polyline.md)
+  - [Polygon](guides/polygon.md)
   - [POI](guides/poi.md)

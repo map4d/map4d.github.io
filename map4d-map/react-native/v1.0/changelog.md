@@ -1,5 +1,11 @@
 # Changelog
 
+### Version 1.0.10
+
+- Hỗ trợ vẽ polygon với **MFPolygon**
+- Hỗ trợ Map4dMap SDK version 1.5.1
+- Hỗ trợ iOS version 9.0
+
 ### Version 1.0.9
 
 - Hỗ trợ Map4dMap SDK version 1.4.7
