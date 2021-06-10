@@ -50,6 +50,36 @@ Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key 
 </manifest>
 ```
 
+##### Chỉnh sửa file build.gradle cho Android
+
+Chỉnh sửa file **build.gradle** (Project) như sau:
+```
+buildscript {
+    ext {
+        // ...
+        RNNKotlinVersion = "1.3.61" // Or any version above 1.3.x
+        RNNKotlinStdlib = "kotlin-stdlib-jdk8"
+    }
+    dependencies {
+        // ...
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61"
+    }
+}
+```
+
+Chỉnh sửa file **build.gradle** (App) như sau:
+```
+android {
+    // ...
+    packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+    }
+}
+```
+
 #### Thiết lập API key cho iOS
 
 Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
