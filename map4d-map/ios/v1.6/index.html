@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Map4D Map iOS SDK v1.5</title>
+  <title>Map4D Map iOS SDK v1.6</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -28,18 +28,18 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: 'Map4dMap iOS <span class="app-name-version">v1.5</span>',
+      name: 'Map4dMap iOS <span class="app-name-version">v1.6</span>',
       repo: 'https://github.com/map4d/map4d-ios-sdk',
       loadSidebar: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       auto2top: true,
+      copyCode: {
+        buttonText : 'Copy'
+      },
       plugins: [
         function(hook) {
-          var header  = [
-            '<p class="tip">You’re browsing the documentation for v1.5.x. For latest version, <a href="/map4d-map/ios/">click here</a>.</p>',
-          ]
           var footer = [
             '<hr/>',
             '<footer>',
@@ -48,7 +48,7 @@
           ].join('');
 
           hook.afterEach(function(html) {
-            return header + html + footer;
+            return html + footer;
           });
         }
       ]
@@ -56,6 +56,7 @@
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
   <!-- Language Highlighting -->
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-c.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-cpp.min.js"></script>
