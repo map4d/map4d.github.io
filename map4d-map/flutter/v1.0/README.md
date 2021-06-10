@@ -14,7 +14,7 @@
 
 ```yaml
 dependencies:
-  map4d_map: ^1.0.0
+  map4d_map: ^1.1.0
 ```
 
 Import `map4d_map` vào project

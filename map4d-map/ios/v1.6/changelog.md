@@ -1,12 +1,16 @@
 # Changelog
 
-### Version 1.6.0
+## Version 1.6.0
 
 Những thay đổi kẻ từ version 1.5.1
-- Map
-  - Limit 15 FPS khi Map ở chế độ 3D mode và có hiệu ứng nước
-  - Hỗ trợ load POI `2x`, `3x`
-
-- Layers
-  - Hỗ trợ người dùng tự parser data đối với `POI Overlay` và `Building Overlay`
-  - Hỗ trợ custom POI icon với icon url
+<!-- #### Added -->
+#### Changed
+- Hiển thi halo quanh text
+<!-- ##### Deprecated -->
+<!-- ##### Removed -->
+##### Fixed
+- Fix lỗi không thể tap vào extrude building
+- Fix lỗi không hiển thị marker default khi set icon = nil
+- Fix lỗi set marker anchor không hoạt động
+- Fix lỗi tile của POI không thay đổi lập tức sau khi thay đổi giá trị
+<!-- ##### Security -->
