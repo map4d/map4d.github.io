@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script defer
+    src="https://api.map4d.vn/sdk/map/js?version=1.5.0&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+</head>
+
+<body>
+  <div id="map"></div>
+  <script>
+    function initMap() {
+      let options = {
+        center: { lat: 16.072163491469226, lng: 108.22690536081757 },
+        zoom: 15,
+        controls: true
+      }
+      let map = new map4d.Map(document.getElementById("map"), options)
+
+      map.addListener(
+        "click",
+        function (args) {
+          let marker = new map4d.Marker({
+            position: args.location
+          })
+          marker.setMap(map)
+        }
+      )
+    }
+  </script>
+  <style>
+    #map {
+      height: 100%;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</body>
+
+</html>

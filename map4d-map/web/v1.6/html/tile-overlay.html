@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script defer
+    src="https://api.map4d.vn/sdk/map/js?version=1.5.0&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+  <style>
+    #map {
+      height: 100%;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .overlays {
+      position: absolute;
+      float: right;
+      z-index: 1;
+      padding: 5px;
+      margin: 5px;
+    }
+
+    #overlay_btn {
+      height: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map">
+    <div class="overlays">
+      <button id="overlay_btn" type="button" class="button" onclick="toggle()">Add Overlay</button>
+    </div>
+  </div>
+  <!-- <script src="http://localhost:6969/dist/map4dsdk@1.5.0.dev.js"></script> -->
+  <script>
+    let map;
+    let tileOverlay;
+    let overlayEnable = false;
+    let overlayBtn = document.getElementById("overlay_btn");
+
+    function initTileOverlay() {
+      let options = {
+        getUrl: function (x, y, zoom, is3dMode) {
+          return `https://tile.openstreetmap.de/${zoom}/${x}/${y}.png`
+        }
+      }
+      tileOverlay = new map4d.TileOverlay(options)
+    }
+
+    function initMap() {
+      let options = {
+        center: { lat: 16.072163491469226, lng: 108.22690536081757 },
+        zoom: 15
+      }
+      map = new map4d.Map(document.getElementById("map"), options)
+      initTileOverlay()
+    }
+    // initMap()
+
+    function toggle() {
+      if (overlayEnable) {
+        overlayBtn.innerText = "Add Overlay"
+        tileOverlay.setMap(null)
+      }
+      else {
+        overlayBtn.textContent = "Remove Overlay"
+        tileOverlay.setMap(map)
+      }
+      overlayEnable = !overlayEnable;
+    }
+  </script>
+</body>
+
+</html>
