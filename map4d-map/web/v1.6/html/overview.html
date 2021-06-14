@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div id="map" style="width:100%;height:250px;"></div>
+  <script>
+    function initMap() {
+      let options = {
+        center: {lat: 16.072163491469226, lng: 108.22690536081757},
+        zoom: 15,
+        controls: true
+      }
+      let map = new map4d.Map(document.getElementById("map"), options)
+    }
+  </script>
+  <script src="https://api.map4d.vn/sdk/map/js?version=1.5.0&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+
+</body>
+
+</html>
