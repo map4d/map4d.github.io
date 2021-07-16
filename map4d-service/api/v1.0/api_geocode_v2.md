@@ -7,7 +7,7 @@ https://api.map4d.vn/sdk/v2/geocode?key={key}&location={location}&address={addre
 | Parameter |Required| Description                                                                                           |
 |-----------|--------|-------------------------------------------------------------------------------------------------------|
 | key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
-| location  |No      | tọa độ lat,lng tại địa điểm mà bạn muốn tìm, VD: 16.036505,108.218186                                                                       |
+| location  |No      | tọa độ lat, lng tại địa điểm mà bạn muốn tìm, VD: 16.036505,108.218186                                                                       |
 | address   |No      | địa chỉ của địa điểm. VD: 31 Lê Văn Duyệt, Phường Nại Hiên Đông, Quận Sơn Trà, Thành phố Đà Nẵng                                      |
 | viewbox   |No      | khung muốn tìm kiếm, định dạng: minLat, minLng, maxLat, maxLng. VD: 16.056453967981348,108.19387435913086,16.093031550262133,108.25927734375                                |
 
