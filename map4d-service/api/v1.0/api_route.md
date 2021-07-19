@@ -113,8 +113,43 @@ https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destinatio
 | summary       |Yes    | tóm lược đường đi                                                                                  |
 | snappedWaypoints|Yes  | danh sách các điểm đi qua trên đường, từ địa điểm bắt đầu và điểm đi qua tới điểm kết thúc          |
 
-[![CocoaPods](../resources/route.png)](https://map4d.vn)
+[![Route](../resources/route.png)](https://map4d.vn)
+
 **Ví dụ**
 <iframe src="./examples/v1.0/route.html" height="600px"> </iframe>
 
+## 3. Cách lấy các polyline đầy đủ
+ - Truy cập vào đường link https://geojson.map4d.vn/#map=2/20.0/0.0 
+ - Copy polyline từ api tìm đường (ở dạng JSON), paste vào phần JSON, ta được hình vẽ dạng polyline hoàn chỉnh
 
+ **Ví dụ** 
+ ```
+ "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            108.25671315193176,
+            15.964681497690217
+          ],
+          [
+            108.25673460960388,
+            15.960823635533751
+          ],
+          [
+            108.26086521148682,
+            15.962205872762427
+          ],
+          [
+            108.26182007789612,
+            15.959534226536002
+          ]
+        ]
+      }
+ ```
+ Khi nhúng đoạn json ở trên vào, ta có hình vẽ hoàn chỉnh của polyline như hình dưới đây: 
+
+ [![Route](../resources/geojson-route.png)](https://map4d.vn)
+
+## 4. Code sample
+
+<iframe src="//jsfiddle.net/oy4c03sd/embedded/" style="min-width: 960px;" height="540px"></iframe>

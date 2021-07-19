@@ -1,6 +1,8 @@
 - [Overview](/ "Map4dService API")
 - [Changelog](changelog.md)
 
+- Group API Tile
+  - [API Get Tile](api_tile_info.md)
 - Group API Route
   - [API Get router](api_route.md)
 
