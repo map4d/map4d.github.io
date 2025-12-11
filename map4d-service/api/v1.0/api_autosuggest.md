@@ -26,7 +26,8 @@ https://api.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}
       },
       "types": [
         "string"
-      ]
+      ],
+      "distance": 1234.5
     }
   ]
 }
@@ -41,6 +42,7 @@ https://api.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}
 | address   |Yes    | địa chỉ của địa điểm                                                              |
 | location  |Yes    | vị trí đặt địa điểm (lat là vĩ độ theo bản đồ GCS, lng là kinh độ theo bản đồ GCS) |
 | types     |Yes    | danh sách các kiểu của place. VD: cafe, restaurant ...                             |
+| distance     |No    | Số đo khoảng cách từ vị trí nhập vào đến địa điểm hiện tại, tính theo đường chim bay, đơn vị là mét.|
 
 **Ví dụ**
 <iframe src="./examples/v1.0/autosugest.html" height="450px";> </iframe>

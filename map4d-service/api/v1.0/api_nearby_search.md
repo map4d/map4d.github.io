@@ -30,7 +30,8 @@ Lưu ý: Cần phải có ít nhất 1 trong `text` hoặc `types` hoặc `tags`
       },
       "types": [
         "string"
-      ]
+      ],
+      "distance": 123.4
     }
   ]
 }
@@ -45,6 +46,7 @@ Lưu ý: Cần phải có ít nhất 1 trong `text` hoặc `types` hoặc `tags`
 | address   |Yes    | địa chỉ của địa điểm. VD: 31 Lê Văn Duyệt, Phường Nai Hiên Đông, Quận Sơn Trà, Thành phố Đà Nẵng      |                                                                       |
 | location  |Yes    | vị trí đặt địa điểm (lat là vĩ độ theo bản đồ GCS, lng là kinh độ theo bản đồ GCS)                    |
 | types     |Yes    | danh sách các loại đối tượng của địa điểm. VD: cafe, restaurant...                                                         |
+| distance     |No    | Số đo khoảng cách từ vị trí nhập vào đến địa điểm hiện tại, tính theo đường chim bay, đơn vị là mét.|
 
 **Ví dụ**
 <iframe src="./examples/v1.0/nearbysearch.html" height="650px"  width: 80%> </iframe>
