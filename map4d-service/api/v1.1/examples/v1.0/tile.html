@@ -32,7 +32,7 @@
             displayResult.innerHTML = "(*) là bắt buộc";
             return;
         }
-        $.getJSON('https://api.map4d.vn/sdk/tile/raster/'+inputZ+'/'+inputX+'/'+inputY+ '?key='+key+'&model='+ selectedModel, function(data) {
+        $.getJSON('https://api-sdk-cdtqg.map4d.vn/sdk/tile/raster/'+inputZ+'/'+inputX+'/'+inputY+ '?key='+key+'&model='+ selectedModel, function(data) {
             displayResult.innerHTML = data;
         })
     }

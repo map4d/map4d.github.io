@@ -2,7 +2,7 @@
 #  Tile(Lấy thông tin đối tượng và địa điểm của tile)
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/tile/v2/{z}/{x}/{y}?key={key}&mode={mode}
+https://api-sdk-cdtqg.map4d.vn/sdk/tile/v2/{z}/{x}/{y}?key={key}&mode={mode}
 key và mode là thuộc tính bắc buộc.
 z: là độ zoom của map
 x: là tọa độ x

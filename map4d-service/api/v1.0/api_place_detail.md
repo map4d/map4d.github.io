@@ -2,11 +2,11 @@
 #  Place Detail (Tìm kiếm thông tin chi tiết của địa điểm)
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/place/detail/{id}?key={}
+https://api-sdk-cdtqg.map4d.vn/sdk/place/detail/{id}?key={}
 ```
 | Parameter |Required| Description                                                                                           |
 |-----------|--------|-------------------------------------------------------------------------------------------------------|
-| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
+| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/access-key/add để tạo key|
 | id        |Yes     | khóa của địa điểm                                                                      |
 
 ## 2. Output(Đầu ra)
@@ -74,3 +74,4 @@ https://api.map4d.vn/sdk/place/detail/{id}?key={}
 
 **Ví dụ**
 <iframe src="./examples/v1.0/placedetail.html" height= "400px"> </iframe>
+

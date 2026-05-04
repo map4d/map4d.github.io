@@ -4,11 +4,11 @@ Map4D API cung cấp dữ liệu nền địa lý gồm thông tin đối tượ
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/tile/v2/{z}/{x}/{y}?key={key}&mode={mode}
+https://api-sdk-cdtqg.map4d.vn/sdk/tile/v2/{z}/{x}/{y}?key={key}&mode={mode}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.map4d.vn/developer/key/add để tạo key. |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map4d-web-cdtqg.map4d.vn/developer/key/add để tạo key. |
 | z         | **Yes**  | Mức zoom của map.                                                                                                                                                                 |
 | x         | **Yes**  | Tọa độ x (Giá trị x).                                                                                                                                                             |
 | y         | **Yes**  | Tọa độ y (Giá trị y).                                                                                                                                                             |
@@ -118,3 +118,4 @@ https://api.map4d.vn/sdk/tile/v2/{z}/{x}/{y}?key={key}&mode={mode}
 | places     | **Yes** | Trả về danh sách các `place` tương ứng gồm các thông tin: <br> `id` (notnull): Khóa của địa điểm tương ứng.<br> `name` (notnull): Tên của địa điểm tương ứng.<br> `types` (notnull): Danh sách các loại đối tượng của địa điểm. Ví dụ: point, cafe, restaurant, ...<br> `location` (notnull): Vị trí đặt địa điểm (lat là vĩ độ theo bản đồ GCS, lng là kinh độ theo bản đồ GCS).<br> `rank`: Xếp hạng của địa điểm (`value` là giá trị xếp hạng).<br> `icon`: Trả về giá trị Icon tile (`type`: loại icon tile, `url`: link ảnh icon tile, `color`: mã màu icon tile.)         |
 [Ví dụ](./examples/v1.0/tile.html)
 <iframe src="./examples/v1.0/tile.html"> </iframe>
+

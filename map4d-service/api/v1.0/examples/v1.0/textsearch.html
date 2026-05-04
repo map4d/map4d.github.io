@@ -56,7 +56,7 @@
             types += "&types="+inputTypes[i];
         }
         let selectedAccuracy = inputAccuracy.options[inputAccuracy.selectedIndex].value;
-        $.getJSON('https://api.map4d.vn/sdk/place/text-search?key='+key+'&text='+inputText +types+ '&datetime='+inputDate+'&location='+inputLocation+'&accuracy=' +selectedAccuracy, function(data) {
+        $.getJSON('https://api-sdk-cdtqg.map4d.vn/sdk/place/text-search?key='+key+'&text='+inputText +types+ '&datetime='+inputDate+'&location='+inputLocation+'&accuracy=' +selectedAccuracy, function(data) {
             var limit =5;
             var result;
             if(data.result != null){

@@ -15,7 +15,7 @@ Những thay đổi kể từ version 2.1.x
 
 #### Changed
 
-- Cho phép thay đổi style map cho roadmap bằng map id, hỗ trợ thay đổi style bằng [công cụ quản lý styles](//map.map4d.vn/user/platform/map-style/list).  
+- Cho phép thay đổi style map cho roadmap bằng map id, hỗ trợ thay đổi style bằng [công cụ quản lý styles](//map4d-web-cdtqg.map4d.vn/user/platform/map-style/list).  
 Chú ý: Việc hiển thị POIs phụ thuộc hoàn toàn vào style của roadmap (bao gồm cả raster và vệ tinh)
 - Cải thiện chức năng zoom (hỗ trợ các mức zoom phân số)
 - Cải thiện việc vẽ đường ở chế độ vệ tinh
@@ -33,3 +33,4 @@ Chú ý: Việc hiển thị POIs phụ thuộc hoàn toàn vào style của roa
 - Fixed lỗi icon của POI bị ẩn khi đè lên nhau.
 
 <!-- #### Security -->
+

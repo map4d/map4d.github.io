@@ -4,11 +4,11 @@ Gợi ý địa điểm thông qua một phần từ khóa và vị trí.
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}&acronym={acronym}
+http://api-sdk-cdtqg.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}&acronym={acronym}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key. |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/my-access-key/add để tạo key. |
 | text      | **Yes**  | Chuỗi muốn gửi. Ví dụ: "Đà Nẵng"                                                                                                                                                  |
 | location  | No       | Vị trí ưu tiên. Các địa điểm gần vị trí này sẽ được ưu tiên hơn. Ví dụ: 16.036505,108.218186                                                                                      |
 | acronym   | No       | Tìm kiếm theo từ viết tắt. Chỉ hỗ trợ viết tắt ở địa chỉ. <br>Có 2 giá trị "true" và "false", mặc định: false                                                                     |
@@ -46,4 +46,6 @@ http://api.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}&ac
 
 **Ví dụ**
 <iframe src="./examples/v1.0/autosugest.html" height="450px";> </iframe>
+
+
 

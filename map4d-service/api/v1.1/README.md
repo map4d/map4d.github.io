@@ -6,7 +6,7 @@ Map4D API Service cung cấp nền tảng cho Web, iOS, Android,
 
 Để sử dụng được các API này thì yêu cầu phải có key 
 
-Đăng nhập hoặc đăng kí vào Map4D để tạo và quản lý key [tại đây](https://map.map4d.vn/) ([Xem hướng dẫn tạo key](addkey.md))
+Đăng nhập hoặc đăng kí vào Map4D để tạo và quản lý key [tại đây](https://map4d-web-cdtqg.map4d.vn/) ([Xem hướng dẫn tạo key](addkey.md))
 
 
 ## 2. Danh sách API
@@ -24,10 +24,11 @@ Map4D API Service cung cấp nền tảng cho Web, iOS, Android,
 API có thể được gọi bằng đường dẫn
 
 `
-https://api.map4d.vn/sdk/map/{API_FUNCTION}?{PARAMETER1}={VALUE1}&{PARAMETER2}={VALUE2}&{PARAMETER(n)}={VALUE(n)}&key=`[{Your_Api_Key}](https://map.map4d.vn/user/my-access-key/add) 
+https://api-sdk-cdtqg.map4d.vn/sdk/map/{API_FUNCTION}?{PARAMETER1}={VALUE1}&{PARAMETER2}={VALUE2}&{PARAMETER(n)}={VALUE(n)}&key=`[{Your_Api_Key}](https://map4d-web-cdtqg.map4d.vn/user/my-access-key/add) 
 
 Trong đó:
 - **API_FUNCTION**: là tên hàm muốn gọi
 - **PARAMETER1, PARAMETER2, PARAMETER(n)**: là tham số truyền vào tương ứng với API_FUNCTION
 - **VALUE1, VALUE2, PARAMETER(n)**: là giá trị truyền vào cho từng tham số tương ứng
-- **YOUR_API_KEY**: là key - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán (Đăng nhập và đăng ký key [tại đây](https://map.map4d.vn/user/my-access-key/add))
+- **YOUR_API_KEY**: là key - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán (Đăng nhập và đăng ký key [tại đây](https://map4d-web-cdtqg.map4d.vn/user/my-access-key/add))
+

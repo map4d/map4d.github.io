@@ -4,11 +4,11 @@ Cung cấp khoảng cách và thời gian di chuyển cho một ma trận gồm 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/route/graph?key={key}&points={points}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}
+https://api-sdk-cdtqg.map4d.vn/sdk/route/graph?key={key}&points={points}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}
 ```
 | Parameter  | Required | Description                                                                                                                                                                                                                                                                                                    |
 |------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key        | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.map4d.vn/developer/key/add để tạo key.                                                                                                                              |
+| key        | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map4d-web-cdtqg.map4d.vn/developer/key/add để tạo key.                                                                                                                              |
 | points     | **Yes**  | Danh sách các điểm muốn đi qua.<br>Gởi request từ 1 địa điểm trở lên. Nếu nhập từ 2 địa điểm trở lên thì phân cách giữa các địa điểm bởi dấu chấm phẩy ";". Ví dụ: 16.039173,108.210912;16.044597,108.217263;16.0825981,108.2219887<br>Số điểm tối đa là 13 điểm.                                              |
 | mode       | **Yes**  | Phương tiện đi qua, hiện tại hỗ trợ 4 loại phương tiện: car (xe hơi), bike (xe đạp), foot (đi bộ), motorcycle (xe máy).<br>Đối với 2 loại phương tiện là bike (xe đạp) và foot (đi bộ) thì thuộc tính tìm theo đường đi "ngắn nhất".                                                                           |
 | language   | No       | Ngôn ngữ dùng chỉ đường, hiện tại hỗ trợ Tiếng Việt (vi) hoặc Tiếng Anh (en), mặc định sẽ là Tiếng Việt.                                                                                                                                                                                                       |
@@ -47,3 +47,4 @@ https://api.map4d.vn/sdk/route/graph?key={key}&points={points}&mode={mode}&langu
 | duration  | **Yes** | Khoảng cách về "thời gian" mỗi địa điểm đi qua (thời gian dưới dạng `text`, còn `value` là thời gian khi đi trên đoạn đường đó - đơn vị là giây).                                                  |
 | polyline  | **Yes** | Đường đi từng điểm dưới dạng mã hóa polyline làm tròn 5 ký tự.                                                                                                                                     |
 | status    | **Yes** | Mã trạng thái "ok" nghĩa là thành công.                                                                                                                                                            |                            
+

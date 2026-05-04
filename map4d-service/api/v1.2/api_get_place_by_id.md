@@ -4,11 +4,11 @@ Thông tin của 1 địa điểm về tên, vị trí và địa chỉ của đ
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/place/{id}?key={key}
+https://api-sdk-cdtqg.map4d.vn/sdk/place/{id}?key={key}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.map4d.vn/developer/key/add để tạo key. |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map4d-web-cdtqg.map4d.vn/developer/key/add để tạo key. |
 | id        | **Yes**  | Khóa chính của địa điểm.                                                                                                                                                          |
 ## 2. Output (Đầu ra)
 ```json
@@ -42,3 +42,5 @@ https://api.map4d.vn/sdk/place/{id}?key={key}
 
 [Ví dụ](./examples/v1.0/placedetail.html)
 <iframe src="./examples/v1.0/placedetail.html"> </iframe>
+
+

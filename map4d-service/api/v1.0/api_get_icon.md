@@ -2,7 +2,7 @@
 #  Get Icon(Icon đại diện cho kiểu của địa điểm)
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/place/icon?key={key}&option={option}&type={type}&size={size}
+https://api-sdk-cdtqg.map4d.vn/sdk/place/icon?key={key}&option={option}&type={type}&size={size}
 key là thuộc tính bắc buộc.
 option: là tùy chọn 0 hoặc 1 hoặc 2.
   option = 0 --> icon giọt nước để vẽ địa điểm trên sdk

@@ -34,7 +34,7 @@ import {MFMapView, MFMarker, MFCircle, MFPolyline, MFPolygon, MFPOI} from 'react
 API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng Map4dMap SDK.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
-Tạo API key tại địa chỉ: <https://map.map4d.vn/developer/key/>
+Tạo API key tại địa chỉ: <https://map4d-web-cdtqg.map4d.vn/developer/key/>
 
 #### Thiết lập API key cho Android
 
@@ -125,3 +125,4 @@ export default App;
 ```
 
 > Chú ý: Cần set style quy định kích thước cho `MFMapView`
+

@@ -2,7 +2,7 @@
 # Get Place Type By Id(Lấy chi tiết của kiểu địa điểm)
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/place/type/{id}?key={key}
+https://api-sdk-cdtqg.map4d.vn/sdk/place/type/{id}?key={key}
 key và id là thuộc tính bắc buộc.
 id: là khóa chính của type. vd: cafe, atm
 ```
@@ -34,3 +34,4 @@ description: mô tả về icon
 ```
 [Ví dụ](./examples/v1.0/typeid.html)
 <iframe src="./examples/v1.0/typeid.html"> </iframe>
+

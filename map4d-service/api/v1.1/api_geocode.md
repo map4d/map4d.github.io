@@ -4,11 +4,11 @@ Chuyển đổi từ tọa độ vị trí (vĩ độ, kinh độ) sang địa c
 Phương thức: GET
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/geocode?key={key}&lat={lat}&lng={lng}
+https://api-sdk-cdtqg.map4d.vn/sdk/geocode?key={key}&lat={lat}&lng={lng}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key. |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/my-access-key/add để tạo key. |
 | lat       | **Yes**  | Vị trí "lat" tại địa điểm muốn phân giải. Ví dụ: 16.0758766<br>Vĩ độ theo bản đồ gps, có giá trị từ -90 đến 90.                                                                   |
 | lng       | **Yes**  | Vị trí "lng" tại địa điểm muốn phân giải. Ví dụ: 108.2290401<br>Kinh độ theo bản đồ gps, có giá trị từ -180 đến 180.                                                              |
 ## 2. Output (Đầu ra)
@@ -52,3 +52,4 @@ https://api.map4d.vn/sdk/geocode?key={key}&lat={lat}&lng={lng}
 
 **Ví dụ**
 <iframe src="./examples/v1.0/geocode.html" height = "400px"> </iframe>
+

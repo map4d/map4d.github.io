@@ -2,11 +2,11 @@
 #  GeoCode(Phân giải địa điểm ra tọa độ địa lý)
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/v2/geocode?key={key}&location={location}&address={address}&viewbox={viewbox}
+https://api-sdk-cdtqg.map4d.vn/sdk/v2/geocode?key={key}&location={location}&address={address}&viewbox={viewbox}
 ```
 | Parameter |Required| Description                                                                                           |
 |-----------|--------|-------------------------------------------------------------------------------------------------------|
-| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
+| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/access-key/add để tạo key|
 | location  |No      | tọa độ lat, lng tại địa điểm mà bạn muốn phân giải, VD: 16.036505,108.218186                                                                       |
 | address   |No      | địa chỉ của địa điểm. VD: 31 Lê Văn Duyệt, Phường Nại Hiên Đông, Quận Sơn Trà, Thành phố Đà Nẵng                                      |
 | viewbox   |No      | khung muốn tìm kiếm, định dạng: minLat, minLng, maxLat, maxLng. Các địa điểm năm trong box này sẽ được ưu tiên hơn (không ràng buộc) VD: 16.056453967981348,108.19387435913086,16.093031550262133,108.25927734375                                |
@@ -52,3 +52,4 @@ Note: Yêu cầu phải có location hoặc address
 | addressComponents     |No    | danh sách các thành phần của địa chỉ, `types` (notnull) của addressComponents gồm: `housenumber`: số nhà; `street`: tên đường; `admin_level_4`: phường/xã; `admin_level_3`: quận/huyện; `admin_level_2`: tỉnh/thành phố trực thuộc trung ương; `admin_level_1`: quốc gia, `extra`: các thông tin khác; và `name` (notnull) là giá trị tương ứng |
 **Ví dụ**
 <iframe src="./examples/v1.0/geocode_v2.html" height = "400px"> </iframe>
+

@@ -61,7 +61,7 @@
             tags += "&tags="+inputTags[i];
         }
 
-        $.getJSON('https://api.map4d.vn/sdk/place/nearby-search?key='+key+'&location='+inputLocation+'&radius='+inputRadius+'&text='+inputText +types+ tags+'&datetime='+inputDate, function(data) {
+        $.getJSON('https://api-sdk-cdtqg.map4d.vn/sdk/place/nearby-search?key='+key+'&location='+inputLocation+'&radius='+inputRadius+'&text='+inputText +types+ tags+'&datetime='+inputDate, function(data) {
             var limit =5;
             var result;
             if(data.result != null){

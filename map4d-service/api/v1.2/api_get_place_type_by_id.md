@@ -2,11 +2,11 @@
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/place/type/{id}?key={key}
+https://api-sdk-cdtqg.map4d.vn/sdk/place/type/{id}?key={key}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.map4d.vn/developer/key/add để tạo key. |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map4d-web-cdtqg.map4d.vn/developer/key/add để tạo key. |
 | id        | **Yes**  | Khóa chính của type. Ví dụ: cafe, atm, ...                                                                                                                                        |
 ## 2 Output (Đầu ra)
 ```json
@@ -37,3 +37,4 @@ https://api.map4d.vn/sdk/place/type/{id}?key={key}
 | types       | No      | Gồm 3 types: `object`, `place` và `address`.                                                                                      |
 [Ví dụ](./examples/v1.0/typeid.html)
 <iframe src="./examples/v1.0/typeid.html"> </iframe>
+

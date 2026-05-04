@@ -31,7 +31,7 @@ flutter pub add map4d_services
 API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng Map4dServices SDK.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
-Tạo API key tại địa chỉ: <https://map.map4d.vn/user/>
+Tạo API key tại địa chỉ: <https://map4d-web-cdtqg.map4d.vn/user/>
 
 #### Thiết lập API key cho Android
 
@@ -105,5 +105,6 @@ void getPlaceDetail() async {
   });
 }
 ```
+
 
 

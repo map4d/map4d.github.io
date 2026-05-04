@@ -15,7 +15,7 @@ window.onload = function () {
 			}
 		}
 	}
-	var configObject = JSON.parse('{"urls":[{"url":"https://api.map4d.vn/docs/public.json","name":"public"}],"deepLinking":false,"displayOperationId":false,"defaultModelsExpandDepth":1,"defaultModelExpandDepth":1,"defaultModelRendering":"example","displayRequestDuration":false,"docExpansion":"list","showExtensions":false,"showCommonExtensions":false,"supportedSubmitMethods":["get","put","post","delete","options","head","patch","trace"],"validatorUrl":null}');
+	var configObject = JSON.parse('{"urls":[{"url":"https://api-sdk-cdtqg.map4d.vn/docs/public.json","name":"public"}],"deepLinking":false,"displayOperationId":false,"defaultModelsExpandDepth":1,"defaultModelExpandDepth":1,"defaultModelRendering":"example","displayRequestDuration":false,"docExpansion":"list","showExtensions":false,"showCommonExtensions":false,"supportedSubmitMethods":["get","put","post","delete","options","head","patch","trace"],"validatorUrl":null}');
 	var oauthConfigObject = JSON.parse('{"clientId":"clientId","clientSecret":"clientSecret","scopeSeperator":" ","useBasicAuthenticationWithAccessCodeGrant":false}');
 
 	// Apply mandatory parameters

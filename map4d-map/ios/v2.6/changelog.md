@@ -22,7 +22,7 @@ Những thay đổi kể từ version 2.5.5
 #### Added
 
 - Thêm phương thức setMapID cho MFMapView
-- Hỗ trợ nhiều data sources (Tham khảo [Style](https://map.map4d.vn/developer/mapstyle))
+- Hỗ trợ nhiều data sources (Tham khảo [Style](https://map4d-web-cdtqg.map4d.vn/developer/mapstyle))
 - Thêm mới sự kiện khi tap vào đối tượng của data sources custom (không phải của map4D)
 
 <!-- #### Fixed -->
@@ -34,3 +34,4 @@ Những thay đổi kể từ version 2.5.5
 <!-- #### Deprecated -->
 <!-- #### Removed -->
 <!-- #### Security -->
+

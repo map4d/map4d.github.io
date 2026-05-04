@@ -91,7 +91,7 @@
         var selectedMode = mode.options[mode.selectedIndex].value;
         var selectedLanguage = language.options[language.selectedIndex].value;
         var selectedWeighting = weighting.options[weighting.selectedIndex].value;
-        $.getJSON('https://api.map4d.vn/sdk/route?key='+key+'&origin='+origin+'&destination='+destination+'&points='+points+'&mode='+selectedMode+'&language='+selectedLanguage+'&weighting=' + selectedWeighting+ '&avoid='+avoid+`&avoidRoads=`+avoidRoads+`&departureTime=`+time+`&optimize=`+isOptimize, function(data) {
+        $.getJSON('https://api-sdk-cdtqg.map4d.vn/sdk/route?key='+key+'&origin='+origin+'&destination='+destination+'&points='+points+'&mode='+selectedMode+'&language='+selectedLanguage+'&weighting=' + selectedWeighting+ '&avoid='+avoid+`&avoidRoads=`+avoidRoads+`&departureTime=`+time+`&optimize=`+isOptimize, function(data) {
             displayResult.innerHTML = syntaxHighlight(JSON.stringify(data, null, 2));
             document.getElementById("multiLinestring").innerHTML = syntaxHighlight(JSON.stringify(polyline(data), null, 2));
         })

@@ -34,7 +34,7 @@ Các thuộc tính của **POIOptions** :
 - **subtitle** (tùy chọn): chỉ định thông tin mô tả của POI.
 - ~**titleColor** (tùy chọn): chỉ định màu tiêu đề của POI theo mã HEX (ví dụ **"#5B9AFF"**). Giá trị mặc định là **"#FF0000"**~
 - **color** (tùy chọn): chỉ định màu cho tiêu đề và màu icon (nếu sử dụng thuộc tính `type`) của POI
-- **type** (tùy chọn): chỉ định kiểu của POI, tùy thuộc vào kiểu mà icon của POI sẽ có hình ảnh tương ứng. Phụ thuộc vào kind được quy định trong file [style](//map.map4d.vn/user/platform/map-style/list)
+- **type** (tùy chọn): chỉ định kiểu của POI, tùy thuộc vào kiểu mà icon của POI sẽ có hình ảnh tương ứng. Phụ thuộc vào kind được quy định trong file [style](//map4d-web-cdtqg.map4d.vn/user/platform/map-style/list)
 - **icon** (tùy chọn): chỉ định một đường dẫn URL để lấy hình ảnh cho POI. Nếu option này được set giá trị thì hình ảnh của POI sẽ lấy theo URL này mà không cần quan tâm tới option **type**. Giá trị mặc định là **null**
 - **elevation** (tùy chọn): chỉ định độ cao của POI so với mực nước biển, đơn vị là mét. Giá trị mặc định là **0**.
 - **zIndex** (tùy chọn): chỉ định thứ tự chồng nhau giữa các POI với nhau, nó không dùng để xác định thứ tự chồng nhau
@@ -143,6 +143,7 @@ Tham số **args** trả về khi có sự kiện xảy ra sẽ bao gồm các t
 - poi: là đối tượng POI mà người dùng **click**.
 - location: là tọa độ click trên bản đồ theo latitude và longitude.
 - pixel: là tọa độ pixel mà người dùng click trên màn hình.
+
 
 
 

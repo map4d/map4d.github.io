@@ -61,7 +61,7 @@ public class MFBuildingOverlay extends MFLayerOverlay {
     MFBuildingOverlayOptions buildingOverlayOptions = new MFBuildingOverlayOptions().buildingProvider(new MFBuildingProvider() {
         @Override
         public String getTile(int x, int y, int zoom) {
-            return "https://api.map4d.vn/sdk/tile/v2/" + zoom + "/" + x + "/" + y + "?key=98fd21346d83bee24dc734231f7609c9&mode=3d";
+            return "https://api-sdk-cdtqg.map4d.vn/sdk/tile/v2/" + zoom + "/" + x + "/" + y + "?key=98fd21346d83bee24dc734231f7609c9&mode=3d";
         }
     });
     

@@ -6,7 +6,7 @@ Những thay đổi kể từ version 2.1.1
 
 #### Added
 
-- Cho phép thêm [mapId](/reference/map?id=map-id) để thay đổi [style map](https://map.map4d.vn/developer/mapstyle)
+- Cho phép thêm [mapId](/reference/map?id=map-id) để thay đổi [style map](https://map4d-web-cdtqg.map4d.vn/developer/mapstyle)
 - Thêm mới `color` options cho [MFPOIOptions](/reference/poi?id=poi-options)
 - Thêm mới `getColor` và `setColor` method cho [MFPOI](/reference/poi?id=poi-class)
 - Thêm mới `getColor`, `setColor`, `isHasColor` và `setHasColor` method cho [MFPOIData](/reference/poi-overlay?id=mfpoidata-class)
@@ -36,3 +36,4 @@ bởi `getColor`, `setColor`, `isHasColor` và `setHasColor` method
 - Fix lỗi set POI icon không hoạt động trong một số trường hợp.
 
 <!-- #### Security -->
+

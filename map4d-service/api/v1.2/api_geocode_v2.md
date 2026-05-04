@@ -4,11 +4,11 @@ Chuyển đổi từ tọa độ vị trí (vĩ độ, kinh độ) sang địa c
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/v2/geocode?key={key}&location={location}&address={address}&viewbox={viewbox}
+https://api-sdk-cdtqg.map4d.vn/sdk/v2/geocode?key={key}&location={location}&address={address}&viewbox={viewbox}
 ```
 | Parameter | Required | Description                                                                                                                                                                                                           |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.map4d.vn/developer/key/add để tạo key.                                     |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map4d-web-cdtqg.map4d.vn/developer/key/add để tạo key.                                     |
 | location  | No       | Tọa độ lat, lng tại địa điểm muốn phân giải. Ví dụ: 16.0758766,108.2290401                                                                                                                                            |
 | address   | No       | Địa chỉ của địa điểm tương ứng và độ dài tối đa là 1024 ký tự. Ví dụ: 271 Trần Hưng Đạo, An Hải Bắc, Sơn Trà, Đà Nẵng, Việt Nam                                                                                                                      |
 | viewbox   | No       | Khung muốn tìm kiếm, định dạng: minLat, minLng, maxLat, maxLng. Các địa điểm nằm trong box này sẽ được ưu tiên hơn (không ràng buộc). Ví dụ: 16.056453967981348,108.19387435913086,16.093031550262133,108.25927734375 |
@@ -58,3 +58,4 @@ https://api.map4d.vn/sdk/v2/geocode?key={key}&location={location}&address={addre
 
 **Ví dụ**
 <iframe src="./examples/v1.0/geocode_v2.html" height = "400px"> </iframe>
+

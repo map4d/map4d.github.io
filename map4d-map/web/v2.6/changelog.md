@@ -34,7 +34,7 @@
 ### Changed
 
 - Hỗ trợ css color đầy đủ
-- Hỗ trợ style mới (v2.0). Tham khảo [Map Style](https://map.map4d.vn/developer/mapstyle)
+- Hỗ trợ style mới (v2.0). Tham khảo [Map Style](https://map4d-web-cdtqg.map4d.vn/developer/mapstyle)
 
 ## Version 2.5.1
 
@@ -157,3 +157,4 @@ Những thay đổi kể từ version 2.3.x
 - Sửa lỗi khó click vào polyline khi set độ cao ở 3D
 
 <!-- #### Security -->
+

@@ -1,11 +1,11 @@
 # AutoSuggest (Tự động đề xuất chuỗi tìm kiếm)
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}
+https://api-sdk-cdtqg.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}
 ```
 | Parameter |Required| Description                                                                                           |
 |-----------|--------|-------------------------------------------------------------------------------------------------------|
-| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
+| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/access-key/add để tạo key|
 | text      |Yes     | chuỗi muốn gửi. VD: "Đà Nẵng"                                                                         |
 | location  |No      | vị trí ưu tiên. Các địa điểm gần vị trí này sẽ được ưu tiên hơn VD: 16.036505,108.218186                                      |
 | acronym  |No      | tìm kiếm theo từ viết tắt, chỉ hỗ trợ viết tắt ở địa chỉ. mặc định false                                      |
@@ -46,4 +46,6 @@ https://api.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}
 
 **Ví dụ**
 <iframe src="./examples/v1.0/autosugest.html" height="450px";> </iframe>
+
+
 

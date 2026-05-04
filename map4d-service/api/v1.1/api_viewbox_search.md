@@ -4,11 +4,11 @@ Tìm kiếm địa điểm trong vùng chỉ định. Kết quả sẽ trả v�
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/place/viewbox-search?key={key}&viewbox={viewbox}&text={text}&types={types}&tags={tags}&datetime={datetime}
+http://api-sdk-cdtqg.map4d.vn/sdk/place/viewbox-search?key={key}&viewbox={viewbox}&text={text}&types={types}&tags={tags}&datetime={datetime}
 ```
 | Parameter | Required | Description                                                                                                                                                                                                                                                                                                                                                                          |
 |-----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                                                                                                    |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                                                                                                    |
 | viewbox   | **Yes**  | Khung muốn tìm kiếm, định dạng: minLat, minLng, maxLat, maxLng. Các địa điểm nằm trong box này sẽ được ưu tiên hơn (không ràng buộc). Ví dụ: 16.056453967981348,108.19387435913086,16.093031550262133,108.25927734375                                                                                                                                                                |
 | text      | No       | Nội dung muốn tìm kiếm.                                                                                                                                                                                                                                                                                                                                                              |
 | types     | No       | Loại đối tượng của địa điểm. <br>Hỗ trợ 2 formats:<br>  Format 1: `type1,type2,type3` -> tìm kiếm và trả về những kết quả có cả type1, type2 và type3. <br>  Format 2: `type1\|type2\|type3` -> tìm kiếm hoặc trả về những kết có 1 trong các type1, type2, type3. <br>Nếu cả 2 format được truyền vào, chỉ xử lý type đầu tiên. Ví dụ: `type1,type2\|type3` -> chỉ type1 được nhận. |
@@ -50,3 +50,4 @@ http://api.map4d.vn/sdk/place/viewbox-search?key={key}&viewbox={viewbox}&text={t
 
 **Ví dụ**
 <iframe src="./examples/v1.0/viewboxsearch.html" height="600px"> </iframe>
+

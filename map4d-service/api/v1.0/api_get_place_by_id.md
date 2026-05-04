@@ -2,7 +2,7 @@
 #  Get Place By Id(Chi tiết địa điểm)
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/place/{id}?key={key}
+https://api-sdk-cdtqg.map4d.vn/sdk/place/{id}?key={key}
 key và id là thuộc tính bắc buộc.
 id: là khóa chính của địa điểm
 ```
@@ -101,3 +101,4 @@ businessHours: danh sách thời gian mở cửa và đóng của
 ```
 [Ví dụ](./examples/v1.0/placedetail.html)
 <iframe src="./examples/v1.0/placedetail.html"> </iframe>
+

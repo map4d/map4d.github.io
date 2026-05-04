@@ -39,7 +39,7 @@
             displayResult.innerHTML="(*) là bắt buộc";
             return;
         }
-        $.getJSON('https://api.map4d.vn/sdk/place/detail/'+inputId+'?key='+key, function(data) {
+        $.getJSON('https://api-sdk-cdtqg.map4d.vn/sdk/place/detail/'+inputId+'?key='+key, function(data) {
             displayResult.innerHTML = syntaxHighlight(JSON.stringify(data, null, 2));
         })
     }

@@ -4,7 +4,7 @@ Map4D API cung cấp dữ liệu nền địa lý có các type "raster", "satel
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/tile/{z}/{x}/{y}?tileUrl={tileUrl}&type={type}&mode={mode}&format={format}&scale={scale}
+https://api-sdk-cdtqg.map4d.vn/sdk/tile/{z}/{x}/{y}?tileUrl={tileUrl}&type={type}&mode={mode}&format={format}&scale={scale}
 ```
 | Parameter | Required | Description                                                                                                      |
 |-----------|----------|------------------------------------------------------------------------------------------------------------------|

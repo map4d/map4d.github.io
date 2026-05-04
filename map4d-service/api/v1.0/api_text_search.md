@@ -1,11 +1,11 @@
 #  Text Search (Tìm kiếm dạng văn bản)
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={type}&types={type}&datetime={datetime}&location={location}
+https://api-sdk-cdtqg.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={type}&types={type}&datetime={datetime}&location={location}
 ```
 | Parameter |Required| Description                                                                                      |
 |-----------|--------|--------------------------------------------------------------------------------------------------|
-| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
+| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/access-key/add để tạo key|
 | text      |Yes     | nội dung muốn tìm                                                                             |
 | types     |No      | loại đối tượng của địa điểm. VD: cafe, restaurant...                                                      |
 | datetime  |No      | thời gian địa điểm vẫn còn tồn tại múi giờ là 0, đổi ra đơn vị là miliseconds    |
@@ -47,4 +47,6 @@ https://api.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={type}&ty
 
 **Ví dụ**
 <iframe src="./examples/v1.0/textsearch.html" height="550px" allowfullscreen="" frameborder="0"> </iframe>
+
+
 

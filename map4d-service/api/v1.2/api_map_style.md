@@ -6,11 +6,11 @@ Cho phép nhà phát triển tích hợp Map4D SDK vào ứng dụng web với �
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/map/style/{mapId}?key={key}
+https://api-sdk-cdtqg.map4d.vn/sdk/map/style/{mapId}?key={key}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       |  **Yes** | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.map4d.vn/developer/key/add để tạo key. |
+| key       |  **Yes** | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map4d-web-cdtqg.map4d.vn/developer/key/add để tạo key. |
 | mapId     |  **Yes** | Khóa chính của map. `mapId` đã gán với style.                                                                                                                                     |
 ## 2. Output (Đầu ra)
 ```json
@@ -28,3 +28,5 @@ https://api.map4d.vn/sdk/map/style/{mapId}?key={key}
 
 [Ví dụ](./examples/v1.0/placedetail.html)
 <iframe src="./examples/v1.0/placedetail.html"> </iframe>
+
+

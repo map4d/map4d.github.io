@@ -6,7 +6,7 @@ MAP4D API cung cấp dữ liệu nền địa lý ở dạng raster
 
 ## 2. URL
 ```
-https://api.map4d.vn/sdk/tile/raster/{z}/{x}/{y}?key={your-key}&mode={mode}
+https://api-sdk-cdtqg.map4d.vn/sdk/tile/raster/{z}/{x}/{y}?key={your-key}&mode={mode}
 ```
 ## 3. Phương Thức: GET
 ## 4. Input (Đầu vào)
@@ -20,7 +20,8 @@ https://api.map4d.vn/sdk/tile/raster/{z}/{x}/{y}?key={your-key}&mode={mode}
 
 **Ví dụ**
 
-https://api.map4d.vn/sdk/tile/raster/7/102/58?model=2d&key=samplekey
+https://api-sdk-cdtqg.map4d.vn/sdk/tile/raster/7/102/58?model=2d&key=samplekey
 
 
 **Note:** Lưu ý rằng giá trị mode = "3d" chỉ tồn tại ở mức zoom từ 17+
+

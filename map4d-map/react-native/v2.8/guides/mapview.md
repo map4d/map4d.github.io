@@ -11,7 +11,7 @@
 |:---:|-------------------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 |  1  | camera                  | [CameraShape](#CameraShape) | Vị trí của camera trên bản đồ.                                                                                                |
 |  2  | mapType                 | string                      | Kiểu hiển thị của bản đồ, `roadmap`, `raster`, `satellite` hoặc `map3d`                                                       |
-|  3 | mapID                   | string                      | Set mapID cho bản đồ. Sử dụng để tùy chỉnh [style](https://map.map4d.vn/developer/mapstyle).                                   |
+|  3 | mapID                   | string                      | Set mapID cho bản đồ. Sử dụng để tùy chỉnh [style](https://map4d-web-cdtqg.map4d.vn/developer/mapstyle).                                   |
 |  4  | showsMyLocationButton   | bool                        | Ẩn hoặc hiển thị nút vị trí của tôi                                                                                           |
 |  5  | showsMyLocation         | bool                        | Ẩn hoặc hiển thị vị trí của tôi.<br>Bật tính năng này yêu cầu thêm quyền vị trí đối với cả Android và iOS.                    |
 |  6  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D của Map4D (ở chế độ 3D).                                                                    |
@@ -396,4 +396,5 @@ Trong đó:
     + sourceLayer: kiểu layer của đối tượng
     + properties: object chứa thông tin, tính chất của đối tượng
     + location: vị trí của đối tượng hiển thị trên bản đồ, theo hệ tọa độ địa lý.
+
 

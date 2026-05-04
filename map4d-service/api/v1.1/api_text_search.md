@@ -4,11 +4,11 @@ Tìm kiếm địa điểm dựa theo các tiêu chí tìm kiếm như: tìm ki�
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={types}&datetime={datetime}&location={location}
+http://api-sdk-cdtqg.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={types}&datetime={datetime}&location={location}
 ```
 | Parameter | Required | Description                                                                                                                                                                                                                                                                                                                                                                          |
 |-----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                                                                                                    |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                                                                                                    |
 | text      | **Yes**  | Nội dung muốn tìm kiếm.                                                                                                                                                                                                                                                                                                                                                              |
 | types     | No       | Loại đối tượng của địa điểm. <br>Hỗ trợ 2 formats:<br>  Format 1: `type1,type2,type3` -> tìm kiếm và trả về những kết quả có cả type1, type2 và type3. <br>  Format 2: `type1\|type2\|type3` -> tìm kiếm hoặc trả về những kết có 1 trong các type1, type2, type3. <br>Nếu cả 2 format được truyền vào, chỉ xử lý type đầu tiên. Ví dụ: `type1,type2\|type3` -> chỉ type1 được nhận. |
 | datetime  | No       | Thời gian địa điểm vẫn còn tồn tại - múi giờ là 0, đổi ra đơn vị là miliseconds.                                                                                                                                                                                                                                                                                                     |
@@ -48,3 +48,4 @@ http://api.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={types}&da
 
 **Ví dụ**
 <iframe src="./examples/v1.0/textsearch.html" height="550px" allowfullscreen="" frameborder="0"> </iframe>
+

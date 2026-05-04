@@ -4,11 +4,11 @@ Cho phép nhà phát triển tích hợp Map4D SDK vào ứng dụng di động 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/map/init?key={key}&mode={mode}
+https://api-sdk-cdtqg.map4d.vn/sdk/map/init?key={key}&mode={mode}
 ```
 | Parameter | Required | Description                                                                                                                                                                  |
 |---------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key           | **Yes**      | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.map4d.vn/developer/key/add để tạo key. |
+| key           | **Yes**      | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map4d-web-cdtqg.map4d.vn/developer/key/add để tạo key. |
 | mode          | No           | Có 2 chế độ Map là "2d" và "3d". Mặc định là "2d".                                                                                                                                |
 ## 2. Output (Đầu ra)
 ```json
@@ -30,3 +30,4 @@ https://api.map4d.vn/sdk/map/init?key={key}&mode={mode}
 | signature        | **Yes**     | Chữ ký được mã hóa.                                                                                                               |
 | verificationCode | **Yes**     | Mã code xác thực được mã hóa.                                                                                                     |
 | resourceBaseUrl  | **Yes**     | Link URL resource.                                                                                                                |
+

@@ -4,11 +4,11 @@ Tìm kiếm địa điểm xung quanh một vị trí cho trước. Kết quả 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/place/nearby-search?key={key}&location={location}&radius={radius}&text={text}&types={types}&tags={tags}&datetime={datetime}
+http://api-sdk-cdtqg.map4d.vn/sdk/place/nearby-search?key={key}&location={location}&radius={radius}&text={text}&types={types}&tags={tags}&datetime={datetime}
 ```
 | Parameter | Required | Description                                                                                                                                                                                                                                                                                                                                                                          |
 |-----------|----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                                                                                                    |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                                                                                                    |
 | location  | **Yes**  | Tọa độ lat, lng tại địa điểm muốn tìm. Ví dụ: 16.036505,108.218186                                                                                                                                                                                                                                                                                                                   |
 | radius    | **Yes**  | Bán kính tìm dữ liệu xung quanh - đơn vị là mét.<br>Các địa điểm trong bán kính này sẽ được ưu tiên hơn (không ràng buộc).<br>Giới hạn bán kính là 50.000 meters.                                                                                                                                                                                                                    |
 | text      | No       | Nội dung muốn tìm kiếm.                                                                                                                                                                                                                                                                                                                                                              |
@@ -51,3 +51,4 @@ http://api.map4d.vn/sdk/place/nearby-search?key={key}&location={location}&radius
 
 **Ví dụ**
 <iframe src="./examples/v1.0/nearbysearch.html" height="650px"  width: 80%> </iframe>
+

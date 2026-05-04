@@ -6,7 +6,7 @@ https://api-test.map4d.vn/sdk/geocode?key={key}&lat={lat}&lng={lng}
 ```
 | Parameter |Required| Description                                                                                           |
 |-----------|--------|-------------------------------------------------------------------------------------------------------|
-| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
+| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/access-key/add để tạo key|
 | lat       |Yes     | vĩ độ theo bản đồ gps, có giá trị từ -90 đến 90                                                                       |
 | lng       |Yes     | kinh độ theo bản đồ gps, có giá trị từ -180 đến 180                                      |
 

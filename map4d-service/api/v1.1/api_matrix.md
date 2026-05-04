@@ -4,11 +4,11 @@ Cung cấp khoảng cách và thời gian di chuyển cho một ma trận gồm 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/route/matrix?key={key}&origins={origins}&destinations={destinations}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}
+http://api-sdk-cdtqg.map4d.vn/sdk/route/matrix?key={key}&origins={origins}&destinations={destinations}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}
 ```
 | Parameter   | Required | Description                                                                                                                                                                                                                                                                                                    |
 |-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key         | **Yes**      | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                              |
+| key         | **Yes**      | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                              |
 | origins     | **Yes**      | Vị trí lat, lng của điểm bắt đầu. <br>Gởi request từ 1 địa điểm trở lên. Nếu nhập từ 2 địa điểm trở lên thì phân cách giữa các địa điểm bởi dấu chấm phẩy ";". Ví dụ: 16.024634,108.209217;16.0717664,108.2236151<br>Số điểm đi của "orgins" x Số điểm đến của "destinations" không được vượt quá 120.                            |
 | destination | **Yes**      | Vị trí lat, lng của điểm kết thúc.<br>Gởi request từ 1 địa điểm trở lên. Nếu nhập từ 2 địa điểm trở lên thì phân cách giữa các địa điểm bởi dấu chấm phẩy ";". Ví dụ: 16.020179,108.211212;16.06104,108.2167;16.0591446,108.2212969<br>Số điểm đi của "orgins" x Số điểm đến của "destinations" không được vượt quá 120.          |
 | mode        | **Yes**      | Phương tiện đi qua, hiện tại hỗ trợ 4 loại phương tiện: car (xe hơi), bike (xe đạp), foot (đi bộ), motorcycle (xe máy).<br>Đối với 2 loại phương tiện là bike (xe đạp) và foot (đi bộ) thì thuộc tính tìm theo đường đi "ngắn nhất".                                                                           |
@@ -59,3 +59,4 @@ http://api.map4d.vn/sdk/route/matrix?key={key}&origins={origins}&destinations={d
 | distance             | **Yes**     | Khoảng cách về "km" mỗi địa điểm đi qua (khoảng cách dưới dạng `text`, còn `value` là giá trị - đơn vị là mét).                                                                    |
 | duration             | **Yes**     | Khoảng cách về "thời gian" mỗi địa điểm đi qua (thời gian dưới dạng `text`, còn `value` là thời gian khi đi trên đoạn đường đó - đơn vị là giây).                                  |
 | status               | **Yes**     | Mã trạng thái "ok" nghĩa là thành công.                                                                                                                                            |
+

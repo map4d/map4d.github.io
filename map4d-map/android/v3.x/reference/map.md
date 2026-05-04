@@ -164,7 +164,7 @@ Các phương thức:
 #### Tạo mapdId
 
 Một `mapID` là một định danh duy nhất đại diện cho một instance duy nhất của Map4D. Bạn có thể tạo `mapID` và liên kết với map style thông qua
-[trang quản lý của Map4D](https://map.map4d.vn/developer/mapstyle)
+[trang quản lý của Map4D](https://map4d-web-cdtqg.map4d.vn/developer/mapstyle)
 
 #### Thêm mapId vào ứng dụng
 
@@ -176,3 +176,4 @@ Một `mapID` là một định danh duy nhất đại diện cho một instance
     ....
     map:mapId="YOUR_MAP_ID" />
 ```
+

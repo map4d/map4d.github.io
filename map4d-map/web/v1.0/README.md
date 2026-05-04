@@ -8,7 +8,7 @@ Map4D SDK for Web, written in Javascript.
 
 ```JavaScript
 <script defer
-  src="https://api.map4d.vn/sdk/map/js?version={SDK_VERSION}&key={API_KEY}&callback={FUNCTION}"></script>
+  src="https://api-sdk-cdtqg.map4d.vn/sdk/map/js?version={SDK_VERSION}&key={API_KEY}&callback={FUNCTION}"></script>
 ```
 
 ## Using
@@ -18,7 +18,7 @@ Map4D SDK for Web, written in Javascript.
 <html>
 <head>
   <script defer
-    src="https://api.map4d.vn/sdk/map/js?version={SDK_VERSION}&key={API_KEY}&callback={FUNCTION}"></script>
+    src="https://api-sdk-cdtqg.map4d.vn/sdk/map/js?version={SDK_VERSION}&key={API_KEY}&callback={FUNCTION}"></script>
 </head>
 <body>
   <div id="map" style="width:100%;height:250px;"></div>
@@ -51,3 +51,4 @@ Map4D SDK for Web, written in Javascript.
 - [12. Effect Map](11-effect-map.md)
 - [13. LatLng Bounds](12-lat-lng-bounds.md)
 - [14. Projection](13-projection.md)
+

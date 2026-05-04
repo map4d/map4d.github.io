@@ -5,7 +5,7 @@ https://api-test.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={typ
 ```
 | Parameter |Required| Description                                                                                      |
 |-----------|--------|--------------------------------------------------------------------------------------------------|
-| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
+| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/access-key/add để tạo key|
 | text      |Yes     | Nội dung muốn tìm và nội dung tìm kiếm tối đa là 1024 ký tự.                                                                             |
 | types     |No      | Loại đối tượng của địa điểm. <br>Hỗ trợ 2 formats:<br>  Format 1: AND `type1,type2,type3` -> tìm kiếm và trả về những kết quả có cả type1, type2 và type3. <br>Nếu `types={type1}&types={type2}` -> sẽ hiểu là `types=type1,type2`.<br>  Format 2: OR `type1\|type2\|type3` -> tìm kiếm hoặc trả về những kết có 1 trong các type1, type2, type3. <br>Nếu có cả 2 format được truyền vào, chỉ xử lý type đầu tiên. Ví dụ: `type1,type2\|type3` -> chỉ type1 được nhận.                                                              |
 | datetime  |No      | Thời gian địa điểm vẫn còn tồn tại múi giờ là 0, đổi ra đơn vị là miliseconds                 |                                                                        |
@@ -45,4 +45,5 @@ https://api-test.map4d.vn/sdk/place/text-search?key={key}&text={text}&types={typ
 
 **Ví dụ**
 <iframe src="./examples/test_sdk/textsearch.html" height="550px" allowfullscreen="" frameborder="0"> </iframe>
+
 

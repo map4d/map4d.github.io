@@ -1,7 +1,7 @@
 #  ETA(Dự kiến thời gian đến)
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}
+https://api-sdk-cdtqg.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}
 key và mode là thuộc tính bắc buộc.
 origins: là danh sách vị trí của từng xe lat,lng của địa điểm bắt đầu. vd:[{"alias":"Xe 1", "location":{16.024634,108.209217}},{"alias":"Xe 2", "location":{16.094266,108.225059}}]
 destination: là vị trí lat,lng của địa điểm kết thúc. vd:16.020179,108.211212

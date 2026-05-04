@@ -43,7 +43,7 @@
             displayResult.innerHTML = "(*) là bắt buộc";
             return;
         }
-        $.getJSON('https://api.map4d.vn/sdk/v2/geocode?key='+key+'&location='+inputLocation+'&address='+inputAddress+'&viewbox='+inputViewBox, function(data) {
+        $.getJSON('https://api-sdk-cdtqg.map4d.vn/sdk/v2/geocode?key='+key+'&location='+inputLocation+'&address='+inputAddress+'&viewbox='+inputViewBox, function(data) {
             displayResult.innerHTML =syntaxHighlight(JSON.stringify(data, null, 2)) ;
         })
     }

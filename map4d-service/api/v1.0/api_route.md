@@ -1,11 +1,11 @@
 #  Route (Tìm đường đi nhanh nhất giữa các địa điểm)
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}
+https://api-sdk-cdtqg.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}
 ```
 | Parameter  |Required| Description                                                                                                           |
 |------------|--------|-----------------------------------------------------------------------------------------------------------------------|
-| key        |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key |
+| key        |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map4d-web-cdtqg.map4d.vn/user/access-key/add để tạo key |
 | origin     |Yes      | vị trí lat, lng của địa điểm bắt đầu. VD:16.024634,108.209217                                                      |
 | destination|Yes      | vị trí lat,lng của địa điểm kết thúc. VD:16.020179,108.211212                                                      |
 | points     |No      | danh sách các điểm trung gian muốn đi qua. VD:16.039173,108.210912;16.044597,108.217263                                 |
@@ -123,3 +123,5 @@ https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destinatio
 
 Dưới đây là ví dụ về decode polyline
 <iframe src="//jsfiddle.net/thanhnghiacntt/9w3uq0ry/embedded/" style="min-width: 960px;" height="540px"></iframe>
+
+

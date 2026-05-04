@@ -1,6 +1,6 @@
 # Map4dMap JavaScript SDK
 [![map4d](https://img.shields.io/badge/map4d-map-orange)](https://map4d.vn/)
-[![platform](https://img.shields.io/badge/platform-js-ff69b4.svg)](https://map.map4d.vn/)
+[![platform](https://img.shields.io/badge/platform-js-ff69b4.svg)](https://map4d-web-cdtqg.map4d.vn/)
 
 Map4dMap JavaScript SDK cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên các trang web và thiết bị di động.
 
@@ -23,7 +23,7 @@ Map4dMap JavaScript SDK cho phép bạn tùy chỉnh bản đồ với nội dun
       let map = new map4d.Map(document.getElementById("map"), options)
     }
   </script>
-  <script src="https://api.map4d.vn/sdk/map/js?version=SDK_VERSION&key=YOUR_API_KEY&mapId=MAP_ID&callback=initMap"></script>
+  <script src="https://api-sdk-cdtqg.map4d.vn/sdk/map/js?version=SDK_VERSION&key=YOUR_API_KEY&mapId=MAP_ID&callback=initMap"></script>
 </body>
 </html>
 ```
@@ -33,14 +33,14 @@ Map4dMap JavaScript SDK cho phép bạn tùy chỉnh bản đồ với nội dun
 Map4D Web SDK có thể được tải bằng thẻ script được thêm bên trong file HTML
 
 ```JavaScript
-<script defer src="https://api.map4d.vn/sdk/map/js?version=SDK_VERSION&key=YOUR_API_KEY&mapId=MAP_ID&callback=CALLBACK_FUNCTION"></script>
+<script defer src="https://api-sdk-cdtqg.map4d.vn/sdk/map/js?version=SDK_VERSION&key=YOUR_API_KEY&mapId=MAP_ID&callback=CALLBACK_FUNCTION"></script>
 ```
 
 Trong đó:
 - **SDK_VERSION**: phiên bản Map4D Web SDK, phiên bản mới nhất hiện tại là: `2.3`
-- **YOUR_API_KEY**: là một mã định danh để xác thực các yêu cầu liên quan đến projects của bạn dùng trong việc sử dụng và thanh toán, tạo API key tại đây: <https://map.map4d.vn/developer/key/>
+- **YOUR_API_KEY**: là một mã định danh để xác thực các yêu cầu liên quan đến projects của bạn dùng trong việc sử dụng và thanh toán, tạo API key tại đây: <https://map4d-web-cdtqg.map4d.vn/developer/key/>
 - **CALLBACK_FUNCTION**: tên hàm mà sẽ được gọi sau khi hoàn tất việc tải Map4D Web SDK
-- **MAP_ID** *(optional)*: map id để lấy style, tham khảo [Map Style](https://map.map4d.vn/developer/mapstyle)
+- **MAP_ID** *(optional)*: map id để lấy style, tham khảo [Map Style](https://map4d-web-cdtqg.map4d.vn/developer/mapstyle)
 
 
 ## Map DOM Elements
@@ -60,3 +60,4 @@ map = new map4d.Map(document.getElementById("map"), options)
 ### Map Options
 
 [MapOptions](/guides/map-options) là object cung cấp các thiết lập ban đầu để khởi tạo đối tượng Map4D
+
