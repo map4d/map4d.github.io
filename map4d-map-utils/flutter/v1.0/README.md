@@ -3,7 +3,7 @@
 [![platform](https://img.shields.io/badge/platform-flutter-45d2fd.svg)](https://flutter.dev/)
 [![pub package](https://img.shields.io/pub/v/map4d_map_utils.svg)](https://pub.dev/packages/map4d_map_utils)
 
-> **Map4dMapUtils Flutter package** là thư viện tiện ích cho các ứng dụng sử dụng [Map4dMap SDK](https://docs.map4d.vn/map4d-map/flutter).
+> **Map4dMapUtils Flutter package** là thư viện tiện ích cho các ứng dụng sử dụng [Map4dMap SDK](https://docs-cdtqg.map4d.vn/map4d-map/flutter).
 
 ## Getting Started
 

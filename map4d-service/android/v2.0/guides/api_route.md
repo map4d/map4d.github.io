@@ -1,6 +1,6 @@
 # Directions
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_route>
+Map4D Services API: <https://docs-cdtqg.map4d.vn/map4d-service/api/v1.0/#/api_route>
 
 > Tìm đường đi giữa các địa điểm.
 
@@ -169,3 +169,4 @@ MFDirectionOptions.Builder()
 | **weighting** *optional* |[MFWeighting](/types?id=mfweighting)| Builder | Set thuộc tính đường đi cho Builder      |
 | **restriction** *optional*  |[MFRouteRestriction](/types?id=mfrouterestriction)| Builder      | Set điểm / khu vực / danh sách các loại đường mà tuyến đường không đi qua cho Builder|
 | **build**               | `none`          |[MFDirectionOptions](/guides/api_route?id=mfdirectionoptions)| Tạo đối tượng MFDirectionOptions từ Builder|
+

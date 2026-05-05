@@ -63,7 +63,8 @@ map = new map4d.Map(document.getElementById("map"), options)
 
 ### Modules .d.ts
 
-Tải module .d.ts cho Map4d [tại đây](//docs.map4d.vn/map4d-map/web/v2.5/dts/map4d.d.ts)
+Tải module .d.ts cho Map4d [tại đây](//docs-cdtqg.map4d.vn/map4d-map/web/v2.5/dts/map4d.d.ts)
+
 
 
 

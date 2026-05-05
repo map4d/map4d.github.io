@@ -1,6 +1,6 @@
 # Viewbox Search
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_viewbox_search>
+Map4D Services API: <https://docs-cdtqg.map4d.vn/map4d-service/api/v1.0/#/api_viewbox_search>
 
 > Tìm các địa điểm trong một vùng địa lý hình chữ nhật.
 
@@ -110,3 +110,4 @@ MFViewboxSearchOptions.Builder(@NonNull MFLocationComponent northeast, @NonNull 
 | **tags** *optional*     | String[]        | Builder      | Set mảng tags địa điểm cho Builder                                 |
 | **datetime** *optional* | Integer         | Builder      | Set thời gian các địa điểm muốn tìm kiếm cho Builder               |
 | **build**               | `none`          |[MFViewboxSearchOptions](/guides/api_viewbox_search?id=mfviewboxsearchoptions)| Tạo đối tượng MFViewboxSearchOptions từ Builder|
+

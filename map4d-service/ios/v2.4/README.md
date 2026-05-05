@@ -3,7 +3,7 @@
 [![platform](https://img.shields.io/cocoapods/p/Map4dServices)](https://www.apple.com/ios/)
 [![cocoapods](https://img.shields.io/cocoapods/v/Map4dServices)](https://cocoapods.org/pods/Map4dServices)
 
-> **Map4dServices** cung cấp [Map4D Services API](https://docs.map4d.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
+> **Map4dServices** cung cấp [Map4D Services API](https://docs-cdtqg.map4d.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
 > **Map4dServices** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
 
 ## Installation

@@ -3,7 +3,7 @@
 [![platform](https://img.shields.io/badge/platform-reactnative-61dafb.svg)](https://reactnative.dev/)
 [![npm](https://img.shields.io/npm/v/react-native-map4d-services)](https://www.npmjs.com/package/react-native-map4d-services)
 
-> **Map4dServices React Native** cung cấp [Map4D Services API](https://docs.map4d.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
+> **Map4dServices React Native** cung cấp [Map4D Services API](https://docs-cdtqg.map4d.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
 > **Map4dServices React Native** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
 
 ## Requirement
@@ -105,3 +105,4 @@ fetchSuggestion({text: 'abc'})
   console.log('Suggestion:', result);
 })
 ```
+

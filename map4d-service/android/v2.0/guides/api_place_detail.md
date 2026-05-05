@@ -1,6 +1,6 @@
 # Place Detail
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_place_detail>
+Map4D Services API: <https://docs-cdtqg.map4d.vn/map4d-service/api/v1.0/#/api_place_detail>
 
 > Lấy thông tin chi tiết của địa điểm thông qua id của địa điểm đó.
 
@@ -109,3 +109,4 @@ placesService.fetchPlaceDetail(placeId, new MFServiceCallback<MFPlaceDetail>() {
 | **getCode**                  | `none`          | String       | Lấy mã của Address Component                                       |
 | **getType**                  | `none`          | String       | Lấy kiểu của Address Component                                     |
 | **getName**                  | `none`          | String       | Lấy tên của Address Component                                      |
+

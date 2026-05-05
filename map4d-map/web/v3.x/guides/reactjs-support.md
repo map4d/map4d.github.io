@@ -39,7 +39,7 @@ const onMapReady = (map, id) => {
 
 Từ đây bạn có thể tương tác với Map thông qua đối tượng `map` hoặc lưu đối tượng `map` lại để có thể tương tác ở bất kỳ nơi đâu. 
 
-[More docs here](https://docs.map4d.vn/map4d-map/web/)
+[More docs here](https://docs-cdtqg.map4d.vn/map4d-map/web/)
 
 ## Chú ý
 1. `id` của `Map4dMap` component cần phải duy nhất, không được trùng `id` với các `Map4dMap` component khác, để đảm bảo map hoạt động chính xác.
@@ -47,3 +47,4 @@ Từ đây bạn có thể tương tác với Map thông qua đối tượng `ma
 3. Khi dùng Javascript với `Eslint` bật chế độ `no-undef`, khi sử dụng dạng `let m = new map4d.XXX…` thì sẽ báo lỗi, chúng ta cần tắt chế độ `no-undef` đi, hoặc ghi đầy đủ `let m = new window.map4d.XXX…` để bỏ qua lỗi này.
 
 ## [Demo Project](https://github.com/sua8051/map4d-map-reactjs-support.git)
+

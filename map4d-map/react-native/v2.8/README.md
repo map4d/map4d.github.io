@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/react-native-map4d-map)](https://www.npmjs.com/package/react-native-map4d-map)
 
 
-> **Map4dMap React Native** cung cấp Map4dMap SDK cho cả thiết bị [Android](https://docs.map4d.vn/map4d-map/android/) và [iOS](https://docs.map4d.vn/map4d-map/android/), cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
+> **Map4dMap React Native** cung cấp Map4dMap SDK cho cả thiết bị [Android](https://docs-cdtqg.map4d.vn/map4d-map/android/) và [iOS](https://docs-cdtqg.map4d.vn/map4d-map/android/), cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
 > Map4dMap React Native dựa trên cơ chế của React Native để bổ sung các màn hình hiển thị cho Android và iOS.
 
 ## Getting Started
@@ -132,4 +132,5 @@ export default App;
 ```
 
 > Chú ý: Cần set style quy định kích thước cho `MFMapView`
+
 

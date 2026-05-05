@@ -62,7 +62,7 @@ Ví dụ sau đây sẽ thêm một Directions Renderer vào bản đồ với *
 
 <iframe src="//jsfiddle.net/duydung2007/fnjhr8x0/embedded/" style="min-width: 914px;" height="490px"></iframe>
 
-Thêm một Directions Renderer vào bản đồ với **routes** là JSON String trả về từ [Map4D SDK API Route](https://docs.map4d.vn/map4d-service/api/v1.1/#/api_route). Route này có chứa
+Thêm một Directions Renderer vào bản đồ với **routes** là JSON String trả về từ [Map4D SDK API Route](https://docs-cdtqg.map4d.vn/map4d-service/api/v1.1/#/api_route). Route này có chứa
 2 điểm waypoint:
 
 <iframe src="//jsfiddle.net/duydung2007/v250y47p/embedded/" style="min-width: 914px;" height="490px"></iframe>
@@ -102,4 +102,5 @@ Tham số **args** trả về khi có sự kiện xảy ra sẽ bao gồm các t
 - routeIndex: là index của route được người dùng **click**
 - location: là tọa độ click trên bản đồ theo latitude và longitude.
 - pixel: là tọa độ pixel mà người dùng click trên màn hình.
+
 

@@ -1,6 +1,6 @@
 # Text Search
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_text_search>
+Map4D Services API: <https://docs-cdtqg.map4d.vn/map4d-service/api/v1.0/#/api_text_search>
 
 > Tìm kiếm các địa điểm bằng chuỗi kí tự.
 
@@ -102,3 +102,4 @@ MFTextSearchOptions.Builder()
 | **location** *optional* | [MFLocationComponent](/types?id=mflocationcomponent) | Builder | Set vị trí tìm kiếm cho Builder                                    |
 | **datetime** *optional* | Integer         | Builder      | Set thời gian các địa điểm muốn tìm kiếm cho Builder               |
 | **build**               | `none`          |[MFTextSearchOptions](/guides/api_text_search?id=mftextsearchoptions)| Tạo đối tượng MFTextSearchOptions từ Builder|
+

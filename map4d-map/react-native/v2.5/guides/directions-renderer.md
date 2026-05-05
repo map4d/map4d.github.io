@@ -70,7 +70,7 @@ render() {
 | Name                  | Type | Description |
 |-----------------------|---|---|
 | routes                | array[array[[CoordinateData](#CoordinateData)]]      | Mảng các mảng tọa độ thể hiện chỉ đường sẽ được hiển thị lên bản đồ. |
-| directions            | string | Chuỗi json kết quả tìm đường bằng [Map4d Service API](https://docs.map4d.vn/map4d-service/api/) (Get Route).<br>Nếu vừa set cả 2 props `routes` và `directions` thì sẽ ưu tiên hiển thị chỉ đường từ `routes`. |
+| directions            | string | Chuỗi json kết quả tìm đường bằng [Map4d Service API](https://docs-cdtqg.map4d.vn/map4d-service/api/) (Get Route).<br>Nếu vừa set cả 2 props `routes` và `directions` thì sẽ ưu tiên hiển thị chỉ đường từ `routes`. |
 | activedIndex          | number                                               | Chỉ mục chính của tuyến đường trong `routes` hoặc `directions`. Mặc định là 0. |
 | activeStrokeWidth     | number                                               | Kích thước của tuyến đường chính (xác định bằng `activedIndex`). |
 | activeStrokeColor     | [ColorPropType](https://reactnative.dev/docs/colors) | Màu của tuyến đường chính. |
@@ -89,7 +89,7 @@ render() {
 | Name                       | Parameters    | Description                                                                                                                            |
 |----------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | **setRoutes** *void*       | routes: array[array[[CoordinateData](#CoordinateData)]] | Set các tuyến đường dưới dạng mảng các mảng tọa độ lat, lng.                                 |
-| **setDirections** *void*   | json: string  | Set các tuyến đường dưới dạng json string từ kết quả trả về từ [Map4d Service API](https://docs.map4d.vn/map4d-service/api/) Get Route |
+| **setDirections** *void*   | json: string  | Set các tuyến đường dưới dạng json string từ kết quả trả về từ [Map4d Service API](https://docs-cdtqg.map4d.vn/map4d-service/api/) Get Route |
 | **setActivedIndex** *void* | index: number | Set chỉ mục tuyến đường chính.                                                                                                         |
 
 ### Object Types
@@ -178,3 +178,4 @@ Trong đó:
   - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
   - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
   - routeIndex: index của tuyến đường mà người dùng tap vào.
+

@@ -1,6 +1,6 @@
 # Geocode
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_geocode_v2>
+Map4D Services API: <https://docs-cdtqg.map4d.vn/map4d-service/api/v1.0/#/api_geocode_v2>
 
 > Dùng để phân giải địa điểm ra tọa độ địa lý.
 
@@ -44,3 +44,4 @@ fetchGeocode({
   }
 })
 ```
+

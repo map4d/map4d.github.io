@@ -1,6 +1,6 @@
 # Nearby Search
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_nearby_search>
+Map4D Services API: <https://docs-cdtqg.map4d.vn/map4d-service/api/v1.0/#/api_nearby_search>
 
 > Tìm kiếm các địa điểm lân cận.
 
@@ -106,3 +106,4 @@ MFNearBySearchOptions.Builder(@NonNull MFLocationComponent location, int radius)
 | **tags** *optional*     | String[]        | Builder      | Set mảng kiểu địa điểm cho Builder                                 |
 | **datetime** *optional* | Integer         | Builder      | Set thời gian các địa điểm muốn tìm kiếm cho Builder               |
 | **build**               | `none`          |[MFNearBySearchOptions](/guides/api_nearby_search?id=mfnearbysearchoptions)| Tạo đối tượng MFNearBySearchOptions từ Builder|
+

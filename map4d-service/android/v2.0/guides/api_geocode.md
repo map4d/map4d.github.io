@@ -1,6 +1,6 @@
 # GeoCode
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_geocode_v2>
+Map4D Services API: <https://docs-cdtqg.map4d.vn/map4d-service/api/v1.0/#/api_geocode_v2>
 
 > Dùng để phân giải địa điểm ra tọa độ địa lý.
 
@@ -102,3 +102,4 @@ MFGeocodeOptions.Builder()
 | **address** *optional*  | String          | Builder      | Set địa chỉ cho Builder                                            |
 | **viewbox** *optional*  | [MFLocationComponent](/types?id=mflocationcomponent), [MFLocationComponent](/types?id=mflocationcomponent) | Builder      | Set viewbox cho Builder                 |
 | **build**               | `none` |[MFGeocodeOptions](/guides/api_geocode?id=mfgeocodeoptions)| Tạo đối tượng MFGeocodeOptions từ Builder|
+
