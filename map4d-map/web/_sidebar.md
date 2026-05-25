@@ -7,6 +7,7 @@
   - [Events](guides/map-events.md)
   - [Effect](guides/map-effects.md)
   - [Map Types](guides/map-types.md)
+  - [Area Focuser](guides/area-focuser.md)
 
 - Maps
   - [Map](guides/map.md)
