@@ -2,7 +2,7 @@
 
 ## Directions Renderer Class
 
-`map4d.DirectionsRenderer` class
+`ipostmap.DirectionsRenderer` class
 
 **Constructor** 
 
@@ -22,7 +22,7 @@ DirectionsRenderer(options)
 | **setOptions**|[DirectionsRendererOptions](/reference/directions-renderer?id=directionsrenderer-options)|`none`| Set options dùng để xác định các thuộc tính dùng cho DirectionsRenderer |
 | **setMap**                   | [Map](/reference/map?id=map-class)      | `none`       | Thêm Directions Renderer vào map, nếu set map là **null** thì Directions Renderer sẽ bị xóa khỏi map |
 | **getMap**                   | `none`                                  | Map          | Lấy đối tượng map mà Directions Renderer được thêm vào                                 |
-| **setRoutes**                | string `or` [RouteOptions](/reference/directions-renderer?id=routeoptions) `or` [ILatLng](/reference/coordinates?id=ilatlng)[][]| `none`| Set các routes cho Directions Renderer bằng một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [Map4D SDK API Route](https://docs.map4d.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/reference/directions-renderer?id=routeoptions) |
+| **setRoutes**                | string `or` [RouteOptions](/reference/directions-renderer?id=routeoptions) `or` [ILatLng](/reference/coordinates?id=ilatlng)[][]| `none`| Set các routes cho Directions Renderer bằng một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [IPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/reference/directions-renderer?id=routeoptions) |
 | **getRoutes**                | `none` |  [LatLng](/reference/coordinates?id=latlng)[][]| Get mảng tạo độ các routes của Directions Renderer                                    |
 | **setActivedIndex**          | number                                  | `none`       | Set index của route muốn active trong Directions Renderer                              |
 | **getActivedIndex**          | `none`                                  | number       | Get index của route đang active trong Directions Renderer                              |
@@ -31,7 +31,7 @@ DirectionsRenderer(options)
 
 ## DirectionsRenderer Options
 
-`map4d.DirectionsRendererOptions` interface
+`ipostmap.DirectionsRendererOptions` interface
 
 Đối tượng DirectionsRendererOptions dùng để xác định các thuộc tính dùng cho DirectionsRenderer.
 
@@ -39,7 +39,7 @@ DirectionsRenderer(options)
 
 | Name                         | Type                | Description                                                                                                                                                           |
 |------------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **routes** *optional*        |string `or` [RouteOptions](/reference/directions-renderer?id=routeoptions) `or` [ILatLng](/reference/coordinates?id=ilatlng)[][]| truyền vào một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [Map4D SDK API Route](https://docs.map4d.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/reference/directions-renderer?id=routeoptions) để tạo Directions Renderer.|
+| **routes** *optional*        |string `or` [RouteOptions](/reference/directions-renderer?id=routeoptions) `or` [ILatLng](/reference/coordinates?id=ilatlng)[][]| truyền vào một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [IPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/reference/directions-renderer?id=routeoptions) để tạo Directions Renderer.|
 | **activedIndex** *optional*  | number              | chỉ định index cho route được active trong Directions Renderer.                                   |
 | **activeStrokeWidth** *optional*   | number        | chỉ định độ rộng của active line theo đơn vị point.                                               |
 | **activeStrokeColor** *optional*   | string        | chỉ định màu sắc của active line theo mã HEX (ví dụ **"#FF0000"**).                               |
@@ -58,7 +58,7 @@ DirectionsRenderer(options)
 
 ## RouteOptions
 
-`map4d.RouteOptions` interface
+`ipostmap.RouteOptions` interface
 
 Đối tượng **RouteOptions** dùng để xác định các thuộc tính dùng cho **routes** (các tuyến đường đi từ vị trí này đến vị trí khác trên bản đồ)
 

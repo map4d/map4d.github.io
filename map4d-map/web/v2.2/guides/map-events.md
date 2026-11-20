@@ -1,6 +1,6 @@
 # Map events
 
-Map4D Web SDK cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
+IPostMap Web SDK cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
 
 <iframe src="./html/map-events.html" style="min-width: 914px;" height="420px"></iframe>
 
@@ -81,7 +81,7 @@ event.remove()
 
 ### Thay đổi EventOptions ở runtime
 
-Map4dMap JavaScript SDK cho phép thay đổi EventOptions ở runtime.
+IpostMap JavaScript SDK cho phép thay đổi EventOptions ở runtime.
 Ví dụ: ta đăng ký một event nhận sự kiên click của marker, polygon và polyline.
 ```js
 let listener = map.addListener("click", (args) => {
@@ -104,10 +104,10 @@ Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên map và
 
 ### Click POI on Map
 
-Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên POI của Map4D và thực hiện hiển thị thông tin của POI được click
+Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên POI của IPostMap và thực hiện hiển thị thông tin của POI được click
 <iframe src="//jsfiddle.net/huydang/2hv1xk9j/embedded/" style="min-width: 914px;" height="600px" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### Click place on Map
 
-Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên place của Map4D và thực hiện hiển thị thông tin của place được click
+Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên place của IPostMap và thực hiện hiển thị thông tin của place được click
 <iframe src="//jsfiddle.net/duydung2007/s59fLe8z/embedded/" style="min-width: 914px;" height="600px" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>

@@ -1,4 +1,4 @@
-- [Getting Started](/ "Map4dMap Flutter Package")
+- [Getting Started](/ "IpostMap Flutter Package")
 - [Changelog](changelog.md)
 - [API Reference](https://pub.dev/documentation/map4d_map/latest/)
 

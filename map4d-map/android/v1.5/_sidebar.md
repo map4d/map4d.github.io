@@ -1,4 +1,4 @@
-- [Overview](/ "Map4dMap Android SDK")
+- [Overview](/ "IpostMap Android SDK")
 - [Changelog](changelog.md)
 
 - Interacting with the Map

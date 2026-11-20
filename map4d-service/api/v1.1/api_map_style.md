@@ -1,16 +1,16 @@
 #  Load Map Style
 Get file js theo style tương ứng `mapId`.
 
-Cho phép nhà phát triển tích hợp Map4D SDK vào ứng dụng web với đầy đủ tính năng điều khiển. 
+Cho phép nhà phát triển tích hợp IPostMap SDK vào ứng dụng web với đầy đủ tính năng điều khiển. 
 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/map/style/{mapId}?key={key}
+http://api.ipostmap.vn/sdk/map/style/{mapId}?key={key}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       |  **Yes** | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key. |
+| key       |  **Yes** | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.ipostmap.vn/user/my-access-key/add để tạo key. |
 | mapId     |  **Yes** | Khóa chính của map. `mapId` đã gán với style.                                                                                                                                     |
 ## 2. Output (Đầu ra)
 ```json

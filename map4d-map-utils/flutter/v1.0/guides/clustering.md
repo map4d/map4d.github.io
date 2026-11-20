@@ -1,12 +1,12 @@
 # Marker Clustering
 
-> Map4dMapUtils utility library cung cấp các tiện ích để xử lý việc hiển thị một số lượng lớn các điểm lên bản đồ Map4D.
+> IpostMapUtils utility library cung cấp các tiện ích để xử lý việc hiển thị một số lượng lớn các điểm lên bản đồ IPostMap.
 
 ![Marker Clustering](../../resources/clustering.jpeg)
 
 ## Usage
 
-Map4dMapUtils cung cấp lớp [MFClusterManager](https://pub.dev/documentation/map4d_map_utils/latest/map4d_map_utils/MFClusterManager-class.html) để quản lý các điểm và nhóm chúng lại theo từng mức zoom của bản đồ.  
+IpostMapUtils cung cấp lớp [MFClusterManager](https://pub.dev/documentation/map4d_map_utils/latest/map4d_map_utils/MFClusterManager-class.html) để quản lý các điểm và nhóm chúng lại theo từng mức zoom của bản đồ.  
 Các điểm trong cụm phải được thêm vào bản đồ thông qua cluster manager, bằng các khai báo đối tượng [MFClusterItem](https://pub.dev/documentation/map4d_map_utils/latest/map4d_map_utils/MFClusterItem-class.html) và thêm vào bằng phương thức [addItem](https://pub.dev/documentation/map4d_map_utils/latest/map4d_map_utils/MFClusterManager/addItem.html) hoặc [addItems](https://pub.dev/documentation/map4d_map_utils/latest/map4d_map_utils/MFClusterManager/addItems.html).  
 
 [MFClusterManager](https://pub.dev/documentation/map4d_map_utils/latest/map4d_map_utils/MFClusterManager-class.html) yêu cầu [controller](https://pub.dev/documentation/map4d_map/latest/map4d_map/MFMapViewController-class.html) của [MFMapView](https://pub.dev/documentation/map4d_map/latest/map4d_map/MFMapView-class.html) instance, để xác định bản đồ sẽ hiển thị các cụm địa điểm.
@@ -85,7 +85,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Map4D Map Utility',
+      title: 'IPostMap Map Utility',
       home: MFMapView(
         initialCameraPosition: MFCameraPosition(
             target: MFLatLng(cameraLatitude, cameraLongitude), zoom: 10),

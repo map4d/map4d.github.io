@@ -4,7 +4,7 @@
 
 Những thay đổi kẻ từ version 1.5.0
 - Map
-  - Thay đổi logo Map4D theo quy chuẩn mới
+  - Thay đổi logo IPostMap theo quy chuẩn mới
   - Bổ sung phương thức `setVisibleBuildings` và `setHiddenBuildings`
   - Loại bỏ phương thức `setHiddenBuilding` và `setUnhiddenBuilding`
   - Sửa lỗi click marker trong data layer không chính xác
@@ -14,7 +14,7 @@ Những thay đổi kẻ từ version 1.5.0
 
 Những thay đổi kẻ từ version 1.4
 - Map
-  - Cải thiên hiệu suất của Map4D và fixed bugs
+  - Cải thiên hiệu suất của IPostMap và fixed bugs
   - Bổ sung hiệu ứng mọc lên cho building
   - Thêm tùy chọn vô hiệu hóa zoom, pan hoặc rotate
   - Thay đổi tùy chọn của sự kiện trên map. Chi tiết [EventOptions](/reference/map?id=eventoptions)

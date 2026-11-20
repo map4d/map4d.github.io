@@ -23,7 +23,7 @@ public class MFPlace {
 - Cho phép hoặc ko cho phép hiển thị Place trên bản đồ
 
 ```java
-public final class Map4D {
+public final class IPostMap {
 public void setPlacesEnabled(boolean enabled);
 public boolean isPlacesEnabled();
 }
@@ -32,11 +32,11 @@ public boolean isPlacesEnabled();
 
 ```java
 // enable or disable place
-map4D.setPlacesEnabled(true) // cho phép vẽ place
-map4D.setPlacesEnabled(false) // ko hiển thị place
+ipostmap.setPlacesEnabled(true) // cho phép vẽ place
+ipostmap.setPlacesEnabled(false) // ko hiển thị place
 
 // kiểm tra hiện tại place được cho phép vẽ hoặc ko
-boolean isPlaceEnabled = map4D.isPlacesEnabled()
+boolean isPlaceEnabled = ipostmap.isPlacesEnabled()
 ```
 
 ## 3. Filter Place
@@ -46,7 +46,7 @@ boolean isPlaceEnabled = map4D.isPlacesEnabled()
 - Lệnh setFilterPlaces cuối cũng sẽ lọc những type ở lệnh cuối đc vẽ.
 
 ```java
-public final class Map4D {
+public final class IPostMap {
    public void setFilterPlaces(List<String> placeTypes);
    public List<String> getFilterPlaces();
 }
@@ -56,9 +56,9 @@ public final class Map4D {
 ```java
 // bộ lọc hiển thị cho type cafe. 
 List<String> list = Arrays.asList("cafe", "bank");
-map4D.setFilterPlaces(list);
+ipostmap.setFilterPlaces(list);
 
-List<String> palcesType = map4D.getFilterPlaces() // mảng danh sách các type của place đang được hiển thị
+List<String> palcesType = ipostmap.getFilterPlaces() // mảng danh sách các type của place đang được hiển thị
 ```
 
 Set lại empty list để tắt bộ lọc và hiển thị lại tất cả các place.
@@ -68,7 +68,7 @@ Set lại empty list để tắt bộ lọc và hiển thị lại tất cả c�
 - HighLight place được chợn.
 
 ```java
-public final class Map4D {
+public final class IPostMap {
    setSelectedPlace(id: string): void
    getSelectedPlace(): string
 }
@@ -76,8 +76,8 @@ public final class Map4D {
 - Ví dụ: 
 
 ```java
-map4D.setSelectedPlace("your_id") // highlight place với id của place.
-String placeId = map4D.getSelectedPlace() // get place ID của place đang được chọn.
+ipostmap.setSelectedPlace("your_id") // highlight place với id của place.
+String placeId = ipostmap.getSelectedPlace() // get place ID của place đang được chọn.
 ```
 
 ## 5. Các sự kiện trên place
@@ -85,10 +85,10 @@ String placeId = map4D.getSelectedPlace() // get place ID của place đang đư
 Sự kiện click phát sinh khi người dùng click vào place
 
 ```java
-map4D.setOnPlaceClickListener(new Map4D.OnPlaceClickListener() {
+ipostmap.setOnPlaceClickListener(new IPostMap.OnPlaceClickListener() {
             @Override
             public void onPlaceClick(MFPlace place) {
-                map4D.setSelectedPlace(place.getId());
+                ipostmap.setSelectedPlace(place.getId());
             }
         });
 ```

@@ -6,7 +6,7 @@ Lớp Projection cho phép người dùng thực hiện các phép chiếu
 ### 1. Khởi tạo lớp Projection
 
 ```java
-  MFProjection projection = map4D.getProjection();
+  MFProjection projection = ipostmap.getProjection();
 ```
 
 ### 2. Chuyển đổi từ toạ độ LatLng sang toạ độ Screen

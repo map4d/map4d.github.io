@@ -45,7 +45,7 @@ MFBuilding *Building = [[MFBuilding alloc] init];
 | **map**                    | [MFMapView](/reference/map?id=MFMapView)              | Chỉ định hiển thị **Building** trên **Map** hoặc xoá **Building** khỏi **Map**     |
 | **Id**                     | UInt32                 | **Id** của **Building** **{get}**.                                                                                       |
 
-**Ghi chú:** Hiện tại Map4D hỗ trợ cái kiểu sau: **Buildingnt**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **Buildingnt**.
+**Ghi chú:** Hiện tại IPostMap hỗ trợ cái kiểu sau: **Buildingnt**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **Buildingnt**.
 
 
 ### Delegate

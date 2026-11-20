@@ -4,11 +4,11 @@ Tìm đường đi giữa 2 hoặc nhiều điểm đến theo các tùy chọn 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}
+http://api.ipostmap.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}&avoid={avoid}&avoidRoads={avoidRoads}
 ```
 | Parameter   | Required | Description                                                                                                                                                                                                                                                                                                    |
 |-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key         | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                              |
+| key         | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.ipostmap.vn/user/my-access-key/add để tạo key.                                                                                                                              |
 | origin      | **Yes**  | Vị trí lat, lng của điểm bắt đầu. Ví dụ: 16.024634,108.209217                                                                                                                                                                                                                                                  |
 | destination | **Yes**  | Vị trí lat, lng của điểm kết thúc. Ví dụ: 16.020179,108.211212                                                                                                                                                                                                                                                 |
 | points      | No       | Danh sách các điểm trung gian muốn đi qua. <br>Gởi request từ 1 địa điểm trở lên. Nếu nhập từ 2 địa điểm trở lên thì phân cách giữa các địa điểm bởi dấu chấm phẩy ";". Ví dụ: 16.039173,108.210912;16.044597,108.217263<br>Số điểm tối đa là 25 điểm.                                                         |
@@ -116,7 +116,7 @@ http://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination
 | summary          | No       | Tóm lược đường đi (khoảng cách `distance` và thời gian di chuyển `duration`).                                                                     |
 | snappedWaypoints | No       | Danh sách các điểm đi qua trên đường, từ địa điểm bắt đầu và điểm đi qua tới điểm kết thúc.                                                       |
 
-[![Route](../resources/route.png)](https://map4d.vn)
+[![Route](../resources/route.png)](https://ipostmap.vn)
 
 **Ví dụ**
 <iframe src="./examples/v1.0/route.html" height="600px"> </iframe>

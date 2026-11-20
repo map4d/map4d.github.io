@@ -66,7 +66,7 @@
     directionsRendererOptions.startLabel("Start");
     directionsRendererOptions.endLocation(new MFLocationCoordinate(16.071523, 108.222960));
     directionsRendererOptions.endLabel("End");
-    directionsRenderer = map4D.addDirectionsRenderer(directionsRendererOptions);
+    directionsRenderer = ipostmap.addDirectionsRenderer(directionsRendererOptions);
 ```
 <!-- tabs:end -->
 

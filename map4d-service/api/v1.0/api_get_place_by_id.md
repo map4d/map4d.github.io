@@ -2,7 +2,7 @@
 #  Get Place By Id(Chi tiết địa điểm)
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/place/{id}?key={key}
+https://api.ipostmap.vn/sdk/place/{id}?key={key}
 key và id là thuộc tính bắc buộc.
 id: là khóa chính của địa điểm
 ```

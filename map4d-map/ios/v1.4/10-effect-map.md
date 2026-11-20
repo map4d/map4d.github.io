@@ -1,4 +1,4 @@
-# Cài đặt Hiệu Ứng Map4D-SDK
+# Cài đặt Hiệu Ứng IPostMap-SDK
 
 # 10. Các hiệu ứng 3D
 

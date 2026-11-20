@@ -1,4 +1,4 @@
-# Type Public Map4D-SDK
+# Type Public IPostMap-SDK
 
   ``` swift
     // Type definitions for map4dsdk

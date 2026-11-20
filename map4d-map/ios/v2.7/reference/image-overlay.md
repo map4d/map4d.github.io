@@ -13,7 +13,7 @@ Lớp `MFImageOverlay` cung cấp một phương thức static để tạo đố
 
 - Parameters:
   - image: **UIImage**: hình ảnh dùng để hiển thị trên bản đồ
-  - bounds: [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds): vùng tọa độ hiển thị hình ảnh trên Map4D
+  - bounds: [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds): vùng tọa độ hiển thị hình ảnh trên IPostMap
 
 Sử dụng
 <!-- tabs:start -->

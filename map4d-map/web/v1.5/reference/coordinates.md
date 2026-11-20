@@ -2,7 +2,7 @@
 
 ## LatLng
 
-`map4d.LatLng` class
+`ipostmap.LatLng` class
 
 **Constructor**
 
@@ -34,7 +34,7 @@ LatLng(latitude, longitude)
 
 ## ILatLng
 
-`map4d.ILatLng` type
+`ipostmap.ILatLng` type
 
 ```js
 type ILatLng = LatLng | {lat: number, lng: number} | [number, number]
@@ -44,7 +44,7 @@ type ILatLng = LatLng | {lat: number, lng: number} | [number, number]
 
 ## LatLngBounds
 
-`map4d.LatLngBounds` class
+`ipostmap.LatLngBounds` class
 
 **Constructor**
 
@@ -68,7 +68,7 @@ LatLngBounds(southwest, northeast)
 
 ## ILatLngBounds
 
-`map4d.ILatLngBounds` type
+`ipostmap.ILatLngBounds` type
 
 ```js
 type ILatLngBounds = LatLngBounds | [ILatLng, ILatLng] | [number, number, number, number]
@@ -76,7 +76,7 @@ type ILatLngBounds = LatLngBounds | [ILatLng, ILatLng] | [number, number, number
 
 ## Point
 
-`map4d.Point` class
+`ipostmap.Point` class
 
 **Constructor**
 
@@ -106,7 +106,7 @@ Point(x, y)
 
 ## IPoint
 
-`map4d.IPoint` type
+`ipostmap.IPoint` type
 
 ```js
 type IPoint = Point | {x: number, y: number} | [number, number]
@@ -114,7 +114,7 @@ type IPoint = Point | {x: number, y: number} | [number, number]
 
 ## Measure
 
-`map4d.Measure` class
+`ipostmap.Measure` class
 
 **Constructor** 
 
@@ -145,7 +145,7 @@ Measure(path)
 
 ## CoordinateTransformer
 
-`map4d.CoordinateTransformer` class
+`ipostmap.CoordinateTransformer` class
 
 **Constructor** 
 

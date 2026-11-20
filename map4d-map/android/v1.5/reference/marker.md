@@ -8,7 +8,7 @@ Tạo Marker với các **MFMarkerOptions** được chỉ định
 #### ** Kotlin **
 
 ```kotlin
-override fun onMapReady(map4D: Map4D) {  
+override fun onMapReady(map4D: IPostMap) {  
     val markerOptions = MFMarkerOptions() 
         .position(MFLocationCoordinate(10.793113, 106.720739))  
         .snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh")  
@@ -19,11 +19,11 @@ override fun onMapReady(map4D: Map4D) {
 
 ```java
 @Override  
-public void onMapReady(final Map4D map4D) {  
+public void onMapReady(final IPostMap map4D) {  
     MFMarkerOptions marker = new MFMarkerOptions();  
     marker.position(new MFLocationCoordinate(10.793113, 106.720739));  
     marker.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh");  
-    map4D.addMarker(marker);  
+    ipostmap.addMarker(marker);  
 }
 ```
 <!-- tabs:end -->

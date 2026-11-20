@@ -30,13 +30,13 @@ Lớp TileArea cho phép người dùng thực hiện thay thế các tile tại
 
 ```javascript
   // Tạo tileAreaOptions
-  let tileAreaOption: map4d.TileAreaOptions = {
+  let tileAreaOption: ipostmap.TileAreaOptions = {
       bounds:
-        new map4d.LatLngBounds([8.606498, 104.699308], [10.567800, 107.974320]),
+        new ipostmap.LatLngBounds([8.606498, 104.699308], [10.567800, 107.974320]),
       url: "http://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png",
   }
   // Tạo TileArea
-  let tileArea = new map4d.TileArea(tileAreaOption)
+  let tileArea = new ipostmap.TileArea(tileAreaOption)
   // Cài đặt map cần vẽ
   tileArea.setMap(map)
 ```

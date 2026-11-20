@@ -85,7 +85,7 @@ public class MFPolygon extends Annotation {
 
   private void addPolygonToMap() {
 	createPointsList();
-	polygon = map4D.addPolygon(new MFPolygonOptions()
+	polygon = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .strokeColor(ContextCompat.getColor(this, R.color.green))
             .strokeWidth(2)
@@ -128,7 +128,7 @@ Ví dụ
   private void addPolygonToMap() {
 	createHole();
 	createPointsList();
-	polygon = map4D.addPolygon(new MFPolygonOptions()
+	polygon = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .addHole(holePath.toArray(new MFLocationCoordinate[holePath.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.blueWithdAlphaFiftyPercent)));
@@ -154,7 +154,7 @@ Ví dụ
 Phát sinh khi người dùng click vào polygon
 
 ```java
-map4D.setOnPolygonClickListener(new Map4D.OnPolygonClickListener() {
+ipostmap.setOnPolygonClickListener(new IPostMap.OnPolygonClickListener() {
     @Override
     public void onPolygonClick(MFPolygon polygon) {
         Toast.makeText(getApplicationContext(), "Clicked Polygon: ID " + polygon.getId(), Toast.LENGTH_SHORT).show();
@@ -201,13 +201,13 @@ map4D.setOnPolygonClickListener(new Map4D.OnPolygonClickListener() {
   private void addPolygonToMap() {
 	createHole();
 	createPointsList();
-	MFPolygon polygonA = map4D.addPolygon(new MFPolygonOptions()
+	MFPolygon polygonA = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .addHole(holePath.toArray(new MFLocationCoordinate[holePath.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.red))
 	        .zIndex(10.f));
 	        
-	MFPolygon polygonB = map4D.addPolygon(new MFPolygonOptions()
+	MFPolygon polygonB = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .addHole(holePath.toArray(new MFLocationCoordinate[holePath.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.blue))
@@ -240,12 +240,12 @@ map4D.setOnPolygonClickListener(new Map4D.OnPolygonClickListener() {
   private void addPolygonToMap() {
 	createHole();
 	createPointsList();
-	MFPolygon polygonA = map4D.addPolygon(new MFPolygonOptions()
+	MFPolygon polygonA = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .addHole(holePath.toArray(new MFLocationCoordinate[holePath.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.red)));
 	        
-	MFPolygon polygonB = map4D.addPolygon(new MFPolygonOptions()
+	MFPolygon polygonB = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .addHole(holePath.toArray(new MFLocationCoordinate[holePath.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.green)));

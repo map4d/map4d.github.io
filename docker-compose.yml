@@ -1,0 +1,5 @@
+version: '2'
+services:
+  map4d-web:
+    build: .
+    image: map4d-docs:latest

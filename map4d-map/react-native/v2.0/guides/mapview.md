@@ -1,6 +1,6 @@
-# Map4D Map React Component
+# IPostMap Map React Component
 
-> Map4dMap React Native cung cấp `MFMapView` dưới dạng một React Component để hiển thị Map4d.
+> IpostMap React Native cung cấp `MFMapView` dưới dạng một React Component để hiển thị ipostmap.
 
 
 ## MFMapView Component
@@ -13,8 +13,8 @@
 |  2  | mapType                 | string                      | Kiểu tiles hiển thị của bản đồ, `roadmap` hoặc `raster`                                                                       |
 |  3  | showsMyLocationButton   | bool                        | Ẩn hoặc hiển thị nút vị trí của tôi                                                                                           |
 |  4  | showsMyLocation         | bool                        | Ẩn hoặc hiển thị vị trí của tôi.<br>Bật tính năng này yêu cầu thêm quyền vị trí đối với cả Android và iOS.                    |
-|  5  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D của Map4D (ở chế độ 3D).                                                                    |
-|  6  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm của Map4D (ở chế độ 2D).                                                                        |
+|  5  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D của IPostMap (ở chế độ 3D).                                                                    |
+|  6  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm của IPostMap (ở chế độ 2D).                                                                        |
 |  7  | onMapReady              | func                        | Được gọi khi bản đồ sẵn sàng để sử dụng.                                                                                      |
 |  8  | onPress                 | func                        | Được gọi khi người dùng tap trên bản đồ (không phải tap vào địa điểm, building hay annotations).                              |
 |  9  | onPoiPress              | func                        | Được gọi khi người dùng tap vào địa điểm trên bản đồ (không phải POI annotation)                                              |

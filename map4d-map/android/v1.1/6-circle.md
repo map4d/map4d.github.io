@@ -48,7 +48,7 @@ public class MFCircle extends Annotation {
 - Tạo circle from MFCircleOptions 
 
 ```java
- MFCircle circle = map4D.addCircle(new MFCircleOptions()
+ MFCircle circle = ipostmap.addCircle(new MFCircleOptions()
                         .center(new LatLng(16.066517, 108.210354))
                         .radius(500)
                         .fillColor("#00ff00")
@@ -66,7 +66,7 @@ Như ví dụ trên thì chúng ta tạo một Circle với các tùy chỉnh nh
 Phát sinh khi người dùng click vào circle
 
 ```java
-map4D.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
+ipostmap.setOnCircleClickListener(new IPostMap.OnCircleClickListener() {
     @Override
     public void onCircleClick(MFCircle mfCircle) {
         Toast.makeText(getApplicationContext(), "Circle clicked:  " + mfCircle.getId(), Toast.LENGTH_SHORT).show();

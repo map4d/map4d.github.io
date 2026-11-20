@@ -56,7 +56,7 @@ Lớp Circle cho phép người dùng vẽ một Circle lên map.
 
 ```javascript
   //tạo đối tượng circle từ CircleOptions
-  let circle = new map4d.Circle({
+  let circle = new ipostmap.Circle({
         center: {lat: 10.773201, lng: 106.700147},
         fillColor: "#ff0000",
         radius: 100,
@@ -76,7 +76,7 @@ Ta có thể vẽ viền của đường tròn thông qua thuộc tính **stroke
 
 ```javascript
   //tạo đối tượng circle từ CircleOptions
-  let circle = new map4d.Circle({
+  let circle = new ipostmap.Circle({
         center: {lat: 10.773201, lng: 106.700147},
         fillColor: "#ff0000",
         radius: 100,
@@ -134,13 +134,13 @@ Ngoài ra map4d SDK còn hỗ trợ các loại sự kiện khác như: long cli
 **Ví dụ:**
 
 ```javascript
-	let circleA = new map4d.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 50, zIndex: 15, draggable: true,
+	let circleA = new ipostmap.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 50, zIndex: 15, draggable: true,
       fillColor: "#0000ff", strokeWidth: 5})
 
     //thêm circle vào map
     circleA.setMap(this.map)
 	
-	let circleB = new map4d.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100, zIndex: 10, draggable: true,
+	let circleB = new ipostmap.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100, zIndex: 10, draggable: true,
       fillColor: "#ff0000", strokeWidth: 5})
 
     //thêm circle vào map
@@ -153,13 +153,13 @@ Như ví dụ ở trên thì circleA sẽ đè lên circleB vì nó có zIndex l
 **Ví dụ:**
 
 ```javascript
-	let circleA = new map4d.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100, zIndex: 10, draggable: true,
+	let circleA = new ipostmap.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100, zIndex: 10, draggable: true,
       fillColor: "#0000ff", strokeWidth: 5})
 
     //thêm circle vào map
     circleA.setMap(this.map)
 	
-	let circleB = new map4d.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 50, zIndex: 10, draggable: true,
+	let circleB = new ipostmap.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 50, zIndex: 10, draggable: true,
       fillColor: "#ff0000", strokeWidth: 5})
 
     //thêm circle vào map

@@ -1,7 +1,7 @@
 # POI Overlay
 
 POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ. Các POI của
-POI Overlay được ưu tiên hiển thị so với POI của Map4D và chỉ hiển thị ở chế độ 2D.
+POI Overlay được ưu tiên hiển thị so với POI của IPostMap và chỉ hiển thị ở chế độ 2D.
 
 ![CocoaPods](../../resources/poiOverlay.png)
 
@@ -32,13 +32,13 @@ zoom tương ứng. Sau đó bạn thêm **POI Overlay** vào Map như sau:
 
     3. `visible(boolean)` : cho phép POI Overlay ẩn hay hiện sau khi add vào Map.
 
-4. Gọi `Map4D.addPOIOverlay()` để thêm POI Overlay vào Map.
+4. Gọi `IPostMap.addPOIOverlay()` để thêm POI Overlay vào Map.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
 MFPOIProvider poiProvider = new MFUrlPOIProvider() {
     @Override
@@ -69,13 +69,13 @@ MFPOIProvider poiProvider = new MFUrlPOIProvider() {
         return list;
     }
 };
-MFPOIOverlay poiOverlay = map4D.addPOIOverlay(new MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"));
+MFPOIOverlay poiOverlay = ipostmap.addPOIOverlay(new MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"));
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
 var poiProvider: MFPOIProvider = object : MFUrlPOIProvider() {
     override fun getPOIUrl(x: Int, y: Int, zoom: Int, _3dMode: Boolean): String {
@@ -104,7 +104,7 @@ var poiProvider: MFPOIProvider = object : MFUrlPOIProvider() {
         return list
     }
 }
-var poiOverlay = map4D.addPOIOverlay(MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"))
+var poiOverlay = ipostmap.addPOIOverlay(MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"))
 ```
 <!-- tabs:end -->
 

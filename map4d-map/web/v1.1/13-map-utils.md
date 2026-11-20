@@ -6,7 +6,7 @@ và ngược lại
 
 #### 1. Khởi tạo lớp Projection
 ```javascript
-    let projection = new map4d.Projection(map)
+    let projection = new ipostmap.Projection(map)
 ```
 
 #### 2. Chuyển đổi từ toạ độ LatLng sang toạ độ Screen
@@ -50,7 +50,7 @@ các phép biến đổi danh sách các vị trí tọa độ địa lý đó n
 Ví dụ
 
 ```javascript
-    let coordinateTransformer = new map4d.CoordinateTransformer([
+    let coordinateTransformer = new ipostmap.CoordinateTransformer([
         [10.772431, 106.699380],
         [10.773201, 106.700147],
         [10.771783, 106.700763],
@@ -69,7 +69,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let coordinateTransformer = new map4d.CoordinateTransformer([])
+    let coordinateTransformer = new ipostmap.CoordinateTransformer([])
     coordinateTransformer.setCoordinates([
         [10.772431, 106.699380],
         [10.773201, 106.700147],
@@ -89,7 +89,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let coordinateTransformer = new map4d.CoordinateTransformer([
+    let coordinateTransformer = new ipostmap.CoordinateTransformer([
         [10.772431, 106.699380],
         [10.773201, 106.700147]
     ])
@@ -109,7 +109,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let coordinateTransformer = new map4d.CoordinateTransformer([
+    let coordinateTransformer = new ipostmap.CoordinateTransformer([
         [10.772431, 106.699380],
         [10.773201, 106.700147],
         [10.771783, 106.700763],
@@ -129,7 +129,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let coordinateTransformer = new map4d.CoordinateTransformer([
+    let coordinateTransformer = new ipostmap.CoordinateTransformer([
         [10.772431, 106.699380],
         [10.773201, 106.700147],
         [10.771783, 106.700763],
@@ -150,7 +150,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let coordinateTransformer = new map4d.CoordinateTransformer([
+    let coordinateTransformer = new ipostmap.CoordinateTransformer([
         [10.772431, 106.699380],
         [10.773201, 106.700147],
         [10.771783, 106.700763],
@@ -171,7 +171,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let coordinateTransformer = new map4d.CoordinateTransformer([
+    let coordinateTransformer = new ipostmap.CoordinateTransformer([
         [10.772431, 106.699380],
         [10.773201, 106.700147],
         [10.771783, 106.700763],
@@ -195,7 +195,7 @@ Lớp Measure dùng để tính toán khoảng cách, chu vi và diện tích th
 Ví dụ
 
 ```javascript
-    let measure = new map4d.Measure([
+    let measure = new ipostmap.Measure([
         [10.773201, 106.700147],
         [10.771783, 106.700763],
         [10.772302, 106.701901],
@@ -212,7 +212,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let measure = new map4d.Measure([])
+    let measure = new ipostmap.Measure([])
     measure.setPath([
         [10.773201, 106.700147],
         [10.771783, 106.700763],
@@ -230,7 +230,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let measure = new map4d.Measure([
+    let measure = new ipostmap.Measure([
         [10.773201, 106.700147],
         [10.771783, 106.700763]
     ])
@@ -249,7 +249,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let measure = new map4d.Measure([
+    let measure = new ipostmap.Measure([
         [10.773201, 106.700147],
         [10.771783, 106.700763],
         [10.772302, 106.701901],
@@ -267,7 +267,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let measure = new map4d.Measure([
+    let measure = new ipostmap.Measure([
         [10.773201, 106.700147],
         [10.771783, 106.700763],
         [10.772302, 106.701901],
@@ -285,7 +285,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let measure = new map4d.Measure([
+    let measure = new ipostmap.Measure([
         [10.773201, 106.700147],
         [10.771783, 106.700763],
         [10.772302, 106.701901],
@@ -303,7 +303,7 @@ Ví dụ
 Ví dụ
 
 ```javascript
-    let measure = new map4d.Measure([
+    let measure = new ipostmap.Measure([
         [10.773201, 106.700147],
         [10.771783, 106.700763],
         [10.772302, 106.701901],

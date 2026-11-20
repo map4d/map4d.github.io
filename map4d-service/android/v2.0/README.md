@@ -1,10 +1,10 @@
-# Map4D Service Android
-[![map4d](https://img.shields.io/badge/map4d-service-orange)](https://map4d.vn/)
+# IPostMap Service Android
+[![ipostmap](https://img.shields.io/badge/ipostmap-service-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-android-brightgreen.svg)](https://www.android.com/)
 
-Map4D Service Android API cung cấp thư viện gọi API cho Android, được viết bằng ngôn ngữ Java.
+IPostMap Service Android API cung cấp thư viện gọi API cho Android, được viết bằng ngôn ngữ Java.
 
-> Map4D Service Android API cho phép bạn gọi các API của Map4D để thực hiện các chức năng như tìm kiếm địa điểm, dẫn đường, geocode, ... để hỗ trợ cho
+> IPostMap Service Android API cho phép bạn gọi các API của IPostMap để thực hiện các chức năng như tìm kiếm địa điểm, dẫn đường, geocode, ... để hỗ trợ cho
 ứng dụng bản đồ của bạn.
 
 
@@ -26,7 +26,7 @@ Nếu dự án của bạn dùng Gradle thì trước hết cần khai báo url 
 allprojects {
   repositories {
     maven {
-      url = "https://packages.map4d.vn/repository/maven-public"
+      url = "https://packages.ipostmap.vn/repository/maven-public"
     }
   }
 }
@@ -36,7 +36,7 @@ Thêm vào dependencies:
 
 ```xml
 dependencies {
-  implementation 'vn.map4d:Map4dServices:2.0.0'
+  implementation 'vn.map4d:IpostMapService:2.0.0'
 }
 ```
 
@@ -46,7 +46,7 @@ Cung cấp access key trong file AndroidManifest:
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   <application
     <meta-data
-      android:name="vn.map4d.services.ACCESS_KEY"
+      android:name="vn.ipostmap.services.ACCESS_KEY"
       android:value="TYPE_YOUR_KEY_HERE"/>
   </application>
 </manifest>

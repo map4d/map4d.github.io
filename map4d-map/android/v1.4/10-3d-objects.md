@@ -5,9 +5,9 @@
 
 ```java
   @Override
-  public void onMapReady(Map4D map4D) {
-      map4D.enable3DMode(true); // bật chế độ 3D
-      map4D.enable3DMode(false); // tắt chế độ 3D chuyển về 2D
+  public void onMapReady(IPostMap map4D) {
+      ipostmap.enable3DMode(true); // bật chế độ 3D
+      ipostmap.enable3DMode(false); // tắt chế độ 3D chuyển về 2D
   }
 ```
 - **enable3dMode**: 
@@ -26,7 +26,7 @@ Nếu bạn cài đặt thời gian cho map là 1/1/2017 thì tất cả các đ
   SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
   try {
     Date mDate = sdf.parse(givenDateString);
-    map4D.setTime(mDate);
+    ipostmap.setTime(mDate);
   } catch (ParseException e) {
   }
 ```
@@ -36,8 +36,8 @@ Nếu bạn cài đặt thời gian cho map là 1/1/2017 thì tất cả các đ
 
 ```java
     @Override
-    public void onMapReady(Map4D map4D) {
-        map4D.setOnBuildingClickListener(new Map4D.OnBuildingClickListener() {
+    public void onMapReady(IPostMap map4D) {
+        ipostmap.setOnBuildingClickListener(new IPostMap.OnBuildingClickListener() {
             @Override
             public void onBuildingClick(String buidingID, String name, MFLocationCoordinate location) {
                 txtMapState.setText("Building:   " + name);
@@ -50,8 +50,8 @@ Nếu bạn cài đặt thời gian cho map là 1/1/2017 thì tất cả các đ
 
 ```java
     @Override
-    public void onMapReady(Map4D map4D) {
-        map4D.setOnUserBuildingClickListener(new Map4D.OnBuildingClickListener() {
+    public void onMapReady(IPostMap map4D) {
+        ipostmap.setOnUserBuildingClickListener(new IPostMap.OnBuildingClickListener() {
             @Override
             public void onUserBuildingClick(MFBuilding mfBuilding) {
                 txtMapState.setText("Building:   " + mfBuilding.getName());

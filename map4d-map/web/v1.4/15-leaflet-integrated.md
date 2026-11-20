@@ -3,7 +3,7 @@ Thư viện tích hợp map4dsdk và thư viện nguồn mở leaflet, mang tr�
 
 ## 1. Cài đặt
 
-  - Tải thư viện map4dll (Map4D Leaflet), tích hợp với leaflet tại [here](https://raw.githubusercontent.com/iotlinkadmin/map4d-web-sdk/master/sdk-leaflet/map4dll@1.1.0.prod)
+  - Tải thư viện map4dll (IPostMap Leaflet), tích hợp với leaflet tại [here](https://raw.githubusercontent.com/iotlinkadmin/map4d-web-sdk/master/sdk-leaflet/map4dll@1.1.0.prod)
 
   - Nhúng mã nguồn SDK vào trang web của bạn bằng tag script
 
@@ -33,14 +33,14 @@ Thư viện tích hợp map4dsdk và thư viện nguồn mở leaflet, mang tr�
 <script src="[PATH]/map4dll@[version].js"></script>
 
 <script>
-  let map = new map4d.Map(document.getElementById("yourmapid"),
+  let map = new ipostmap.Map(document.getElementById("yourmapid"),
       {
         center: [10.793113, 106.720739],
         zoom: 17,
         geolocate: true,
         controls :true,
         tilt: 0,
-        controlOptions: map4d.ControlOptions.BOTTOM_RIGHT,
+        controlOptions: ipostmap.ControlOptions.BOTTOM_RIGHT,
         accessKey: "${access_key}"
       }
     )
@@ -68,7 +68,7 @@ Thư viện tích hợp map4dsdk và thư viện nguồn mở leaflet, mang tr�
 
 ## 3. Access key
 Để sử dụng map4d JavaScript API, bạn cần phải có access key (bạn có thể sử dụng một access key cho các api trên web, iOS, Android).
-Để nhận được access key vui vòng truy cập đường link sau ([đăng ký key](http://map4d.vn))
+Để nhận được access key vui vòng truy cập đường link sau ([đăng ký key](http://ipostmap.vn))
 
 ## 4. Tùy chọn khi tạo map
 Tương tự với các thuộc tính khởi tạo khi sử dụng map4dsdk

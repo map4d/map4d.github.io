@@ -50,7 +50,7 @@ enum SwitchMode {
 ## 3. Ẩn hiện các đối tượng 3D.
 Như các bạn đã biết khi chúng ta bật chế độ 3D cho map. Thì khi mức zoom của map >=17 nó sẽ hiển thị các đối tượng 3D lên bản đồ bao gồm các đối tượng 3D của hệ thống và các đối tượng 3D do người dùng thêm vào. 
 
-Map4D SDK cho phép người dùng có thể cài đặt ẩn hoặc hiện các đối tượng trên map
+IPostMap SDK cho phép người dùng có thể cài đặt ẩn hoặc hiện các đối tượng trên map
 
 Chú ý: Chỉ ẩn các đối tượng trên map, còn đối tượng người dùng tự thêm vào thì sẽ không ẩn.
 
@@ -155,7 +155,7 @@ Trên bản đồ có 2 kiểu 3d object
 ### 6.2 Thêm đối tượng 3D vào bản đồ
 
 ```javascript
-	let mapObject = new map4d.MapObject({
+	let mapObject = new ipostmap.MapObject({
       id: "my_building",
       location: [10.772431, 106.699380],
       obj: "58a2b79436eace2398d47c01",
@@ -175,7 +175,7 @@ Trên bản đồ có 2 kiểu 3d object
 Ở ví dụ trên chúng ta đã biết cách thêm 1 đối tượng 3D bằng obj model. Ví dụ tiếp theo chúng ta sẽ tìm hiểu cách thêm đối tượng 1 đối tượng "extrude" lên bản đồ. Cách thêm này vô cùng dễ dàng so với cách đầu tiên.
 
 ```javascript
-	let mapObject = new map4d.MapObject({
+	let mapObject = new ipostmap.MapObject({
       id: "dungtest",
       coordinates: [[10.774544,106.707764],
         [10.773766,106.709001],

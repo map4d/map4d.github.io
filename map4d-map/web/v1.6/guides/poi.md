@@ -2,12 +2,12 @@
 
 Hiện tại trên bản đồ đã có những điểm đánh dấu địa điểm có sẵn (như địa danh công cộng, quán cà phê, nhà hàng, bến xe, ...)
 và chúng chỉ hiển thị khi bản đồ ở chế độ 2D. Khi bạn cần một đối tượng để đánh dấu một địa điểm trên bản đồ tương tự như
-những điểm có sẵn đó thì bạn có thể dùng lớp **map4d.POI**. Các đối tượng **map4d.POI** bạn thêm vào bản đồ có thể hiện thị
+những điểm có sẵn đó thì bạn có thể dùng lớp **ipostmap.POI**. Các đối tượng **ipostmap.POI** bạn thêm vào bản đồ có thể hiện thị
 ở **cả 2 chế độ 2D và 3D**.
 
 ### 1. Thêm một POI
 
-Hàm khởi tạo của lớp **map4d.POI** cần truyền vào một đối tượng **map4d.POIOptions** để định nghĩa các thuộc tính ban đầu của
+Hàm khởi tạo của lớp **ipostmap.POI** cần truyền vào một đối tượng **ipostmap.POIOptions** để định nghĩa các thuộc tính ban đầu của
 POI.
 
 Đối tượng **POIOptions** được định nghĩa như sau:
@@ -66,7 +66,7 @@ sau đó bạn gán **poi** bằng __null__.
 ### 3. Bật, tắt tính năng POI có sẵn của bản đồ
 
 Bạn có thể bật hoặc tắt tính năng POI có sẵn của bản đồ. Mặc định thì bản đồ sẽ hiển thị các POI có sẵn của nó. Nếu bạn
-muốn tắt nó đi thì sử dụng phương thức **setPOIsEnabled()** của lớp **map4d.Map** và truyền vào tham số **false**. Ngược
+muốn tắt nó đi thì sử dụng phương thức **setPOIsEnabled()** của lớp **ipostmap.Map** và truyền vào tham số **false**. Ngược
 lại nếu bạn muốn bật nó lên thì bạn truyền vào tham số là **true**.
 
 Ví dụ để tắt tính năng POI có sẵn của bản đồ:
@@ -76,7 +76,7 @@ map.setPOIsEnabled(false)
 ```
 
 Ngoài ra để kiểm tra tính năng POI có sẵn có được bật hay không bạn cũng có thể sử dụng phương thức **isPOIsEnabled()**
-của lớp **map4d.Map**. Phương thức này sẽ trả về một giá trị **boolean** tương ứng với tính năng có được bật hay không.
+của lớp **ipostmap.Map**. Phương thức này sẽ trả về một giá trị **boolean** tương ứng với tính năng có được bật hay không.
 
 ```javascript
 let isPOIsEnabled = map.isPOIsEnabled()

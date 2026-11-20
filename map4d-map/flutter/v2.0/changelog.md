@@ -6,7 +6,7 @@ Những thay đổi kể từ version 2.0.0
 
 #### Changed
 
-- Hỗ trợ Map4dMap SDK version 2.0.x
+- Hỗ trợ IpostMap SDK version 2.0.x
 
 
 ## Version 2.0.0
@@ -15,7 +15,7 @@ Những thay đổi kể từ version 1.1.0
 
 #### Added
 
-- Hỗ trợ Map4dMap SDK version 2.0.0
+- Hỗ trợ IpostMap SDK version 2.0.0
 - Render map dưới dạng vector
 - Thêm mới hàm `setMapType` cho **MFMapView** 
 - Thêm mới hàm `getBounds` cho **MFMapView**

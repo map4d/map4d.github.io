@@ -1,5 +1,5 @@
-# Sự kiện Map4D-SDK
-Hướng dẫn sử dụng các sự kiện của Map4D SDK.
+# Sự kiện IPostMap-SDK
+Hướng dẫn sử dụng các sự kiện của IPostMap SDK.
 
 ## 1. Giới thiệu chung
 

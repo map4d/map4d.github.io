@@ -27,7 +27,7 @@ Trước tiên chúng ta cần tạo buildingOverlayOption với hàm getUrl, gi
 
 ```javascript
 // Tạo buildingOverlayOption
-let buildingOverlayOptions: map4d.BuildingOverlayOptions = {
+let buildingOverlayOptions: ipostmap.BuildingOverlayOptions = {
   getUrl: (x, y, z) => {
     return `https://your-domain/api/${z}/${x}/${y}`
   },
@@ -40,7 +40,7 @@ Sau đó chúng ta sẽ tạo BuildingOverlay như sau:
 
 ```javascript
 // Tạo BuildingOverlay
-let buildingOverlay = new map4d.BuildingOverlay(buildingOverlayOptions)
+let buildingOverlay = new ipostmap.BuildingOverlay(buildingOverlayOptions)
 // Set Building Overlay vào map cần vẽ
 buildingOverlay.setMap(this.map)
 ```
@@ -54,7 +54,7 @@ buildingOverlay.setMap(null)
 ```
 
 ## 4. API Response
-Để sử dụng được tính năng Building Overlay trên Map4dMap JavaScript SDK, bạn cần 1 API nhận 3 thông số của một `Map Tile` là `x`, `y`, `zoom` và dữ liệu trả về kiểu `JSON` theo cấu trúc sau:
+Để sử dụng được tính năng Building Overlay trên IpostMap JavaScript SDK, bạn cần 1 API nhận 3 thông số của một `Map Tile` là `x`, `y`, `zoom` và dữ liệu trả về kiểu `JSON` theo cấu trúc sau:
 
 ```json
 {

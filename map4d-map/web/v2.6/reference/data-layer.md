@@ -4,7 +4,7 @@
 <!--------------------------------------------------------------------- MapData ----------------------------------------------------------------------------------------->
 ## MapData class
 
-`map4d.MapData` class
+`ipostmap.MapData` class
 
 **Methods**
 
@@ -27,7 +27,7 @@
 <!--------------------------------------------------------------------- FeatureOptions ---------------------------------------------------------------------------------->
 ### FeatureOptions type
 
-`map4d.Data.FeatureOptions` type
+`ipostmap.Data.FeatureOptions` type
 
 **Properties**
 
@@ -42,7 +42,7 @@
 <!--------------------------------------------------------------------- Feature ---------------------------------------------------------------------------------------->
 ### Feature class
 
-`map4d.Data.Feature` class
+`ipostmap.Data.Feature` class
 
 **Constructor** 
 
@@ -70,7 +70,7 @@ Data.Feature(id, geometry, properties)
 <!--------------------------------------------------------------------- Geometry --------------------------------------------------------------------------------------->
 ### Geometry interface
 
-`map4d.Data.Geometry` interface
+`ipostmap.Data.Geometry` interface
 
 Geometry là một giao diện chung dành cho các đối tượng:
 - Point
@@ -85,7 +85,7 @@ Geometry là một giao diện chung dành cho các đối tượng:
 <!--------------------------------------------------------------------- Point ----------------------------------------------------------------------------------------->
 ### Point class
 
-`map4d.Data.Point` class là một [Data.Geometry](#geometry-interface)
+`ipostmap.Data.Point` class là một [Data.Geometry](#geometry-interface)
 
 **Constructor** 
 
@@ -111,7 +111,7 @@ Data.Point(coordinate)
 <!--------------------------------------------------------------------- MultiPoint ----------------------------------------------------------------------------------->
 ### MultiPoint class
 
-`map4d.Data.MultiPoint` class là một [Data.Geometry](#geometry-interface)
+`ipostmap.Data.MultiPoint` class là một [Data.Geometry](#geometry-interface)
 
 **Constructor** 
 
@@ -139,7 +139,7 @@ Data.MultiPoint(coordinates)
 <!--------------------------------------------------------------------- LineString ----------------------------------------------------------------------------------->
 ### LineString class
 
-`map4d.Data.LineString` class là một [Data.Geometry](#geometry-interface)
+`ipostmap.Data.LineString` class là một [Data.Geometry](#geometry-interface)
 
 **Constructor** 
 
@@ -165,7 +165,7 @@ Data.LineString(elements)
 <!--------------------------------------------------------------------- MultiLineString ------------------------------------------------------------------------------>
 ### MultiLineString class
 
-`map4d.Data.MultiLineString` class là một [Data.Geometry](#geometry-interface)
+`ipostmap.Data.MultiLineString` class là một [Data.Geometry](#geometry-interface)
 
 **Constructor** 
 
@@ -193,7 +193,7 @@ Data.MultiLineString(elements)
 <!--------------------------------------------------------------------- LinearRing ----------------------------------------------------------------------------------->
 ### LinearRing class
 
-`map4d.Data.LinearRing` class
+`ipostmap.Data.LinearRing` class
 
 **Constructor** 
 
@@ -218,7 +218,7 @@ Data.LinearRing(elements)
 <!--------------------------------------------------------------------- Polygon -------------------------------------------------------------------------------------->
 ### Polygon class
 
-`map4d.Data.Polygon` class là một [Data.Geometry](#geometry-interface)
+`ipostmap.Data.Polygon` class là một [Data.Geometry](#geometry-interface)
 
 **Constructor** 
 
@@ -244,7 +244,7 @@ Data.Polygon(elements)
 <!--------------------------------------------------------------------- MultiPolygon --------------------------------------------------------------------------------->
 ### MultiPolygon class
 
-`map4d.Data.MultiPolygon` class là một [Data.Geometry](#geometry-interface)
+`ipostmap.Data.MultiPolygon` class là một [Data.Geometry](#geometry-interface)
 
 **Constructor** 
 

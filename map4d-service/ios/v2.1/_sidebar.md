@@ -1,4 +1,4 @@
-- [Overview](/ "Map4dServices iOS SDK")
+- [Overview](/ "IpostMapService iOS SDK")
 - [Changelog](changelog.md)
 
 - Places Services

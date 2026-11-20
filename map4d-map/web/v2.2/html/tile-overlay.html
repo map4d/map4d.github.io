@@ -3,7 +3,7 @@
 
 <head>
   <script defer
-    src="https://api.map4d.vn/sdk/map/js?version=2.2&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+    src="https://api.ipostmap.vn/sdk/map/js?version=2.2&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
   <style>
     #map {
       height: 100%;
@@ -49,7 +49,7 @@
           return `https://tile.openstreetmap.de/${zoom}/${x}/${y}.png`
         }
       }
-      tileOverlay = new map4d.TileOverlay(options)
+      tileOverlay = new ipostmap.TileOverlay(options)
     }
 
     function initMap() {
@@ -57,7 +57,7 @@
         center: { lat: 16.072163491469226, lng: 108.22690536081757 },
         zoom: 15
       }
-      map = new map4d.Map(document.getElementById("map"), options)
+      map = new ipostmap.Map(document.getElementById("map"), options)
       initTileOverlay()
     }
     // initMap()

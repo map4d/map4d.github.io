@@ -112,9 +112,9 @@ Lớp Marker cho phép người dùng add một điểm ghim trên bản đồ t
 
 ```javascript
 //tạo đối tượng marker từ MarkerOption
-let marker = new map4d.Marker({
+let marker = new ipostmap.Marker({
   position: {lat: 10.793113, lng:106.720739},
-  icon: new map4d.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
+  icon: new ipostmap.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
   anchor: [0.5, 0.5],
 })
 //thêm marker vào map    
@@ -125,7 +125,7 @@ marker.setMap(map)
 
 ```javascript
 //tạo đối tượng marker với iconView  
-  let marker = new map4d.Marker({
+  let marker = new ipostmap.Marker({
     position: {lat: 10.773766, lng:106.709001},
     iconView: `<div style=\"width: 32px; height: 32px; background-color: red; text-align: center; color: #000000;\">Text</div>`,
     anchor: [0.5, 0.5],
@@ -151,7 +151,7 @@ marker.setMap(null)
 Khi marker có tiêu đề hoặc mô tả (title & snippet), nếu người dùng click vào marker, thông tin marker sẽ được hiển thị dựa vào điểm neo windowAnchor.
 
 ```javascript
-    let marker = new map4d.Marker({
+    let marker = new ipostmap.Marker({
       title: "Demo title",
       snippet: "Demo description",
       position: {lat: 10.773766, lng:106.709001},
@@ -179,10 +179,10 @@ Chúng ta có thể vẽ chữ lên marker thông qua thuộc tính label.
 
 ```javascript
 //tạo đối tượng marker từ MarkerOption
-let marker = new map4d.Marker({
+let marker = new ipostmap.Marker({
   position: {lat: 10.793113, lng:106.720739},
   anchor: [0.5, 1.0],
-  label: new map4d.MarkerLabel({text: "Text", color: "000000", fontSize: 12})
+  label: new ipostmap.MarkerLabel({text: "Text", color: "000000", fontSize: 12})
 })
 
 //thêm marker vào map    
@@ -197,7 +197,7 @@ Như ví dụ trên thì vẽ chữ "Text" màu đen lên marker và kích thư�
 Chúng ta có thể cho phép người dùng kéo marker tới vị trí khác bằng cách bật thuộc tính **draggable** bằng true (mặc đinh thuộc tính này được khởi tạo là false).
 
 ```javascript
-let marker = new map4d.Marker({
+let marker = new ipostmap.Marker({
   position: {lat: 10.793113, lng:106.720739},
   draggable: true
 })
@@ -261,16 +261,16 @@ Ngoài ra map4d SDK còn hỗ trợ các loại sự kiện khác như: long cli
 Ví dụ: 
 ```javascript
 
-    let markerA = new map4d.Marker({
+    let markerA = new ipostmap.Marker({
       position: {lat: 10.703113, lng: 106.720739},
-      icon: new map4d.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
+      icon: new ipostmap.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
       anchor: [0.5, 1.0],
       zIndex: 5,
     })
 
-    let markerB = new map4d.Marker({
+    let markerB = new ipostmap.Marker({
       position: {lat: 10.703113, lng: 106.720739},
-      icon: new map4d.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
+      icon: new ipostmap.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
       anchor: [0.5, 1.0],
       zIndex: 2,
     })
@@ -285,15 +285,15 @@ Ví dụ:
 Ví dụ:
 ```javascript
 
-    let markerA = new map4d.Marker({
+    let markerA = new ipostmap.Marker({
       position: {lat: 10.703113, lng: 106.720739},
-      icon: new map4d.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
+      icon: new ipostmap.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
       anchor: [0.5, 1.0],
     })
 
-    let markerB = new map4d.Marker({
+    let markerB = new ipostmap.Marker({
       position: {lat: 10.703113, lng: 106.720739},
-      icon: new map4d.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
+      icon: new ipostmap.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
       anchor: [0.5, 1.0],
     })
 

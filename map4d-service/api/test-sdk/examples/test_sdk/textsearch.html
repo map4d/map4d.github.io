@@ -33,7 +33,7 @@
         for (var i in inputTypes){
             types += "&types="+inputTypes[i];
         }
-        $.getJSON('https://api-test.map4d.vn/sdk/place/text-search?key='+key+'&text='+inputText +types+ '&datetime='+inputDate+'&location='+inputLocation, function(data) {
+        $.getJSON('https://api-test.ipostmap.vn/sdk/place/text-search?key='+key+'&text='+inputText +types+ '&datetime='+inputDate+'&location='+inputLocation, function(data) {
             var limit =5;
             var result;
             if(data.result != null){

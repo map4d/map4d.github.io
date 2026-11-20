@@ -1,6 +1,6 @@
 # Map reference
 
-## Map4D class
+## IPostMap class
 
 Các phương thức:
 
@@ -28,37 +28,37 @@ Các phương thức:
 | **setMyLocationEnabled**| boolean          | `none`       | Set giá trị enable cho My Location marker                                              |
 | **enable3DMode**        | boolean          | `none`       | Set giá trị 3D mode cho Map                                                            |
 | **setTime**             | Date             | `none`       | Set giá trị thời gian cho Map                                                          |
-| **setOnMapModeChange**  |`Map4D.OnMapModeChangeListener`  |`none`| Set một callback khi mode của Map chuyển sang 2D hoặc 3D                        |
-| **setOnMapModeHandler** |`Map4D.OnMapModeHandler`|`none`  | Set một callback để xác định Map có thể thay đổi Mode khi mức zoom đi qua mức zoom 17 hay không|
+| **setOnMapModeChange**  |`IPostMap.OnMapModeChangeListener`  |`none`| Set một callback khi mode của Map chuyển sang 2D hoặc 3D                        |
+| **setOnMapModeHandler** |`IPostMap.OnMapModeHandler`|`none`  | Set một callback để xác định Map có thể thay đổi Mode khi mức zoom đi qua mức zoom 17 hay không|
 | **is3DMode**            | `none`           | boolean      | Kiểm tra mode hiện tại của Map có phải là 3D hay không                                 |
-| **setOnMyLocationButtonClickListener**|`Map4D.OnMyLocationButtonClickListener`|`none`| Set một callback để bắt sự kiện nút My Location được ấn     |
-| **setOnMarkerClickListener**|`Map4D.OnMarkerClickListener`|`none`| Set một callback để bắt sự kiện touch lên Marker                                |
-| **setOnMarkerDragListener**|`Map4D.OnMarkerDragListener`|`none`| Set một callback để bắt sự kiện kéo Marker trên Map                               |
-| **setOnMyLocationClickListener**|`Map4D.OnMyLocationClickListener`|`none`| Set một callback để bắt sự kiện khi touch My Location marker            |
-| **setOnPolylineClickListener**|`Map4D.OnPolylineClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Polyline                      |
-| **setOnPolygonClickListener**|`Map4D.OnPolygonClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Polygon                         |
-| **setOnCircleClickListener**|`Map4D.OnCircleClickListener`|`none| Set một callback để bắt sự kiện khi touch lên Circle                             |
+| **setOnMyLocationButtonClickListener**|`IPostMap.OnMyLocationButtonClickListener`|`none`| Set một callback để bắt sự kiện nút My Location được ấn     |
+| **setOnMarkerClickListener**|`IPostMap.OnMarkerClickListener`|`none`| Set một callback để bắt sự kiện touch lên Marker                                |
+| **setOnMarkerDragListener**|`IPostMap.OnMarkerDragListener`|`none`| Set một callback để bắt sự kiện kéo Marker trên Map                               |
+| **setOnMyLocationClickListener**|`IPostMap.OnMyLocationClickListener`|`none`| Set một callback để bắt sự kiện khi touch My Location marker            |
+| **setOnPolylineClickListener**|`IPostMap.OnPolylineClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Polyline                      |
+| **setOnPolygonClickListener**|`IPostMap.OnPolygonClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Polygon                         |
+| **setOnCircleClickListener**|`IPostMap.OnCircleClickListener`|`none| Set một callback để bắt sự kiện khi touch lên Circle                             |
 | **setMaxZoomPreference**| double           | `none`       | Set giá trị zoom lớn nhất mà Map có thể hiển thị                                       |
 | **setMinZoomPreference**| double           | `none`       | Set giá trị zoom nhỏ nhất mà Map có thể hiển thị                                       |
 | **setMaxNativeZoom**    | double           | `none`       | Set giá trị zoom lớn nhất mà Tile không bị scale khi Map hiển thị                      |
-| **setOnMapClickListener**|`Map4D.OnMapClickListener`|`none`| Set một callback để bắt sự kiện touch lên Map                                         |
-| **setOnCameraMoveStartedListener**|`Map4D.OnCameraMoveStartedListener`|`none`| Set một callback để bắt sự kiện Camera của Map bắt đầu thay đổi     |
-| **setOnCameraMoveListener**|`Map4D.OnCameraMoveListener`|`none`| Set một callback để bắt sự kiện Camera của Map đang thay đổi                      |
-| **setOnCameraIdleListener**|`Map4D.OnCameraIdleListener`|`none`| Set một callback để bắt sự kiện Camera của Map thay đổi xong                      |
-| **setOnBuildingClickListener**|`Map4D.OnBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Building                      |
-| **setOnBuildingClickListener**|`Map4D.OnBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Building                      |
-| **setOnUserBuildingClickListener**|`Map4D.OnUserBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên User Building         |
-| **setOnPOIClickListener**|`Map4D.OnPOIClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên POI                                     |
-| **setOnUserPOIClickListener**|`Map4D.OnUserPOIClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên User POI                        |
-| **setOnInfoWindowClickListener**|`Map4D.OnInfoWindowClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Info Window               |
+| **setOnMapClickListener**|`IPostMap.OnMapClickListener`|`none`| Set một callback để bắt sự kiện touch lên Map                                         |
+| **setOnCameraMoveStartedListener**|`IPostMap.OnCameraMoveStartedListener`|`none`| Set một callback để bắt sự kiện Camera của Map bắt đầu thay đổi     |
+| **setOnCameraMoveListener**|`IPostMap.OnCameraMoveListener`|`none`| Set một callback để bắt sự kiện Camera của Map đang thay đổi                      |
+| **setOnCameraIdleListener**|`IPostMap.OnCameraIdleListener`|`none`| Set một callback để bắt sự kiện Camera của Map thay đổi xong                      |
+| **setOnBuildingClickListener**|`IPostMap.OnBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Building                      |
+| **setOnBuildingClickListener**|`IPostMap.OnBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Building                      |
+| **setOnUserBuildingClickListener**|`IPostMap.OnUserBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên User Building         |
+| **setOnPOIClickListener**|`IPostMap.OnPOIClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên POI                                     |
+| **setOnUserPOIClickListener**|`IPostMap.OnUserPOIClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên User POI                        |
+| **setOnInfoWindowClickListener**|`IPostMap.OnInfoWindowClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Info Window               |
 | **getSelectedPlace**    | `none`           | String       | Get id của POI được chọn (selected)                                                    |
-| **setInfoWindowAdapter**|`Map4D.InfoWindowAdapter`|`none` | Set info window adapter cho Map                                                        |
+| **setInfoWindowAdapter**|`IPostMap.InfoWindowAdapter`|`none` | Set info window adapter cho Map                                                        |
 | **setFilterPlaces**     | List< String >   | `none`       | Chỉ hiển thị các POI có type mà chúng ta truyền vào                                    |
 | **getFilterPlaces**     | `none`   | List< String >       | Get các type mà chúng ta đã lọc cho Map                                                |
-| **setPOIsEnabled**      | boolean          | `none`       | Set tất cả các POI của Map4D hiện hay ẩn                                               |
-| **isPOIsEnabled**       | `none`           | boolean      | Kiểm tra POI của Map4D có hiện hay không                                               |
-| **setBuildingsEnabled** | boolean          | `none`       | Set tất cả các Building của Map4D hiện hay ẩn                                          |
-| **isBuildingsEnabled**  | `none`           | boolean      | Kiểm tra Building của Map4D có được hiện hay không                                     |
+| **setPOIsEnabled**      | boolean          | `none`       | Set tất cả các POI của IPostMap hiện hay ẩn                                               |
+| **isPOIsEnabled**       | `none`           | boolean      | Kiểm tra POI của IPostMap có hiện hay không                                               |
+| **setBuildingsEnabled** | boolean          | `none`       | Set tất cả các Building của IPostMap hiện hay ẩn                                          |
+| **isBuildingsEnabled**  | `none`           | boolean      | Kiểm tra Building của IPostMap có được hiện hay không                                     |
 | **setHiddenBuilding**   | String           | `none`       | Set một building ẩn trên Map theo id truyền vào                                        |
 | **setUnhiddenBuilding** | String           | `none`       | Set một building hiện lại trên Map sau khi bị ẩn theo id truyền vào                    |
 | **setSelectedBuildings**| List< String >   | `none`       | Set các Building sẽ được hightlight theo danh sách id truyền vào                       |
@@ -115,7 +115,7 @@ Các phương thức:
 
 | Name                   | Parameters   | Return Value | Description                                                                         |
 |------------------------|--------------|--------------|-------------------------------------------------------------------------------------|
-| **getCameraPosition**  |[Map4D](/reference/map?id=map4d-class)|MFCameraPosition| trả về Camera Position của Map4D                          |
+| **getCameraPosition**  |[IPostMap](/reference/map?id=map4d-class)|MFCameraPosition| trả về Camera Position của IPostMap                          |
 
 ## MFCameraUpdateFactory
 
@@ -169,15 +169,15 @@ Các phương thức:
 
 #### Tạo mapdId
 
-Một `mapID` là một định danh duy nhất đại diện cho một instance duy nhất của Map4D. Bạn có thể tạo `mapID` và liên kết với map style thông qua
-[trang quản lý của Map4D](https://map.map4d.vn/developer/mapstyle)
+Một `mapID` là một định danh duy nhất đại diện cho một instance duy nhất của IPostMap. Bạn có thể tạo `mapID` và liên kết với map style thông qua
+[trang quản lý của IPostMap](https://map.ipostmap.vn/developer/mapstyle)
 
 #### Thêm mapId vào ứng dụng
 
 Để thêm `mapId` vào ứng dụng thì chúng ta sử dụng thuộc tính `map:mapId` của lớp `MFMapView` trong file layout của activity như bên dưới:
 
 ```xml
-<vn.map4d.map.core.MFMapView
+<vn.ipostmap.Map.core.MFMapView
     xmlns:map="http://schemas.android.com/apk/res-auto"
     ....
     map:mapId="YOUR_MAP_ID" />

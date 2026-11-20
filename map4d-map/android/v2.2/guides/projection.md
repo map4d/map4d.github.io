@@ -8,17 +8,17 @@ Lớp MFProjection được dùng để chuyển đổi giữa vị trí trên m
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-MFProjection projection = map4D.getProjection();
+MFProjection projection = ipostmap.getProjection();
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-var projection = map4D.projection
+var projection = ipostmap.projection
 ```
 <!-- tabs:end -->
 
@@ -30,9 +30,9 @@ var projection = map4D.projection
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-MFProjection projection = map4D.getProjection();
+MFProjection projection = ipostmap.getProjection();
 MFLocationCoordinate location = new MFLocationCoordinate(10.771783, 106.700763);
 MFCameraPosition cameraPosition = new MFCameraPosition.Builder().target(location).zoom(17).tilt(15).build();
 
@@ -52,9 +52,9 @@ Point point3DWithCamera = projection.pointForCoordinate(location, cameraPosition
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-var projection = map4D.projection
+var projection = ipostmap.projection
 var location = MFLocationCoordinate(10.771783, 106.700763)
 var cameraPosition = MFCameraPosition.Builder().target(location).zoom(17.0).tilt(15.0).build()
 
@@ -80,9 +80,9 @@ var point3DWithCamera: Point = projection.pointForCoordinate(location, cameraPos
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-MFProjection projection = map4D.getProjection();
+MFProjection projection = ipostmap.getProjection();
 Point point = new Point(100, 100);
 MFLocationCoordinate location = new MFLocationCoordinate(10.771783, 106.700763);
 MFCameraPosition cameraPosition = new MFCameraPosition.Builder().target(location).zoom(17).tilt(15).build();
@@ -103,9 +103,9 @@ MFLocationCoordinate coordinate3D = projection.coordinateForPoint(point, cameraP
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-var projection = map4D.projection
+var projection = ipostmap.projection
 var point = Point(100, 100)
 var location = MFLocationCoordinate(10.771783, 106.700763)
 var cameraPosition = MFCameraPosition.Builder().target(location).zoom(17.0).tilt(15.0).build()

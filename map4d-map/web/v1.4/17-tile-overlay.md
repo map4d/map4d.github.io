@@ -23,7 +23,7 @@ Trước tiên chúng ta cần tạo tileOverlayOption với hàm getUrl, giá t
 
 ```javascript
 // Tạo tileOverlayOption
-let tileOverlayOption: map4d.TileOverlayOptions = {
+let tileOverlayOption: ipostmap.TileOverlayOptions = {
   getUrl: (x, y, z, _3dMode) => {
     if (!_3dMode) {
       return `https://tile.openstreetmap.de/${z}/${x}/${y}.png`
@@ -41,7 +41,7 @@ Sau đó chúng ta sẽ tạo TileOverlay như sau:
 
 ```javascript
 // Tạo TileOverlay
-let tileOverlay = new map4d.TileOverlay(tileOverlayOption)
+let tileOverlay = new ipostmap.TileOverlay(tileOverlayOption)
 // Set tile overlay vào map cần vẽ
 tileOverlay.setMap(this.map)
 ```

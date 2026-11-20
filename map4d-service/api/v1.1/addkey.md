@@ -1,5 +1,5 @@
-## Cách tạo key trên Map4D
-**B1:** Chọn vào nút chức năng "ĐĂNG NHẬP" ![Key](../resources/btndangnhap.PNG) ngay trên góc phải màn hình chính của bản đồ Map4D để đăng nhập.
+## Cách tạo key trên IPostMap
+**B1:** Chọn vào nút chức năng "ĐĂNG NHẬP" ![Key](../resources/btndangnhap.PNG) ngay trên góc phải màn hình chính của bản đồ IPostMap để đăng nhập.
 
 ![Key](../resources/steplogin.PNG)
 
@@ -9,11 +9,11 @@ Nếu chưa có tài khoản, chọn “ĐĂNG KÝ TÀI KHOẢN” để vào ch
 
 ![Key](../resources/dangki.PNG)
 
-**B2:** Sau khi đăng nhập thành công vào Map4D, bấm vào nút "Menu" ![Key](../resources/menu.PNG) ở góc trái màn hình bên cạnh ô “Tìm kiếm Map4D” tại màn hình chính Map4D để mở bảng Menu. 
+**B2:** Sau khi đăng nhập thành công vào IPostMap, bấm vào nút "Menu" ![Key](../resources/menu.PNG) ở góc trái màn hình bên cạnh ô “Tìm kiếm IPostMap” tại màn hình chính IPostMap để mở bảng Menu. 
 
 ![Key](../resources/btnmenu.PNG)
 
-**B3:** Trên Menu chức năng, chọn "Access key của tôi" tại màn hình Map4D User để vào chức năng quản lý tất cả các Access key. 
+**B3:** Trên Menu chức năng, chọn "Access key của tôi" tại màn hình IPostMap User để vào chức năng quản lý tất cả các Access key. 
 
 Trường hợp user mới và chưa có key nào được tạo, bảng Access key của tôi sẽ trống.
 
@@ -27,7 +27,7 @@ Trường hợp user mới và chưa có key nào được tạo, bảng Access 
 
 **Nhập các thông tin key của tôi:**
  - Tên: Là tên key (Tên gợi nhớ vào mục đích sử dụng riêng của user).
- - Ngày kết thúc: Ngày cuối cùng key có thể sử dụng được trên hệ thống Map4D. 
+ - Ngày kết thúc: Ngày cuối cùng key có thể sử dụng được trên hệ thống IPostMap. 
  
  Trường hợp không chọn ngày, key sẽ hết hạn khi đạt mức request tối đa cho phép.
  - Loại dịch vụ: Là loại dịch vụ cho phép key người dùng sử dụng. 
@@ -40,7 +40,7 @@ Trường hợp user mới và chưa có key nào được tạo, bảng Access 
 
     Tìm đường: Cho phép key có quyền truy cập nhóm dịch vụ tuyến đường.
 
-- Chế độ: Là môi trường cho phép sử dụng key của người dùng, Map4D hỗ trợ các môi trường chính: Development, Apple Store/Google Play Store và không xác định.
+- Chế độ: Là môi trường cho phép sử dụng key của người dùng, IPostMap hỗ trợ các môi trường chính: Development, Apple Store/Google Play Store và không xác định.
 - Giới hạn ứng dụng: Là các hạn chế ứng dụng: kiểm soát các trang web, địa chỉ Ips, …
 
     Không giới hạn

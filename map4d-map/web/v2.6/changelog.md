@@ -34,7 +34,7 @@
 ### Changed
 
 - Hỗ trợ css color đầy đủ
-- Hỗ trợ style mới (v2.0). Tham khảo [Map Style](https://map.map4d.vn/developer/mapstyle)
+- Hỗ trợ style mới (v2.0). Tham khảo [Map Style](https://map.ipostmap.vn/developer/mapstyle)
 
 ## Version 2.5.1
 

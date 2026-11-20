@@ -2,7 +2,7 @@
 
 ## Building Class
 
-`map4d.Building` class
+`ipostmap.Building` class
 
 **Constructor** 
 
@@ -54,7 +54,7 @@ Building(options)
 
 ## Building Options
 
-`map4d.BuildingOptions` interface
+`ipostmap.BuildingOptions` interface
 
 Đối tượng BuildingOptions dùng để xác định các thuộc tính dùng cho Building.
 

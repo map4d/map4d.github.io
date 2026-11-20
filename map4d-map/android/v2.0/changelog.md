@@ -7,9 +7,9 @@ Những thay đổi kể từ version 1.6.0
 #### Added
 
 - Render map dưới dạng vector
-- Thêm mới hàm `setMapType` cho **Map4D** 
-- Thêm mới hàm `getBounds` cho **Map4D**
-- Thêm sự kiện `OnPlaceClickListener` cho **Map4D**
+- Thêm mới hàm `setMapType` cho **IPostMap** 
+- Thêm mới hàm `getBounds` cho **IPostMap**
+- Thêm sự kiện `OnPlaceClickListener` cho **IPostMap**
 - Hỗ trợ render chỉ đường với `MFDirectionsRenderer`
 - Thêm anchor cho icon của MFPOI.
 

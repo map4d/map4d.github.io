@@ -2,7 +2,7 @@
 
 ## Polyline Class
 
-`map4d.Polyline` class
+`ipostmap.Polyline` class
 
 **Constructor** 
 
@@ -51,7 +51,7 @@ Polyline(options)
 
 ## Polyline Options
 
-`map4d.PolylineOptions` interface
+`ipostmap.PolylineOptions` interface
 
 Đối tượng PolylineOptions dùng để xác định các thuộc tính dùng cho Polyline.
 

@@ -89,9 +89,9 @@ interface MarkerOptions {
 
 ```javascript
 //tạo đối tượng marker từ MarkerOption
-let marker = new map4d.Marker({
+let marker = new ipostmap.Marker({
   position: {lat: 10.793113, lng:106.720739},
-  icon: new map4d.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
+  icon: new ipostmap.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
   anchor: [0.5, 1.0],
   title: "Tiêu đề",
   snippet: "Mô tả"
@@ -121,13 +121,13 @@ Chúng ta có thể vẽ chữ lên marker thông qua thuộc tính label.
 
 ```javascript
 //tạo đối tượng marker từ MarkerOption
-let marker = new map4d.Marker({
+let marker = new ipostmap.Marker({
   position: {lat: 10.793113, lng:106.720739},
-  icon: new map4d.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
+  icon: new ipostmap.Icon(32, 32, "https://raw.githubusercontent.com/at-tantv/public_url/master/ic_test_01@1x.png"),
   anchor: [0.5, 1.0],
   title: "Tiêu đề",
   snippet: "Mô tả",
-  label: new map4d.MarkerLabel({text: "Text", color: "ff0000", fontSize: 12})
+  label: new ipostmap.MarkerLabel({text: "Text", color: "ff0000", fontSize: 12})
 })
 
 //thêm marker vào map    
@@ -140,7 +140,7 @@ Như ví dụ trên thì vẽ chữ "Text" màu đỏ lên marker và kích thư
 Chúng ta có thể cho phép người dùng kéo marker tới vị trí khác bằng cách bật thuộc tính **draggable** bằng true (mặc đinh thuộc tính này được khởi tạo là false).
 
 ```javascript
-let marker = new map4d.Marker({
+let marker = new ipostmap.Marker({
   position: {lat: 10.793113, lng:106.720739},
   draggable: true
 })

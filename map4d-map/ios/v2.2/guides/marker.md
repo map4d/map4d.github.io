@@ -16,7 +16,7 @@ Chúng ta thử tạo MFMarker như sau:
 let marker = MFMarker()
 marker.position = CLLocationCoordinate2D(latitude: 16.072086430034517, longitude: 108.2262037173781)
 marker.icon = UIImage(named: "iconLocation")
-marker.title = "Map4D"
+marker.title = "IPostMap"
 marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 marker.map = mapView
 ```
@@ -27,7 +27,7 @@ marker.map = mapView
 MFMarker *marker = [[MFMarker alloc] init];
 [marker setPosition: CLLocationCoordinate2DMake(16.072086430034517, 108.2262037173781)];
 [marker setIcon: [UIImage imageNamed:@"iconLocation"]];
-[marker setTitle: @"Map4D"];
+[marker setTitle: @"IPostMap"];
 [marker setSnippet: @"An Hải Bắc, Sơn Trà, Đà Nẵng"];
 [marker setMap:mapView];
 ```
@@ -128,14 +128,14 @@ Bạn có thể tạo **Marker** chứa bảng thông tin bằng cách chỉ đ�
 #### ** Swift **
 
 ```swift
-marker.title = "Map4D"
+marker.title = "IPostMap"
 marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 ```
 
 #### ** Objective C **
 
 ```objc
-[marker setTitle: @"Map4D"];
+[marker setTitle: @"IPostMap"];
 [marker setSnippet: @"An Hải Bắc, Sơn Trà, Đà Nẵng"];
 ```
 <!-- tabs:end -->

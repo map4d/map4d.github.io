@@ -1,14 +1,14 @@
-# Map4dMap Android SDK
-[![map4d](https://img.shields.io/badge/map4d-map-orange)](https://map4d.vn/)
+# IpostMap Android SDK
+[![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-android-brightgreen.svg)](https://www.android.com/)
-[![maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fpackages.map4d.vn%2Frepository%2Fmaven-public%2Fvn%2Fmap4d%2FMap4dMap%2Fmaven-metadata.xml)](https://map4d.vn/)
+[![maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fpackages.ipostmap.vn%2Frepository%2Fmaven-public%2Fvn%2Fmap4d%2FIpostMap%2Fmaven-metadata.xml)](https://ipostmap.vn/)
 
-Map4dMap Android SDK for Android, written in C/C++, Java.  
+IpostMap Android SDK for Android, written in C/C++, Java.  
 
-> Map4D Android SDK cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên thiết bị android hỗ trợ opengl 2.0   
-Map4D Android SDK không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn  
+> IPostMap Android SDK cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên thiết bị android hỗ trợ opengl 2.0   
+IPostMap Android SDK không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn  
 
-[![Map4D Android SDK](../resources/overView.png)](https://map4d.vn) 
+[![IPostMap Android SDK](../resources/overView.png)](https://ipostmap.vn) 
 
 ## Installation
 
@@ -18,7 +18,7 @@ Nếu dự án của bạn dùng Gradle thì trước hết cần khai báo url 
 allprojects {
     repositories {
         maven {
-            url = "https://packages.map4d.vn/repository/maven-public"
+            url = "https://packages.ipostmap.vn/repository/maven-public"
         }
     }
 }
@@ -29,7 +29,7 @@ Thêm vào dependencies:
 ```xml
 dependencies {
   implementation 'vn.map4d:Map4dTypes:1.1.0'
-  implementation 'vn.map4d:Map4dMap:2.6.4'
+  implementation 'vn.map4d:IpostMap:2.6.4'
 }
 ```
 
@@ -40,11 +40,11 @@ dependencies {
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="vn.map4d.simplemap">
+  package="vn.ipostmap.simplemap">
   <application
     android:theme="@style/AppTheme">
     <meta-data
-      android:name="vn.map4d.map.ACCESS_KEY"
+      android:name="vn.ipostmap.Map.ACCESS_KEY"
       android:value="TYPE_YOUR_KEY_HERE"/>
   </application>
   <uses-permission android:name="android.permission.INTERNET" />
@@ -58,7 +58,7 @@ dependencies {
 1. Create layout sử dụng MFMapView
 
 ```xml
-<vn.map4d.map.core.MFMapView
+<vn.ipostmap.Map.core.MFMapView
   android:id="@+id/mapView"
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
@@ -83,7 +83,7 @@ các hàm tương ứng của đối tượng MFMapView (như code ví dụ ở 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback{ 
     
     private MFMapView mapView;
-    private Map4D map4D;
+    private IPostMap map4D;
   
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
@@ -95,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
   
     @Override
-    public void onMapReady(Map4D map4D) { 
-        map4D.enable3DMode(true);
+    public void onMapReady(IPostMap map4D) { 
+        ipostmap.enable3DMode(true);
         // Your code
     }
       
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 ```kotlin
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    private var map4D: Map4D? = null
+    private var map4D: IPostMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -140,7 +140,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         mapView?.getMapAsync(this)
     }
 
-    override fun onMapReady(map4D: Map4D?) {
+    override fun onMapReady(map4D: IPostMap?) {
         map4D?.enable3DMode(true)
         // Your code
     }
@@ -170,7 +170,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
 ### Ví dụ hoàn chỉnh sử dụng MFMapView
 
-https://github.com/map4d/android-samples/tree/main/simple-mapview-demo
+[https://github.com/ipostmap/android-samples/tree/main/simple-mapview-demo](https://github.com/map4d/android-samples/tree/main/simple-mapview-demo)
 
 ## Add a MFSupportMapFragment object
 
@@ -185,7 +185,7 @@ Trong file layout của activity chúng ta sẽ:
 
 2. Thêm khai báo `xmlns:map="http://schemas.android.com/apk/res-auto`. Việc này cho phép sử dụng các thuộc tính XML tùy chỉnh của Map
 
-3. Trong `fragment` element, set thuộc tính `android:name` thành `vn.map4d.map.core.MFSupportMapFragment`
+3. Trong `fragment` element, set thuộc tính `android:name` thành `vn.ipostmap.Map.core.MFSupportMapFragment`
 
 4. Thêm thuộc tính `android:id` cho element `fragment`
 
@@ -197,7 +197,7 @@ Ví dụ sau đây là file layout hoàn chỉnh bao gồm `fragment` element:
   xmlns:tools="http://schemas.android.com/tools"
   xmlns:map="http://schemas.android.com/apk/res-auto"
   android:id="@+id/map"
-  android:name="vn.map4d.map.core.MFSupportMapFragment"
+  android:name="vn.ipostmap.Map.core.MFSupportMapFragment"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context=".MainActivity" />
@@ -237,4 +237,4 @@ supportFragmentManager
 
 ### Ví dụ hoàn chỉnh sử dụng MFSupportMapFragment
 
-https://github.com/map4d/android-samples/tree/main/support-map-fragment-demo
+[https://github.com/ipostmap/android-samples/tree/main/support-map-fragment-demo](https://github.com/map4d/android-samples/tree/main/support-map-fragment-demo)

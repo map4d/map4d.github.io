@@ -15,7 +15,7 @@ val userPOIOptions = MFPOIOptions()
     userPOIOptions.position(MFLocationCoordinate(16.066517, 108.210354)).title("Test User POI")
       .titleColor(Color.GREEN)
       .subtitle("Da Nang")
-    val poi = map4D.addPOI(userPOIOptions)
+    val poi = ipostmap.addPOI(userPOIOptions)
 ```
 
 #### ** Java **
@@ -23,7 +23,7 @@ val userPOIOptions = MFPOIOptions()
   MFPOIOptions userPOIOptions = new MFPOIOptions();
   userPOIOptions.position(new MFLocationCoordinate(16.071876, 108.223994)).title("Test User POI")
     titleColor(Color.GREEN).subtitle("Da Nang");
-  MFPOI poi = map4D.addPOI(userPOIOptions);
+  MFPOI poi = ipostmap.addPOI(userPOIOptions);
 ```
 <!-- tabs:end -->
 

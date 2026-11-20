@@ -1,6 +1,6 @@
 # Image Overlay
 
-Image Overlay là một loại overlay cho phép người dùng hiển thị một image lên trên map của Map4D trong một khu vực/vùng cụ thể gắn với kinh độ và vĩ độ.
+Image Overlay là một loại overlay cho phép người dùng hiển thị một image lên trên map của IPostMap trong một khu vực/vùng cụ thể gắn với kinh độ và vĩ độ.
 
 <iframe src="./html/image-overlay.html" style="min-width: 900px;" height="520px"></iframe>
 
@@ -26,7 +26,7 @@ let options = {
   bounds: [{lng: 108.214421, lat: 16.061733}, {lng: 108.23086738586424, lat: 16.075630202564316}],
   zIndex: 1
 }
-let overlay = new map4d.ImageOverlay(options)
+let overlay = new ipostmap.ImageOverlay(options)
 ```
 
 ### Add Image Overlay lên Map

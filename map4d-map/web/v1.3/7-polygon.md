@@ -52,7 +52,7 @@ Lớp Polygon cho phép người dùng vẽ một Polygon lên bản đồ.
 ## 2. Tạo polygon
 
 ```javascript
-  let polygonOption: map4d.PolygonOptions = {
+  let polygonOption: ipostmap.PolygonOptions = {
         paths:
           [[{lat: 10.773201, lng: 106.700147}, {lat: 10.771783, lng: 106.700763},
             {lat: 10.772302, lng: 106.701901}, {lat: 10.773267, lng: 106.701493},
@@ -60,7 +60,7 @@ Lớp Polygon cho phép người dùng vẽ một Polygon lên bản đồ.
         fillColor: "#0000ff",
         fillOpacity: 1.0,
       }
-  let polygon = new map4d.Polygon(polygonOption)
+  let polygon = new ipostmap.Polygon(polygonOption)
   polygon.setMap(this.map)    
 ```
 
@@ -71,7 +71,7 @@ Như ví dụ trên vẽ 1 polygon có màu xanh da trời lên bản đồ.
 Các bạn để ý bên ngoài polygon có viền đỏ. Mặc định khi vẽ polygon sẽ có viền. Chúng ta có thể đổi màu viền thông qua việc đổi thuộc tính **strokeColor**
 
 ```javascript
-  let polygonOption: map4d.PolygonOptions = {
+  let polygonOption: ipostmap.PolygonOptions = {
         paths:
           [[{lat: 10.773201, lng: 106.700147}, {lat: 10.771783, lng: 106.700763},
             {lat: 10.772302, lng: 106.701901}, {lat: 10.773267, lng: 106.701493},
@@ -80,7 +80,7 @@ Các bạn để ý bên ngoài polygon có viền đỏ. Mặc định khi vẽ
         fillOpacity: 1.0,
         strokeColor: "#00ff00"
       }
-  let polygon = new map4d.Polygon(polygonOption)
+  let polygon = new ipostmap.Polygon(polygonOption)
   polygon.setMap(this.map)    
 ```
 
@@ -89,7 +89,7 @@ Các bạn để ý bên ngoài polygon có viền đỏ. Mặc định khi vẽ
 Nếu không muốn vẽ viền có thể tắt thông qua thuộc tính **strokeWidth**. Khời tạo nó bằng 0 nghĩa là không vẽ viền
 
 ```javascript
-  let polygonOption: map4d.PolygonOptions = {
+  let polygonOption: ipostmap.PolygonOptions = {
         paths:
           [[{lat: 10.773201, lng: 106.700147}, {lat: 10.771783, lng: 106.700763},
             {lat: 10.772302, lng: 106.701901}, {lat: 10.773267, lng: 106.701493},
@@ -98,7 +98,7 @@ Nếu không muốn vẽ viền có thể tắt thông qua thuộc tính **strok
         fillOpacity: 1.0,
         strokeWidth: 0.0
       }
-  let polygon = new map4d.Polygon(polygonOption)
+  let polygon = new ipostmap.Polygon(polygonOption)
   polygon.setMap(this.map)    
 ```
 
@@ -107,7 +107,7 @@ Nếu không muốn vẽ viền có thể tắt thông qua thuộc tính **strok
 Ta có thể vẽ polygon có lỗ lên bản đồ. Paths là một mảng chứa các mảng, với mảng đầu tiên là polygon cần vẽ lên bản đồ. Các mảng còn lại tương ứng với lỗ trên polygon.
 
 ```javascript
-  let polygonOption: map4d.PolygonOptions = {
+  let polygonOption: ipostmap.PolygonOptions = {
         paths: 
             [[{lat: 10.773201, lng: 106.700147}, {lat: 10.771783, lng: 106.700763},
               {lat: 10.772302, lng: 106.701901}, {lat: 10.773267, lng: 106.701493},
@@ -121,7 +121,7 @@ Ta có thể vẽ polygon có lỗ lên bản đồ. Paths là một mảng ch�
               {lat: 10.772285, lng: 106.701497}, {lat: 10.772059, lng: 106.701064},
               {lat: 10.772356, lng: 106.700802}]],
       }
-  let polygon = new map4d.Polygon(polygonOption)
+  let polygon = new ipostmap.Polygon(polygonOption)
   polygon.setMap(this.map)    
 ```
 
@@ -185,7 +185,7 @@ bằng true thì sẽ dựa vào index để vẽ, zIndex càng lớn càng vẽ
 **Ví dụ:**
 
 ```javascript
-	let polygonOptionA: map4d.PolygonOptions = {
+	let polygonOptionA: ipostmap.PolygonOptions = {
       paths:
         [[{lat: 10.773201, lng: 106.700147}, {lat: 10.771783, lng: 106.700763},
           {lat: 10.772302, lng: 106.701901}, {lat: 10.773267, lng: 106.701493},
@@ -200,17 +200,17 @@ bằng true thì sẽ dựa vào index để vẽ, zIndex càng lớn càng vẽ
             {lat: 10.772356, lng: 106.700802}]], fillOpacity: 0.9, strokeWidth: 0, bringFrontBuilding: true, zIndex: 20, draggable: true, fillColor: "#ff0000"
     }
     //thêm polygon vào map
-    let polygonA = new map4d.Polygon(polygonOptionA)
+    let polygonA = new ipostmap.Polygon(polygonOptionA)
     polygonA.setMap(this.map)
 	
-	let polygonOptionB: map4d.PolygonOptions = {
+	let polygonOptionB: ipostmap.PolygonOptions = {
       paths:
         [[{lat: 10.773201, lng: 106.700147}, {lat: 10.771783, lng: 106.700763},
           {lat: 10.772302, lng: 106.701901}, {lat: 10.773267, lng: 106.701493},
           {lat: 10.773201, lng: 106.700147}]], fillOpacity: 0.9, strokeWidth: 0, bringFrontBuilding: true, zIndex: 15, draggable: true
     }
     //thêm polygon vào map
-    let polygonB = new map4d.Polygon(polygonOptionB)
+    let polygonB = new ipostmap.Polygon(polygonOptionB)
     polygonB.setMap(this.map)
 ```
 Như ví dụ ở trên thì polygonA sẽ đè lên polygonB vì nó có zIndex lớn hơn zIndex của polygonB và nó cùng có thuộc tính bringFrontBuilding là true.
@@ -220,7 +220,7 @@ Như ví dụ ở trên thì polygonA sẽ đè lên polygonB vì nó có zIndex
 **Ví dụ:**
 
 ```javascript
-	let polygonOptionA: map4d.PolygonOptions = {
+	let polygonOptionA: ipostmap.PolygonOptions = {
       paths:
         [[{lat: 10.773201, lng: 106.700147}, {lat: 10.771783, lng: 106.700763},
           {lat: 10.772302, lng: 106.701901}, {lat: 10.773267, lng: 106.701493},
@@ -235,17 +235,17 @@ Như ví dụ ở trên thì polygonA sẽ đè lên polygonB vì nó có zIndex
             {lat: 10.772356, lng: 106.700802}]], fillOpacity: 0.9, strokeWidth: 0, bringFrontBuilding: true, zIndex: 20, draggable: true, fillColor: "#ff0000"
     }
     //thêm polygon vào map
-    let polygonA = new map4d.Polygon(polygonOptionA)
+    let polygonA = new ipostmap.Polygon(polygonOptionA)
     polygonA.setMap(this.map)
 	
-	let polygonOptionB: map4d.PolygonOptions = {
+	let polygonOptionB: ipostmap.PolygonOptions = {
       paths:
         [[{lat: 10.773201, lng: 106.700147}, {lat: 10.771783, lng: 106.700763},
           {lat: 10.772302, lng: 106.701901}, {lat: 10.773267, lng: 106.701493},
           {lat: 10.773201, lng: 106.700147}]], fillOpacity: 0.9, strokeWidth: 0, bringFrontBuilding: true, zIndex: 20, draggable: true
     }
     //thêm polygon vào map
-    let polygonB = new map4d.Polygon(polygonOptionB)
+    let polygonB = new ipostmap.Polygon(polygonOptionB)
     polygonB.setMap(this.map)
 ```
 Như ví dụ ở trên thì polygonB sẽ đè lên polygonA vì nó có zIndex bằng nhau và nó cùng có thuộc tính bringFrontBuilding là true nên được add vô sau sẽ được vẽ sau.

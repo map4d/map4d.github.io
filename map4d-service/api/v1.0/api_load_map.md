@@ -2,7 +2,7 @@
 #  Load map theo version
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/map/js?key={key}&version={version}&callback={callback}
+https://api.ipostmap.vn/sdk/map/js?key={key}&version={version}&callback={callback}
 key là thuộc tính bắc buộc.
 version là phiên bản nội dung javascript
 callback 

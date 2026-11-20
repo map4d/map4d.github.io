@@ -1,5 +1,5 @@
-# Sự kiện Map4D-SDK
-Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
+# Sự kiện IPostMap-SDK
+Hướng dẫn sử dụng các sự kiện của IpostMap Android SDK.
 
 ## 1. Giới thiệu chung
 
@@ -47,7 +47,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.1. OnCameraMoveStartedListener**
   
   ```java
-    map4D.setOnCameraMoveStartedListener(new Map4D.OnCameraMoveStartedListener() {
+    ipostmap.setOnCameraMoveStartedListener(new IPostMap.OnCameraMoveStartedListener() {
         @Override
         public void onCameraMoveStarted(int reason) {
 
@@ -58,7 +58,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   
   **2.2. OnCameraMoveListener**
   ```java
-   map4D.setOnCameraMoveListener(new Map4D.OnCameraMoveListener() {
+   ipostmap.setOnCameraMoveListener(new IPostMap.OnCameraMoveListener() {
         @Override
         public void onCameraMove() {
 
@@ -68,7 +68,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
 
   **2.3. OnCameraIdleListener**
   ```java
-    map4D.setOnCameraIdleListener(new Map4D.OnCameraIdleListener() {
+    ipostmap.setOnCameraIdleListener(new IPostMap.OnCameraIdleListener() {
         @Override
         public void onCameraIdle() {
             
@@ -79,7 +79,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.4. OnMapModeChangeListener**
   	
   ```java
-    map4D.setOnMapModeChange(new Map4D.OnMapModeChangeListener() {
+    ipostmap.setOnMapModeChange(new IPostMap.OnMapModeChangeListener() {
       @Override
       public void onMapModeChange(boolean is3DMode) {
           
@@ -92,7 +92,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.5. OnMyLocationClickListener**
 	
   ```java
-  map4D.setOnMyLocationClickListener(new Map4D.OnMyLocationClickListener() {
+  ipostmap.setOnMyLocationClickListener(new IPostMap.OnMyLocationClickListener() {
       @Override
       public void onMyLocationClick(Location location) {
           
@@ -104,7 +104,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.6. OnMyLocationButtonClickListener**
   	
   ```java
-  map4D.setOnMyLocationButtonClickListener(new Map4D.OnMyLocationButtonClickListener() {
+  ipostmap.setOnMyLocationButtonClickListener(new IPostMap.OnMyLocationButtonClickListener() {
       @Override
       public boolean onMyLocationButtonClick() {
           return false;
@@ -121,7 +121,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.7. OnMarkerClickListener**
   	
   ```java
-  map4D.setOnMarkerClickListener(new Map4D.OnMarkerClickListener() {
+  ipostmap.setOnMarkerClickListener(new IPostMap.OnMarkerClickListener() {
       @Override
       public boolean onMarkerClick(MFMarker marker) {
           return false;
@@ -140,7 +140,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.8. OnPolylineClickListener**
   	
   ```java
-  map4D.setOnPolylineClickListener(new Map4D.OnPolylineClickListener() {
+  ipostmap.setOnPolylineClickListener(new IPostMap.OnPolylineClickListener() {
       @Override
       public void onPolylineClick(MFPolyline polyline) {
 
@@ -153,7 +153,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.9. OnPolygonClickListener**
   	
   ```java
-  map4D.setOnPolygonClickListener(new Map4D.OnPolygonClickListener() {
+  ipostmap.setOnPolygonClickListener(new IPostMap.OnPolygonClickListener() {
       @Override
       public void onPolygonClick(MFPolygon polygon) {
 
@@ -165,7 +165,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.10. OnCircleClickListener**
   	
   ```java
-  map4D.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
+  ipostmap.setOnCircleClickListener(new IPostMap.OnCircleClickListener() {
       @Override
       public void onCircleClick(MFCircle circle) {
 
@@ -177,7 +177,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.11. OnObjectClickListener**
   	
   ```java
-  map4D.setOnObjectClickListener(new Map4D.OnObjectClickListener() {
+  ipostmap.setOnObjectClickListener(new IPostMap.OnObjectClickListener() {
       @Override
       public void onObjectClick(MFObject object) {
 
@@ -190,7 +190,7 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
   **2.12. OnMapClickListener**
   	
   ```java
-  map4D.setOnMapClickListener(new Map4D.OnMapClickListener() {
+  ipostmap.setOnMapClickListener(new IPostMap.OnMapClickListener() {
       @Override
       public void onMapClick(MFLocationCoordinate latLng) {
 
@@ -205,14 +205,14 @@ Hướng dẫn sử dụng các sự kiện của Map4dMap Android SDK.
 
 - zIndex càng cao thì sẽ nhận được click trước
 ```java
-MFCircle circle = map4D.addCircle(new MFCircleOptions()
+MFCircle circle = ipostmap.addCircle(new MFCircleOptions()
                 .fillColor("#ffaabb")
                 .radius(300)
                 .fillAlpha(0.5f)
                 .zIndex(5.f)
                 .center(new MFLocationCoordinate(10.773143, 106.713472)));
                 
-MFMarker marker = map4D.addMarker(new MFMarkerOptions()
+MFMarker marker = ipostmap.addMarker(new MFMarkerOptions()
                 .position(new MFLocationCoordinate(10.76777699097427, 106.70235982464658))
                 .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_default_marker))
                 .zIndex(15.f)

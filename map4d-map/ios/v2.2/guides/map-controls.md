@@ -162,7 +162,7 @@
   
   ## 4. Di chuyển map
 
-  **Map4D iOS SDK** hỗ trợ người dùng di chuyển tới một vị trí **camera** mới thông qua 2 phương thức **animate** và **move**.
+  **IPostMap iOS SDK** hỗ trợ người dùng di chuyển tới một vị trí **camera** mới thông qua 2 phương thức **animate** và **move**.
 
   **Phương thức animate**
 

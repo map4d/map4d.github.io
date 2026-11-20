@@ -6,7 +6,7 @@ Những thay đổi kể từ version 2.1.0
 
 #### Removed
 
-- Remove class MFServices nhằm tránh xung đột với [Map4dServices](https://cocoapods.org/pods/Map4dServices)
+- Remove class MFServices nhằm tránh xung đột với [IpostMapService](https://cocoapods.org/pods/IpostMapService)
 
 #### Fixed
 

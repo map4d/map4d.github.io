@@ -1,4 +1,4 @@
-# Cài đặt Map4D-SDK
+# Cài đặt IPostMap-SDK
 
 ## 1. Cài đặt
 
@@ -32,14 +32,14 @@
 <script src="[PATH]/map4dsdk@[version].js"></script>
 
 <script>
-  let map = new map4d.Map(document.getElementById("yourmapid"),
+  let map = new ipostmap.Map(document.getElementById("yourmapid"),
       {
         center: [106.720739, 10.793113],
         zoom: 17,
         geolocate: true,
         controls :true,
         tilt: 0,
-        controlOptions: map4d.ControlOptions.BOTTOM_RIGHT,
+        controlOptions: ipostmap.ControlOptions.BOTTOM_RIGHT,
         accessKey: `${access_key}`
       }
     )
@@ -67,7 +67,7 @@
 
 ## 3. Access key
 Để sử dụng map4d JavaScript API, bạn cần phải có access key (bạn có thể sử dụng một access key cho các api trên web, iOS, Android).
-Để nhận được access key vui vòng truy cập đường link sau ([đăng ký key](http://map4d.vn))
+Để nhận được access key vui vòng truy cập đường link sau ([đăng ký key](http://ipostmap.vn))
 
 ## 4. Tùy chọn khi tạo map
 
@@ -100,7 +100,7 @@ enum ControlOptions {
 - minZoom, maxZoom: giới hạn zoom của map có nghĩa mức zoom của map chỉ được nằm trong khoảng [minZoom, maxZoom]. Nếu không set thì giá trị mặc định sẽ là [0, 22]
 - maxNativeZoom: là giới hạn mức Zoom cao nhất của Tile mà map request từ server. Nếu không set thì giá trị mặc định là 19
 - geolocate: bật/tắt chức năng lấy vị trí hiện tại của người dùng, mặc định là tắt
-- accessKey: key để sử dụng map ([đăng ký key](http://map4d.vn))
+- accessKey: key để sử dụng map ([đăng ký key](http://ipostmap.vn))
 - controls: ẩn hiện bảng điều khiển, mặc định là ẩn
 - controlOptions: vị trí của bảng điều khiển giá trị mặc định là BOTTOM_RIGHT
 - switchMode: là chế độ chuyển mode của Map khi người dùng thực hiện các thao tác tác động đến Map như zoom, fly, move. Mục đích của switchMode là cho phép Map có tự động chuyển từ 2D sang 3D và ngược lại khi người dùng thực hiện các thao tác trên hay không. Để tìm hiểu kĩ hơn bạn có thể đọc phần tài liệu về SwitchMode ở mục **9**
@@ -304,13 +304,13 @@ enum SwitchMode {
   - Sử dụng hàm enable3dMode(boolean) khi muốn chuyển qua lại chế độ 2D và 3D.
 
  ## 10. Ghi chú
- Các kiểu dữ liệu **Point, LatLng, CameraPosition, SwitchMode, ControlOptions** là các kiểu dữ liệu của Map4D-SDK, muốn sử dụng được phải thông qua **module map4d**
+ Các kiểu dữ liệu **Point, LatLng, CameraPosition, SwitchMode, ControlOptions** là các kiểu dữ liệu của IPostMap-SDK, muốn sử dụng được phải thông qua **module map4d**
  Ví dụ:
  ```javascript
- let location = new map4d.LatLng(10, 108);
- let point = new map4d.Point(1, 2)
- let camera = new map4d.CameraPosition([10, 108], tilt, bearing, zoom)
- map.setSwitchMode(map4d.SwitchMode.Auto)
+ let location = new ipostmap.LatLng(10, 108);
+ let point = new ipostmap.Point(1, 2)
+ let camera = new ipostmap.CameraPosition([10, 108], tilt, bearing, zoom)
+ map.setSwitchMode(ipostmap.SwitchMode.Auto)
  ```
 
 License

@@ -51,13 +51,13 @@ let locations = [
       [10.652510, 106.666259]
 ]
 let markers = locations.map(function(location) {
-      return new map4d.Marker({
+      return new ipostmap.Marker({
         position: [location[0], location[1]],
-        icon: new map4d.Icon(32, 32, "https://cdn3.iconfinder.com/data/icons/map-markers-2/512/marker_2-512.png"),
-        anchor: new map4d.Point(0.5, 1.0),
+        icon: new ipostmap.Icon(32, 32, "https://cdn3.iconfinder.com/data/icons/map-markers-2/512/marker_2-512.png"),
+        anchor: new ipostmap.Point(0.5, 1.0),
       })
     })
-let cluster = new map4d.MarkerClusterer(markers, {radius: 150})
+let cluster = new ipostmap.MarkerClusterer(markers, {radius: 150})
 cluster.setMap(map)
 ```
 License

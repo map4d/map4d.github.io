@@ -34,7 +34,7 @@ Lớp Polygon cho phép người dùng vẽ một Polygon lên bản đồ.
 
 ```javascript
   //tạo đối tượng polygon từ PolygonOptions
-  let polygonOption: map4d.PolygonOptions = {
+  let polygonOption: ipostmap.PolygonOptions = {
       paths:
         [[{lat: 10.773201, lng: 106.700147}, {lat: 10.771783, lng: 106.700763},
           {lat: 10.772302, lng: 106.701901}, {lat: 10.773267, lng: 106.701493},
@@ -49,7 +49,7 @@ Lớp Polygon cho phép người dùng vẽ một Polygon lên bản đồ.
             {lat: 10.772356, lng: 106.700802}]], fillOpacity: 0.9
     }
   //thêm polygon vào map    
-  let polygon = new map4d.Polygon(polygonOption)
+  let polygon = new ipostmap.Polygon(polygonOption)
   polygon.setMap(this.map)
   //Xóa polygon khỏi map
   polygon.setMap(null)

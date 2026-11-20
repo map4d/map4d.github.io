@@ -17,13 +17,13 @@ Lớp LatLngBounds đại diện cho một hình chữ nhật trong toạ độ 
 ## 2. Tạo đối tượng LatLngBounds
 
 ```javascript
-  let bounds = new map4d.LatLngBounds([8.606498, 104.699308], [10.567800, 107.974320])
+  let bounds = new ipostmap.LatLngBounds([8.606498, 104.699308], [10.567800, 107.974320])
 ```
 
 Ngoài ra ta có thể extend các tọa độ vào trong LatLngBounds. Và ta có được một hình chữ nhật chứa tất cả các điểm tọa độ mà ta extend.
 Ví dụ:
 ```javascript
-	let bounds = new map4d.LatLngBounds()
+	let bounds = new ipostmap.LatLngBounds()
 	bounds.extend([8.606498, 104.699308])
 	bounds.extend([10.567800, 107.974320])
 	bounds.extend([10.767800, 105.974320])
@@ -56,7 +56,7 @@ fitBounds(bounds: ILatLngBounds, padding?: PaddingOptions, animationOptions?: An
 
 ```javascript
       // Tạo đối tượng latlngbounds
-      let latLngBounds = new map4d.LatLngBounds()
+      let latLngBounds = new ipostmap.LatLngBounds()
 
       // Thêm các toạ độ cần fitbounds
       latLngBounds.extend({lat: 12.218918, lng:105.087287})
@@ -77,16 +77,16 @@ fitBounds(bounds: ILatLngBounds, padding?: PaddingOptions, animationOptions?: An
 
       // Markers dùng để test
       // Marker dùng để test 2 điểm tây nam và đông bắc.
-      let swMarker  = new map4d.Marker({
+      let swMarker  = new ipostmap.Marker({
         position: latLngBounds.getSouthwest(),
-        anchor: new map4d.Point(0.5, 1.0),
+        anchor: new ipostmap.Point(0.5, 1.0),
         title: "SouthWest"
       })
       swMarker.setMap(map)
 
-      let neMarker  = new map4d.Marker({
+      let neMarker  = new ipostmap.Marker({
         position: latLngBounds.getNortheast(),
-        anchor: new map4d.Point(0.5, 1.0),
+        anchor: new ipostmap.Point(0.5, 1.0),
         title: "NorthEast"
       })
       neMarker.setMap(map)

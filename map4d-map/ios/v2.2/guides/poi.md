@@ -16,7 +16,7 @@ Chúng ta thử tạo **POI** như sau:
 ```swift 
 let poi = MFPOI()
 poi.position = CLLocationCoordinate2D(latitude: 16.071575666602996, longitude: 108.22781709595301)
-poi.title = "Map4D Cafe"
+poi.title = "IPostMap Cafe"
 poi.zIndex = 1
 poi.type = "cafe"
 poi.color = red
@@ -28,7 +28,7 @@ poi.map = mapView
 ```objc 
 MFPOI *poi = [[MFPOI alloc] init];
 [poi setPosition:CLLocationCoordinate2DMake(16.071575666602996, 108.22781709595301)];
-[poi setTitle: @"Map4D Cafe"];
+[poi setTitle: @"IPostMap Cafe"];
 [poi setZIndex: 1];
 [poi setType: @"cafe"];
 [poi setColor: [UIColor redColor]];

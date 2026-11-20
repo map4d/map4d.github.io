@@ -186,7 +186,7 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 
 `MFGeometryType` enum
 
-Hiện tại Map4D hỗ trợ 6 loại MFGeometryType như bên dưới:
+Hiện tại IPostMap hỗ trợ 6 loại MFGeometryType như bên dưới:
 
 | No. | Name                          | Description                                      |
 |:---:|-------------------------------|--------------------------------------------------|

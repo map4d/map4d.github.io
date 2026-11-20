@@ -1,10 +1,10 @@
-# Map4dServices iOS SDK
-[![map4d](https://img.shields.io/badge/map4d-services-orange)](https://map4d.vn/)
-[![platform](https://img.shields.io/cocoapods/p/Map4dServices)](https://www.apple.com/ios/)
-[![cocoapods](https://img.shields.io/cocoapods/v/Map4dServices)](https://cocoapods.org/pods/Map4dServices)
+# IpostMapService iOS SDK
+[![ipostmap](https://img.shields.io/badge/ipostmap-services-orange)](https://ipostmap.vn/)
+[![platform](https://img.shields.io/cocoapods/p/IpostMapService)](https://www.apple.com/ios/)
+[![cocoapods](https://img.shields.io/cocoapods/v/IpostMapService)](https://cocoapods.org/pods/IpostMapService)
 
-> **Map4dServices** cung cấp [Map4D Services API](https://docs.map4d.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
-> **Map4dServices** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
+> **IpostMapService** cung cấp [IPostMap Services API](https://docs.ipostmap.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
+> **IpostMapService** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
 
 ## Installation
 
@@ -17,7 +17,7 @@ pod repo update
 
 2. Add to Podfile
 ```shell
-pod 'Map4dServices'
+pod 'IpostMapService'
 ```
 
 ## Using
@@ -25,7 +25,7 @@ pod 'Map4dServices'
 1. Provide services access key from Info.plist
 
 ```xml
-<key>Map4dServicesAccessKey</key>
+<key>IpostMapServiceAccessKey</key>
 <string>YOUR_SERVICES_ACCESS_KEY</string>
 ```
 
@@ -35,13 +35,13 @@ pod 'Map4dServices'
 #### ** Swift **
 
 ```swift
-import Map4dServices
+import IpostMapService
 ```
 
 #### ** Objective C **
 
 ```objc
-#import <Map4dServices/Map4dServices.h>
+#import <IpostMapService/IpostMapService.h>
 ```
 <!-- tabs:end -->
 

@@ -1,14 +1,14 @@
 #  Tile (Lấy thông tin đối tượng và địa điểm của tile phiên bản 2)
-Map4D API cung cấp dữ liệu nền địa lý gồm thông tin đối tượng và địa điểm của tile.
+IPostMap API cung cấp dữ liệu nền địa lý gồm thông tin đối tượng và địa điểm của tile.
 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/tile/v2/{z}/{x}/{y}?key={key}&mode={mode}
+https://api.ipostmap.vn/sdk/tile/v2/{z}/{x}/{y}?key={key}&mode={mode}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key. |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.ipostmap.vn/user/my-access-key/add để tạo key. |
 | z         | **Yes**  | Mức zoom của map.                                                                                                                                                                 |
 | x         | **Yes**  | Tọa độ x (Giá trị x).                                                                                                                                                             |
 | y         | **Yes**  | Tọa độ y (Giá trị y).                                                                                                                                                             |

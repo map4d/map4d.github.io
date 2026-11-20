@@ -1,6 +1,6 @@
 # Directions Renderer
 
-> Map4D Map SDK cung cấp lớp [MFDirectionsRenderer](/reference/directions-renderer) để dễ dàng hiển thị các chỉ đường lên bản đồ.
+> IPostMap Map SDK cung cấp lớp [MFDirectionsRenderer](/reference/directions-renderer) để dễ dàng hiển thị các chỉ đường lên bản đồ.
 
 ### 1. Thêm một Directions Renderer vào bản đồ
 
@@ -112,7 +112,7 @@ Bạn có thể dễ dàng tuỳ chỉnh **Directions Renderer** thông qua các
 
 ### 4. Sự kiện tap on Directions Renderer
 
-Map4D SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.  
+IPostMap SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.  
 Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.  
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 

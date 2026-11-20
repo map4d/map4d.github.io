@@ -28,10 +28,10 @@ Dùng hai ngón tay thu hẹp/ mở rộng khoảng cách của 2 ngón tay trê
 ## 2. Các thuộc tính điều khiển Map
 
 > Bạn có thể tắt các điều khiển mặc định trên map bằng cách gọi các phương thức của lớp `MFUiSettings`, đối tượng của lớp
-này là một thuộc tính của lớp `Map4D`
+này là một thuộc tính của lớp `IPostMap`
 
 - Các điều khiển sau có thể được bật và tắt theo các phương thức sau:
-    - `setMyLocationButtonEnabled()`: Bật tắt nút myLocation mà Map4D Android SDK cung cấp.
+    - `setMyLocationButtonEnabled()`: Bật tắt nút myLocation mà IPostMap Android SDK cung cấp.
     - `setScrollGesturesEnabled()`: Bật tắt cử chỉ di chuyển Map. Nếu được bật, người dùng có thể vuốt để di chuyển map.
     - `setZoomGesturesEnabled()`: Bật tắt các cử chỉ phóng to hoặc thu nhỏ Map. Nếu được bật, người dùng có thể nhấn đúp, dùng hai ngón tay thu hẹp hoặc mở rộng để thay đổi mức zoom của camera.
     - `setTiltGesturesEnabled()`: Bật tắt các cử chỉ nghiêng Map. Nếu được bật, người dùng có thể sử dụng hai ngón tay vuốt dọc xuống hoặc vuốt lên để nghiêng camera.
@@ -43,9 +43,9 @@ này là một thuộc tính của lớp `Map4D`
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-MFUiSettings settings = map4D.getUiSettings();
+MFUiSettings settings = ipostmap.getUiSettings();
 settings.setMyLocationButtonEnabled(false);
 settings.setScrollGesturesEnabled(false);
 settings.setZoomGesturesEnabled(false);
@@ -57,9 +57,9 @@ settings.setAllGesturesEnabled(false);
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-var settings = map4D.getUiSettings()
+var settings = ipostmap.getUiSettings()
 settings.setMyLocationButtonEnabled(false)
 settings.setScrollGesturesEnabled(false)
 settings.setZoomGesturesEnabled(false)
@@ -75,17 +75,17 @@ settings.setAllGesturesEnabled(false)
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-map4D.setMaxNativeZoom(19)
+ipostmap.setMaxNativeZoom(19)
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-map4D.setMaxNativeZoom(19)
+ipostmap.setMaxNativeZoom(19)
 ```
 <!-- tabs:end -->
 
@@ -101,17 +101,17 @@ Set mức **zoom** tối đa và tối thiểu thông qua phương thức `setMi
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-map4D.setMinZoomPreference(3)
+ipostmap.setMinZoomPreference(3)
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-map4D.setMinZoomPreference(3)
+ipostmap.setMinZoomPreference(3)
 ```
 <!-- tabs:end -->
 
@@ -125,17 +125,17 @@ Mức **zoom** tối thiểu ở chế độ 3D là 17.
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-map4D.enable3DMode(true)
+ipostmap.enable3DMode(true)
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-map4D.enable3DMode(true)
+ipostmap.enable3DMode(true)
 ```
 <!-- tabs:end -->
 
@@ -147,9 +147,9 @@ map4D.enable3DMode(true)
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-MFCameraPosition cameraPosition = map4D.getCameraPosition();
+MFCameraPosition cameraPosition = ipostmap.getCameraPosition();
 MFLocationCoordinate target = cameraPosition.getTarget();
 double zoom = cameraPosition.getZoom();
 double tilt = cameraPosition.getTilt();
@@ -159,9 +159,9 @@ double bearing = cameraPosition.getBearing();
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-var cameraPosition = map4D.cameraPosition
+var cameraPosition = ipostmap.cameraPosition
 var target = cameraPosition.target
 var zoom = cameraPosition.zoom
 var tilt = cameraPosition.tilt
@@ -175,17 +175,17 @@ var bearing = cameraPosition.bearing
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-boolean is3DMode = map4D.is3DMode();
+boolean is3DMode = ipostmap.is3DMode();
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-val is3DMode = map4D.is3DMode
+val is3DMode = ipostmap.is3DMode
 ```
 <!-- tabs:end -->
 
@@ -196,7 +196,7 @@ Phương thức sẽ trả về một giá trị `boolean`:
 
 ## 4. Di chuyển Map
 
-**Map4D Android SDK** hỗ trợ người dùng di chuyển **Map** tới một vị trí camera mới thông qua 2 phương thức `animateCamera()`
+**IPostMap Android SDK** hỗ trợ người dùng di chuyển **Map** tới một vị trí camera mới thông qua 2 phương thức `animateCamera()`
 và `moveCamera()`.
 
 **Sử dụng phương thức `animateCamera()`
@@ -205,9 +205,9 @@ và `moveCamera()`.
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-map4D.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
+ipostmap.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
     new MFCoordinateBounds(
         new MFLocationCoordinate(16.057814922971613, 108.22065353393553),
         new MFLocationCoordinate(16.064289641988594, 108.2324981689453)),
@@ -217,9 +217,9 @@ map4D.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-map4D.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
+ipostmap.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
     MFCoordinateBounds(
         MFLocationCoordinate(16.057814922971613, 108.22065353393553),
         MFLocationCoordinate(16.064289641988594, 108.2324981689453)),
@@ -233,9 +233,9 @@ map4D.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
-map4D.moveCamera(MFCameraUpdateFactory.newCoordinateBounds(
+ipostmap.moveCamera(MFCameraUpdateFactory.newCoordinateBounds(
     new MFCoordinateBounds(
         new MFLocationCoordinate(16.057814922971613, 108.22065353393553),
         new MFLocationCoordinate(16.064289641988594, 108.2324981689453)),
@@ -245,9 +245,9 @@ map4D.moveCamera(MFCameraUpdateFactory.newCoordinateBounds(
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
-map4D.moveCamera(MFCameraUpdateFactory.newCoordinateBounds(
+ipostmap.moveCamera(MFCameraUpdateFactory.newCoordinateBounds(
     MFCoordinateBounds(
         MFLocationCoordinate(16.057814922971613, 108.22065353393553),
         MFLocationCoordinate(16.064289641988594, 108.2324981689453)),

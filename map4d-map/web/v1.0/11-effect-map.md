@@ -1,4 +1,4 @@
-# Cài đặt Hiệu Ứng Map4D-SDK
+# Cài đặt Hiệu Ứng IPostMap-SDK
 
 # 5. Các hiệu ứng 3D
 
@@ -54,7 +54,7 @@ enum TimeEffect {
 	- **None**: Hiệu ứng thời gian không được kích hoạt
 
 ## 5.5. Hiệu ứng thời tiết
-Map4D SDK cho phép người dùng cài đặt các hiệu ứng theo thời gian thực hoặc thủ công.
+IPostMap SDK cho phép người dùng cài đặt các hiệu ứng theo thời gian thực hoặc thủ công.
 ```javascript
 enum Weather {
     Rainy = 0,

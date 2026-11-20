@@ -53,13 +53,13 @@
         zoom: 15,
         controls: true
       }
-      let map = new map4d.Map(document.getElementById("map"), options)
+      let map = new ipostmap.Map(document.getElementById("map"), options)
       for (var i = 0; i < events.length; i++) {
         setupListener(map, events[i]);
       }
     }
   </script>
-  <script src="https://api.map4d.vn/sdk/map/js?version=2.1&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+  <script src="https://api.ipostmap.vn/sdk/map/js?version=2.1&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
   <style type="text/css">
     html,
 

@@ -4,7 +4,7 @@
 
 ### 1. Thêm một Directions Renderer
 
-Hàm khởi tạo của lớp **map4d.DirectionsRenderer** cần truyền vào một đối tượng **map4d.DirectionsRendererOptions** để xác định các thuộc tính
+Hàm khởi tạo của lớp **ipostmap.DirectionsRenderer** cần truyền vào một đối tượng **ipostmap.DirectionsRendererOptions** để xác định các thuộc tính
 ban đầu của DirectionsRenderer.
 
 Các đối tượng **DirectionsRenderer** sẽ vẽ các polyline thẳng trên bản đồ dựa theo các route mà bạn truyền vào thông qua tham số

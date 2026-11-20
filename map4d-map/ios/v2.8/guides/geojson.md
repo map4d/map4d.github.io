@@ -1,6 +1,6 @@
 # GeoJSON Layer
 
-GeoJSON layer cho phép người dùng hiển thị dữ liệu địa lý theo định dạng [GeoJSON](https://geojson.org/) lên bản đồ Map4D
+GeoJSON layer cho phép người dùng hiển thị dữ liệu địa lý theo định dạng [GeoJSON](https://geojson.org/) lên bản đồ IPostMap
 
 ## 1. Thêm mới GeoJSON layer
 

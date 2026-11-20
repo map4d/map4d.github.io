@@ -101,7 +101,7 @@ public MFCoordinateBounds(MFLocationCoordinate southwest, MFLocationCoordinate n
 
     for (MFLocationCoordinate latlng : latLngList ) {
         MFMarkerOptions markerOptions = new MFMarkerOptions().position(latlng);
-        map4D.addMarker(markerOptions);
+        ipostmap.addMarker(markerOptions);
     }
     MFCoordinateBounds.Builder builder = MFCoordinateBounds.builder().includes(
       Arrays.asList(new MFLocationCoordinate(16.067218, 108.213916),
@@ -110,8 +110,8 @@ public MFCoordinateBounds(MFLocationCoordinate southwest, MFLocationCoordinate n
         new MFLocationCoordinate(16.059980, 108.211137),
         new MFLocationCoordinate(16.059516, 108.208358)));
     MFCoordinateBounds coordinateBounds = builder.build();
-    MFCameraPosition cameraPositionForBounds = map4D.getCameraPositionForBounds(coordinateBounds, 10);
-    map4D.moveCamera(MFCameraUpdateFactory.newCameraPosition(cameraPositionForBounds));
+    MFCameraPosition cameraPositionForBounds = ipostmap.getCameraPositionForBounds(coordinateBounds, 10);
+    ipostmap.moveCamera(MFCameraUpdateFactory.newCameraPosition(cameraPositionForBounds));
 ```
 <!-- tabs:end -->
 

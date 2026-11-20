@@ -11,14 +11,14 @@ Lớp Circle cho phép người dùng vẽ một Circle lên map..
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
- val circle = map4D.addCircle(MFCircleOptions()
+ val circle = ipostmap.addCircle(MFCircleOptions()
                         .center(MFLocationCoordinate(16.066517, 108.210354))
                         .radius(500)
                         .fillColor(ContextCompat.getColor(this, R.color.redWithAlphaThirtyPercent)))
 ```
 #### ** Java **
 ```java
- MFCircle circle = map4D.addCircle(new MFCircleOptions()
+ MFCircle circle = ipostmap.addCircle(new MFCircleOptions()
                         .center(new MFLocationCoordinate(16.066517, 108.210354))
                         .radius(500)
                         .fillColor(ContextCompat.getColor(this, R.color.redWithAlphaThirtyPercent)));
@@ -37,7 +37,7 @@ Như ví dụ trên thì chúng ta tạo một Circle với các tùy chỉnh nh
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
- val circle = map4D.addCircle(MFCircleOptions()
+ val circle = ipostmap.addCircle(MFCircleOptions()
                         .center(MFLocationCoordinate(16.066517, 108.210354))
                         .radius(300.0)
                         .fillColor(ContextCompat.getColor(context ?: return, R.color.green))
@@ -47,7 +47,7 @@ Như ví dụ trên thì chúng ta tạo một Circle với các tùy chỉnh nh
 
 #### ** Java **
 ```java
- java circle = map4D.addCircle(new MFCircleOptions()
+ java circle = ipostmap.addCircle(new MFCircleOptions()
                         .center(new MFLocationCoordinate(16.066517, 108.210354))
                         .radius(300)
                         .fillColor(ContextCompat.getColor(this, R.color.green))
@@ -90,7 +90,7 @@ map4D?.setOnCircleClickListener { mfCircle ->
 ```
 #### ** Java **
 ```java
-map4D.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
+ipostmap.setOnCircleClickListener(new IPostMap.OnCircleClickListener() {
     @Override
     public void onCircleClick(MFCircle mfCircle) {
         Toast.makeText(getApplicationContext(), "Circle clicked:  " + mfCircle.getId(), Toast.LENGTH_SHORT).show();
@@ -109,12 +109,12 @@ map4D.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
-  val circleA = map4D.addCircle(MFCircleOptions()
+  val circleA = ipostmap.addCircle(MFCircleOptions()
                           .center(MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500.0)
                           .fillColor(ContextCompat.getColor(context ?: return, R.color.green))
                           .zIndex(10.0f))
-  val circleB = map4D.addCircle(MFCircleOptions()
+  val circleB = ipostmap.addCircle(MFCircleOptions()
                           .center(MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500.0)
                           .fillColor(ContextCompat.getColor(context ?: return, R.color.red))
@@ -123,12 +123,12 @@ map4D.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
 
 #### ** Java **
 ```java
-  MFCircle circleA = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleA = ipostmap.addCircle(new MFCircleOptions()
                           .center(new MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500)
                           .fillColor(ContextCompat.getColor(this, R.color.green))
                           .zIndex(10.f));
-  MFCircle circleB = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleB = ipostmap.addCircle(new MFCircleOptions()
                           .center(new MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500)
                           .fillColor(ContextCompat.getColor(this, R.color.red))
@@ -142,22 +142,22 @@ map4D.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
 
 #### ** Kotlin **
 ```java
-  MFCircle circleA = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleA = ipostmap.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor(ContextCompat.getColor(this, R.color.red)));
-  MFCircle circleB = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleB = ipostmap.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor(ContextCompat.getColor(this, R.color.green)));
 ```
 #### ** Java **
 ```java
-  MFCircle circleA = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleA = ipostmap.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor(ContextCompat.getColor(this, R.color.red)));
-  MFCircle circleB = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleB = ipostmap.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor(ContextCompat.getColor(this, R.color.green)));

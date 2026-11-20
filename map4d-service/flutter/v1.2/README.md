@@ -1,10 +1,10 @@
-# Map4dServices Flutter SDK
-[![map4d](https://img.shields.io/badge/map4d-services-orange)](https://map4d.vn/)
+# IpostMapService Flutter SDK
+[![ipostmap](https://img.shields.io/badge/ipostmap-services-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-flutter-45d2fd.svg)](https://flutter.dev/)
 [![pub package](https://img.shields.io/pub/v/map4d_services.svg)](https://pub.dev/packages/map4d_services)
 
-> **Map4dServices Flutter SDK** cung cấp [Map4D Services API](https://docs.map4d.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
-> **Map4dServices Flutter SDK** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
+> **IpostMapService Flutter SDK** cung cấp [IPostMap Services API](https://docs.ipostmap.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
+> **IpostMapService Flutter SDK** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
 
 ## Requirement
 
@@ -13,7 +13,7 @@
 
 ## Installation
 
-Để sử dụng Map4dMap plugin, thêm `map4d_services` vào mục **dependencies** trong file `pubspec.yaml` của Flutter project.
+Để sử dụng IpostMap plugin, thêm `map4d_services` vào mục **dependencies** trong file `pubspec.yaml` của Flutter project.
 
 ```yaml
 dependencies:
@@ -28,10 +28,10 @@ flutter pub add map4d_services
 
 ## API key
 
-API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng Map4dServices SDK.  
+API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng IpostMapService SDK.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
-Tạo API key tại địa chỉ: <https://map.map4d.vn/user/>
+Tạo API key tại địa chỉ: <https://map.ipostmap.vn/user/>
 
 #### Thiết lập API key cho Android
 
@@ -41,7 +41,7 @@ Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
         <meta-data
-            android:name="vn.map4d.services.ACCESS_KEY"
+            android:name="vn.ipostmap.services.ACCESS_KEY"
             android:value="YOUR_KEY_HERE"/>
     </application>
 </manifest>
@@ -55,7 +55,7 @@ allprojects {
     repositories {
         // ...
         maven {
-            url = "https://packages.map4d.vn/repository/maven-public"
+            url = "https://packages.ipostmap.vn/repository/maven-public"
         }
     }
 }
@@ -80,7 +80,7 @@ android {
 Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
 
 ```xml
-<key>Map4dServicesAccessKey</key>
+<key>IpostMapServiceAccessKey</key>
 <string>YOUR_SERVICES_ACCESS_KEY</string>
 ```
 

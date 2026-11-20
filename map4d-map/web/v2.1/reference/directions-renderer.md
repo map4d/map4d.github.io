@@ -2,7 +2,7 @@
 
 ## Directions Renderer Class
 
-`map4d.DirectionsRenderer` class
+`ipostmap.DirectionsRenderer` class
 
 **Constructor** 
 
@@ -30,7 +30,7 @@ DirectionsRenderer(options)
 
 ## DirectionsRenderer Options
 
-`map4d.DirectionsRendererOptions` interface
+`ipostmap.DirectionsRendererOptions` interface
 
 Đối tượng DirectionsRendererOptions dùng để xác định các thuộc tính dùng cho DirectionsRenderer.
 

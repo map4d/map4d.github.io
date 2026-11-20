@@ -42,7 +42,7 @@ Lớp MFURLPOILayer cho phép thêm vào các đối tượng POIs theo tile
 ```
 
 ## 4. API Response
-Để sử dụng được tính năng POI Overlay trên Map4D Map SDK, bạn cần 1 API nhận 3 thông số của một `Map Tile` là `x`, `y`, `zoom` và dữ liệu trả về kiểu `JSON` theo cấu trúc sau:
+Để sử dụng được tính năng POI Overlay trên IPostMap Map SDK, bạn cần 1 API nhận 3 thông số của một `Map Tile` là `x`, `y`, `zoom` và dữ liệu trả về kiểu `JSON` theo cấu trúc sau:
 
 ```json
 {

@@ -24,7 +24,7 @@ Trước tiên chúng ta cần tạo một đối tượng poiOverlayOption vớ
 
 ```javascript
 // Tạo POIOverlayOption
-let poiOverlayOptions: map4d.POIOverlayOptions = {
+let poiOverlayOptions: ipostmap.POIOverlayOptions = {
   getUrl: (x, y, z) => {
     return `https://your-domain/api/${z}/${x}/${y}`
   },
@@ -37,7 +37,7 @@ Sau đó chúng ta sẽ tạo đối tượng POI Overlay như sau:
 
 ```javascript
 // Tạo POIOverlay
-let poiOverlay = new map4d.POIOverlay(poiOverlayOptions)
+let poiOverlay = new ipostmap.POIOverlay(poiOverlayOptions)
 // Set POI Overlay vào map cần vẽ
 poiOverlay.setMap(this.map)
 ```
@@ -51,7 +51,7 @@ poiOverlay.setMap(null)
 ```
 
 ## 4. API Response
-Để sử dụng được tính năng POI Overlay trên Map4dMap JavaScript SDK, bạn cần 1 API nhận 3 thông số của một `Map Tile` là `x`, `y`, `zoom` và dữ liệu trả về kiểu `JSON` theo cấu trúc sau:
+Để sử dụng được tính năng POI Overlay trên IpostMap JavaScript SDK, bạn cần 1 API nhận 3 thông số của một `Map Tile` là `x`, `y`, `zoom` và dữ liệu trả về kiểu `JSON` theo cấu trúc sau:
 
 ```json
 {

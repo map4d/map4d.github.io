@@ -10,14 +10,14 @@ Tạo Circle từ  MFCircleOptions:
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
- val circle = map4D.addCircle(MFCircleOptions()
+ val circle = ipostmap.addCircle(MFCircleOptions()
                         .center(MFLocationCoordinate(16.066517, 108.210354))
                         .radius(500)
                         .fillColor(ContextCompat.getColor(this, R.color.redWithAlphaThirtyPercent)))
 ```
 #### ** Java **
 ```java
- MFCircle circle = map4D.addCircle(new MFCircleOptions()
+ MFCircle circle = ipostmap.addCircle(new MFCircleOptions()
                         .center(new MFLocationCoordinate(16.066517, 108.210354))
                         .radius(500)
                         .fillColor(ContextCompat.getColor(this, R.color.redWithAlphaThirtyPercent)));

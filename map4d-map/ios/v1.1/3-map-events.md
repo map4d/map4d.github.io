@@ -1,5 +1,5 @@
-# Sự kiện Map4D-SDK
-Hướng dẫn sử dụng các sự kiện của Map4D SDK.
+# Sự kiện IPostMap-SDK
+Hướng dẫn sử dụng các sự kiện của IPostMap SDK.
 
 ## 1. Giới thiệu chung
 
@@ -125,7 +125,7 @@ Hướng dẫn sử dụng các sự kiện của Map4D SDK.
   
   #### 2.8 Sự kiện didTapMyLocationButtonForMapView
   
-  - Được gọi khi click vào button my location, nếu map4d.setMyLocationEnabled(true)
+  - Được gọi khi click vào button my location, nếu ipostmap.setMyLocationEnabled(true)
     ```swift
       extension DelegateViewController: MFMapViewDelegate {
         func didTapMyLocationButton(for mapView: MFMapView!) -> Bool {

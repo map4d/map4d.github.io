@@ -2,17 +2,17 @@
 
 ### Version 1.1.0
 
-- Hỗ trợ Map4dMap SDK version 1.6.0
+- Hỗ trợ IpostMap SDK version 1.6.0
 
 ### Version 1.0.10
 
 - Hỗ trợ vẽ polygon với **MFPolygon**
-- Hỗ trợ Map4dMap SDK version 1.5.1
+- Hỗ trợ IpostMap SDK version 1.5.1
 - Hỗ trợ iOS version 9.0
 
 ### Version 1.0.9
 
-- Hỗ trợ Map4dMap SDK version 1.4.7
+- Hỗ trợ IpostMap SDK version 1.4.7
 - Thêm sự kiện `onBuildingPress` cho **MFMapView**
 - Thêm **MFMapView** props `showsPOIs`, `showsMyLocation`
 
@@ -36,7 +36,7 @@
 ### Version 1.0.4
 
 - Fixbugs
-- Hỗ trợ Map4dMap SDK version 1.4.5
+- Hỗ trợ IpostMap SDK version 1.4.5
 
 ### Version 1.0.3
 
@@ -51,7 +51,7 @@
 ### Version 1.0.1
 
 - Fixbugs
-- Hỗ trợ Map4dMap SDK version 1.4.2
+- Hỗ trợ IpostMap SDK version 1.4.2
 - Thêm phương thức `showsMyLocationButton`, `setTime` cho **MFMapView**
 - Thêm sự kiên `onMyLocationButtonPress` cho **MFMapView**
 - Hỗ trợ load icon từ url đối với **MFMarker**

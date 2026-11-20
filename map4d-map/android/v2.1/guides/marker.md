@@ -48,22 +48,22 @@ Ví dụ sau đây thêm một Marker đơn giản vào bản đồ tại Bình 
 #### ** Kotlin **
 
 ```kotlin
-override fun onMapReady(map4D: Map4D) {  
+override fun onMapReady(map4D: IPostMap) {  
     val markerOptions = MFMarkerOptions() 
     markerOptions.position(MFLocationCoordinate(10.793113, 106.720739))  
     markerOptions.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh")  
-    map4D.addMarker(markerOptions)  
+    ipostmap.addMarker(markerOptions)  
 }
 ```
 #### ** Java **
 
 ```java
 @Override  
-public void onMapReady(final Map4D map4D) {  
+public void onMapReady(final IPostMap map4D) {  
     MFMarkerOptions marker = new MFMarkerOptions();  
     marker.position(new MFLocationCoordinate(10.793113, 106.720739));  
     marker.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh");  
-    map4D.addMarker(marker);  
+    ipostmap.addMarker(marker);  
 }
 ```
 <!-- tabs:end -->
@@ -113,7 +113,7 @@ public final class MFBitmapDescriptorFactory {
 #### ** Kotlin **
 
 ```kotlin
-     val marker = map4D.addMarker(MFMarkerOptions()
+     val marker = ipostmap.addMarker(MFMarkerOptions()
                     .position(MFLocationCoordinate(10.771666, 106.704405))
                     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_add_location_white_48d)))
 ```
@@ -121,7 +121,7 @@ public final class MFBitmapDescriptorFactory {
 #### ** Java **
 
 ```java
-     MFMarker marker = map4D.addMarker(new MFMarkerOptions()
+     MFMarker marker = ipostmap.addMarker(new MFMarkerOptions()
                     .position(new MFLocationCoordinate(10.771666, 106.704405))
                     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_add_location_white_48dp)));
 ```
@@ -135,7 +135,7 @@ public final class MFBitmapDescriptorFactory {
 #### ** Kotlin **
 
 ```kotlin
-map4D.addMarker(MFMarkerOptions()
+ipostmap.addMarker(MFMarkerOptions()
     .position(MFLocationCoordinate(10.771666, 106.704405))
     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.markerIcon))
     .title("Title")
@@ -145,7 +145,7 @@ map4D.addMarker(MFMarkerOptions()
 ### ** Java **
 
 ```java
-map4D.addMarker(new MFMarkerOptions()
+ipostmap.addMarker(new MFMarkerOptions()
     .position(new MFLocationCoordinate(10.771666, 106.704405))
     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.markerIcon))
     .title("Title")
@@ -172,7 +172,7 @@ public interface InfoWindowAdapter {
 ### ** Kotlin **
 
 ```kotlin
- inner class CustomInfoWindowAdapter: Map4D.InfoWindowAdapter {
+ inner class CustomInfoWindowAdapter: IPostMap.InfoWindowAdapter {
     private val mWindow: View
 
     init {
@@ -216,16 +216,16 @@ public interface InfoWindowAdapter {
     }
  }
   
- override fun onMapReady(map4D: Map4D) {
+ override fun onMapReady(map4D: IPostMap) {
     this.map4D = map4D
-    map4D.setInfoWindowAdapter(CustomInfoWindowAdapter())
+    ipostmap.setInfoWindowAdapter(CustomInfoWindowAdapter())
  }
 ```
 
 ### ** Java **
 
 ```java
-class CustomInfoWindowAdapter implements Map4D.InfoWindowAdapter {
+class CustomInfoWindowAdapter implements IPostMap.InfoWindowAdapter {
     private final View mWindow;
 
     CustomInfoWindowAdapter() {
@@ -273,9 +273,9 @@ class CustomInfoWindowAdapter implements Map4D.InfoWindowAdapter {
 }
 @Override
 
-public void onMapReady(Map4D map4D) {
+public void onMapReady(IPostMap map4D) {
     this.map4D = map4D;
-    map4D.setInfoWindowAdapter(new CustomInfoWindowAdapter());
+    ipostmap.setInfoWindowAdapter(new CustomInfoWindowAdapter());
 }
 ```
 <!-- tabs:end -->
@@ -296,7 +296,7 @@ public void onMapReady(Map4D map4D) {
 
 #### ** Kotlin  **
 ```kotlin
-var marker = map4D.addMarker(MFMarkerOptions()
+var marker = ipostmap.addMarker(MFMarkerOptions()
     .position(MFLocationCoordinate(10.771666, 106.704405))
     .draggable(true))  
 // or
@@ -306,7 +306,7 @@ marker.isDraggable = true
 
 #### ** Java **
 ```java
-MFMarker marker = map4D.addMarker(new MFMarkerOptions()
+MFMarker marker = ipostmap.addMarker(new MFMarkerOptions()
                     .position(new MFLocationCoordinate(10.771666, 106.704405))
                     .draggable(true));  
 // or
@@ -331,7 +331,7 @@ map4D?.setOnMarkerClickListener { marker ->
 
 #### ** Java **
 ```java
-map4D.setOnMarkerClickListener(new Map4D.OnMarkerClickListener() {
+ipostmap.setOnMarkerClickListener(new IPostMap.OnMarkerClickListener() {
     @Override
     public boolean onMarkerClick(MFMarker marker) {
         Toast.makeText(context, "Marker title: " + marker.getTitle(), Toast.LENGTH_SHORT).show();
@@ -355,7 +355,7 @@ Khi marker được kéo thì `onMarkerDragStart(MFMarker)` sẽ được gọi 
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
-map4D?.setOnMarkerDragListener(object : Map4D.OnMarkerDragListener {
+map4D?.setOnMarkerDragListener(object : IPostMap.OnMarkerDragListener {
     override fun onMarkerDrag(marker: MFMarker?) {
     }
 
@@ -369,7 +369,7 @@ map4D?.setOnMarkerDragListener(object : Map4D.OnMarkerDragListener {
 
 #### ** Java **
 ```java
-map4D.setOnMarkerDragListener((new Map4D.OnMarkerDragListener() {
+ipostmap.setOnMarkerDragListener((new IPostMap.OnMarkerDragListener() {
     @Override
     public void onMarkerDrag(MFMarker marker) {
     }
@@ -398,12 +398,12 @@ Ví dụ:
 
 #### ** Kotlin **
 ```kotlin
-    val markerA = map4D.addMarker(MFMarkerOptions()
+    val markerA = ipostmap.addMarker(MFMarkerOptions()
                       .position(MFLocationCoordinate(10.771666, 106.704405))
                       .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_default_marker))
                       .zIndex(5.f))
 
-    val markerB = map4D.addMarker(MFMarkerOptions()
+    val markerB = ipostmap.addMarker(MFMarkerOptions()
                         .position(MFLocationCoordinate(10.771666, 106.704405))
                         .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_my_position))
                         .zIndex(2.f))
@@ -411,12 +411,12 @@ Ví dụ:
 
 #### ** Java **
 ```java
-    MFMarker markerA = map4D.addMarker(new MFMarkerOptions()
+    MFMarker markerA = ipostmap.addMarker(new MFMarkerOptions()
                       .position(new MFLocationCoordinate(10.771666, 106.704405))
                       .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_default_marker))
                       .zIndex(5.f));
 
-    MFMarker markerB = map4D.addMarker(new MFMarkerOptions()
+    MFMarker markerB = ipostmap.addMarker(new MFMarkerOptions()
                         .position(new MFLocationCoordinate(10.771666, 106.704405))
                         .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_my_position))
                         .zIndex(2.f));
@@ -432,11 +432,11 @@ Ví dụ:
 #### ** Kotlin **
 ```kotlin
 
-    val markerA = map4D.addMarker(MFMarkerOptions()
+    val markerA = ipostmap.addMarker(MFMarkerOptions()
                           .position(MFLocationCoordinate(10.771666, 106.704405))
                           .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_default_marker)))
 
-    val markerB = map4D.addMarker(MFMarkerOptions()
+    val markerB = ipostmap.addMarker(MFMarkerOptions()
                           .position(MFLocationCoordinate(10.771666, 106.704405))
                           .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_my_position)))
 
@@ -445,11 +445,11 @@ Ví dụ:
 #### ** Java **
 ```java
 
-    MFMarker markerA = map4D.addMarker(new MFMarkerOptions()
+    MFMarker markerA = ipostmap.addMarker(new MFMarkerOptions()
                           .position(new MFLocationCoordinate(10.771666, 106.704405))
                           .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_default_marker)));
 
-    MFMarker markerB = map4D.addMarker(new MFMarkerOptions()
+    MFMarker markerB = ipostmap.addMarker(new MFMarkerOptions()
                           .position(new MFLocationCoordinate(10.771666, 106.704405))
                           .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_my_position)));
 

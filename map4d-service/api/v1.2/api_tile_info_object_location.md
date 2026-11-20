@@ -1,10 +1,10 @@
 #  Tile (Lấy thông tin đối tượng và địa điểm của tile)
-Map4D API cung cấp dữ liệu nền địa lý có các type "raster", "satellite" và "roadmap".
+IPostMap API cung cấp dữ liệu nền địa lý có các type "raster", "satellite" và "roadmap".
 
 Phương thức: **GET**
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/tile/{z}/{x}/{y}?tileUrl={tileUrl}&type={type}&mode={mode}&format={format}&scale={scale}
+https://api.ipostmap.vn/sdk/tile/{z}/{x}/{y}?tileUrl={tileUrl}&type={type}&mode={mode}&format={format}&scale={scale}
 ```
 | Parameter | Required | Description                                                                                                      |
 |-----------|----------|------------------------------------------------------------------------------------------------------------------|

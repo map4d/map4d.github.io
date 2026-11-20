@@ -1,6 +1,6 @@
 # Map Options
 
-Map options là một object [MapOptions](/reference/map?id=mapoptions-interface) cung cấp các thiết lập ban đầu để khởi tạo đối tượng Map4D.  
+Map options là một object [MapOptions](/reference/map?id=mapoptions-interface) cung cấp các thiết lập ban đầu để khởi tạo đối tượng IPostMap.  
 Bao gồm:
 
 | No | Name                | Type                                                     | Default Value | Description                                                                                        |

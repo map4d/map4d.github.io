@@ -3,7 +3,7 @@
 
 <head>
   <script defer
-    src="https://api.map4d.vn/sdk/map/js?version=2.5&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+    src="https://api.ipostmap.vn/sdk/map/js?version=2.5&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
 </head>
 
 <body>
@@ -16,12 +16,12 @@
         controls: true,
         cooperativeGestures: true
       }
-      let map = new map4d.Map(document.getElementById("map"), options)
+      let map = new ipostmap.Map(document.getElementById("map"), options)
 
       map.addListener(
         "click",
         function (args) {
-          let marker = new map4d.Marker({
+          let marker = new ipostmap.Marker({
             position: args.location
           })
           marker.setMap(map)

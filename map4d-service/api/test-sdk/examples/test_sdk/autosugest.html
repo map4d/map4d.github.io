@@ -32,7 +32,7 @@
             return;
         }
         var selectedAcronym = acronym.options[acronym.selectedIndex].value;
-        $.getJSON('https://api-test.map4d.vn/sdk/autosuggest?key='+key+'&text='+textInput+'&location='+location + "&acnorym" + selectedAcronym, function(data) {
+        $.getJSON('https://api-test.ipostmap.vn/sdk/autosuggest?key='+key+'&text='+textInput+'&location='+location + "&acnorym" + selectedAcronym, function(data) {
             var limit =5;
             var result;
             if(data.result != null){

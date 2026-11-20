@@ -39,7 +39,7 @@ MFPOI *poi = [[MFPOI alloc] init];
 | **map**                    | [MFMapView](/reference/map?id=MFMapView)             | Chỉ định hiển thị **POI** trên **Map** hoặc xoá **POI** khỏi **Map**                      |
 | **Id**                     | UInt32                 | **Id** của **POI** **{get}**.                                                                                           |
 
-**Ghi chú:** Hiện tại Map4D hỗ trợ cái kiểu sau: **point**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **point**.
+**Ghi chú:** Hiện tại IPostMap hỗ trợ cái kiểu sau: **point**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **point**.
 
 
 #### Delegate

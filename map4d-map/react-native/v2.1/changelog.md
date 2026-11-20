@@ -22,7 +22,7 @@ Những thay đổi kể từ version 2.0.1
 
 #### Added
 
-- Thêm mới component [MFDirectionsRenderer](guides/directions-renderer.md), hỗ trợ vẽ chỉ đường lên bản đồ Map4D.
+- Thêm mới component [MFDirectionsRenderer](guides/directions-renderer.md), hỗ trợ vẽ chỉ đường lên bản đồ IPostMap.
 
 <!-- #### Changed -->
 <!-- #### Deprecated -->

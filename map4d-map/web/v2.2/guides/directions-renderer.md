@@ -4,7 +4,7 @@
 
 ### 1. Thêm một Directions Renderer
 
-Hàm khởi tạo của lớp **map4d.DirectionsRenderer** cần truyền vào một đối tượng **map4d.DirectionsRendererOptions** để xác định các thuộc tính
+Hàm khởi tạo của lớp **ipostmap.DirectionsRenderer** cần truyền vào một đối tượng **ipostmap.DirectionsRendererOptions** để xác định các thuộc tính
 ban đầu của DirectionsRenderer.
 
 Các đối tượng **DirectionsRenderer** sẽ vẽ các polyline thẳng trên bản đồ dựa theo các route mà bạn truyền vào thông qua tham số
@@ -54,7 +54,7 @@ Các thuộc tính của **DirectionsRendererOptions** :
 - **destinationMarkerOptions** (tùy chọn): chỉ định các options cho marker kết thúc.
 - **waypointMarkerOptions** (tùy chọn): là mảng marker option chỉ định các marker waypoint. Các marker waypoint này có vị trí nằm ngoài route **Chú ý:** <span style="color:red">Để có đường polyline nối marker
 waypoint với routes thì routes phải chứa các điểm waypoint. Muốn vậy thì chúng ta phải dùng option `directions` để set routes bằng JSON string vì hiện tại set routes bằng options `routes` với mảng 2 chiều các
-tọa độ `ILatLng` chưa hỗ trợ set các điểm waypoint. Trường hợp set routes bằng JSON string thì Map4D SDK tự lấy được các điểm waypoint cho routes nếu routes đó có chứa các điểm waypoint.</span>
+tọa độ `ILatLng` chưa hỗ trợ set các điểm waypoint. Trường hợp set routes bằng JSON string thì IPostMap SDK tự lấy được các điểm waypoint cho routes nếu routes đó có chứa các điểm waypoint.</span>
 - **onMarkerDragEnd** (tùy chọn): chỉ định options callback sau khi thực hiện việc kéo Marker. Callback được gọi với tham số `args` là đối tượng
 chứa tọa độ LatLng của các Marker trong Directions Renderer.
 
@@ -62,7 +62,7 @@ Ví dụ sau đây sẽ thêm một Directions Renderer vào bản đồ với *
 
 <iframe src="//jsfiddle.net/duydung2007/fnjhr8x0/embedded/" style="min-width: 914px;" height="490px"></iframe>
 
-Thêm một Directions Renderer vào bản đồ với **routes** là JSON String trả về từ [Map4D SDK API Route](https://docs.map4d.vn/map4d-service/api/v1.1/#/api_route). Route này có chứa
+Thêm một Directions Renderer vào bản đồ với **routes** là JSON String trả về từ [IPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route). Route này có chứa
 2 điểm waypoint:
 
 <iframe src="//jsfiddle.net/duydung2007/v250y47p/embedded/" style="min-width: 914px;" height="490px"></iframe>

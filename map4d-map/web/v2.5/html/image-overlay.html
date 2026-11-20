@@ -3,7 +3,7 @@
 
 <head>
   <script defer
-    src="https://api.map4d.vn/sdk/map/js?version=2.5&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
+    src="https://api.ipostmap.vn/sdk/map/js?version=2.5&key=d69ab3c4b70818de546a1b1bb15aeaa7&callback=initMap"></script>
   <style>
     #map {
       height: 100%;
@@ -30,13 +30,13 @@
         controls: true,
         cooperativeGestures: true
       }
-      map = new map4d.Map(document.getElementById("map"), mapOptions)
+      map = new ipostmap.Map(document.getElementById("map"), mapOptions)
       
       let overlayOptions = {
         url: './images/image_overlay.jpg',
         bounds: [{lat: 16.020261815728816, lng: 108.18948723014762}, {lat: 16.066154434839206, lng: 108.20727572060258}],
       }
-      overlay = new map4d.ImageOverlay(overlayOptions)
+      overlay = new ipostmap.ImageOverlay(overlayOptions)
       overlay.setMap(map)
     }
     // initMap()

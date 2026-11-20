@@ -2,7 +2,7 @@
 
 ## Circle Class
 
-`map4d.Circle` class
+`ipostmap.Circle` class
 
 **Constructor** 
 
@@ -49,7 +49,7 @@ Circle(options)
 
 ## Circle Options
 
-`map4d.CircleOptions` interface
+`ipostmap.CircleOptions` interface
 
 Đối tượng CircleOptions dùng để xác định các thuộc tính dùng cho Circle.
 

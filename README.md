@@ -1,4 +1,4 @@
-# Map4D SDK document
+# IPostMap SDK document
 
 Documentation website được tạo bằng [docsify](https://docsify.js.org/)
 
@@ -10,13 +10,13 @@ npm install --global serve
 
 ## Preview
 
-Tại thư mục gốc của map4d.github.io, chạy lệnh sau:
+Tại thư mục gốc của ipostmap.github.io, chạy lệnh sau:
 
 ```bash
 serve .
 ```
 
-### Map4dMap SDK
+### IpostMap SDK
 
 #### Android
 
@@ -39,14 +39,14 @@ serve .
 <http://localhost:3000/map4d-map/react-native/>
 
 
-### Map4D Service
+### IPostMap Service
 
 #### API
 
 <http://localhost:3000/map4d-service/api/>
 
 
-### Map4dMapUtils Library
+### IpostMapUtils Library
 
 ### Flutter
 

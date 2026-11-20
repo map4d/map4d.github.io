@@ -22,7 +22,7 @@ fun createPointsList() {
 
 fun addPolygonToMap() {
   createPointsList();
-  val polygon = map4D.addPolygon(
+  val polygon = ipostmap.addPolygon(
     MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .strokeColor(ContextCompat.getColor(context ?: return, R.color.green))
@@ -47,7 +47,7 @@ addPolygonToMap()
 
   private void addPolygonToMap() {
 	createPointsList();
-	polygon = map4D.addPolygon(new MFPolygonOptions()
+	polygon = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .strokeColor(ContextCompat.getColor(this, R.color.green))
             .strokeWidth(2)

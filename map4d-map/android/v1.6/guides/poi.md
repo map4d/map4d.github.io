@@ -88,7 +88,7 @@ val userPOIOptions = MFPOIOptions()
     userPOIOptions.position(MFLocationCoordinate(16.066517, 108.210354)).title("Test User POI")
       .titleColor(Color.GREEN)
       .subtitle("Da Nang")
-    val poi = map4D.addPOI(userPOIOptions)
+    val poi = ipostmap.addPOI(userPOIOptions)
 ```
 
 #### ** Java **
@@ -96,7 +96,7 @@ val userPOIOptions = MFPOIOptions()
   MFPOIOptions userPOIOptions = new MFPOIOptions();
   userPOIOptions.position(new MFLocationCoordinate(16.071876, 108.223994)).title("Test User POI")
     titleColor(Color.GREEN).subtitle("Da Nang");
-  MFPOI poi = map4D.addPOI(userPOIOptions);
+  MFPOI poi = ipostmap.addPOI(userPOIOptions);
 ```
 <!-- tabs:end -->
  - **Chú ý**:
@@ -123,7 +123,7 @@ poi.remove();
 ### 3. Bật, tắt tính năng POI có sẵn của bản đồ
 
 Bạn có thể bật hoặc tắt tính năng POI có sẵn của bản đồ. Mặc định thì bản đồ sẽ hiển thị các POI có sẵn của nó. Nếu bạn
-muốn tắt nó đi thì sử dụng phương thức **setPOIsEnabled()** của lớp **Map4D** và truyền vào tham số **false**. Ngược
+muốn tắt nó đi thì sử dụng phương thức **setPOIsEnabled()** của lớp **IPostMap** và truyền vào tham số **false**. Ngược
 lại nếu bạn muốn bật nó lên thì bạn truyền vào tham số là **true**.
 
 Ví dụ để tắt tính năng POI có sẵn của bản đồ:
@@ -137,11 +137,11 @@ map4D?.isPOIsEnabled = false
 ```
 #### ** Java **
 ```javascript
-map4D.setPOIsEnabled(false);
+ipostmap.setPOIsEnabled(false);
 ```
 <!-- tabs:end -->
 Ngoài ra để kiểm tra tính năng POI có sẵn có được bật hay không bạn cũng có thể sử dụng phương thức **isPOIsEnabled()**
-của lớp **Map4D**. Phương thức này sẽ trả về một giá trị **boolean** tương ứng với tính năng có được bật hay không.
+của lớp **IPostMap**. Phương thức này sẽ trả về một giá trị **boolean** tương ứng với tính năng có được bật hay không.
 
 <!-- tabs:start -->
 #### ** Kotlin **
@@ -155,7 +155,7 @@ if (!map4D?.isPOIsEnabled) {
 ```
 #### ** Java **
 ```java
-boolean isPOIsEnabled = map4D.isPOIsEnabled();
+boolean isPOIsEnabled = ipostmap.isPOIsEnabled();
 if (!isPOIsEnabled) {
   Toast.makeText( context,
     "Poi is turn off",
@@ -168,7 +168,7 @@ if (!isPOIsEnabled) {
 ### 4. Hiển thị POI theo filter
 
 Đôi lúc bạn không muốn hiển thị tất cả các POI mặc định của bản đồ mà chỉ muốn hiển thị theo một số type mà bạn muốn.
-Phương thức **setFilterPlaces()** của lớp **Map4D** sẽ giúp bạn thực hiện điều đó. Bạn cần truyền một mảng string chứa các
+Phương thức **setFilterPlaces()** của lớp **IPostMap** sẽ giúp bạn thực hiện điều đó. Bạn cần truyền một mảng string chứa các
 **type** mà bạn muốn hiển thị trên bản đồ (các **type** này bạn có thể xem lại ở thuộc tính **type** của **MFPOIOptions**
 ở mục **1**).
 
@@ -181,7 +181,7 @@ map4D?.filterPlaces = listOf("cafe", "bank", "atm")
 ```
 #### ** Java **
 ```java
-map4D.setFilterPlaces(new ArrayList(Arrays.asList("cafe", "bank", "atm")));
+ipostmap.setFilterPlaces(new ArrayList(Arrays.asList("cafe", "bank", "atm")));
 ```
 <!-- tabs:end -->
 
@@ -200,7 +200,7 @@ map4D?.filterPlaces = listOf()
 
 #### ** Java **
 ```java
-map4D.setFilterPOIs(new ArrayList())
+ipostmap.setFilterPOIs(new ArrayList())
 ``` 
 <!-- tabs:end -->
 
@@ -237,7 +237,7 @@ map4D?.setOnUserPOIClickListener {poi ->
 
 #### ** Java **
 ```java
-map4D.setOnUserPOIClickListener(new Map4D.OnUserPOIClickListener() {
+ipostmap.setOnUserPOIClickListener(new IPostMap.OnUserPOIClickListener() {
     @Override
     public void onUserPOIClick(MFPOI mfpoi) {
         Toast.makeText(context , "User Poi Clicked: " + mfpoi.getTitle(), Toast.LENGTH_SHORT).show();
@@ -258,7 +258,7 @@ map4D?.setOnPOIClickListener { placeId, title, mfLocationCoordinate ->
 
 #### ** Java **
 ```java
-map4D.setOnPOIClickListener(new Map4D.OnPOIClickListener() {
+ipostmap.setOnPOIClickListener(new IPostMap.OnPOIClickListener() {
     @Override
     public void onPOIClick(String placeId, String title, MFLocationCoordinate location) {
         Toast.makeText(context , "Poi Clicked: " + title, Toast.LENGTH_SHORT).show();

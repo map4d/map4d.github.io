@@ -2,7 +2,7 @@
 
 ## POI Class
 
-`map4d.POI` class
+`ipostmap.POI` class
 
 **Constructor** 
 
@@ -50,7 +50,7 @@ POI(options)
 
 ## POI Options
 
-`map4d.POIOptions` interface
+`ipostmap.POIOptions` interface
 
 Đối tượng POIOptions dùng để xác định các thuộc tính dùng cho POI.
 
@@ -63,7 +63,7 @@ POI(options)
 | **subtitle** *optional*      | string              | chỉ định thông tin mô tả của POI.                                                                                                                                     |
 | ~**titleColor** *optional*~  | ~string~            | ~chỉ định màu tiêu đề của POI theo mã HEX (ví dụ **"#5B9AFF"**). Giá trị mặc định là **"#FF0000"**~                                                                   |
 | **color** *optional*         | string              | chỉ định màu tiêu đề và icon ((nếu sử dụng `type`)) của POI theo mã HEX (ví dụ **"#5B9AFF"**). Giá trị mặc định là **"#FF0000"**                                      |
-| **type** *optional*          | string              | chỉ định kiểu của POI, tùy thuộc vào kiểu mà icon của POI sẽ có hình ảnh tương ứng. Phụ thuộc vào kind được quy định trong file [style](//map.map4d.vn/user/platform/map-style/list) |
+| **type** *optional*          | string              | chỉ định kiểu của POI, tùy thuộc vào kiểu mà icon của POI sẽ có hình ảnh tương ứng. Phụ thuộc vào kind được quy định trong file [style](//map.ipostmap.vn/user/platform/map-style/list) |
 | **icon** *optional*          | string              | chỉ định một đường dẫn URL để lấy hình ảnh cho POI. Nếu option này được set giá trị thì hình ảnh của POI sẽ lấy theo URL này mà không cần quan tâm tới option **type**. Giá trị mặc định là **null**.|
 | **elevation** *optional*     | number              | chỉ định độ cao của POI so với mực nước biển, đơn vị là mét. Giá trị mặc định là **0**                                                                                |
 | **zIndex** *optional*        | number              | chỉ định thứ tự chồng nhau giữa các POI với nhau, nó không dùng để xác định thứ tự chồng nhau so với các đối tượng khác. Giá trị mặc định là **0**.                   |

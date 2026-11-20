@@ -11,7 +11,7 @@ constructor(path: ILatLng[])
 Ví dụ
 
 ```javascript
-let measure = new map4d.Measure([
+let measure = new ipostmap.Measure([
     [106.700147, 10.773201],
     [106.700763, 10.771783],
     [106.701901, 10.772302],
@@ -28,7 +28,7 @@ setPath(path: ILatLng[]): void
 Ví dụ
 
 ```javascript
-let measure = new map4d.Measure([])
+let measure = new ipostmap.Measure([])
 measure.setPath([
     [106.700147, 10.773201],
     [106.700763, 10.771783],
@@ -46,7 +46,7 @@ addPath(path: ILatLng[]): void
 Ví dụ
 
 ```javascript
-let measure = new map4d.Measure([
+let measure = new ipostmap.Measure([
     [106.700147, 10.773201],
     [106.700763, 10.771783]
 ])
@@ -65,7 +65,7 @@ get length(): number
 Ví dụ
 
 ```javascript
-let measure = new map4d.Measure([
+let measure = new ipostmap.Measure([
     [106.700147, 10.773201],
     [106.700763, 10.771783],
     [106.701901, 10.772302],
@@ -83,7 +83,7 @@ get perimeter(): number
 Ví dụ
 
 ```javascript
-let measure = new map4d.Measure([
+let measure = new ipostmap.Measure([
     [106.700147, 10.773201],
     [106.700763, 10.771783],
     [106.701901, 10.772302],
@@ -101,7 +101,7 @@ get area(): number
 Ví dụ
 
 ```javascript
-let measure = new map4d.Measure([
+let measure = new ipostmap.Measure([
     [106.700147, 10.773201],
     [106.700763, 10.771783],
     [106.701901, 10.772302],
@@ -119,7 +119,7 @@ let area = measure.area
 Ví dụ
 
 ```javascript
-let measure = new map4d.Measure([
+let measure = new ipostmap.Measure([
     [106.700147, 10.773201],
     [106.700763, 10.771783],
     [106.701901, 10.772302],

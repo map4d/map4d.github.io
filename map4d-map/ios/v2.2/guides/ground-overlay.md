@@ -1,7 +1,7 @@
 # Ground Overlay
 
 Ground Overlay cho phép người dùng thực hiện việc thay thế tile ở một khu vực nào đó bằng tile từ những nguồn khác.  
-Ground Overlay tương tự với Tile Overlay nhưng cho phép người dùng quy định 1 khu vực cụ thể gắn với kinh độ/vĩ độ, ngoài ra con cho phép người dùng loại bỏ việc hiển thị tile và các đối tượng thuộc tile của Map4D SDK
+Ground Overlay tương tự với Tile Overlay nhưng cho phép người dùng quy định 1 khu vực cụ thể gắn với kinh độ/vĩ độ, ngoài ra con cho phép người dùng loại bỏ việc hiển thị tile và các đối tượng thuộc tile của IPostMap SDK
 
 ![Ground Overlay](../../resources/v1.5/ground-overlay.png)
 
@@ -13,7 +13,7 @@ Cần phải implement [MFTileURLConstructor](reference/tile-overlay?id=mftileur
 ### Tạo mới Ground overlay
 
 Đoạn code bên dưới hướng dẫn cách sử dụng implement [MFTileURLConstructor](reference/tile-overlay?id=mftileurlconstructor-protocol) và sử dụng [MFGroundOverlay](/reference/ground-overlay?id=mfgroundoverlay-class) để hiển thị một vùng tile từ `opentopomap`.  
-Thuộc tính `overrideBaseMap` cho phép người dùng bỏ qua việc lấy dữ liệu và hiển của Map4D trong khu vực dành cho Ground Overlay  
+Thuộc tính `overrideBaseMap` cho phép người dùng bỏ qua việc lấy dữ liệu và hiển của IPostMap trong khu vực dành cho Ground Overlay  
 
 <!-- tabs:start -->
 #### ** Swift **
@@ -92,7 +92,7 @@ groundOverlay.map = nil;
 Set giá trị cho property `isHidden` để ẩn/hiện ground overlay.
 Chú ý:  
 - Mặc dù ground overlay không hiển thị nhưng quá trình tải các tile vẫn diễn ra khi kéo map đến khu vực quy định cho ground overlay
-- Trong trường hợp set `overrideBaseMap` là true nhưng `isHidden` là `true` thì ground không được hiển thị và khu vực đó cũng không hề hiển thị dữ liệu của Map4D
+- Trong trường hợp set `overrideBaseMap` là true nhưng `isHidden` là `true` thì ground không được hiển thị và khu vực đó cũng không hề hiển thị dữ liệu của IPostMap
 
 <!-- tabs:start -->
 #### ** Swift **

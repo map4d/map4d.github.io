@@ -58,8 +58,8 @@ var options = MFBuildingOverlayOptions()
 
 `MFBuildingData` class
 
-MFBuildingData là object chứa thông tin của building để Map4D SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến
-đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho Map4D SDK hiển thị lên bản đồ.
+MFBuildingData là object chứa thông tin của building để IPostMap SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến
+đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho IPostMap SDK hiển thị lên bản đồ.
 
 **Constructor**
 

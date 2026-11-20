@@ -1,4 +1,4 @@
-# Cài đặt Map4D-SDK
+# Cài đặt IPostMap-SDK
 
 ## 1. Cài đặt
 
@@ -23,12 +23,12 @@ dependencies {
 
   3. Thêm access key trong manifest
 
-Để sử dụng map4d Android SDK, bạn cần phải có access key (bạn có thể sử dụng một access key cho các api trên web, iOS, Android). Để nhận được access key vui vòng truy cập đường link sau ([đăng ký key](http://map4d.vn))
+Để sử dụng map4d Android SDK, bạn cần phải có access key (bạn có thể sử dụng một access key cho các api trên web, iOS, Android). Để nhận được access key vui vòng truy cập đường link sau ([đăng ký key](http://ipostmap.vn))
 ```java
 <application ...>
     android:theme="@style/AppTheme">
     <meta-data
-        android:name="vn.map4d.map4dsdk.ACCESS_KEY"
+        android:name="vn.ipostmap.Map4dsdk.ACCESS_KEY"
         android:value="${access_key}" />
     ...
 </application>
@@ -49,7 +49,7 @@ dependencies {
 
     <fragment
         android:id="@+id/map3D"
-        class="vn.map4d.map4dsdk.maps.MFSupportMapFragment"
+        class="vn.ipostmap.Map4dsdk.maps.MFSupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -71,9 +71,9 @@ public class Simple3DMapActivity extends AppCompatActivity implements OnMapReady
     }
 
     @Override
-    public void onMapReady(Map4D map4D) {
-        map4D.setMinZoomPreference(17.f);
-        map4D.enable3DMode(true);
+    public void onMapReady(IPostMap map4D) {
+        ipostmap.setMinZoomPreference(17.f);
+        ipostmap.enable3DMode(true);
     }
 }
 ```
@@ -88,7 +88,7 @@ public class Simple3DMapActivity extends AppCompatActivity implements OnMapReady
       android:layout_height="match_parent"
       tools:context=".Simple3DMapActivity">
   
-      <vn.map4d.map4dsdk.maps.MFMapView
+      <vn.ipostmap.Map4dsdk.maps.MFMapView
                       android:id="@+id/map3D"
                       android:layout_width="match_parent"
                       android:layout_height="match_parent" />
@@ -111,9 +111,9 @@ public class Simple3DMapActivity extends AppCompatActivity implements OnMapReady
     }
   
     @Override
-    public void onMapReady(Map4D map4D) { 
-        map4D.setMinZoomPreference(17.f);
-        map4D.enable3DMode(true); 
+    public void onMapReady(IPostMap map4D) { 
+        ipostmap.setMinZoomPreference(17.f);
+        ipostmap.enable3DMode(true); 
     }
       
     @Override
@@ -133,9 +133,9 @@ Có thể giới hạn mức zoom của map nằm trong khoảng [minZoomPrefere
 
 ```java
 @Override
-public void onMapReady(Map4D map4D) {
-    map4D.setMinZoomPreference(17.f);
-    map4D.setMaxZoomPreference(5.f);
+public void onMapReady(IPostMap map4D) {
+    ipostmap.setMinZoomPreference(17.f);
+    ipostmap.setMaxZoomPreference(5.f);
 }
 ```
 Như ví dụ trên thì mức zoom của map chỉ có thể nằm trong khoảng [5, 17]. Mức zoom của map với cài đặt trên thì không thể < 5 và > 17.
@@ -156,8 +156,8 @@ public enum MFSwitchMode
 
 ```android
 @Override
-public void onMapReady(Map4D map4D) {
-    map4D.setSwitchMode(MFSwitchMode.Auto2DTo3D);
+public void onMapReady(IPostMap map4D) {
+    ipostmap.setSwitchMode(MFSwitchMode.Auto2DTo3D);
 }
 ```
 
@@ -183,7 +183,7 @@ public void onMapReady(Map4D map4D) {
 Cho phép thay đổi các trạng thái và lấy các thông số của map như độ nghiêng, độ xoay, điểm trung tâm, mức zoom hiện tại
 
 ```java
-map4D.getCameraPosition();
+ipostmap.getCameraPosition();
 ```
 Cho phép lấy thông tin các thông số camera hiện tại của map như mức zoom, tâm map, góc nghiêng, góc xoay.
 

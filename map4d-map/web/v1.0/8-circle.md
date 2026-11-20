@@ -37,7 +37,7 @@ Lớp Circle cho phép người dùng vẽ một Circle lên map.
 
 ```javascript
   //tạo đối tượng circle từ CircleOptions
-  let circle = new map4d.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100})
+  let circle = new ipostmap.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100})
 
   //thêm circle vào map    
   circle.setMap(this.map)

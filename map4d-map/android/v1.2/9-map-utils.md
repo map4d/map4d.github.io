@@ -6,7 +6,7 @@ Lớp Projection cho phép người dùng thực hiện các phép chiếu
 ### 1. Khởi tạo lớp Projection
 
 ```java
-  MFProjection projection = map4D.getProjection();
+  MFProjection projection = ipostmap.getProjection();
 ```
 
 ### 2. Chuyển đổi từ toạ độ LatLng sang toạ độ Screen
@@ -41,7 +41,7 @@ Lớp Projection cho phép người dùng thực hiện các phép chiếu
 - elevation mặc định = 0 và is3DMode = false
 
 ```java
-  MFProjection projection = map4D.getProjection();
+  MFProjection projection = ipostmap.getProjection();
   MFLocationCoordinate latLng = new MFLocationCoordinate(10.772302, 106.701901);
   MFCameraPosition newCameraPosition = new MFCameraPosition.Builder().target(new MFLocationCoordinate(16.059790, 108.223986)).tilt(0).bearing(0).zoom(17).build();
   Point point = projection.pointForCoordinate(latLng, newCameraPosition);
@@ -56,7 +56,7 @@ public Point pointForCoordinate(@NonNull MFLocationCoordinate location,@NonNull 
 ```
 
 ```java
-  MFProjection projection = map4D.getProjection();
+  MFProjection projection = ipostmap.getProjection();
   MFLocationCoordinate latLng = new MFLocationCoordinate(10.772302, 106.701901);
   MFCameraPosition newCameraPosition = new MFCameraPosition.Builder().target(new MFLocationCoordinate(16.059790, 108.223986)).tilt(40).bearing(30).zoom(17).build();
   Point point = projection.pointForCoordinate(latLng, newCameraPosition, 100, true);

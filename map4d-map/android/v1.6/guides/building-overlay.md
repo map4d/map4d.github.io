@@ -1,7 +1,7 @@
 # Building Overlay
 
 Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết
-hợp với building sẵn có của Map4D. Building overlay chỉ hiển thị ở chế độ 3D.
+hợp với building sẵn có của IPostMap. Building overlay chỉ hiển thị ở chế độ 3D.
 
 ![CocoaPods](../../resources/buildingOverlay.png)
 
@@ -33,13 +33,13 @@ tọa độ x, y và mức zoom tương ứng. Sau đó bạn thêm **Building O
 
     3. `visible(boolean)` : cho phép Building Overlay ẩn hay hiện sau khi add vào Map.
 
-4. Gọi `Map4D.addBuildingOverlay()` để thêm Building Overlay vào Map.
+4. Gọi `IPostMap.addBuildingOverlay()` để thêm Building Overlay vào Map.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
 MFBuildingProvider buildingProvider = new MFUrlBuildingProvider() {
     @Override
@@ -72,13 +72,13 @@ MFBuildingProvider buildingProvider = new MFUrlBuildingProvider() {
         return buildings;
     }
 };
-MFBuildingOverlay buildingOverlay = map4D.addBuildingOverlay(new MFBuildingOverlayOptions().buildingProvider(buildingProvider).prefixId("buildingOverlay-"));
+MFBuildingOverlay buildingOverlay = ipostmap.addBuildingOverlay(new MFBuildingOverlayOptions().buildingProvider(buildingProvider).prefixId("buildingOverlay-"));
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
 var buildingProvider: MFBuildingProvider = object : MFUrlBuildingProvider() {
     override fun getBuildingUrl(x: Int, y: Int, zoom: Int): String {
@@ -109,7 +109,7 @@ var buildingProvider: MFBuildingProvider = object : MFUrlBuildingProvider() {
         return buildings
     }
 }
-var buildingOverlay = map4D.addBuildingOverlay(MFBuildingOverlayOptions().buildingProvider(buildingProvider).prefixId("buildingOverlay-"))
+var buildingOverlay = ipostmap.addBuildingOverlay(MFBuildingOverlayOptions().buildingProvider(buildingProvider).prefixId("buildingOverlay-"))
 ```
 <!-- tabs:end -->
 

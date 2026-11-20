@@ -12,7 +12,7 @@ constructor(coordinates: ILatLng[])
 Ví dụ
 
 ```javascript
-let coordinateTransformer = new map4d.CoordinateTransformer([
+let coordinateTransformer = new ipostmap.CoordinateTransformer([
     [106.699380, 10.772431],
     [106.700147, 10.773201],
     [106.700763, 10.771783],
@@ -31,7 +31,7 @@ setCoordinates(coordinates: ILatLng[]): void
 Ví dụ
 
 ```javascript
-let coordinateTransformer = new map4d.CoordinateTransformer([])
+let coordinateTransformer = new ipostmap.CoordinateTransformer([])
 coordinateTransformer.setCoordinates([
     [106.699380, 10.772431],
     [106.700147, 10.773201],
@@ -51,7 +51,7 @@ addCoordinates(coordinates: ILatLng[]): void
 Ví dụ
 
 ```javascript
-let coordinateTransformer = new map4d.CoordinateTransformer([
+let coordinateTransformer = new ipostmap.CoordinateTransformer([
     [106.699380, 10.772431],
     [106.700147, 10.773201]
 ])
@@ -71,7 +71,7 @@ get center(): LatLng
 Ví dụ
 
 ```javascript
-let coordinateTransformer = new map4d.CoordinateTransformer([
+let coordinateTransformer = new ipostmap.CoordinateTransformer([
     [106.699380, 10.772431],
     [106.700147, 10.773201],
     [106.700763, 10.771783],
@@ -93,7 +93,7 @@ rotate(degree: number, anchor?: ILatLng): LatLng[]
 Ví dụ
 
 ```javascript
-let coordinateTransformer = new map4d.CoordinateTransformer([
+let coordinateTransformer = new ipostmap.CoordinateTransformer([
     [106.699380, 10.772431],
     [106.700147, 10.773201],
     [106.700763, 10.771783],
@@ -118,7 +118,7 @@ translate(target: ILatLng, anchor?: ILatLng): LatLng[]
 Ví dụ
 
 ```javascript
-let coordinateTransformer = new map4d.CoordinateTransformer([
+let coordinateTransformer = new ipostmap.CoordinateTransformer([
     [106.699380, 10.772431],
     [106.700147, 10.773201],
     [106.700763, 10.771783],
@@ -141,7 +141,7 @@ scale(scale: number, anchor?: ILatLng): LatLng[]
 Ví dụ
 
 ```javascript
-let coordinateTransformer = new map4d.CoordinateTransformer([
+let coordinateTransformer = new ipostmap.CoordinateTransformer([
     [106.699380, 10.772431],
     [106.700147, 10.773201],
     [106.700763, 10.771783],

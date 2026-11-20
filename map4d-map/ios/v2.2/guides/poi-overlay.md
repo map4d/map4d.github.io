@@ -1,7 +1,7 @@
 # POI Overlay
 
 POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ.  
-Các POI của POI overlay được ưu tiên hiển thị so với POI của Map4D và chỉ hiển thị ở chế độ 2D.
+Các POI của POI overlay được ưu tiên hiển thị so với POI của IPostMap và chỉ hiển thị ở chế độ 2D.
 
 ![POI Overlay](../../resources/v1.5/poi-overlay.png)
 
@@ -61,7 +61,7 @@ poiOverlay.map = mapView
 #### ** Objective-C **
 Implement **MFPOIURLConstructor**
 ```objc
-#import <Map4dMap/Map4dMap.h>
+#import <IpostMap/IpostMap.h>
 @interface POIURLConstructor : NSObject<MFPOIURLConstructor>
 @end
 
@@ -182,7 +182,7 @@ poiOverlay.isHidden = YES;
 
 ## Sự kiện đối với POI thuộc POI overlay
 
-Khi người dùng click POI thuộc POI overlay thì sẽ phát sinh sự kiện tương tự với POI của Map4D, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của Map4D.
+Khi người dùng click POI thuộc POI overlay thì sẽ phát sinh sự kiện tương tự với POI của IPostMap, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của IPostMap.
 
 <!-- tabs:start -->
 #### ** Swift **

@@ -1,12 +1,12 @@
-# Map4dMap iOS SDK
-[![map4d](https://img.shields.io/badge/map4d-map-orange)](https://map4d.vn/)
-[![platform](https://img.shields.io/cocoapods/p/Map4dMap)](https://www.apple.com/ios/)
-[![cocoapods](https://img.shields.io/cocoapods/v/Map4dMap)](https://cocoapods.org/pods/Map4dMap)
+# IpostMap iOS SDK
+[![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
+[![platform](https://img.shields.io/cocoapods/p/IpostMap)](https://www.apple.com/ios/)
+[![cocoapods](https://img.shields.io/cocoapods/v/IpostMap)](https://cocoapods.org/pods/IpostMap)
 
-> **Map4D iOS SDK** cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên iPhone, iPad.  
-> **Map4D iOS SDK** không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn
+> **IPostMap iOS SDK** cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên iPhone, iPad.  
+> **IPostMap iOS SDK** không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn
 
-![Map4D iOS SDK](../resources/Untitled-1_0000_Right-Mockup--phone-demo.png)
+![IPostMap iOS SDK](../resources/Untitled-1_0000_Right-Mockup--phone-demo.png)
 
 ## Installation
 
@@ -19,7 +19,7 @@ pod repo update
 
 2. Add to Podfile
 ```shell
-pod 'Map4dMap'
+pod 'IpostMap'
 ```
 
 ### Nền tảng được hỗ trợ
@@ -31,7 +31,7 @@ pod 'Map4dMap'
 1. Provide access key from Info.plist
 
 ```xml
-<key>Map4dMapAccessKey</key>
+<key>IpostMapAccessKey</key>
 <string>YOUR_ACCESS_KEY</string>
 ```
 
@@ -42,7 +42,7 @@ pod 'Map4dMap'
 
 ```swift
 import UIKit
-import Map4dMap
+import IpostMap
 
 class ViewController: UIViewController {
   override func viewDidLoad() {
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
 #### ** Objective C **
 
 ```objc
-#import <Map4dMap/Map4dMap.h>
+#import <IpostMap/IpostMap.h>
 
 @implementation ViewController
 

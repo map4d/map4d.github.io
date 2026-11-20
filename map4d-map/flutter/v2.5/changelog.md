@@ -27,7 +27,7 @@ Những thay đổi kể từ version 2.4.6
 - Add `onDataSourceFeatureTap` callback for `MFMapView`
 
 #### Changed
-- Upgrade Map4dMap SDK dependencies to 2.6+
+- Upgrade IpostMap SDK dependencies to 2.6+
 
 <!-- #### Deprecated -->
 <!-- #### Removed -->

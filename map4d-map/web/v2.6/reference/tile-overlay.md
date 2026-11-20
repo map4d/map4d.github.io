@@ -2,7 +2,7 @@
 
 ## TileOverlay class
 
-`map4d.TileOverlay` class
+`ipostmap.TileOverlay` class
 
 **Constructor** 
 
@@ -30,7 +30,7 @@ TileOverlay(options)
 
 ## TileOverlayOptions interface
 
-`map4d.TileOverlayOptions` interface
+`ipostmap.TileOverlayOptions` interface
 
 Đối tượng TileOverlayOptions đùng để xác định các thuộc tính dùng cho TileOverlay.
 

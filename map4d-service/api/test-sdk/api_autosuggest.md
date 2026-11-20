@@ -1,11 +1,11 @@
 # AutoSuggest (Tự động đề xuất chuỗi tìm kiếm)
 ## 1. Input (Đầu vào)
 ```
-https://api-test.map4d.vn/sdk/autosuggest?key={key}&text={text}&location={location}&acronym={acronym}
+https://api-test.ipostmap.vn/sdk/autosuggest?key={key}&text={text}&location={location}&acronym={acronym}
 ```
 | Parameter |Required| Description                                                                                           |
 |-----------|--------|-------------------------------------------------------------------------------------------------------|
-| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key|
+| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.ipostmap.vn/user/access-key/add để tạo key|
 | text      |Yes     | chuỗi muốn gửi. VD: "Đà Nẵng"                                                                         |
 | location  |No      | địa điểm bạn đang tìm kiếm trên bản đồ. VD: 16.036505,108.218186                                      |
 | acronym   |No      | tìm theo chữ cái viết tắt của vị trí cần tìm, mặc định là false. VD: nvl -> nguyen van linh...        |

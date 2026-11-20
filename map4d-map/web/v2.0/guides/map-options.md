@@ -1,6 +1,6 @@
 # Map Options
 
-Map options là một object [MapOptions](/reference/map?id=mapoptions-interface) cung cấp các thiết lập ban đầu để khởi tạo đối tượng Map4D.  
+Map options là một object [MapOptions](/reference/map?id=mapoptions-interface) cung cấp các thiết lập ban đầu để khởi tạo đối tượng IPostMap.  
 Bao gồm:
 
 | No | Name                | Type                                                     | Default Value | Description                                                                                        |
@@ -24,16 +24,16 @@ Bao gồm:
 - Parameters: `None`
 - Return Value: `boolean`
 
-Map4D Web SDK hỗ trợ hai chế độ 2D và 3D. Đối với chế độ 3D chỉ hiển thị ở mức zoom từ 17 trở lên.  
+IPostMap Web SDK hỗ trợ hai chế độ 2D và 3D. Đối với chế độ 3D chỉ hiển thị ở mức zoom từ 17 trở lên.  
 Trong quá trình zoom in, zoom out từ mức zoom 16 lên 17 hoặc 17 trờ lại 16 thì hàm `shouldChangeMapMode` sẽ được gọi.  
-Tùy thuộc vào giá trị trả về là `true` hay `false` thì Map4D sẽ xử lý khác nhau:
+Tùy thuộc vào giá trị trả về là `true` hay `false` thì IPostMap sẽ xử lý khác nhau:
 
 - Trường hợp giá trị trả về là `false`:
-  - Nếu zoom từ 16 lên 17 thì Map4D sẽ hiển thị mức zoom 17 ở chế độ 2D
-  - Nếu ở chế độ 2D và thay đổi mức zoom từ 17 về 16 thì Map4D sẽ hiển thị mức zoom 16
-  - Nếu ở chế độ 3D và thay đổi mức zoom từ 17 về 16 thì Map4D sẽ không hiển thị mức zoom 16, mà vẫn sẽ hiển thị tại mức zoom 17
+  - Nếu zoom từ 16 lên 17 thì IPostMap sẽ hiển thị mức zoom 17 ở chế độ 2D
+  - Nếu ở chế độ 2D và thay đổi mức zoom từ 17 về 16 thì IPostMap sẽ hiển thị mức zoom 16
+  - Nếu ở chế độ 3D và thay đổi mức zoom từ 17 về 16 thì IPostMap sẽ không hiển thị mức zoom 16, mà vẫn sẽ hiển thị tại mức zoom 17
 
 - Trường hợp giá trị trả về là `true`:
-  - Khi ở chế độ 2D và zoom từ 16 lên 17, Map4D tự động chuyển thành chế độ 3D
-  - Khi ở chế độ 3D và zoom từ 17 về 16, Map4D tự động chuyển thành chế độ 2D
+  - Khi ở chế độ 2D và zoom từ 16 lên 17, IPostMap tự động chuyển thành chế độ 3D
+  - Khi ở chế độ 3D và zoom từ 17 về 16, IPostMap tự động chuyển thành chế độ 2D
 

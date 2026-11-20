@@ -7,10 +7,10 @@ Những thay đổi kể từ version 1.6.x
 #### Added
 
 - Render map dưới dạng vector
-- Thêm mới hàm `setMapType` cho **map4d.Map** 
-- Thêm mới hàm `getMapType` cho **map4d.Map**
+- Thêm mới hàm `setMapType` cho **ipostmap.Map** 
+- Thêm mới hàm `getMapType` cho **ipostmap.Map**
 - Thêm sự kiện `click` cho các place label trên vector map.
-- Hỗ trợ render chỉ đường với `map4d.DirectionsRenderer`
+- Hỗ trợ render chỉ đường với `ipostmap.DirectionsRenderer`
 
 #### Changed
 

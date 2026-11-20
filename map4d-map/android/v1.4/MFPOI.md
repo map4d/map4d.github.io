@@ -74,7 +74,7 @@ public final class MFPOI extends Annotation {
 ```java
   MFPOIOptions userPOIOptions = new MFPOIOptions();
   userPOIOptions.position(new MFLocationCoordinate(16.071876, 108.223994)).title("Test User POI").subtitle("Da Nang");
-  MFPOI poi = map4D.addPOI(userPOIOptions);
+  MFPOI poi = ipostmap.addPOI(userPOIOptions);
   poi.setTitleColor(getResources().getColor(R.color.colorAccent));
 ```
  - **Chú ý**:
@@ -87,7 +87,7 @@ public final class MFPOI extends Annotation {
 
   - Phát sinh khi người dùng click vào POI
     ```java
-     map4D.setOnPOIClickListener(new Map4D.OnPOIClickListener() {
+     ipostmap.setOnPOIClickListener(new IPostMap.OnPOIClickListener() {
          @Override
          public void onPOIClick(MFPOI poi) {
              Log.d(Tag, "Clicked on POI : " + poi.getTitle());

@@ -12,7 +12,7 @@ Những thay đổi kể từ version 2.0.x
 
 #### Changed
 
-- Map4D SDKs sẽ không còn tự động chuyển đổi từ 3D sang 2D khi gọi phương thức [moveCamera](reference/map.md) lúc map đang ở mức zoom >= 17 và hiển thị bản đồ 3D về mức zoom <=16.  
+- IPostMap SDKs sẽ không còn tự động chuyển đổi từ 3D sang 2D khi gọi phương thức [moveCamera](reference/map.md) lúc map đang ở mức zoom >= 17 và hiển thị bản đồ 3D về mức zoom <=16.  
 Thay vào đó sẽ chỉ di chuyển camera đến mức zoom nhỏ nhất có thể hiển thị bản đồ 3D (mức zoom 17).  
 Nếu muốn hiển di chuyển camera đến đúng mức zoom và hiển thị bản đồ 2D như cũ, vui lòng set map type là `roadmap`, `raster` hoặc `satellite` trước khi gọi phương thức `moveCamera`
 

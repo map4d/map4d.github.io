@@ -1,7 +1,7 @@
-- [Overview](/ "Map4dMap JavaScript SDK")
+- [Overview](/ "IpostMap JavaScript SDK")
 - [Changelog](changelog.md)
 - [Angular Support](guides/angular-support.md)
-- [ReactJS Support](https://docs.map4d.vn/map4d-map/react-js/v1.3.9/)
+- [ReactJS Support](https://docs.ipostmap.vn/map4d-map/react-js/v1.3.9/)
 - [Vuejs Support](guides/vuejs-support.md)
 
 - Interacting with the Map

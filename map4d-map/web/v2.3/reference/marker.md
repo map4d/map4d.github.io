@@ -2,7 +2,7 @@
 
 ## Marker Class
 
-`map4d.Marker` class
+`ipostmap.Marker` class
 
 **Constructor** 
 
@@ -61,7 +61,7 @@ Marker(options)
 
 ## Marker Options
 
-`map4d.MarkerOptions` interface
+`ipostmap.MarkerOptions` interface
 
 Đối tượng MarkerOptions dùng để xác định các thuộc tính dùng cho Marker.
 
@@ -88,7 +88,7 @@ Marker(options)
 
 ## Marker Label
 
-`map4d.MarkerLabel` class
+`ipostmap.MarkerLabel` class
 
 **Constructor** 
 
@@ -116,7 +116,7 @@ MarkerLabel(options)
 
 ## Marker Label Options
 
-`map4d.MarkerLableOptions` interface
+`ipostmap.MarkerLableOptions` interface
 
 Đối tượng MarkerLabelOptions dùng để xác định các thuộc tính dùng cho **MarkerLabel**.
 
@@ -137,7 +137,7 @@ MarkerLabel(options)
 
 ## Margin Options
 
-`map4d.MarginOptions` interface
+`ipostmap.MarginOptions` interface
 
 ```javascript
 interface MarginOptions {
@@ -163,7 +163,7 @@ interface MarginOptions {
 
 Là một đối tượng lưu trữ hình ảnh.
 
-`map4d.Icon` class
+`ipostmap.Icon` class
 
 **Constructor** 
 

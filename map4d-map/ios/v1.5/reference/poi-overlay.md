@@ -59,7 +59,7 @@ Cần phải implement protocol này trước khi tạo đối tượng `MFURLPO
 
 `MFPOIData`class
 
-MFPOIData là object chứa thông tin của POI để Map4D SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của mình thành mảng các POI data cung cấp cho Map4D SDK hiển thị lên bản đồ.
+MFPOIData là object chứa thông tin của POI để IPostMap SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của mình thành mảng các POI data cung cấp cho IPostMap SDK hiển thị lên bản đồ.
 
 | Name           | Type      | Description                                                                            |
 |----------------|-----------|----------------------------------------------------------------------------------------|

@@ -1,15 +1,15 @@
-# Map4dMapUtils Flutter
-[![Map4dMapUtils](https://img.shields.io/badge/map4d-map--utils-orange)](https://map4d.vn/)
+# IpostMapUtils Flutter
+[![IpostMapUtils](https://img.shields.io/badge/ipostmap-map--utils-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-flutter-45d2fd.svg)](https://flutter.dev/)
 [![pub package](https://img.shields.io/pub/v/map4d_map_utils.svg)](https://pub.dev/packages/map4d_map_utils)
 
-> **Map4dMapUtils Flutter package** là thư viện tiện ích cho các ứng dụng sử dụng [Map4dMap SDK](https://docs.map4d.vn/map4d-map/flutter).
+> **IpostMapUtils Flutter package** là thư viện tiện ích cho các ứng dụng sử dụng [IpostMap SDK](https://docs.ipostmap.vn/map4d-map/flutter).
 
 ## Getting Started
 
 ### Installation
 
-Để sử dụng Map4dMap plugin, thêm `map4d_map_utils` vào mục **dependencies** trong file `pubspec.yaml` của Flutter project.
+Để sử dụng IpostMap plugin, thêm `map4d_map_utils` vào mục **dependencies** trong file `pubspec.yaml` của Flutter project.
 
 ```yaml
 dependencies:
@@ -35,4 +35,4 @@ import 'package:map4d_map_utils/map4d_map_utils.dart';
 
 ### Các tiện ích
 
-- [Marker clustering](guides/clustering.md): xử lý việc hiển thị một số lượng lớn các điểm lên bản đồ Map4D
+- [Marker clustering](guides/clustering.md): xử lý việc hiển thị một số lượng lớn các điểm lên bản đồ IPostMap

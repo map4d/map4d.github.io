@@ -1,9 +1,9 @@
 #Place
 
-Place bao gồm các POIs có sẵn trên bản đồ của Map4D
+Place bao gồm các POIs có sẵn trên bản đồ của IPostMap
 
 ####1. Enable POIs
-  - Cho phép hiển thị hoặc không hiển thị tất cả các POIs của Map4D trên bản đồ
+  - Cho phép hiển thị hoặc không hiển thị tất cả các POIs của IPostMap trên bản đồ
 
   ```objc
   - (void) setPOIsEnabled: (bool) enabled;

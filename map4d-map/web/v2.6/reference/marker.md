@@ -2,7 +2,7 @@
 
 ## Marker Class
 
-`map4d.Marker` class
+`ipostmap.Marker` class
 
 **Constructor** 
 
@@ -61,7 +61,7 @@ Marker(options)
 
 ## Marker Options
 
-`map4d.MarkerOptions` interface
+`ipostmap.MarkerOptions` interface
 
 Đối tượng MarkerOptions dùng để xác định các thuộc tính dùng cho Marker.
 
@@ -89,7 +89,7 @@ Marker(options)
 
 ## Marker Label
 
-`map4d.MarkerLabel` class
+`ipostmap.MarkerLabel` class
 
 **Constructor** 
 
@@ -119,7 +119,7 @@ MarkerLabel(options)
 
 ## Marker Label Options
 
-`map4d.MarkerLableOptions` interface
+`ipostmap.MarkerLableOptions` interface
 
 Đối tượng MarkerLabelOptions dùng để xác định các thuộc tính dùng cho **MarkerLabel**.
 
@@ -140,7 +140,7 @@ MarkerLabel(options)
 
 ## Margin Options
 
-`map4d.MarginOptions` interface
+`ipostmap.MarginOptions` interface
 
 ```javascript
 interface MarginOptions {
@@ -166,7 +166,7 @@ interface MarginOptions {
 
 Là một đối tượng lưu trữ hình ảnh.
 
-`map4d.Icon` class
+`ipostmap.Icon` class
 
 **Constructor** 
 
@@ -192,9 +192,9 @@ Icon(width: number, height: number, url: string)
 
 ## Animation
 
-`map4d.Animation` type
+`ipostmap.Animation` type
 
 | Constants                  | Description                                                                                  |
 |----------------------------|----------------------------------------------------------------------------------------------|
-| **map4d.Animation.BOUNCE** | Marker nảy liên tục cho đến khi setAnimation bằng null |
-| **map4d.Animation.DROP**   | Marker rơi từ phía trên bản đồ xuống vị trí của nó khi marker được thêm vào bản đồ |
+| **ipostmap.Animation.BOUNCE** | Marker nảy liên tục cho đến khi setAnimation bằng null |
+| **ipostmap.Animation.DROP**   | Marker rơi từ phía trên bản đồ xuống vị trí của nó khi marker được thêm vào bản đồ |

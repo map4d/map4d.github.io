@@ -2,13 +2,13 @@
 
 Điểm khác biệt giữa nền tảng bản đồ **map4d** với các nền tảng bản đồ khác đó là chế độ bản đồ 3D. Chế độ này sẽ có các đối
 tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng như các công trình kiến trúc khác, ... Ngoài những đối tượng building
-3D có sẵn của bản đồ, bạn còn có thể tự tạo và thêm đối tượng 3D của bạn lên bản đồ thông qua đối tượng **map4d.Building**
+3D có sẵn của bản đồ, bạn còn có thể tự tạo và thêm đối tượng 3D của bạn lên bản đồ thông qua đối tượng **ipostmap.Building**
 
 **Chú ý: Những đối tượng Building này chỉ được vẽ trong chế độ 3D của bản đồ, nó không được vẽ trong chế độ 2D.**
 
 ### 1. Thêm một Building
 
-Hàm khởi tạo của lớp **map4d.Building** cần truyền vào một đối tượng **map4d.BuildingOptions** để định nghĩa các thuộc
+Hàm khởi tạo của lớp **ipostmap.Building** cần truyền vào một đối tượng **ipostmap.BuildingOptions** để định nghĩa các thuộc
 tính ban đầu của Buidling.
 
 Đối tượng **BuildingOptions** được định nghĩa như sau:
@@ -86,7 +86,7 @@ khỏi bản đồ, sau đó bạn gán **building** bằng __null__.
 
 Bạn có thể cho phép hiện hoặc ẩn những building có sẵn của bản đồ. Mặc định thì bản đồ sẽ hiển thị tất cả các building có
 sẵn của nó ở chế độ 3D. Nếu bạn muốn ẩn tất cả các building đó đi thì sử dụng phương thức **setBuildingsEnabled()** của
-lớp **map4d.Map** và truyền vào tham số **false**. Ngược lại nếu bạn muốn hiện chúng lên thì bạn truyền vào tham số là **true**.
+lớp **ipostmap.Map** và truyền vào tham số **false**. Ngược lại nếu bạn muốn hiện chúng lên thì bạn truyền vào tham số là **true**.
 
 Ví dụ để ẩn các building có sẵn của bản đồ:
 
@@ -95,7 +95,7 @@ map.setBuildingsEnabled(false)
 ```
 
 Ngoài ra để kiểm tra các building có sẵn có được hiện trên bản đồ hay không bạn cũng có thể sử dụng phương thức **isBuildingsEnabled()**
-của lớp **map4d.Map**. Phương thức này sẽ trả về một giá trị **boolean** tương ứng với các building có được hiện hay không.
+của lớp **ipostmap.Map**. Phương thức này sẽ trả về một giá trị **boolean** tương ứng với các building có được hiện hay không.
 
 ```javascript
 let isBuildingsEnabled = map.isBuildingsEnabled()

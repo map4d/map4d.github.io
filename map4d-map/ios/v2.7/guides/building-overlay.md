@@ -1,6 +1,6 @@
 # Building Overlay
 
-Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết hợp với building sẵn có của Map4D.  
+Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết hợp với building sẵn có của IPostMap.  
 Building overlay chỉ hiển thị ở chế độ 3D.
 
 ![Building Overlay](../../resources/v1.5/building-overlay.png)
@@ -63,7 +63,7 @@ let buildingOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor, prefixI
 #### ** Objective-C **
 Implement **MFBuildingURLConstructor**
 ```objc
-#import <Map4dMap/Map4dMap.h>
+#import <IpostMap/IpostMap.h>
 @interface BuildingURLConstructor : NSObject <MFBuildingURLConstructor>
 @end
 
@@ -184,7 +184,7 @@ buildingOverlay.isHidden = YES;
 
 ## Sự kiện đối với building thuộc building overlay
 
-Các sự kiện đối với building thuộc building overlay phát sinh tương tự với building của Map4D, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của Map4D.
+Các sự kiện đối với building thuộc building overlay phát sinh tương tự với building của IPostMap, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của IPostMap.
 
 <!-- tabs:start -->
 #### ** Swift **

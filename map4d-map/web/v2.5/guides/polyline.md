@@ -5,7 +5,7 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
 
 ### 1. Thêm một Polyline
 
-Hàm khởi tạo của lớp **map4d.Polyline** cần truyền vào một đối tượng **map4d.PolylineOptions** để xác định các thuộc tính
+Hàm khởi tạo của lớp **ipostmap.Polyline** cần truyền vào một đối tượng **ipostmap.PolylineOptions** để xác định các thuộc tính
 ban đầu của Polyline.
 
 Các đối tượng **Polyline** được vẽ dưới dạng các đoạn thẳng trên bản đồ nối các điểm mà bạn truyền vào thông qua tham số

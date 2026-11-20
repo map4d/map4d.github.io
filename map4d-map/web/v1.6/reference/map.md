@@ -2,7 +2,7 @@
 
 ## Map class
 
-`map4d.Map` class
+`ipostmap.Map` class
 
 **Constructor** 
 
@@ -69,7 +69,7 @@ Map(container, options)
 
 ## MapOptions interface
 
-`map4d.MapOptions` interface
+`ipostmap.MapOptions` interface
 
 Đối tượng MapOptions dùng để xác định các thuộc tính dùng cho Map. [Chi tiết](/guides/map-options?id=map-options)
 
@@ -95,7 +95,7 @@ interface MapOptions {
 
 Để thiết lập vị trí của bảng điều khiển ta sử dụng **ControlOptions**
 
-`map4d.ControlOptions` enum
+`ipostmap.ControlOptions` enum
 
 ```javascript
 enum ControlOptions {
@@ -117,7 +117,7 @@ enum ControlOptions {
 
 Định nghĩa các kiểu thời tiết để thiết lập cho Map.
 
-`map4d.Weather` enum
+`ipostmap.Weather` enum
 
 ```javascript
 enum Weather {
@@ -135,7 +135,7 @@ enum Weather {
 Định nghĩa interface để lấy dữ liệu thời tiết từ server khi thiết lập kiểu thời tiết `Live`. Các kiểu thời tiết khác thì
 không cần đến interface này.
 
-`map4d.WeatherProvider` interface
+`ipostmap.WeatherProvider` interface
 
 ```javascript
 interface WeatherProvider {
@@ -155,7 +155,7 @@ interface WeatherProvider {
 
 Định nghĩa các kiểu thời gian để thiết lập cho Map.
 
-`map4d.TimeEffect` enum
+`ipostmap.TimeEffect` enum
 
 ```javascript
 enum TimeEffect {
@@ -172,7 +172,7 @@ enum TimeEffect {
 
 Định nghĩa interface lắng nghe sự kiện trên Map.
 
-`map4d.MapsEventListener` interface
+`ipostmap.MapsEventListener` interface
 
 ```javascript
 interface MapsEventListener {
@@ -185,7 +185,7 @@ interface MapsEventListener {
 
 Định nghĩa tất cả các sự kiện của Map.
 
-`map4d.MapEvent` enum
+`ipostmap.MapEvent` enum
 
 ```javascript
 enum MapEvent {
@@ -213,7 +213,7 @@ enum MapEvent {
 
 Định nghĩa các option cho các sự kiện của Map.
 
-`map4d.EventOptions` interface
+`ipostmap.EventOptions` interface
 
 ```javascript
 interface EventOptions {
@@ -233,7 +233,7 @@ interface EventOptions {
 
 Định nghĩa giao diện quy định khoảng trống cho các đối tượng trong Map theo 4 hướng.
 
-`map4d.PaddingOptions` interface
+`ipostmap.PaddingOptions` interface
 
 ```javascript
 interface PaddingOptions {
@@ -248,7 +248,7 @@ interface PaddingOptions {
 
 Định nghĩa giao diện giúp làm cho chuyển động camera của Map được đẹp mắt hơn.
 
-`map4d.AnimationOptions` interface
+`ipostmap.AnimationOptions` interface
 
 ```javascript
 interface AnimationOptions {
@@ -272,7 +272,7 @@ interface AnimationOptions {
 - **bearing**: góc quay của camera.
 - **zoom**: mức zoom của camera.
 
-`map4d.CameraPosition` class
+`ipostmap.CameraPosition` class
 
 ```javascript
 class CameraPosition {
@@ -289,7 +289,7 @@ class CameraPosition {
 
 ## ICameraPosition
 
-`map4d.ICameraPosition` type
+`ipostmap.ICameraPosition` type
 
 ```javascript
 type ICameraPosition  = CameraPosition | {target?: ILatLng, tilt?: number, bearing?: number, zoom?: number}
@@ -297,7 +297,7 @@ type ICameraPosition  = CameraPosition | {target?: ILatLng, tilt?: number, beari
 
 ## Projection class
 
-`map4d.Projection` class
+`ipostmap.Projection` class
 
 **Constructor** 
 

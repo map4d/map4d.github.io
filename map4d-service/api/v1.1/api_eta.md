@@ -4,7 +4,7 @@ Tính toán khoảng cách thời gian giữa các điểm xuất phát và mộ
 Phương thức: **POST**
 ## 1. Input (Đầu vào)
 ```
-http://api.map4d.vn/sdk/route/eta?key={key}
+http://api.ipostmap.vn/sdk/route/eta?key={key}
 ```
 ```
 Content-Type: application/json
@@ -28,7 +28,7 @@ Request body:
 ```
 | Parameter   | Required | Description                                                                                                                                                                                                                                                                                                    |
 |-------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key         | **Yes**      | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/my-access-key/add để tạo key.                                                                                                                              |
+| key         | **Yes**      | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.ipostmap.vn/user/my-access-key/add để tạo key.                                                                                                                              |
 | origins     | **Yes**      | Gồm tên và vị trí lat, lng của điểm bắt đầu. <br>Gởi request từ 2 địa điểm trở lên.                                                                                                                                                                                                                            |
 | alias       | **Yes**      | Tên địa điểm tương ứng vị trí lat, lng.                                                                                                                                                                                                                                                                        |
 | location    | **Yes**      | Vị trí lat, lng của điểm bắt đầu. VD:16.024634,108.209217                                                                                                                                                                                                                                                      |

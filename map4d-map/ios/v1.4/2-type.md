@@ -1,4 +1,4 @@
-# Type Public Map4D-SDK
+# Type Public IPostMap-SDK
 
   ``` swift
     // Type definitions for map4dsdk
@@ -257,7 +257,7 @@
   @end
   
   @interface MFServices : NSObject
-    + (BOOL)provideAccessKey:(NSString *) accessKey __deprecated_msg("This method will be removed in future versions.  Please provide access key in Info.plist with string key: 'Map4dMapAccessKey'");
+    + (BOOL)provideAccessKey:(NSString *) accessKey __deprecated_msg("This method will be removed in future versions.  Please provide access key in Info.plist with string key: 'IpostMapAccessKey'");
   @end
   
   @interface MFBuilding : MFOverlay

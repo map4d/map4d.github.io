@@ -1,7 +1,7 @@
 #  ETA(Dự kiến thời gian đến)
 ## 1. Input(Đầu vào)
 ```
-https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}
+https://api.ipostmap.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}
 key và mode là thuộc tính bắc buộc.
 origins: là danh sách vị trí của từng xe lat,lng của địa điểm bắt đầu. vd:[{"alias":"Xe 1", "location":{16.024634,108.209217}},{"alias":"Xe 2", "location":{16.094266,108.225059}}]
 destination: là vị trí lat,lng của địa điểm kết thúc. vd:16.020179,108.211212
@@ -45,6 +45,6 @@ duration.text: là mô tả thời gian xe đến vị trí đích
 duration.value: là khoản thời gian đơn vị là giây tới vị trí đích
 polyline: là đường đi từng điểm dưới dạng mã hóa polyline làm tròn 5 ký tự
 ```
-[![CocoaPods](../resources/route.png)](https://map4d.vn)
+[![CocoaPods](../resources/route.png)](https://ipostmap.vn)
 [Ví dụ](./examples/v1.0/eta.html)
 <iframe src="./examples/v1.0/eta.html"> </iframe>

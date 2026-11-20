@@ -62,7 +62,7 @@ public class MFPolygon extends Annotation {
 
   private void addPolygonToMap() {
 	createPointsList();
-	polygon = map4D.addPolygon(new MFPolygonOptions()
+	polygon = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new LatLng[pointsList.size()]))
 	        .fillColor("#0000ff")
 	        .alpha(0.5f));
@@ -105,7 +105,7 @@ Ví dụ
   private void addPolygonToMap() {
 	createHole();
 	createPointsList();
-	polygon = map4D.addPolygon(new MFPolygonOptions()
+	polygon = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new LatLng[pointsList.size()]))
 	        .addHole(holePath.toArray(new LatLng[holePath.size()]))
 	        .fillColor("#0000ff")
@@ -132,7 +132,7 @@ Ví dụ
 Phát sinh khi người dùng click vào polygon
 
 ```java
-map4D.setOnPolygonClickListener(new Map4D.OnPolygonClickListener() {
+ipostmap.setOnPolygonClickListener(new IPostMap.OnPolygonClickListener() {
     @Override
     public void onPolygonClick(MFPolygon polygon) {
         Toast.makeText(getApplicationContext(), "Clicked Polygon: ID " + polygon.getId(), Toast.LENGTH_SHORT).show();

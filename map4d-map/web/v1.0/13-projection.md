@@ -4,7 +4,7 @@ Lớp Projection cho phép người dùng thực hiện các phép chiếu
 ## 1. Khởi tạo lớp Projection
 
 ```javascript
-  let projection = new map4d.Projection(map)
+  let projection = new ipostmap.Projection(map)
 ```
 
 ## 2. Chuyển đổi từ toạ độ LatLng sang toạ độ Screen

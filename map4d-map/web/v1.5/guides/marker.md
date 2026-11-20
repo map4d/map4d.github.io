@@ -4,7 +4,7 @@ Marker dùng để xác định một vị trí trên bản đồ. Cho phép ng�
 
 ### 1. Thêm một marker
 
-Hàm khởi tạo của lớp **map4d.Marker** cần truyền vào một đối tượng **map4d.MarkerOptions** để định nghĩa các thuộc tính ban đầu của
+Hàm khởi tạo của lớp **ipostmap.Marker** cần truyền vào một đối tượng **ipostmap.MarkerOptions** để định nghĩa các thuộc tính ban đầu của
 Marker. 
 
 Đối tượng **MarkerOptions** được định nghĩa như sau:
@@ -117,7 +117,7 @@ Khi tạo một marker bạn có thể chỉ định thuộc tính **label** tro
 
 <iframe src="//jsfiddle.net/duydung2007/zgn9te67/embedded/" style="min-width: 914px;" height="380px"></iframe>
 
-Như đoạn mã tạo maker với label ở trên, ta có label là một đối tượng **map4d.MarkerLabel** với các thuộc tính text là
+Như đoạn mã tạo maker với label ở trên, ta có label là một đối tượng **ipostmap.MarkerLabel** với các thuộc tính text là
 **Text**, màu chữ là màu đen và kích thước là 12.
 
 ### 4. Tạo một Marker có thể kéo được trên bản đồ

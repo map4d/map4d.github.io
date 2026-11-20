@@ -1,7 +1,7 @@
 # Ground Overlay
 > Ground Overlay cho phép người dùng thực hiện việc thay thế tile ở một khu vực nào đó bằng tile từ những nguồn khác.  
 > Ground Overlay tương tự với [Tile Overlay](guides/tile-overlay.md) nhưng cho phép người dùng quy định 1 khu vực cụ thể gắn với kinh độ/vĩ độ,  
-> ngoài ra con cho phép người dùng loại bỏ việc hiển thị tile và các đối tượng thuộc tile của Map4D SDK.  
+> ngoài ra con cho phép người dùng loại bỏ việc hiển thị tile và các đối tượng thuộc tile của IPostMap SDK.  
 
 > Ground Overlay rất hữu ích khi bạn muốn sửa hình ảnh tại một số khu vực trên bản đồ.
 
@@ -9,7 +9,7 @@
 
 ## MFGroundOverlay
 
-Map4dMap SDK cung cấp một react view MFGroundOverlay để hiển thị ground overlay lên bản đồ.  
+IpostMap SDK cung cấp một react view MFGroundOverlay để hiển thị ground overlay lên bản đồ.  
 
 ### Usage
 Để sử dụng, ta import `MFGroundOverlay` từ thư viện `react-native-map4d-map` như sau:
@@ -55,7 +55,7 @@ Sau đó add vào [MFMapView](guides/mapview.md) như 1 subview:
 |-------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | urlTemplate | string  | Mẫu đường dẫn trỏ tới server tile, có dạng: https://example.com/{z}/{x}/{y}.png<br>Chuỗi {z}, {x}, {y} sẽ được thay thế trong quá trình request tile.                       |
 | bounds      | [CoordinateBounds](#CoordinateBounds) | Khu vực sẽ hiển thị ground overlay.                                                                                                           |
-| override    | bool    | Nếu bằng `true`, tại khu vực hiển thị ground overlay thì các đối tượng của Map4D sẽ không được hiển thị.<br>Bao gồm: base map, poi và building. Giá trị mặc định là `fasle` |
+| override    | bool    | Nếu bằng `true`, tại khu vực hiển thị ground overlay thì các đối tượng của IPostMap sẽ không được hiển thị.<br>Bao gồm: base map, poi và building. Giá trị mặc định là `fasle` |
 | visible     | bool    | Set `false` nếu không muốn hiển thị ground overlay lên bản đồ, mặc định là `true`.                                                                                          |
 | zIndex      | number  | Xác định thứ tự hiển thị giữa các ground overlay với nhau hoặc với tile overlay.                                                                                            |
 

@@ -1,4 +1,4 @@
-# Type Public Map4D-SDK
+# Type Public IPostMap-SDK
 
 ```javascript
 // Type definitions for map4dsdk 1.0

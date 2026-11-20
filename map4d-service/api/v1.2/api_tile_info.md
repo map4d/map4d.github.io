@@ -1,18 +1,18 @@
 # Tile (Lấy thông tin của tile)
-Map4D API cung cấp dữ liệu nền địa lý ở dạng "raster".
+IPostMap API cung cấp dữ liệu nền địa lý ở dạng "raster".
 
 Phương thức: **GET**
 
 Bản đồ nền
-[![Tile](../resources/tile.png)](https://map4d.vn)
+[![Tile](../resources/tile.png)](https://ipostmap.vn)
 
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/tile/raster/{z}/{x}/{y}?key={key}&mode={mode}
+https://api.ipostmap.vn/sdk/tile/raster/{z}/{x}/{y}?key={key}&mode={mode}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.map4d.vn/developer/key/add để tạo key. |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.ipostmap.vn/developer/key/add để tạo key. |
 | z         | **Yes**  | Mức zoom của map.                                                                                                                                                                 |
 | x         | **Yes**  | Tọa độ x (Giá trị x).                                                                                                                                                             |
 | y         | **Yes**  | Tọa độ y (Giá trị y).                                                                                                                                                             |
@@ -26,4 +26,4 @@ Trả về nội dung mã hóa file ảnh dạng .PNG.
 
 **Ví dụ**
 
-https://api.map4d.vn/sdk/tile/raster/7/102/58?model=2d&key=samplekey
+https://api.ipostmap.vn/sdk/tile/raster/7/102/58?model=2d&key=samplekey

@@ -2,7 +2,7 @@
 
 ## POI Class
 
-`map4d.POI` class
+`ipostmap.POI` class
 
 **Constructor** 
 
@@ -48,7 +48,7 @@ POI(options)
 
 ## POI Options
 
-`map4d.POIOptions` interface
+`ipostmap.POIOptions` interface
 
 Đối tượng POIOptions dùng để xác định các thuộc tính dùng cho POI.
 

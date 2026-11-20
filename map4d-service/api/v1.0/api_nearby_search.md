@@ -1,11 +1,11 @@
 #  Nearby Search (Tìm kiếm lân cận)
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/place/nearby-search?key={key}&location={location}&radius={radius}&text={text}&types={types}&tags={tags}&datetime={datetime}&accuracy={accuracy}
+https://api.ipostmap.vn/sdk/place/nearby-search?key={key}&location={location}&radius={radius}&text={text}&types={types}&tags={tags}&datetime={datetime}&accuracy={accuracy}
 ```
 | Parameter |Required| Description                                                                                           |
 |-----------|--------|-------------------------------------------------------------------------------------------------------|
-| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key |
+| key       |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.ipostmap.vn/user/access-key/add để tạo key |
 | location  |Yes     | tọa độ lat, lng tại địa điểm mà bạn muốn tìm, vd: 16.036505,108.218186                              |
 | radius    |Yes     | bán kính tìm dữ liệu xung quanh đơn vị là mét, các địa điểm trong bán kính này sẽ được ưu tiên hơn (không ràng buộc) |
 | text      |No      | nội dung muốn tìm                                                                                  |
@@ -30,8 +30,7 @@ Lưu ý: Cần phải có ít nhất 1 trong `text` hoặc `types` hoặc `tags`
       },
       "types": [
         "string"
-      ],
-      "distance": 123.4
+      ]
     }
   ]
 }
@@ -46,7 +45,6 @@ Lưu ý: Cần phải có ít nhất 1 trong `text` hoặc `types` hoặc `tags`
 | address   |Yes    | địa chỉ của địa điểm. VD: 31 Lê Văn Duyệt, Phường Nai Hiên Đông, Quận Sơn Trà, Thành phố Đà Nẵng      |                                                                       |
 | location  |Yes    | vị trí đặt địa điểm (lat là vĩ độ theo bản đồ GCS, lng là kinh độ theo bản đồ GCS)                    |
 | types     |Yes    | danh sách các loại đối tượng của địa điểm. VD: cafe, restaurant...                                                         |
-| distance     |No    | Số đo khoảng cách từ vị trí nhập vào đến địa điểm hiện tại, tính theo đường chim bay, đơn vị là mét.|
 
 **Ví dụ**
 <iframe src="./examples/v1.0/nearbysearch.html" height="650px"  width: 80%> </iframe>

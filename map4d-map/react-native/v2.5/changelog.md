@@ -10,7 +10,7 @@ Những thay đổi kể từ version 2.4.2
 
 #### Changed
 
-- Nâng version Map4dMap SDK lên 2.2+
+- Nâng version IpostMap SDK lên 2.2+
 
 <!-- #### Deprecated -->
 <!-- #### Removed -->

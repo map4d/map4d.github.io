@@ -14,7 +14,7 @@ Những thay đổi kể từ version 2.1.1
 
 #### Changed
 
-- Hỗ trợ Map4dMap Android SDK version 2.0.9
+- Hỗ trợ IpostMap Android SDK version 2.0.9
 
 ## Version 2.1.1
 

@@ -55,7 +55,7 @@ Lớp Polyline cho phép người dùng vẽ một polyline lên bản đồ.
 
 ```javascript
   //tạo đối tượng polyline từ PolylineOptions
-  let polyline = new map4d.Polyline({
+  let polyline = new ipostmap.Polyline({
         path: [
           [106.699380, 10.772431],
           [106.700147, 10.773201],
@@ -79,7 +79,7 @@ Trong map sdk có một thuộc tính gọi là **closed** khi cài đặt là t
 
 ```javascript
   //tạo đối tượng polyline từ PolylineOptions
-  let polyline = new map4d.Polyline({
+  let polyline = new ipostmap.Polyline({
         path: [
           [106.699380, 10.772431],
           [106.700147, 10.773201],
@@ -104,7 +104,7 @@ Default là solid (nét liền)
 
 ```javascript
   //tạo đối tượng polyline từ PolylineOptions
-  let polyline = new map4d.Polyline({
+  let polyline = new ipostmap.Polyline({
         path: [
           [106.699380, 10.772431],
           [106.700147, 10.773201],
@@ -169,7 +169,7 @@ Ngoài ra map4d SDK còn hỗ trợ các loại sự kiện khác như: long cli
 **Ví dụ:**
 
 ```javascript
-	let polylineA = new map4d.Polyline({
+	let polylineA = new ipostmap.Polyline({
 	  path: [
 		[106.699380, 10.772431],
 		[106.700147, 10.773201]
@@ -178,7 +178,7 @@ Ngoài ra map4d SDK còn hỗ trợ các loại sự kiện khác như: long cli
 	})
 	polylineA.setMap(this.map)
 
-	let polylineB = new map4d.Polyline({
+	let polylineB = new ipostmap.Polyline({
 	  path: [
 		[106.699380, 10.772431],
 		[106.700147, 10.773201]
@@ -194,7 +194,7 @@ Như ví dụ ở trên thì polylineA sẽ đè lên polylineB vì nó có zInd
 **Ví dụ:**
 
 ```javascript
-	let polylineA = new map4d.Polyline({
+	let polylineA = new ipostmap.Polyline({
 	  path: [
 		[106.699380, 10.772431],
 		[106.700147, 10.773201]
@@ -203,7 +203,7 @@ Như ví dụ ở trên thì polylineA sẽ đè lên polylineB vì nó có zInd
 	})
 	polylineA.setMap(this.map)
 
-	let polylineB = new map4d.Polyline({
+	let polylineB = new ipostmap.Polyline({
 	  path: [
 		[106.699380, 10.772431],
 		[106.700147, 10.773201]

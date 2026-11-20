@@ -40,7 +40,7 @@ Lớp Polyline cho phép người dùng vẽ một polyline lên bản đồ.
 
 ```javascript
   //tạo đối tượng polyline từ PolylineOptions
-  let polyline = new map4d.Polyline({
+  let polyline = new ipostmap.Polyline({
         path: [
           [10.772431, 106.699380],
           [10.773201, 106.700147],

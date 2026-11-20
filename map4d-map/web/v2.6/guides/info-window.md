@@ -6,7 +6,7 @@ Thông thường sẽ đính kèm một cửa sổ thông tin vào một **marke
 
 ### 1. Thêm một InfoWindow
 
-Hàm khởi tạo của lớp **map4d.InfoWindow** cần truyền vào một đối tượng **map4d.InfoWindowOptions** để định nghĩa các thuộc tính ban đầu của
+Hàm khởi tạo của lớp **ipostmap.InfoWindow** cần truyền vào một đối tượng **ipostmap.InfoWindowOptions** để định nghĩa các thuộc tính ban đầu của
 InfoWindow. 
 
 Đối tượng **InfoWindowOptions** được định nghĩa như sau:

@@ -86,7 +86,7 @@ private void createLatLngBounds() {
   private void addMarkersToMap() {
       int numMarkersInRainbow = 12;
       for (int i = 0; i < numMarkersInRainbow; i++) {
-          MFMarker marker = map4D.addMarker(new MFMarkerOptions()
+          MFMarker marker = ipostmap.addMarker(new MFMarkerOptions()
                   .position(new LatLng(
                           10 + 0.8 * Math.sin(i * Math.PI / (numMarkersInRainbow - 1)),
                           106 - 0.8 * Math.cos(i * Math.PI / (numMarkersInRainbow - 1))))
@@ -97,7 +97,7 @@ private void createLatLngBounds() {
           markersList.add(marker);
       }
       View view = createMarkerView();
-      MFMarker markerView = map4D.addMarker(new MFMarkerOptions()
+      MFMarker markerView = ipostmap.addMarker(new MFMarkerOptions()
               .position(new LatLng(13.0006, 106.784))
               .title("Marker  13")
               .snippet(13.0006f + ", " + 106.784f)
@@ -110,8 +110,8 @@ private void createLatLngBounds() {
     for (MFMarker marker : markersList) {
       builder.include(marker.getPosition());
     }
-    MFCameraPosition cameraPosition = map4D.getCameraPositionForLatLngBounds(builder.build(), 10);
-    map4D.moveCamera(MFCameraUpdateFactory.newCameraPosition(cameraPosition));
+    MFCameraPosition cameraPosition = ipostmap.getCameraPositionForLatLngBounds(builder.build(), 10);
+    ipostmap.moveCamera(MFCameraUpdateFactory.newCameraPosition(cameraPosition));
   }
 ```
 

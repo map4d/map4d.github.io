@@ -2,7 +2,7 @@
 
 ## Polygon Class
 
-`map4d.Polygon` class
+`ipostmap.Polygon` class
 
 **Constructor** 
 
@@ -46,7 +46,7 @@ Polygon(options)
 
 ## Polygon Options
 
-`map4d.PolygonOptions` interface
+`ipostmap.PolygonOptions` interface
 
 Đối tượng PolygonOptions dùng để xác định các thuộc tính dùng cho Polygon.
 

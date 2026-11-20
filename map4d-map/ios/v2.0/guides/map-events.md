@@ -1,6 +1,6 @@
 # Map events
 
-> **Map4D iOS SDK** cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
+> **IPostMap iOS SDK** cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
 
   ##  Giới thiệu chung
 
@@ -59,7 +59,7 @@
     marker.position = coordinate
     marker.icon = UIImage(named: "iconLocation")
     marker.groundAnchor = CGPoint(x: 0.5, y: 1.0)
-    marker.title = "Map4D"
+    marker.title = "IPostMap"
     marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
     marker.map = mapView
   }
@@ -73,7 +73,7 @@
     [marker setPosition: coordinate];
     [marker setGroundAnchor: CGPointMake(0.5, 1.0)];
     [marker setIcon: [UIImage imageNamed:@"iconLocation"]];
-    [marker setTitle: @"Map4D"];
+    [marker setTitle: @"IPostMap"];
     [marker setSnippet: @"An Hải Bắc, Sơn Trà, Đà Nẵng"];
     [marker setMap:mapView];
   }

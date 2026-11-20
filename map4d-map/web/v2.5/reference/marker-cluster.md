@@ -2,7 +2,7 @@
 
 ## Marker Clusterer Class
 
-`map4d.MarkerClusterer` class
+`ipostmap.MarkerClusterer` class
 
 **Constructor** 
 
@@ -25,7 +25,7 @@ MarkerClusterer(Marker[], options)
 
 ## Marker Clusterer Options
 
-`map4d.MarkerOptions` interface
+`ipostmap.MarkerOptions` interface
 
 Đối tượng MarkerClusterOptions dùng để xác định các thuộc tính dùng cho MarkerClusterer.
 

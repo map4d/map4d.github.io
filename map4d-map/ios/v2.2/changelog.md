@@ -6,7 +6,7 @@ Những thay đổi kể từ version 2.1.1
 
 #### Added
 
-- Thêm mới [MFMapID](reference/map?id=mfmapid) và cho phép [tạo MFMapView với MFMapID](reference/map?id=_1-constructor) để thay đổi [style map](https://map.map4d.vn/developer/mapstyle)
+- Thêm mới [MFMapID](reference/map?id=mfmapid) và cho phép [tạo MFMapView với MFMapID](reference/map?id=_1-constructor) để thay đổi [style map](https://map.ipostmap.vn/developer/mapstyle)
 - Thêm mới `color` properties cho [MFPOI](reference/poi?id=properties)
 - Thêm mới `color` properties cho [MFPOIData](reference/poi-overlay?id=mfpoidata-class)
 - Thêm mới `strokePattern` properties cho [MFPolyline](reference/polyline?id=properties)

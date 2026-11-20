@@ -55,7 +55,7 @@ Lớp Circle cho phép người dùng vẽ một Circle lên map.
 
 ```javascript
   //tạo đối tượng circle từ CircleOptions
-  let circle = new map4d.Circle({
+  let circle = new ipostmap.Circle({
         center: {lat: 10.773201, lng: 106.700147},
         fillColor: "#ff0000",
         radius: 100,
@@ -75,7 +75,7 @@ Ta có thể vẽ viền của đường tròn thông qua thuộc tính **stroke
 
 ```javascript
   //tạo đối tượng circle từ CircleOptions
-  let circle = new map4d.Circle({
+  let circle = new ipostmap.Circle({
         center: {lat: 10.773201, lng: 106.700147},
         fillColor: "#ff0000",
         radius: 100,
@@ -141,13 +141,13 @@ bằng true thì sẽ dựa vào index để vẽ, zIndex càng lớn càng vẽ
 **Ví dụ:**
 
 ```javascript
-	let circleA = new map4d.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 50, bringFrontBuilding: true, zIndex: 15, draggable: true,
+	let circleA = new ipostmap.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 50, bringFrontBuilding: true, zIndex: 15, draggable: true,
       fillColor: "#0000ff", strokeWidth: 5})
 
     //thêm circle vào map
     circleA.setMap(this.map)
 	
-	let circleB = new map4d.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100, bringFrontBuilding: true, zIndex: 10, draggable: true,
+	let circleB = new ipostmap.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100, bringFrontBuilding: true, zIndex: 10, draggable: true,
       fillColor: "#ff0000", strokeWidth: 5})
 
     //thêm circle vào map
@@ -160,13 +160,13 @@ Như ví dụ ở trên thì circleA sẽ đè lên circleB vì nó có zIndex l
 **Ví dụ:**
 
 ```javascript
-	let circleA = new map4d.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100, bringFrontBuilding: true, zIndex: 10, draggable: true,
+	let circleA = new ipostmap.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 100, bringFrontBuilding: true, zIndex: 10, draggable: true,
       fillColor: "#0000ff", strokeWidth: 5})
 
     //thêm circle vào map
     circleA.setMap(this.map)
 	
-	let circleB = new map4d.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 50, bringFrontBuilding: true, zIndex: 10, draggable: true,
+	let circleB = new ipostmap.Circle({center: {lat: 10.773201, lng: 106.700147}, radius: 50, bringFrontBuilding: true, zIndex: 10, draggable: true,
       fillColor: "#ff0000", strokeWidth: 5})
 
     //thêm circle vào map

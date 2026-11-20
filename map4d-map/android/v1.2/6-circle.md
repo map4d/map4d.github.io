@@ -51,7 +51,7 @@ public class MFCircle extends Annotation {
 - Tạo circle from MFCircleOptions 
 
 ```java
- MFCircle circle = map4D.addCircle(new MFCircleOptions()
+ MFCircle circle = ipostmap.addCircle(new MFCircleOptions()
                         .center(new MFLocationCoordinate(16.066517, 108.210354))
                         .radius(500)
                         .fillColor("#00ff00")
@@ -69,7 +69,7 @@ Như ví dụ trên thì chúng ta tạo một Circle với các tùy chỉnh nh
 ![CocoaPods](../resources/6-circle-stroke.jpg)
 
 ```java
- MFCircle circle = map4D.addCircle(new MFCircleOptions()
+ MFCircle circle = ipostmap.addCircle(new MFCircleOptions()
                         .center(new MFLocationCoordinate(16.066517, 108.210354))
                         .radius(300)
                         .fillColor("#ffaabb")
@@ -88,7 +88,7 @@ Như ví dụ trên thì chúng ta tạo một Circle với các tùy chỉnh nh
 Phát sinh khi người dùng click vào circle
 
 ```java
-map4D.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
+ipostmap.setOnCircleClickListener(new IPostMap.OnCircleClickListener() {
     @Override
     public void onCircleClick(MFCircle mfCircle) {
         Toast.makeText(getApplicationContext(), "Circle clicked:  " + mfCircle.getId(), Toast.LENGTH_SHORT).show();
@@ -112,12 +112,12 @@ map4D.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
 - zIndex: Circle nào có zIndex lớn hơn sẽ ưu tiên hiển thị trước, zIndex càng lớn càng sẽ được vẽ sau.
 
 ```java
-  MFCircle circleA = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleA = ipostmap.addCircle(new MFCircleOptions()
                           .center(new MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500)
                           .fillColor("#00ff00")
                           .zIndex(10.f));
-  MFCircle circleB = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleB = ipostmap.addCircle(new MFCircleOptions()
                           .center(new MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500)
                           .fillColor("#00ff00")
@@ -126,11 +126,11 @@ map4D.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
 - CircleA sẽ được vẽ đè lên vì zIndex của nó lớn hơn zIndex của circleB.
 
 ```java
-  MFCircle circleA = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleA = ipostmap.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor("#00ff00"));
-  MFCircle circleB = map4D.addCircle(new MFCircleOptions()
+  MFCircle circleB = ipostmap.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor("#00ff00"));

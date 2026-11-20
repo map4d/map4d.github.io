@@ -76,7 +76,7 @@ fun createPointsList() {
 
 fun addPolygonToMap() {
   createPointsList();
-  val polygon = map4D.addPolygon(
+  val polygon = ipostmap.addPolygon(
     MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .strokeColor(ContextCompat.getColor(context ?: return, R.color.green))
@@ -101,7 +101,7 @@ addPolygonToMap()
 
   private void addPolygonToMap() {
 	createPointsList();
-	polygon = map4D.addPolygon(new MFPolygonOptions()
+	polygon = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .strokeColor(ContextCompat.getColor(this, R.color.green))
             .strokeWidth(2)
@@ -147,7 +147,7 @@ fun createHole() {
 fun addPolygonToMap() {
   createHole();
   createPointsList();
-  val polygon = map4D.addPolygon(MFPolygonOptions()
+  val polygon = ipostmap.addPolygon(MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .addHole(*holePath.toTypedArray())
     .fillColor(ContextCompat.getColor(context ?: return, R.color.blueWithdAlphaFiftyPercent)))
@@ -180,7 +180,7 @@ addPolygonToMap()
   private void addPolygonToMap() {
 	createHole();
 	createPointsList();
-	polygon = map4D.addPolygon(new MFPolygonOptions()
+	polygon = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .addHole(holePath.toArray(new MFLocationCoordinate[holePath.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.blueWithdAlphaFiftyPercent)));
@@ -246,7 +246,7 @@ map4D?.setOnPolygonClickListener {polygon ->
 
 #### ** Java **
 ```java
-map4D.setOnPolygonClickListener(new Map4D.OnPolygonClickListener() {
+ipostmap.setOnPolygonClickListener(new IPostMap.OnPolygonClickListener() {
     @Override
     public void onPolygonClick(MFPolygon polygon) {
         Toast.makeText(getApplicationContext(), "Clicked Polygon: ID " + polygon.getId(), Toast.LENGTH_SHORT).show();
@@ -277,12 +277,12 @@ fun createPointsList() {
 
 fun addPolygonToMap() {
   createPointsList()
-  val polygonA = map4D.addPolygon(MFPolygonOptions()
+  val polygonA = ipostmap.addPolygon(MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .fillColor(Color.RED)
     .zIndex(10f))
 
-  val polygonB = map4D.addPolygon(MFPolygonOptions()
+  val polygonB = ipostmap.addPolygon(MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .fillColor(Color.BLUE)
     .zIndex(2f))
@@ -305,12 +305,12 @@ addPolygonToMap()
 
   private void addPolygonToMap() {
 	createPointsList();
-	MFPolygon polygonA = map4D.addPolygon(new MFPolygonOptions()
+	MFPolygon polygonA = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.red))
 	        .zIndex(10.f));
 
-	MFPolygon polygonB = map4D.addPolygon(new MFPolygonOptions()
+	MFPolygon polygonB = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.blue))
 	        .zIndex(2.f);
@@ -361,11 +361,11 @@ addPolygonToMap()
 
   private void addPolygonToMap() {
 	createPointsList();
-	MFPolygon polygonA = map4D.addPolygon(new MFPolygonOptions()
+	MFPolygon polygonA = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.red)));
 
-	MFPolygon polygonB = map4D.addPolygon(new MFPolygonOptions()
+	MFPolygon polygonB = ipostmap.addPolygon(new MFPolygonOptions()
 	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
 	        .fillColor(ContextCompat.getColor(this, R.color.green)));
   }

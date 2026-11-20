@@ -1,4 +1,4 @@
-# Cài đặt hiệu ứng Map4dMap Android SDK
+# Cài đặt hiệu ứng IpostMap Android SDK
 
 ## 1. Hiệu ứng mặt nước
 - Hiệu ứng mặt nước sẽ tạo các gợn sóng lăn tăn tại những nơi là sông hoặc biển. 
@@ -12,7 +12,7 @@ void setWaterEffectEnabled(boolean enabled);
 ```
 
 ```java
-map4D.setWaterEffectEnabled(false);
+ipostmap.setWaterEffectEnabled(false);
 ```
 
 License

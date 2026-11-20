@@ -34,7 +34,7 @@
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
   latLngList.add(new MFLocationCoordinate(16.067218, 108.213916));
 
-  polyline = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(ContextCompat.getColor(this, R.color.red))
                 .width(8);
 ```

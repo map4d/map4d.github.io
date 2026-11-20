@@ -2,7 +2,7 @@
 
 ### 1. Tạo một Polygon
 
-Hàm khởi tạo của lớp **map4d.Polygon** cần truyền vào một đối tượng **map4d.PolygonOptions** để xác định các thuộc tính
+Hàm khởi tạo của lớp **ipostmap.Polygon** cần truyền vào một đối tượng **ipostmap.PolygonOptions** để xác định các thuộc tính
 ban đầu của Polygon.
 
 Một Polygon thể hiện cho một khu vực được bao quanh bởi một đường khép kín, được xác định bởi một mảng các tọa độ ILatLng.

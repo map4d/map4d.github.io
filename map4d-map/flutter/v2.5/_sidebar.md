@@ -1,7 +1,7 @@
-- [Getting Started](/ "Map4dMap Flutter Package")
+- [Getting Started](/ "IpostMap Flutter Package")
 - [Changelog](changelog.md)
 - [API Reference](https://pub.dev/documentation/map4d_map/latest/)
-- [Examples](https://github.com/map4d/map4d-map-flutter/tree/master/example)
+- [Examples]([https://github.com/ipostmap/map4d-map-flutter/tree/master/example](https://github.com/map4d/map4d-map-flutter/tree/master/example))
 
 - Interacting with the Map
   - [Map View Widget](guides/mapview.md)

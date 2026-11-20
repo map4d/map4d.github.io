@@ -1,6 +1,6 @@
 # Image Overlay
 
-Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên Map4D.
+Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên IPostMap.
 
 ![Image Overlay](../../resources/image-overlay.png)
 
@@ -10,7 +10,7 @@ Image Overlay là một loại overlay cho phép người dùng hiển thị m�
 
 ### Tạo mới Tile overlay
 
-Đoạn code bên dưới hướng dẫn cách sử dụng [MFImageOverlay](reference/tile-overlay?id=mfimageoverlay-class) để hiển thị một hình ảnh lên Map4D:
+Đoạn code bên dưới hướng dẫn cách sử dụng [MFImageOverlay](reference/tile-overlay?id=mfimageoverlay-class) để hiển thị một hình ảnh lên IPostMap:
 
 <!-- tabs:start -->
 #### ** Swift **

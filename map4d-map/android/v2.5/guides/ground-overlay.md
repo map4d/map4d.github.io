@@ -2,7 +2,7 @@
 
 Ground Overlay cho phép người dùng thực hiện việc thay thế tile ở một khu vực nào đó bằng tile từ những nguồn khác.  
 Ground Overlay tương tự với Tile Overlay nhưng cho phép người dùng quy định 1 khu vực cụ thể gắn với kinh độ/vĩ độ, ngoài
-ra còn cho phép người dùng loại bỏ việc hiển thị tile và các đối tượng thuộc tile của Map4dMap Android SDK.
+ra còn cho phép người dùng loại bỏ việc hiển thị tile và các đối tượng thuộc tile của IpostMap Android SDK.
 
 Ground Overlay rất hữu ích khi bạn muốn sửa hình ảnh tại một số khu vực trên bản đồ.
 
@@ -34,19 +34,19 @@ zoom tương ứng. Sau đó bạn thêm **Ground Overlay** vào Map như sau:
     
     3. `bounds(MFCoordinateBounds)` : xác định vùng giới hạn để vẽ các hình ảnh tile của Ground Overlay. 
     
-    4. `override(boolean)` : quy định các tile của Ground Overlay có thay thế cho các tile của Map4D hay không.
+    4. `override(boolean)` : quy định các tile của Ground Overlay có thay thế cho các tile của IPostMap hay không.
 
     5. `visible(boolean)` : cho phép Ground Overlay ẩn hay hiện sau khi add vào Map.
 
     6. `zIndex(double)` : xác định giá trị zIndex cho Ground Overlay.
 
-4. Gọi `Map4D.addGroundOverlay()` để thêm Ground Overlay vào Map.
+4. Gọi `IPostMap.addGroundOverlay()` để thêm Ground Overlay vào Map.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private IPostMap map4D;
 
 MFGroundProvider groundProvider = new MFUrlGroundProvider() {
     @Override
@@ -58,7 +58,7 @@ MFGroundProvider groundProvider = new MFUrlGroundProvider() {
     }
 };
 
-MFGroundOverlay groundOverlay = map4D.addGroundOverlay(
+MFGroundOverlay groundOverlay = ipostmap.addGroundOverlay(
     new MFGroundOverlayOptions()
         .bounds(new MFCoordinateBounds(
             new MFLocationCoordinate(16.057814922971613, 108.22065353393553),
@@ -69,7 +69,7 @@ MFGroundOverlay groundOverlay = map4D.addGroundOverlay(
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map4D: IPostMap
 
 var groundProvider: MFGroundProvider = object : MFUrlGroundProvider() {
     override fun getGroundUrl(x: Int, y: Int, zoom: Int, _3dMode: Boolean): String? {
@@ -79,7 +79,7 @@ var groundProvider: MFGroundProvider = object : MFUrlGroundProvider() {
     }
 }
 
-val groundOverlay = map4D.addGroundOverlay(
+val groundOverlay = ipostmap.addGroundOverlay(
     MFGroundOverlayOptions()
         .bounds(MFCoordinateBounds(
             MFLocationCoordinate(16.057814922971613, 108.22065353393553),
@@ -129,7 +129,7 @@ groundOverlay.setZIndex(9)
 Gọi phương thức `MFGroundOverlay.setVisible()` để ẩn/hiện Ground Overlay.  
 **Chú ý:**
 - Mặc dù Ground Overlay không hiển thị nhưng quá trình tải các tile vẫn diễn ra khi kéo map đến khu vực quy định cho Ground Overlay.
-- Trong trường hợp set `override` là `true` nhưng lại `visible` là `false` thì ground không được hiển thị và khu vực đó cũng không thể hiển thị dữ liệu của Map4D.
+- Trong trường hợp set `override` là `true` nhưng lại `visible` là `false` thì ground không được hiển thị và khu vực đó cũng không thể hiển thị dữ liệu của IPostMap.
 
 <!-- tabs:start -->
 #### ** Java **

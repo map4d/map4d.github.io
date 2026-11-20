@@ -1,6 +1,6 @@
 # Tài liệu được viết với Swift 4.2
 
-# Cài đặt Map4D-SDK
+# Cài đặt IPostMap-SDK
 
 ## 1. Cài đặt
 
@@ -29,7 +29,7 @@
       //....
       }
     ```
-    - Tạo 1 view chứa MAP4D.
+    - Tạo 1 view chứa ipostmap.
     ```swift
       import UIKit
       import map4dsdk
@@ -55,10 +55,10 @@
   - Ở chế độ 3D minZoom = 17
     ```swift
       // setMode = 3D
-      map4d.enable3dMode(true)
+      ipostmap.enable3dMode(true)
 
       // set Mode = 2D
-      map4d.enable3dMode(false)
+      ipostmap.enable3dMode(false)
     ```
 ## 4. Các chế độ chuyển đổi mode 2D và 3D 
 
@@ -122,7 +122,7 @@
 
 ## 6. Di chuyển map
 
-  - Map4D SDK hỗ trợ người dùng di chuyển tới một vị trí camera mới thông qua 2 hàm animate và move
+  - IPostMap SDK hỗ trợ người dùng di chuyển tới một vị trí camera mới thông qua 2 hàm animate và move
 
   #### 6.1. Animate tới một vị trí mới
   

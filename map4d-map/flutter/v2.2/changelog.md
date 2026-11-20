@@ -10,7 +10,7 @@ Những thay đổi kể từ version 2.1.3
 
 #### Changed
 
-- Hỗ trợ Map4dMap SDKs version >= 2.1.0
+- Hỗ trợ IpostMap SDKs version >= 2.1.0
 
 #### Deprecated
 

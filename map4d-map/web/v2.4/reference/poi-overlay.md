@@ -2,7 +2,7 @@
 
 ## POIOverlay class
 
-`map4d.POIOverlay` class
+`ipostmap.POIOverlay` class
 
 **Constructor** 
 
@@ -27,7 +27,7 @@ POIOverlay(options)
 
 ## POIOverlayOptions interface
 
-`map4d.POIOverlayOptions` interface
+`ipostmap.POIOverlayOptions` interface
 
 Đối tượng POIOverlayOptions đùng để xác định các thuộc tính dùng cho POIOverlay.
 
@@ -42,7 +42,7 @@ POIOverlay(options)
 
 ## POIData interface
 
-`map4d.POIData` interface
+`ipostmap.POIData` interface
 
 Đối tượng POIData dùng để xác định các thuộc tính của POI
 

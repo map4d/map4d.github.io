@@ -2,7 +2,7 @@
 
 ## BuildingOverlay class
 
-`map4d.BuildingOverlay` class
+`ipostmap.BuildingOverlay` class
 
 **Constructor** 
 
@@ -26,7 +26,7 @@ BuildingOverlay(options)
 
 ## BuildingOverlayOptions interface
 
-`map4d.BuildingOverlayOptions` interface
+`ipostmap.BuildingOverlayOptions` interface
 
 Đối tượng BuildingOverlayOptions đùng để xác định các thuộc tính dùng cho BuildingOverlay.
 
@@ -41,7 +41,7 @@ BuildingOverlay(options)
 
 ## BuildingData interface
 
-`map4d.BuildingData` interface
+`ipostmap.BuildingData` interface
 
 Đối tượng BuildingData dùng để xác định các thuộc tính của building
 

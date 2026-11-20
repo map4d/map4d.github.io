@@ -2,7 +2,7 @@
 
 ## ImageOverlay class
 
-`map4d.ImageOverlay` class
+`ipostmap.ImageOverlay` class
 
 **Constructor** 
 
@@ -28,7 +28,7 @@ ImageOverlay(options)
 
 ## ImageOverlayOptions interface
 
-`map4d.ImageOverlayOptions` interface
+`ipostmap.ImageOverlayOptions` interface
 
 Đối tượng ImageOverlayOptions đùng để xác định các thuộc tính dùng cho ImageOverlay.
 

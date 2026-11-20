@@ -66,7 +66,7 @@ public final class MFPolyline extends Annotation {
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
   latLngList.add(new MFLocationCoordinate(16.067218, 108.213916));
 
-  polyline = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(ContextCompat.getColor(this, R.color.blueWithAlpha))
                 .width(8);
 ```
@@ -85,7 +85,7 @@ Ví dụ trên thì chúng ta tạo một polyline từ danh sách các tọa đ
   latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
 
-  polyline = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color("#0000ff")
                 .width(8)
                 .alpha(0.3f)
@@ -98,7 +98,7 @@ Ví dụ trên thì chúng ta tạo một polyline từ danh sách các tọa đ
 Phát sinh khi người dùng click vào polyline
 
 ```java
-  map4D.setOnPolylineClickListener(new Map4D.OnPolylineClickListener() {
+  ipostmap.setOnPolylineClickListener(new IPostMap.OnPolylineClickListener() {
     @Override
     public void onPolylineClick(MFPolyline polyline) {
         Toast.makeText(getApplicationContext(), "clicked Polyline: id " + polyline.getId(), Toast.LENGTH_SHORT).show();
@@ -129,12 +129,12 @@ Phát sinh khi người dùng click vào polyline
     latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
     latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
     
-    MFPolylineA polylineA = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    MFPolylineA polylineA = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blue))
                     .width(8)
                     .zIndex(5.f));
                     
-    MFPolyline polylineB = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    MFPolyline polylineB = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blue))
                     .width(8)
                     .zindex(10.f));
@@ -153,12 +153,12 @@ Như ví dụ ở trên thì polylineB sẽ đè lên polylineA vì nó có zInd
     latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
     latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
     
-    MFPolylineA polylineA = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    MFPolylineA polylineA = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blueWithAlpha))
                     .width(8)
                     .zIndex(5.f));
                     
-    MFPolyline polylineB = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    MFPolyline polylineB = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blueWithAlpha))
                     .width(8)
                     .zindex(5.f));

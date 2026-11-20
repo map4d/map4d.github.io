@@ -34,7 +34,7 @@ Lớp MFPOI cho phép người dùng vẽ một POI lên map.
 ```swift
   let poi = MFPOI()
   poi.position = CLLocationCoordinate2DMake(16.07558896533373, 108.2243013381958)
-  poi.title = "Map4D Cafe"
+  poi.title = "IPostMap Cafe"
   poi.zIndex = 2
   poi.type = "cafe"
   poi.titleColor = UIColor.red

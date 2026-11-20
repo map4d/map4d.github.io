@@ -5,9 +5,9 @@
 
 ```java
   @Override
-  public void onMapReady(Map4D map4D) {
-      map4D.enable3DMode(true); // bật chế độ 3D
-      map4D.enable3DMode(false); // tắt chế độ 3D chuyển về 2D
+  public void onMapReady(IPostMap map4D) {
+      ipostmap.enable3DMode(true); // bật chế độ 3D
+      ipostmap.enable3DMode(false); // tắt chế độ 3D chuyển về 2D
   }
 ```
 - **enable3dMode**: 
@@ -26,7 +26,7 @@ Nếu bạn cài đặt thời gian cho map là 1/1/2017 thì tất cả các đ
   SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
   try {
     Date mDate = sdf.parse(givenDateString);
-    map4D.setTime(mDate);
+    ipostmap.setTime(mDate);
   } catch (ParseException e) {
   }
 ```
@@ -36,8 +36,8 @@ Sự kiện click phát sinh khi người dùng click lên đối tượng 3D
 
 ```java
     @Override
-    public void onMapReady(Map4D map4D) {
-        map4D.setOnObjectClickListener(new Map4D.OnObjectClickListener() {
+    public void onMapReady(IPostMap map4D) {
+        ipostmap.setOnObjectClickListener(new IPostMap.OnObjectClickListener() {
             @Override
             public void onObjectClick(MFObject object) {
                 txtMapState.setText("Object:   " + object.getName());

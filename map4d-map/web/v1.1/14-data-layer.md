@@ -1,5 +1,5 @@
 # Data layer
-map4d cung cấp tính năng dùng để hiển thị dữ liệu không gian địa lý tùy ý. Bạn có thể sử dụng Data layer để vẽ GeoJSON lên bản đồ map4d.
+map4d cung cấp tính năng dùng để hiển thị dữ liệu không gian địa lý tùy ý. Bạn có thể sử dụng Data layer để vẽ GeoJSON lên bản đồ ipostmap.
 
 ## 1. Thêm feature vào data layer
 
@@ -102,16 +102,16 @@ Lưu ý: Hiện tại data layer chỉ hỗ trợ các kiểu sau:
 Ngoài ra chúng ta có thể sử dụng hàm **add** để thêm từng feature vào data layer.
 
 ```javascript
-let geometry = new map4d.Data.LineString([[10.83802680397086, 106.62574768066405],
+let geometry = new ipostmap.Data.LineString([[10.83802680397086, 106.62574768066405],
       [10.814421958289003, 106.6278076171875], [10.814421958289003, 106.66248321533203]])
 let properties = {stroke: "#ff0000"}
-let feature = this.map.data.add(new map4d.Data.Feature(1, geometry, properties))
+let feature = this.map.data.add(new ipostmap.Data.Feature(1, geometry, properties))
 ```
 
 Ta có thể thêm feature theo cách sau
 
 ```javascript
-let geometry = new map4d.Data.LineString([[10.83802680397086, 106.62574768066405],
+let geometry = new ipostmap.Data.LineString([[10.83802680397086, 106.62574768066405],
       [10.814421958289003, 106.6278076171875], [10.814421958289003, 106.66248321533203]])
 let properties = {stroke: "#ff0000"}
 let feature = this.map.data.add({id: 1, geometry: geometry, properties: properties})
@@ -161,7 +161,7 @@ class MultiLineString implements Geometry {
 Để xóa feature khỏi data layer chúng ta sử dụng hàm **remove**
 
 ```javascript
-let geometry = new map4d.Data.LineString([[10.83802680397086, 106.62574768066405],
+let geometry = new ipostmap.Data.LineString([[10.83802680397086, 106.62574768066405],
       [10.814421958289003, 106.6278076171875], [10.814421958289003, 106.66248321533203]])
 let properties = {stroke: "#ff0000"}
 // Thêm feature vào data layer

@@ -1,8 +1,8 @@
-# Map4D SDK
+# IPostMap SDK
 
-Map4D SDK for iOS, written in C/C++, Objective C.
+IPostMap SDK for iOS, written in C/C++, Objective C.
 
-[![Map4D iOS SDK](../resources/Untitled-1_0000_Right-Mockup--phone-demo.png)](https://map4d.vn) 
+[![IPostMap iOS SDK](../resources/Untitled-1_0000_Right-Mockup--phone-demo.png)](https://ipostmap.vn) 
 
 ## Installation
 
@@ -15,7 +15,7 @@ pod repo update
 
 2. Add to Podfile
 ```shell
-pod 'Map4dMap'
+pod 'IpostMap'
 ```
 
 ## Using
@@ -23,7 +23,7 @@ pod 'Map4dMap'
 1. Provide access key from Info.plist
 
 ```xml
-<key>Map4dMapAccessKey</key>
+<key>IpostMapAccessKey</key>
 <string>{your_key}</string>
 ```
 
@@ -31,7 +31,7 @@ pod 'Map4dMap'
 
 ```swift
 import UIKit
-import Map4dMap
+import IpostMap
 class ViewController: UIViewController {
   
     override func viewDidLoad() {

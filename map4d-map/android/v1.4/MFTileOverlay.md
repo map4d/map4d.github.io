@@ -66,7 +66,7 @@ public interface MFTileProvider {
       }
   });
 
-  map4D.addTileOverlay(tileOverlayOptions);
+  ipostmap.addTileOverlay(tileOverlayOptions);
 ```
 
 License

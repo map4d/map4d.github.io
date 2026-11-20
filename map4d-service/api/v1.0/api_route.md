@@ -1,11 +1,11 @@
 #  Route (Tìm đường đi nhanh nhất giữa các địa điểm)
 ## 1. Input (Đầu vào)
 ```
-https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}
+https://api.ipostmap.vn/sdk/route?key={key}&origin={origin}&destination={destination}&points={points}&mode={mode}&language={language}&weighting={weighting}
 ```
 | Parameter  |Required| Description                                                                                                           |
 |------------|--------|-----------------------------------------------------------------------------------------------------------------------|
-| key        |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.map4d.vn/user/access-key/add để tạo key |
+| key        |Yes     | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.ipostmap.vn/user/access-key/add để tạo key |
 | origin     |Yes      | vị trí lat, lng của địa điểm bắt đầu. VD:16.024634,108.209217                                                      |
 | destination|Yes      | vị trí lat,lng của địa điểm kết thúc. VD:16.020179,108.211212                                                      |
 | points     |No      | danh sách các điểm trung gian muốn đi qua. VD:16.039173,108.210912;16.044597,108.217263                                 |
@@ -114,7 +114,7 @@ https://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destinatio
 | summary       |Yes    | tóm lược đường đi                                                                                  |
 | snappedWaypoints|Yes  | danh sách các điểm đi qua trên đường, từ địa điểm bắt đầu và điểm đi qua tới điểm kết thúc          |
 
-[![Route](../resources/route.png)](https://map4d.vn)
+[![Route](../resources/route.png)](https://ipostmap.vn)
 
 **Ví dụ**
 <iframe src="./examples/v1.0/route.html" height="600px"> </iframe>

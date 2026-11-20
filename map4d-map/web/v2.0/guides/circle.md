@@ -1,10 +1,10 @@
 # Circle
 
-Nếu bạn muốn vẽ một hình tròn lên bản đồ, thì Map4D SDK cung cấp cho bạn lớp **map4d.Circle** để thực hiện điều đó.
+Nếu bạn muốn vẽ một hình tròn lên bản đồ, thì IPostMap SDK cung cấp cho bạn lớp **ipostmap.Circle** để thực hiện điều đó.
 
 ### 1. Thêm một Circle
 
-Để tạo một đối tượng **Circle** bạn cần truyền một đối tượng **map4d.CircleOptions** vào hàm khởi tạo của lớp **map4d.Circle**.
+Để tạo một đối tượng **Circle** bạn cần truyền một đối tượng **ipostmap.CircleOptions** vào hàm khởi tạo của lớp **ipostmap.Circle**.
 Đối tượng **CircleOptions** này chứa các thông tin về tọa độ tâm, màu sắc, bán kính, độ trong suốt và đường viền cũng như
 màu đường viền của Circle.
 

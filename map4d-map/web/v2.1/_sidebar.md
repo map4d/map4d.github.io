@@ -1,4 +1,4 @@
-- [Overview](/ "Map4dMap JavaScript SDK")
+- [Overview](/ "IpostMap JavaScript SDK")
 - [Changelog](changelog.md)
 - [Using Typescript](guides/using-typescript.md)
 

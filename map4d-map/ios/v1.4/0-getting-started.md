@@ -1,6 +1,6 @@
 # Tài liệu được viết với Swift 4.2
 
-# Cài đặt Map4D-SDK
+# Cài đặt IPostMap-SDK
 
 ## 1. Cài đặt
 
@@ -11,14 +11,14 @@ pod repo update
 ```
     - Thêm vào podfile
 ```ruby
-pod 'Map4dMap'
+pod 'IpostMap'
 ```
   - Cách dùng:
     - Cung cấp access key:
     - Right click info.plist -> Open as -> Source Code sau đó thêm accesskey vào:
     
     ```
-      <key>Map4dMapAccessKey</key>
+      <key>IpostMapAccessKey</key>
       <string>98fd21346d83bee24dc734231f7609c9</string>
     ```
     - Hoặc click vào info.plist thêm access key như hình:
@@ -28,7 +28,7 @@ pod 'Map4dMap'
     - Tạo 1 view chứa MAP4D
     ```swift
       import UIKit
-      import Map4dMap
+      import IpostMap
       
       class ViewController: UIViewController {
         override func viewDidLoad() {
@@ -93,7 +93,7 @@ pod 'Map4dMap'
 
 ## 5. Di chuyển map
 
-  - Map4D SDK hỗ trợ người dùng di chuyển tới một vị trí camera mới thông qua 2 hàm animate và move.
+  - IPostMap SDK hỗ trợ người dùng di chuyển tới một vị trí camera mới thông qua 2 hàm animate và move.
 
     ```swift
     func animateCamera(_ cameraUpdate: MFCameraUpdate!)

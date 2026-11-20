@@ -1,6 +1,6 @@
-# Map4D Map React Component
+# IPostMap Map React Component
 
-> Map4dMap React Native cung cấp `MFMapView` dưới dạng một React Component để hiển thị Map4d.
+> IpostMap React Native cung cấp `MFMapView` dưới dạng một React Component để hiển thị ipostmap.
 
 
 ## MFMapView Component
@@ -11,11 +11,11 @@
 |:---:|-------------------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 |  1  | camera                  | [CameraShape](#CameraShape) | Vị trí của camera trên bản đồ.                                                                                                |
 |  2  | mapType                 | string                      | Kiểu hiển thị của bản đồ, `roadmap`, `raster`, `satellite` hoặc `map3d`                                                       |
-|  3 | mapID                   | string                      | Set mapID cho bản đồ. Sử dụng để tùy chỉnh [style](https://map.map4d.vn/developer/mapstyle).                                   |
+|  3 | mapID                   | string                      | Set mapID cho bản đồ. Sử dụng để tùy chỉnh [style](https://map.ipostmap.vn/developer/mapstyle).                                   |
 |  4  | showsMyLocationButton   | bool                        | Ẩn hoặc hiển thị nút vị trí của tôi                                                                                           |
 |  5  | showsMyLocation         | bool                        | Ẩn hoặc hiển thị vị trí của tôi.<br>Bật tính năng này yêu cầu thêm quyền vị trí đối với cả Android và iOS.                    |
-|  6  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D của Map4D (ở chế độ 3D).                                                                    |
-|  7  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm của Map4D (ở chế độ 2D).                                                                        |
+|  6  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D của IPostMap (ở chế độ 3D).                                                                    |
+|  7  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm của IPostMap (ở chế độ 2D).                                                                        |
 |  8  | onMapReady              | func                        | Được gọi khi bản đồ sẵn sàng để sử dụng.                                                                                      |
 |  9  | [onPress](#onPress)     | func                        | Được gọi khi người dùng tap trên bản đồ (không phải tap vào địa điểm, building hay annotations).                              |
 |  10  | [onPoiPress](#onPoiPress)                 | func      | Được gọi khi người dùng tap vào địa điểm trên bản đồ (không phải POI annotation)                                             |

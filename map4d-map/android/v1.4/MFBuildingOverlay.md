@@ -61,16 +61,16 @@ public class MFBuildingOverlay extends MFLayerOverlay {
     MFBuildingOverlayOptions buildingOverlayOptions = new MFBuildingOverlayOptions().buildingProvider(new MFBuildingProvider() {
         @Override
         public String getTile(int x, int y, int zoom) {
-            return "https://api.map4d.vn/sdk/tile/v2/" + zoom + "/" + x + "/" + y + "?key=98fd21346d83bee24dc734231f7609c9&mode=3d";
+            return "https://api.ipostmap.vn/sdk/tile/v2/" + zoom + "/" + x + "/" + y + "?key=98fd21346d83bee24dc734231f7609c9&mode=3d";
         }
     });
     
-    MFBuildingOverlay buildingOverlay = map4D.addBuildingOverlay(buildingOverlayOptions);
+    MFBuildingOverlay buildingOverlay = ipostmap.addBuildingOverlay(buildingOverlayOptions);
 ```
 
 
 ## 3. API Response
-Để sử dụng được tính năng Building Overlay trên Map4D Map SDK, bạn cần 1 API nhận 3 thông số của một `Map Tile` là `x`, `y`, `zoom` và dữ liệu trả về kiểu `JSON` theo cấu trúc sau:
+Để sử dụng được tính năng Building Overlay trên IPostMap Map SDK, bạn cần 1 API nhận 3 thông số của một `Map Tile` là `x`, `y`, `zoom` và dữ liệu trả về kiểu `JSON` theo cấu trúc sau:
 
 ```json
 {

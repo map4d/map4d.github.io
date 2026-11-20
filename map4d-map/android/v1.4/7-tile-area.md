@@ -88,7 +88,7 @@ public class MFTileArea {
   private void addTileAreaToMap() {
     createLatLngBounds();
     if (map4D != null && latLngBounds != null && tileArea == null) {
-        tileArea = map4D.addTileArea(new MFTileAreaOptions()
+        tileArea = ipostmap.addTileArea(new MFTileAreaOptions()
                 .bounds(latLngBounds)
                 .mapUrl("http://a.tile.openstreetmap.org/{z}/{x}/{y}.png")
                 .minZoom(5.)

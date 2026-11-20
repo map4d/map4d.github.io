@@ -2,7 +2,7 @@
 
 ## WebGLOverlayView class
 
-`map4d.WebGLOverlayView` class
+`ipostmap.WebGLOverlayView` class
 
 **Constructor** 
 
@@ -20,11 +20,11 @@ WebGLOverlayView(options)
 | Name           | Parameters                              | Return Value | Description                                                                                    |
 |----------------|-----------------------------------------|--------------|------------------------------------------------------------------------------------------------|
 | **setMap**     | map: [Map](/reference/map?id=map-class) | `none`       | Set WebGL Overlay View lên map, nếu set map là null thì WebGL Overlay View sẽ bị xóa khỏi map  |
-| **requestRedraw**| `none`                                | `none`       | Request vẽ lại đối tượng WebGL Overlay View để không bị hạn chế FPS bởi Map4D, phù hợp khi render các model có animation |
+| **requestRedraw**| `none`                                | `none`       | Request vẽ lại đối tượng WebGL Overlay View để không bị hạn chế FPS bởi IPostMap, phù hợp khi render các model có animation |
 
 ## WebGLOverlayViewOptions interface
 
-`map4d.WebGLOverlayViewOptions` interface
+`ipostmap.WebGLOverlayViewOptions` interface
 
 Đối tượng WebGLOverlayViewOptions dùng để xác định các thuộc tính dùng cho WebGLOverlayView.
 
@@ -39,7 +39,7 @@ WebGLOverlayView(options)
 
 ## WebGLPositionData interface
 
-`map4d.WebGLPositionData` interface
+`ipostmap.WebGLPositionData` interface
 
 Đối tượng WebGLPositionData dùng để xác định các thuộc tính vị trí của đối tượng WebGLOverlayView
 

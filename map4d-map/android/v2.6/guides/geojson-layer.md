@@ -1,6 +1,6 @@
 # GeoJson Layer
 
-Map4D Android SDK cung cấp GeoJson layer cho phép người dùng hiển thị dữ liệu địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
+IPostMap Android SDK cung cấp GeoJson layer cho phép người dùng hiển thị dữ liệu địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
 
 ![CocoaPods](../../resources/geojson-layer.png)
 
@@ -8,7 +8,7 @@ Map4D Android SDK cung cấp GeoJson layer cho phép người dùng hiển thị
 
 Để thêm một GeoJSON layer vào map, trước tiên cần tạo mới 1 đối tượng của lớp [MFGeoJsonOptions](/reference/geojson-layer?id=geojson-options) để
 định nghĩa các thuộc tính ban đầu của lớp GeoJSON.
-Sau đó ta gọi phương thức `addGeoJson` của lớp `Map4D`. Đối tượng trả về sau khi gọi phương thức `addGeoJson` là một [MFGeoJson](/reference/geojson-layer?id=geojson-class)
+Sau đó ta gọi phương thức `addGeoJson` của lớp `IPostMap`. Đối tượng trả về sau khi gọi phương thức `addGeoJson` là một [MFGeoJson](/reference/geojson-layer?id=geojson-class)
 
 Ví dụ sau đây thêm một GeoJson layer vào bản đồ ở tọa độ `16.073420650938914, 108.22404093434358`
 
@@ -16,7 +16,7 @@ Ví dụ sau đây thêm một GeoJson layer vào bản đồ ở tọa độ `1
 #### ** Kotlin **
 
 ```kotlin
-override fun onMapReady(map4D: Map4D) {  
+override fun onMapReady(map4D: IPostMap) {  
     val jsonString = """{
       "type": "FeatureCollection",
       "features": [
@@ -111,7 +111,7 @@ override fun onMapReady(map4D: Map4D) {
       val geoJsonOptions = MFGeoJsonOptions()
         .geoJson(JSONObject(jsonString))
         .pointStyle(MFGeoJsonPointStyle(MFBitmapDescriptorFactory.fromResource(R.drawable.default_marker)))
-      val geoJson = map4D.addGeoJson(geoJsonOptions)
+      val geoJson = ipostmap.addGeoJson(geoJsonOptions)
     } catch (e: Exception) {
       e.printStackTrace()
     }  
@@ -121,7 +121,7 @@ override fun onMapReady(map4D: Map4D) {
 
 ```java
 @Override  
-public void onMapReady(final Map4D map4D) {  
+public void onMapReady(final IPostMap map4D) {  
     String jsonString = "{\n" +
 	  "  \"type\": \"FeatureCollection\",\n" +
 	  "  \"features\": [\n" +
@@ -215,7 +215,7 @@ public void onMapReady(final Map4D map4D) {
 		MFGeoJsonOptions geoJsonOptions = new MFGeoJsonOptions()
 		  .geoJson(new JSONObject(jsonString))
 		  .pointStyle(new MFGeoJsonPointStyle(MFBitmapDescriptorFactory.fromResource(R.drawable.default_marker)));
-		MFGeoJson geoJson = map4D.addGeoJson(geoJsonOptions);
+		MFGeoJson geoJson = ipostmap.addGeoJson(geoJsonOptions);
 	} catch (Exception e) {
 		e.printStackTrace();
 	}  
@@ -269,13 +269,13 @@ option `pointStyle` của đối tượng `MFGeoJsonOptions` trước khi thêm 
 
 #### ** Kotlin **
 ```kotlin
-  map4D.setOnGeoJsonClickListener { geoJson, feature ->
+  ipostmap.setOnGeoJsonClickListener { geoJson, feature ->
     Log.e("Events", "GeoJson feature clicked: " + feature.id)
   }
 ```
 #### ** Java **
 ```java
-  map4D.setOnGeoJsonClickListener(new Map4D.OnGeoJsonClickListener() {
+  ipostmap.setOnGeoJsonClickListener(new IPostMap.OnGeoJsonClickListener() {
 	@Override
 	public void onGeoJsonClick(@NonNull MFGeoJson geoJson, @NonNull MFGeoJsonFeature feature) {
 	  Log.e("Events", "GeoJson feature clicked: " + feature.getId());

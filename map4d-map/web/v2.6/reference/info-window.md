@@ -2,7 +2,7 @@
 
 ## InfoWindow Class
 
-`map4d.InfoWindow` class
+`ipostmap.InfoWindow` class
 
 **Constructor** 
 
@@ -30,7 +30,7 @@ InfoWindow(options)
 | **getZIndex**                | `none`                                  | number       | Get giá trị zIndex hiện tại của InfoWindow                                                                  |
 
 ## InfoWindow Options
-`map4d.InfoWindowOptions` interface
+`ipostmap.InfoWindowOptions` interface
 
 Đối tượng InfoWindowOptions dùng để xác định các thuộc tính dùng cho InfoWindow.
 
@@ -47,14 +47,14 @@ InfoWindow(options)
 
 ## IInfoWindowOpenOptions
 
-`map4d.IInfoWindowOpenOptions` type
+`ipostmap.IInfoWindowOpenOptions` type
 
 ```js
 type IInfoWindowOpenOptions = InfoWindowOpenOptions | Map
 ```
 
 ## InfoWindow Open Options
-`map4d.InfoWindowOpenOptions` interface
+`ipostmap.InfoWindowOpenOptions` interface
 
 Đối tượng InfoWindowOptions dùng để mở InfoWindow
 

@@ -54,14 +54,14 @@ public final class MFMarker extends Annotation {
 ![CocoaPods](../resources/3-marker.png)
 
 ```java
-map4D.addMarker(new MFMarkerOptions().position(new LatLng(10.771666, 106.704405)));
+ipostmap.addMarker(new MFMarkerOptions().position(new LatLng(10.771666, 106.704405)));
 ```
 
 Như ví dụ trên thì chúng ta tạo một marker ở vị trí (10.771666, 106.704405) tính theo LatLng với icon là mặc định.
 Nếu muốn truyền vào icon khác thì dùng như sau:
 
 ```java
-map4D.addMarker(new MFMarkerOptions()
+ipostmap.addMarker(new MFMarkerOptions()
     .position(new LatLng(10.771666, 106.704405))
     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.markerIcon)));
 ```
@@ -81,7 +81,7 @@ public final class MFBitmapDescriptorFactory {
 ## 3. Tạo marker với icon view
 
 ```java
-MFMarker markerView = map4D.addMarker(new MFMarkerOptions()
+MFMarker markerView = ipostmap.addMarker(new MFMarkerOptions()
             .position(new LatLng(13.0006, 106.784))
             .iconView(view));
 ```
@@ -91,7 +91,7 @@ MFMarker markerView = map4D.addMarker(new MFMarkerOptions()
 Để xóa marker khỏi bản đồ ta sử dụng hàm *remove* 
 
 ```java
-MFMarker marker = map4D.addMarker(new MFMarkerOptions().position(new LatLng(10.771666, 106.704405)));
+MFMarker marker = ipostmap.addMarker(new MFMarkerOptions().position(new LatLng(10.771666, 106.704405)));
 marker.remove();
 ```
 
@@ -100,7 +100,7 @@ marker.remove();
 Phát sinh khi người dùng click vào marker
 
 ```java
-map4D.setOnMarkerClickListener(new Map4D.OnMarkerClickListener() {
+ipostmap.setOnMarkerClickListener(new IPostMap.OnMarkerClickListener() {
     @Override
     public boolean onMarkerClick(MFMarker marker) {
         return false;
@@ -117,7 +117,7 @@ map4D.setOnMarkerClickListener(new Map4D.OnMarkerClickListener() {
 
 - Khi marker có tiêu đề hoặc mô tả (title & snippet), nếu người dùng click vào marker, thông tin marker sẽ được hiển thị dựa vào điểm neo *windowAnchorU* và *windowAnchorV*.
 ```java
-map4D.addMarker(new MFMarkerOptions()
+ipostmap.addMarker(new MFMarkerOptions()
     .position(new LatLng(10.771666, 106.704405))
     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.markerIcon))
     .title("Title")
@@ -137,7 +137,7 @@ public interface InfoWindowAdapter {
 
 - Ví dụ
 ```java
-class CustomInfoWindowAdapter implements Map4D.InfoWindowAdapter {
+class CustomInfoWindowAdapter implements IPostMap.InfoWindowAdapter {
     private final View mWindow;
 
     CustomInfoWindowAdapter() {
@@ -184,13 +184,13 @@ class CustomInfoWindowAdapter implements Map4D.InfoWindowAdapter {
     
 
 	@Override
-    public void onMapReady(Map4D map4D) {
+    public void onMapReady(IPostMap map4D) {
         this.map4D = map4D;
-        map4D.setInfoWindowAdapter(new CustomInfoWindowAdapter());
+        ipostmap.setInfoWindowAdapter(new CustomInfoWindowAdapter());
     }
 }
 ...
-map4D.setInfoWindowAdapter(new CustomInfoWindowAdapter());
+ipostmap.setInfoWindowAdapter(new CustomInfoWindowAdapter());
 ```
 
 License

@@ -60,7 +60,7 @@ public final class MFPolyline extends Annotation {
   latLngList.add(new LatLng(16.059980, 108.211137));
   latLngList.add(new LatLng(16.059516, 108.208358));
 
-  polyline = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new LatLng[latLngList.size()]))
+  polyline = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new LatLng[latLngList.size()]))
                 .color("#0000ff")
                 .width(8)
                 .closed(false)
@@ -77,7 +77,7 @@ Ví dụ trên thì chúng ta tạo một polyline từ danh sách các tọa đ
 Phát sinh khi người dùng click vào polyline
 
 ```java
-  map4D.setOnPolylineClickListener(new Map4D.OnPolylineClickListener() {
+  ipostmap.setOnPolylineClickListener(new IPostMap.OnPolylineClickListener() {
     @Override
     public void onPolylineClick(MFPolyline polyline) {
         Toast.makeText(getApplicationContext(), "clicked Polyline: id " + polyline.getId(), Toast.LENGTH_SHORT).show();

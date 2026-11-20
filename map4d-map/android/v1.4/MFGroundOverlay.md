@@ -45,7 +45,7 @@ public class MFGroundOverlay extends MFLayerOverlay {
     MFGroundOverlayOptions groundOverlayOptions = new MFGroundOverlayOptions().bounds(bounds)
       .mapUrl("https://tile.openstreetmap.de/{z}/{x}/{y}.png");
 
-    map4D.addGroundOverlay(groundOverlayOptions);
+    ipostmap.addGroundOverlay(groundOverlayOptions);
 ```
 
 ```java
