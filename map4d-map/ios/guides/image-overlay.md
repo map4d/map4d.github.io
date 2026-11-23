@@ -2,7 +2,7 @@
 
 Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên iPostMap.
 
-![Image Overlay](../../resources/image-overlay.png)
+![Image Overlay](.././resources/image-overlay.png)
 
 ## Add Image overlay
 

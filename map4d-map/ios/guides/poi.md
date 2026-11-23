@@ -19,7 +19,7 @@ poi.color = red
 poi.map = mapView
 ```
 
-![POI](../../resources/createPOI.png)
+![POI](.././resources/createPOI.png)
 
 
 ### 2. Xóa POI khỏi bản đồ
@@ -60,7 +60,7 @@ poi.type = "atm"
 poi.color = .blue
 ```
 
-![POI](../../resources/customizePOI.png)
+![POI](.././resources/customizePOI.png)
 
 ## API Reference
 

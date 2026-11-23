@@ -19,7 +19,7 @@ building.texture = "https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269a
 building.map = mapView
 ```
 
--  ![Building](../../resources/createBuilding.png)
+-  ![Building](.././resources/createBuilding.png)
 
 
 ### 2. Xóa Building khỏi bản đồ
@@ -54,7 +54,7 @@ building.model = "https://sw-hcm-1.vinadata.vn/v1/AUTH_4486f66f671c41bab0d3dea19
 building.texture = "https://sw-hcm-1.vinadata.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/textures/5ca32c3865863cc894adeb07.jpg"
 ```
 
--  ![Building](../../resources/customizeBuilding.png)
+-  ![Building](.././resources/customizeBuilding.png)
 
 ## API Reference
 

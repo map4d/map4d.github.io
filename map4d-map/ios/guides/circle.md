@@ -23,7 +23,7 @@ circle.fillColor = .blue
 circle.map = mapView
 ```
 
--  ![Circle](../../resources/createCircle.png)
+-  ![Circle](.././resources/createCircle.png)
 
 Bạn có thể tùy chỉnh hình dáng của **Circle** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
 
@@ -53,7 +53,7 @@ circle.strokeWidth = 10.0
 circle.fillColor = .red
 ```
 
--  ![Circle](../../resources/customizeCircle.png)
+-  ![Circle](.././resources/customizeCircle.png)
 
 ## API Reference
 

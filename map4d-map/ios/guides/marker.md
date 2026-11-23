@@ -18,7 +18,7 @@ marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 marker.map = mapView
 ```
 
-![Marker](../../resources/createMaker.png)
+![Marker](.././resources/createMaker.png)
 
 ### 2. Xóa Marker khỏi bản đồ
 
@@ -59,7 +59,7 @@ Nếu bạn muốn tùy chỉnh **Marker** bạn có thể chỉ dùng một **U
 marker.icon = UIImage(named: "iconLocationBlue")
 ```
 
-![Marker](../../resources/setImageMarker.png)
+![Marker](.././resources/setImageMarker.png)
 
 #### Tùy chỉnh hình ảnh cho Marker với UIView
 
@@ -71,7 +71,7 @@ view.backgroundColor = .blue
 marker.iconView = view
 ```
 
-![Marker](../resources/setIconViewMarker.png)
+![Marker](./resources/setIconViewMarker.png)
 
 #### Marker có bảng thông tin
 
@@ -84,7 +84,7 @@ marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 
 Bảng thông tin sẽ được hiển thị **khi người dùng click lên Marker** như hình bên dưới:
 
-![Marker](../../resources/infoWindowMarker.png)
+![Marker](.././resources/infoWindowMarker.png)
 
 ### 5. Kéo Marker di chuyển trên bản đồ
 

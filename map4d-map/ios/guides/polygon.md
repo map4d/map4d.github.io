@@ -21,7 +21,7 @@ polygon.fillColor = .blue
 polygon.map = mapView
 ```
 
-![Polygon](../../resources/createPolygon.png)
+![Polygon](.././resources/createPolygon.png)
 
 Bạn có thể tùy chỉnh hình dáng của **Polygon** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
 
@@ -50,7 +50,7 @@ polygon.strokeWidth = 20.0
 polygon.strokeColor = .lightGray
 ```
 
-![Polygon](../../resources/customizePolygon.png)
+![Polygon](.././resources/customizePolygon.png)
 
 ### 4. Polygon có hole
 
@@ -83,7 +83,7 @@ polygon.strokeColor = .lightGray
 polygon.map = mapView
 ```
 
-![Polygon](../../resources/createPolygonHole.png)
+![Polygon](.././resources/createPolygonHole.png)
 
 ## API Reference
 

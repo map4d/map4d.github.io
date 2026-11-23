@@ -31,7 +31,7 @@ renderer.destinationTitleColor = .brown
 renderer.map = mapView
 ```
 
-![Directions Renderer](../../resources/directions-renderer.jpg)
+![Directions Renderer](.././resources/directions-renderer.jpg)
 
 ### 2. Xóa Directions Renderer khỏi bản đồ
 

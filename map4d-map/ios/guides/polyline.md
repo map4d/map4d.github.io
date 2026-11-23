@@ -20,7 +20,7 @@ polyline.color = .blue
 polyline.map = mapView
 ```
 
--  ![Polyline](../../resources/createPolyline.png)
+-  ![Polyline](.././resources/createPolyline.png)
 
 Bạn có thể tùy chỉnh hình dáng của **Polyline** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
 
@@ -55,7 +55,7 @@ polyline.color = .red
 polyline.strokePattern = MFStrokePattern.dash(length: 5 gap: 5)
 ```
 
--  ![Polyline](../../resources/customizePolyline.png)
+-  ![Polyline](.././resources/customizePolyline.png)
 
 ## API Reference
 
