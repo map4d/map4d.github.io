@@ -12,8 +12,6 @@ Image Overlay là một loại overlay cho phép người dùng hiển thị m�
 
 Đoạn code bên dưới hướng dẫn cách sử dụng [MFImageOverlay](guides/tile-overlay?id=mfimageoverlay-class) để hiển thị một hình ảnh lên IPostMap:
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let bounds = MFCoordinateBounds(coordinate: CLLocationCoordinate2D(latitude: 16.066154, longitude: 108.207276),
                                coordinate1: CLLocationCoordinate2D(latitude: 16.020262, longitude: 108.189487))
@@ -22,59 +20,28 @@ let imageOverlay = MFImageOverlay(image: image!, bounds: bounds)
 imageOverlay.map = mapView
 ```
 
-#### ** Objective-C **
-```objc
-MFCoordinateBounds *bounds = [[MFCoordinateBounds alloc] initWithCoordinate:CLLocationCoordinate2DMake(16.066154, 108.207276)
-                                                                coordinate1:CLLocationCoordinate2DMake(16.020262, 108.189487)];
-UIImage *image = [UIImage imageNamed:@"default_overlay"];
-MFImageOverlay *imageOverlay = [MFImageOverlay imageOverlayWithImage:image bounds:bounds];
-imageOverlay.map = mapView;
-```
-<!-- tabs:end -->
-
 ### Remove image overlay
 
 Để xoá image overlay khỏi map, ta set đối tượng `map` của image overlay về rỗng
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 imageOverlay.map = nil
 ```
-#### ** Objective-C **
-```objc
-imageOverlay.map = nil;
-```
-<!-- tabs:end -->
 
 ### Ẩn/Hiện Image Overlay
 Set giá trị cho thuộc tính `isHidden` để ẩn/hiện image overlay.
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 imageOverlay.isHidden = true
 ```
-#### ** Objective-C **
-```objc
-imageOverlay.isHidden = YES;
-```
-<!-- tabs:end -->
 
 ### Thay đôi độ trong suốt của Image Overlay
 
 Để thay đổi độ trong suốt của hình ảnh, ta set giá trị `opacity` cho đối tượng image overlay.<br>
 Chú ý: opacity chỉ nhận giá trị trong khoảng 0 -> 1
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 imageOverlay.opacity = 0.5
 ```
-#### ** Objective-C **
-```objc
-imageOverlay.opacity = 0.5;
-```
-<!-- tabs:end -->
 
 ## API Reference
 
@@ -98,16 +65,9 @@ Lớp `MFImageOverlay` cung cấp một phương thức static để tạo đố
   - bounds: [MFCoordinateBounds](/guides/coordinates?id=MFCoordinateBounds): vùng tọa độ hiển thị hình ảnh trên IPostMap
 
 Sử dụng
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let imageOverlay = MFImageOverlay(image: image, bounds: bounds)
 ```
-#### ** Objective-C **
-```objc
-MFImageOverlay *imageOverlay = [MFImageOverlay imageOverlayWithImage:image bounds:bounds];
-```
-<!-- tabs:end -->
 
 **Properties**
 

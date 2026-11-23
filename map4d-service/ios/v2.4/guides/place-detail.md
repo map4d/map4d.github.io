@@ -15,8 +15,6 @@ IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_pl
 
 ### Example
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let service = MFPlacesService()
 service.fetchPlaceDetail(withPlaceId: "5c9845df814a9df9d67e5598") { result, error in
@@ -28,22 +26,6 @@ service.fetchPlaceDetail(withPlaceId: "5c9845df814a9df9d67e5598") { result, erro
   print("Name: \(result.name)")
 }
 ```
-
-#### ** Objective-C **
-```objc
-MFPlacesService* service = [[MFPlacesService alloc] init];
-
-[service fetchPlaceDetailWithPlaceId:@"60dd3850f81cb14bc880ed52" completionHandler:^(id<MFPlaceDetailResult> _Nullable result, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"Error code: %@, message: %@", error.code, error.message);
-  }
-
-  if (results != nil) {
-    NSLog(@"Name: %@", result.name);
-  }
-}];
-```
-<!-- tabs:end -->
 
 ## API Reference
 

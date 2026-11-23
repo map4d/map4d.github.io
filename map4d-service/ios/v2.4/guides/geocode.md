@@ -15,8 +15,6 @@ IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_ge
 
 ### Example
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let params = MFGeocodeParams(location: MFLocationComponent(latitude: 16.024634, longitude: 108.209217))
 let service = MFPlacesService()
@@ -29,22 +27,6 @@ service.geocoding(with: params) { results, error in
   print("Results count: \(results.count)")
 }
 ```
-
-#### ** Objective-C **
-```objc
-MFGeocodeParams *params = [[MFGeocodeParams alloc] initWithAddress:@"271 Tran Hung Dao, Da Nang"];
-MFPlacesService* service = [[MFPlacesService alloc] init];
-[service geocodingWithParams:params completionHandler:^(NSArray<id<MFGeocodeResult>> * _Nullable results, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"Error code: %@, message: %@", error.code, error.message);
-  }
-
-  if (results != nil) {
-    NSLog(@"Results count: %lu", results.count);
-  }
-}];
-```
-<!-- tabs:end -->
 
 ## API Reference
 

@@ -9,9 +9,6 @@ hoặc bạn có thể tuỳ chỉnh bằng một hình ảnh khác hoặc tuỳ
 
 Chúng ta thử tạo MFMarker như sau:
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 let marker = MFMarker()
 marker.position = CLLocationCoordinate2D(latitude: 16.072086430034517, longitude: 108.2262037173781)
@@ -21,38 +18,15 @@ marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 marker.map = mapView
 ```
 
-#### ** Objective C **
-
-```objc
-MFMarker *marker = [[MFMarker alloc] init];
-[marker setPosition: CLLocationCoordinate2DMake(16.072086430034517, 108.2262037173781)];
-[marker setIcon: [UIImage imageNamed:@"iconLocation"]];
-[marker setTitle: @"IPostMap"];
-[marker setSnippet: @"An Hải Bắc, Sơn Trà, Đà Nẵng"];
-[marker setMap:mapView];
-```
-
-<!-- tabs:end -->
-
 ![Marker](../../resources/createMaker.png)
 
 ### 2. Xóa Marker khỏi bản đồ
 
 Để xóa **Marker** khỏi bản đồ, chúng ta **set** thuộc tính **map** bằng **nil**
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 marker.map = nil
 ```
-
-#### ** Objective C **
-
-```objc
-[marker setMap: Nil];
-```
-<!-- tabs:end -->
 
 Nếu bạn muốn quản lý một danh sách các **Marker**, bạn nên tạo một **mảng** để chứa các **Marker** đó.
 
@@ -81,19 +55,9 @@ Nếu bạn muốn tùy chỉnh **Marker** bạn có thể chỉ dùng một **U
 
 #### Tùy chỉnh hình ảnh cho Marker với UIImage
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 marker.icon = UIImage(named: "iconLocationBlue")
 ```
-
-#### ** Objective C **
-
-```objc
-[marker setIcon: [UIImage imageNamed:@"iconLocationBlue"]];
-```
-<!-- tabs:end -->
 
 ![Marker](../../resources/setImageMarker.png)
 
@@ -101,22 +65,11 @@ marker.icon = UIImage(named: "iconLocationBlue")
 
 Bạn có thể thay đổi hình ảnh của **Marker** bằng cách tạo một **UIView** và **set** thuộc tính **iconView** bằng **UIView** đã tạo.
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 let view = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0))
 view.backgroundColor = .blue
 marker.iconView = view
 ```
-#### ** Objective C **
-
-```objc
-UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40.0, 40.0)];
-[view setBackgroundColor: [UIColor blueColor]];
-[marker setIconView: view];
-```
-<!-- tabs:end -->
 
 ![Marker](../resources/setIconViewMarker.png)
 
@@ -124,21 +77,10 @@ UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40.0, 40.0)];
 
 Bạn có thể tạo **Marker** chứa bảng thông tin bằng cách chỉ định giá trị cho thuộc tính **title** và **snippet** của **Marker**
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 marker.title = "IPostMap"
 marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 ```
-
-#### ** Objective C **
-
-```objc
-[marker setTitle: @"IPostMap"];
-[marker setSnippet: @"An Hải Bắc, Sơn Trà, Đà Nẵng"];
-```
-<!-- tabs:end -->
 
 Bảng thông tin sẽ được hiển thị **khi người dùng click lên Marker** như hình bên dưới:
 
@@ -148,20 +90,9 @@ Bảng thông tin sẽ được hiển thị **khi người dùng click lên Mar
 
 Để cho phép người dùng có thể kéo một **Marker** tới một vị trí khác trên bản đồ, bạn cần **set** thuộc tính **draggable** bằng **true**
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 marker.draggable = true
 ```
-
-#### ** Objective C **
-
-```objc
-[marker setDraggable: YES];
-```
-
-<!-- tabs:end -->
 
 Ngoài ra bạn có thể gọi phương thức **setDraggable()** của đối tượng **Marker** và truyền vào tham số **true** để bật
 tính năng **draggable** của **Marker** hoặc truyền vào tham số **false** để tắt tính năng **draggable**.
@@ -177,20 +108,9 @@ tính năng **draggable** của **Marker** hoặc truyền vào tham số **fals
 ### Constructor
 
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 let marker = MFMarker()
 ```
-
-#### ** Objective C **
-
-```objc
-MFMarker *marker = [[MFMarker alloc] init];
-```
-
-<!-- tabs:end -->
 
 ### Properties
 
@@ -225,25 +145,11 @@ Marker**
   Phát sinh khi người dùng **touch** vào **Marker**
   </br>Cung cấp thông tin của **Marker** cho người dùng
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   func mapView(_ mapView: MFMapView?, didTap marker: MFMarker?) -> BOOL {
     return true
   }
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  - (BOOL)mapView:(MFMapView *)mapView didTapMarker:(MFMarker *)marker {
-    return YES;
-  }
-  ```
-
-  <!-- tabs:end -->
 
   **true**: cho phép tuỳ chọn lại sự kiện **touch** vào **Marker**
   </br> **false**: sử dụng **event** mặc định là **touch** vào **Marker** hiển thị lên thông tin **Marker**
@@ -253,43 +159,17 @@ Marker**
   Được kích hoạt khi người dùng **set** thuộc tính **draggable** = **true**. Phát sinh khi người dùng giữ **Marker**.
   </br>Cho phép người dùng di chuyển **Marker** trực tiếp trên **map**
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
     func mapView(_ mapView: MFMapView?, didBeginDragging marker: MFMarker?) {}
     func mapView(_ mapView: MFMapView?, didEndDragging marker: MFMarker?) {}
     func mapView(_ mapView: MFMapView?, didDrag marker: MFMarker?) {}
   ```
 
-  #### ** Objective C **
-
-  ```objc
-  - (void)mapView:(MFMapView *)mapView didDragMarker:(MFMarker *)marker {}
-  - (void)mapView:(MFMapView *)mapView didEndDraggingMarker:(MFMarker *)marker {}
-  - (void)mapView:(MFMapView *)mapView didBeginDraggingMarker:(MFMarker *)marker {}
-  ```
-
-  <!-- tabs:end -->
-
   **3. touch
  infoWindow Marker**
 
   Phát sinh khi người dùng **touch** vào bảng thông tin **Marker**. Hiển thị bảng thông tin **Marker**.
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
     func mapView(_ mapView: MFMapView?, didTapInfoWindowOf marker: MFMarker?) {}
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  - (void)mapView:(MFMapView *)mapView didTapInfoWindowOfMarker:(MFMarker *)marker {}
-  ```
-
-  <!-- tabs:end -->

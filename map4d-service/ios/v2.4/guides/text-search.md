@@ -15,8 +15,6 @@ IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_te
 
 ### Example
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let params = MFTextSearchParams(text: "Vietcombank")
 let service = MFPlacesService()
@@ -29,22 +27,6 @@ service.searchText(with: params) { results, error in
   print("Results count: \(results.count)")
 }
 ```
-
-#### ** Objective-C **
-```objc
-MFTextSearchParams *params = [[MFTextSearchParams alloc] initWithText:@"Vietcombank"];
-MFPlacesService* service = [[MFPlacesService alloc] init];
-[service searchTextWithParams:params completionHandler:^(NSArray<id<MFPlaceResult>> * _Nullable results, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"Error code: %@, message: %@", error.code, error.message);
-  }
-
-  if (results != nil) {
-    NSLog(@"Results count: %lu", results.count);
-  }
-}];
-```
-<!-- tabs:end -->
 
 ## API Reference
 

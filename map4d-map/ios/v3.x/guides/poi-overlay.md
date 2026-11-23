@@ -19,8 +19,6 @@ Trong đó:<br>
 
 Đoạn code bên dưới hướng dẫn việc implement [MFPOIURLConstructor](/guides/poi-overlay?id=mfurlpoilayer-class) và sử dụng [MFURLPOILayer](/guides/poi-overlay?id=mfurlpoilayer-class) để hiển thị POI overlay lấy từ `poi-random.herokuapp.com`
 
-<!-- tabs:start -->
-#### ** Swift **
 Implement **MFPOIURLConstructor**
 ```swift
 class POIURLConstructor : NSObject, MFPOIURLConstructor {
@@ -58,142 +56,39 @@ let poiURLConstructor = POIURLConstructor()
 let poiOverlay = MFURLPOILayer(urlConstructor: poiURLConstructor, prefixId: "poi-overlay")
 poiOverlay.map = mapView
 ```
-#### ** Objective-C **
-Implement **MFPOIURLConstructor**
-```objc
-#import <iPostMap/iPostMap.h>
-@interface POIURLConstructor : NSObject<MFPOIURLConstructor>
-@end
-
-@implementation POIURLConstructor
-
-- (NSURL * _Nullable)getPOIUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom {
-  NSString *poiApiUrl = [NSString stringWithFormat:@"https://poi-random.herokuapp.com/poi/%lu/%lu/%lu", zoom, x, y];
-  return [NSURL URLWithString:poiApiUrl];
-}
-
-- (NSArray<MFPOIData *> * _Nullable)parserPOIData:(NSString * _Nonnull)data {
-  @try {
-    NSData* jsonData = [data dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *jsonError;
-    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&jsonError];
-
-    if (jsonObject != nil) {
-      NSArray *places = [jsonObject valueForKey:@"pois"];
-
-      if (places != nil && places.count > 0) {
-        NSMutableArray *poiDatas = [[NSMutableArray alloc] init];
-
-        for (int i = 0; i < places.count; i++) {
-          NSDictionary *place = [places objectAtIndex:i];
-          if (place == nil) {
-            continue;
-          }
-
-          NSString *placeId = [place valueForKey:@"id"];
-          NSString *title = [place valueForKey:@"title"];
-          NSDictionary *positionObject = [place valueForKey:@"position"];
-          if (placeId == nil || title == nil || positionObject == nil) {
-            continue;
-          }
-
-          NSNumber *latObject = [positionObject valueForKey:@"lat"];
-          NSNumber *lngObject = [positionObject valueForKey:@"lng"];
-          if (latObject == nil || lngObject == nil) {
-            continue;
-          }
-
-          MFPOIData *poiData = [[MFPOIData alloc] init];
-          poiData.id = placeId;
-          poiData.title = title;
-          poiData.position = CLLocationCoordinate2DMake(latObject.doubleValue, lngObject.doubleValue);
-          poiData.color = UIColor.blueColor;
-          poiData.type = @"park";
-          [poiDatas addObject:poiData];
-        }
-
-        return poiDatas;
-      }
-    }
-
-    return nil;
-  }
-  @catch (NSException *exception) {
-    return nil;
-  }
-}
-
-@end
-```
-
-Create **MFURLPOILayer** và set **map**
-```objc
-POIURLConstructor *urlConstructor = [[POIURLConstructor alloc] init];
-MFURLPOILayer *poiOverlay = [MFURLPOILayer poiLayerWithURLConstructor:urlConstructor prefixId:@"poi-layer-1_"];
-poiOverlay.map = self.mapView;
-```
-<!-- tabs:end -->
 
 ### Add POI overlay lên Map
 
 Để vẽ POI overlay lên map, ta set map view cho property `map` của đối tượng poi overlay
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 poiOverlay.map = mapView
 ```
-#### ** Objective-C **
-```objc
-poiOverlay.map = self.mapView;
-```
-<!-- tabs:end -->
 
 ### Remove POI overlay
 
 Để xóa POI overlay khỏi map, ta gọi hàm `setMap` và truyền vào giá trị `null`
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 poiOverlay.map = nil
 ```
-#### ** Objective-C **
-```objc
-poiOverlay.map = nil;
-```
-<!-- tabs:end -->
 
 ### Ẩn/Hiện POI Overlay
 
 Để ẩn/hiện POI overlay, ta set giá trị cho property `isHidden` của đối tượng.<br>
 **Chú ý:** Mặc dù POI overlay không hiển thị nhưng quá trình tải các POI vẫn diễn ra
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 poiOverlay.isHidden = true;
 ```
-#### ** Objective-C **
-```objc
-poiOverlay.isHidden = YES;
-```
-<!-- tabs:end -->
 
 ## Sự kiện đối với POI thuộc POI overlay
 
 Khi người dùng click POI thuộc POI overlay thì sẽ phát sinh sự kiện tương tự với POI của IPostMap, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của IPostMap.
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 func mapView(_ mapView: MFMapView!, didTapPOIWithPlaceID placeID: String!, name: String!, location: CLLocationCoordinate2D)
 ```
-#### ** Objective-C **
-```objc
-- (void)mapView: (MFMapView*)  mapView didTapPOIWithPlaceID: (NSString*) placeID name: (NSString*) name location: (CLLocationCoordinate2D) location;
-```
-<!-- tabs:end -->
 
 Xem thêm [Events](/guides/map-events)
 
@@ -220,16 +115,9 @@ Lớp `MFURLPOILayer` cung cấp một số phương thức static để tạo �
   - prefixId: [NSString](https://developer.apple.com/documentation/foundation/nsstring)
 
 Sử dụng
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let poiOverlay = MFURLPOILayer(urlConstructor: poiURLConstructor, prefixId: "poi-overlay-")
 ```
-#### ** Objective-C **
-```objc
-MFURLPOILayer *poiOverlay = [MFURLPOILayer poiLayerWithURLConstructor:urlConstructor prefixId:@"poi-layer-"];
-```
-<!-- tabs:end -->
 
 **Methods**
 

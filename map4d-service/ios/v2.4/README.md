@@ -31,26 +31,13 @@ pod 'iPostMapService'
 
 2. Import
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 import iPostMapService
 ```
 
-#### ** Objective C **
-
-```objc
-#import <iPostMapService/iPostMapService.h>
-```
-<!-- tabs:end -->
-
 ## Example
 
 Get place detail
-
-<!-- tabs:start -->
-#### ** Swift **
 
 ```swift
 let service = MFPlacesService()
@@ -62,18 +49,3 @@ service.fetchPlaceDetail(withPlaceId: "60dd3850f81cb14bc880ed52") { result, erro
   print("name \(result.name)")
 }
 ```
-
-#### ** Objective C **
-
-```objc
-MFPlacesService* service = [[MFPlacesService alloc] init];
-[service fetchPlaceDetailWithPlaceId:placeId completionHandler:^(id<MFPlaceDetailResult> _Nullable result, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"code: %@, message: %@", error.code, error.message);
-  }
-  else {
-    NSLog(@"name: %@", result.name);
-  }
-}];
-```
-<!-- tabs:end -->

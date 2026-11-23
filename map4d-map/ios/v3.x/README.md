@@ -37,9 +37,6 @@ pod 'iPostMap'
 
 2. Create map view
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 import UIKit
 import iPostMap
@@ -52,21 +49,3 @@ class ViewController: UIViewController {
   }
 }
 ```
-
-#### ** Objective C **
-
-```objc
-#import <iPostMap/iPostMap.h>
-
-@implementation ViewController
-
-- (void)viewDidLoad {
-  MFMapView * mapView;
-  [super viewDidLoad];
-  mapView = [[MFMapView alloc] initWithFrame: self.view.frame];
-  [self.view addSubview:mapView];
-}
-
-@end
-```
-<!-- tabs:end -->

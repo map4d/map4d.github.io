@@ -39,9 +39,6 @@
   - **Chú ý:** Bạn có thể bật hoặc tắt tất cả các điều khiển thông qua phương thức **setAllGesturesEnabled**
 
 
-  <!-- tabs:start -->
-  #### ** Swift **
-
   ```swift
   mapView.settings.myLocationButton = true
   
@@ -52,38 +49,12 @@
   mapView.settings.setAllGesturesEnabled(true)
   ```
 
-  #### ** Objective C **
-
-  ```objc
-  [[mapView settings] setMyLocationButton: true];
-
-  [[mapView settings] setScrollGestures: true];
-  [[mapView settings] setZoomGestures: true];
-  [[mapView settings] setTiltGestures: true];
-  [[mapView settings] setRotateGestures: true];
-  [[mapView settings] setAllGesturesEnabled: true];
-  ```
-
-  <!-- tabs:end -->
-
 
   Để cài đặt mức **zoom** tối đa có thể **get Tile** từ **server** sử dụng phương thức **setMaxNativeZoom**
     
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   mapView.setMaxNativeZoom(19)
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  [mapView setMaxNativeZoom: 19.0];
-  ```
-
-  <!-- tabs:end -->
 
   Ví dụ : Nếu bạn cài đặt **nativeZoom** = 19 thì từ mức **zoom** > 19 sẽ lấy **tile** từ mức zoom 19 mà không phải **get** lại **tile** mới từ **server**.
 
@@ -93,27 +64,13 @@
 
   **Set** mức **zoom** tối đa và tối thiểu thông qua phương thức **setMinZoom**
     
-  <!-- tabs:start -->
-  #### ** Swift **
-
   ```swift
   mapView.setMinZoom(3.0, maxZoom: 20.0)
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  [mapView setMinZoom: 3.0 maxZoom: 20.0];
-  ```
-
-  <!-- tabs:end -->
   
     #### Lấy các tham số của camera
 
   **Lấy các tham số của camera như độ nghiêng, độ xoay, điểm quan sát, mức zoom hiện tại.**
-
-  <!-- tabs:start -->
-  #### ** Swift **
 
   ```swift
   let camera = mapView.camera
@@ -123,58 +80,20 @@
   let tilt = camera?.tilt
   ```
 
-  #### ** Objective C **
-
-  ```objc
-  MFCameraPosition *camera = [mapView camera];
-  CLLocationCoordinate2D target = [camera target];
-  double zoom = [camera zoom];
-  double tilt = [camera tilt];
-  double bearing = [camera bearing];
-  ```
-
-  <!-- tabs:end -->
-
   ## 4. Di chuyển map
 
   **IPostMap iOS SDK** hỗ trợ người dùng di chuyển tới một vị trí **camera** mới thông qua 2 phương thức **animate** và **move**.
 
   **Phương thức animate**
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   let cameraUpdate = MFCameraUpdate.setTarget(CLLocationCoordinate2D(latitude: 16.08795975082965, longitude: 108.22837829589844), zoom: 17)
   mapView.animateCamera(cameraUpdate)
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  MFCameraUpdate *cameraUpdate = [MFCameraUpdate setTarget:CLLocationCoordinate2DMake(16.08795975082965, 108.22837829589844) zoom: 17.0];
-  [mapView animateCamera: cameraUpdate];
-  ```
-
-  <!-- tabs:end -->
 
   **Phương thức move**
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   let cameraUpdate = MFCameraUpdate.setTarget(CLLocationCoordinate2D(latitude: 16.08795975082965, longitude: 108.22837829589844), zoom: 17)
   mapView.animateCamera(cameraUpdate)
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  MFCameraUpdate *cameraUpdate = [MFCameraUpdate setTarget:CLLocationCoordinate2DMake(16.08795975082965, 108.22837829589844) zoom: 17.0];
-  [mapView moveCamera: cameraUpdate];
-  ```
-
-  <!-- tabs:end -->

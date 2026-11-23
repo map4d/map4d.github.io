@@ -7,9 +7,6 @@
 Để thêm 1 Directions Renderer vào bản đồ, ta tạo mới một đối tượng `MFDirectionsRenderer` và set map cho đối tượng đó.<br>
 Đoạn code sau vẽ một Directions Renderer có 2 route lên bản đồ:
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 let renderer = MFDirectionsRenderer();
 
@@ -34,52 +31,15 @@ renderer.destinationTitleColor = .brown
 renderer.map = mapView
 ```
 
-#### ** Objective C **
-
-```objc
-MFDirectionsRenderer* renderer = [[MFDirectionsRenderer alloc] init];
-
-MFMutablePath* route0 = [[MFMutablePath alloc] init];
-[route0 addCoordinate:CLLocationCoordinate2DMake(16.078814, 108.221592)];
-[route0 addCoordinate:CLLocationCoordinate2DMake(16.078972, 108.223034)];
-[route0 addCoordinate:CLLocationCoordinate2DMake(16.075353, 108.223513)];
-
-MFMutablePath* route1 = [[MFMutablePath alloc] init];
-[route1 addCoordinate:CLLocationCoordinate2DMake(16.078814, 108.221592)];
-[route1 addCoordinate:CLLocationCoordinate2DMake(16.077491, 108.221735)];
-[route1 addCoordinate:CLLocationCoordinate2DMake(16.077659, 108.223212)];
-[route1 addCoordinate:CLLocationCoordinate2DMake(16.075353, 108.223513)];
-
-renderer.routes = @[route0, route1];
-renderer.originPosition = CLLocationCoordinate2DMake(16.079264, 108.220959);
-renderer.originTitle = @"Begin Location";
-renderer.originTitleColor = UIColor.redColor;
-renderer.destinationTitle = @"End Location";
-renderer.destinationTitleColor = UIColor.brownColor;
-
-renderer.map = mapView;
-```
-<!-- tabs:end -->
-
 ![Directions Renderer](../../resources/directions-renderer.jpg)
 
 ### 2. Xóa Directions Renderer khỏi bản đồ
 
 Để xóa **Directions Renderer** khỏi bản đồ, chúng ta **set** thuộc tính **map** bằng **nil**
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 renderer.map = nil
 ```
-
-#### ** Objective C **
-
-```objc
-renderer.map = nil;
-```
-<!-- tabs:end -->
 
 ### 3. Tùy chỉnh cho Directions Renderer
 
@@ -116,21 +76,9 @@ IPostMap SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng c�
 Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.<br>
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: Int) {}
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  - (void)mapView:(MFMapView*)mapView didTapDirectionsRenderer:(MFDirectionsRenderer*)renderer routeIndex:(NSUInteger)routeIndex {}
-  ```
-
-  <!-- tabs:end -->
 
 ## API Reference
 
@@ -142,20 +90,9 @@ Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện v
 
 ### Constructor
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 let renderer = MFDirectionsRenderer()
 ```
-
-#### ** Objective C **
-
-```objc
-MFDirectionsRenderer *renderer = [[MFDirectionsRenderer alloc] init];
-```
-
-<!-- tabs:end -->
 
 ### Properties
 
@@ -198,18 +135,6 @@ IPostMap SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng c�
 Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.<br>
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: Int) {}
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  - (void)mapView:(MFMapView*)mapView didTapDirectionsRenderer:(MFDirectionsRenderer*)renderer routeIndex:(NSUInteger)routeIndex {}
-  ```
-
-  <!-- tabs:end -->

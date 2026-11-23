@@ -11,21 +11,10 @@
 
 #### 1. Constructor 
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 init(coordinate coord: CLLocationCoordinate2D, coordinate1 coord1: CLLocationCoordinate2D) {}
 init(path: MFPath) {}
 ```
-
-#### ** Objective C **
-
-```objc  
-- (instancetype _Nonnull) initWithCoordinate:(CLLocationCoordinate2D)coord coordinate1:(CLLocationCoordinate2D)coord1;
-- (instancetype _Nonnull) initWithPath: (MFPath * _Nonnull)path;
-```
-<!-- tabs:end -->
 
 #### 2. Properties
 
@@ -57,28 +46,14 @@ MFPath chứa một mảng các toạ độ **CLLocationCoordinate2D**
 
 MFMutablePath là MFPath nhưng cho phép thay đổi giá trị của nó
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 class MFMutablePath: MFPath
 ```
-#### ** Objective-C **
-```objc
-@interface MFMutablePath: MFPath
-```
-<!-- tabs:end -->
 
 #### 1. Constructor
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let path = MFMutablePath()
 ```
-#### ** Objective-C **
-```objc
-MFMutablePath *path = [[MFMutablePath alloc] init];
-```
-<!-- tabs:end -->
 
 
 #### 2. Properties

@@ -10,10 +10,6 @@ có sẵn của bản đồ, bạn còn có thể tự tạo và thêm đối t�
 
 Chúng ta thử tạo **Building** như sau:
 
-<!-- tabs:start -->
-
-#### ** Swift **
-
 ```swift
 let building = MFBuilding()
 building.position = CLLocationCoordinate2D(latitude: 16.08795975082965, longitude: 108.22837829589844)
@@ -23,19 +19,6 @@ building.texture = "https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269a
 building.map = mapView
 ```
 
-#### ** Objective C **
-
-```objc
-MFBuilding *building = [[MFBuilding alloc] init];
-[building setPosition: CLLocationCoordinate2DMake(16.08795975082965, 108.22837829589844)];
-[building setName: @"User Building"];
-[building setModel: @"https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/models/5db6b4798b4711141457d8a9.obj"];
-[building setTexture: @"https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/textures/5db6b4798b4711141457d8ab.jpg"];
-[building setMap: mapView];
-```
-
-<!-- tabs:end -->
-
 -  ![Building](../../resources/createBuilding.png)
 
 
@@ -43,19 +26,9 @@ MFBuilding *building = [[MFBuilding alloc] init];
 
 Để xóa **Building** khỏi bản đồ, chúng ta **set** thuộc tính **map** bằng **nil**
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 building.map = nil
 ```
-
-#### ** Objective C **
-
-```objc
-[building setMap: Nil];
-```
-<!-- tabs:end -->
 
 Nếu bạn muốn quản lý một danh sách các **Building**, bạn nên tạo một **mảng** để chứa các **Building** đó.
 
@@ -75,25 +48,11 @@ Bạn có thể dễ dàng tuỳ chỉnh **Building** thông qua các thuộc t�
 | **coordinates**            | Tùy chỉnh model của **Building** dưới dạng các coordinate (chỉ cần sử dụng một trong 2 thuộc tính **model** hoặc **coordinates** để tạo **Building**)  |
 | **selected**               | **set** là **true** nếu muốn hiển thị **Building** dưới dạng được chọn (có viền đỏ bao quanh)                                                          |
 
-<!-- tabs:start -->
-
-#### ** Swift **
-
 ```swift
 building.name = "Da Nang Tower"
 building.model = "https://sw-hcm-1.vinadata.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/models/5ca32c3865863cc894adeb06"
 building.texture = "https://sw-hcm-1.vinadata.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/textures/5ca32c3865863cc894adeb07.jpg"
 ```
-
-#### ** Objective C **
-
-```objc
-[building setName: @"Da Nang Tower"];
-[building setModel: @"https://sw-hcm-1.vinadata.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/models/5ca32c3865863cc894adeb06"];
-[building setTexture: @"https://sw-hcm-1.vinadata.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/sdk/textures/5ca32c3865863cc894adeb07.jpg"];
-```
-
-<!-- tabs:end -->
 
 -  ![Building](../../resources/customizeBuilding.png)
 
@@ -107,20 +66,9 @@ building.texture = "https://sw-hcm-1.vinadata.vn/v1/AUTH_4486f66f671c41bab0d3dea
 
 ### Constructor
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 let Building = MFBuilding()
 ```
-
-#### ** Objective C **
-
-```objc
-MFBuilding *Building = [[MFBuilding alloc] init];
-```
-
-<!-- tabs:end -->
 
 ### Properties
 
@@ -161,18 +109,6 @@ Building**
   Phát sinh khi người dùng **touch** vào **Building**
   </br>Cung cấp thông tin của **Building** cho người dùng
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
     func mapView(_ mapView: MFMapView!, didTap building: MFBuilding!) {}
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  - (void)mapView: (MFMapView*)  mapView didTapBuilding: (MFBuilding*) building {}
-  ```
-
-  <!-- tabs:end -->

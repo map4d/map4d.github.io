@@ -6,20 +6,8 @@
 
   Để kích hoạt hiệu ứng mặt nước sử dụng phương thức **enableWaterEffect**
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   mapView.enableWaterEffect(true)
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  [mapView enableWaterEffect: true];
-  ```
-  
-  <!-- tabs:end -->
 
   Mặc định sẽ là **true**

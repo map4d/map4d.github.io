@@ -12,21 +12,10 @@
 
 ### 1. Constructor
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 let mapView = MFMapView(frame: self.view.frame)
 let mapView = MFMapView(frame: self.view.frame, mapID: MFMapID(identifier: "map_id"))
 ```
-
-#### ** Objective C **
-
-```objc
-MFMapView *mapView = [[MFMapView alloc] initWithFrame:self.view.frame];
-MFMapView *mapView = [[MFMapView alloc] initWithFrame:self.view.frame identifier:[MFMapID mapIDWithIdentifier:@"map_id"]];
-```
-<!-- tabs:end -->
 
 ### 2. Properties
 
@@ -70,25 +59,12 @@ MFMapView *mapView = [[MFMapView alloc] initWithFrame:self.view.frame identifier
 
 #### 1. Constructor
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 init(target: CLLocationCoordinate2D, zoom: Double) {}
 init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double) {}
 init(target: CLLocationCoordinate2D, zoom: Double, bearing: Double) {}
 init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double) {}
 ```
-
-#### ** Objective C **
-
-```objc<br>
-- (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
-- (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt ;
-- (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (double) bearing;
-- (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (double) bearing;
-```
-<!-- tabs:end -->
 
 #### 2. Properties
 
@@ -103,9 +79,6 @@ init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double
 
 #### Public static member functions
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 class func fit(_ bounds: MFCoordinateBounds?) -> MFCameraUpdate? {}
 class func fit(_ bounds: MFCoordinateBounds?, with edgeInsets: UIEdgeInsets) -> MFCameraUpdate? {}
@@ -116,20 +89,6 @@ class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, bearing: Do
 class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double) -> MFCameraUpdate? {}
 class func setCamera(_ camera: MFCameraPosition?) -> MFCameraUpdate? {}
 ```
-
-#### ** Objective C **
-
-```objc<br>
-+ (MFCameraUpdate *) fitBounds: (MFCoordinateBounds *) _bounds;
-+ (MFCameraUpdate *) fitBounds:(MFCoordinateBounds *) _bounds withEdgeInsets:(UIEdgeInsets) _edgeInsets;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (double) bearing;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (double) bearing;
-+ (MFCameraUpdate *)setCamera:(MFCameraPosition *) camera;
-```
-<!-- tabs:end -->
 
 ### MFUISettings
 
