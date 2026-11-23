@@ -2,6 +2,7 @@
 
 - Hỗ trợ Swift Package Manager qua [ipostmap-ios-sdk](https://github.com/map4d/ipostmap-ios-sdk).
 - Sửa lỗi & cải thiện hiệu suất
+- Hỗ trợ `import iPostMap` module
 
 ## Version 3.0
 

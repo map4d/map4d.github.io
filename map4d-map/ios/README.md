@@ -4,17 +4,14 @@
 [![cocoapods](https://img.shields.io/cocoapods/v/iPostMap)](https://cocoapods.org/pods/iPostMap)
 
 > **iPostMap iOS SDK** cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên iPhone, iPad.<br>
-> **iPostMap iOS SDK** không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn
+> Không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, **iPostMap iOS SDK** còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn
 
 ![iPostMap iOS SDK](./resources/Untitled-1_0000_Right-Mockup--phone-demo.png)
-
-Tài liệu dành cho **iPostMap 3.1.0** từ [ipostmap-ios-sdk](https://github.com/map4d/ipostmap-ios-sdk).
 
 ## Yêu cầu
 
 - iOS 12.0 trở lên.
-- Xcode 12.0 trở lên.
-- Access Key từ [iPostMap Developer](https://map.ipostmap.vn/developer/key) (yêu cầu tài khoản đã kích hoạt developer).
+- Access Key từ [iPostMap Developer](https://map.ipostmap.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt developer)*.
 
 ## Installation
 
@@ -40,16 +37,18 @@ target 'YourApp' do
 end
 ```
 
-Sau đó chạy và mở file `.xcworkspace` để làm việc:
+Chạy
 
 ```shell
 pod install --repo-update
 ```
 
+Sau đó mở file `.xcworkspace` để làm việc.
+
 ## Using
 
 1. Thêm Access Key vào `Info.plist` của app target. Tên khóa cấu hình là `Map4dMapAccessKey`:  
-Key lấy từ [iPostMap Developer](https://map.ipostmap.vn/developer/key) (yêu cầu tài khoản đã kích hoạt developer)
+Key lấy từ [iPostMap Developer](https://map.ipostmap.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt developer)*
 
 ```xml
 <key>Map4dMapAccessKey</key>
