@@ -38,7 +38,7 @@ MFCircle *circle = [[MFCircle alloc] init];
 
 <!-- tabs:end -->
 
--  ![Circle](../../resources/v1.5/createCircle.png) 
+-  ![Circle](../../resources/createCircle.png) 
 
 Bạn có thể tùy chỉnh hình dáng của **Circle** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
 
@@ -94,4 +94,4 @@ circle.fillColor = .red
 
 <!-- tabs:end -->
 
--  ![Circle](../../resources/v1.5/customizeCircle.png) 
+-  ![Circle](../../resources/customizeCircle.png) 

@@ -37,7 +37,7 @@ MFPOI *poi = [[MFPOI alloc] init];
 
 <!-- tabs:end -->
 
-![POI](../../resources/v1.5/createPOI.png) 
+![POI](../../resources/createPOI.png) 
 
 
 ### 2. Xóa POI khỏi bản đồ
@@ -103,4 +103,4 @@ poi.color = .blue
 
 <!-- tabs:end -->
 
-![POI](../../resources/v1.5/customizePOI.png) 
+![POI](../../resources/customizePOI.png) 

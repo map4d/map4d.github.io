@@ -4,7 +4,7 @@ Lớp Polygon cho phép người dùng vẽ một Polygon lên map.
 
 ### 1. Tạo polygon
 
-![Polygon](../../resources/v1.4/polygon.jpg)
+![Polygon](../../resources/polygon.jpg)
 
 > Tạo đối tượng polygon từ MFPolygonOptions
 

@@ -14,7 +14,7 @@ IPostMap Map SDK hiện cung cấp 4 loại bản đồ tùy chỉnh:
 
 |                 ROADMAP                            | SATELLITE                                             |                 HYBRID                            |
 |:--------------------------------------------------:|:-----------------------------------------------------:|:-------------------------------------------------:|
-| ![MapType](../../resources/v3/maptype_roadmap.jpg) | ![MapType](../../resources/v3/maptype_satelllite.jpg) | ![MapType](../../resources/v3/maptype_hybrid.jpg) |
+| ![MapType](../../resources/maptype_roadmap.jpg) | ![MapType](../../resources/maptype_satelllite.jpg) | ![MapType](../../resources/maptype_hybrid.jpg) |
 
 ### Thay đổi loại bản đồ
 

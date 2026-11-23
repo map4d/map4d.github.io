@@ -1,6 +1,5 @@
 - [Overview](/ "IpostMap iOS SDK")
 - [Changelog](changelog.md)
-- [Samples](https://github.com/IPostMap/ios-samples)
 
 - Interacting with the Map
   - [Controls](guides/map-controls.md)
