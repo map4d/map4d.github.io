@@ -1,6 +1,6 @@
 # Measure
 
-Lớp [Measure](/reference/coordinates?id=measure) dùng để tính toán khoảng cách, chu vi và diện tích theo danh sách tọa độ địa lý
+Lớp [Measure](/guides/coordinates?id=measure) dùng để tính toán khoảng cách, chu vi và diện tích theo danh sách tọa độ địa lý
 
 ## 1. Khởi tạo đối tượng Measure (path không cần khép kín)
 

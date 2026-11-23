@@ -6,7 +6,7 @@ IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_ro
 
 ## Usage
 
-Để sử dụng service Directions ta sử dụng phương thức sau đây của class [MFDirectionsService](reference/directions-service?id=mfplacesservice)
+Để sử dụng service Directions ta sử dụng phương thức sau đây của class [MFDirectionsService](guides/api_route?id=mfplacesservice)
 
 **Methods**
 
@@ -88,7 +88,7 @@ directionServices.fetchDirections(routeOptions, new MFServiceCallback<MFRoute[]>
 
 ## MFDirectionOptions
 
-Đối tượng `MFDirectionOptions` dùng để xác định các thuộc tính dùng cho [MFDirectionsService](reference/directions-service?id=mfplacesservice)
+Đối tượng `MFDirectionOptions` dùng để xác định các thuộc tính dùng cho [MFDirectionsService](guides/api_route?id=mfplacesservice)
 
 Để tạo đối tượng `MFDirectionOptions` thì ta tạo thông qua class [MFDirectionOptions.Builder](/guides/api_route?id=mfdirectionoptionsbuilder)
 
@@ -169,3 +169,74 @@ MFDirectionOptions.Builder()
 | **weighting** *optional* |[MFWeighting](/types?id=mfweighting)| Builder | Set thuộc tính đường đi cho Builder      |
 | **restriction** *optional*  |[MFRouteRestriction](/types?id=mfrouterestriction)| Builder      | Set điểm / khu vực / danh sách các loại đường mà tuyến đường không đi qua cho Builder|
 | **build**               | `none`          |[MFDirectionOptions](/guides/api_route?id=mfdirectionoptions)| Tạo đối tượng MFDirectionOptions từ Builder|
+
+## API Reference
+
+<a id="reference-directions-service"></a>
+
+## Directions Service
+
+## MFDirectionsService
+
+**Constructor**
+
+Tạo đối tượng `MFDirectionsService` với `options` được chỉ định
+
+<!-- tabs:start -->
+#### ** Kotlin **
+```kotlin
+val directionServices = MFDirectionsService(options)
+```
+#### ** Java **
+```java
+MFDirectionsService directionServices = new MFDirectionsService(options);
+```
+<!-- tabs:end -->
+
+- Parameters:
+  - options: [MFServicesOptions](guides/api_route.md?id=reference-service-options) `required`
+
+<a id="reference-service-options"></a>
+
+## Service Options
+
+## MFServicesOptions
+
+Để tạo đối tượng `MFServicesOptions` thì ta tạo thông qua class [MFServicesOptions.Builder](guides/api_route?id=mfservicesoptionsbuilder)
+
+<!-- tabs:start -->
+#### ** Kotlin **
+```kotlin
+val context = this
+val serviceOptions = MFServicesOptions.Builder(context).build()
+```
+#### ** Java **
+```java
+Context context = this;
+MFServicesOptions serviceOptions = MFServicesOptions.Builder(context).build();
+```
+<!-- tabs:end -->
+
+**Methods**
+
+| Name                         | Parameters      | Return Value | Description                                                        |
+|------------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
+| **getAccessKey**             | `none`          | String       | Lấy giá trị access key của                                         |
+| **getContext**               | `none`          | String       | Lấy đối tượng context                                              |
+
+## MFServicesOptions.Builder
+
+**Constructor**
+
+Tạo đối tượng `MFServicesOptions.Builder` với đối tượng `Context`
+
+```
+MFServicesOptions.Builder(Context context)
+```
+
+**Methods**
+
+| Name                    | Parameters      | Return Value | Description                                                        |
+|-------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
+| **accessKey** *optional*| String          | Builder      | Set giá trị access key cho Builder                                 |
+| **build**               | `none`          |[MFServicesOptions](guides/api_route?id=mfservicesoptions)| Tạo đối tượng MFServicesOptions từ Builder |

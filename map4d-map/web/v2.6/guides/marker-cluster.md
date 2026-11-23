@@ -9,7 +9,7 @@ lớp là **MarkerClusterer**
 Hàm khởi tạo của lớp **ipostmap.MarkerClusterer** cần truyền vào 2 đối tượng là:
 
 - Mảng các marker cần đưa vào MarkerClusterer.
-- **ipostmap.MarkerClusterOptions** để định nghĩa các thuộc tính ban đầu của MarkerClusterer. 
+- **ipostmap.MarkerClusterOptions** để định nghĩa các thuộc tính ban đầu của MarkerClusterer.
 
 Đối tượng **MarkerClusterOptions** được định nghĩa như sau:
 
@@ -24,7 +24,7 @@ interface MarkerClusterOptions {
 ```
 
 Các thuộc tính của **MarkerClusterOptions** :
-- **minZoom** (tùy chọn) : chỉ định mức zoom nhỏ nhất mà các marker có thể hiển thị theo từng nhóm. Giá trị mặc định là **0** 
+- **minZoom** (tùy chọn) : chỉ định mức zoom nhỏ nhất mà các marker có thể hiển thị theo từng nhóm. Giá trị mặc định là **0**
 - **maxZoom** (tùy chọn) : chỉ định mức zoom lớn nhất mà các marker có thể hiển thị theo từng nhóm. Giá trị mặc định là **22**
 - **radius** (tùy chọn) : chỉ định bán kính của cluster theo đơn vị pixel. Giá trị mặc định là 100.
 - **zoomOnClick** (tùy chọn) : chỉ định bản đồ có thể zoom khi người dùng click vào đối tượng **MarkerClusterer** không. Giá trị mặc định là **true**
@@ -54,4 +54,46 @@ markerClusterer.setMap(null)
 Lưu ý rằng cách trên không xóa MarkerClusterer. Nó chỉ xóa MarkerClusterer ra khỏi bản đồ. Nếu bạn muốn xóa MarkerClusterer,
 bạn nên xóa nó khỏi bản đồ, sau đó bạn gán **marker** bằng __null__.
 
+## API Reference
 
+<a id="reference-marker-cluster"></a>
+
+## Marker Clusterer reference
+
+## Marker Clusterer Class
+
+`ipostmap.MarkerClusterer` class
+
+**Constructor**
+
+Tạo MarkerClusterer với mảng [Marker](/guides/marker?id=marker-class) và các options được chỉ định
+
+```js
+MarkerClusterer(Marker[], options)
+```
+
+- Parameters:
+  - Marker[]: Mảng các marker cần đưa vào MarkerClusterer.
+  - options: [MarkerClusterOptions](/guides/marker-cluster?id=marker-clusterer-options) *required*
+
+**Methods**
+
+| Name                         | Parameters                              | Return Value | Description                                                                                      |
+|------------------------------|:---------------------------------------:|:------------:|--------------------------------------------------------------------------------------------------|
+| **setMap**                   | [Map](/guides/map-options?id=map-class)      | `none`       | Thêm marker cluster vào map, nếu set map là **null** thì marker cluster sẽ bị xóa khỏi map       |
+| **setZoomOnClick**           | boolean                                 | `none`       | Set giá trị cho phép phóng to bản đồ khi người dùng click để hiển tất cả các Marker trong nó     |
+
+## Marker Clusterer Options
+
+`ipostmap.MarkerOptions` interface
+
+Đối tượng MarkerClusterOptions dùng để xác định các thuộc tính dùng cho MarkerClusterer.
+
+**Properties**
+
+| Name                       | Type                | Description                                                                                                                                |
+|----------------------------|:-------------------:|--------------------------------------------------------------------------------------------------------------------------------------------|
+| **minZoom** *optional*     | number              | chỉ định mức zoom nhỏ nhất mà các marker có thể hiển thị theo từng nhóm. Giá trị mặc định là **0**                                         |
+| **maxZoom** *optional*     | number              | chỉ định mức zoom lớn nhất mà các marker có thể hiển thị theo từng nhóm. Giá trị mặc định là **22**                                        |
+| **radius** *optional*      | number              | chỉ định bán kính của cluster theo đơn vị pixel. Giá trị mặc định là 100.                                                                  |
+| **zoomOnClick** *optional* | boolean             | chỉ định bản đồ có thể zoom khi người dùng click vào đối tượng **MarkerClusterer** không.                                                  |

@@ -6,12 +6,12 @@ Tile Overlay là một loại overlay cho phép người dùng hiển thị các
 
 ## Add Tile overlay
 
-Để thêm 1 tile overlay vào map cần tạo mới 1 đối tượng của lớp [MFURLTileLayer](reference/tile-overlay?id=mfurltilelayer-class) sau đó set `map` cho đối tượng đó.  
-Cần phải implement [MFTileURLConstructor](reference/tile-overlay?id=mftileurlconstructor-protocol)
+Để thêm 1 tile overlay vào map cần tạo mới 1 đối tượng của lớp [MFURLTileLayer](guides/tile-overlay?id=mfurltilelayer-class) sau đó set `map` cho đối tượng đó.<br>
+Cần phải implement [MFTileURLConstructor](guides/tile-overlay?id=mftileurlconstructor-protocol)
 
 ### Tạo mới Tile overlay
 
-Đoạn code bên dưới hướng dẫn cách sử dụng implement [MFTileURLConstructor](reference/tile-overlay?id=mftileurlconstructor-protocol) và sử dụng [MFURLTileLayer](reference/tile-overlay?id=mfurltilelayer-class) để hiển thị lớp tile từ `openstreetmap`
+Đoạn code bên dưới hướng dẫn cách sử dụng implement [MFTileURLConstructor](guides/tile-overlay?id=mftileurlconstructor-protocol) và sử dụng [MFURLTileLayer](guides/tile-overlay?id=mfurltilelayer-class) để hiển thị lớp tile từ `openstreetmap`
 
 <!-- tabs:start -->
 #### ** Swift **
@@ -76,7 +76,7 @@ tileOverlay.map = nil;
 <!-- tabs:end -->
 
 ### Ẩn/Hiện Tile Overlay
-Set giá trị cho thuộc tính `isHidden` để ẩn/hiện tile overlay.  
+Set giá trị cho thuộc tính `isHidden` để ẩn/hiện tile overlay.<br>
 Chú ý: Mặc dù tile overlay không hiển thị nhưng quá trình tải các tile vẫn diễn ra
 
 <!-- tabs:start -->
@@ -89,3 +89,69 @@ tileOverlay.isHidden = true
 tileOverlay.isHidden = YES;
 ```
 <!-- tabs:end -->
+
+## API Reference
+
+<a id="reference-tile-overlay"></a>
+
+## Tile Overlay References
+
+## MFURLTileLayer class
+
+`MFURLTileLayer` class
+
+**Constructor**
+
+Lớp `MFURLTileLayer` cung cấp một phương thức static để tạo đối tượng *MFURLTileLayer* một cách tiện lợi
+```objc
++ (instancetype _Nonnull)tileLayerWithURLConstructor:(id<MFTileURLConstructor> _Nonnull)constructor;
+```
+
+- Parameters:
+  - urlConstructor: [MFTileURLConstructor](guides/tile-overlay?id=mftileurlconstructor-protocol) *required*
+
+Sử dụng
+<!-- tabs:start -->
+#### ** Swift **
+```swift
+let tileOverlay = MFURLTileLayer(urlConstructor: urlConstructor)
+```
+#### ** Objective-C **
+```objc
+MFURLTileLayer * tileOverlay = [MFURLTileLayer tileLayerWithURLConstructor:urlConstructor];
+```
+<!-- tabs:end -->
+
+**Methods**
+
+| Name               | Parameters  | Return Value | Description                                                              |
+|--------------------|-------------|--------------|--------------------------------------------------------------------------|
+| **clearTileCache** | `none`      | `none`       | Xoá cache của đối tượng tile overlay và load lại hình ảnh tile từ server |
+
+**Properties**
+
+| Name         | Type      | Description                                                                            |
+|--------------|-----------|----------------------------------------------------------------------------------------|
+| **map**      | [MFMapView](/guides/map-options?id=mfmapview-class) | Map view sẽ hiển thị tile overlay                 |
+| **isHidden** | bool                                           | Ẩn/hiện tile overlay trên map                     |
+| **opacity**  | float                                          | Độ trong suốt của tile layer (mặc đinh là: 1.0)   |
+| **zIndex**   | float                                          | Giá trị zIndex của tile overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |
+
+## MFTileURLConstructor protocol
+
+`MFTileURLConstructor` protocol
+
+MFTileURLConstructor là một protocol, định nghĩa sẵn phương thức dùng để xác định URL trỏ đến hình ảnh tile tương ứng với mỗi toạ độ và mức zoom
+
+<!-- tabs:start -->
+#### ** Swift **
+```swift
+func getTileUrlWith(x: UInt, y: UInt, zoom: UInt) -> URL?
+```
+#### ** Objective-C **
+```objc
+- (NSURL * _Nullable)getTileUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom;
+```
+<!-- tabs:end -->
+
+Cần phải implement protocol này trước khi tạo đối tượng `MFURLTileLayer`

@@ -7,7 +7,7 @@ cho Nguyễn Văn Linh ...)
 
 ## Usage
 
-Để sử dụng Auto Suggest ta sử dụng phương thức sau đây của class [MFPlacesService](reference/places-service?id=mfplacesservice)
+Để sử dụng Auto Suggest ta sử dụng phương thức sau đây của class [MFPlacesService](guides/api_autosuggest?id=mfplacesservice)
 
 **Methods**
 
@@ -60,7 +60,7 @@ placesService.fetchSuggestion(autoSuggestOptions, new MFServiceCallback<MFPlace[
 
 ## MFAutoSuggestOptions
 
-Đối tượng `MFAutoSuggestOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](reference/places-service?id=mfplacesservice)
+Đối tượng `MFAutoSuggestOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](guides/api_autosuggest?id=mfplacesservice)
 
 Để tạo đối tượng `MFAutoSuggestOptions` thì ta tạo thông qua class [MFAutoSuggestOptions.Builder](/guides/api_autosuggest?id=mfautosuggestoptionsbuilder)
 
@@ -101,3 +101,74 @@ MFAutoSuggestOptions.Builder()
 | **location** *optional* | [MFLocationComponent](/types?id=mflocationcomponent) | Builder | Set location cho Builder. Các địa điểm gần vị trí này sẽ được ưu tiên hơn |
 | **acronym** *optional*  | boolean         | Builder      | Set acronym cho Builder                                            |
 | **build**               | `none`          |[MFAutoSuggestOptions](/guides/api_autosuggest?id=mfautosuggestoptions)| Tạo đối tượng MFAutoSuggestOptions từ Builder            |
+
+## API Reference
+
+<a id="reference-places-service"></a>
+
+## Place Service
+
+## MFPlacesService
+
+**Constructor**
+
+Tạo đối tượng `MFPlacesService` với `options` được chỉ định
+
+<!-- tabs:start -->
+#### ** Kotlin **
+```kotlin
+val placesService = MFPlacesService(options)
+```
+#### ** Java **
+```java
+MFPlacesService placesService = new MFPlacesService(options);
+```
+<!-- tabs:end -->
+
+- Parameters:
+  - options: [MFServicesOptions](guides/api_autosuggest.md?id=reference-service-options) `required`
+
+<a id="reference-service-options"></a>
+
+## Service Options
+
+## MFServicesOptions
+
+Để tạo đối tượng `MFServicesOptions` thì ta tạo thông qua class [MFServicesOptions.Builder](guides/api_autosuggest?id=mfservicesoptionsbuilder)
+
+<!-- tabs:start -->
+#### ** Kotlin **
+```kotlin
+val context = this
+val serviceOptions = MFServicesOptions.Builder(context).build()
+```
+#### ** Java **
+```java
+Context context = this;
+MFServicesOptions serviceOptions = MFServicesOptions.Builder(context).build();
+```
+<!-- tabs:end -->
+
+**Methods**
+
+| Name                         | Parameters      | Return Value | Description                                                        |
+|------------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
+| **getAccessKey**             | `none`          | String       | Lấy giá trị access key của                                         |
+| **getContext**               | `none`          | String       | Lấy đối tượng context                                              |
+
+## MFServicesOptions.Builder
+
+**Constructor**
+
+Tạo đối tượng `MFServicesOptions.Builder` với đối tượng `Context`
+
+```
+MFServicesOptions.Builder(Context context)
+```
+
+**Methods**
+
+| Name                    | Parameters      | Return Value | Description                                                        |
+|-------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
+| **accessKey** *optional*| String          | Builder      | Set giá trị access key cho Builder                                 |
+| **build**               | `none`          |[MFServicesOptions](guides/api_autosuggest?id=mfservicesoptions)| Tạo đối tượng MFServicesOptions từ Builder |

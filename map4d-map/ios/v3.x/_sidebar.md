@@ -2,6 +2,7 @@
 - [Changelog](changelog.md)
 
 - Interacting with the Map
+  - [Map Options](guides/map-options.md)
   - [Controls](guides/map-controls.md)
   - [Events](guides/map-events.md)
   - [Hiển thị 3D](guides/3d.md)
@@ -25,23 +26,5 @@
   - [GeoJSON Layer](guides/geojson.md)
 
 - Utils
+  - [Coordinates](guides/coordinates.md)
   - [Projection](guides/projection.md)
-
-- References
-  - Maps
-    - [Map](reference/map.md)
-    - [Coordinates](reference/coordinates.md)
-  - Drawing on the Map
-    - [Marker](reference/marker.md)
-    - [Circle](reference/circle.md)
-    - [Polyline](reference/polyline.md)
-    - [Polygon](reference/polygon.md)
-    - [POI](reference/poi.md)
-    - [Building](reference/building.md)
-    - [Directions Renderer](reference/directions-renderer.md)
-  - Layers
-    - [Tile Overlay](reference/tile-overlay.md)
-    - [Image Overlay](reference/image-overlay.md)
-    - [POI Overlay](reference/poi-overlay.md)
-    - [Building Overlay](reference/building-overlay.md)
-    - [GeoJSON Layer](reference/geojson.md)

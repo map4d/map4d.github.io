@@ -1,6 +1,6 @@
 # Coordinate Transformer
 
-Lớp [CoordinateTransformer](/reference/coordinates?id=coordinatetransformer) dùng để lưu trữ một danh sách các vị trí tọa độ địa lý. Nó cho phép thực hiện
+Lớp [CoordinateTransformer](/guides/coordinates?id=coordinatetransformer) dùng để lưu trữ một danh sách các vị trí tọa độ địa lý. Nó cho phép thực hiện
 các phép biến đổi danh sách các vị trí tọa độ địa lý đó như: Xoay, Dịch chuyển và thay đổi tỷ lệ.
 
 ## 1. Khởi tạo đối tượng CoordinateTransformer
@@ -42,7 +42,7 @@ coordinateTransformer.setCoordinates([
 ])
 ```
 
-## 3. Thêm một danh sách tọa độ vào danh sách tọa độ hiện tại của đối tượng CoordinateTransformer 
+## 3. Thêm một danh sách tọa độ vào danh sách tọa độ hiện tại của đối tượng CoordinateTransformer
 
 ```javascript
 addCoordinates(coordinates: ILatLng[]): void
@@ -152,4 +152,3 @@ let coordinateTransformer = new ipostmap.CoordinateTransformer([
 let scale = 1.5
 let latLngScaled = coordinateTransformer.scale(scale,[106.702835, 10.773599])
 ```
-

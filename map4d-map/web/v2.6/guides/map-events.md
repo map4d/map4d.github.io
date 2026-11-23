@@ -35,9 +35,9 @@ IPostMap Web SDK cung cấp các sự kiện của map hay tương tác của ng
 Trong đó:
 - **event**: tên event (xem bảng trên)
 - **func**: hàm sẽ được gọi với tham số ***args*** khi sự kiện được chỉ định xảy ra
-- **options**: tùy chọn, dùng để xác định việc xử lý sự kiện chỉ hoạt động đối với các đối tượng được chỉ định (poi, building, marker, ...). Tham khảo [EventOptions](reference/map.md)
+- **options**: tùy chọn, dùng để xác định việc xử lý sự kiện chỉ hoạt động đối với các đối tượng được chỉ định (poi, building, marker, ...). Tham khảo [EventOptions](guides/map-options.md?id=reference-map)
 
-Phương thức này trả về một đối tượng [MapsEventListener](/reference/map?id=mapseventlistener-interface)
+Phương thức này trả về một đối tượng [MapsEventListener](/guides/map-options?id=mapseventlistener-interface)
 
 ### Cách đăng ký event chung
 
@@ -74,13 +74,13 @@ event.remove()
 
 | No | Event                                                                                                                                             | args                                                           |
 |:--:|---------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
-|  1 | - cameraWillChange<br>- cameraChanging<br>- idle                                                                                                  | { `camera`: [CameraPosition](reference/map) }                  |
-|  2 | - hover<br>- click *coordinate*<br>- rightClick<br>- dblClick<br>- longClick<br>- dragStart<br>- drag<br>- dragEnd<br>- mouseMove<br>- mouseOut<br>- mouseOver | {<br>&nbsp;&nbsp;&nbsp;&nbsp;`location`: [LatLng](reference/coordinates?id=latlng),<br>&nbsp;&nbsp;&nbsp;&nbsp;`pixel`: [Point](reference/coordinates?id=point),<br>&nbsp;&nbsp;&nbsp;&nbsp;`xa`: MouseEvent<br>} |
+|  1 | - cameraWillChange<br>- cameraChanging<br>- idle                                                                                                  | { `camera`: [CameraPosition](guides/map-options?id=reference-map) }                  |
+|  2 | - hover<br>- click *coordinate*<br>- rightClick<br>- dblClick<br>- longClick<br>- dragStart<br>- drag<br>- dragEnd<br>- mouseMove<br>- mouseOut<br>- mouseOver | {<br>&nbsp;&nbsp;&nbsp;&nbsp;`location`: [LatLng](guides/coordinates?id=latlng),<br>&nbsp;&nbsp;&nbsp;&nbsp;`pixel`: [Point](guides/coordinates?id=point),<br>&nbsp;&nbsp;&nbsp;&nbsp;`xa`: MouseEvent<br>} |
 | 3  | - limitedZoom                                                                                                                                     | { `zoom`: number }                                        |
 | 4  | - tilesLoaded<br>- boundsChanged                                                                                                                  | `none`                                                         |
-| 5  | - click *mappoi*                                                                                                                                  |{<br>&nbsp;&nbsp;&nbsp;&nbsp;`poi`: { `id`: string, `name`: string, `location`: [LatLng](reference/coordinates?id=latlng), `type`: string }<br>&nbsp;&nbsp;&nbsp;&nbsp;`location`: [LatLng](reference/coordinates?id=latlng),<br>&nbsp;&nbsp;&nbsp;&nbsp;`pixel`: [Point](reference/coordinates?id=point),<br>&nbsp;&nbsp;&nbsp;&nbsp;`xa`: MouseEvent<br>} |
-| 6  | - click *mapbuilding*                                                                                                                             |{<br>&nbsp;&nbsp;&nbsp;&nbsp;`building`: { `id`: string, `name`: string, `location`: [LatLng](reference/coordinates?id=latlng) }<br>&nbsp;&nbsp;&nbsp;&nbsp;`location`: [LatLng](reference/coordinates?id=latlng),<br>&nbsp;&nbsp;&nbsp;&nbsp;`pixel`: [Point](reference/coordinates?id=point),<br>&nbsp;&nbsp;&nbsp;&nbsp;`xa`: MouseEvent<br>} |
-| 7  | - click *place*                                                                                                                             |{<br>&nbsp;&nbsp;&nbsp;&nbsp;`place`: { `id`: string, `name`: string, `location`: [LatLng](reference/coordinates?id=latlng), `type`: string }<br>&nbsp;&nbsp;&nbsp;&nbsp;`location`: [LatLng](reference/coordinates?id=latlng),<br>&nbsp;&nbsp;&nbsp;&nbsp;`pixel`: [Point](reference/coordinates?id=point),<br>&nbsp;&nbsp;&nbsp;&nbsp;`xa`: MouseEvent<br>} |
+| 5  | - click *mappoi*                                                                                                                                  |{<br>&nbsp;&nbsp;&nbsp;&nbsp;`poi`: { `id`: string, `name`: string, `location`: [LatLng](guides/coordinates?id=latlng), `type`: string }<br>&nbsp;&nbsp;&nbsp;&nbsp;`location`: [LatLng](guides/coordinates?id=latlng),<br>&nbsp;&nbsp;&nbsp;&nbsp;`pixel`: [Point](guides/coordinates?id=point),<br>&nbsp;&nbsp;&nbsp;&nbsp;`xa`: MouseEvent<br>} |
+| 6  | - click *mapbuilding*                                                                                                                             |{<br>&nbsp;&nbsp;&nbsp;&nbsp;`building`: { `id`: string, `name`: string, `location`: [LatLng](guides/coordinates?id=latlng) }<br>&nbsp;&nbsp;&nbsp;&nbsp;`location`: [LatLng](guides/coordinates?id=latlng),<br>&nbsp;&nbsp;&nbsp;&nbsp;`pixel`: [Point](guides/coordinates?id=point),<br>&nbsp;&nbsp;&nbsp;&nbsp;`xa`: MouseEvent<br>} |
+| 7  | - click *place*                                                                                                                             |{<br>&nbsp;&nbsp;&nbsp;&nbsp;`place`: { `id`: string, `name`: string, `location`: [LatLng](guides/coordinates?id=latlng), `type`: string }<br>&nbsp;&nbsp;&nbsp;&nbsp;`location`: [LatLng](guides/coordinates?id=latlng),<br>&nbsp;&nbsp;&nbsp;&nbsp;`pixel`: [Point](guides/coordinates?id=point),<br>&nbsp;&nbsp;&nbsp;&nbsp;`xa`: MouseEvent<br>} |
 
 ### Thay đổi EventOptions ở runtime
 

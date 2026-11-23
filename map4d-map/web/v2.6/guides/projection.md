@@ -1,6 +1,6 @@
 # Projection
 
-Lớp [Projection](/reference/map?id=projection-class) được dùng để chuyển đổi giữa vị trí trên màn hình và tọa độ địa lý trên bề mặt trái đất và ngược lại.
+Lớp [Projection](/guides/map-options?id=projection-class) được dùng để chuyển đổi giữa vị trí trên màn hình và tọa độ địa lý trên bề mặt trái đất và ngược lại.
 
 ## 1. Khởi tạo lớp Projection
 ```javascript

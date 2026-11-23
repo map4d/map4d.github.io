@@ -1,23 +1,23 @@
 # POI Overlay
 
-POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ.  
+POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ.<br>
 Các POI của POI overlay được ưu tiên hiển thị so với POI của IPostMap và chỉ hiển thị ở chế độ 2D.
 
 ![POI Overlay](../../resources/poi-overlay.png)
 
 ## Add POI overlay
 
-Để thêm 1 lớp POI overlay vào map cần tạo mới 1 đối tượng của lớp [MFURLPOILayer](/reference/poi-overlay?id=mfurlpoilayer-class) sau đó set map cho POI overlay đó.
-Để tạo đối tượng [MFURLPOILayer](/reference/poi-overlay?id=mfurlpoilayer-class) thì cần phải implement [MFPOIURLConstructor](/reference/poi-overlay?id=mfurlpoilayer-class)
+Để thêm 1 lớp POI overlay vào map cần tạo mới 1 đối tượng của lớp [MFURLPOILayer](/guides/poi-overlay?id=mfurlpoilayer-class) sau đó set map cho POI overlay đó.
+Để tạo đối tượng [MFURLPOILayer](/guides/poi-overlay?id=mfurlpoilayer-class) thì cần phải implement [MFPOIURLConstructor](/guides/poi-overlay?id=mfurlpoilayer-class)
 
-Implement **MFPOIURLConstructor** protocol yêu cầu 2 phương thức `getPOIUrlWith` và `parserPOIData`.  
-Trong đó:  
+Implement **MFPOIURLConstructor** protocol yêu cầu 2 phương thức `getPOIUrlWith` và `parserPOIData`.<br>
+Trong đó:<br>
 - getPOIUrlWith: Nhận vào các giá trị là toạ độ x, y và mức zoom của tile, kết quả là một kiểu [URL](https://developer.apple.com/documentation/foundation/url) chỉ đến rest api cung cấp dữ liệu POI theo tile.
-- parserPOIData: Nhận vào là dữ liệu được về từ api cung cấp bởi *getPOIUrlWith*, ta sẽ phải parser dữ liệu đó thành mảng các đối tượng [MFPOIData](/reference/poi-overlay?id=mfpoidata-class)
+- parserPOIData: Nhận vào là dữ liệu được về từ api cung cấp bởi *getPOIUrlWith*, ta sẽ phải parser dữ liệu đó thành mảng các đối tượng [MFPOIData](/guides/poi-overlay?id=mfpoidata-class)
 
 ### Tạo mới POI overlay
 
-Đoạn code bên dưới hướng dẫn việc implement [MFPOIURLConstructor](/reference/poi-overlay?id=mfurlpoilayer-class) và sử dụng [MFURLPOILayer](/reference/poi-overlay?id=mfurlpoilayer-class) để hiển thị POI overlay lấy từ `poi-random.herokuapp.com`
+Đoạn code bên dưới hướng dẫn việc implement [MFPOIURLConstructor](/guides/poi-overlay?id=mfurlpoilayer-class) và sử dụng [MFURLPOILayer](/guides/poi-overlay?id=mfurlpoilayer-class) để hiển thị POI overlay lấy từ `poi-random.herokuapp.com`
 
 <!-- tabs:start -->
 #### ** Swift **
@@ -28,13 +28,13 @@ class POIURLConstructor : NSObject, MFPOIURLConstructor {
         let poiApiUrl = "https://poi-random.herokuapp.com/poi/\(zoom)/\(x)/\(y)"
         return URL(string: poiApiUrl)
     }
-    
+
     func parserPOIData(_ data: String) -> [MFPOIData]? {
         do {
             var poiDatas:[MFPOIData] = []
             let decoder = JSONDecoder()
             let poisJson = try decoder.decode(POIsJson.self, from: data.data(using: .utf8)!)
-            
+
             guard let places = poisJson.pois else { return nil }
             for place in places {
                 let position = CLLocationCoordinate2DMake(place.position?.lat ?? 0, place.position?.lng ?? 0)
@@ -77,32 +77,32 @@ Implement **MFPOIURLConstructor**
     NSData* jsonData = [data dataUsingEncoding:NSUTF8StringEncoding];
     NSError *jsonError;
     NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&jsonError];
-    
+
     if (jsonObject != nil) {
       NSArray *places = [jsonObject valueForKey:@"pois"];
 
       if (places != nil && places.count > 0) {
         NSMutableArray *poiDatas = [[NSMutableArray alloc] init];
-        
+
         for (int i = 0; i < places.count; i++) {
           NSDictionary *place = [places objectAtIndex:i];
           if (place == nil) {
             continue;
           }
-          
+
           NSString *placeId = [place valueForKey:@"id"];
           NSString *title = [place valueForKey:@"title"];
           NSDictionary *positionObject = [place valueForKey:@"position"];
           if (placeId == nil || title == nil || positionObject == nil) {
             continue;
           }
-          
+
           NSNumber *latObject = [positionObject valueForKey:@"lat"];
           NSNumber *lngObject = [positionObject valueForKey:@"lng"];
           if (latObject == nil || lngObject == nil) {
             continue;
           }
-          
+
           MFPOIData *poiData = [[MFPOIData alloc] init];
           poiData.id = placeId;
           poiData.title = title;
@@ -111,7 +111,7 @@ Implement **MFPOIURLConstructor**
           poiData.type = @"park";
           [poiDatas addObject:poiData];
         }
-        
+
         return poiDatas;
       }
     }
@@ -166,7 +166,7 @@ poiOverlay.map = nil;
 
 ### Ẩn/Hiện POI Overlay
 
-Để ẩn/hiện POI overlay, ta set giá trị cho property `isHidden` của đối tượng.        
+Để ẩn/hiện POI overlay, ta set giá trị cho property `isHidden` của đối tượng.<br>
 **Chú ý:** Mặc dù POI overlay không hiển thị nhưng quá trình tải các POI vẫn diễn ra
 
 <!-- tabs:start -->
@@ -196,3 +196,81 @@ func mapView(_ mapView: MFMapView!, didTapPOIWithPlaceID placeID: String!, name:
 <!-- tabs:end -->
 
 Xem thêm [Events](/guides/map-events)
+
+## API Reference
+
+<a id="reference-poi-overlay"></a>
+
+## POI Overlay References
+
+## MFURLPOILayer class
+
+`MFURLPOILayer` class
+
+**Constructor**
+
+Lớp `MFURLPOILayer` cung cấp một số phương thức static để tạo đối tượng *MFURLPOILayer* một cách tiện lợi
+```objc
++ (instancetype _Nonnull) poiLayerWithURLConstructor:(id<MFPOIURLConstructor> _Nonnull)constructor;
++ (instancetype _Nonnull) poiLayerWithURLConstructor:(id<MFPOIURLConstructor> _Nonnull)constructor prefixId:(NSString* _Nullable)prefixId;
+```
+
+- Parameters:
+  - urlConstructor: [MFPOIURLConstructor](#mfpoiurlconstructor-protocol) *required*
+  - prefixId: [NSString](https://developer.apple.com/documentation/foundation/nsstring)
+
+Sử dụng
+<!-- tabs:start -->
+#### ** Swift **
+```swift
+let poiOverlay = MFURLPOILayer(urlConstructor: poiURLConstructor, prefixId: "poi-overlay-")
+```
+#### ** Objective-C **
+```objc
+MFURLPOILayer *poiOverlay = [MFURLPOILayer poiLayerWithURLConstructor:urlConstructor prefixId:@"poi-layer-"];
+```
+<!-- tabs:end -->
+
+**Methods**
+
+| Name              | Parameters  | Return Value | Description                                                           |
+|-------------------|-------------|--------------|-----------------------------------------------------------------------|
+| **clearPOICache** | `none`      | `none`       | Xoá cache của đối tượng poi overlay và load lại dữ liệu poi từ server |
+
+**Properties**
+
+| Name         | Type      | Description                                                                            |
+|--------------|-----------|----------------------------------------------------------------------------------------|
+| **map**      | [MFMapView](/guides/map-options?id=mfmapview-class) | Map view sẽ hiển thị poi overlay |
+| **isHidden** | bool                                           | Ẩn/hiện poi overlay trên map |
+| **prefixId** | NSString                                       | Giá trị được thêm vào trước mỗi id của POI thuộc POI overlay |
+
+## MFPOIURLConstructor protocol
+
+`MFPOIURLConstructor` protocol
+
+MFPOIURLConstructor là một protocol, định nghĩa sẵn 2 phương thức dùng để xác định URL api lấy dữ liệu POIs và xử lý parser data được lấy từ api.
+
+```objc
+- (NSURL* _Nullable) getPOIUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom;
+- (NSArray<MFPOIData*>* _Nullable) parserPOIData:(NSString* _Nonnull)data;
+```
+
+Cần phải implement protocol này trước khi tạo đối tượng `MFURLPOILayer`
+
+## MFPOIData class
+
+`MFPOIData`class
+
+MFPOIData là object chứa thông tin của POI để IPostMap SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của mình thành mảng các POI data cung cấp cho IPostMap SDK hiển thị lên bản đồ.
+
+| Name             | Type      | Description                                                                            |
+|------------------|-----------|----------------------------------------------------------------------------------------|
+| **id**           | NSString               | ID của POI |
+| **position**     | CLLocationCoordinate2D | Vị trí toạ độ của POI hiển thị trên bản đồ |
+| **title**        | NSString               | Tiêu đề của POI  |
+| **color**        | UIColor                | Màu cho icon (nếu sử dụng `type`) và tiêu đề của POI |
+| ~**titleColor**~ | ~UIColor~              | ~Màu hiển thị tiêu đề~  |
+| **type**         | NSString               | Kiểu của POI *("bank", "atm", "park", ...)*, tuỳ thuộc vào kiểu mà POI có icon tương ứng  |
+| **iconUrl**      | NSURL                  | Đường dẫn để lấy icon cho POI. Nếu option này được set giá trị thì hình ảnh của POI sẽ lấy theo URL này mà không cần quan tâm tới option type |
+| **zIndex**       | float                  | Độ ưu tiên hiển thị của POI đối với POI khác  |

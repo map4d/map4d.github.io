@@ -1,23 +1,23 @@
 # Building Overlay
 
-Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết hợp với building sẵn có của IPostMap.  
+Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết hợp với building sẵn có của IPostMap.<br>
 Building overlay chỉ hiển thị ở chế độ 3D.
 
 ![Building Overlay](../../resources/building-overlay.png)
 
 ## Add Building overlay
 
-Để thêm 1 building overlay vào map cần tạo mới 1 đối tượng của lớp [MFURLBuildingLayer](/reference/building-overlay?id=mfurlbuildinglayer-class) sau đó set `map` cho building overlay đó.  
-Hàm khởi tạo của lớp [MFURLBuildingLayer](/reference/building-overlay?id=mfurlbuildinglayer-class) yêu cầu đối tượng implement protocol [MFBuildingURLConstructor](/reference/building-overlay?id=mfbuildingurlconstructor-protocol)  
+Để thêm 1 building overlay vào map cần tạo mới 1 đối tượng của lớp [MFURLBuildingLayer](/guides/building-overlay?id=mfurlbuildinglayer-class) sau đó set `map` cho building overlay đó.<br>
+Hàm khởi tạo của lớp [MFURLBuildingLayer](/guides/building-overlay?id=mfurlbuildinglayer-class) yêu cầu đối tượng implement protocol [MFBuildingURLConstructor](/guides/building-overlay?id=mfbuildingurlconstructor-protocol)<br>
 
-Implement **MFBuildingURLConstructor** protocol yêu cầu 2 phương thức `getBuildingUrlWith` và `parserBuildingData`.  
-Trong đó:  
+Implement **MFBuildingURLConstructor** protocol yêu cầu 2 phương thức `getBuildingUrlWith` và `parserBuildingData`.<br>
+Trong đó:<br>
 - getBuildingUrlWith: Nhận vào các giá trị là toạ độ x, y và mức zoom của tile, kết quả là một kiểu [URL](https://developer.apple.com/documentation/foundation/url) chỉ đến rest api cung cấp dữ liệu building theo tile.
-- parserBuildingData: Nhận vào là dữ liệu được về từ api cung cấp bởi *getBuildingUrlWith*, ta sẽ phải parser dữ liệu đó thành mảng các đối tượng [MFBuildingData](/reference/building-overlay?id=mfbuildingdata-class)
+- parserBuildingData: Nhận vào là dữ liệu được về từ api cung cấp bởi *getBuildingUrlWith*, ta sẽ phải parser dữ liệu đó thành mảng các đối tượng [MFBuildingData](/guides/building-overlay?id=mfbuildingdata-class)
 
 ### Tạo mới Building overlay
 
-Đoạn code bên dưới hướng dẫn cách implement [MFBuildingURLConstructor](/reference/building-overlay?id=mfbuildingurlconstructor-protocol) và tạo đối tượng [MFURLBuildingLayer](/reference/building-overlay?id=mfurlbuildinglayer-class)
+Đoạn code bên dưới hướng dẫn cách implement [MFBuildingURLConstructor](/guides/building-overlay?id=mfbuildingurlconstructor-protocol) và tạo đối tượng [MFURLBuildingLayer](/guides/building-overlay?id=mfurlbuildinglayer-class)
 
 <!-- tabs:start -->
 #### ** Swift **
@@ -28,13 +28,13 @@ class BuildingURLConstructor : NSObject, MFBuildingURLConstructor {
     let url = "https://poi-random.herokuapp.com/poi/\(zoom)/\(x)/\(y)"
     return URL(string: url)
   }
-  
+
   func parserBuildingData(_ data: String) -> [MFBuildingData]? {
     do {
       var buildingDatas:[MFBuildingData] = []
       let decoder = JSONDecoder()
       let poisJson = try decoder.decode(POIsJson.self, from: data.data(using: .utf8)!)
-      
+
       guard let places = poisJson.pois else { return nil }
       for place in places {
         guard let placeId = place.id else { continue }
@@ -45,7 +45,7 @@ class BuildingURLConstructor : NSObject, MFBuildingURLConstructor {
         buildingDatas.append(building)
         break;
       }
-      
+
       return buildingDatas;
     } catch let err {
       print(err.localizedDescription)
@@ -79,32 +79,32 @@ Implement **MFBuildingURLConstructor**
     NSData* jsonData = [data dataUsingEncoding:NSUTF8StringEncoding];
     NSError *jsonError;
     NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&jsonError];
-    
+
     if (jsonObject != nil) {
       NSArray *places = [jsonObject valueForKey:@"pois"];
 
       if (places != nil && places.count > 0) {
         NSMutableArray *buildingDatas = [[NSMutableArray alloc] init];
-        
+
         for (int i = 0; i < places.count; i++) {
           NSDictionary *place = [places objectAtIndex:i];
           if (place == nil) {
             continue;
           }
-          
+
           NSString *placeId = [place valueForKey:@"id"];
           NSString *title = [place valueForKey:@"title"];
           NSDictionary *positionObject = [place valueForKey:@"position"];
           if (placeId == nil || title == nil || positionObject == nil) {
             continue;
           }
-          
+
           NSNumber *latObject = [positionObject valueForKey:@"lat"];
           NSNumber *lngObject = [positionObject valueForKey:@"lng"];
           if (latObject == nil || lngObject == nil) {
             continue;
           }
-          
+
           MFBuildingData *buildingData = [[MFBuildingData alloc] init];
           buildingData.id = placeId;
           buildingData.name = title;
@@ -114,7 +114,7 @@ Implement **MFBuildingURLConstructor**
           [buildingDatas addObject:buildingData];
           break;
         }
-        
+
         return buildingDatas;
       }
     }
@@ -168,7 +168,7 @@ buildingOverlay.map = nil;
 
 ### Ẩn/Hiện Building Overlay
 
-Set giá trị cho property `isHidden` để ẩn/hiện building overlay.  
+Set giá trị cho property `isHidden` để ẩn/hiện building overlay.<br>
 **Chú ý**: Mặc dù building overlay không hiển thị nhưng quá trình tải các building vẫn diễn ra
 
 <!-- tabs:start -->
@@ -196,3 +196,86 @@ func mapView(_ mapView: MFMapView!, didTapBuildingWithBuildingID buildingID: Str
 - (void)mapView: (MFMapView*)  mapView didTapBuildingWithBuildingID: (NSString*) buildingID name: (NSString*) name location: (CLLocationCoordinate2D) location;
 ```
 <!-- tabs:end -->
+
+## API Reference
+
+<a id="reference-building-overlay"></a>
+
+## Building Overlay Reference
+
+## MFURLBuildingLayer class
+`MFURLBuildingLayer` class
+
+**Constructor**
+
+Lớp `MFURLBuildingLayer` cung cấp một số phương thức static để tạo đối tượng *MFURLBuildingLayer* một cách tiện lợi
+```objc
++ (instancetype _Nonnull) buildingLayerWithURLConstructor:(id<MFBuildingURLConstructor> _Nonnull)constructor;
++ (instancetype _Nonnull) buildingLayerWithURLConstructor:(id<MFBuildingURLConstructor> _Nonnull)constructor prefixId:(NSString* _Nullable)prefixId;
+```
+
+- Parameters:
+  - urlConstructor: [MFBuildingURLConstructor](#mfbuildingurlconstructor-protocol) *required*
+  - prefixId: [NSString](https://developer.apple.com/documentation/foundation/nsstring)
+
+Sử dụng
+<!-- tabs:start -->
+#### ** Swift **
+```swift
+let buildingOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor, prefixId: "building-layer-")
+```
+#### ** Objective-C **
+```objc
+MFURLBuildingLayer *buildingOverlay = [MFURLBuildingLayer buildingLayerWithURLConstructor:urlConstructor prefixId:@"building-"];
+```
+<!-- tabs:end -->
+
+**Methods**
+
+| Name              | Parameters  | Return Value | Description                                                           |
+|-------------------|-------------|--------------|-----------------------------------------------------------------------|
+| **clearBuildingCache** | `none`      | `none`       | Xoá cache của đối tượng building overlay và load lại dữ liệu building theo tile từ server |
+
+**Properties**
+
+| Name         | Type      | Description                                                                            |
+|--------------|-----------|----------------------------------------------------------------------------------------|
+| **map**      | [MFMapView](/guides/map-options?id=mfmapview-class) | Map view sẽ hiển thị building overlay |
+| **isHidden** | bool                                           | Ẩn/hiện building overlay trên map |
+| **prefixId** | NSString                                       | Giá trị được thêm vào trước mỗi id của Builing thuộc building overlay |
+
+## MFBuildingURLConstructor protocol
+`MFBuildingURLConstructor` protocol
+
+MFBuildingURLConstructor là một protocol, định nghĩa sẵn 2 phương thức dùng để xác định URL api lấy dữ liệu building và xử lý parser data được lấy từ api.
+
+```objc
+- (NSURL* _Nullable) getBuildingUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom;
+- (NSArray<MFBuildingData*>* _Nullable) parserBuildingData:(NSString* _Nonnull)data;
+```
+
+Cần phải implement protocol này trước khi tạo đối tượng `MFURLBuildingLayer`
+
+## MFBuildingData class
+`MFBuildingData` class
+
+MFBuildingData là object chứa thông tin của building để IPostMap SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho IPostMap SDK hiển thị lên bản đồ.
+
+| Name           | Type      | Description                                                                            |
+|----------------|-----------|----------------------------------------------------------------------------------------|
+| **id**         | NSString               | ID của building |
+| **position**   | CLLocationCoordinate2D | Vị trí hiển thị building trên bản đồ |
+| **name**       | NSString               | Tên của building  |
+| **scale**      | double                 | Tỉ lệ hiển thị của building so với kích thước thực tế |
+| **bearing**    | float                  | Góc quay của building khi được vẽ ra trên bản đồ (đơn vị: độ) |
+| **elevation**  | double                 | Độ cao của building so với mực nước biển (đơn vị: mét) |
+| **height**     | double                 | Chiều cao của building (đơn vị: mét) |
+| **model**      | NSString               | Đường dẫn URL để lấy dữ liệu model cho building |
+| **texture**    | NSString               | Đường dẫn URL để lấy dữ liệu texture cho building |
+| **coordinates**| [MFPath](/guides/coordinates?id=mfpath)             | Một mảng vị trí CLLocationCoordinate2D để tạo một Building hình khối với mặt đáy của hình khối là mảng vị trí này. Kết hợp với height để tạo chiều cao |
+| **startDate**  | NSDate                 | Ngày bắt đầu hiển thị building |
+| **endDate**    | NSDate                 | Ngày kết thúc hiển thị building |
+
+**Chú ý:**
+- Trường hợp dùng `model` nhưng `texture` là **`null`** thì building sẽ được tô màu trắng.
+- Trường hợp dùng `model` thì sẽ không dùng đến thuộc tính `coordinates`. Nếu set giá trị cho `coordinates` và cả `model` đồng thời thì sẽ ưu tiên lấy giá trị của `model` để tạo Building

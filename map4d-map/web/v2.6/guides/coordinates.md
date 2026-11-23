@@ -1,4 +1,10 @@
-# Coordinates References
+# Coordinates
+
+## API Reference
+
+<a id="reference-coordinates"></a>
+
+## Coordinates References
 
 ## LatLng
 

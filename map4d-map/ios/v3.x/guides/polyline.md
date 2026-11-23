@@ -10,7 +10,7 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
 <!-- tabs:start -->
 #### ** Swift **
 
-```swift 
+```swift
 let polyline = MFPolyline()
 let path = MFMutablePath()
 path.add(CLLocationCoordinate2D(latitude: 16.075370898415514, longitude: 108.22887796703878))
@@ -25,7 +25,7 @@ polyline.map = mapView
 
 #### ** Objective C **
 
-```objc 
+```objc
 MFPolyline *polyline = [[MFPolyline alloc] init];
 MFMutablePath *path = [[MFMutablePath alloc] init];
 [path addCoordinate: CLLocationCoordinate2DMake(16.075370898415514, 108.22887796703878)];
@@ -40,7 +40,7 @@ MFMutablePath *path = [[MFMutablePath alloc] init];
 
 <!-- tabs:end -->
 
--  ![Polyline](../../resources/createPolyline.png) 
+-  ![Polyline](../../resources/createPolyline.png)
 
 Bạn có thể tùy chỉnh hình dáng của **Polyline** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
 
@@ -57,7 +57,7 @@ polyline.map = nil
 
 #### ** Objective C **
 
-```objc 
+```objc
 [polyline setMap: Nil];
 ```
 <!-- tabs:end -->
@@ -65,7 +65,7 @@ polyline.map = nil
 ### 3. Tùy chỉnh cho Polyline
 
 Bạn có thể dễ dàng tuỳ chỉnh hình dáng của **Polyline** thông qua các thuộc tính mà **MFPolyline** cung cấp như
- 
+
 | Name                       |Description                                                                                                              |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | **path**                   | Truyền vào một mảng các tọa độ **CLLocationCoordinate2D** để tạo **Polyline**.                                          |
@@ -77,7 +77,7 @@ Bạn có thể dễ dàng tuỳ chỉnh hình dáng của **Polyline** thông q
 <!-- tabs:start -->
 #### ** Swift **
 
-```swift    
+```swift<br>
 let path = MFMutablePath()
 path.add(CLLocationCoordinate2D(latitude: 16.075370898415514, longitude: 108.22887796703878))
 path.add(CLLocationCoordinate2D(latitude: 16.072266586439582, longitude: 108.22896530020222))
@@ -91,7 +91,7 @@ polyline.strokePattern = MFStrokePattern.dash(length: 5 gap: 5)
 
 #### ** Objective C **
 
-```objc 
+```objc
 MFMutablePath *path = [[MFMutablePath alloc] init];
 [path addCoordinate: CLLocationCoordinate2DMake(16.075370898415514, 108.22887796703878)];
 [path addCoordinate: CLLocationCoordinate2DMake(16.072266586439582, 108.22896530020222)];
@@ -104,5 +104,73 @@ MFMutablePath *path = [[MFMutablePath alloc] init];
 ```
 
 <!-- tabs:end -->
- 
--  ![Polyline](../../resources/customizePolyline.png) 
+
+-  ![Polyline](../../resources/customizePolyline.png)
+
+## API Reference
+
+<a id="reference-polyline"></a>
+
+## Polyline reference
+
+`MFPolyline` class
+
+### Constructor
+
+<!-- tabs:start -->
+
+#### ** Swift **
+
+```swift
+let polyline = MFPolyline()
+```
+
+#### ** Objective C **
+
+```objc
+MFPolyline *polyline = [[MFPolyline alloc] init];
+```
+<!-- tabs:end -->
+
+### Properties
+
+| Name                       | Type                   | Description                                                                                                             |
+|----------------------------|:-----------------------|-------------------------------------------------------------------------------------------------------------------------|
+| **path**                   | MFPath                 | Truyền vào một mảng các tọa độ **CLLocationCoordinate2D** để tạo Polyline.**Polyline**.                                 |
+| **width**                  | UIColor                | Chỉ định độ rộng của **Polyline** theo đơn vị point.                                                                    |
+| ~**style**~                | ~MFPolylineStyle~      | ~Chỉ định **Polyline** là loại nét liền **solid** hay nét đứt **dotted**. Giá trị mặc định là **solid** **Polyline**.~  |
+| **strokePattern**          | MFStrokePattern        | Chỉ định kiểu vẽ cho polyline                                                                                           |
+| **color**                  | double                 | Chỉ định màu sắc của **Polyline**.                                                                                      |
+| **userInteractionEnabled** | BOOL                   | Cho phép người dùng có thể tương tác được với **Polyline** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **Polyline** thì tất cả các sự kiện liên quan tới **Polyline** từ phía người dùng sẽ không có tác dụng.                                                                         |
+| **isHidden**               | BOOL                   | Xác định **Polyline** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                     |
+| **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các Polyline với nhau hoặc giữa **Polyline** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
+| **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Polyline**.                                                                |
+| **map**                    | [MFMapView](/guides/map-options?id=MFMapView)              | Chỉ định hiển thị **Polyline** trên **Map** hoặc xoá **Polyline** khỏi **Map**           |
+| **Id**                     | UInt32                 | **Id** của **Polyline** **{get}**.                                                                                      |
+
+
+### Delegate
+
+  > **Chú ý**: Để sử dụng sự kiện của **Polyline** phải **set** thuộc tính **userInteractionEnabled** = **true**
+
+  **Touch
+Polyline**
+
+  Phát sinh khi người dùng **touch** vào **Polyline**
+  </br>Cung cấp thông tin của **Polyline** cho người dùng
+
+  <!-- tabs:start -->
+
+  #### ** Swift **
+
+  ```swift
+  func mapView(_ mapView: MFMapView!, didTap polyline: MFPolyline!) {}
+  ```
+
+  #### ** Objective C **
+
+  ```objc
+  - (void)mapView:(MFMapView *)mapView didTapPolyline:(MFPolyline *)polyline{}
+  ```
+
+  <!-- tabs:end -->

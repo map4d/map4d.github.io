@@ -10,7 +10,7 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
 <!-- tabs:start -->
 #### ** Swift **
 
-```swift 
+```swift
 let path = MFMutablePath()
 path.add(CLLocationCoordinate2D(latitude: 16.072699584731552, longitude: 108.23020984691385))
 path.add(CLLocationCoordinate2D(latitude: 16.07608106276882, longitude: 108.22671224150031))
@@ -26,7 +26,7 @@ polygon.map = mapView
 
 #### ** Objective C **
 
-```objc 
+```objc
 MFMutablePath *path = [[MFMutablePath alloc] init];
 [path addCoordinate:CLLocationCoordinate2DMake(16.072699584731552, 108.23020984691385)];
 [path addCoordinate:CLLocationCoordinate2DMake(16.07608106276882, 108.22671224150031)];
@@ -42,7 +42,7 @@ MFPolygon *polygon = [[MFPolygon alloc] init];
 
 <!-- tabs:end -->
 
-![Polygon](../../resources/createPolygon.png) 
+![Polygon](../../resources/createPolygon.png)
 
 Bạn có thể tùy chỉnh hình dáng của **Polygon** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
 
@@ -59,7 +59,7 @@ polygon.map = nil
 
 #### ** Objective C **
 
-```objc 
+```objc
 [polygon setMap: Nil];
 ```
 <!-- tabs:end -->
@@ -67,7 +67,7 @@ polygon.map = nil
 ### 3. Tùy chỉnh cho Polygon
 
 Bạn có thể dễ dàng tuỳ chỉnh hình dáng của **Polygon** thông qua các thuộc tính mà **MFPolygon** cung cấp như
-  
+
 | Name                       |Description                                                                                                              |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | **path**                   | Truyền vào một mảng các tọa độ **CLLocationCoordinate2D** để tạo **Polygon**.                                           |
@@ -78,7 +78,7 @@ Bạn có thể dễ dàng tuỳ chỉnh hình dáng của **Polygon** thông qu
 <!-- tabs:start -->
 #### ** Swift **
 
-```swift    
+```swift<br>
 polygon.fillColor = .red
 polygon.strokeWidth = 20.0
 polygon.strokeColor = .lightGray
@@ -86,7 +86,7 @@ polygon.strokeColor = .lightGray
 
 #### ** Objective C **
 
-```objc 
+```objc
 [polygon setFillColor: [UIColor redColor]];
 [polygon setStrokeWidth:20.0];
 [polygon strokeColor: [UIColor lightGrayColor]];
@@ -94,11 +94,11 @@ polygon.strokeColor = .lightGray
 
 <!-- tabs:end -->
 
-![Polygon](../../resources/customizePolygon.png) 
+![Polygon](../../resources/customizePolygon.png)
 
 ### 4. Polygon có hole
 
-**Polygon có hole** cũng tương tự như **Polygon** cũng mang các thuộc tính của **Polygon thông thường**, chỉ đặt biệt là 
+**Polygon có hole** cũng tương tự như **Polygon** cũng mang các thuộc tính của **Polygon thông thường**, chỉ đặt biệt là
 nó có thêm các hole bên trong.
 
 Đoạn mã sau sẽ vẽ **Polygon có hole** lên bản đồ:
@@ -106,7 +106,7 @@ nó có thêm các hole bên trong.
 <!-- tabs:start -->
 #### ** Swift **
 
-```swift 
+```swift
 let path = MFMutablePath()
 path.add(CLLocationCoordinate2D(latitude: 16.072699584731552, longitude: 108.23020984691385))
 path.add(CLLocationCoordinate2D(latitude: 16.07608106276882, longitude: 108.22671224150031))
@@ -132,7 +132,7 @@ polygon.map = mapView
 
 #### ** Objective C **
 
-```objc 
+```objc
 MFMutablePath *path = [[MFMutablePath alloc] init];
 [path addCoordinate:CLLocationCoordinate2DMake(16.072699584731552, 108.23020984691385)];
 [path addCoordinate:CLLocationCoordinate2DMake(16.07608106276882, 108.22671224150031)];
@@ -161,4 +161,74 @@ MFPolygon *polygon = [[MFPolygon alloc] init];
 
 <!-- tabs:end -->
 
-![Polygon](../../resources/createPolygonHole.png) 
+![Polygon](../../resources/createPolygonHole.png)
+
+## API Reference
+
+<a id="reference-polygon"></a>
+
+## Polygon reference
+
+`MFPolygon` class
+
+### Constructor
+
+<!-- tabs:start -->
+
+#### ** Swift **
+
+```swift
+let polygon = MFPolygon()
+```
+
+#### ** Objective C **
+
+```objc
+MFPolygon *polygon = [[MFPolygon alloc] init];
+```
+<!-- tabs:end -->
+
+### Properties
+
+| Name                       | Type                   | Description                                                                                                             |
+|----------------------------|:-----------------------|-------------------------------------------------------------------------------------------------------------------------|
+| **path**                   | MFPath                 | Truyền vào một mảng các tọa độ **CLLocationCoordinate2D** để tạo Polygon.**Polygon**.                                   |
+| **holes**                  | NSArray<MFPath*>       | Truyền vào một mảng hoặc nhiều mảng các tọa độ **CLLocationCoordinate2D** để tạo **Holes** cho **Polygon**.             |
+| **fillColor**              | UIColor                | Chỉ định màu tô phía trong của **Polygon**.                                                                             |
+| **strokeColor**            | UIColor                | Chỉ định màu sắc đường viền ngoài cùng của **Polygon**.                                                                 |
+| **strokeWidth**            | CGFloat                | Chỉ định độ rộng đường viền của Polygon theo đơn vị point.                                                              |
+| **userInteractionEnabled** | BOOl                | Cho phép người dùng có thể tương tác được với **Polygon** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **Polygon** thì tất cả các sự kiện liên quan tới **Polygon** từ phía người dùng sẽ không có tác dụng.                                                                           |
+| **isHidden**               | BOOl                   | Xác định **Polygon** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                      |
+| **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các **Polygon** với nhau hoặc giữa **Polygon** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
+| **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Polygon**.                                                                 |
+| **map**                    | [MFMapView](/guides/map-options?id=MFMapView)              | Chỉ định hiển thị **Polygon** trên **Map** hoặc xoá **Polygon** khỏi **Map**             |
+| **Id**                     | UInt32                 | **Id** của **Polygon** **{get}**.                                                                                       |
+
+
+### Delegate
+
+  > **Chú ý**: Để sử dụng sự kiện của **Polygon** phải **set** thuộc tính **userInteractionEnabled** = **true**
+
+  **Touch
+Polygon**
+
+  Phát sinh khi người dùng **touch** vào **Polygon**
+  </br>Cung cấp thông tin của **Polygon** cho người dùng
+
+  <!-- tabs:start -->
+
+  #### ** Swift **
+
+  ```swift
+  func mapView(_ mapView: MFMapView!, didTap polygon: MFPolygon!) {}
+  ```
+
+  #### ** Objective C **
+
+  ```objc
+  - (void)mapView: (MFMapView*)  mapView didTapPolygon: (MFPolygon*) polygon {}
+  ```
+
+  <!-- tabs:end -->
+
+  **Ghi chú:** **Hole** Là phần đa giác bị khuyết bên trong polygon

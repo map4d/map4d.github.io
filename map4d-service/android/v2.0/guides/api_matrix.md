@@ -4,7 +4,7 @@
 
 ## Usage
 
-Để sử dụng service Distance Matrix ta sử dụng phương thức sau đây của class [MFDirectionsService](reference/directions-service?id=mfplacesservice)
+Để sử dụng service Distance Matrix ta sử dụng phương thức sau đây của class [MFDirectionsService](guides/api_matrix?id=mfplacesservice)
 
 **Methods**
 
@@ -88,7 +88,7 @@ directionServices.fetchDistanceMatrix(mfDistanceMatrixOptions, new MFServiceCall
 
 ## MFDistanceMatrixOptions
 
-Đối tượng `MFDistanceMatrixOptions` dùng để xác định các thuộc tính dùng cho [MFDirectionsService](reference/directions-service?id=mfplacesservice)
+Đối tượng `MFDistanceMatrixOptions` dùng để xác định các thuộc tính dùng cho [MFDirectionsService](guides/api_matrix?id=mfplacesservice)
 
 Để tạo đối tượng `MFDistanceMatrixOptions` thì ta tạo thông qua class [MFDistanceMatrixOptions.Builder](/guides/api_matrix?id=mfdistancematrixoptionsbuilder)
 
@@ -213,3 +213,74 @@ MFDistanceMatrixOptions.Builder()
 |------------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
 | **getText**                  | `none`          | String       | Lấy thông tin dưới dạng text                                       |
 | **getValue**                 | `none`          | Double       | Lấy thông tin dưới dạng số double                                  |
+
+## API Reference
+
+<a id="reference-directions-service"></a>
+
+## Directions Service
+
+## MFDirectionsService
+
+**Constructor**
+
+Tạo đối tượng `MFDirectionsService` với `options` được chỉ định
+
+<!-- tabs:start -->
+#### ** Kotlin **
+```kotlin
+val directionServices = MFDirectionsService(options)
+```
+#### ** Java **
+```java
+MFDirectionsService directionServices = new MFDirectionsService(options);
+```
+<!-- tabs:end -->
+
+- Parameters:
+  - options: [MFServicesOptions](guides/api_matrix.md?id=reference-service-options) `required`
+
+<a id="reference-service-options"></a>
+
+## Service Options
+
+## MFServicesOptions
+
+Để tạo đối tượng `MFServicesOptions` thì ta tạo thông qua class [MFServicesOptions.Builder](guides/api_matrix?id=mfservicesoptionsbuilder)
+
+<!-- tabs:start -->
+#### ** Kotlin **
+```kotlin
+val context = this
+val serviceOptions = MFServicesOptions.Builder(context).build()
+```
+#### ** Java **
+```java
+Context context = this;
+MFServicesOptions serviceOptions = MFServicesOptions.Builder(context).build();
+```
+<!-- tabs:end -->
+
+**Methods**
+
+| Name                         | Parameters      | Return Value | Description                                                        |
+|------------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
+| **getAccessKey**             | `none`          | String       | Lấy giá trị access key của                                         |
+| **getContext**               | `none`          | String       | Lấy đối tượng context                                              |
+
+## MFServicesOptions.Builder
+
+**Constructor**
+
+Tạo đối tượng `MFServicesOptions.Builder` với đối tượng `Context`
+
+```
+MFServicesOptions.Builder(Context context)
+```
+
+**Methods**
+
+| Name                    | Parameters      | Return Value | Description                                                        |
+|-------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
+| **accessKey** *optional*| String          | Builder      | Set giá trị access key cho Builder                                 |
+| **build**               | `none`          |[MFServicesOptions](guides/api_matrix?id=mfservicesoptions)| Tạo đối tượng MFServicesOptions từ Builder |

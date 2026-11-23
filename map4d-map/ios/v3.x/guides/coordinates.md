@@ -1,4 +1,10 @@
-# Coordinates References
+# Coordinates
+
+## API Reference
+
+<a id="reference-coordinates"></a>
+
+## Coordinates References
 
 ## MFCoordinateBounds
 `MFCoordinateBounds`class
@@ -33,9 +39,9 @@ init(path: MFPath) {}
 
 | Name                       | Parameters                                                  | Return value                                               | Description                                         |
 |----------------------------|:-----------------------------------------------------------:|:----------------------------------------------------------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **includingCoordinate**    | CLLocationCoordinate2D                                      | [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds) | Mở rộng **bound** với một điểm truyền vào           |
-| **including**              | [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds)  | [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds) | Mở rộng **bound** với một **bound** truyền vào      |
-| **including**              | MFPath                                                      | [MFCoordinateBounds](/reference/coordinates?id=MFCoordinateBounds) | Mở rộng **bound** với danh sách các điểm truyền vào |
+| **includingCoordinate**    | CLLocationCoordinate2D                                      | [MFCoordinateBounds](/guides/coordinates?id=MFCoordinateBounds) | Mở rộng **bound** với một điểm truyền vào           |
+| **including**              | [MFCoordinateBounds](/guides/coordinates?id=MFCoordinateBounds)  | [MFCoordinateBounds](/guides/coordinates?id=MFCoordinateBounds) | Mở rộng **bound** với một **bound** truyền vào      |
+| **including**              | MFPath                                                      | [MFCoordinateBounds](/guides/coordinates?id=MFCoordinateBounds) | Mở rộng **bound** với danh sách các điểm truyền vào |
 | **containsLatitude**       | double                                                      | BOOL                                                       | Kiểm tra vĩ độ có thuộc **bound** không             |
 | **containsLongitude**      | double                                                      | BOOL                                                       | Kiểm tra kinh độ có thuộc **bound** không           |
 | **contains**               | CLLocationCoordinate2D                                      | BOOL                                                       | Kiểm tra các điểm có thuộc **bound** kkhông.        |

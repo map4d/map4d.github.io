@@ -7,7 +7,7 @@ Thông thường sẽ đính kèm một cửa sổ thông tin vào một **marke
 ### 1. Thêm một InfoWindow
 
 Hàm khởi tạo của lớp **ipostmap.InfoWindow** cần truyền vào một đối tượng **ipostmap.InfoWindowOptions** để định nghĩa các thuộc tính ban đầu của
-InfoWindow. 
+InfoWindow.
 
 Đối tượng **InfoWindowOptions** được định nghĩa như sau:
 
@@ -27,13 +27,13 @@ Các thuộc tính của **InfoWindow Options** :
 - **content** (tùy chọn) : nội dung để hiển thị trong InfoWindow. Đó có thể là một phần tử HTML, một chuỗi văn bản thuần túy hoặc một chuỗi chứa HTML.
 - **maxWidth** (tùy chọn) : chiều rộng tối đa của InfoWindow, bất kể chiều rộng của nội dung. Giá trị này chỉ được xem xét nếu được đặt trước khi gọi open()
 - **minWidth** (tùy chọn) : chiều rộng tối thiểu của InfoWindow, bất kể chiều rộng của nội dung. Khi sử dụng thuộc tính này, bạn nên đặt minWidth thành một giá trị nhỏ hơn chiều rộng của bản đồ (tính bằng pixel).
-- **position** (tùy chọn) : chỉ định một **ILatLng** để xác định vị trí ban đầu của InfoWindow. Nếu InfoWindow được mở bằng anchor, vị trí của anchor sẽ được sử dụng thay thế. 
+- **position** (tùy chọn) : chỉ định một **ILatLng** để xác định vị trí ban đầu của InfoWindow. Nếu InfoWindow được mở bằng anchor, vị trí của anchor sẽ được sử dụng thay thế.
 - **zIndex** (tùy chọn) : chỉ định thứ tự chồng nhau giữa các InfoWindow với nhau hoặc giữa InfoWindow với các đối tượng khác trên
 bản đồ. Giá trị mặc định là **0**
 
 ### 2. Mở một InfoWindow
 
-Khi bạn tạo một **InfoWindow**, cửa sổ đó sẽ không tự động xuất hiện trên bản đồ. Để hiển thị cửa sổ thông tin, bạn phải gọi phương thức **open()** trên **InfoWindow**, chuyển một đối tượng [InfoWindowOpenOptions](/reference/info-window?id=infowindow-open-options) chỉ định các tùy chọn sau:
+Khi bạn tạo một **InfoWindow**, cửa sổ đó sẽ không tự động xuất hiện trên bản đồ. Để hiển thị cửa sổ thông tin, bạn phải gọi phương thức **open()** trên **InfoWindow**, chuyển một đối tượng [InfoWindowOpenOptions](/guides/info-window?id=infowindow-open-options) chỉ định các tùy chọn sau:
 
 ```javascript
 interface InfoWindowOpenOptions {
@@ -69,3 +69,74 @@ infoWindow.close()
 Có một số cách để thay đổi vị trí của cửa sổ thông tin:
 - Call **setPosition()** ở InfoWindow hoặc
 - Đính kèm **InfoWindow** vào điểm đánh dấu mới bằng phương thức **InfoWindow.open()**. Lưu ý: Nếu bạn gọi **open()** mà không chuyển điểm marker, InfoWindow sẽ sử dụng vị trí được chỉ định khi xây dựng thông qua giá trị cố định **InfoWindowOptions**
+
+## API Reference
+
+<a id="reference-info-window"></a>
+
+## InfoWindow reference
+
+## InfoWindow Class
+
+`ipostmap.InfoWindow` class
+
+**Constructor**
+
+Tạo InfoWindow với các options được chỉ định
+
+```js
+InfoWindow(options)
+```
+
+- Parameters:
+  - options: [InfoWindowOptions](/guides/info-window?id=infowindow-options)
+
+**Methods**
+
+| Name                         | Parameters                              | Return Value | Description                                                                             |
+|------------------------------|:---------------------------------------:|:------------:|----------------------------------------------------------------------------------------|
+| **open**                     | [IInfoWindowOpenOptions](/guides/info-window?id=iinfowindowopenoptions), [anchor](/guides/marker?id=marker-class)      | `none`       | Thêm InfoWindow vào map                                                                         |
+| **close**                    | `none`                                  | `none`       | Xóa InfoWindow khỏi map                                                                         |
+| **setOptions**               | [InfoWindowOptions](/guides/info-window?id=infowindow-options)             | `none`       | Set InfoWindowOptions InfoWindow                                                                         |
+| **setContent**               | string `or` Node                        | `none`       | Set nội dung content cho InfoWindow
+| **getContent**               | `none`                                  | string       | Get nội dung content của InfoWindow                                                                  |
+| **setPosition**              | [ILatLng](/guides/coordinates?id=ilatlng)| `none`    | Set vị trí cho InfoWindow                                                                  |
+| **getPosition**              | `none`                                  | ILatLng      | Get vị trí của InfoWindow                                                                  |
+| **setZIndex**                | `number`                                  | `none`       | Set giá trị zIndex cho InfoWindow                                                                  |
+| **getZIndex**                | `none`                                  | number       | Get giá trị zIndex hiện tại của InfoWindow                                                                  |
+
+## InfoWindow Options
+`ipostmap.InfoWindowOptions` interface
+
+Đối tượng InfoWindowOptions dùng để xác định các thuộc tính dùng cho InfoWindow.
+
+**Properties**
+
+| Name                       | Type                | Description                                                                                                                                                           |
+|----------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **position** *optional*    |[ILatLng](/guides/coordinates?id=ilatlng)| chỉ định một **ILatLng** để xác định vị trí ban đầu của InfoWindow.                                                                                |
+| **ariaLabel** *optional*    | string              | ariaLabel sẽ gán cho InfoWindow.                                                                                         |
+| **content** *optional*      | string `or` Node    | nội dung để hiển thị trong InfoWindow. Đó có thể là một phần tử HTML, một chuỗi văn bản thuần túy hoặc một chuỗi chứa HTML.                                                    |
+| **maxWidth** *optional*     | number              | chiều rộng tối đa của InfoWindow, bất kể chiều rộng của nội dung. Giá trị này chỉ được xem xét nếu được đặt trước khi gọi open()                                                                             |
+| **minWidth** *optional*     | number              | chiều rộng tối thiểu của InfoWindow, bất kể chiều rộng của nội dung. Khi sử dụng thuộc tính này, bạn nên đặt minWidth thành một giá trị nhỏ hơn chiều rộng của bản đồ (tính bằng pixel).                                                                                             |
+| **zIndex** *optional*       | number              | chỉ định thứ tự chồng nhau giữa các InfoWindow với nhau hoặc giữa InfoWindow với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**                                    |
+
+## IInfoWindowOpenOptions
+
+`ipostmap.IInfoWindowOpenOptions` type
+
+```js
+type IInfoWindowOpenOptions = InfoWindowOpenOptions | Map
+```
+
+## InfoWindow Open Options
+`ipostmap.InfoWindowOpenOptions` interface
+
+Đối tượng InfoWindowOptions dùng để mở InfoWindow
+
+**Properties**
+
+| Name                       | Type                | Description                                                                                                                                                           |
+|----------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **anchor** *optional*    | [Marker](/guides/marker?id=marker-class)           | chỉ định một [ILatLng](/guides/coordinates?id=ilatlng) để xác định vị trí ban đầu của InfoWindow.                                                                                |
+| **map** *optional*        | [Map](/guides/map-options?id=map-class)              | ariaLabel sẽ gán cho InfoWindow.          |

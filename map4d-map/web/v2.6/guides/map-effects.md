@@ -37,9 +37,9 @@ Các loại thời tiết:
 | cloudy | Weather.Cloudy | Hiệu ứng thời tiết có mây                                                                         |
 | live   | Weather.Live   | Hiệu ứng thời tiết tự động cập nhật theo thời gian thực bằng hệ thống cảm biến đã có ở một số nơi |
 
-Để cài đặt hiệu ứng thời tiết trên bản đồ, ta gọi phương thức `setWeather` từ đối tượng `Map`  
-Phương thức `setWeather` nhận vào giá trị là tên thời tiết hoặc giá trị enum [Weather](/reference/map?id=weather-enum) và một
-interface [WeatherProvider](reference/map?id=weatherprovider-interface)
+Để cài đặt hiệu ứng thời tiết trên bản đồ, ta gọi phương thức `setWeather` từ đối tượng `Map`<br>
+Phương thức `setWeather` nhận vào giá trị là tên thời tiết hoặc giá trị enum [Weather](/guides/map-options?id=weather-enum) và một
+interface [WeatherProvider](guides/map-options?id=weatherprovider-interface)
 
 ```js
 map.setWeather(weather)
@@ -72,7 +72,7 @@ map.setWeather(ipostmap.Weather.Live, weatherProvider)
 
 ## Hiệu ứng thời gian trong ngày
 
-IpostMap JavaScript SDK cho phép thay đổi hiệu ứng theo thời gian trong ngày của bản đồ thành sáng, trưa, chiều, tối...  
+IpostMap JavaScript SDK cho phép thay đổi hiệu ứng theo thời gian trong ngày của bản đồ thành sáng, trưa, chiều, tối...<br>
 Tùy thuộc thời gian trong ngày mà vị trí đổ bóng sẽ khác nhau và màu sắc của ánh sáng sẽ khác nhau.
 
 Các loại hiệu ứng thời gian:
@@ -87,8 +87,8 @@ Các loại hiệu ứng thời gian:
 | evening   | TimeEffect.Evening   | Hiệu ứng buổi tối                   |
 
 
-Để cài đặt hiệu ứng thời gian trên bản đồ, ta gọi phương thức `setTimeEffect` từ đối tượng `Map`  
-Phương thức `setTimeEffect` nhận vào giá trị là tên hiệu ứng thời gian hoặc giá trị enum [TimeEffect](/reference/map?id=timeeffect-enum)
+Để cài đặt hiệu ứng thời gian trên bản đồ, ta gọi phương thức `setTimeEffect` từ đối tượng `Map`<br>
+Phương thức `setTimeEffect` nhận vào giá trị là tên hiệu ứng thời gian hoặc giá trị enum [TimeEffect](/guides/map-options?id=timeeffect-enum)
 
 ```js
 map.setTimeEffect(effect)
