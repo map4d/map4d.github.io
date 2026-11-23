@@ -6,12 +6,12 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_viewbox_
 
 ### Usage
 
-- Service: [MFPlacesService](reference/places-service.md)
-- Params: [MFViewboxSearchParams](reference/viewbox-search-params.md)
-- Return: [MFServiceTask](reference/service-task.md)
+- Service: [MFPlacesService](/guides/places-service.md?id=api-places-service)
+- Params: [MFViewboxSearchParams](/guides/viewbox-search.md?id=api-viewbox-search-params)
+- Return: [MFServiceTask](/guides/service-task.md?id=api-service-task)
 - Callback:
-  + Result: Array of [MFPlaceResult](reference/place-result.md)
-  + Error: [MFServiceError](reference/service-error.md)
+  + Result: Array of [MFPlaceResult](/guides/place-result.md?id=api-place-result)
+  + Error: [MFServiceError](/guides/service-error.md?id=api-service-error)
 
 ### Example
 
@@ -51,3 +51,45 @@ MFPlacesService* service = [[MFPlacesService alloc] init];
 }];
 ```
 <!-- tabs:end -->
+
+---
+
+## Viewbox Search Params :id=api-viewbox-search-params
+
+`MFViewboxSearchParams` class
+
+#### Public Member Functions :id=api-viewbox-search-params-public-member-functions
+
+##### initWithViewbox: text: :id=api-viewbox-search-params-initwithviewbox-text
+
+```objc
+- (instancetype)initWithViewbox:(MFViewboxComponent *)viewbox text:(NSString *)text;
+```
+
+Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và text.
+
+##### initWithViewbox: types: :id=api-viewbox-search-params-initwithviewbox-types
+
+```objc
+- (instancetype)initWithViewbox:(MFViewboxComponent *)viewbox types:(NSArray<NSString *> *)types;
+```
+
+Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và types.
+
+##### initWithViewbox: tags: :id=api-viewbox-search-params-initwithviewbox-tags
+
+```objc
+- (instancetype)initWithViewbox:(MFViewboxComponent *)viewbox tags:(NSArray<NSString *> *)tags;
+```
+
+Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và tags.
+
+#### Properties :id=api-viewbox-search-params-properties
+
+| Name        | Type                                                            | Description                                                                        |
+|-------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| viewbox     | [MFViewboxComponent](/guides/viewbox-component.md?id=api-viewbox-component)            | Khu vực muốn tìm kiếm.                                                             |
+| text        | NSString                                                        | Nội dung muốn tìm kiếm.                                                            |
+| types       | NSArray\<NSString\>                                             | Loại đối tượng của địa điểm. VD: cafe, restaurant, ...                             |
+| tags        | NSArray\<NSString\>                                             | Nhãn của địa điểm.                                                                 |
+| datetime    | NSDate                                                          | Thời gian địa điểm vẫn còn tồn tại.                                                |

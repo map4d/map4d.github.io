@@ -6,7 +6,7 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_route>
 
 ## Usage
 
-Để sử dụng service Directions ta sử dụng phương thức sau đây của class [MFDirectionsService](reference/directions-service?id=mfplacesservice)
+Để sử dụng service Directions ta sử dụng phương thức sau đây của class [MFDirectionsService](/guides/directions-service.md?id=api-directions-service-mfdirectionsservice)
 
 **Methods**
 
@@ -88,7 +88,7 @@ directionServices.fetchDirections(routeOptions, new MFServiceCallback<MFRoute[]>
 
 ## MFDirectionOptions
 
-Đối tượng `MFDirectionOptions` dùng để xác định các thuộc tính dùng cho [MFDirectionsService](reference/directions-service?id=mfplacesservice)
+Đối tượng `MFDirectionOptions` dùng để xác định các thuộc tính dùng cho [MFDirectionsService](/guides/directions-service.md?id=api-directions-service-mfdirectionsservice)
 
 Để tạo đối tượng `MFDirectionOptions` thì ta tạo thông qua class [MFDirectionOptions.Builder](/guides/api_route?id=mfdirectionoptionsbuilder)
 

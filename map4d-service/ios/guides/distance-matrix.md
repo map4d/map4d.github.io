@@ -4,12 +4,12 @@
 
 ### Usage
 
-- Service: [MFDirectionsService](reference/directions-service.md)
-- Params: [MFDistanceMatrixParams](reference/distance-matrix-params.md)
-- Return: [MFServiceTask](reference/service-task.md)
+- Service: [MFDirectionsService](/guides/directions-service.md?id=api-directions-service)
+- Params: [MFDistanceMatrixParams](/guides/distance-matrix.md?id=api-distance-matrix-params)
+- Return: [MFServiceTask](/guides/service-task.md?id=api-service-task)
 - Callback:
-  + Result: [MFDistanceMatrixResult](reference/distance-matrix-result.md)
-  + Error: [MFServiceError](reference/service-error.md)
+  + Result: [MFDistanceMatrixResult](/guides/distance-matrix.md?id=api-distance-matrix-result)
+  + Error: [MFServiceError](/guides/service-error.md?id=api-service-error)
 
 ### Example
 
@@ -61,3 +61,74 @@ MFPlacesService* service = [[MFDirectionsService alloc] init];
 }];
 ```
 <!-- tabs:end -->
+
+---
+
+## Distance Matrix Element Result :id=api-distance-matrix-element-result
+
+`MFDistanceMatrixElementResult` protocol
+
+#### Properties :id=api-distance-matrix-element-result-properties
+
+| Name        | Type                                                                       | Description                                                                                                                              |
+|-------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| distance    | NSArray<[MFRouteDescriptionResult](/guides/directions.md?id=api-route-description-result)> | Khoảng cách về km mỗi địa điểm đi qua (khoảng cách dưới dạng text, còn value là giá trị đơn vị là mét)                                   |
+| duration    | NSArray<[MFRouteDescriptionResult](/guides/directions.md?id=api-route-description-result)> | Khoảng cách về thời gian mỗi địa điểm đi qua (thời gian dưới dạng text, còn value là thời gian khi đi trên đoạn đường đó đơn vị là giây) |
+
+---
+
+## Distance Matrix Params :id=api-distance-matrix-params
+
+`MFDistanceMatrixParams` class
+
+#### Public Member Functions :id=api-distance-matrix-params-public-member-functions
+
+##### initWithOrigins: destinations: :id=api-distance-matrix-params-initwithorigins-destinations
+
+```objc
+- (instancetype)initWithOrigins:(NSArray<MFLocationComponent *> *)origins destinations:(NSArray<MFLocationComponent *> *)destinations;
+```
+
+Tạo đối tượng `MFDistanceMatrixParams` với 2 mảng các địa điểm origins và destinations
+
+##### initWithOrigins: destinations: mode: weighting: :id=api-distance-matrix-params-initwithorigins-destinations-mode-weighting
+
+```objc
+- (instancetype)initWithOrigins:(NSArray<MFLocationComponent *> *)origins
+                   destinations:(NSArray<MFLocationComponent *> *)destinations
+                           mode:(MFTravelMode)mode
+                      weighting:(MFRouteWeighting)weighting;
+```
+
+Tạo đối tượng `MFDistanceMatrixParams` với 2 mảng các địa điểm origins, destinations cùng với mode và weighting
+
+#### Properties :id=api-distance-matrix-params-properties
+
+| Name         | Type                                                            | Description                                                                        |
+|--------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| origins      | NSArray<[MFLocationComponent](/guides/location-component.md?id=api-location-component)> | Vị trí các điểm bắt đầu dùng để tính toán ma trận                                  |
+| destinations | NSArray<[MFLocationComponent](/guides/location-component.md?id=api-location-component)> | Vị trí các điểm kết thúc dùng để tính toán ma trận                                 |
+| mode         | [MFTravelMode](/guides/travel-mode.md?id=api-travel-mode)                        | Phương thức di chuyển.                                                             |
+| weighting    | [MFRouteWeighting](/guides/route-weighting.md?id=api-route-weighting)                | Thuộc tính tìm kiếm (đường ngắn nhất, nhanh nhất hay cân bằng).                    |
+| restriction  | [MFRouteRestriction](/guides/route-restriction.md?id=api-route-restriction)            | Điểm, khu vực, loại đường bị loại bỏ mà tuyến đường được tìm kiếm sẽ không đi qua. |
+| language     | [MFLanguageResult](/guides/language-result.md?id=api-language-result)                | Ngôn ngữ dùng để chỉ đường.                                                        |
+
+---
+
+## Distance Matrix Result :id=api-distance-matrix-result
+
+`MFDistanceMatrixResult` protocol
+
+| Name         | Type                                                                          | Description                                                                        |
+|--------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| rows         | NSArray<[MFDistanceMatrixRowResult](/guides/distance-matrix.md?id=api-distance-matrix-row-result)> |                                                                                    |
+
+---
+
+## Distance Matrix Row Result :id=api-distance-matrix-row-result
+
+`MFDistanceMatrixRowResult` protocol
+
+| Name         | Type                                                                                  | Description                                                                        |
+|--------------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| elements     | NSArray<[MFDistanceMatrixElementResult](/guides/distance-matrix.md?id=api-distance-matrix-element-result)> |                                                                                    |

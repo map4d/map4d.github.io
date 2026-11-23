@@ -4,7 +4,7 @@
 
 ## Usage
 
-Để sử dụng service Distance Matrix ta sử dụng phương thức sau đây của class [MFDirectionsService](reference/directions-service?id=mfplacesservice)
+Để sử dụng service Distance Matrix ta sử dụng phương thức sau đây của class [MFDirectionsService](/guides/directions-service.md?id=api-directions-service-mfdirectionsservice)
 
 **Methods**
 
@@ -88,7 +88,7 @@ directionServices.fetchDistanceMatrix(mfDistanceMatrixOptions, new MFServiceCall
 
 ## MFDistanceMatrixOptions
 
-Đối tượng `MFDistanceMatrixOptions` dùng để xác định các thuộc tính dùng cho [MFDirectionsService](reference/directions-service?id=mfplacesservice)
+Đối tượng `MFDistanceMatrixOptions` dùng để xác định các thuộc tính dùng cho [MFDirectionsService](/guides/directions-service.md?id=api-directions-service-mfdirectionsservice)
 
 Để tạo đối tượng `MFDistanceMatrixOptions` thì ta tạo thông qua class [MFDistanceMatrixOptions.Builder](/guides/api_matrix?id=mfdistancematrixoptionsbuilder)
 

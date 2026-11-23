@@ -6,7 +6,7 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_geocode_
 
 ## Usage
 
-Để sử dụng GeoCode ta sử dụng phương thức sau đây của class [MFPlacesService](reference/places-service?id=mfplacesservice)
+Để sử dụng GeoCode ta sử dụng phương thức sau đây của class [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 **Methods**
 
@@ -60,7 +60,7 @@ placesService.geocoding(mfGeocodeOptions, new MFServiceCallback<MFPlace[]>() {
 
 ## MFGeocodeOptions
 
-Đối tượng `MFGeocodeOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](reference/places-service?id=mfplacesservice)
+Đối tượng `MFGeocodeOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 Để tạo đối tượng `MFGeocodeOptions` thì ta tạo thông qua class [MFGeocodeOptions.Builder](/guides/api_geocode?id=mfgeocodeoptionsbuilder)
 

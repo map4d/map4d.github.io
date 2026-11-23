@@ -6,7 +6,7 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_place_de
 
 ## Usage
 
-Để sử dụng Place Detail ta sử dụng phương thức sau đây của class [MFPlacesService](reference/places-service?id=mfplacesservice)
+Để sử dụng Place Detail ta sử dụng phương thức sau đây của class [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 **Methods**
 

@@ -6,7 +6,7 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_text_sea
 
 ## Usage
 
-Để sử dụng Text Search ta sử dụng phương thức sau đây của class [MFPlacesService](reference/places-service?id=mfplacesservice)
+Để sử dụng Text Search ta sử dụng phương thức sau đây của class [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 **Methods**
 
@@ -57,7 +57,7 @@ placesService.searchText(textSearchOptions, new MFServiceCallback<MFPlace[]>() {
 
 ## MFTextSearchOptions
 
-Đối tượng `MFTextSearchOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](reference/places-service?id=mfplacesservice)
+Đối tượng `MFTextSearchOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 Để tạo đối tượng `MFTextSearchOptions` thì ta tạo thông qua class [MFTextSearchOptions.Builder](/guides/api_text_search?id=mftextsearchoptionsbuilder)
 

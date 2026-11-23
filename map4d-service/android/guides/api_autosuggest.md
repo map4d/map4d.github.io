@@ -7,7 +7,7 @@ cho Nguyễn Văn Linh ...)
 
 ## Usage
 
-Để sử dụng Auto Suggest ta sử dụng phương thức sau đây của class [MFPlacesService](reference/places-service?id=mfplacesservice)
+Để sử dụng Auto Suggest ta sử dụng phương thức sau đây của class [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 **Methods**
 
@@ -60,7 +60,7 @@ placesService.fetchSuggestion(autoSuggestOptions, new MFServiceCallback<MFPlace[
 
 ## MFAutoSuggestOptions
 
-Đối tượng `MFAutoSuggestOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](reference/places-service?id=mfplacesservice)
+Đối tượng `MFAutoSuggestOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 Để tạo đối tượng `MFAutoSuggestOptions` thì ta tạo thông qua class [MFAutoSuggestOptions.Builder](/guides/api_autosuggest?id=mfautosuggestoptionsbuilder)
 

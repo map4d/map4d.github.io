@@ -13,8 +13,10 @@
 - Group Directions Services
   - [Directions](guides/api_route.md)
   - [Distance Matrix](guides/api_matrix.md)
-  
-- References
-  - [MFDirectionsService](reference/directions-service.md)
-  - [MFPlacesService](reference/places-service.md)
-  - [MFServicesOptions](reference/service-options.md)
+
+- Service Classes
+  - [Directions Service](guides/directions-service.md)
+  - [Place Service](guides/places-service.md)
+
+- Shared Types
+  - [Service Options](guides/service-options.md)

@@ -6,11 +6,11 @@ Image Overlay là một loại overlay cho phép người dùng hiển thị m�
 
 ## Add Image overlay
 
-Để thêm 1 image overlay vào map cần tạo mới 1 đối tượng của lớp [MFImageOverlay](reference/image-overlay?id=mfimageoverlay-class) sau đó set `map` cho đối tượng đó.  
+Để thêm 1 image overlay vào map cần tạo mới 1 đối tượng của lớp [MFImageOverlay](/guides/image-overlay.md?id=api-image-overlay-mfimageoverlay-class) sau đó set `map` cho đối tượng đó.  
 
 ### Tạo mới Tile overlay
 
-Đoạn code bên dưới hướng dẫn cách sử dụng [MFImageOverlay](reference/tile-overlay?id=mfimageoverlay-class) để hiển thị một hình ảnh lên Map4D:
+Đoạn code bên dưới hướng dẫn cách sử dụng [MFImageOverlay](/guides/image-overlay.md?id=api-image-overlay-mfimageoverlay-class) để hiển thị một hình ảnh lên Map4D:
 
 <!-- tabs:start -->
 #### ** Swift **
@@ -75,3 +75,43 @@ imageOverlay.opacity = 0.5
 imageOverlay.opacity = 0.5;
 ```
 <!-- tabs:end -->
+
+---
+
+## API Reference :id=api-image-overlay
+
+### MFImageOverlay class :id=api-image-overlay-mfimageoverlay-class
+
+`MFImageOverlay` class
+
+**Constructor** 
+
+Lớp `MFImageOverlay` cung cấp một phương thức static để tạo đối tượng *MFImageOverlay* một cách tiện lợi
+```objc
++ (instancetype)imageOverlayWithImage:(UIImage *)image bounds:(MFCoordinateBounds *)bounds;
+```
+
+- Parameters:
+  - image: **UIImage**: hình ảnh dùng để hiển thị trên bản đồ
+  - bounds: [MFCoordinateBounds](/guides/coordinates.md?id=api-coordinates-mfcoordinatebounds): vùng tọa độ hiển thị hình ảnh trên Map4D
+
+Sử dụng
+<!-- tabs:start -->
+#### ** Swift ** :id=api-image-overlay-swift-
+```swift
+let imageOverlay = MFImageOverlay(image: image, bounds: bounds)
+```
+#### ** Objective-C ** :id=api-image-overlay-objective-c-
+```objc
+MFImageOverlay *imageOverlay = [MFImageOverlay imageOverlayWithImage:image bounds:bounds];
+```
+<!-- tabs:end -->
+
+**Properties**
+
+| Name         | Type      | Description                                                                            |
+|--------------|-----------|----------------------------------------------------------------------------------------|
+| **map**      | [MFMapView](/guides/map.md?id=api-map-mfmapview) | Map view sẽ hiển thị image overlay                 |
+| **isHidden** | bool                                           | Ẩn/hiện image overlay trên map                     |
+| **opacity**  | float                                          | Độ trong suốt của image (mặc đinh là: 1.0)   |
+| **zIndex**   | float                                          | Giá trị zIndex của image overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |

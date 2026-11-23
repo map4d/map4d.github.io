@@ -6,7 +6,7 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_nearby_s
 
 ## Usage
 
-Để sử dụng Nearby Search ta sử dụng phương thức sau đây của class [MFPlacesService](reference/places-service?id=mfplacesservice)
+Để sử dụng Nearby Search ta sử dụng phương thức sau đây của class [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 **Methods**
 
@@ -59,7 +59,7 @@ placesService.searchNearby(nearbySearchOptions, new MFServiceCallback<MFPlace[]>
 
 ## MFNearBySearchOptions
 
-Đối tượng `MFNearBySearchOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](reference/places-service?id=mfplacesservice)
+Đối tượng `MFNearBySearchOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 Để tạo đối tượng `MFNearBySearchOptions` thì ta tạo thông qua class [MFNearBySearchOptions.Builder](/guides/api_nearby_search?id=mfnearbysearchoptionsbuilder)
 

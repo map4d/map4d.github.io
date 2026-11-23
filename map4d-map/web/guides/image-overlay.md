@@ -6,14 +6,14 @@ Image Overlay là một loại overlay cho phép người dùng hiển thị m�
 
 ## Add Image overlay
 
-Để thêm 1 image overlay vào map cần tạo mới 1 đối tượng của lớp [ImageOverlay](reference/image-overlay?id=imageoverlay-class) sau đó set `map` cho image overlay đó.
+Để thêm 1 image overlay vào map cần tạo mới 1 đối tượng của lớp [ImageOverlay](/guides/image-overlay.md?id=api-image-overlay-imageoverlay-class) sau đó set `map` cho image overlay đó.
 
-Hàm khởi tạo của lớp [ImageOverlay](reference/image-overlay?id=imageoverlay-class) nhận vào một đối tượng [ImageOverlayOptions](reference/image-overlay?id=imageoverlayoptions-interface) có các tham số như sau:
+Hàm khởi tạo của lớp [ImageOverlay](/guides/image-overlay.md?id=api-image-overlay-imageoverlay-class) nhận vào một đối tượng [ImageOverlayOptions](/guides/image-overlay.md?id=api-image-overlay-imageoverlayoptions-interface) có các tham số như sau:
 
 | No | Property | Type     | Requied | Description                                                                             |
 |:--:|----------|----------|:-------:|-----------------------------------------------------------------------------------------|
 |  1 | url      | string   |   YES   | Đường dẫn url của image                                                                 |
-|  2 | bounds   | [ILatLngBounds](/reference/coordinates?id=ilatlngbounds)|YES| Vùng hiển thị của Image Overlay                |
+|  2 | bounds   | [ILatLngBounds](/guides/coordinates.md?id=api-coordinates-ilatlngbounds)|YES| Vùng hiển thị của Image Overlay                |
 |  3 | visible  | boolean  |    NO   | Nếu là `true` thì Image Overlay sẽ được hiển thị                                        |
 |  4 | zIndex   | number   |    NO   | Thứ tự hiển thị giữa các Image Overlay với nhau. Tất cả các Image overlay được hiển thị đè lên trên bản đồ và các điểm Place của bản đồ|
 |  5 | opacity  | number   |    NO   | Độ trong suốt của Image Overlay. Có giá trị từ 0 đến 1                                  |
@@ -62,4 +62,48 @@ Chú ý: Giá trị opacity nằm trong khoảng từ 0 đến 1.
 overlay.setOpacity(0.8)
 ```
 
+---
 
+## API Reference :id=api-image-overlay
+
+### ImageOverlay class :id=api-image-overlay-imageoverlay-class
+
+`map4d.ImageOverlay` class
+
+**Constructor** 
+
+Tạo ImageOverlay với các options được chỉ định
+
+```js
+ImageOverlay(options)
+```
+
+- Parameters:
+  - options: [ImageOverlayOptions](/guides/image-overlay.md?id=api-image-overlay-imageoverlayoptions-interface) *required*
+
+**Methods**
+
+| Name           | Parameters                              | Return Value | Description                                                                            |
+|----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
+| **setMap**     | map: [Map](/guides/map.md?id=api-map-map-class) | `none`       | Hiển thị Image Overlay lên map, nếu set map là null thì Image Overlay sẽ bị xóa khỏi map |
+| **setVisible** | visibility: boolean                     | `none`       | Ẩn/hiện Image Overlay trên map                                                         |
+| **isVisible**  | `none`                                  | boolean      | Get trạng thái ẩn/hiện của Image Overlay                                               |
+| **setOpacity** | number                                  | `none`       | Set giá trị opacity cho overlay. Giá trị opacity từ 0 đến 1                            |
+| **getOpacity** | `none`                                  | number       | Get giá trị opacity hiện tại của overlay                                               |
+
+
+### ImageOverlayOptions interface :id=api-image-overlay-imageoverlayoptions-interface
+
+`map4d.ImageOverlayOptions` interface
+
+Đối tượng ImageOverlayOptions đùng để xác định các thuộc tính dùng cho ImageOverlay.
+
+**Properties**
+
+| Name                   | Type     | Description                                                                                                                                                                            |
+|------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **url** *required*     | string   | Đường dẫn url của Image                                                                                                                                                                |
+| **bounds** *required*  | [ILatLngBounds](/guides/coordinates.md?id=api-coordinates-ilatlngbounds) | Vùng hiển thị Image Overlay                                                                                                            |
+| **visible** *optional* | boolean  | Nếu là `true` thì Image Overlay sẽ được hiển thị                                                                                                                                       |
+| **zIndex** *optional*  | number   | Thứ tự hiển thị giữa các Image Overlay với nhau. Tất cả các Image overlay được hiển thị đè lên trên bản đồ và các điểm Place của bản đồ                                                |
+| **opacity** *optional* | number   | Độ trong suốt của Image Overlay. Có giá trị từ 0 đến 1                                                                                                                                 |

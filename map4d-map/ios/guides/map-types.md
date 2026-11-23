@@ -18,7 +18,7 @@ Map4D Map SDK hiện cung cấp 3 loại bản đồ tùy chỉnh:
 
 ### Thay đổi loại bản đồ
 
-Để thay đổi loại bản đồ, ta gán một giá trị cho property `mapType` của class [MFMapView](/reference/map?id=mfmapview-class)  
+Để thay đổi loại bản đồ, ta gán một giá trị cho property `mapType` của class [MFMapView](/guides/map.md?id=api-map-mfmapview)  
 Ví dụ: để hiển thị bản đồ dạng kết hợp ảnh vệ tinh và thông tin đường sá:
 
 <!-- tabs:start -->

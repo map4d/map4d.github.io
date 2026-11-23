@@ -4,7 +4,7 @@ GeoJSON layer cho phép người dùng hiển thị dữ liệu địa lý theo 
 
 ## 1. Thêm mới GeoJSON layer
 
-Để thêm 1 GeoJSON layer vào bản đồ, ta tạo 1 đối tượng [MFGeoJSON](/reference/geojson) và set map cho đối tượng đó
+Để thêm 1 GeoJSON layer vào bản đồ, ta tạo 1 đối tượng [MFGeoJSON](/guides/geojson.md?id=api-geojson) và set map cho đối tượng đó
 
 <!-- tabs:start -->
 
@@ -47,7 +47,7 @@ geoJSON.map = nil
 ## 3. Sự kiện trên GeoJSON layer
 
 Sự kiện trên GeoJSON layer được gọi khi người dùng tap vào vùng hiển thị của GeoJSON layer
-Giá trị trả về gồm đối tượng [MFGeoJSON](/reference/geojson) và [Feature](/reference/geojson?id=mfgeojsonfeature-class) mà người dùng touch vào đó
+Giá trị trả về gồm đối tượng [MFGeoJSON](/guides/geojson.md?id=api-geojson) và [Feature](/guides/geojson.md?id=api-geojson-mfgeojsonfeature-class) mà người dùng touch vào đó
 
 <!-- tabs:start -->
 
@@ -84,3 +84,72 @@ geoJSON.pointStyle.icon = [UIImage imageWithImage:@"image_name"];
 ```
 
 <!-- tabs:end -->
+
+---
+
+## API Reference :id=api-geojson
+
+### MFGeoJSON class :id=api-geojson-mfgeojson-class
+
+#### 1 Constructor :id=api-geojson-_1-constructor
+
+
+<!-- tabs:start -->
+#### ** Swift ** :id=api-geojson-swift-
+
+```swift 
+let geoJSON = MFGeoJSON(json:"json string")
+```
+
+#### ** Objective C ** :id=api-geojson-objective-c-
+
+```objc 
+MFGeoJSON *geoJSON = [[MFGeoJSON alloc] initWithJson:@"json string"];
+```
+
+<!-- tabs:end -->
+
+##### Properties :id=api-geojson-properties
+
+| Name            | Type                                                                   | Description                                                                  |
+|-----------------|:-----------------------------------------------------------------------|------------------------------------------------------------------------------|
+| **features**    | [MFGeoJSONFeature[]](/guides/geojson.md?id=api-geojson-mfgeojsonfeature-class)     | Danh sách các features                                                       |
+| **pointStyle**  | [MFGeoJSONPointStyle](/guides/geojson.md?id=api-geojson-mfgeojsonpointstyle-class) | Style cho points của GeoJSON                                                 |
+| **map**         | [MFMapView](/guides/map.md?id=api-map-mfmapview)                               | Chỉ định hiển thị **GeoJSON** trên **Map** hoặc xoá **GeoJSON** khỏi **Map** |
+
+### MFGeoJSONFeature class :id=api-geojson-mfgeojsonfeature-class
+
+##### Properties :id=api-geojson-properties-1
+
+| Name            | Type                                                                   | Description         |
+|-----------------|:-----------------------------------------------------------------------|---------------------|
+| **geometry**    | [MFGeoJSONGeometry](/guides/geojson.md?id=api-geojson-mfgeojsongeometry-interface) | Geometry            |
+| **properties**  | NSDictionary                                                           | Geometry properties |
+
+### MFGeoJSONGeometry interface :id=api-geojson-mfgeojsongeometry-interface
+
+| Name            | Type                                                                      | Description         |
+|-----------------|:--------------------------------------------------------------------------|---------------------|
+| **type    **    | [MFGeoJSONGeometryType](/guides/geojson.md?id=api-geojson-mfgeojsongeometrytype-enum) | Kiểu của geomtry, bao gồm `Point`, `MultiPoint`, `LineString`, `MultiLineString`, `Polygon`, `MultiPolygon` |
+
+### MFGeoJSONGeometryType enum :id=api-geojson-mfgeojsongeometrytype-enum
+
+```
+typedef NS_ENUM(NSUInteger, MFGeoJSONGeometryType) {
+  MFGeoJSONGeometryTypePoint,
+  MFGeoJSONGeometryTypeMultiPoint,
+  MFGeoJSONGeometryTypeLineString,
+  MFGeoJSONGeometryTypeMultiLineString,
+  MFGeoJSONGeometryTypePolygon,
+  MFGeoJSONGeometryTypeMultiPolygon,
+  MFGeoJSONGeometryTypeGeometryCollection
+} NS_SWIFT_NAME(MFGeoJSON.GeometryType);
+```
+
+### MFGeoJSONPointStyle class :id=api-geojson-mfgeojsonpointstyle-class
+
+##### Properties :id=api-geojson-properties-2
+
+| Name            | Type                                                               | Description             |
+|-----------------|:-------------------------------------------------------------------|-------------------------|
+| **icon**        | UIImage                                                            | Icon mặc định cho point |

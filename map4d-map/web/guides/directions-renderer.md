@@ -37,7 +37,7 @@ interface DirectionsRendererOptions {
 Các thuộc tính của **DirectionsRendererOptions** :
 
 - **routes** (tùy chọn): truyền vào một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [Map4D SDK API Route](https://docs.map4d.vn/map4d-service/api/v1.1/#/api_route)
-hoặc một đối tượng [RouteOptions](/reference/directions-renderer?id=routeoptions) để tạo Directions Renderer.
+hoặc một đối tượng [RouteOptions](/guides/directions-renderer.md?id=api-directions-renderer-routeoptions) để tạo Directions Renderer.
 - **activedIndex** (tùy chọn): chỉ định index cho route được active trong Directions Renderer.
 - **activeStrokeWidth** (tùy chọn): chỉ định độ rộng của active line theo đơn vị point. 
 - **activeStrokeColor** (tùy chọn): chỉ định màu sắc của active line theo mã HEX (ví dụ "#FF0000").
@@ -106,3 +106,75 @@ Tham số **args** trả về khi có sự kiện xảy ra sẽ bao gồm các t
 - location: là tọa độ click trên bản đồ theo latitude và longitude.
 - pixel: là tọa độ pixel mà người dùng click trên màn hình.
 
+---
+
+## API Reference :id=api-directions-renderer
+
+### Directions Renderer Class :id=api-directions-renderer-directions-renderer-class
+
+`map4d.DirectionsRenderer` class
+
+**Constructor** 
+
+Tạo DirectionsRenderer với các options được chỉ định
+
+```js
+DirectionsRenderer(options)
+```
+
+- Parameters:
+  - options: [DirectionsRendererOptions](/guides/directions-renderer.md?id=api-directions-renderer-directionsrenderer-options) *required*
+
+**Methods**
+
+| Name                         | Parameters                              | Return Value | Description                                                                            |
+|------------------------------|:---------------------------------------:|:------------:|----------------------------------------------------------------------------------------|
+| **setOptions**|[DirectionsRendererOptions](/guides/directions-renderer.md?id=api-directions-renderer-directionsrenderer-options)|`none`| Set options dùng để xác định các thuộc tính dùng cho DirectionsRenderer |
+| **setMap**                   | [Map](/guides/map.md?id=api-map-map-class)      | `none`       | Thêm Directions Renderer vào map, nếu set map là **null** thì Directions Renderer sẽ bị xóa khỏi map |
+| **getMap**                   | `none`                                  | Map          | Lấy đối tượng map mà Directions Renderer được thêm vào                                 |
+| **setRoutes**                | string `or` [RouteOptions](/guides/directions-renderer.md?id=api-directions-renderer-routeoptions) `or` [ILatLng](/guides/coordinates.md?id=api-coordinates-ilatlng)[][]| `none`| Set các routes cho Directions Renderer bằng một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [Map4D SDK API Route](https://docs.map4d.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/guides/directions-renderer.md?id=api-directions-renderer-routeoptions) |
+| **getRoutes**                | `none` |  [LatLng](/guides/coordinates.md?id=api-coordinates-latlng)[][]| Get mảng tạo độ các routes của Directions Renderer                                    |
+| **setActivedIndex**          | number                                  | `none`       | Set index của route muốn active trong Directions Renderer                              |
+| **getActivedIndex**          | `none`                                  | number       | Get index của route đang active trong Directions Renderer                              |
+| **setActiveStrokePattern**   | [PatternItem](/guides/map.md?id=api-map-patternitem)| `none`   | Set pattern cho active line trong Directions Renderer. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
+| **setInactiveStrokePattern** | [PatternItem](/guides/map.md?id=api-map-patternitem)| `none`   | Set pattern cho inactive line trong Directions Renderer. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
+
+### DirectionsRenderer Options :id=api-directions-renderer-directionsrenderer-options
+
+`map4d.DirectionsRendererOptions` interface
+
+Đối tượng DirectionsRendererOptions dùng để xác định các thuộc tính dùng cho DirectionsRenderer.
+
+**Properties**
+
+| Name                         | Type                | Description                                                                                                                                                           |
+|------------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **routes** *optional*        |string `or` [RouteOptions](/guides/directions-renderer.md?id=api-directions-renderer-routeoptions) `or` [ILatLng](/guides/coordinates.md?id=api-coordinates-ilatlng)[][]| truyền vào một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [Map4D SDK API Route](https://docs.map4d.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/guides/directions-renderer.md?id=api-directions-renderer-routeoptions) để tạo Directions Renderer.|
+| **activedIndex** *optional*  | number              | chỉ định index cho route được active trong Directions Renderer.                                   |
+| **activeStrokeWidth** *optional*   | number        | chỉ định độ rộng của active line theo đơn vị point.                                               |
+| **activeStrokeColor** *optional*   | string        | chỉ định màu sắc của active line theo mã HEX (ví dụ **"#FF0000"**).                               |
+| **activeStrokePattern** *optional* |[PatternItem](/guides/map.md?id=api-map-patternitem)| chỉ định pattern của active line. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
+| **activeOutlineWidth** *optional*  | number        | chỉ định độ rộng của active outline theo đơn vị point.                                            |
+| **activeOutlineColor** *optional*  | string        | chỉ định màu sắc của active outline theo mã HEX (ví dụ **"#FF0000"**).                            |
+| **inactiveStrokeWidth** *optional* | number        | chỉ định độ rộng của inactive line theo đơn vị point.                                             |
+| **inactiveStrokeColor** *optional* | string        | chỉ định màu sắc của inactive line theo mã HEX (ví dụ **"#FF0000"**).                             |
+| **inactiveOutlineWidth** *optional*| number        | chỉ định độ rộng của inactive outline theo đơn vị point.                                          |
+| **inactiveOutlineColor** *optional*| string        | chỉ định màu sắc của inactive outline theo mã HEX (ví dụ **"#FF0000"**).                          |
+| **inactiveOutlinePattern** *optional*|[PatternItem](/guides/map.md?id=api-map-patternitem)| chỉ định pattern của inactive outline. Tương tự như [pattern của Polyline](/guides/polyline?id=_4-tạo-một-polyline-sử-dụng-pattern)|
+| **originMarkerOptions** *optional* |[MarkerOptions](/guides/marker.md?id=api-marker-marker-options)       | chỉ định các options cho marker bắt đầu               |
+| **destinationMarkerOptions** *optional*|[MarkerOptions](/guides/marker.md?id=api-marker-marker-options)   | chỉ định các options cho marker kết thúc              |
+| **waypointMarkerOptions** *optional*|[MarkerOptions](/guides/marker.md?id=api-marker-marker-options)[]    | chỉ định mảng options cho các marker waypoint. **Chú ý:** <span style="color:red">Để có đường polyline nối marker waypoint với route trong trường hợp route có waypoint thì bắt buộc chúng ta phải set route bằng JSON hoặc đối tượng RouteOptions</span>|
+| **onMarkerDragEnd** *optional*| Function           | chỉ định options callback sau khi thực hiện việc kéo Marker, callback được gọi với tham số `args` là đối tượng chứa tọa độ LatLng của các Marker trong Directions Renderer.|
+
+### RouteOptions :id=api-directions-renderer-routeoptions
+
+`map4d.RouteOptions` interface
+
+Đối tượng **RouteOptions** dùng để xác định các thuộc tính dùng cho **routes** (các tuyến đường đi từ vị trí này đến vị trí khác trên bản đồ)
+
+**Properties**
+
+| Name                         | Type                | Description                                                                                                                                              |
+|------------------------------|:-------------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **paths** *required*        |[ILatLng](/guides/coordinates.md?id=api-coordinates-ilatlng)[][]| truyền vào một mảng 2 chiều các tọa độ **ILatLng** chứa các route. Mỗi mảng một chiều tương ứng là một route                   |
+| **waypoints** *optional*    |[ILatLng](/guides/coordinates.md?id=api-coordinates-ilatlng)[]  | truyền vào mảng 1 chiều tọa độ của các điểm waypoint (các điểm waypoint này nằm ở trên route)                                  |

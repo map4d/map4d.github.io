@@ -6,12 +6,12 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_text_sea
 
 ### Usage
 
-- Service: [MFPlacesService](reference/places-service.md)
-- Params: [MFTextSearchParams](reference/text-search-params.md)
-- Return: [MFServiceTask](reference/service-task.md)
+- Service: [MFPlacesService](/guides/places-service.md?id=api-places-service)
+- Params: [MFTextSearchParams](/guides/text-search.md?id=api-text-search-params)
+- Return: [MFServiceTask](/guides/service-task.md?id=api-service-task)
 - Callback:
-  + Result: Array of [MFPlaceResult](reference/place-result.md)
-  + Error: [MFServiceError](reference/service-error.md)
+  + Result: Array of [MFPlaceResult](/guides/place-result.md?id=api-place-result)
+  + Error: [MFServiceError](/guides/service-error.md?id=api-service-error)
 
 ### Example
 
@@ -45,3 +45,28 @@ MFPlacesService* service = [[MFPlacesService alloc] init];
 }];
 ```
 <!-- tabs:end -->
+
+---
+
+## Text Search Params :id=api-text-search-params
+
+`MFTextSearchParams` class
+
+#### Public Member Functions :id=api-text-search-params-public-member-functions
+
+##### initWithText: :id=api-text-search-params-initwithtext
+
+```objc
+- (instancetype)initWithText:(NSString *)text;
+```
+
+Tạo đối tượng `MFTextSearchParams` với text tìm kiếm.
+
+#### Properties :id=api-text-search-params-properties
+
+| Name        | Type                                                            | Description                                                                        |
+|-------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|
+| text        | NSString                                                        | Nội dung muốn tìm kiếm.                                                            |
+| types       | NSArray\<NSString\>                                             | Loại đối tượng của địa điểm. VD: cafe, restaurant, ...                             |
+| datetime    | NSDate                                                          | Thời gian địa điểm vẫn còn tồn tại.                                                |
+| location    | [MFLocationComponent](/guides/location-component.md?id=api-location-component)          | Vị trí ưu tiên. Các địa điểm gần vị trí này sẽ được ưu tiên hơn.                   |

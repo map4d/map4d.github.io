@@ -9,8 +9,8 @@ hiệu ứng chiều sâu và che lấp của hình học không gian, và khả
 
 ## Add WebGL Overlay View
 
-Để thêm 1 WebGL Overlay View vào map cần tạo mới 1 đối tượng của lớp [WebGLOverlayView](reference/webgl-overlay?id=webgloverlayview-class) sau đó set `map` cho WebGL Overlay View đó.  
-Hàm khởi tạo của lớp [WebGLOverlayView](reference/webgl-overlay?id=webgloverlayview-class) nhận vào một đối tượng [WebGLOverlayViewOptions](reference/building-overlay?id=buildingoverlayoptions-interface)
+Để thêm 1 WebGL Overlay View vào map cần tạo mới 1 đối tượng của lớp [WebGLOverlayView](/guides/webgl-overlay.md?id=api-webgl-overlay-webgloverlayview-class) sau đó set `map` cho WebGL Overlay View đó.  
+Hàm khởi tạo của lớp [WebGLOverlayView](/guides/webgl-overlay.md?id=api-webgl-overlay-webgloverlayview-class) nhận vào một đối tượng [WebGLOverlayViewOptions](/guides/building-overlay.md?id=api-building-overlay-buildingoverlayoptions-interface)
 
 ### Tạo mới WebGL Overlay View
 
@@ -80,7 +80,7 @@ Nếu base map hoặc các đối tượng bị lỗi khi render hoặc không r
 
 Vị trí của một đối tượng trên bản đồ được chỉ định bằng cách cung cấp một bộ data kết hợp giữa vĩ độ và kinh độ, độ cao, góc quay cũng như tỉ lệ scale của đối tượng đó. Tuy nhiên, trong
 đồ họa 3D vị trí đó được chỉ định bởi world space, camera space hoặc screen space. Để dễ dàng chuyển đổi tọa độ bản đồ thành các space được sử dụng phổ biến này, thì chúng ta có hàm
-`calculateProjectMatrixForWebGL(webGLPositionData)` cung cấp bởi đối tượng [Map](/reference/map?id=map-class) với param truyền vào là đối tượng [WebGLPositionData](/reference/webgl-overlay?id=webglpositiondata-interface)
+`calculateProjectMatrixForWebGL(webGLPositionData)` cung cấp bởi đối tượng [Map](/guides/map.md?id=api-map-map-class) với param truyền vào là đối tượng [WebGLPositionData](/guides/webgl-overlay.md?id=api-webgl-overlay-webglpositiondata-interface)
 và trả về là một Float32Array.
 
 Khi đối tượng overlay không nằm trong camera của base map `Map4D` thì hàm `calculateProjectMatrixForWebGL(webGLPositionData)` sẽ trả về một Float32Array rỗng.
@@ -168,3 +168,59 @@ webGLOverlay.setMap(this.map)
 ### Samples
 
 Xem thêm các ví dụ sử dụng WebGL Overlay View tại: https://github.com/map4d/js-samples
+
+---
+
+## API Reference :id=api-webgl-overlay
+
+### WebGLOverlayView class :id=api-webgl-overlay-webgloverlayview-class
+
+`map4d.WebGLOverlayView` class
+
+**Constructor** 
+
+Tạo WebGLOverlayView với các options được chỉ định
+
+```js
+WebGLOverlayView(options)
+```
+
+- Parameters:
+  - options: [WebGLOverlayViewOptions](/guides/webgl-overlay.md?id=api-webgl-overlay-webgloverlayviewoptions-interface) *required*
+
+**Methods**
+
+| Name           | Parameters                              | Return Value | Description                                                                                    |
+|----------------|-----------------------------------------|--------------|------------------------------------------------------------------------------------------------|
+| **setMap**     | map: [Map](/guides/map.md?id=api-map-map-class) | `none`       | Set WebGL Overlay View lên map, nếu set map là null thì WebGL Overlay View sẽ bị xóa khỏi map  |
+| **requestRedraw**| `none`                                | `none`       | Request vẽ lại đối tượng WebGL Overlay View để không bị hạn chế FPS bởi Map4D, phù hợp khi render các model có animation |
+
+### WebGLOverlayViewOptions interface :id=api-webgl-overlay-webgloverlayviewoptions-interface
+
+`map4d.WebGLOverlayViewOptions` interface
+
+Đối tượng WebGLOverlayViewOptions dùng để xác định các thuộc tính dùng cho WebGLOverlayView.
+
+**Properties**
+
+| Name                    | Type     | args | Description                                                         |
+|-------------------------|----------|------|---------------------------------------------------------------------|
+| **onAdd** *optional*    | function | map: [Map](/guides/map.md?id=api-map-map-class), gl: `WebGLRenderingContext`| Callback được gọi khi WebGLOverlayView được thêm vào Map |
+| **onDraw** *optional*   | function | gl: `WebGLRenderingContext` | Callback được gọi để render WebGLOverlayView lên base map  |
+| **onRemove** *optional* | function | `none` | Callback được gọi khi WebGLOverlayView bị remove khỏi map với `WebGLOverlayView.setMap(null)` |
+
+
+### WebGLPositionData interface :id=api-webgl-overlay-webglpositiondata-interface
+
+`map4d.WebGLPositionData` interface
+
+Đối tượng WebGLPositionData dùng để xác định các thuộc tính vị trí của đối tượng WebGLOverlayView
+
+**Properties**
+
+| Name                       | Type                                           | Description                                                                                                                                  |
+|----------------------------|------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| **position** *required*    | [ILatLng](/guides/coordinates.md?id=api-coordinates-ilatlng)   | Vị trí hiển thị của đối tượng WebGLOverlayView trên bản đồ                                                                                   |
+| **scale** *optional*       | number                                         | Tỉ lệ hiển thị của đối tượng WebGLOverlayView so với kích thước thực tế                                                                      |
+| **bearing** *optional*     | number                                         | Góc quay của đối tượng  WebGLOverlayView khi được vẽ ra trên bản đồ (đơn vị: độ)                                                             |
+| **elevation** *optional*   | number                                         | Độ cao của đối tượng WebGLOverlayView so với mực nước biển (đơn vị: mét)                                                                     |

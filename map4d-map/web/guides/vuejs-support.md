@@ -8,7 +8,7 @@ Các đối tượng khác như `Marker`, `Polyline`, `Polygon`, `Layer`,… ch�
 1. Copy `Map4dMap.vue` vào dự án của bạn
 2. Sử dụng tag `Map4dMap` như dưới trong `template` của bạn
 ```Javascript
-<Map4dMap @onMapReady="onMapReady" :options="options1" :id="id" version="2.6"
+<Map4dMap @onMapReady="onMapReady" :options="options1" :id=id version="2.6"
       accessKey="__YOUR_KEY__" />
 ```
 
