@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><title>Không tìm thấy trang</title>
+<h1>Không tìm thấy trang</h1><p id="message">Đường dẫn không tồn tại. <a href="/">Về trang chủ</a></p>
+<script>
+fetch('/archive/redirects.json').then(r=>{if(!r.ok)throw Error('manifest');return r.json()}).then(routes=>{
+ const pathname=location.pathname;
+ const source=Object.keys(routes).find(prefix=>pathname===prefix||pathname.startsWith(prefix+'/'));
+ if(source){document.getElementById('message').textContent='Đang mở tài liệu lưu trữ…';location.replace(routes[source]+pathname.slice(source.length)+location.search+location.hash);}
+}).catch(()=>{});
+</script></html>

@@ -1,0 +1,64 @@
+html {
+	box-sizing: border-box;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	background: #fafafa;
+}
+
+.swagger-ui .topbar {
+	display: none !important;
+}
+
+.swagger-ui .info .title small {
+	display: none !important
+}
+
+.swagger-ui .scheme-container {
+	margin: 0px 0 0px !important;
+	padding: 4px 0 !important;
+	background: #fff;
+	-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+}
+
+.swagger-ui .info {
+	margin: 7px 0 !important;
+}
+.swagger-ui .info .title{
+	display: none;
+}
+.swagger-ui .models.is-open{
+	display: none;
+}
+.swagger-ui .opblock-tag-section.is-open{
+	display: none;
+}
+.swagger-ui .opblock-tag-section.is-open .expand-operation{
+	display: none;
+}
+.swagger-ui .opblock-tag-section.is-open .opblock-tag{
+	cursor: auto;
+}
+.input{
+	width: 100%;
+}
+.bodyrange{
+	width: 70%;
+	margin-left: 2%;
+	margin-top: 1%;
+}
+.string { color: mediumaquamarine; }
+.number { color: coral; }
+.boolean { color: coral; }
+.null { color: chocolate; }
+.key { color: peru; }
