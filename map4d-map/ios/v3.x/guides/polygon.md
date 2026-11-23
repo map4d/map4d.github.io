@@ -112,7 +112,7 @@ let polygon = MFPolygon()
 | **isHidden**               | BOOl                   | Xác định **Polygon** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                      |
 | **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các **Polygon** với nhau hoặc giữa **Polygon** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Polygon**.                                                                 |
-| **map**                    | [MFMapView](/guides/map-options?id=MFMapView)              | Chỉ định hiển thị **Polygon** trên **Map** hoặc xoá **Polygon** khỏi **Map**             |
+| **map**                    | [MFMapView](/guides/map-options?id=mfmapview)              | Chỉ định hiển thị **Polygon** trên **Map** hoặc xoá **Polygon** khỏi **Map**             |
 | **Id**                     | UInt32                 | **Id** của **Polygon** **{get}**.                                                                                       |
 
 

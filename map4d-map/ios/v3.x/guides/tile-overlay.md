@@ -1,6 +1,6 @@
 # Tile Overlay
 
-Tile Overlay là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của IPostMap
+Tile Overlay là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của iPostMap
 
 ![Tile Overlay](../../resources/tile-overlay.png)
 
@@ -57,9 +57,9 @@ tileOverlay.isHidden = true
 
 **Constructor**
 
-Lớp `MFURLTileLayer` cung cấp một phương thức static để tạo đối tượng *MFURLTileLayer* một cách tiện lợi
-```objc
-+ (instancetype _Nonnull)tileLayerWithURLConstructor:(id<MFTileURLConstructor> _Nonnull)constructor;
+Lớp `MFURLTileLayer` cho phép tạo đối tượng trong Swift *MFURLTileLayer* một cách tiện lợi
+```swift
+let tileOverlay = MFURLTileLayer(urlConstructor: urlConstructor)
 ```
 
 - Parameters:
@@ -80,7 +80,7 @@ let tileOverlay = MFURLTileLayer(urlConstructor: urlConstructor)
 
 | Name         | Type      | Description                                                                            |
 |--------------|-----------|----------------------------------------------------------------------------------------|
-| **map**      | [MFMapView](/guides/map-options?id=mfmapview-class) | Map view sẽ hiển thị tile overlay                 |
+| **map**      | [MFMapView](/guides/map-options?id=mfmapview) | Map view sẽ hiển thị tile overlay                 |
 | **isHidden** | bool                                           | Ẩn/hiện tile overlay trên map                     |
 | **opacity**  | float                                          | Độ trong suốt của tile layer (mặc đinh là: 1.0)   |
 | **zIndex**   | float                                          | Giá trị zIndex của tile overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |

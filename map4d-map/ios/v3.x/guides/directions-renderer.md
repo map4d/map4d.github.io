@@ -1,6 +1,6 @@
 # Directions Renderer
 
-> IPostMap Map SDK cung cấp lớp [MFDirectionsRenderer](/guides/directions-renderer?id=reference-directions-renderer) để dễ dàng hiển thị các chỉ đường lên bản đồ.
+> iPostMap Map SDK cung cấp lớp [MFDirectionsRenderer](/guides/directions-renderer?id=reference-directions-renderer) để dễ dàng hiển thị các chỉ đường lên bản đồ.
 
 ### 1. Thêm một Directions Renderer vào bản đồ
 
@@ -72,12 +72,12 @@ Bạn có thể dễ dàng tuỳ chỉnh **Directions Renderer** thông qua các
 
 ### 4. Sự kiện tap on Directions Renderer
 
-IPostMap SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.<br>
+iPostMap SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.<br>
 Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.<br>
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 
   ```swift
-  func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: Int) {}
+  func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: UInt) {}
   ```
 
 ## API Reference
@@ -126,15 +126,15 @@ let renderer = MFDirectionsRenderer()
 
 | Name              | Parameters        | Return value | Description                                                                     |
 |-------------------|-------------------|--------------|---------------------------------------------------------------------------------|
-| setRoutesWithJson | NSString          | `void`       | Set các chỉ đường bằng dữ liệu dạng json (lấy từ IPostMap API /sdk/route).         |
-| setDatas          | NSArray\<NSData\> | `void`       | Set các chỉ đường bằng dữ liệu dạng binary data (lấy từ IPostMap Service MFRoute). |
+| setRoutesWithJson | NSString          | `void`       | Set các chỉ đường bằng dữ liệu dạng json (lấy từ iPostMap API /sdk/route).         |
+| setDatas          | NSArray\<NSData\> | `void`       | Set các chỉ đường bằng mảng dữ liệu nhị phân `Data`. |
 
 ### Delegate
 
-IPostMap SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.<br>
+iPostMap SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.<br>
 Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.<br>
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 
   ```swift
-  func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: Int) {}
+  func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: UInt) {}
   ```

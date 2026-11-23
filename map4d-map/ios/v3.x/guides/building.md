@@ -1,6 +1,6 @@
 # Building
 
-> Điểm khác biệt giữa nền tảng bản đồ **IPostMap** với các nền tảng bản đồ khác đó là chế độ bản đồ 3D. Chế độ này sẽ có các đối
+> Điểm khác biệt giữa nền tảng bản đồ **iPostMap** với các nền tảng bản đồ khác đó là chế độ bản đồ 3D. Chế độ này sẽ có các đối
 tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng như các công trình kiến trúc khác, ... Ngoài những đối tượng **Building 3D**
 có sẵn của bản đồ, bạn còn có thể tự tạo và thêm đối tượng 3D của bạn lên bản đồ thông qua đối tượng **MFBuilding**
 
@@ -84,7 +84,6 @@ let Building = MFBuilding()
 | **bearing**                | CGFloat                | Chỉ định góc quay của **Building** khi được vẽ ra trên bản đồ theo đơn vị là Độ. Bình thường giá trị mặc định của nó là 0. Khi bạn muốn quay **Building** theo một hướng nào đó thì bạn chỉ cần set lại giá trị **bearing** trong khoảng từ 0 đến 360 độ.                                                                     |
 | **elevation**              | double                 | Chỉ định độ cao của **Building** so với mực nước biển, đơn vị là mét. Giá trị mặc định là 0                              |
 | **selected**               | bool                   | Chỉ định Building có được **hightlight** hay không. Khi nó được set là true thì **Building** sẽ được vẽ một đường viền màu đỏ xung quanh để giúp người dùng dễ nhận biết. Còn khi nó được **set** giá trị là **false** thì nó sẽ được vẽ như một **Building** bình thường. Giá trị mặc định là **false**.                               |
-| **types**                  | NSMutableArray*        | Chỉ định kiểu của **Building**.                                                                                          |
 | **minZoom**                | double                 | Chỉ định mức zoom tối thiểu cho **Building**.                                                                            |
 | **maxZoom**                | double                 | Chỉ định mức zoom đa thiểu cho **Building**.                                                                             |
 | **startDate**              | NSDate                 | Chỉ định thời gian tạo **Building**.                                                                                     |
@@ -93,10 +92,8 @@ let Building = MFBuilding()
 | **isHidden**               | Bool                   | Xác định **Building** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                      |
 | **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các Building với nhau hoặc giữa **Building** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**                                                                                                                                                                            |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Building**.                                                                 |
-| **map**                    | [MFMapView](/guides/map-options?id=MFMapView)              | Chỉ định hiển thị **Building** trên **Map** hoặc xoá **Building** khỏi **Map**     |
+| **map**                    | [MFMapView](/guides/map-options?id=mfmapview)              | Chỉ định hiển thị **Building** trên **Map** hoặc xoá **Building** khỏi **Map**       |
 | **Id**                     | UInt32                 | **Id** của **Building** **{get}**.                                                                                       |
-
-**Ghi chú:** Hiện tại IPostMap hỗ trợ cái kiểu sau: **Buildingnt**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **Buildingnt**.
 
 
 ### Delegate

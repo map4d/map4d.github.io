@@ -12,7 +12,7 @@ Chúng ta thử tạo **POI** như sau:
 ```swift
 let poi = MFPOI()
 poi.position = CLLocationCoordinate2D(latitude: 16.071575666602996, longitude: 108.22781709595301)
-poi.title = "IPostMap Cafe"
+poi.title = "iPostMap Cafe"
 poi.zIndex = 1
 poi.type = "cafe"
 poi.color = red
@@ -44,7 +44,6 @@ Bạn có thể dễ dàng tuỳ chỉnh **POI** thông qua các thuộc tính m
 | **position**               | Tuỳ chỉnh vị trí của **POI** được vẽ trên bản đồ                                                                                                 |
 | **title**                  | Tuỳ chỉnh tiểu đề của **POI**, được hiển thị bên cạnh **POI** icon                                                                               |
 | **color**                  | Tuỳ chỉnh màu cho icon (nếu sử dụng `type`) và tiêu đề của POI                                                                                   |
-| ~**titleColor**~           | ~Tuỳ chỉnh màu của tiêu đề~                                                                                                                      |
 | **type**                   | Tuỳ chỉnh kểu của **POI**, dùng để quy định icon (bank, hospital, cafe, ...)                                                                     |
 | **iconView**               | Tuỳ chỉnh icon của **POI** bằng UIView                                                                                                           |
 | **icon**                   | Tuỳ chỉnh icon của **POI** bằng hình ảnh                                                                                                         |
@@ -85,7 +84,6 @@ let poi = MFPOI()
 | **position**               | CLLocationCoordinate2D | Chỉ định một **CLLocationCoordinate2D** để xác định vị trí ban đầu của **POI**.                                         |
 | **title**                  | NSString               | Chỉ định tiêu đề của **POI**. Tiêu đề sẽ hiển thị thông tin của **POI** mà bạn muốn hiển thị cho người dùng.            |
 | **color**                  | UIColor                | Chỉ định màu cho icon (nếu sử dụng `type`) và tiêu đề của POI                                                           |
-| ~**titleColor**~           | ~UIColor~              | ~Chỉ định màu tiêu đề của **POI**.~                                                                                     |
 | **subtitle**               | NSString               | Chỉ định thông tin mô tả của **POI**.                                                                                   |
 | **type**                   | NSString               | Chỉ định kiểu của **POI**, tùy thuộc vào kiểu mà icon của **POI** sẽ có hình ảnh tương ứng.                             |
 | **iconView**               | UIView                 | Cho phép thêm biểu diễn **POI** bằng **UIView** mà người dùng tuỳ chỉnh để thay thế icon mặc định của **POI**.          |
@@ -95,10 +93,10 @@ let poi = MFPOI()
 | **isHidden**               | BOOL                   | Xác định **POI** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                          |
 | **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các POI với nhau hoặc giữa **POI** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **POI**.                                                                     |
-| **map**                    | [MFMapView](/guides/map-options?id=MFMapView)             | Chỉ định hiển thị **POI** trên **Map** hoặc xoá **POI** khỏi **Map**                      |
+| **map**                    | [MFMapView](/guides/map-options?id=mfmapview)             | Chỉ định hiển thị **POI** trên **Map** hoặc xoá **POI** khỏi **Map**                      |
 | **Id**                     | UInt32                 | **Id** của **POI** **{get}**.                                                                                           |
 
-**Ghi chú:** Hiện tại IPostMap hỗ trợ cái kiểu sau: **point**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **point**.
+**Ghi chú:** Hiện tại iPostMap hỗ trợ cái kiểu sau: **point**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **point**.
 
 
 #### Delegate

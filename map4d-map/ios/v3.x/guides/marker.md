@@ -2,7 +2,7 @@
 
 > **Marker** dùng để xác định một vị trí đơn lẻ trên bản đồ.
 
-> Cho phép người dùng đánh dấu lên các vị trí trên bản đồ bằng các biểu tượng chung được cung cấp bởi **Map4d SDK**
+> Cho phép người dùng đánh dấu lên các vị trí trên bản đồ bằng các biểu tượng chung được cung cấp bởi **iPostMap SDK**
 hoặc bạn có thể tuỳ chỉnh bằng một hình ảnh khác hoặc tuỳ chỉnh các thuộc tính của **Marker**
 
 ### 1. Thêm một marker
@@ -13,7 +13,7 @@ Chúng ta thử tạo MFMarker như sau:
 let marker = MFMarker()
 marker.position = CLLocationCoordinate2D(latitude: 16.072086430034517, longitude: 108.2262037173781)
 marker.icon = UIImage(named: "iconLocation")
-marker.title = "IPostMap"
+marker.title = "iPostMap"
 marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 marker.map = mapView
 ```
@@ -78,7 +78,7 @@ marker.iconView = view
 Bạn có thể tạo **Marker** chứa bảng thông tin bằng cách chỉ định giá trị cho thuộc tính **title** và **snippet** của **Marker**
 
 ```swift
-marker.title = "IPostMap"
+marker.title = "iPostMap"
 marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 ```
 
@@ -131,7 +131,7 @@ let marker = MFMarker()
 | **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các Marker với nhau hoặc giữa **Marker** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
 | **flat**                   | BOOL                   | Xác định **Marker** bằng phẳng so với mặt đất. Các thay tác xoay, nghiêng, zoom bản đồ sẽ không làm thay đổi hướng của marker        |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Marker**.                                                                  |
-| **map**                    | [MFMapView](/guides/map-options?id=MFMapView)              | Chỉ định hiển thị **Marker** trên **Map** hoặc xoá **Marker** khỏi **Map**               |
+| **map**                    | [MFMapView](/guides/map-options?id=mfmapview)              | Chỉ định hiển thị **Marker** trên **Map** hoặc xoá **Marker** khỏi **Map**               |
 | **Id**                     | UInt32                 | **Id** của **Marker** **{get}**.                                                                                        |
 
 

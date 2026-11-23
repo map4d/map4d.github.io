@@ -1,6 +1,6 @@
 # Building Overlay
 
-Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết hợp với building sẵn có của IPostMap.<br>
+Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết hợp với building sẵn có của iPostMap.<br>
 Building overlay chỉ hiển thị ở chế độ 3D.
 
 ![Building Overlay](../../resources/building-overlay.png)
@@ -86,7 +86,7 @@ buildingOverlay.isHidden = true
 
 ## Sự kiện đối với building thuộc building overlay
 
-Các sự kiện đối với building thuộc building overlay phát sinh tương tự với building của IPostMap, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của IPostMap.
+Các sự kiện đối với building thuộc building overlay phát sinh tương tự với building của iPostMap, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của iPostMap.
 
 ```swift
 func mapView(_ mapView: MFMapView!, didTapBuildingWithBuildingID buildingID: String!, name: String!, location: CLLocationCoordinate2D)
@@ -103,10 +103,10 @@ func mapView(_ mapView: MFMapView!, didTapBuildingWithBuildingID buildingID: Str
 
 **Constructor**
 
-Lớp `MFURLBuildingLayer` cung cấp một số phương thức static để tạo đối tượng *MFURLBuildingLayer* một cách tiện lợi
-```objc
-+ (instancetype _Nonnull) buildingLayerWithURLConstructor:(id<MFBuildingURLConstructor> _Nonnull)constructor;
-+ (instancetype _Nonnull) buildingLayerWithURLConstructor:(id<MFBuildingURLConstructor> _Nonnull)constructor prefixId:(NSString* _Nullable)prefixId;
+Lớp `MFURLBuildingLayer` cho phép tạo đối tượng trong Swift *MFURLBuildingLayer* một cách tiện lợi
+```swift
+let buildingOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor)
+let prefixedOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor, prefixId: "building-layer-")
 ```
 
 - Parameters:
@@ -128,7 +128,7 @@ let buildingOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor, prefixI
 
 | Name         | Type      | Description                                                                            |
 |--------------|-----------|----------------------------------------------------------------------------------------|
-| **map**      | [MFMapView](/guides/map-options?id=mfmapview-class) | Map view sẽ hiển thị building overlay |
+| **map**      | [MFMapView](/guides/map-options?id=mfmapview) | Map view sẽ hiển thị building overlay |
 | **isHidden** | bool                                           | Ẩn/hiện building overlay trên map |
 | **prefixId** | NSString                                       | Giá trị được thêm vào trước mỗi id của Builing thuộc building overlay |
 
@@ -137,9 +137,9 @@ let buildingOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor, prefixI
 
 MFBuildingURLConstructor là một protocol, định nghĩa sẵn 2 phương thức dùng để xác định URL api lấy dữ liệu building và xử lý parser data được lấy từ api.
 
-```objc
-- (NSURL* _Nullable) getBuildingUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom;
-- (NSArray<MFBuildingData*>* _Nullable) parserBuildingData:(NSString* _Nonnull)data;
+```swift
+func getBuildingUrlWith(x: UInt, y: UInt, zoom: UInt) -> URL?
+func parserBuildingData(_ data: String) -> [MFBuildingData]?
 ```
 
 Cần phải implement protocol này trước khi tạo đối tượng `MFURLBuildingLayer`
@@ -147,7 +147,7 @@ Cần phải implement protocol này trước khi tạo đối tượng `MFURLBu
 ## MFBuildingData class
 `MFBuildingData` class
 
-MFBuildingData là object chứa thông tin của building để IPostMap SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho IPostMap SDK hiển thị lên bản đồ.
+MFBuildingData là object chứa thông tin của building để iPostMap SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho iPostMap SDK hiển thị lên bản đồ.
 
 | Name           | Type      | Description                                                                            |
 |----------------|-----------|----------------------------------------------------------------------------------------|

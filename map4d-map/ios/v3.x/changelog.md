@@ -1,10 +1,11 @@
-## Version 3.0.1
+## Version 3.1
 
-- Hỗ trợ thiết lập màu mặc định của đối tượng 3D khi chưa tải được texture (hoặc không có texture) bằng phương thức `setBuildingsFallbackColor`
+- Hỗ trợ Swift Package Manager qua [ipostmap-ios-sdk](https://github.com/map4d/ipostmap-ios-sdk).
+- Sửa lỗi & cải thiện hiệu suất
 
-## Version 3.0.0
+## Version 3.0
 
-Những thay đổi kể từ version 2.8
+Những thay đổi kể từ version 1.x
 
 - Thay đổi cách tiếp cận chế độ 3D.  Thay vì phải sử dụng map type 3D để hiển thị các đối tượng 3D thì nhà phát triển có thể chủ động bật/tắt các đối tượng 3D trên bản đồ thông qua phương thức `MFMapView.setBuildingsEnabled`.
 Hỗ trợ trên cả map type `roadmap` và `hybrid`. Giúp nhà phát triển có thể tùy chỉnh style bản đồ theo ý thích ngay cả ở chế độ 3D.

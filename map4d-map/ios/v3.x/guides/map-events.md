@@ -1,6 +1,6 @@
 # Map events
 
-> **IPostMap iOS SDK** cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
+> **iPostMap iOS SDK** cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
 
   ##  Giới thiệu chung
 
@@ -33,7 +33,7 @@
     marker.position = coordinate
     marker.icon = UIImage(named: "iconLocation")
     marker.groundAnchor = CGPoint(x: 0.5, y: 1.0)
-    marker.title = "IPostMap"
+    marker.title = "iPostMap"
     marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
     marker.map = mapView
   }
@@ -67,12 +67,12 @@
   | **7**    | **didTapPolygon**                     | Phát sinh khi người dùng touch vào **Polygon** trên **map**                                                                |
   | **8**    | **didTapCircle**                      | Phát sinh khi người dùng touch vào **Circle**  trên **map**                                                                |
   | **13**   | **didTapMyLocation**                  | Phát sinh khi người dùng touch vào **Marker my location** trên **map**                                                     |
-  | **14**   | **didTapMyLocationButtonForMapView**  | Phát sinh khi người dùng touch vào **Button my location** của Map4d cung cấp trên **map**                                  |
+  | **14**   | **didTapMyLocationButtonForMapView**  | Phát sinh khi người dùng touch vào **Button my location** của iPostMap cung cấp trên **map**                                  |
   | **15**   | **markerInfoWindow**                  | Phát sinh khi người dùng thay đổi **bảng thông tin** của **Marker**                                                        |
 
   ####  Các sự kiện liên quan đến kinh doanh và địa điểm yêu thích
 
-  > **Map4d iOS SDK** cung cấp cho nhà phát triển các giao thức tương tác với **POI** và **Object** cung cấp cho bạn các thông tin về địa điểm hoặc đối tượng mà bạn muốn lấy thông tin trên **map**
+  > **iPostMap iOS SDK** cung cấp cho nhà phát triển các giao thức tương tác với **POI** và **Object** cung cấp cho bạn các thông tin về địa điểm hoặc đối tượng mà bạn muốn lấy thông tin trên **map**
   <br/>Các **POI** xuất hiện trên map cùng với các biểu tượng tương ứng của chúng. **POI** bao gồm công viên, trường học, v.v. cũng như các **POI** kinh doanh như cửa hàng, nhà hàng và khách sạn.
   <br/>Các **Object** xuất hiên trên **map** như các toàn nhà, các khối hình hộp, ...
 

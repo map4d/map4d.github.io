@@ -1,6 +1,6 @@
 # GeoJSON Layer
 
-GeoJSON layer cho phép người dùng hiển thị dữ liệu địa lý theo định dạng [GeoJSON](https://geojson.org/) lên bản đồ IPostMap
+GeoJSON layer cho phép người dùng hiển thị dữ liệu địa lý theo định dạng [GeoJSON](https://geojson.org/) lên bản đồ iPostMap
 
 ## 1. Thêm mới GeoJSON layer
 
@@ -57,7 +57,7 @@ let geoJSON = MFGeoJSON(json:"json string")
 |-----------------|:-----------------------------------------------------------------------|------------------------------------------------------------------------------|
 | **features**    | [MFGeoJSONFeature[]](/guides/geojson?id=mfgeojsonfeature-class)     | Danh sách các features                                                       |
 | **pointStyle**  | [MFGeoJSONPointStyle](/guides/geojson?id=mfgeojsonpointstyle-class) | Style cho points của GeoJSON                                                 |
-| **map**         | [MFMapView](/guides/map-options?id=MFMapView)                               | Chỉ định hiển thị **GeoJSON** trên **Map** hoặc xoá **GeoJSON** khỏi **Map** |
+| **map**         | [MFMapView](/guides/map-options?id=mfmapview)                               | Chỉ định hiển thị **GeoJSON** trên **Map** hoặc xoá **GeoJSON** khỏi **Map** |
 
 ## MFGeoJSONFeature class
 
@@ -76,17 +76,17 @@ let geoJSON = MFGeoJSON(json:"json string")
 
 ## MFGeoJSONGeometryType enum
 
-```
-typedef NS_ENUM(NSUInteger, MFGeoJSONGeometryType) {
-  MFGeoJSONGeometryTypePoint,
-  MFGeoJSONGeometryTypeMultiPoint,
-  MFGeoJSONGeometryTypeLineString,
-  MFGeoJSONGeometryTypeMultiLineString,
-  MFGeoJSONGeometryTypePolygon,
-  MFGeoJSONGeometryTypeMultiPolygon,
-  MFGeoJSONGeometryTypeGeometryCollection
-} NS_SWIFT_NAME(MFGeoJSON.GeometryType);
-```
+Kiểu Swift: `MFGeoJSON.GeometryType`.
+
+| Giá trị | Geometry |
+|---------|----------|
+| `.point` | Point |
+| `.multiPoint` | MultiPoint |
+| `.lineString` | LineString |
+| `.multiLineString` | MultiLineString |
+| `.polygon` | Polygon |
+| `.multiPolygon` | MultiPolygon |
+| `.geometryCollection` | GeometryCollection |
 
 ## MFGeoJSONPointStyle class
 

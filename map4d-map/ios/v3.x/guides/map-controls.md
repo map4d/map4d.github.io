@@ -30,7 +30,7 @@
   
   - Các điều khiển sau có thể được bật và tắt theo chương trình:
 
-    + **myLocationButton**: Điều khiển bật tắt nút myLocation mà Map4d iOS SDK cung cấp.
+    + **myLocationButton**: Điều khiển bật tắt nút myLocation mà iPostMap iOS SDK cung cấp.
     + **scrollGestures**: Điều khiển các cử chỉ cuộn được bật hay tắt. Nếu được bật, người dùng có thể vuốt để xoay **camera**.
     + **zoomGestures**: Điều khiển các cử chỉ thu phóng được bật hay tắt. Nếu được bật, người dùng có thể nhấn đúp, dùng hai ngón tay **thu hẹp hoặc mở rộng** để thay đổi mức **zoom** của **camera**.
     + **tiltGestures**: Điều khiển các cử chỉ nghiêng được bật hay tắt. Nếu được bật, người dùng có thể sử dụng hai ngón tay vuốt dọc xuống hoặc vuốt lên để nghiêng **camera**.
@@ -49,14 +49,6 @@
   mapView.settings.setAllGesturesEnabled(true)
   ```
 
-
-  Để cài đặt mức **zoom** tối đa có thể **get Tile** từ **server** sử dụng phương thức **setMaxNativeZoom**
-    
-  ```swift
-  mapView.setMaxNativeZoom(19)
-  ```
-
-  Ví dụ : Nếu bạn cài đặt **nativeZoom** = 19 thì từ mức **zoom** > 19 sẽ lấy **tile** từ mức zoom 19 mà không phải **get** lại **tile** mới từ **server**.
 
   ## 3. Các phương thức tương tác trên map
 
@@ -82,7 +74,7 @@
 
   ## 4. Di chuyển map
 
-  **IPostMap iOS SDK** hỗ trợ người dùng di chuyển tới một vị trí **camera** mới thông qua 2 phương thức **animate** và **move**.
+  **iPostMap iOS SDK** hỗ trợ người dùng di chuyển tới một vị trí **camera** mới thông qua 2 phương thức **animate** và **move**.
 
   **Phương thức animate**
 
@@ -95,5 +87,5 @@
 
   ```swift
   let cameraUpdate = MFCameraUpdate.setTarget(CLLocationCoordinate2D(latitude: 16.08795975082965, longitude: 108.22837829589844), zoom: 17)
-  mapView.animateCamera(cameraUpdate)
+  mapView.moveCamera(cameraUpdate)
   ```
