@@ -1,4 +1,4 @@
-- [Overview](/ "IpostMap Android SDK")
+- [Overview](/ "iPostMap Android SDK")
 - [Changelog](changelog.md)
 
 - Interacting with the Map

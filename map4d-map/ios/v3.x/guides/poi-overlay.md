@@ -61,7 +61,7 @@ poiOverlay.map = mapView
 #### ** Objective-C **
 Implement **MFPOIURLConstructor**
 ```objc
-#import <IpostMap/IpostMap.h>
+#import <iPostMap/iPostMap.h>
 @interface POIURLConstructor : NSObject<MFPOIURLConstructor>
 @end
 

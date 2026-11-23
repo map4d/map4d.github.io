@@ -5,7 +5,7 @@
 ## Add Tile overlay
 
 Để thêm 1 tile overlay vào map cần tạo mới 1 đối tượng của lớp [MFTileOverlay](MFTileOverlay) sau đó truyền cho [MFMapView](MFMapView).  
-IpostMap plugin cung cấp sẵn một phương thức static `MFTileOverlay.newWithUrlPattern` để tạo đối tượng tile overlay với url pattern.  
+iPostMap plugin cung cấp sẵn một phương thức static `MFTileOverlay.newWithUrlPattern` để tạo đối tượng tile overlay với url pattern.  
 Cấu trúc url pattern:
 
 ```

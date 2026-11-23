@@ -52,7 +52,7 @@ Hiện tại IPostMap hỗ trợ cái kiểu sau: point, cafe, bus_station, elec
 
 ### Custom icon cho POI
 
-IpostMap Flutter SDKs cung cấp class [MFBitmap](//) để thuận tiện cho việc thay đổi icon của POI bằng hình ảnh sẵn có.  
+iPostMap Flutter SDKs cung cấp class [MFBitmap](//) để thuận tiện cho việc thay đổi icon của POI bằng hình ảnh sẵn có.  
 Để tạo được đối tượng `MFBitmap` chính xác cần gọi phương thức [MFBitmap.fromAssetImage](//pub.dev/documentation/map4d_map/latest/map4d_map/MFBitmap/fromAssetImage.html) với 2 tham số quan trọng là:
 - configuration: [ImageConfiguration](//api.flutter.dev/flutter/painting/ImageConfiguration-class.html)
 - assetName: String
@@ -62,7 +62,7 @@ Nếu không tạo bằng phương thức này, custom icon có thể sẽ khôn
 
 ### Type và Icon
 
-!> Trong trường hợp cả type và icon đều được gán giá trị thì IpostMap SDKs sẽ ưu tiên hiển thị hình ảnh của POI từ tham số `icon`.
+!> Trong trường hợp cả type và icon đều được gán giá trị thì iPostMap SDKs sẽ ưu tiên hiển thị hình ảnh của POI từ tham số `icon`.
 
 ## Example
 

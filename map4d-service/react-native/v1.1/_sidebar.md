@@ -1,4 +1,4 @@
-- [Overview](/ "IpostMapService React Native SDK")
+- [Overview](/ "iPostMapService React Native SDK")
 - [Changelog](changelog.md)
 
 - Places Services

@@ -1,6 +1,6 @@
 # IPostMap Controller
 
-> **IpostMap Flutter** cung cấp `MFMapViewController`, là bộ điều khiển [MFMapView](./guides/mapview.md) instance.  
+> **iPostMap Flutter** cung cấp `MFMapViewController`, là bộ điều khiển [MFMapView](./guides/mapview.md) instance.  
 > Giá trị `MFMapViewController` được trả về thông qua hàm callback `MFMapView.onMapCreated`.
 
 ## Methods

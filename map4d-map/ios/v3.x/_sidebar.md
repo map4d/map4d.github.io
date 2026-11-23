@@ -1,4 +1,4 @@
-- [Overview](/ "IpostMap iOS SDK")
+- [Overview](/ "iPostMap iOS SDK")
 - [Changelog](changelog.md)
 
 - Interacting with the Map

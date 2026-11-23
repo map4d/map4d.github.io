@@ -8,7 +8,7 @@ IPostMap Map SDK hiện cung cấp 4 loại bản đồ tùy chỉnh:
 
 | No. | Name      | Description                                                                                                                                                           |
 |:---:|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  1  | Roadmap   | Giá trị: `MFMapTypeRoadmap`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của IpostMap SDK |
+|  1  | Roadmap   | Giá trị: `MFMapTypeRoadmap`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của iPostMap SDK |
 |  3  | Satellite | Giá trị: `MFMapTypeSatellite`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh. Không có thông tin về đường sá.                                       |
 |  4  | Hybrid    | Giá trị: `MFMapTypeMap3D`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh, kết hợp thông tin về đường sá                                             |
 

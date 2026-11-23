@@ -1,4 +1,4 @@
-- [Overview](/ "IpostMap JavaScript SDK")
+- [Overview](/ "iPostMap JavaScript SDK")
 - [Changelog](changelog.md)
 - [Angular Support](guides/angular-support.md)
 - [ReactJS Support](https://docs.ipostmap.vn/map4d-map/react-js/v1.3.9/)

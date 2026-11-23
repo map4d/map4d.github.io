@@ -1,16 +1,16 @@
-# IpostMap Flutter
+# iPostMap Flutter
 [![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-flutter-45d2fd.svg)](https://flutter.dev/)
 [![pub package](https://img.shields.io/pub/v/map4d_map.svg)](https://pub.dev/packages/map4d_map)
 
-> **IpostMap Flutter package** cung cấp IpostMap SDK cho cả thiết bị Android và iOS, cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
-> IpostMap plugin dựa trên cơ chế của Flutter để bổ sung các màn hình hiển thị cho Android và iOS.
+> **iPostMap Flutter package** cung cấp iPostMap SDK cho cả thiết bị Android và iOS, cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
+> iPostMap plugin dựa trên cơ chế của Flutter để bổ sung các màn hình hiển thị cho Android và iOS.
 
 ## Getting Started
 
 ### Installation
 
-Để sử dụng IpostMap plugin, thêm `map4d_map` vào mục **dependencies** trong file `pubspec.yaml` của Flutter project.
+Để sử dụng iPostMap plugin, thêm `map4d_map` vào mục **dependencies** trong file `pubspec.yaml` của Flutter project.
 
 ```yaml
 dependencies:
@@ -30,7 +30,7 @@ import 'package:map4d_map/map4d_map.dart';
 
 ### API key
 
-API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng IpostMap SDK.  
+API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng iPostMap SDK.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
 Tạo API key tại địa chỉ: <https://map.ipostmap.vn/developer/key/>
@@ -54,13 +54,13 @@ Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key 
 Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
 
 ```xml
-<key>IpostMapAccessKey</key>
+<key>iPostMapAccessKey</key>
 <string>YOUR_KEY_HERE</string>
 ```
 
 ### Sử dụng
 
-IpostMap Flutter cung cấp `MFMapView` widget để hiển thị Map4d, bạn có thể thêm `MFMapView` widget vào widget tree của bạn.  
+iPostMap Flutter cung cấp `MFMapView` widget để hiển thị Map4d, bạn có thể thêm `MFMapView` widget vào widget tree của bạn.  
 Bản đồ có thể được điều khiển với `MFMapViewController` được truyền cho `MFMapView` khi hàm `onMapCreated` được gọi lại.
 
 ### Ví dụ

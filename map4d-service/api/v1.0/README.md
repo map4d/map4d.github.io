@@ -1,4 +1,4 @@
-# IpostMapService API
+# iPostMapService API
 [![ipostmap](https://img.shields.io/badge/ipostmap-service-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-api-blueviolet.svg)](https://ipostmap.vn/)
 

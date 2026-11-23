@@ -1,6 +1,6 @@
 # IPostMap Map React Component
 
-> IpostMap React Native cung cấp `MFMapView` dưới dạng một React Component để hiển thị ipostmap.
+> iPostMap React Native cung cấp `MFMapView` dưới dạng một React Component để hiển thị ipostmap.
 
 
 ## MFMapView Component

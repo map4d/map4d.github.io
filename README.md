@@ -16,7 +16,7 @@ Tại thư mục gốc của ipostmap.github.io, chạy lệnh sau:
 serve .
 ```
 
-### IpostMap SDK
+### iPostMap SDK
 
 #### Android
 
@@ -44,10 +44,3 @@ serve .
 #### API
 
 <http://localhost:3000/map4d-service/api/>
-
-
-### IpostMapUtils Library
-
-### Flutter
-
-<http://localhost:3000/map4d-map-utils/flutter/>

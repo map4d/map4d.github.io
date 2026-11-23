@@ -1,7 +1,7 @@
-# IpostMap iOS SDK
+# iPostMap iOS SDK
 [![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
-[![platform](https://img.shields.io/cocoapods/p/IpostMap)](https://www.apple.com/ios/)
-[![cocoapods](https://img.shields.io/cocoapods/v/IpostMap)](https://cocoapods.org/pods/IpostMap)
+[![platform](https://img.shields.io/cocoapods/p/iPostMap)](https://www.apple.com/ios/)
+[![cocoapods](https://img.shields.io/cocoapods/v/iPostMap)](https://cocoapods.org/pods/iPostMap)
 
 > **IPostMap iOS SDK** cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên iPhone, iPad.  
 > **IPostMap iOS SDK** không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn
@@ -19,7 +19,7 @@ pod repo update
 
 2. Add to Podfile
 ```shell
-pod 'IpostMap'
+pod 'iPostMap'
 ```
 
 ### Nền tảng được hỗ trợ
@@ -31,7 +31,7 @@ pod 'IpostMap'
 1. Provide access key from Info.plist
 
 ```xml
-<key>IpostMapAccessKey</key>
+<key>iPostMapAccessKey</key>
 <string>YOUR_ACCESS_KEY</string>
 ```
 
@@ -42,7 +42,7 @@ pod 'IpostMap'
 
 ```swift
 import UIKit
-import IpostMap
+import iPostMap
 
 class ViewController: UIViewController {
   override func viewDidLoad() {
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
 #### ** Objective C **
 
 ```objc
-#import <IpostMap/IpostMap.h>
+#import <iPostMap/iPostMap.h>
 
 @implementation ViewController
 

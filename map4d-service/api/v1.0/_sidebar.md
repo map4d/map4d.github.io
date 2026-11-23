@@ -1,4 +1,4 @@
-- [Overview](/ "IpostMapService API")
+- [Overview](/ "iPostMapService API")
 - [Changelog](changelog.md)
 
 - Group API Tile

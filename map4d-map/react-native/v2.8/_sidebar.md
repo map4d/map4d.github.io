@@ -1,4 +1,4 @@
-- [Getting Started](/ "IpostMap React Native")
+- [Getting Started](/ "iPostMap React Native")
 - [Changelog](changelog.md)
 
 - Interacting with the Map

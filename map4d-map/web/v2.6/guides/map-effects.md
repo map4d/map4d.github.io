@@ -24,7 +24,7 @@ Example:
 
 ## Hiệu ứng thời tiết
 
-IpostMap JavaScript SDK cho phép người dùng cài đặt các hiệu ứng theo thời gian thực hoặc thủ công.
+iPostMap JavaScript SDK cho phép người dùng cài đặt các hiệu ứng theo thời gian thực hoặc thủ công.
 
 Các loại thời tiết:
 
@@ -72,7 +72,7 @@ map.setWeather(ipostmap.Weather.Live, weatherProvider)
 
 ## Hiệu ứng thời gian trong ngày
 
-IpostMap JavaScript SDK cho phép thay đổi hiệu ứng theo thời gian trong ngày của bản đồ thành sáng, trưa, chiều, tối...<br>
+iPostMap JavaScript SDK cho phép thay đổi hiệu ứng theo thời gian trong ngày của bản đồ thành sáng, trưa, chiều, tối...<br>
 Tùy thuộc thời gian trong ngày mà vị trí đổ bóng sẽ khác nhau và màu sắc của ánh sáng sẽ khác nhau.
 
 Các loại hiệu ứng thời gian:

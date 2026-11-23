@@ -1,9 +1,9 @@
-# IpostMap Android SDK
+# iPostMap Android SDK
 [![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-android-brightgreen.svg)](https://www.android.com/)
-[![maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fpackages.ipostmap.vn%2Frepository%2Fmaven-public%2Fvn%2Fmap4d%2FIpostMap%2Fmaven-metadata.xml)](https://ipostmap.vn/)
+[![maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fpackages.ipostmap.vn%2Frepository%2Fmaven-public%2Fvn%2Fmap4d%2FiPostMap%2Fmaven-metadata.xml)](https://ipostmap.vn/)
 
-IpostMap Android SDK for Android, written in C/C++, Java.  
+iPostMap Android SDK for Android, written in C/C++, Java.  
 
 > IPostMap Android SDK cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên thiết bị android hỗ trợ opengl 2.0   
 IPostMap Android SDK không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn  
@@ -29,7 +29,7 @@ Thêm vào dependencies:
 ```xml
 dependencies {
   implementation 'vn.map4d:Map4dTypes:1.1.0'
-  implementation 'vn.map4d:IpostMap:3.0.0'
+  implementation 'vn.map4d:iPostMap:3.0.0'
 }
 ```
 

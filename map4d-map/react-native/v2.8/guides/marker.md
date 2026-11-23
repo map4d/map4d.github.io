@@ -2,7 +2,7 @@
 
 **Marker** dùng để xác định một vị trí đơn lẻ trên bản đồ. 
 
-> Cho phép người dùng đánh dấu lên các vị trí trên bản đồ bằng các biểu tượng chung được cung cấp bởi **IpostMap React Native** 
+> Cho phép người dùng đánh dấu lên các vị trí trên bản đồ bằng các biểu tượng chung được cung cấp bởi **iPostMap React Native** 
 hoặc bạn có thể tuỳ chỉnh bằng một hình ảnh khác hoặc tuỳ chỉnh các thuộc tính của **Marker**
 
 ### Các thuộc tính của **Marker**:

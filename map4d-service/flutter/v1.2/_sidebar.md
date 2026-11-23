@@ -1,4 +1,4 @@
-- [Overview](/ "IpostMapService Flutter SDK")
+- [Overview](/ "iPostMapService Flutter SDK")
 - [Changelog](changelog.md)
 - [References](https://pub.dev/documentation/map4d_services/latest/map4d_services/map4d_services-library.html)
 

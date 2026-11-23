@@ -5,10 +5,10 @@ Hiện tại, thư viện `IPostMap Map Javascript` chỉ hỗ trợ một `Map 
 Các đối tượng khác như `Marker`, `Polyline`, `Polygon`, `Layer`,… chưa hỗ trợ viết dưới dạng `component`
 
 ## Hướng dẫn sử dụng
-1. Copy `IpostMap.jsx` vào dự án của bạn
-2. Sử dụng tag `IpostMap` như dưới trong `component` của bạn
+1. Copy `iPostMap.jsx` vào dự án của bạn
+2. Sử dụng tag `iPostMap` như dưới trong `component` của bạn
 ```Javascript
-<IpostMap
+<iPostMap
   key="__id__"
   id="__id__"
   onMapReady={onMapReady}
@@ -42,7 +42,7 @@ Từ đây bạn có thể tương tác với Map thông qua đối tượng `ma
 [More docs here](https://docs.ipostmap.vn/map4d-map/web/)
 
 ## Chú ý
-1. `id` của `IpostMap` component cần phải duy nhất, không được trùng `id` với các `IpostMap` component khác, để đảm bảo map hoạt động chính xác.
+1. `id` của `iPostMap` component cần phải duy nhất, không được trùng `id` với các `iPostMap` component khác, để đảm bảo map hoạt động chính xác.
 2. Khi sử dụng với `Typescript` khi sử dụng dạng `let m = new ipostmap.XXX…` sẽ báo lỗi, thì có thể bỏ qua lỗi bằng cách thêm khai báo `declare var map4d: any` này trước khi tương tác với các thành phần thuộc `map4d`. Các đối tượng khác thì để `type` là `any`.
 3. Khi dùng Javascript với `Eslint` bật chế độ `no-undef`, khi sử dụng dạng `let m = new ipostmap.XXX…` thì sẽ báo lỗi, chúng ta cần tắt chế độ `no-undef` đi, hoặc ghi đầy đủ `let m = new window.ipostmap.XXX…` để bỏ qua lỗi này.
 

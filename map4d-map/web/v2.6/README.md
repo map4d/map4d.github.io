@@ -1,8 +1,8 @@
-# IpostMap JavaScript SDK
+# iPostMap JavaScript SDK
 [![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-js-ff69b4.svg)](https://map.ipostmap.vn/)
 
-IpostMap JavaScript SDK cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên các trang web và thiết bị di động.
+iPostMap JavaScript SDK cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên các trang web và thiết bị di động.
 
 ## Hello, World
 

@@ -6,7 +6,7 @@
 
 ## MFTileOverlay
 
-IpostMap SDK cung cấp một react view MFTileOverlay để hiển thị tile overlay lên bản đồ.  
+iPostMap SDK cung cấp một react view MFTileOverlay để hiển thị tile overlay lên bản đồ.  
 
 ### Usage
 Để sử dụng, ta import `MFTileOverlay` từ thư viện `react-native-map4d-map` như sau:

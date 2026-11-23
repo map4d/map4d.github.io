@@ -1,10 +1,10 @@
-# IpostMapService Flutter SDK
+# iPostMapService Flutter SDK
 [![ipostmap](https://img.shields.io/badge/ipostmap-services-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-flutter-45d2fd.svg)](https://flutter.dev/)
 [![pub package](https://img.shields.io/pub/v/map4d_services.svg)](https://pub.dev/packages/map4d_services)
 
-> **IpostMapService Flutter SDK** cung cấp [IPostMap Services API](https://docs.ipostmap.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
-> **IpostMapService Flutter SDK** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
+> **iPostMapService Flutter SDK** cung cấp [IPostMap Services API](https://docs.ipostmap.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
+> **iPostMapService Flutter SDK** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
 
 ## Requirement
 
@@ -13,7 +13,7 @@
 
 ## Installation
 
-Để sử dụng IpostMap plugin, thêm `map4d_services` vào mục **dependencies** trong file `pubspec.yaml` của Flutter project.
+Để sử dụng iPostMap plugin, thêm `map4d_services` vào mục **dependencies** trong file `pubspec.yaml` của Flutter project.
 
 ```yaml
 dependencies:
@@ -28,7 +28,7 @@ flutter pub add map4d_services
 
 ## API key
 
-API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng IpostMapService SDK.  
+API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng iPostMapService SDK.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
 Tạo API key tại địa chỉ: <https://map.ipostmap.vn/user/>
@@ -80,7 +80,7 @@ android {
 Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
 
 ```xml
-<key>IpostMapServiceAccessKey</key>
+<key>iPostMapServiceAccessKey</key>
 <string>YOUR_SERVICES_ACCESS_KEY</string>
 ```
 

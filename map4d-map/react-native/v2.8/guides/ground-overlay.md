@@ -9,7 +9,7 @@
 
 ## MFGroundOverlay
 
-IpostMap SDK cung cấp một react view MFGroundOverlay để hiển thị ground overlay lên bản đồ.  
+iPostMap SDK cung cấp một react view MFGroundOverlay để hiển thị ground overlay lên bản đồ.  
 
 ### Usage
 Để sử dụng, ta import `MFGroundOverlay` từ thư viện `react-native-map4d-map` như sau:

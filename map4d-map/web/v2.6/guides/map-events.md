@@ -84,7 +84,7 @@ event.remove()
 
 ### Thay đổi EventOptions ở runtime
 
-IpostMap JavaScript SDK cho phép thay đổi EventOptions ở runtime.
+iPostMap JavaScript SDK cho phép thay đổi EventOptions ở runtime.
 Ví dụ: ta đăng ký một event nhận sự kiên click của marker, polygon và polyline.
 ```js
 let listener = map.addListener("click", (args) => {

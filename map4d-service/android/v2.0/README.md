@@ -36,7 +36,7 @@ Thêm vào dependencies:
 
 ```xml
 dependencies {
-  implementation 'vn.map4d:IpostMapService:2.0.0'
+  implementation 'vn.map4d:iPostMapService:2.0.0'
 }
 ```
 

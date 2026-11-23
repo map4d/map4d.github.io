@@ -63,7 +63,7 @@ let buildingOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor, prefixI
 #### ** Objective-C **
 Implement **MFBuildingURLConstructor**
 ```objc
-#import <IpostMap/IpostMap.h>
+#import <iPostMap/iPostMap.h>
 @interface BuildingURLConstructor : NSObject <MFBuildingURLConstructor>
 @end
 

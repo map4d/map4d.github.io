@@ -1,17 +1,17 @@
-# IpostMap React Native
+# iPostMap React Native
 [![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-reactnative-61dafb.svg)](https://reactnative.dev/)
 [![npm](https://img.shields.io/npm/v/react-native-map4d-map)](https://www.npmjs.com/package/react-native-map4d-map)
 
 
-> **IpostMap React Native** cung cấp IpostMap SDK cho cả thiết bị [Android](https://docs.ipostmap.vn/map4d-map/android/) và [iOS](https://docs.ipostmap.vn/map4d-map/android/), cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
-> IpostMap React Native dựa trên cơ chế của React Native để bổ sung các màn hình hiển thị cho Android và iOS.
+> **iPostMap React Native** cung cấp iPostMap SDK cho cả thiết bị [Android](https://docs.ipostmap.vn/map4d-map/android/) và [iOS](https://docs.ipostmap.vn/map4d-map/android/), cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
+> iPostMap React Native dựa trên cơ chế của React Native để bổ sung các màn hình hiển thị cho Android và iOS.
 
 ## Getting Started
 
 ### Installation
 
-Để sử dụng IpostMap Rect Native, chạy lệnh sau để thêm `react-native-map4d-map` vào file package.json
+Để sử dụng iPostMap Rect Native, chạy lệnh sau để thêm `react-native-map4d-map` vào file package.json
 
 ```shell
 npm install react-native-map4d-map --save
@@ -38,7 +38,7 @@ import {
 
 ### API key
 
-API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng IpostMap SDK.  
+API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng iPostMap SDK.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
 Tạo API key tại địa chỉ: <https://map.ipostmap.vn/developer/key/>
@@ -90,13 +90,13 @@ android {
 Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
 
 ```xml
-<key>IpostMapAccessKey</key>
+<key>iPostMapAccessKey</key>
 <string>YOUR_KEY_HERE</string>
 ```
 
 ### Sử dụng
 
-IpostMap React Native cung cấp component [MFMapView](./guides/mapview) để hiển thị bản đồ IPostMap. Bạn có thể thêm `MFMapView` vào view và set style cho nó để hiển thị IPostMap.
+iPostMap React Native cung cấp component [MFMapView](./guides/mapview) để hiển thị bản đồ IPostMap. Bạn có thể thêm `MFMapView` vào view và set style cho nó để hiển thị IPostMap.
 
 ### Ví dụ
 

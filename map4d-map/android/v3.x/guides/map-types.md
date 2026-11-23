@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-> IpostMap Android SDK cho phép tùy chỉnh kiểu hiển thị của Tile bản đồ theo nhiều chế độ (Raster, Roadmap, Satellite hoặc Map3D).
+> iPostMap Android SDK cho phép tùy chỉnh kiểu hiển thị của Tile bản đồ theo nhiều chế độ (Raster, Roadmap, Satellite hoặc Map3D).
 
 ### Các loại bản đồ
 
@@ -10,7 +10,7 @@ IPostMap Map SDK hiện cung cấp 4 loại bản đồ tùy chỉnh thông qua 
 
 | No. | Name    | Description                                                                                                                                                            |
 |:---:|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  1  |ROADMAP  | Giá trị: `MFMapType.ROADMAP`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của IpostMap SDK |
+|  1  |ROADMAP  | Giá trị: `MFMapType.ROADMAP`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của iPostMap SDK |
 |  3  |SATELLITE| Giá trị: `MFMapType.SATELLITE`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh.                                                                       |
 |  3  |HYBRID   | Giá trị: `MFMapType.HYBRID`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh, kế hợp thông tin đường sá                                                |
 

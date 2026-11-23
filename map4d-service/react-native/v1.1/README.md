@@ -1,10 +1,10 @@
-# IpostMapService React Native SDK
+# iPostMapService React Native SDK
 [![ipostmap](https://img.shields.io/badge/ipostmap-services-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-reactnative-61dafb.svg)](https://reactnative.dev/)
 [![npm](https://img.shields.io/npm/v/react-native-map4d-services)](https://www.npmjs.com/package/react-native-map4d-services)
 
-> **IpostMapService React Native** cung cấp [IPostMap Services API](https://docs.ipostmap.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
-> **IpostMapService React Native** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
+> **iPostMapService React Native** cung cấp [IPostMap Services API](https://docs.ipostmap.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
+> **iPostMapService React Native** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
 
 ## Requirement
 
@@ -19,7 +19,7 @@ npm i react-native-map4d-services
 
 ## API key
 
-API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng IpostMapService SDK.  
+API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng iPostMapService SDK.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
 Tạo API key tại địa chỉ: <https://map.ipostmap.vn/user/>
@@ -71,13 +71,13 @@ android {
 Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
 
 ```xml
-<key>IpostMapServiceAccessKey</key>
+<key>iPostMapServiceAccessKey</key>
 <string>YOUR_SERVICES_ACCESS_KEY</string>
 ```
 
 ## Using
 
-**IpostMapService React Native** cung cấp các hàm để sử dụng Map4d Web Services API:
+**iPostMapService React Native** cung cấp các hàm để sử dụng Map4d Web Services API:
 
 - Places Services:
   + [fetchSuggestion](guides/auto-suggest.md): tự động đề xuất các địa điểm dựa trên chuỗi tìm kiếm hoàn chỉnh hoặc chưa hoàn chỉnh
