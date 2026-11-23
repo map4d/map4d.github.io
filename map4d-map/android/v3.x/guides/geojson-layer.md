@@ -1,6 +1,6 @@
 # GeoJson Layer
 
-IPostMap Android SDK cung cấp GeoJson layer cho phép người dùng hiển thị dữ liệu địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
+iPostMap Android SDK cung cấp GeoJson layer cho phép người dùng hiển thị dữ liệu địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
 
 ![CocoaPods](../../resources/geojson-layer.png)
 
@@ -8,7 +8,7 @@ IPostMap Android SDK cung cấp GeoJson layer cho phép người dùng hiển th
 
 Để thêm một GeoJSON layer vào map, trước tiên cần tạo mới 1 đối tượng của lớp [MFGeoJsonOptions](/guides/geojson-layer?id=geojson-options) để
 định nghĩa các thuộc tính ban đầu của lớp GeoJSON.
-Sau đó ta gọi phương thức `addGeoJson` của lớp `IPostMap`. Đối tượng trả về sau khi gọi phương thức `addGeoJson` là một [MFGeoJson](/guides/geojson-layer?id=geojson-class)
+Sau đó ta gọi phương thức `addGeoJson` của lớp `iPostMap`. Đối tượng trả về sau khi gọi phương thức `addGeoJson` là một [MFGeoJson](/guides/geojson-layer?id=geojson-class)
 
 Ví dụ sau đây thêm một GeoJson layer vào bản đồ ở tọa độ `16.073420650938914, 108.22404093434358`
 
@@ -16,7 +16,7 @@ Ví dụ sau đây thêm một GeoJson layer vào bản đồ ở tọa độ `1
 #### ** Kotlin **
 
 ```kotlin
-override fun onMapReady(map4D: IPostMap) {<br>
+override fun onMapReady(map4D: iPostMap) {<br>
     val jsonString = """{
       "type": "FeatureCollection",
       "features": [
@@ -121,7 +121,7 @@ override fun onMapReady(map4D: IPostMap) {<br>
 
 ```java
 @Override<br>
-public void onMapReady(final IPostMap map4D) {<br>
+public void onMapReady(final iPostMap map4D) {<br>
     String jsonString = "{\n" +
 	  "  \"type\": \"FeatureCollection\",\n" +
 	  "  \"features\": [\n" +
@@ -275,7 +275,7 @@ option `pointStyle` của đối tượng `MFGeoJsonOptions` trước khi thêm 
 ```
 #### ** Java **
 ```java
-  ipostmap.setOnGeoJsonClickListener(new IPostMap.OnGeoJsonClickListener() {
+  ipostmap.setOnGeoJsonClickListener(new iPostMap.OnGeoJsonClickListener() {
 	@Override
 	public void onGeoJsonClick(@NonNull MFGeoJson geoJson, @NonNull MFGeoJsonFeature feature) {
 	  Log.e("Events", "GeoJson feature clicked: " + feature.getId());
@@ -478,7 +478,7 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 
 `MFGeometryType` enum
 
-Hiện tại IPostMap hỗ trợ 6 loại MFGeometryType như bên dưới:
+Hiện tại iPostMap hỗ trợ 6 loại MFGeometryType như bên dưới:
 
 | No. | Name                          | Description                                      |
 |:---:|-------------------------------|--------------------------------------------------|

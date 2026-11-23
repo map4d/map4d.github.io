@@ -90,7 +90,7 @@ map4D?.setOnCircleClickListener { mfCircle ->
 ```
 #### ** Java **
 ```java
-ipostmap.setOnCircleClickListener(new IPostMap.OnCircleClickListener() {
+ipostmap.setOnCircleClickListener(new iPostMap.OnCircleClickListener() {
     @Override
     public void onCircleClick(MFCircle mfCircle) {
         Toast.makeText(getApplicationContext(), "Circle clicked:  " + mfCircle.getId(), Toast.LENGTH_SHORT).show();

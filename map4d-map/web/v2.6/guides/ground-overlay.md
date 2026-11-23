@@ -1,7 +1,7 @@
 # Ground Overlay
 
 Ground Overlay cho phép người dùng thực hiện việc thay thế tile ở một khu vực nào đó bằng tile từ những nguồn khác.<br>
-Ground Overlay tương tự với Tile Overlay nhưng cho phép người dùng quy định 1 khu vực cụ thể gắn với kinh độ/vĩ độ, ngoài ra con cho phép người dùng loại bỏ việc hiển thị tile và các đối tượng thuộc tile của IPostMap SDK
+Ground Overlay tương tự với Tile Overlay nhưng cho phép người dùng quy định 1 khu vực cụ thể gắn với kinh độ/vĩ độ, ngoài ra con cho phép người dùng loại bỏ việc hiển thị tile và các đối tượng thuộc tile của iPostMap SDK
 
 <iframe src="./html/ground-overlay.html" style="min-width: 900px;" height="600px"></iframe>
 
@@ -15,7 +15,7 @@ Hàm khởi tạo của lớp [GroundOverlay](/guides/ground-overlay?id=groundov
 | :-: | -------- | -------------------------------------------------------- | :-----: | :-----------: | ------------------------------------------------------------------------------------------------------- |
 |  1  | bounds   | [ILatLngBounds](/guides/coordinates?id=ilatlngbounds) |   YES   |               | Vùng hiển thị của ground overlay                                                                        |
 |  2  | getUrl   | function                                                 |   YES   |               | Hàm nhận vào 4 giá trị `x`, `y`, `zoom`, `is3dMode`và trả về đường dẫn đến map tile                     |
-|  3  | override | boolean                                                  |    NO   |    `false`    | Nếu `true` thì sẽ không hiển thị IPostMap tile và các đối tượng cảu IPostMap trong khu vực của ground overlay |
+|  3  | override | boolean                                                  |    NO   |    `false`    | Nếu `true` thì sẽ không hiển thị iPostMap tile và các đối tượng cảu iPostMap trong khu vực của ground overlay |
 |  4  | visible  | boolean                                                  |    NO   |     `true`    | Nếu là `true` thì ground overlay sẽ được hiển thị                                                       |
 |  5  | zIndex   | number                                                   |    NO   |      `0`      | Thứ tự hiển thị của ground overlay                                                                      |
 |  6  | opacity  | number                                                   |    NO   |      `1`      | Độ trong suốt của ground overlay. Có giá trị từ 0 đến 1                                                 |
@@ -62,7 +62,7 @@ overlay.setZIndex(10)
 Gọi hàm `setVisible(boolean)` để ẩn/hiện ground overlay.<br>
 Chú ý:
 - Mặc dù ground overlay không hiển thị nhưng quá trình tải các tile vẫn diễn ra khi kéo map đến khu vực quy định cho ground overlay
-- Trong trường hợp set `override` là `true` nhưng lại `setVisible` là `false` thì ground không được hiển thị và khu vực đó cũng không hề hiển thị dữ liệu của IPostMap
+- Trong trường hợp set `override` là `true` nhưng lại `setVisible` là `false` thì ground không được hiển thị và khu vực đó cũng không hề hiển thị dữ liệu của iPostMap
 
 ```js
 overlay.setVisible(false)
@@ -123,7 +123,7 @@ GroundOverlay(options)
 |-------------------------|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | **getUrl** *required*   | function                                                 | Hàm nhận vào 4 giá trị `x`, `y`, `zoom`, `is3dMode` và trả về đường dẫn đến map tile                                 |
 | **bounds** *required*   | [ILatLngBounds](/guides/coordinates?id=ilatlngbounds) | Vùng hiển thị ground overlay                                                                                         |
-| **override** *optional* | boolean                                                  | Cho phép hiển thị ground overlay đè hoàn toàn lên IPostMap, vùng hiển thị ground overlay sẽ không tải dữ liệu của IPostMap |
+| **override** *optional* | boolean                                                  | Cho phép hiển thị ground overlay đè hoàn toàn lên iPostMap, vùng hiển thị ground overlay sẽ không tải dữ liệu của iPostMap |
 | **visible** *optional*  | boolean                                                  | Nếu là true thì ground overlay sẽ được hiển thị                                                                      |
 | **zIndex** *optional*   | number                                                   | Thứ tự hiển thị của ground overlay (đối với ground overlay khác và tile overlay)                                     |
 | **opacity** *optional*  | number                                                   | Độ trong suốt của ground overlay. Có giá trị từ 0 đến 1                                                              |

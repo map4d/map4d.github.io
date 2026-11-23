@@ -1,6 +1,6 @@
 # GeoCode
 
-IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_geocode_v2>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_geocode_v2>
 
 > Dùng để phân giải địa điểm ra tọa độ địa lý.
 

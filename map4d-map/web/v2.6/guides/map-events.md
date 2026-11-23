@@ -1,6 +1,6 @@
 # Map events
 
-IPostMap Web SDK cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
+iPostMap Web SDK cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
 
 <iframe src="./html/map-events.html" style="min-width: 914px;" height="460px"></iframe>
 
@@ -107,12 +107,12 @@ Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên map và
 
 ### Click POI on Map
 
-Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên POI của IPostMap và thực hiện hiển thị thông tin của POI được click
+Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên POI của iPostMap và thực hiện hiển thị thông tin của POI được click
 <iframe src="//jsfiddle.net/huydang/2hv1xk9j/embedded/" style="min-width: 914px;" height="600px" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### Click place on Map
 
-Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên place của IPostMap và thực hiện hiển thị thông tin của place được click
+Ví dụ dưới đây lắng nghe sự kiện click chuột trái trên place của iPostMap và thực hiện hiển thị thông tin của place được click
 <iframe src="//jsfiddle.net/duydung2007/s59fLe8z/embedded/" style="min-width: 914px;" height="600px" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ### Usage

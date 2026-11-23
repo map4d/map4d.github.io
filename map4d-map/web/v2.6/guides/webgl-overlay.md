@@ -1,7 +1,7 @@
 # WebGL Overlay View
 
 Với WebGL Overlay View chúng ta có thể thêm đối tượng vào Map bằng các thư viện đồ họa phổ biến như Three.js. WebGL Overlay View cung cấp quyền truy cập trực tiếp vào cùng một WebGL context
-mà IPostMap Map SDK sử dụng để render base map. Việc sử dụng chung WebGL context này cung cấp các lợi ích như vẽ chung các đối tượng 3D từ thư viện với các đối tượng 3D có sẵn trên map với các
+mà iPostMap Map SDK sử dụng để render base map. Việc sử dụng chung WebGL context này cung cấp các lợi ích như vẽ chung các đối tượng 3D từ thư viện với các đối tượng 3D có sẵn trên map với các
 hiệu ứng chiều sâu và che lấp của hình học không gian, và khả năng đồng bộ các đối tượng 2D/3D với base map. Các đối tượng được render WebGL Overlay View cũng có thể được gắn với tạo độ kinh
 độ / vĩ độ, vì vậy chúng sẽ di chuyển khi chúng ta kéo, phóng to, xoay hoặc nghiêng map.
 
@@ -51,11 +51,11 @@ WebGL Overlay View cung cấp 3 callback được gọi vào các thời điểm
 bất cứ thứ gì chúng ta muốn hiển thị trong WebGL Overlay View.
 - **onAdd(map, gl)** được gọi 1 lần khi overlay được thêm vào Map. Sử dụng callback này để khởi tạo các đối tượng cần thiết hoặc các dữ liệu trung gian trước khi overlay được render.
 Callback `onAdd()` có 2 parameters như sau:
-    - **map** là đối tượng `IPostMap`
-    - **gl** là đối tượng **WebGLRenderingContext** được sử dụng bởi base map của `IPostMap`
+    - **map** là đối tượng `iPostMap`
+    - **gl** là đối tượng **WebGLRenderingContext** được sử dụng bởi base map của `iPostMap`
 
-- **onDraw(gl)**: được gọi sau callback **onAdd()**. Nó sẽ được gọi liên tục và đồng bộ với renderer của `IPostMap` để render đối tượng `WebGLOverlayView` lên trên base map. Parameters duy
-nhất của callback **onDraw()** là đối tượng **WebGLRenderingContext** được sử dụng chung với base map của `IPostMap`
+- **onDraw(gl)**: được gọi sau callback **onAdd()**. Nó sẽ được gọi liên tục và đồng bộ với renderer của `iPostMap` để render đối tượng `WebGLOverlayView` lên trên base map. Parameters duy
+nhất của callback **onDraw()** là đối tượng **WebGLRenderingContext** được sử dụng chung với base map của `iPostMap`
 
 - **onRemove()** được gọi khi overlay bị xóa khỏi bản đồ với **WebGLOverlayView.setMap(null)**, và đây là nơi chúng ta nên xóa tất cả các đối tượng trung gian.
 
@@ -83,7 +83,7 @@ Vị trí của một đối tượng trên bản đồ được chỉ định b
 `calculateProjectMatrixForWebGL(webGLPositionData)` cung cấp bởi đối tượng [Map](/guides/map-options?id=map-class) với param truyền vào là đối tượng [WebGLPositionData](/guides/webgl-overlay?id=webglpositiondata-interface)
 và trả về là một Float32Array.
 
-Khi đối tượng overlay không nằm trong camera của base map `IPostMap` thì hàm `calculateProjectMatrixForWebGL(webGLPositionData)` sẽ trả về một Float32Array rỗng.
+Khi đối tượng overlay không nằm trong camera của base map `iPostMap` thì hàm `calculateProjectMatrixForWebGL(webGLPositionData)` sẽ trả về một Float32Array rỗng.
 
 Ví dụ sau đây sử dụng hàm `calculateProjectMatrixForWebGL()` để tạo projection matrix cho camera trong `Three.js`:
 
@@ -152,7 +152,7 @@ let webGLOverlay = new ipostmap.WebGLOverlayView({
       renderer.render(scene, camera)
 
       // Request a redraw and render the scene.
-      // Call this method when no need limit FPS by IPostMap.
+      // Call this method when no need limit FPS by iPostMap.
       webGLOverlay.requestRedraw()
     }
 
@@ -195,7 +195,7 @@ WebGLOverlayView(options)
 | Name           | Parameters                              | Return Value | Description                                                                                    |
 |----------------|-----------------------------------------|--------------|------------------------------------------------------------------------------------------------|
 | **setMap**     | map: [Map](/guides/map-options?id=map-class) | `none`       | Set WebGL Overlay View lên map, nếu set map là null thì WebGL Overlay View sẽ bị xóa khỏi map  |
-| **requestRedraw**| `none`                                | `none`       | Request vẽ lại đối tượng WebGL Overlay View để không bị hạn chế FPS bởi IPostMap, phù hợp khi render các model có animation |
+| **requestRedraw**| `none`                                | `none`       | Request vẽ lại đối tượng WebGL Overlay View để không bị hạn chế FPS bởi iPostMap, phù hợp khi render các model có animation |
 
 ## WebGLOverlayViewOptions interface
 

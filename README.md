@@ -1,4 +1,4 @@
-# IPostMap SDK document
+# iPostMap SDK document
 
 Documentation website được tạo bằng [docsify](https://docsify.js.org/)
 
@@ -39,7 +39,7 @@ serve .
 <http://localhost:3000/map4d-map/react-native/>
 
 
-### IPostMap Service
+### iPostMap Service
 
 #### API
 

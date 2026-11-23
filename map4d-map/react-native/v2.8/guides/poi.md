@@ -52,7 +52,7 @@ class Map4dScreen extends React.Component {
       >
         <MFPOI ref={ref => this.poi = ref}
           coordinate={{latitude: 16.075671439786362, longitude: 108.22427988052367}}
-          title="IPostMap React-Native"
+          title="iPostMap React-Native"
           titleColor="#FFFF00"
           poiType="park"
           onPress={this.onPressPOI}

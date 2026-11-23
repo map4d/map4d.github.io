@@ -1,10 +1,10 @@
 # Data Layer
 
-IPostMap Web SDK cung cấp 1 data layer cho phép người dùng hiển thị dữ liệu không gian địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
+iPostMap Web SDK cung cấp 1 data layer cho phép người dùng hiển thị dữ liệu không gian địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
 
 ## Thêm feature vào data layer
 
-Có 2 cách để thêm data layer vào IPostMap
+Có 2 cách để thêm data layer vào iPostMap
 - Sử dụng hàm `addGeoJson` của đối tượng [data](/guides/data-layer?id=mapdata-class) trong [map](/guides/map-options?id=map-class)
 - Sử dụng hàm `add` của đối tượng [data](/guides/data-layer?id=mapdata-class) trong [map](/guides/map-options?id=map-class)
 

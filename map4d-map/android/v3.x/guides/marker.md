@@ -12,7 +12,7 @@ Ví dụ sau đây thêm một Marker đơn giản vào bản đồ tại Bình 
 #### ** Kotlin **
 
 ```kotlin
-override fun onMapReady(map4D: IPostMap) {<br>
+override fun onMapReady(map4D: iPostMap) {<br>
     val markerOptions = MFMarkerOptions()
     markerOptions.position(MFLocationCoordinate(10.793113, 106.720739))<br>
     markerOptions.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh")<br>
@@ -23,7 +23,7 @@ override fun onMapReady(map4D: IPostMap) {<br>
 
 ```java
 @Override<br>
-public void onMapReady(final IPostMap map4D) {<br>
+public void onMapReady(final iPostMap map4D) {<br>
     MFMarkerOptions marker = new MFMarkerOptions();<br>
     marker.position(new MFLocationCoordinate(10.793113, 106.720739));<br>
     marker.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh");<br>
@@ -136,7 +136,7 @@ public interface InfoWindowAdapter {
 ### ** Kotlin **
 
 ```kotlin
- inner class CustomInfoWindowAdapter: IPostMap.InfoWindowAdapter {
+ inner class CustomInfoWindowAdapter: iPostMap.InfoWindowAdapter {
     private val mWindow: View
 
     init {
@@ -180,7 +180,7 @@ public interface InfoWindowAdapter {
     }
  }
 
- override fun onMapReady(map4D: IPostMap) {
+ override fun onMapReady(map4D: iPostMap) {
     this.map4D = map4D
     ipostmap.setInfoWindowAdapter(CustomInfoWindowAdapter())
  }
@@ -189,7 +189,7 @@ public interface InfoWindowAdapter {
 ### ** Java **
 
 ```java
-class CustomInfoWindowAdapter implements IPostMap.InfoWindowAdapter {
+class CustomInfoWindowAdapter implements iPostMap.InfoWindowAdapter {
     private final View mWindow;
 
     CustomInfoWindowAdapter() {
@@ -237,7 +237,7 @@ class CustomInfoWindowAdapter implements IPostMap.InfoWindowAdapter {
 }
 @Override
 
-public void onMapReady(IPostMap map4D) {
+public void onMapReady(iPostMap map4D) {
     this.map4D = map4D;
     ipostmap.setInfoWindowAdapter(new CustomInfoWindowAdapter());
 }
@@ -295,7 +295,7 @@ map4D?.setOnMarkerClickListener { marker ->
 
 #### ** Java **
 ```java
-ipostmap.setOnMarkerClickListener(new IPostMap.OnMarkerClickListener() {
+ipostmap.setOnMarkerClickListener(new iPostMap.OnMarkerClickListener() {
     @Override
     public boolean onMarkerClick(MFMarker marker) {
         Toast.makeText(context, "Marker title: " + marker.getTitle(), Toast.LENGTH_SHORT).show();
@@ -319,7 +319,7 @@ Khi marker được kéo thì `onMarkerDragStart(MFMarker)` sẽ được gọi 
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
-map4D?.setOnMarkerDragListener(object : IPostMap.OnMarkerDragListener {
+map4D?.setOnMarkerDragListener(object : iPostMap.OnMarkerDragListener {
     override fun onMarkerDrag(marker: MFMarker?) {
     }
 
@@ -333,7 +333,7 @@ map4D?.setOnMarkerDragListener(object : IPostMap.OnMarkerDragListener {
 
 #### ** Java **
 ```java
-ipostmap.setOnMarkerDragListener((new IPostMap.OnMarkerDragListener() {
+ipostmap.setOnMarkerDragListener((new iPostMap.OnMarkerDragListener() {
     @Override
     public void onMarkerDrag(MFMarker marker) {
     }
@@ -437,7 +437,7 @@ Tạo Marker với các **MFMarkerOptions** được chỉ định
 #### ** Kotlin **
 
 ```kotlin
-override fun onMapReady(map4D: IPostMap) {<br>
+override fun onMapReady(map4D: iPostMap) {<br>
     val markerOptions = MFMarkerOptions()
         .position(MFLocationCoordinate(10.793113, 106.720739))<br>
         .snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh")<br>
@@ -448,7 +448,7 @@ override fun onMapReady(map4D: IPostMap) {<br>
 
 ```java
 @Override<br>
-public void onMapReady(final IPostMap map4D) {<br>
+public void onMapReady(final iPostMap map4D) {<br>
     MFMarkerOptions marker = new MFMarkerOptions();<br>
     marker.position(new MFLocationCoordinate(10.793113, 106.720739));<br>
     marker.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh");<br>

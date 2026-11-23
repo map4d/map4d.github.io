@@ -1,19 +1,19 @@
 # Image Overlay
 
-Image Overlay là một loại overlay cho phép hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên IPostMap.
+Image Overlay là một loại overlay cho phép hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên iPostMap.
 
 ![CocoaPods](../../resources/imageOverlay.png)
 
 ## Thêm Image Overlay
 
 Để thêm 1 image overlay vào map cần tạo 1 đối tượng của lớp [MFImageOverlayOptions](guides/image-overlay?id=mfimageoverlayoptions-class) và set các options cần thiết
-trên đối tượng đó. Sau đó gọi hàm `addImageOverlay` của lớp IPostMap.
+trên đối tượng đó. Sau đó gọi hàm `addImageOverlay` của lớp iPostMap.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFImageOverlayOptions options = new MFImageOverlayOptions()
     .bounds(new MFCoordinateBounds(
@@ -29,7 +29,7 @@ MFImageOverlay imageOverlay = ipostmap.addImageOverlay(options);
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 val options = MFImageOverlayOptions()
     .bounds(

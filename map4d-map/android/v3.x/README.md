@@ -5,10 +5,10 @@
 
 iPostMap Android SDK for Android, written in C/C++, Java.  
 
-> IPostMap Android SDK cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên thiết bị android hỗ trợ opengl 2.0   
-IPostMap Android SDK không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn  
+> iPostMap Android SDK cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên thiết bị android hỗ trợ opengl 2.0   
+iPostMap Android SDK không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn  
 
-[![IPostMap Android SDK](../resources/overView.png)](https://ipostmap.vn) 
+[![iPostMap Android SDK](../resources/overView.png)](https://ipostmap.vn) 
 
 ## Installation
 
@@ -87,7 +87,7 @@ các hàm tương ứng của đối tượng MFMapView (như code ví dụ ở 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback{ 
     
     private MFMapView mapView;
-    private IPostMap map4D;
+    private iPostMap map4D;
   
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
   
     @Override
-    public void onMapReady(IPostMap map4D) { 
+    public void onMapReady(iPostMap map4D) { 
         // Your code
     }
       
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 ```kotlin
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    private var map4D: IPostMap? = null
+    private var map4D: iPostMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -143,7 +143,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         mapView?.getMapAsync(this)
     }
 
-    override fun onMapReady(map4D: IPostMap?) {
+    override fun onMapReady(map4D: iPostMap?) {
         // Your code
     }
     

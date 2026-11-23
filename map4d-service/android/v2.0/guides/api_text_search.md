@@ -1,6 +1,6 @@
 # Text Search
 
-IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_text_search>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_text_search>
 
 > Tìm kiếm các địa điểm bằng chuỗi kí tự.
 

@@ -1,4 +1,4 @@
-# IPostMap Map React Component
+# iPostMap Map React Component
 
 > iPostMap React Native cung cấp `MFMapView` dưới dạng một React Component để hiển thị ipostmap.
 
@@ -14,8 +14,8 @@
 |  3 | mapID                   | string                      | Set mapID cho bản đồ. Sử dụng để tùy chỉnh [style](https://map.ipostmap.vn/developer/mapstyle).                                   |
 |  4  | showsMyLocationButton   | bool                        | Ẩn hoặc hiển thị nút vị trí của tôi                                                                                           |
 |  5  | showsMyLocation         | bool                        | Ẩn hoặc hiển thị vị trí của tôi.<br>Bật tính năng này yêu cầu thêm quyền vị trí đối với cả Android và iOS.                    |
-|  6  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D của IPostMap (ở chế độ 3D).                                                                    |
-|  7  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm của IPostMap (ở chế độ 2D).                                                                        |
+|  6  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D của iPostMap (ở chế độ 3D).                                                                    |
+|  7  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm của iPostMap (ở chế độ 2D).                                                                        |
 |  8  | onMapReady              | func                        | Được gọi khi bản đồ sẵn sàng để sử dụng.                                                                                      |
 |  9  | [onPress](#onPress)     | func                        | Được gọi khi người dùng tap trên bản đồ (không phải tap vào địa điểm, building hay annotations).                              |
 |  10  | [onPoiPress](#onPoiPress)                 | func      | Được gọi khi người dùng tap vào địa điểm trên bản đồ (không phải POI annotation)                                             |

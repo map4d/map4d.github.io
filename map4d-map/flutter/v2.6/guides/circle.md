@@ -1,6 +1,6 @@
 # Circle
 
-> IPostMap SDK cung cấp cho bạn lớp **MFCircle** để vẽ một hình tròn lên bản đồ.  
+> iPostMap SDK cung cấp cho bạn lớp **MFCircle** để vẽ một hình tròn lên bản đồ.  
 
 ![Circle](../../resources/circle.png) 
 

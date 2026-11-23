@@ -1,6 +1,6 @@
 # Map Effects
 
-IPostMap Web SDK cung cấp các hiệu ứng 3D khi map ở chế độ 3D, bao gồm:
+iPostMap Web SDK cung cấp các hiệu ứng 3D khi map ở chế độ 3D, bao gồm:
 
 - Hiệu ứng mặt nước
 - Hiệu ứng thời tiết
@@ -10,7 +10,7 @@ IPostMap Web SDK cung cấp các hiệu ứng 3D khi map ở chế độ 3D, bao
 
 ## Hiệu ứng mặt nước
 
-Hiệu ứng mặt nước sẽ tạo các gợn sóng lăn tăn tại những nơi là sông hoặc biển. Ở chế độ mặc định, IPostMap sẽ tắt chức năng này
+Hiệu ứng mặt nước sẽ tạo các gợn sóng lăn tăn tại những nơi là sông hoặc biển. Ở chế độ mặc định, iPostMap sẽ tắt chức năng này
 
 Để bật/ tắt hiệu ứng mặt nước, ta gọi phương thức `setWaterEffect` từ đối tượng `Map`
 

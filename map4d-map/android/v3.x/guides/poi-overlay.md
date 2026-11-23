@@ -1,7 +1,7 @@
 # POI Overlay
 
 POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ. Các POI của
-POI Overlay được ưu tiên hiển thị so với POI của IPostMap và chỉ hiển thị ở chế độ 2D.
+POI Overlay được ưu tiên hiển thị so với POI của iPostMap và chỉ hiển thị ở chế độ 2D.
 
 ![CocoaPods](../../resources/poiOverlay.png)
 
@@ -32,13 +32,13 @@ zoom tương ứng. Sau đó bạn thêm **POI Overlay** vào Map như sau:
 
     3. `visible(boolean)` : cho phép POI Overlay ẩn hay hiện sau khi add vào Map.
 
-4. Gọi `IPostMap.addPOIOverlay()` để thêm POI Overlay vào Map.
+4. Gọi `iPostMap.addPOIOverlay()` để thêm POI Overlay vào Map.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFPOIProvider poiProvider = new MFUrlPOIProvider() {
     @Override
@@ -75,7 +75,7 @@ MFPOIOverlay poiOverlay = ipostmap.addPOIOverlay(new MFPOIOverlayOptions().poiPr
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 var poiProvider: MFPOIProvider = object : MFUrlPOIProvider() {
     override fun getPOIUrl(x: Int, y: Int, zoom: Int): String {
@@ -209,8 +209,8 @@ var options = MFPOIOverlayOptions()
 
 `MFPOIData` class
 
-MFPOIData là object chứa thông tin của POI để IPostMap SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của
-mình thành mảng các POI data cung cấp cho IPostMap SDK hiển thị lên bản đồ.
+MFPOIData là object chứa thông tin của POI để iPostMap SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của
+mình thành mảng các POI data cung cấp cho iPostMap SDK hiển thị lên bản đồ.
 
 **Constructor**
 

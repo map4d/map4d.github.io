@@ -1,6 +1,6 @@
 # Map Options
 
-Map options là một object [MapOptions](/guides/map-options?id=mapoptions-interface) cung cấp các thiết lập ban đầu để khởi tạo đối tượng IPostMap.<br>
+Map options là một object [MapOptions](/guides/map-options?id=mapoptions-interface) cung cấp các thiết lập ban đầu để khởi tạo đối tượng iPostMap.<br>
 Bao gồm:
 
 | No | Name                | Type                                                     | Default Value | Description                                                                                        |

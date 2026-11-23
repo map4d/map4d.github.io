@@ -1,10 +1,10 @@
-# IPostMap Service Android
+# iPostMap Service Android
 [![ipostmap](https://img.shields.io/badge/ipostmap-service-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-android-brightgreen.svg)](https://www.android.com/)
 
-IPostMap Service Android API cung cấp thư viện gọi API cho Android, được viết bằng ngôn ngữ Java.
+iPostMap Service Android API cung cấp thư viện gọi API cho Android, được viết bằng ngôn ngữ Java.
 
-> IPostMap Service Android API cho phép bạn gọi các API của IPostMap để thực hiện các chức năng như tìm kiếm địa điểm, dẫn đường, geocode, ... để hỗ trợ cho
+> iPostMap Service Android API cho phép bạn gọi các API của iPostMap để thực hiện các chức năng như tìm kiếm địa điểm, dẫn đường, geocode, ... để hỗ trợ cho
 ứng dụng bản đồ của bạn.
 
 

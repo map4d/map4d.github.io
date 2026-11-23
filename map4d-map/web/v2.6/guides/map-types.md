@@ -1,14 +1,14 @@
 # Map Type
 
-> IPostMap Web SDK cho phép tùy chỉnh kiểu hiển thị của bản đồ.
+> iPostMap Web SDK cho phép tùy chỉnh kiểu hiển thị của bản đồ.
 
 ### Các loại bản đồ
 
-IPostMap Web SDK  hiện cung cấp 4 loại bản đồ tùy chỉnh thông qua đối tượng `ipostmap.MapType` như bên dưới:
+iPostMap Web SDK  hiện cung cấp 4 loại bản đồ tùy chỉnh thông qua đối tượng `ipostmap.MapType` như bên dưới:
 
 | No. | Name      | Description                                                                                                                                                                                 |
 |:---:|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  1  | ROADMAP   | Giá trị:`ipostmap.MapType.roadmap` hoặc `"roadmap"`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của IPostMap Web SDK |
+|  1  | ROADMAP   | Giá trị:`ipostmap.MapType.roadmap` hoặc `"roadmap"`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của iPostMap Web SDK |
 |  2  | RASTER    | Giá trị:`ipostmap.MapType.raster `hoặc `"raster"`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh đã được dựng sẵn, tốc độ tải và hiển thị nhanh hơn so với roadmap, nhưng không chi tiết bằng |
 |  3  | SATELLITE | Giá trị:`ipostmap.MapType.satellite` hoặc `"satellite"`<br> Bản đồ hiển thị dưới dạng hình ảnh vệ tinh |
 |  4  | MAP3D     | Giá trị:`ipostmap.MapType.map3d` hoặc `"map3d"`<br> Bản đồ hiển thị ở chế độ 3D |

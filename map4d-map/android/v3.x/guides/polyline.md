@@ -210,7 +210,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 ```
 #### ** Java **
 ```java
-  ipostmap.setOnPolylineClickListener(new IPostMap.OnPolylineClickListener() {
+  ipostmap.setOnPolylineClickListener(new iPostMap.OnPolylineClickListener() {
     @Override
     public void onPolylineClick(MFPolyline polyline) {
         Toast.makeText(getApplicationContext(), "clicked Polyline: id " + polyline.getId(), Toast.LENGTH_SHORT).show();

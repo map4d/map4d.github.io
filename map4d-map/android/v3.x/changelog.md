@@ -12,7 +12,7 @@ Hỗ trợ trên cả map type `roadmap` và `hybrid`. Giúp nhà phát triển 
 - Thêm mới map type `hybrid`, cho phép hiển thị ảnh vệ tinh kết hợp thông tin đường sá.
 - Điều chỉnh map type `satellite`, chỉ cho phép hiển thị hình ảnh vệ tinh, không có thông tin đường sá và 3D.
 - Loại bỏ map type `raster`.
-- Xóa một số phương thức của lớp IPostMap: enable3DMode, is3DMode, setFilterPlaces, getFilterPlaces, setHiddenBuilding, setUnhiddenBuilding, setOnReachLimitedZoom
+- Xóa một số phương thức của lớp iPostMap: enable3DMode, is3DMode, setFilterPlaces, getFilterPlaces, setHiddenBuilding, setUnhiddenBuilding, setOnReachLimitedZoom
 - Cho phép set style map với `MFMapStyleOptions` (style với `Map ID` vẫn hoạt động như cũ).
 - Cải tiến việc tải dữ liệu và hiển thị bản đồ.
 - Sửa lỗi.

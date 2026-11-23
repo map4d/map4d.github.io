@@ -36,7 +36,7 @@ interface DirectionsRendererOptions {
 
 Các thuộc tính của **DirectionsRendererOptions** :
 
-- **routes** (tùy chọn): truyền vào một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [IPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route)
+- **routes** (tùy chọn): truyền vào một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [iPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route)
 hoặc một đối tượng [RouteOptions](/guides/directions-renderer?id=routeoptions) để tạo Directions Renderer.
 - **activedIndex** (tùy chọn): chỉ định index cho route được active trong Directions Renderer.
 - **activeStrokeWidth** (tùy chọn): chỉ định độ rộng của active line theo đơn vị point.
@@ -52,7 +52,7 @@ hoặc một đối tượng [RouteOptions](/guides/directions-renderer?id=route
 - **originMarkerOptions** (tùy chọn): chỉ định các options cho marker bắt đầu.
 - **destinationMarkerOptions** (tùy chọn): chỉ định các options cho marker kết thúc.
 - **waypointMarkerOptions** (tùy chọn): là mảng marker option chỉ định các marker waypoint. Các marker waypoint này có vị trí nằm ngoài route **Chú ý:** <span style="color:red">Để có đường polyline nối marker
-waypoint với routes thì routes phải chứa các điểm waypoint. Muốn vậy thì chúng ta phải set routes bằng JSON string hoặc RouteOptions. Trường hợp set routes bằng JSON string thì IPostMap SDK tự nhận được các điểm waypoint này.</span>
+waypoint với routes thì routes phải chứa các điểm waypoint. Muốn vậy thì chúng ta phải set routes bằng JSON string hoặc RouteOptions. Trường hợp set routes bằng JSON string thì iPostMap SDK tự nhận được các điểm waypoint này.</span>
 Xem chi tiết ở các ví dụ bên dưới.
 - **onMarkerDragEnd** (tùy chọn): chỉ định options callback sau khi thực hiện việc kéo Marker. Callback được gọi với tham số `args` là đối tượng
 chứa tọa độ LatLng của các Marker trong Directions Renderer.
@@ -61,7 +61,7 @@ Ví dụ sau đây sẽ thêm một Directions Renderer vào bản đồ với *
 
 <iframe src="//jsfiddle.net/duydung2007/fnjhr8x0/embedded/" style="min-width: 914px;" height="490px"></iframe>
 
-Thêm một Directions Renderer vào bản đồ với **routes** là JSON String trả về từ [IPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route). Route này có chứa
+Thêm một Directions Renderer vào bản đồ với **routes** là JSON String trả về từ [iPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route). Route này có chứa
 2 điểm waypoint:
 
 <iframe src="//jsfiddle.net/duydung2007/zkv0rujd/embedded/" style="min-width: 914px;" height="490px"></iframe>
@@ -134,7 +134,7 @@ DirectionsRenderer(options)
 | **setOptions**|[DirectionsRendererOptions](/guides/directions-renderer?id=directionsrenderer-options)|`none`| Set options dùng để xác định các thuộc tính dùng cho DirectionsRenderer |
 | **setMap**                   | [Map](/guides/map-options?id=map-class)      | `none`       | Thêm Directions Renderer vào map, nếu set map là **null** thì Directions Renderer sẽ bị xóa khỏi map |
 | **getMap**                   | `none`                                  | Map          | Lấy đối tượng map mà Directions Renderer được thêm vào                                 |
-| **setRoutes**                | string `or` [RouteOptions](/guides/directions-renderer?id=routeoptions) `or` [ILatLng](/guides/coordinates?id=ilatlng)[][]| `none`| Set các routes cho Directions Renderer bằng một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [IPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/guides/directions-renderer?id=routeoptions) |
+| **setRoutes**                | string `or` [RouteOptions](/guides/directions-renderer?id=routeoptions) `or` [ILatLng](/guides/coordinates?id=ilatlng)[][]| `none`| Set các routes cho Directions Renderer bằng một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [iPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/guides/directions-renderer?id=routeoptions) |
 | **getRoutes**                | `none` |  [LatLng](/guides/coordinates?id=latlng)[][]| Get mảng tạo độ các routes của Directions Renderer                                    |
 | **setActivedIndex**          | number                                  | `none`       | Set index của route muốn active trong Directions Renderer                              |
 | **getActivedIndex**          | `none`                                  | number       | Get index của route đang active trong Directions Renderer                              |
@@ -151,7 +151,7 @@ DirectionsRenderer(options)
 
 | Name                         | Type                | Description                                                                                                                                                           |
 |------------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **routes** *optional*        |string `or` [RouteOptions](/guides/directions-renderer?id=routeoptions) `or` [ILatLng](/guides/coordinates?id=ilatlng)[][]| truyền vào một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [IPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/guides/directions-renderer?id=routeoptions) để tạo Directions Renderer.|
+| **routes** *optional*        |string `or` [RouteOptions](/guides/directions-renderer?id=routeoptions) `or` [ILatLng](/guides/coordinates?id=ilatlng)[][]| truyền vào một mảng 2 chiều các tọa độ ILatLng hoặc dữ liệu Route bằng JSON string trả về từ [iPostMap SDK API Route](https://docs.ipostmap.vn/map4d-service/api/v1.1/#/api_route) hoặc một đối tượng [RouteOptions](/guides/directions-renderer?id=routeoptions) để tạo Directions Renderer.|
 | **activedIndex** *optional*  | number              | chỉ định index cho route được active trong Directions Renderer.                                   |
 | **activeStrokeWidth** *optional*   | number        | chỉ định độ rộng của active line theo đơn vị point.                                               |
 | **activeStrokeColor** *optional*   | string        | chỉ định màu sắc của active line theo mã HEX (ví dụ **"#FF0000"**).                               |

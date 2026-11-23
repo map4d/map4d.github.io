@@ -1,6 +1,6 @@
 # VueJS Support
 
-Hiện tại, thư viện `IPostMap Map Javascript` chỉ hỗ trợ một `Map Component` để quản lý `Lifecycle` cho Map. Khi Map được tạo thành công sự kiện `onMapReady` sẽ được gọi, kèm theo đối số là đối tượng `map` được tạo ra, và `id` của map tương ứng. Chúng ta có thể tương tác với Map thông qua đối tượng `map` như các thư viện Javascript thông thường khác.
+Hiện tại, thư viện `iPostMap Map Javascript` chỉ hỗ trợ một `Map Component` để quản lý `Lifecycle` cho Map. Khi Map được tạo thành công sự kiện `onMapReady` sẽ được gọi, kèm theo đối số là đối tượng `map` được tạo ra, và `id` của map tương ứng. Chúng ta có thể tương tác với Map thông qua đối tượng `map` như các thư viện Javascript thông thường khác.
 
 Các đối tượng khác như `Marker`, `Polyline`, `Polygon`, `Layer`,… chưa hỗ trợ viết dưới dạng `component`
 

@@ -1,6 +1,6 @@
 # Directions
 
-IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_route>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_route>
 
 > API đùng để tìm đường đi giữa các địa điểm.
 

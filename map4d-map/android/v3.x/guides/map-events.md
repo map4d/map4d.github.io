@@ -1,10 +1,10 @@
 # Map events
 
->IPostMap Android SDK cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
+>iPostMap Android SDK cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
 
 ## Giới thiệu chung
 
-**IPostMap** cung cấp các interface cho phép người dùng thao tác với các sự kiện trên map.
+**iPostMap** cung cấp các interface cho phép người dùng thao tác với các sự kiện trên map.
 
 ### Các sự kiện thao tác trên Map:
 
@@ -18,7 +18,7 @@
 | 6  | OnMapClickListener          | Được gọi khi có sự kiện touch trên map                                                                       |
 | 7  | OnInfoWindowClickListener   | Được gọi khi có sự kiện touch trên info window của Marker                                                    |
 | 8  | OnPlaceClickListener        | Được gọi khi có sự kiện touch trên place text khi Map ở chế độ ROADMAP (vector)                              |
-| 9  | OnDataSourceFeatureClickListener | Được gọi khi người dùng touch lên các đối tượng của data source custom (không phải dữ liệu của IPostMap)   |
+| 9  | OnDataSourceFeatureClickListener | Được gọi khi người dùng touch lên các đối tượng của data source custom (không phải dữ liệu của iPostMap)   |
 
 ## Hướng dẫn chi tiết
 
@@ -30,9 +30,9 @@
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
-ipostmap.setOnCameraMoveStartedListener(new IPostMap.OnCameraMoveStartedListener() {
+ipostmap.setOnCameraMoveStartedListener(new iPostMap.OnCameraMoveStartedListener() {
     @Override
     public void onCameraMoveStarted(int reason) {
 
@@ -43,9 +43,9 @@ ipostmap.setOnCameraMoveStartedListener(new IPostMap.OnCameraMoveStartedListener
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
-ipostmap.setOnCameraMoveStartedListener(object : IPostMap.OnCameraMoveStartedListener {
+ipostmap.setOnCameraMoveStartedListener(object : iPostMap.OnCameraMoveStartedListener {
     override fun onCameraMoveStarted(reason: Int) {
 
     }
@@ -67,9 +67,9 @@ Tham số `reason` sẽ cho chúng ta biết lý do mà Map thay đổi.
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
-ipostmap.setOnCameraMoveListener(new IPostMap.OnCameraMoveListener() {
+ipostmap.setOnCameraMoveListener(new iPostMap.OnCameraMoveListener() {
     @Override
     public void onCameraMove() {
 
@@ -80,9 +80,9 @@ ipostmap.setOnCameraMoveListener(new IPostMap.OnCameraMoveListener() {
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
-ipostmap.setOnCameraMoveListener(object : IPostMap.OnCameraMoveListener {
+ipostmap.setOnCameraMoveListener(object : iPostMap.OnCameraMoveListener {
     override fun onCameraMove() {
 
     }
@@ -98,9 +98,9 @@ ipostmap.setOnCameraMoveListener(object : IPostMap.OnCameraMoveListener {
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
-ipostmap.setOnCameraIdleListener(new IPostMap.OnCameraIdleListener() {
+ipostmap.setOnCameraIdleListener(new iPostMap.OnCameraIdleListener() {
     @Override
     public void onCameraIdle() {
 
@@ -111,9 +111,9 @@ ipostmap.setOnCameraIdleListener(new IPostMap.OnCameraIdleListener() {
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
-ipostmap.setOnCameraIdleListener(object : IPostMap.OnCameraIdleListener {
+ipostmap.setOnCameraIdleListener(object : iPostMap.OnCameraIdleListener {
     override fun onCameraIdle() {
 
     }
@@ -129,9 +129,9 @@ ipostmap.setOnCameraIdleListener(object : IPostMap.OnCameraIdleListener {
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
-ipostmap.setOnMyLocationClickListener(new IPostMap.OnMyLocationClickListener() {
+ipostmap.setOnMyLocationClickListener(new iPostMap.OnMyLocationClickListener() {
     @Override
     public void onMyLocationClick(Location location) {
 
@@ -142,9 +142,9 @@ ipostmap.setOnMyLocationClickListener(new IPostMap.OnMyLocationClickListener() {
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
-ipostmap.setOnMyLocationClickListener(object: IPostMap.OnMyLocationClickListener {
+ipostmap.setOnMyLocationClickListener(object: iPostMap.OnMyLocationClickListener {
     override fun onMyLocationClick(location: Location) {
 
     }
@@ -162,9 +162,9 @@ Tham số `location` sẽ trả về vị trí của marker My Location hiện t
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
-ipostmap.setOnMyLocationButtonClickListener(new IPostMap.OnMyLocationButtonClickListener() {
+ipostmap.setOnMyLocationButtonClickListener(new iPostMap.OnMyLocationButtonClickListener() {
     @Override
     public boolean onMyLocationButtonClick() {
         return false;
@@ -175,9 +175,9 @@ ipostmap.setOnMyLocationButtonClickListener(new IPostMap.OnMyLocationButtonClick
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
-ipostmap.setOnMyLocationButtonClickListener(object: IPostMap.OnMyLocationButtonClickListener {
+ipostmap.setOnMyLocationButtonClickListener(object: iPostMap.OnMyLocationButtonClickListener {
     override fun onMyLocationButtonClick(): Boolean {
         return false
     }
@@ -196,9 +196,9 @@ dữ liệu GPS và ngược lại, giá trị trả về là `true` thì My Loc
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
-ipostmap.setOnMapClickListener(new IPostMap.OnMapClickListener() {
+ipostmap.setOnMapClickListener(new iPostMap.OnMapClickListener() {
     @Override
     public void onMapClick(MFLocationCoordinate latLng) {
 
@@ -209,9 +209,9 @@ ipostmap.setOnMapClickListener(new IPostMap.OnMapClickListener() {
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
-ipostmap.setOnMapClickListener(object: IPostMap.OnMapClickListener {
+ipostmap.setOnMapClickListener(object: iPostMap.OnMapClickListener {
     override fun onMapClick(latLng: MFLocationCoordinate) {
 
     }
@@ -229,9 +229,9 @@ Tham số `MFLocationCoordinate` sẽ trả về tọa độ của Map mà chún
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
-ipostmap.setOnInfoWindowClickListener(new IPostMap.OnInfoWindowClickListener() {
+ipostmap.setOnInfoWindowClickListener(new iPostMap.OnInfoWindowClickListener() {
     @Override
     public void onInfoWindowClick(@NonNull MFMarker marker) {
 
@@ -242,9 +242,9 @@ ipostmap.setOnInfoWindowClickListener(new IPostMap.OnInfoWindowClickListener() {
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
-ipostmap.setOnInfoWindowClickListener(object: IPostMap.OnInfoWindowClickListener {
+ipostmap.setOnInfoWindowClickListener(object: iPostMap.OnInfoWindowClickListener {
     override fun onInfoWindowClick(marker: MFMarker) {
 
     }
@@ -262,9 +262,9 @@ Tham số `MFMarker` sẽ trả về Marker có InfoWindow mà chúng ta touch.
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
-ipostmap.setOnPlaceClickListener(new IPostMap.OnPlaceClickListener() {
+ipostmap.setOnPlaceClickListener(new iPostMap.OnPlaceClickListener() {
     @Override
     public void onPlaceClick(@NonNull String name, @NonNull MFLocationCoordinate location) {
 
@@ -275,9 +275,9 @@ ipostmap.setOnPlaceClickListener(new IPostMap.OnPlaceClickListener() {
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
-ipostmap.setOnPlaceClickListener(object: IPostMap.OnPlaceClickListener {
+ipostmap.setOnPlaceClickListener(object: iPostMap.OnPlaceClickListener {
     override fun onPlaceClick(name: String, location: MFLocationCoordinate) {
 
     }
@@ -297,9 +297,9 @@ Tham số `MFLocationCoordinate` sẽ trả về tọa độ của place.
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
-ipostmap.setOnDataSourceFeatureClickListener(new IPostMap.OnDataSourceFeatureClickListener() {
+ipostmap.setOnDataSourceFeatureClickListener(new iPostMap.OnDataSourceFeatureClickListener() {
     @Override
     public void onDataSourceFeatureClick(@NonNull MFDataSourceFeature dataSourceFeature, @NonNull MFLocationCoordinate location) {
 
@@ -310,9 +310,9 @@ ipostmap.setOnDataSourceFeatureClickListener(new IPostMap.OnDataSourceFeatureCli
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
-ipostmap.setOnDataSourceFeatureClickListener(object: IPostMap.OnDataSourceFeatureClickListener {
+ipostmap.setOnDataSourceFeatureClickListener(object: iPostMap.OnDataSourceFeatureClickListener {
     override fun onDataSourceFeatureClick(dataSourceFeature: MFDataSourceFeature, location: MFLocationCoordinate) {
 
     }

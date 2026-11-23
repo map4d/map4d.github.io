@@ -6,7 +6,7 @@
 
 ### Các loại bản đồ
 
-IPostMap Map SDK hiện cung cấp 4 loại bản đồ tùy chỉnh thông qua đối tượng `MFMapType` như bên dưới:
+iPostMap Map SDK hiện cung cấp 4 loại bản đồ tùy chỉnh thông qua đối tượng `MFMapType` như bên dưới:
 
 | No. | Name    | Description                                                                                                                                                            |
 |:---:|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -21,14 +21,14 @@ IPostMap Map SDK hiện cung cấp 4 loại bản đồ tùy chỉnh thông qua 
 
 ### Thay đổi kiểu bản đồ
 
-Để thay kiểu bản đồ, ta gọi hàm `setMapType(MFMapType mapType)` thông qua đối tượng `IPostMap`  
+Để thay kiểu bản đồ, ta gọi hàm `setMapType(MFMapType mapType)` thông qua đối tượng `iPostMap`  
 Ví dụ: để hiển thị bản đồ dạng Raster:
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 ipostmap.setMapType(MFMapType.SATELLITE);
 ```
@@ -36,7 +36,7 @@ ipostmap.setMapType(MFMapType.SATELLITE);
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 ipostmap.setMapType(MFMapType.SATELLITE)
 ```
@@ -44,7 +44,7 @@ ipostmap.setMapType(MFMapType.SATELLITE)
 
 ### Get kiểu bản đồ hiện tại
 
-Để get kiểu bản đồ hiện tại ta có thể gọi hàm `getMapType()` thông qua đối tượng `IPostMap`. Giá trị trả về sẽ là một kiểu
+Để get kiểu bản đồ hiện tại ta có thể gọi hàm `getMapType()` thông qua đối tượng `iPostMap`. Giá trị trả về sẽ là một kiểu
 của `MFMapType`
 
 Ví dụ:
@@ -53,7 +53,7 @@ Ví dụ:
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFMapType mapType = ipostmap.getMapType();
 ```
@@ -61,7 +61,7 @@ MFMapType mapType = ipostmap.getMapType();
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 val mapType = ipostmap.getMapType()
 ```

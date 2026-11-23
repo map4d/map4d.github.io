@@ -108,7 +108,7 @@ với các tùy chỉnh cơ bản.
 ```
 #### ** Java **
 ```java
-  ipostmap.setOnDirectionsClickListener(new IPostMap.OnDirectionsClickListener() {
+  ipostmap.setOnDirectionsClickListener(new iPostMap.OnDirectionsClickListener() {
       @Override
       public void onDirectionsClick(MFDirectionsRenderer directionsRenderer, int index) {
           Log.e("Events", "Click on directions renderer index: " + index);

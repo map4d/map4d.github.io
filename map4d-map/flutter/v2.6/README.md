@@ -78,7 +78,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'IPostMap Map',
+      title: 'iPostMap Map',
       home: Map4dSample(),
     );
   }

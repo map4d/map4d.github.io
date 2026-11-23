@@ -48,7 +48,7 @@ const MFPOI({
 
 Type của POI tương ứng với các type của base map poi hiển thị trên bản đồ. Tùy vào từng type sẽ có icon hiển thị tương ứng với type của base map với màu sắc nổi bật hơn.  
 
-Hiện tại IPostMap hỗ trợ cái kiểu sau: point, cafe, bus_station, electronics, shop, bakery, fuel, restaurant, police, payment_centre, museum, university, school, airport, bank, clothes, motel, insurance, furniture, atm, hospital, bar, books, theatre, car, goverment, townhall, apartment, park, stadium, nightclub.
+Hiện tại iPostMap hỗ trợ cái kiểu sau: point, cafe, bus_station, electronics, shop, bakery, fuel, restaurant, police, payment_centre, museum, university, school, airport, bank, clothes, motel, insurance, furniture, atm, hospital, bar, books, theatre, car, goverment, townhall, apartment, park, stadium, nightclub.
 
 ### Custom icon cho POI
 

@@ -194,7 +194,7 @@ map4D?.setOnPolygonClickListener {polygon ->
 
 #### ** Java **
 ```java
-ipostmap.setOnPolygonClickListener(new IPostMap.OnPolygonClickListener() {
+ipostmap.setOnPolygonClickListener(new iPostMap.OnPolygonClickListener() {
     @Override
     public void onPolygonClick(MFPolygon polygon) {
         Toast.makeText(getApplicationContext(), "Clicked Polygon: ID " + polygon.getId(), Toast.LENGTH_SHORT).show();

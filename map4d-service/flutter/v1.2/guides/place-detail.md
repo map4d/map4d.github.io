@@ -1,6 +1,6 @@
 # Place Detail
 
-IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_place_detail>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_place_detail>
 
 > Lấy thông tin chi tiết của địa điểm thông qua id của địa điểm đó.
 

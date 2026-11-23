@@ -1,7 +1,7 @@
 # POI Overlay
 
 POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ.<br>
-Các POI của POI overlay được ưu tiên hiển thị so với POI của IPostMap và chỉ hiển thị ở chế độ 2D.
+Các POI của POI overlay được ưu tiên hiển thị so với POI của iPostMap và chỉ hiển thị ở chế độ 2D.
 
 ## Add POI overlay
 
@@ -12,7 +12,7 @@ Hàm khởi tạo của lớp [POIOverlay](guides/poi-overlay?id=poioverlay-clas
 |:--:|------------|----------|:-------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  1 | getUrl     | function |   YES   | Hàm nhận vào 3 giá trị `x`, `y`, `zoom` và trả về đường dẫn đến POIs                                                                                           |
 |  2 | parserData | function |   YES   | Hàm nhận vào response data từ api của `getUrl` và parser thành mảng các [POIData](/guides/poi-overlay?id=poidata-interface)                                 |
-|  3 | prefixId   | string   |    NO   | Giá trị được thêm vào trước id của những POI thuộc POI overlay.<br>Dùng để tránh nhầm lẫn trong trường hợp trùng id với POI của IPostMap hay các POI overlay khác |
+|  3 | prefixId   | string   |    NO   | Giá trị được thêm vào trước id của những POI thuộc POI overlay.<br>Dùng để tránh nhầm lẫn trong trường hợp trùng id với POI của iPostMap hay các POI overlay khác |
 |  4 | visible    | boolean  |    NO   | Nếu `true` thì POI overlay sẽ được hiển thị                                                                                                                    |
 
 
@@ -63,11 +63,11 @@ overlay.setVisible(false)
 
 ## Sự kiện đối với POI thuộc POI overlay
 
-Khi người dùng click POI thuộc POI overlay thì sẽ phát sinh sự kiện tương tự với POI của IPostMap, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của IPostMap. Xem [Events](/guides/map-events)
+Khi người dùng click POI thuộc POI overlay thì sẽ phát sinh sự kiện tương tự với POI của iPostMap, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của iPostMap. Xem [Events](/guides/map-events)
 
 ## Example
 
-Ví dụ dưới đây ẩn tất cả POI của IPostMap và hiển thị POI overlay với các poi được lấy từ `https://poi-random.herokuapp.com/`
+Ví dụ dưới đây ẩn tất cả POI của iPostMap và hiển thị POI overlay với các poi được lấy từ `https://poi-random.herokuapp.com/`
 
 <iframe width="100%" height="800" src="//jsfiddle.net/huydang/w1qhzonk/embedded/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 

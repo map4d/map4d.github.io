@@ -1,4 +1,4 @@
-# IPostMap Widget
+# iPostMap Widget
 
 > **iPostMap Flutter** cung cấp `MFMapView` [widget](https://flutter.dev/docs/development/ui/widgets-intro) để hiển thị ipostmap.  
 > Để điều khiển Map4d widget, có thể sử dụng [MFMapViewController](./guides/controller.md) được truyền cho `MFMapView` khi hàm `onMapCreated` được gọi lại.
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'IPostMap Map',
+      title: 'iPostMap Map',
       home: MFMapView(),
     );
   }
@@ -78,8 +78,8 @@ const MFMapView({
 | 9 | tiltGesturesEnabled | `bool` | Cho phép nghiêng bản đồ bằng cử chỉ của người dùng. |
 | 10 | myLocationEnabled | `bool` | Ẩn hoặc hiển thị vị trí của tôi.<br>Bật tính năng này yêu cầu thêm quyền vị trí đối với cả Android và iOS. |
 | 11 | myLocationButtonEnabled | `bool` | Ẩn hoặc hiển thị nút vị trí của tôi |
-| 12 | poisEnabled | `bool` | Ẩn hoặc hiển thị các địa điểm của IPostMap (ở chế độ 2D). |
-| 13 | buildingsEnabled | `bool` | Ẩn hoặc hiển thị các đối tượng 3D của IPostMap (ở chế độ 3D). |
+| 12 | poisEnabled | `bool` | Ẩn hoặc hiển thị các địa điểm của iPostMap (ở chế độ 2D). |
+| 13 | buildingsEnabled | `bool` | Ẩn hoặc hiển thị các đối tượng 3D của iPostMap (ở chế độ 3D). |
 | 14 | onCameraMoveStarted | `VoidCallback` | Được gọi khi camera bắt đầu di chuyển. |
 | 15 | onCameraMove | [MFCameraPositionCallback](//pub.dev/documentation/map4d_map/latest/map4d_map/MFCameraPositionCallback.html) | Được gọi liên tục khi camera di chuyển. |
 | 16 | onCameraIdle | `VoidCallback` | Được gọi khi camera di chuyển kết thúc,<br>không có hoạt động nào đang chờ xử lý và người dùng đã ngừng tương tác với bản đồ. |

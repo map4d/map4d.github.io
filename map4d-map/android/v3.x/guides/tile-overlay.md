@@ -1,21 +1,21 @@
 # Tile Overlay
 
 **Tile Overlay** là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên
-tile map có sẵn của IPostMap.
+tile map có sẵn của iPostMap.
 
 ![CocoaPods](../../resources/tileOverlay.png)
 
 ## Giới thiệu
 
-Một đối tượng **TileOverlay** sẽ xác định một tập hợp các hình ảnh của tile sẽ được vẽ lên trên các tile của bản đồ IPostMap.
+Một đối tượng **TileOverlay** sẽ xác định một tập hợp các hình ảnh của tile sẽ được vẽ lên trên các tile của bản đồ iPostMap.
 
 Bạn cần phải cung cấp các tile cho từng mức zoom mà bạn muốn vẽ. Tile Overlay rất hữu ích khi bạn muốn thêm hình ảnh bao
 quát vào bản đồ, thường bao gồm các khu vực địa lý rộng lớn, hoặc những hình ảnh chi tiết hơn cho một khu vực nào đó.
 
 ## Tile coordinates và các mức Zoom
 
-Bản đồ IPostMap chia hình ảnh hiển thị thông tin bản đồ thành một tập hợp các ô bản đồ hình vuông được sắp xếp theo dạng lưới.
-Khi bản đồ di chuyển đến một vị trí mới hoặc thay đổi một mức zoom mới thì IPostMap sẽ xác định những ô nào sẽ được vẽ và request
+Bản đồ iPostMap chia hình ảnh hiển thị thông tin bản đồ thành một tập hợp các ô bản đồ hình vuông được sắp xếp theo dạng lưới.
+Khi bản đồ di chuyển đến một vị trí mới hoặc thay đổi một mức zoom mới thì iPostMap sẽ xác định những ô nào sẽ được vẽ và request
 dữ liệu hình ảnh cho các ô đó.
 
 Ô có tọa độ (0, 0) luôn ở góc Tây Bắc của bản đồ, với giá trị **x** tăng từ Tây sang Đông và giá trị **y** tăng từ Bắc xuống
@@ -30,7 +30,7 @@ zoom:
 
 ![CocoaPods](../../resources/tileCoordinates.png)
 
-Khi tạo hình ảnh cho Tile Overlay, bạn cần tạo một ảnh cho mỗi tile tại từng mức zoom mà bạn muốn vẽ. IPostMap yêu cầu kích
+Khi tạo hình ảnh cho Tile Overlay, bạn cần tạo một ảnh cho mỗi tile tại từng mức zoom mà bạn muốn vẽ. iPostMap yêu cầu kích
 thước ảnh là 256dp.
 
 ## Thêm Tile overlay
@@ -57,13 +57,13 @@ zoom tương ứng. Sau đó bạn thêm **Tile Overlay** vào Map như sau:
 
     3. `zIndex(double)` : xác định giá trị zIndex cho Tile Overlay.
 
-4. Gọi `IPostMap.addTileOverlay()` để thêm Tile Overlay vào Map.
+4. Gọi `iPostMap.addTileOverlay()` để thêm Tile Overlay vào Map.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFTileProvider tileProvider = new MFUrlTileProvider() {
     @Override
@@ -78,7 +78,7 @@ MFTileOverlay tileOverlay = ipostmap.addTileOverlay(new MFTileOverlayOptions().t
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 var tileProvider: MFTileProvider = object : MFUrlTileProvider() {
     override fun getTileUrl(x: Int, y: Int, zoom: Int): String? {

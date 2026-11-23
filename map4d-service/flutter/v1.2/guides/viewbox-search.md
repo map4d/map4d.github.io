@@ -1,6 +1,6 @@
 # Viewbox Search
 
-IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_viewbox_search>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_viewbox_search>
 
 > Tìm các địa điểm trong khu vực địa lý hình chữ nhật.
 

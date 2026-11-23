@@ -84,7 +84,7 @@ tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng 
 
 Bạn có thể cho phép hiện hoặc ẩn những building có sẵn của bản đồ. Mặc định thì bản đồ sẽ hiển thị tất cả các building có
 sẵn của nó ở chế độ 3D. Nếu bạn muốn ẩn tất cả các building đó đi thì sử dụng phương thức **setBuildingsEnabled()** của
-lớp **IPostMap** và truyền vào tham số **false**. Ngược lại nếu bạn muốn hiện chúng lên thì bạn truyền vào tham số là **true**.
+lớp **iPostMap** và truyền vào tham số **false**. Ngược lại nếu bạn muốn hiện chúng lên thì bạn truyền vào tham số là **true**.
 
 Ví dụ để ẩn các building có sẵn của bản đồ:
 
@@ -130,7 +130,7 @@ map4D?.setOnBuildingClickListener { buildingId, name, location ->
 
 #### ** Java **
 ```java
-ipostmap.setOnBuildingClickListener(new IPostMap.OnBuildingClickListener() {
+ipostmap.setOnBuildingClickListener(new iPostMap.OnBuildingClickListener() {
     @Override
     public void onBuildingClick(String buildingId, String name, MFLocationCoordinate location) {
         MarkerActivity.this.ipostmap.setSelectedBuildings(Arrays.asList(buildingId));
@@ -151,7 +151,7 @@ map4D?.setOnUserBuildingClickListener { building ->
 
 #### ** Java **
 ```java
-ipostmap.setOnUserBuildingClickListener(new IPostMap.OnUserBuildingClickListener() {
+ipostmap.setOnUserBuildingClickListener(new iPostMap.OnUserBuildingClickListener() {
     @Override
     public void onUserBuildingClick(MFBuilding mfBuilding) {
         mfBuilding.setSelected(true);

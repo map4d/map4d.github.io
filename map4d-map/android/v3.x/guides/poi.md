@@ -51,7 +51,7 @@ poi.remove();
 ### 3. Bật, tắt tính năng POI có sẵn của bản đồ
 
 Bạn có thể bật hoặc tắt tính năng POI có sẵn của bản đồ. Mặc định thì bản đồ sẽ hiển thị các POI có sẵn của nó. Nếu bạn
-muốn tắt nó đi thì sử dụng phương thức **setPOIsEnabled()** của lớp **IPostMap** và truyền vào tham số **false**. Ngược
+muốn tắt nó đi thì sử dụng phương thức **setPOIsEnabled()** của lớp **iPostMap** và truyền vào tham số **false**. Ngược
 lại nếu bạn muốn bật nó lên thì bạn truyền vào tham số là **true**.
 
 Ví dụ để tắt tính năng POI có sẵn của bản đồ:
@@ -69,7 +69,7 @@ ipostmap.setPOIsEnabled(false);
 ```
 <!-- tabs:end -->
 Ngoài ra để kiểm tra tính năng POI có sẵn có được bật hay không bạn cũng có thể sử dụng phương thức **isPOIsEnabled()**
-của lớp **IPostMap**. Phương thức này sẽ trả về một giá trị **boolean** tương ứng với tính năng có được bật hay không.
+của lớp **iPostMap**. Phương thức này sẽ trả về một giá trị **boolean** tương ứng với tính năng có được bật hay không.
 
 <!-- tabs:start -->
 #### ** Kotlin **
@@ -109,7 +109,7 @@ map4D?.setOnUserPOIClickListener {poi ->
 
 #### ** Java **
 ```java
-ipostmap.setOnUserPOIClickListener(new IPostMap.OnUserPOIClickListener() {
+ipostmap.setOnUserPOIClickListener(new iPostMap.OnUserPOIClickListener() {
     @Override
     public void onUserPOIClick(MFPOI mfpoi) {
         Toast.makeText(context , "User Poi Clicked: " + mfpoi.getTitle(), Toast.LENGTH_SHORT).show();
@@ -130,7 +130,7 @@ map4D?.setOnPOIClickListener { placeId, title, mfLocationCoordinate ->
 
 #### ** Java **
 ```java
-ipostmap.setOnPOIClickListener(new IPostMap.OnPOIClickListener() {
+ipostmap.setOnPOIClickListener(new iPostMap.OnPOIClickListener() {
     @Override
     public void onPOIClick(String placeId, String title, MFLocationCoordinate location) {
         Toast.makeText(context , "Poi Clicked: " + title, Toast.LENGTH_SHORT).show();

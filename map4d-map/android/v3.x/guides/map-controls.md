@@ -28,10 +28,10 @@ Dùng hai ngón tay thu hẹp/ mở rộng khoảng cách của 2 ngón tay trê
 ## 2. Các thuộc tính điều khiển Map
 
 > Bạn có thể tắt các điều khiển mặc định trên map bằng cách gọi các phương thức của lớp `MFUiSettings`, đối tượng của lớp
-này là một thuộc tính của lớp `IPostMap`
+này là một thuộc tính của lớp `iPostMap`
 
 - Các điều khiển sau có thể được bật và tắt theo các phương thức sau:
-    - `setMyLocationButtonEnabled()`: Bật tắt nút myLocation mà IPostMap Android SDK cung cấp.
+    - `setMyLocationButtonEnabled()`: Bật tắt nút myLocation mà iPostMap Android SDK cung cấp.
     - `setScrollGesturesEnabled()`: Bật tắt cử chỉ di chuyển Map. Nếu được bật, người dùng có thể vuốt để di chuyển map.
     - `setZoomGesturesEnabled()`: Bật tắt các cử chỉ phóng to hoặc thu nhỏ Map. Nếu được bật, người dùng có thể nhấn đúp, dùng hai ngón tay thu hẹp hoặc mở rộng để thay đổi mức zoom của camera.
     - `setTiltGesturesEnabled()`: Bật tắt các cử chỉ nghiêng Map. Nếu được bật, người dùng có thể sử dụng hai ngón tay vuốt dọc xuống hoặc vuốt lên để nghiêng camera.
@@ -43,7 +43,7 @@ này là một thuộc tính của lớp `IPostMap`
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFUiSettings settings = ipostmap.getUiSettings();
 settings.setMyLocationButtonEnabled(false);
@@ -57,7 +57,7 @@ settings.setAllGesturesEnabled(false);
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 var settings = ipostmap.getUiSettings()
 settings.setMyLocationButtonEnabled(false)
@@ -75,7 +75,7 @@ settings.setAllGesturesEnabled(false)
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 ipostmap.setMaxNativeZoom(19)
 ```
@@ -83,7 +83,7 @@ ipostmap.setMaxNativeZoom(19)
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 ipostmap.setMaxNativeZoom(19)
 ```
@@ -101,7 +101,7 @@ Set mức **zoom** tối đa và tối thiểu thông qua phương thức `setMi
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 ipostmap.setMinZoomPreference(3)
 ```
@@ -109,7 +109,7 @@ ipostmap.setMinZoomPreference(3)
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 ipostmap.setMinZoomPreference(3)
 ```
@@ -123,7 +123,7 @@ ipostmap.setMinZoomPreference(3)
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFCameraPosition cameraPosition = ipostmap.getCameraPosition();
 MFLocationCoordinate target = cameraPosition.getTarget();
@@ -135,7 +135,7 @@ double bearing = cameraPosition.getBearing();
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 var cameraPosition = ipostmap.cameraPosition
 var target = cameraPosition.target
@@ -147,7 +147,7 @@ var bearing = cameraPosition.bearing
 
 ## 4. Di chuyển Map
 
-**IPostMap Android SDK** hỗ trợ người dùng di chuyển **Map** tới một vị trí camera mới thông qua 2 phương thức `animateCamera()`
+**iPostMap Android SDK** hỗ trợ người dùng di chuyển **Map** tới một vị trí camera mới thông qua 2 phương thức `animateCamera()`
 và `moveCamera()`.
 
 **Sử dụng phương thức `animateCamera()`
@@ -156,7 +156,7 @@ và `moveCamera()`.
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 ipostmap.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
     new MFCoordinateBounds(
@@ -168,7 +168,7 @@ ipostmap.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 ipostmap.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
     MFCoordinateBounds(
@@ -184,7 +184,7 @@ ipostmap.animateCamera(MFCameraUpdateFactory.newCoordinateBounds(
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 ipostmap.moveCamera(MFCameraUpdateFactory.newCoordinateBounds(
     new MFCoordinateBounds(
@@ -196,7 +196,7 @@ ipostmap.moveCamera(MFCameraUpdateFactory.newCoordinateBounds(
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 ipostmap.moveCamera(MFCameraUpdateFactory.newCoordinateBounds(
     MFCoordinateBounds(

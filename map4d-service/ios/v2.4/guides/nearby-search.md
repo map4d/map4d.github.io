@@ -1,6 +1,6 @@
 # Nearby Search
 
-IPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_nearby_search>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_nearby_search>
 
 > Tìm kiếm các địa điểm lân cận.
 

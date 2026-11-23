@@ -3,7 +3,7 @@
 [![platform](https://img.shields.io/cocoapods/p/iPostMapService)](https://www.apple.com/ios/)
 [![cocoapods](https://img.shields.io/cocoapods/v/iPostMapService)](https://cocoapods.org/pods/iPostMapService)
 
-> **iPostMapService** cung cấp [IPostMap Services API](https://docs.ipostmap.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
+> **iPostMapService** cung cấp [iPostMap Services API](https://docs.ipostmap.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
 > **iPostMapService** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
 
 ## Installation

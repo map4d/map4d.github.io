@@ -1,6 +1,6 @@
 # Circle
 
-Nếu bạn muốn vẽ một hình tròn lên bản đồ, thì IPostMap SDK cung cấp cho bạn lớp **ipostmap.Circle** để thực hiện điều đó.
+Nếu bạn muốn vẽ một hình tròn lên bản đồ, thì iPostMap SDK cung cấp cho bạn lớp **ipostmap.Circle** để thực hiện điều đó.
 
 ### 1. Thêm một Circle
 

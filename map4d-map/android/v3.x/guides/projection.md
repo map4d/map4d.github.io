@@ -8,7 +8,7 @@ Lớp MFProjection được dùng để chuyển đổi giữa vị trí trên m
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFProjection projection = ipostmap.getProjection();
 ```
@@ -16,7 +16,7 @@ MFProjection projection = ipostmap.getProjection();
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 var projection = ipostmap.projection
 ```
@@ -30,7 +30,7 @@ var projection = ipostmap.projection
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFProjection projection = ipostmap.getProjection();
 MFLocationCoordinate location = new MFLocationCoordinate(10.771783, 106.700763);
@@ -52,7 +52,7 @@ Point point3DWithCamera = projection.pointForCoordinate(location, cameraPosition
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 var projection = ipostmap.projection
 var location = MFLocationCoordinate(10.771783, 106.700763)
@@ -80,7 +80,7 @@ var point3DWithCamera: Point = projection.pointForCoordinate(location, cameraPos
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFProjection projection = ipostmap.getProjection();
 Point point = new Point(100, 100);
@@ -103,7 +103,7 @@ MFLocationCoordinate coordinate3D = projection.coordinateForPoint(point, cameraP
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 var projection = ipostmap.projection
 var point = Point(100, 100)

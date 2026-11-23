@@ -1,7 +1,7 @@
 # Building Overlay
 
 Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết
-hợp với building sẵn có của IPostMap. Building overlay chỉ hiển thị ở chế độ 3D.
+hợp với building sẵn có của iPostMap. Building overlay chỉ hiển thị ở chế độ 3D.
 
 ![CocoaPods](../../resources/buildingOverlay.png)
 
@@ -33,13 +33,13 @@ tọa độ x, y và mức zoom tương ứng. Sau đó bạn thêm **Building O
 
     3. `visible(boolean)` : cho phép Building Overlay ẩn hay hiện sau khi add vào Map.
 
-4. Gọi `IPostMap.addBuildingOverlay()` để thêm Building Overlay vào Map.
+4. Gọi `iPostMap.addBuildingOverlay()` để thêm Building Overlay vào Map.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private IPostMap map4D;
+private iPostMap map4D;
 
 MFBuildingProvider buildingProvider = new MFUrlBuildingProvider() {
     @Override
@@ -78,7 +78,7 @@ MFBuildingOverlay buildingOverlay = ipostmap.addBuildingOverlay(new MFBuildingOv
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: IPostMap
+private lateinit var map4D: iPostMap
 
 var buildingProvider: MFBuildingProvider = object : MFUrlBuildingProvider() {
     override fun getBuildingUrl(x: Int, y: Int, zoom: Int): String {
@@ -214,8 +214,8 @@ var options = MFBuildingOverlayOptions()
 
 `MFBuildingData` class
 
-MFBuildingData là object chứa thông tin của building để IPostMap SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến
-đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho IPostMap SDK hiển thị lên bản đồ.
+MFBuildingData là object chứa thông tin của building để iPostMap SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến
+đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho iPostMap SDK hiển thị lên bản đồ.
 
 **Constructor**
 

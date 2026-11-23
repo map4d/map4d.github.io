@@ -96,7 +96,7 @@ Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS
 
 ### Sử dụng
 
-iPostMap React Native cung cấp component [MFMapView](./guides/mapview) để hiển thị bản đồ IPostMap. Bạn có thể thêm `MFMapView` vào view và set style cho nó để hiển thị IPostMap.
+iPostMap React Native cung cấp component [MFMapView](./guides/mapview) để hiển thị bản đồ iPostMap. Bạn có thể thêm `MFMapView` vào view và set style cho nó để hiển thị iPostMap.
 
 ### Ví dụ
 

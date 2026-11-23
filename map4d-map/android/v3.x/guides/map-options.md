@@ -8,7 +8,7 @@
 
 ## Map reference
 
-## IPostMap class
+## iPostMap class
 
 Các phương thức:
 
@@ -35,32 +35,32 @@ Các phương thức:
 | **isMyLocationEnabled** | `none`           | boolean      | Kiểm tra xem My Location marker có được hiển thị hay không                             |
 | **setMyLocationEnabled**| boolean          | `none`       | Set giá trị enable cho My Location marker                                              |
 | **setTime**             | Date             | `none`       | Set giá trị thời gian cho Map                                                          |
-| **setOnMyLocationButtonClickListener**|`IPostMap.OnMyLocationButtonClickListener`|`none`| Set một callback để bắt sự kiện nút My Location được ấn     |
-| **setOnMarkerClickListener**|`IPostMap.OnMarkerClickListener`|`none`| Set một callback để bắt sự kiện touch lên Marker                                |
-| **setOnMarkerDragListener**|`IPostMap.OnMarkerDragListener`|`none`| Set một callback để bắt sự kiện kéo Marker trên Map                               |
-| **setOnMyLocationClickListener**|`IPostMap.OnMyLocationClickListener`|`none`| Set một callback để bắt sự kiện khi touch My Location marker            |
-| **setOnPolylineClickListener**|`IPostMap.OnPolylineClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Polyline                      |
-| **setOnPolygonClickListener**|`IPostMap.OnPolygonClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Polygon                         |
-| **setOnCircleClickListener**|`IPostMap.OnCircleClickListener`|`none| Set một callback để bắt sự kiện khi touch lên Circle                             |
+| **setOnMyLocationButtonClickListener**|`iPostMap.OnMyLocationButtonClickListener`|`none`| Set một callback để bắt sự kiện nút My Location được ấn     |
+| **setOnMarkerClickListener**|`iPostMap.OnMarkerClickListener`|`none`| Set một callback để bắt sự kiện touch lên Marker                                |
+| **setOnMarkerDragListener**|`iPostMap.OnMarkerDragListener`|`none`| Set một callback để bắt sự kiện kéo Marker trên Map                               |
+| **setOnMyLocationClickListener**|`iPostMap.OnMyLocationClickListener`|`none`| Set một callback để bắt sự kiện khi touch My Location marker            |
+| **setOnPolylineClickListener**|`iPostMap.OnPolylineClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Polyline                      |
+| **setOnPolygonClickListener**|`iPostMap.OnPolygonClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Polygon                         |
+| **setOnCircleClickListener**|`iPostMap.OnCircleClickListener`|`none| Set một callback để bắt sự kiện khi touch lên Circle                             |
 | **setMaxZoomPreference**| double           | `none`       | Set giá trị zoom lớn nhất mà Map có thể hiển thị                                       |
 | **setMinZoomPreference**| double           | `none`       | Set giá trị zoom nhỏ nhất mà Map có thể hiển thị                                       |
 | **setMaxNativeZoom**    | double           | `none`       | Set giá trị zoom lớn nhất mà Tile không bị scale khi Map hiển thị                      |
-| **setOnMapClickListener**|`IPostMap.OnMapClickListener`|`none`| Set một callback để bắt sự kiện touch lên Map                                         |
-| **setOnCameraMoveStartedListener**|`IPostMap.OnCameraMoveStartedListener`|`none`| Set một callback để bắt sự kiện Camera của Map bắt đầu thay đổi     |
-| **setOnCameraMoveListener**|`IPostMap.OnCameraMoveListener`|`none`| Set một callback để bắt sự kiện Camera của Map đang thay đổi                      |
-| **setOnCameraIdleListener**|`IPostMap.OnCameraIdleListener`|`none`| Set một callback để bắt sự kiện Camera của Map thay đổi xong                      |
-| **setOnBuildingClickListener**|`IPostMap.OnBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Building                      |
-| **setOnBuildingClickListener**|`IPostMap.OnBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Building                      |
-| **setOnUserBuildingClickListener**|`IPostMap.OnUserBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên User Building         |
-| **setOnPOIClickListener**|`IPostMap.OnPOIClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên POI                                     |
-| **setOnUserPOIClickListener**|`IPostMap.OnUserPOIClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên User POI                        |
-| **setOnInfoWindowClickListener**|`IPostMap.OnInfoWindowClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Info Window               |
+| **setOnMapClickListener**|`iPostMap.OnMapClickListener`|`none`| Set một callback để bắt sự kiện touch lên Map                                         |
+| **setOnCameraMoveStartedListener**|`iPostMap.OnCameraMoveStartedListener`|`none`| Set một callback để bắt sự kiện Camera của Map bắt đầu thay đổi     |
+| **setOnCameraMoveListener**|`iPostMap.OnCameraMoveListener`|`none`| Set một callback để bắt sự kiện Camera của Map đang thay đổi                      |
+| **setOnCameraIdleListener**|`iPostMap.OnCameraIdleListener`|`none`| Set một callback để bắt sự kiện Camera của Map thay đổi xong                      |
+| **setOnBuildingClickListener**|`iPostMap.OnBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Building                      |
+| **setOnBuildingClickListener**|`iPostMap.OnBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Building                      |
+| **setOnUserBuildingClickListener**|`iPostMap.OnUserBuildingClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên User Building         |
+| **setOnPOIClickListener**|`iPostMap.OnPOIClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên POI                                     |
+| **setOnUserPOIClickListener**|`iPostMap.OnUserPOIClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên User POI                        |
+| **setOnInfoWindowClickListener**|`iPostMap.OnInfoWindowClickListener`|`none`| Set một callback để bắt sự kiện khi touch lên Info Window               |
 | **getSelectedPlace**    | `none`           | String       | Get id của POI được chọn (selected)                                                    |
-| **setInfoWindowAdapter**|`IPostMap.InfoWindowAdapter`|`none` | Set info window adapter cho Map                                                        |
-| **setPOIsEnabled**      | boolean          | `none`       | Set tất cả các POI của IPostMap hiện hay ẩn                                               |
-| **isPOIsEnabled**       | `none`           | boolean      | Kiểm tra POI của IPostMap có hiện hay không                                               |
-| **setBuildingsEnabled** | boolean          | `none`       | Set tất cả các Building của IPostMap hiện hay ẩn                                          |
-| **isBuildingsEnabled**  | `none`           | boolean      | Kiểm tra Building của IPostMap có được hiện hay không                                     |
+| **setInfoWindowAdapter**|`iPostMap.InfoWindowAdapter`|`none` | Set info window adapter cho Map                                                        |
+| **setPOIsEnabled**      | boolean          | `none`       | Set tất cả các POI của iPostMap hiện hay ẩn                                               |
+| **isPOIsEnabled**       | `none`           | boolean      | Kiểm tra POI của iPostMap có hiện hay không                                               |
+| **setBuildingsEnabled** | boolean          | `none`       | Set tất cả các Building của iPostMap hiện hay ẩn                                          |
+| **isBuildingsEnabled**  | `none`           | boolean      | Kiểm tra Building của iPostMap có được hiện hay không                                     |
 | **setSelectedBuildings**| List< String >   | `none`       | Set các Building sẽ được hightlight theo danh sách id truyền vào                       |
 | **setWaterEffectEnabled**| boolean         | `none`       | Bật hoặc tắt hiệu ứng nước 3D của Map                                                  |
 | **setScrollGesturesEnabled**| boolean      | `none`       | Bật hoặc tắt cử chỉ di chuyển Map                                                      |
@@ -117,7 +117,7 @@ Các phương thức:
 
 | Name                   | Parameters   | Return Value | Description                                                                         |
 |------------------------|--------------|--------------|-------------------------------------------------------------------------------------|
-| **getCameraPosition**  |[IPostMap](/guides/map-options?id=map4d-class)|MFCameraPosition| trả về Camera Position của IPostMap                          |
+| **getCameraPosition**  |[iPostMap](/guides/map-options?id=map4d-class)|MFCameraPosition| trả về Camera Position của iPostMap                          |
 
 ## MFCameraUpdateFactory
 
@@ -171,8 +171,8 @@ Các phương thức:
 
 #### Tạo mapdId
 
-Một `mapID` là một định danh duy nhất đại diện cho một instance duy nhất của IPostMap. Bạn có thể tạo `mapID` và liên kết với map style thông qua
-[trang quản lý của IPostMap](https://map.ipostmap.vn/developer/mapstyle)
+Một `mapID` là một định danh duy nhất đại diện cho một instance duy nhất của iPostMap. Bạn có thể tạo `mapID` và liên kết với map style thông qua
+[trang quản lý của iPostMap](https://map.ipostmap.vn/developer/mapstyle)
 
 #### Thêm mapId vào ứng dụng
 

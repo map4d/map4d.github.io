@@ -28,24 +28,24 @@ iPostMap JavaScript SDK cho phép bạn tùy chỉnh bản đồ với nội dun
 </html>
 ```
 
-## Load IPostMap Web SDK
+## Load iPostMap Web SDK
 
-IPostMap Web SDK có thể được tải bằng thẻ script được thêm bên trong file HTML
+iPostMap Web SDK có thể được tải bằng thẻ script được thêm bên trong file HTML
 
 ```JavaScript
 <script defer src="https://api.ipostmap.vn/sdk/map/js?version=SDK_VERSION&key=YOUR_API_KEY&mapId=MAP_ID&callback=CALLBACK_FUNCTION"></script>
 ```
 
 Trong đó:
-- **SDK_VERSION**: phiên bản IPostMap Web SDK, phiên bản mới nhất hiện tại là: `2.6`
+- **SDK_VERSION**: phiên bản iPostMap Web SDK, phiên bản mới nhất hiện tại là: `2.6`
 - **YOUR_API_KEY**: là một mã định danh để xác thực các yêu cầu liên quan đến projects của bạn dùng trong việc sử dụng và thanh toán, tạo API key tại đây: <https://map.ipostmap.vn/developer/key/>
-- **CALLBACK_FUNCTION**: tên hàm mà sẽ được gọi sau khi hoàn tất việc tải IPostMap Web SDK
+- **CALLBACK_FUNCTION**: tên hàm mà sẽ được gọi sau khi hoàn tất việc tải iPostMap Web SDK
 - **MAP_ID** *(optional)*: map id để lấy style, tham khảo [Map Style](https://map.ipostmap.vn/developer/mapstyle)
 
 
 ## Map DOM Elements
 
-Để hiển thị IPostMap, cần phải chuẩn bị một vị trí cho nó. Để thực hiện việc này cần tạo 1 phần tử div được đặt tên và lấy tham chiếu bằng cách get DOM element
+Để hiển thị iPostMap, cần phải chuẩn bị một vị trí cho nó. Để thực hiện việc này cần tạo 1 phần tử div được đặt tên và lấy tham chiếu bằng cách get DOM element
 
 ```HTML
 <div id="map"></div>
@@ -59,7 +59,7 @@ map = new ipostmap.Map(document.getElementById("map"), options)
 
 ### Map Options
 
-[MapOptions](/guides/map-options) là object cung cấp các thiết lập ban đầu để khởi tạo đối tượng IPostMap
+[MapOptions](/guides/map-options) là object cung cấp các thiết lập ban đầu để khởi tạo đối tượng iPostMap
 
 ### Samples
 
