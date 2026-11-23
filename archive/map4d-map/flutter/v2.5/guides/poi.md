@@ -6,7 +6,7 @@ những điểm có sẵn đó thì bạn có thể dùng lớp [MFPOI](//pub.de
 Các đối tượng POI bạn thêm vào bản đồ có thể hiện thị
 ở cả 2 chế độ 2D và 3D.
 
-![POI](/map4d-map/flutter/resources/poi.png) 
+![POI](../../../../../map4d-map/flutter/resources/poi.png) 
 
 ## MFPOI
 

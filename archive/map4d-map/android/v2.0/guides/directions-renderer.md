@@ -80,7 +80,7 @@ public final class MFDirectionsRenderer {
 
 ### 2. Tạo Directions Renderer
 
-![Directions Renderer](/map4d-map/android/resources/7-directions-renderer.png)
+![Directions Renderer](../../../../../map4d-map/android/resources/7-directions-renderer.png)
 
 > Tạo đối tượng Directions Renderer từ **MFDirectionsRendererOptions**
 

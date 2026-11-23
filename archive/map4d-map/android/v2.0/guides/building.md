@@ -76,7 +76,7 @@ public final class MFBuilding extends Annotation {
 
 ### 2. Tạo Building
 
-![User building](/map4d-map/android/resources/user_building.jpg)
+![User building](../../../../../map4d-map/android/resources/user_building.jpg)
   
 <!-- tabs:start -->
 #### ** Kotlin **
@@ -103,7 +103,7 @@ public final class MFBuilding extends Annotation {
 
 ### 3. Tạo Extrude Building
 
-![User building](/map4d-map/android/resources/extrude-building.jpg)
+![User building](../../../../../map4d-map/android/resources/extrude-building.jpg)
   
 <!-- tabs:start -->
 #### ** Kotlin **

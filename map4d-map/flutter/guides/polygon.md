@@ -3,7 +3,7 @@
 > Để vẽ các đa giác trên bản đồ thì ta sử dụng đối tượng [MFPolygon](//pub.dev/documentation/map4d_map/latest/map4d_map/MFPolygon-class.html).  
 Một đối tượng [MFPolygon](//pub.dev/documentation/map4d_map/latest/map4d_map/MFPolygon-class.html) bao gồm một mảng các điểm tọa độ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình tự có thứ tự.
 
-![Polygon](/map4d-map/flutter/resources/polygon.png) 
+![Polygon](../resources/polygon.png) 
 
 ## MFPolygon
 

@@ -4,7 +4,7 @@
 Chế độ này sẽ có các đối tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng như các công trình kiến trúc khác, ...  
 Ngoài những đối tượng building 3D  có sẵn của bản đồ, bạn còn có thể tự tạo và thêm đối tượng 3D của bạn lên bản đồ thông qua đối tượng [MFBuilding](//pub.dev/documentation/map4d_map/latest/map4d_map/MFBuilding-class.html)
 
-![Building](/map4d-map/flutter/resources/textureBuilding.png) 
+![Building](../../../../../map4d-map/flutter/resources/textureBuilding.png) 
 
 ## MFBuilding
 

@@ -40,7 +40,7 @@ MFMutablePath *path = [[MFMutablePath alloc] init];
 
 <!-- tabs:end -->
 
--  ![Polyline](/map4d-map/ios/resources/v1.5/createPolyline.png) 
+-  ![Polyline](../../../../../map4d-map/ios/resources/v1.5/createPolyline.png) 
 
 Bạn có thể tùy chỉnh hình dáng của **Polyline** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
 
@@ -104,4 +104,4 @@ MFMutablePath *path = [[MFMutablePath alloc] init];
 
 <!-- tabs:end -->
  
--  ![Polyline](/map4d-map/ios/resources/v1.5/customizePolyline.png) 
+-  ![Polyline](../../../../../map4d-map/ios/resources/v1.5/customizePolyline.png) 

@@ -73,7 +73,7 @@ Lớp Polyline cho phép người dùng vẽ một polyline lên bản đồ.
 
 Như ví dụ trên vẽ polyline với màu là màu đỏ và độ rộng là 10 point.
 
-![CocoaPods](/map4d-map/web/resources/6-polyline-1.png) 
+![CocoaPods](../../../../map4d-map/web/resources/6-polyline-1.png) 
 
 Trong map sdk có một thuộc tính gọi là **closed** khi cài đặt là true thì sẽ vẽ polyline với điểm đầu và điểm cuối chụm lại với nhau.
 
@@ -96,7 +96,7 @@ Trong map sdk có một thuộc tính gọi là **closed** khi cài đặt là t
   polyline.setMap(map)
 ```
 
-![CocoaPods](/map4d-map/web/resources/6-polyline-2.png) 
+![CocoaPods](../../../../map4d-map/web/resources/6-polyline-2.png) 
 
 Trong map sdk có một thuộc tính gọi là **style** khi cài đặt là solid thì vẽ nét liền và dotted thì vẽ nét đứt.
 
@@ -122,7 +122,7 @@ Default là solid (nét liền)
   polyline.setMap(map)
 ```
 
-![CocoaPods](/map4d-map/web/resources/6-polyline-2-v13.png)
+![CocoaPods](../../../../map4d-map/web/resources/6-polyline-2-v13.png)
 
 ## 3. Xóa polyline 
 

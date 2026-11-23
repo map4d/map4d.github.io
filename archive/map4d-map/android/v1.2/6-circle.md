@@ -46,7 +46,7 @@ public class MFCircle extends Annotation {
 
 ## 2. Tạo circle
 
-![CocoaPods](/map4d-map/android/resources/6-circle.png)
+![CocoaPods](../../../../map4d-map/android/resources/6-circle.png)
 
 - Tạo circle from MFCircleOptions 
 
@@ -66,7 +66,7 @@ Như ví dụ trên thì chúng ta tạo một Circle với các tùy chỉnh nh
 
 - Tạo circle với strokeColor and strokeWidth.
 
-![CocoaPods](/map4d-map/android/resources/6-circle-stroke.jpg)
+![CocoaPods](../../../../map4d-map/android/resources/6-circle-stroke.jpg)
 
 ```java
  MFCircle circle = map4D.addCircle(new MFCircleOptions()

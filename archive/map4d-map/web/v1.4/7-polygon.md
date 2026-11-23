@@ -66,7 +66,7 @@ Lớp Polygon cho phép người dùng vẽ một Polygon lên bản đồ.
 
 Như ví dụ trên vẽ 1 polygon có màu xanh da trời lên bản đồ.
 
-![CocoaPods](/map4d-map/web/resources/7-polygon-1.png)
+![CocoaPods](../../../../map4d-map/web/resources/7-polygon-1.png)
 
 Các bạn để ý bên ngoài polygon có viền đỏ. Mặc định khi vẽ polygon sẽ có viền. Chúng ta có thể đổi màu viền thông qua việc đổi thuộc tính **strokeColor**
 
@@ -84,7 +84,7 @@ Các bạn để ý bên ngoài polygon có viền đỏ. Mặc định khi vẽ
   polygon.setMap(this.map)    
 ```
 
-![CocoaPods](/map4d-map/web/resources/7-polygon-2.png)
+![CocoaPods](../../../../map4d-map/web/resources/7-polygon-2.png)
 
 Nếu không muốn vẽ viền có thể tắt thông qua thuộc tính **strokeWidth**. Khời tạo nó bằng 0 nghĩa là không vẽ viền
 
@@ -102,7 +102,7 @@ Nếu không muốn vẽ viền có thể tắt thông qua thuộc tính **strok
   polygon.setMap(this.map)    
 ```
 
-![CocoaPods](/map4d-map/web/resources/7-polygon-3.png)
+![CocoaPods](../../../../map4d-map/web/resources/7-polygon-3.png)
   
 Ta có thể vẽ polygon có lỗ lên bản đồ. Paths là một mảng chứa các mảng, với mảng đầu tiên là polygon cần vẽ lên bản đồ. Các mảng còn lại tương ứng với lỗ trên polygon.
 
@@ -127,7 +127,7 @@ Ta có thể vẽ polygon có lỗ lên bản đồ. Paths là một mảng ch�
 
 Như ví dụ trên ta vẽ 1 polygon với 2 cái lỗ.
 
-![CocoaPods](/map4d-map/web/resources/7-polygon-4.png) 
+![CocoaPods](../../../../map4d-map/web/resources/7-polygon-4.png) 
 
 ***Chú ý:***
 - Điểm đầu điểm cuối danh sách các điểm cần vẽ phải **GIỐNG NHAU**

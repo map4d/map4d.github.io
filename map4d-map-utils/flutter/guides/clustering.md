@@ -2,7 +2,7 @@
 
 > Map4dMapUtils utility library cung cấp các tiện ích để xử lý việc hiển thị một số lượng lớn các điểm lên bản đồ Map4D.
 
-![Marker Clustering](/map4d-map-utils/flutter/resources/clustering.jpeg)
+![Marker Clustering](../resources/clustering.jpeg)
 
 ## Usage
 

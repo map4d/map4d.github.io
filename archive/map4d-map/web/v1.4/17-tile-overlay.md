@@ -48,7 +48,7 @@ tileOverlay.setMap(this.map)
 
 Sau khi được set vào map thành công thì ta sẽ được kết quả như hình bên dưới:
 
-![CocoaPods](/map4d-map/web/resources/17-tile-overlay-1.png)
+![CocoaPods](../../../../map4d-map/web/resources/17-tile-overlay-1.png)
 
 
 ## 3. Xóa Tile Overlay

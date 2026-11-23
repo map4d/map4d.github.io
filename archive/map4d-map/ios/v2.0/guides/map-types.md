@@ -13,7 +13,7 @@ Map4D Map SDK hiện cung cấp 2 loại bản đồ tùy chỉnh:
 
 |                 ROADMAP                         | RASTER                                         |
 |:-----------------------------------------------:|:----------------------------------------------:|
-| ![MapType](/map4d-map/ios/resources/maptype-roadmap.jpg) | ![MapType](/map4d-map/ios/resources/maptype-raster.jpg) |
+| ![MapType](../../../../../map4d-map/ios/resources/maptype-roadmap.jpg) | ![MapType](../../../../../map4d-map/ios/resources/maptype-raster.jpg) |
 
 ### Thay đổi loại bản đồ
 

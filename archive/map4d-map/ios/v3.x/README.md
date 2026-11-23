@@ -6,7 +6,7 @@
 > **Map4D iOS SDK** cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên iPhone, iPad.  
 > **Map4D iOS SDK** không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn
 
-![Map4D iOS SDK](/map4d-map/ios/resources/Untitled-1_0000_Right-Mockup--phone-demo.png)
+![Map4D iOS SDK](../../../../map4d-map/ios/resources/Untitled-1_0000_Right-Mockup--phone-demo.png)
 
 ## Installation
 

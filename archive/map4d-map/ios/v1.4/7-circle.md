@@ -32,7 +32,7 @@ Lớp MFPolyline cho phép người dùng vẽ một Polyline lên map.
 
 ## 2. Tạo Circle 
 
-  ![MAP4DSDK](/map4d-map/ios/resources/v1.4/7-circle.png)
+  ![MAP4DSDK](../../../../map4d-map/ios/resources/v1.4/7-circle.png)
 
   - Vẽ hình tròn có bán kinh 100m lên bản đồ.
   ```swift

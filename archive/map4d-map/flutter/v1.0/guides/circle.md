@@ -2,7 +2,7 @@
 
 > Map4D SDK cung cấp cho bạn lớp **MFCircle** để vẽ một hình tròn lên bản đồ.  
 
-![Circle](/map4d-map/flutter/resources/circle.png) 
+![Circle](../../../../../map4d-map/flutter/resources/circle.png) 
 
 ## MFCircle
 

@@ -68,7 +68,7 @@ public final class MFPOI extends Annotation {
 
 ### 2. Tạo POI
 
-![CocosPod](/map4d-map/android/resources/v1.4/poi.jpg) 
+![CocosPod](../../../../../map4d-map/android/resources/v1.4/poi.jpg) 
   
 <!-- tabs:start -->
 #### ** Kotlin **

@@ -29,7 +29,7 @@ hoặc bạn có thể tuỳ chỉnh bằng một hình ảnh khác hoặc tuỳ
 
 ### 1. Thêm một Marker
 
-![Marker](/map4d-map/react-native/resources/add-marker.png)
+![Marker](../resources/add-marker.png)
 
 ```javascript
 render() {
@@ -52,7 +52,7 @@ render() {
 
 Để tùy chỉnh icon cho Marker, bạn có thể dùng thuộc tính icon để thực hiện điều đó
 
-![IconMarker](/map4d-map/react-native/resources/icon-marker.png)
+![IconMarker](../resources/icon-marker.png)
 
 ```javascript
 render() {
@@ -73,7 +73,7 @@ render() {
 
 Ngoài việc tùy chỉnh icon cho Marker, bạn còn có thể dùng custom view để thay đổi hình ảnh của Marker như hình dưới:
 
-![CustomViewMarker](/map4d-map/react-native/resources/view-marker.png)
+![CustomViewMarker](../resources/view-marker.png)
 
 > Các children components có thể được thêm vào trong Marker và nội dung được hiển thị sẽ thay thế cho icon marker.
 

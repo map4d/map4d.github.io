@@ -3,7 +3,7 @@
 **Tile Overlay** là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên
 tile map có sẵn của Map4D.
 
-![CocoaPods](/map4d-map/android/resources/tileOverlay.png)
+![CocoaPods](../../../../../map4d-map/android/resources/tileOverlay.png)
 
 ## Giới thiệu
 
@@ -28,7 +28,7 @@ Nam. Các ô sẽ có từng tọa độ bằng cách sử dụng tọa đô x, 
 Ví dụ: ở mức zoom 2, toàn bộ bản đồ sẽ được chia thành 16 ô. Mỗi ô sẽ tương ứng với một cặp x, y duy nhất kết hợp với mức
 zoom:
 
-![CocoaPods](/map4d-map/android/resources/tileCoordinates.png)
+![CocoaPods](../../../../../map4d-map/android/resources/tileCoordinates.png)
 
 Khi tạo hình ảnh cho Tile Overlay, bạn cần tạo một ảnh cho mỗi tile tại từng mức zoom mà bạn muốn vẽ. Map4D yêu cầu kích
 thước ảnh là 256dp.

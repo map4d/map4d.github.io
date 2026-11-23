@@ -94,7 +94,7 @@ khi tạo một marker.
 
 Bảng thông tin sẽ được hiển thị **khi người dùng click lên marker** như hình bên dưới:
 
-![CocoaPods](/map4d-map/web/resources/4-marker-2.png)
+![CocoaPods](../resources/4-marker-2.png)
 
 Ngoài ra bạn còn có thể thay đổi nội dung bảng thông tin bằng layout mặc định của bản đồ bằng phương thức **setInfoContents()**
 với đối số truyền vào là một string hoặc một HTML:

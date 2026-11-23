@@ -59,7 +59,7 @@ public enum MFPolylineStyle {
 
 ### 2. Tạo polyline
 
-![Polyline](/map4d-map/android/resources/4-polyline.png)
+![Polyline](../../../../../map4d-map/android/resources/4-polyline.png)
 
 > Tạo đối tượng polyline từ **MFPolylineOptions**
 
@@ -139,7 +139,7 @@ Ví dụ trên thì chúng ta tạo một polyline từ danh sách các tọa đ
 
 - **Result**: 
 
-![Polyline](/map4d-map/android/resources/4-polyline-dotted.jpg)
+![Polyline](../../../../../map4d-map/android/resources/4-polyline-dotted.jpg)
 
 ### 3. Xóa Polyline
 

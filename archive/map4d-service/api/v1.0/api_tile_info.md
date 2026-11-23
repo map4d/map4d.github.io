@@ -2,7 +2,7 @@
 # Tile(Lấy thông tin của tile)
 ## 1. Bản đồ nền
 MAP4D API cung cấp dữ liệu nền địa lý ở dạng raster
-[![Tile](/map4d-service/api/resources/tile.png)](https://map4d.vn)
+[![Tile](../../../../map4d-service/api/resources/tile.png)](https://map4d.vn)
 
 ## 2. URL
 ```

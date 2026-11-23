@@ -105,7 +105,7 @@ enum ControlOptions {
 - controlOptions: vị trí của bảng điều khiển giá trị mặc định là BOTTOM_RIGHT
 - switchMode: là chế độ chuyển mode của Map khi người dùng thực hiện các thao tác tác động đến Map như zoom, fly, move. Mục đích của switchMode là cho phép Map có tự động chuyển từ 2D sang 3D và ngược lại khi người dùng thực hiện các thao tác trên hay không. Để tìm hiểu kĩ hơn bạn có thể đọc phần tài liệu về SwitchMode ở mục **9**
 
-![CocoaPods](/map4d-map/web/resources/0-getting-started-1.png)
+![CocoaPods](../../../../map4d-map/web/resources/0-getting-started-1.png)
 
 ## 5. Giới hạn mức zoom tối đa và tối thiểu
 Có thể set thông qua MapOptions khi khởi tạo map hoặc là phương thức setMinZoom/ setMapZoom.

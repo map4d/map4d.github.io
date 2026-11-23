@@ -60,7 +60,7 @@ Marker clustering giúp bạn quản lý nhiều markers ở các level zoom. Kh
   cluster.setMap(map)
 ```
 
-![CocoaPods](/map4d-map/web/resources/5-marker-cluster-1.png) 
+![CocoaPods](../../../../map4d-map/web/resources/5-marker-cluster-1.png) 
 
 ## 3. Xóa cluster
 

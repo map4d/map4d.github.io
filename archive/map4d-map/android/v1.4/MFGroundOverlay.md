@@ -35,7 +35,7 @@ public class MFGroundOverlay extends MFLayerOverlay {
 - **override** : dùng để xác định overlay đó có được ghi đè lên map4d base map hay không, nếu có thì ở tile đó sẽ không xuất hiện poi hay building của map4d
 ## 2. Tạo Ground Overlay
 
-  -  ![MAP4DSDK](/map4d-map/android/resources/v1.4/ground-overlay.png) 
+  -  ![MAP4DSDK](../../../../map4d-map/android/resources/v1.4/ground-overlay.png) 
   
 ```java
     MFCoordinateBounds bounds = MFCoordinateBounds.builder().includes(

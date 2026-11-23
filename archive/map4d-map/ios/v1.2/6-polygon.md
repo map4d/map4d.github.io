@@ -26,7 +26,7 @@ Lớp MFPolyline cho phép người dùng vẽ một Polyline lên map.
   - ####Có hai kiểu tạo polygon: 
   - **Polygon không có hole**
   
-  - ![MAP4DSDK](/map4d-map/ios/resources/5-polygon.png)
+  - ![MAP4DSDK](../../../../map4d-map/ios/resources/5-polygon.png)
   
     ```swift
       let path = MFMutablePath()
@@ -41,7 +41,7 @@ Lớp MFPolyline cho phép người dùng vẽ một Polyline lên map.
     ```
   - **Polygon có hole** 
   
-  - ![MAP4DSDK](/map4d-map/ios/resources/5-polygon-hole.png)
+  - ![MAP4DSDK](../../../../map4d-map/ios/resources/5-polygon-hole.png)
   
     ```swift
       let path = MFMutablePath()

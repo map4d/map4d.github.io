@@ -18,7 +18,7 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
 
 ### Thêm một Polyline
 
-![Polyline](/map4d-map/react-native/resources/polyline.png)
+![Polyline](../../../../../map4d-map/react-native/resources/polyline.png)
 
 ```javascript
 render() {

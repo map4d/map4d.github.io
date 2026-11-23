@@ -43,7 +43,7 @@ public class MFCircle extends Annotation {
 
 ## 2. Tạo circle
 
-![CocoaPods](/map4d-map/android/resources/6-circle.png)
+![CocoaPods](../../../../map4d-map/android/resources/6-circle.png)
 
 - Tạo circle from MFCircleOptions 
 

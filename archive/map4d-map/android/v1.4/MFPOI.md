@@ -69,7 +69,7 @@ public final class MFPOI extends Annotation {
 
 ## 2. Tạo POI
 
-  -  ![MAP4DSDK](/map4d-map/android/resources/v1.4/poi.jpg) 
+  -  ![MAP4DSDK](../../../../map4d-map/android/resources/v1.4/poi.jpg) 
   
 ```java
   MFPOIOptions userPOIOptions = new MFPOIOptions();

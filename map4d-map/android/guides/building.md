@@ -8,7 +8,7 @@ tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng 
 
 ### 1. Tạo Building
 
-![User building](/map4d-map/android/resources/user_building.jpg)
+![User building](../resources/user_building.jpg)
   
 <!-- tabs:start -->
 #### ** Kotlin **
@@ -35,7 +35,7 @@ tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng 
 
 ### 2. Tạo Extrude Building
 
-![User building](/map4d-map/android/resources/extrude-building.jpg)
+![User building](../resources/extrude-building.jpg)
   
 <!-- tabs:start -->
 #### ** Kotlin **

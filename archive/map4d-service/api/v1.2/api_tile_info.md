@@ -4,7 +4,7 @@ Map4D API cung cấp dữ liệu nền địa lý ở dạng "raster".
 Phương thức: **GET**
 
 Bản đồ nền
-[![Tile](/map4d-service/api/resources/tile.png)](https://map4d.vn)
+[![Tile](../../../../map4d-service/api/resources/tile.png)](https://map4d.vn)
 
 ## 1. Input (Đầu vào)
 ```

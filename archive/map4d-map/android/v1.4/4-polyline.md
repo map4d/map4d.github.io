@@ -52,7 +52,7 @@ public final class MFPolyline extends Annotation {
 
 ## 2. Tạo polyline
 
-![CocoaPods](/map4d-map/android/resources/4-polyline.png)
+![CocoaPods](../../../../map4d-map/android/resources/4-polyline.png)
 
 - Tạo đối tượng polyline từ PolylineOptions
 
@@ -92,7 +92,7 @@ Ví dụ trên thì chúng ta tạo một polyline từ danh sách các tọa đ
                 .style(MFPolylineStyle.dotted));
 ```
 
-![CocoaPods](/map4d-map/android/resources/4-polyline-dotted.jpg)
+![CocoaPods](../../../../map4d-map/android/resources/4-polyline-dotted.jpg)
 ## 3. Sự kiện click polyline
 
 Phát sinh khi người dùng click vào polyline

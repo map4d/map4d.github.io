@@ -16,7 +16,7 @@ Map4D Map SDK hiện cung cấp 3 loại bản đồ tùy chỉnh thông qua đ�
 
 |                 ROADMAP                                   | SATELLITE                                                    |                 HYBRID                                   |
 |:---------------------------------------------------------:|:------------------------------------------------------------:|:--------------------------------------------------------:|
-| ![MapType](../../../ios/resources/v3/maptype_roadmap.jpg) | ![MapType](../../../ios/resources/v3/maptype_satelllite.jpg) | ![MapType](../../../ios/resources/v3/maptype_hybrid.jpg) |
+| ![MapType](../../ios/resources/v3/maptype_roadmap.jpg) | ![MapType](../../ios/resources/v3/maptype_satelllite.jpg) | ![MapType](../../ios/resources/v3/maptype_hybrid.jpg) |
 
 
 ### Thay đổi kiểu bản đồ

@@ -116,7 +116,7 @@ http://api.map4d.vn/sdk/route?key={key}&origin={origin}&destination={destination
 | summary          | No       | Tóm lược đường đi (khoảng cách `distance` và thời gian di chuyển `duration`).                                                                     |
 | snappedWaypoints | No       | Danh sách các điểm đi qua trên đường, từ địa điểm bắt đầu và điểm đi qua tới điểm kết thúc.                                                       |
 
-[![Route](/map4d-service/api/resources/route.png)](https://map4d.vn)
+[![Route](../../../../map4d-service/api/resources/route.png)](https://map4d.vn)
 
 **Ví dụ**
 <iframe src="./examples/v1.0/route.html" height="600px"> </iframe>

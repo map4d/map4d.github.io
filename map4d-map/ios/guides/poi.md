@@ -37,7 +37,7 @@ MFPOI *poi = [[MFPOI alloc] init];
 
 <!-- tabs:end -->
 
-![POI](/map4d-map/ios/resources/v1.5/createPOI.png) 
+![POI](../resources/v1.5/createPOI.png) 
 
 
 ### 2. Xóa POI khỏi bản đồ
@@ -103,4 +103,4 @@ poi.color = .blue
 
 <!-- tabs:end -->
 
-![POI](/map4d-map/ios/resources/v1.5/customizePOI.png) 
+![POI](../resources/v1.5/customizePOI.png) 

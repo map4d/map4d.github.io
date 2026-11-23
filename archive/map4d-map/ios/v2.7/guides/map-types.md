@@ -15,7 +15,7 @@ Map4D Map SDK hiện cung cấp 4 loại bản đồ tùy chỉnh:
 
 |                 ROADMAP                         | RASTER                                         |                 SATELLITE                         | MAP3D                                         |
 |:-----------------------------------------------:|:----------------------------------------------:|:-------------------------------------------------:|:---------------------------------------------:|
-| ![MapType](/map4d-map/ios/resources/maptype-roadmap.jpg) | ![MapType](/map4d-map/ios/resources/maptype-raster.jpg) | ![MapType](/map4d-map/ios/resources/maptype-satellite.jpg) | ![MapType](/map4d-map/ios/resources/maptype-map3d.jpg) |
+| ![MapType](../../../../../map4d-map/ios/resources/maptype-roadmap.jpg) | ![MapType](../../../../../map4d-map/ios/resources/maptype-raster.jpg) | ![MapType](../../../../../map4d-map/ios/resources/maptype-satellite.jpg) | ![MapType](../../../../../map4d-map/ios/resources/maptype-map3d.jpg) |
 
 ### Thay đổi loại bản đồ
 

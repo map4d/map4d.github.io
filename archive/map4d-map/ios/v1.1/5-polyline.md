@@ -21,7 +21,7 @@ Lớp MFPolyline cho phép người dùng vẽ một Polyline lên map.
 
 ## 2. Tạo Polyline 
 
-  - ![MAP4DSDK](/map4d-map/ios/resources/4-polyline.png)
+  - ![MAP4DSDK](../../../../map4d-map/ios/resources/4-polyline.png)
 
   - 
     ```swift

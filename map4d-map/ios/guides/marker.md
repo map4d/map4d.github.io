@@ -34,7 +34,7 @@ MFMarker *marker = [[MFMarker alloc] init];
 
 <!-- tabs:end -->
 
-![Marker](/map4d-map/ios/resources/v1.5/createMaker.png) 
+![Marker](../resources/v1.5/createMaker.png) 
 
 ### 2. Xóa Marker khỏi bản đồ
 
@@ -95,7 +95,7 @@ marker.icon = UIImage(named: "iconLocationBlue")
 ```
 <!-- tabs:end -->
 
-![Marker](/map4d-map/ios/resources/v1.5/setImageMarker.png) 
+![Marker](../resources/v1.5/setImageMarker.png) 
 
 #### Tùy chỉnh hình ảnh cho Marker với UIView
 
@@ -118,7 +118,7 @@ UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40.0, 40.0)];
 ```
 <!-- tabs:end -->
 
-![Marker](/map4d-map/ios/resources/v1.5/setIconViewMarker.png) 
+![Marker](../resources/v1.5/setIconViewMarker.png) 
 
 #### Marker có bảng thông tin
 
@@ -142,7 +142,7 @@ marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 
 Bảng thông tin sẽ được hiển thị **khi người dùng click lên Marker** như hình bên dưới:
 
-![Marker](/map4d-map/ios/resources/v1.5/infoWindowMarker.png) 
+![Marker](../resources/v1.5/infoWindowMarker.png) 
 
 ### 5. Kéo Marker di chuyển trên bản đồ
 

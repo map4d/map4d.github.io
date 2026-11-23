@@ -45,6 +45,6 @@ duration.text: là mô tả thời gian xe đến vị trí đích
 duration.value: là khoản thời gian đơn vị là giây tới vị trí đích
 polyline: là đường đi từng điểm dưới dạng mã hóa polyline làm tròn 5 ký tự
 ```
-[![CocoaPods](/map4d-service/api/resources/route.png)](https://map4d.vn)
+[![CocoaPods](../../../../map4d-service/api/resources/route.png)](https://map4d.vn)
 [Ví dụ](./examples/v1.0/eta.html)
 <iframe src="./examples/v1.0/eta.html"> </iframe>

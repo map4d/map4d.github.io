@@ -2,7 +2,7 @@
 
 Map4D Android SDK cung cấp GeoJson layer cho phép người dùng hiển thị dữ liệu địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
 
-![CocoaPods](/map4d-map/android/resources/geojson-layer.png)
+![CocoaPods](../../../../../map4d-map/android/resources/geojson-layer.png)
 
 ### 1. Thêm một GeoJSON layer
 

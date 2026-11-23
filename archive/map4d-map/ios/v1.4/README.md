@@ -2,7 +2,7 @@
 
 Map4D SDK for iOS, written in C/C++, Objective C.
 
-[![Map4D iOS SDK](/map4d-map/ios/resources/Untitled-1_0000_Right-Mockup--phone-demo.png)](https://map4d.vn) 
+[![Map4D iOS SDK](../../../../map4d-map/ios/resources/Untitled-1_0000_Right-Mockup--phone-demo.png)](https://map4d.vn) 
 
 ## Installation
 

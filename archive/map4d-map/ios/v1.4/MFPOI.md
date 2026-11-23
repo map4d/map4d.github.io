@@ -29,7 +29,7 @@ Lớp MFPOI cho phép người dùng vẽ một POI lên map.
 
 ## 2. Tạo POI
 
-  -  ![MAP4DSDK](/map4d-map/ios/resources/v1.4/user-poi.png) 
+  -  ![MAP4DSDK](../../../../map4d-map/ios/resources/v1.4/user-poi.png) 
   
 ```swift
   let poi = MFPOI()

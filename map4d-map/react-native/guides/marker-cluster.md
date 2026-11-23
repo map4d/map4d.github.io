@@ -5,7 +5,7 @@ theo từng mức zoom để giúp việc hiển thị nhiều marker được r
 
 ## Thêm marker cluster vào bản đồ
 
-![Marker Cluster](/map4d-map/react-native/resources/marker-cluster.png)
+![Marker Cluster](../resources/marker-cluster.png)
 
 Để hiển thị marker cluster lên bản đồ Map4D, ta sử dụng `MFMarkerCluster` trong `MFMapView` để chứa một số lượng lớn các `MFClusterItem`  
 Ví dụ bên dưới cho phép tạo các `MFClusterItem` và hiển thị `MFMarkerCluster` lên bản đồ

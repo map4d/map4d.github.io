@@ -2,7 +2,7 @@
 
 > Tile Overlay là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của Map4D
 
-![Tile Overlay](/map4d-map/react-native/resources/tile-overlay.jpeg)
+![Tile Overlay](../resources/tile-overlay.jpeg)
 
 ## MFTileOverlay
 

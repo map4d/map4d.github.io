@@ -23,7 +23,7 @@ pod 'Map4dMap'
     ```
     - Hoặc click vào info.plist thêm access key như hình:
     
-    - ![MAP4DSDK](/map4d-map/ios/resources/v1.4/0-accessKey.png)
+    - ![MAP4DSDK](../../../../map4d-map/ios/resources/v1.4/0-accessKey.png)
     
     - Tạo 1 view chứa MAP4D
     ```swift

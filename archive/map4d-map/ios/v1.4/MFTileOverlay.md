@@ -30,7 +30,7 @@ Lớp MFURLTileLayer cho phép người dùng vẽ raster tile chồng lên map4
 
 ## 3. Tạo Tile Overlay
 
-  -  ![MAP4DSDK](/map4d-map/ios/resources/v1.4/tile-overlay.png) 
+  -  ![MAP4DSDK](../../../../map4d-map/ios/resources/v1.4/tile-overlay.png) 
   
 ```swift
   class TileUrlConstructor : NSObject, MFTileURLConstructor {

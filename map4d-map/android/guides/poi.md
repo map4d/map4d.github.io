@@ -7,7 +7,7 @@ những điểm có sẵn đó thì bạn có thể dùng lớp **MFPOI**. Các 
 
 ### 1. Tạo POI
 
-![CocosPod](/map4d-map/android/resources/v1.4/poi.jpg) 
+![CocosPod](../resources/v1.4/poi.jpg) 
   
 <!-- tabs:start -->
 #### ** Kotlin **

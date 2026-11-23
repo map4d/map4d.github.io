@@ -36,7 +36,7 @@ Lớp MFPolyline cho phép người dùng vẽ một Polyline lên map.
     ```
   - Như ví dụ trên vẽ một hình tròn có bán kinh 100m lên bản đồ.
   
-  -  ![MAP4DSDK](/map4d-map/ios/resources/6-circle.png)
+  -  ![MAP4DSDK](../../../../map4d-map/ios/resources/6-circle.png)
   
   -
     ```swift
@@ -45,7 +45,7 @@ Lớp MFPolyline cho phép người dùng vẽ một Polyline lên map.
     ```
   - Ta có thể vẽ viền của đường tròn thông qua thuộc tính strokeWidth và strokeColor. strokeWidth sẽ quyết định kích thước của viền strokeColor sẽ quyết định màu của viền nếu không xác định hệ thống sẽ dùng màu mặc đinh (#00ff00)
   
-  -  ![MAP4DSDK](/map4d-map/ios/resources/6-circle-stroke.png)
+  -  ![MAP4DSDK](../../../../map4d-map/ios/resources/6-circle-stroke.png)
 ## 3. Sự kiện click Circle 
 
   - Phát sinh khi người dùng click vào circle 

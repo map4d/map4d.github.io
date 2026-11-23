@@ -61,7 +61,7 @@ renderer.map = mapView;
 ```
 <!-- tabs:end -->
 
-![Directions Renderer](/map4d-map/ios/resources/directions-renderer.jpg) 
+![Directions Renderer](../resources/directions-renderer.jpg) 
 
 ### 2. Xóa Directions Renderer khỏi bản đồ
 

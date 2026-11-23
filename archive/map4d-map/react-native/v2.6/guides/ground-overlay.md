@@ -5,7 +5,7 @@
 
 > Ground Overlay rất hữu ích khi bạn muốn sửa hình ảnh tại một số khu vực trên bản đồ.
 
-![Ground Overlay](/map4d-map/react-native/resources/ground-overlay.jpeg)
+![Ground Overlay](../../../../../map4d-map/react-native/resources/ground-overlay.jpeg)
 
 ## MFGroundOverlay
 

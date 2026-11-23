@@ -1,39 +1,39 @@
 ## Cách tạo key trên Map4D
-**B1:** Chọn vào nút chức năng "ĐĂNG NHẬP" ![Key](/map4d-service/api/resources/btndangnhap.PNG) ngay trên góc phải màn hình chính của bản đồ Map4D để đăng nhập.
+**B1:** Chọn vào nút chức năng "ĐĂNG NHẬP" ![Key](resources/btndangnhap.PNG) ngay trên góc phải màn hình chính của bản đồ Map4D để đăng nhập.
 
-![Key](/map4d-service/api/resources/steplogin.PNG)
+![Key](resources/steplogin.PNG)
 
-![Key](/map4d-service/api/resources/dangnhap.PNG)
+![Key](resources/dangnhap.PNG)
 
 Nếu chưa có tài khoản, chọn “ĐĂNG KÝ TÀI KHOẢN” để vào chức năng đăng ký tài khoản người dùng hoặc đăng ký tài khoản bằng cách login vào tài khoản Google/Facebook/Apple ID.
 
-![Key](/map4d-service/api/resources/dangki.PNG)
+![Key](resources/dangki.PNG)
 
-**B2:** Sau khi đăng nhập thành công vào Map4D, bấm vào logo ![Key](/map4d-service/api/resources/logo1.PNG) ở góc phải màn hình tại màn hình chính Map4D để mở bảng Menu.
+**B2:** Sau khi đăng nhập thành công vào Map4D, bấm vào logo ![Key](resources/logo1.PNG) ở góc phải màn hình tại màn hình chính Map4D để mở bảng Menu.
 
-![Key](/map4d-service/api/resources/logo.PNG)
+![Key](resources/logo.PNG)
 
 **B3:** Trên Menu chức năng, chọn "Nhà phát triển" tại màn hình Map4D User để vào chức năng quản lý nhà phát triển. 
 
-![Key](/map4d-service/api/resources/btnmenu.PNG)
+![Key](resources/btnmenu.PNG)
 
 **B4:** Tại trang chủ của "Nhà phát triển", bấm vào menu "Key" để vào màn hình "Access key của tôi".
 
-![Key](/map4d-service/api/resources/menukey.PNG)
+![Key](resources/menukey.PNG)
 
 Trường hợp user mới và chưa có key nào được tạo, bảng Access key của tôi sẽ trống.
 
-![Key](/map4d-service/api/resources/acckey.PNG)
+![Key](resources/acckey.PNG)
 
-**B5:** Chọn nút lệnh ![Key](/map4d-service/api/resources/add.PNG) ngay trên góc phải màn hình danh sách Access key của tôi để gọi chức năng tạo mới một key.
+**B5:** Chọn nút lệnh ![Key](resources/add.PNG) ngay trên góc phải màn hình danh sách Access key của tôi để gọi chức năng tạo mới một key.
 
-![Key](/map4d-service/api/resources/addkey.PNG)
+![Key](resources/addkey.PNG)
 
 **B6:** Chọn radio button "Cài đặt hạn chế sử dụng" tại màn hình "Thêm mới key" để cài đặt hạn chế sử dụng key.
 
-![Key](/map4d-service/api/resources/radiobutton.PNG)
+![Key](resources/radiobutton.PNG)
 
-![Key](/map4d-service/api/resources/settingkey.PNG)
+![Key](resources/settingkey.PNG)
 
 **Nhập các thông tin key của tôi:**
  - Tên: Là tên key (Tên gợi nhớ vào mục đích sử dụng riêng của user).
@@ -65,6 +65,6 @@ Trường hợp user mới và chưa có key nào được tạo, bảng Access 
 
 - Môi trường: Là môi trường cho phép sử dụng key của người dùng, Map4D hỗ trợ các môi trường chính: Development, Apple Store/Google Play Store và Không xác định.
 
-**B7:** Chọn vào nút chức năng “LƯU” key ![Key](/map4d-service/api/resources/btnluu.PNG) khi đã hoàn thành các thông tin cần thiết. 
+**B7:** Chọn vào nút chức năng “LƯU” key ![Key](resources/btnluu.PNG) khi đã hoàn thành các thông tin cần thiết. 
 
 Hệ thống tự động trở về màn hình danh sách Access key của tôi.

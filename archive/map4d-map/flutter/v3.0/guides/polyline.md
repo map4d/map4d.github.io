@@ -3,7 +3,7 @@
 > Để vẽ các đường thẳng trên bản đồ thì ta sử dụng đối tượng [MFPolyline](//pub.dev/documentation/map4d_map/latest/map4d_map/MFPolyline-class.html).  
 Một đối tượng **MFPolyline** bao gồm một mảng các điểm tọa độ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình tự có thứ tự.
 
-![Polyline](/map4d-map/flutter/resources/polyline.png) 
+![Polyline](../../../../../map4d-map/flutter/resources/polyline.png) 
 
 ## MFPolyline
 

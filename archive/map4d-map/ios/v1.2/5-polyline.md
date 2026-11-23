@@ -29,7 +29,7 @@ Lớp MFPolyline cho phép người dùng vẽ một Polyline lên map.
 
 ## 2. Tạo Polyline 
   - Polyline với style: solid
-  - ![MAP4DSDK](/map4d-map/ios/resources/4-polyline.png)
+  - ![MAP4DSDK](../../../../map4d-map/ios/resources/4-polyline.png)
 
     ```swift
       let path = MFMutablePath()
@@ -41,7 +41,7 @@ Lớp MFPolyline cho phép người dùng vẽ một Polyline lên map.
       polyline = MFPolyline(path)
     ```
   - Polyline với style: dotted
-   - ![MAP4DSDK](/map4d-map/ios/resources/4-polyline-dotted.png)
+   - ![MAP4DSDK](../../../../map4d-map/ios/resources/4-polyline-dotted.png)
       ```swift
         let path = MFMutablePath()
         path.add(CLLocationCoordinate2D(latitude: 16.036438, longitude: 108.218161))

@@ -86,7 +86,7 @@ public final class MFBuilding extends Annotation {
 
 ## 2. Tạo Building
 
-  -  ![MAP4DSDK](/map4d-map/android/resources/v1.4/user-building.png) 
+  -  ![MAP4DSDK](../../../../map4d-map/android/resources/v1.4/user-building.png) 
   
 ```java
      MFBuildingOptions buildingOptions = new MFBuildingOptions();

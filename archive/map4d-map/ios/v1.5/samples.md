@@ -47,4 +47,4 @@ MFServices.provideAccessKey("YOUR_API_KEY")
 
 7. Build & Run
 
-![Examples](/map4d-map/ios/resources/v1.5/demo-home.png)
+![Examples](../../../../map4d-map/ios/resources/v1.5/demo-home.png)

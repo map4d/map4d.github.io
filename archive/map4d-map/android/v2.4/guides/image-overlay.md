@@ -2,7 +2,7 @@
 
 Image Overlay là một loại overlay cho phép hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên Map4D.
 
-![CocoaPods](/map4d-map/android/resources/imageOverlay.png)
+![CocoaPods](../../../../../map4d-map/android/resources/imageOverlay.png)
 
 ## Thêm Image Overlay
 

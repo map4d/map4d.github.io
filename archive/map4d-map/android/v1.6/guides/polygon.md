@@ -81,7 +81,7 @@ trên bản đồ. Giá trị mặc định là **-1.0f**.
 
 ## 2. Tạo polygon
 
-![Polygon](/map4d-map/android/resources/v1.4/polygon.jpg)
+![Polygon](../../../../../map4d-map/android/resources/v1.4/polygon.jpg)
 
 > Tạo đối tượng polygon từ MFPolygonOptions
 
@@ -141,7 +141,7 @@ Như ví dụ trên thì chúng ta tạo một Polygon từ danh sách các đi�
 Ngoài ra chúng ta còn có thể tạo ra các Polygon có lỗ ở bên trong bằng cách thêm danh sách cái điểm tạo thành lỗ ở phía trong
 polygon.
 
-![Polygon](/map4d-map/android/resources/5-polygon-hole.png)
+![Polygon](../../../../../map4d-map/android/resources/5-polygon-hole.png)
 
 Ví dụ
 

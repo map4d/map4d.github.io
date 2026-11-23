@@ -55,7 +55,7 @@ public class MFBuildingOverlay extends MFLayerOverlay {
 
 ## 2. Tạo Building Overlay
 
-  -  ![MAP4DSDK](/map4d-map/android/resources/v1.4/building-overlay.png) 
+  -  ![MAP4DSDK](../../../../map4d-map/android/resources/v1.4/building-overlay.png) 
   
 ```java
     MFBuildingOverlayOptions buildingOverlayOptions = new MFBuildingOverlayOptions().buildingProvider(new MFBuildingProvider() {

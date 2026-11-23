@@ -2,7 +2,7 @@
 
 > **Marker** dùng để xác định một vị trí trên bản đồ, cho phép người dùng thêm một điểm ghim ở một vị trí xác định.
 
-![Marker](/map4d-map/flutter/resources/marker.png) 
+![Marker](../../../../../map4d-map/flutter/resources/marker.png) 
 
 ## MFMarker
 

@@ -6,7 +6,7 @@ ra còn cho phép người dùng loại bỏ việc hiển thị tile và các �
 
 Ground Overlay rất hữu ích khi bạn muốn sửa hình ảnh tại một số khu vực trên bản đồ.
 
-![CocoaPods](/map4d-map/android/resources/groundOverlay.png)
+![CocoaPods](../../../../../map4d-map/android/resources/groundOverlay.png)
 
 ## Add Ground Overlay
 

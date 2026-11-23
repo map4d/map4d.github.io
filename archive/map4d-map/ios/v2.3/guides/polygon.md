@@ -42,7 +42,7 @@ MFPolygon *polygon = [[MFPolygon alloc] init];
 
 <!-- tabs:end -->
 
-![Polygon](/map4d-map/ios/resources/v1.5/createPolygon.png) 
+![Polygon](../../../../../map4d-map/ios/resources/v1.5/createPolygon.png) 
 
 Bạn có thể tùy chỉnh hình dáng của **Polygon** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
 
@@ -94,7 +94,7 @@ polygon.strokeColor = .lightGray
 
 <!-- tabs:end -->
 
-![Polygon](/map4d-map/ios/resources/v1.5/customizePolygon.png) 
+![Polygon](../../../../../map4d-map/ios/resources/v1.5/customizePolygon.png) 
 
 ### 4. Polygon có hole
 
@@ -161,4 +161,4 @@ MFPolygon *polygon = [[MFPolygon alloc] init];
 
 <!-- tabs:end -->
 
-![Polygon](/map4d-map/ios/resources/v1.5/createPolygonHole.png) 
+![Polygon](../../../../../map4d-map/ios/resources/v1.5/createPolygonHole.png) 

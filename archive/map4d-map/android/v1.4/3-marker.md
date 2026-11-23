@@ -60,7 +60,7 @@ public final class MFMarker extends Annotation {
 
 ## 2. Tạo marker
 
-![CocoaPods](/map4d-map/android/resources/3-marker.png)
+![CocoaPods](../../../../map4d-map/android/resources/3-marker.png)
 
 ```java
 map4D.addMarker(new MFMarkerOptions().touchable(true).draggable(true)

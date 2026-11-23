@@ -21,7 +21,7 @@ Bạn có thể dễ dàng vẽ các hình tròn lên bản đồ.
 
 ### Thêm một Circle
 
-![Circle](/map4d-map/react-native/resources/circle.png)
+![Circle](../resources/circle.png)
 
 ```javascript
 render() {

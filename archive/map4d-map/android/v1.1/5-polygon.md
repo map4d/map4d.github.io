@@ -44,7 +44,7 @@ public class MFPolygon extends Annotation {
 
 ## 2. Tạo polygon
 
-![CocoaPods](/map4d-map/android/resources/5-polygon.png)
+![CocoaPods](../../../../map4d-map/android/resources/5-polygon.png)
 
 - Tạo đối tượng polygon từ PolygonOptions
 
@@ -77,7 +77,7 @@ Như ví dụ trên thì chúng ta tạo một Polygon từ danh sách các đi�
 Ngoài ra chúng ta còn có thể tạo ra các Polygon có lỗ ở bên trong bằng cách thêm danh sách cái điểm tạo thành lỗ ở phía trong
 polygon.
 
-![CocoaPods](/map4d-map/android/resources/5-polygon-hole.png)
+![CocoaPods](../../../../map4d-map/android/resources/5-polygon-hole.png)
 
 Ví dụ
 

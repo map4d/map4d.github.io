@@ -15,7 +15,7 @@ Map4D Web SDK  hiện cung cấp 2 loại bản đồ tùy chỉnh thông qua đ
 
 |                 ROADMAP                         | RASTER                                         |
 |:-----------------------------------------------:|:----------------------------------------------:|
-| ![MapType](/map4d-map/web/resources/maptype-roadmap.png) | ![MapType](/map4d-map/web/resources/maptype-raster.png) |
+| ![MapType](../../../../../map4d-map/web/resources/maptype-roadmap.png) | ![MapType](../../../../../map4d-map/web/resources/maptype-raster.png) |
 
 ### Thay đổi kiểu bản đồ
 

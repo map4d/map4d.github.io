@@ -4,7 +4,7 @@
 
 ## MFDirectionsRenderer
 
-![Directions Renderer](/map4d-map/react-native/resources/directions-renderer.png)
+![Directions Renderer](../../../../../map4d-map/react-native/resources/directions-renderer.png)
 
 Sử dụng:
 ```javascript

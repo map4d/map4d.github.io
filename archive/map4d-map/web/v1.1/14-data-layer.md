@@ -91,7 +91,7 @@ let features = this.map.data.addGeoJson(geojsonString)
 
 Với **geojsonString** là chuỗi json được cung cấp ở trên.
 
-![CocoaPods](/map4d-map/web/resources/14-data-layer-1.png) 
+![CocoaPods](../../../../map4d-map/web/resources/14-data-layer-1.png) 
 
 Lưu ý: Hiện tại data layer chỉ hỗ trợ các kiểu sau:
 1. Polygon
@@ -117,7 +117,7 @@ let properties = {stroke: "#ff0000"}
 let feature = this.map.data.add({id: 1, geometry: geometry, properties: properties})
 ```
 
-![CocoaPods](/map4d-map/web/resources/14-data-layer-2.png) 
+![CocoaPods](../../../../map4d-map/web/resources/14-data-layer-2.png) 
 
 map4d sdk cung cấp các kiểu dữ liệu geometry sau
 

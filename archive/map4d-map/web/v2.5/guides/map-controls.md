@@ -40,9 +40,9 @@ Dưới đây là bản đồ hiển thị bảng điều khiển nằm ở vị
 <iframe src="./html/map-controls.html" style="min-width: 1000px;" height="300px"></iframe>
 
 Các phần tử điều khiển được cung cấp sẵn của Map4D:
-- zoom: thay đổi mức zoom của map, gồm zoom in ![zoom-in](/map4d-map/web/resources/zoom-in.png) và zoom out ![zoom-out](/map4d-map/web/resources/zoom-out.png)
-- direction: hiển thị hướng của bản đồ đang hiển thị ![direct-ion](/map4d-map/web/resources/direct-icon.png)
-- geolocate: lấy vị trí hiện tại của người dùng ![location-icon](/map4d-map/web/resources/location-icon.png)
+- zoom: thay đổi mức zoom của map, gồm zoom in ![zoom-in](../../../../../map4d-map/web/resources/zoom-in.png) và zoom out ![zoom-out](../../../../../map4d-map/web/resources/zoom-out.png)
+- direction: hiển thị hướng của bản đồ đang hiển thị ![direct-ion](../../../../../map4d-map/web/resources/direct-icon.png)
+- geolocate: lấy vị trí hiện tại của người dùng ![location-icon](../../../../../map4d-map/web/resources/location-icon.png)
 
 ### Hiển thị bảng điều khiển trên bản đồ
 

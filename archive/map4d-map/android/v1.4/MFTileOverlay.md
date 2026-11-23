@@ -56,7 +56,7 @@ public interface MFTileProvider {
 
 ## 3. Tạo Tile Overlay
 
-  -  ![MAP4DSDK](/map4d-map/android/resources/v1.4/tile-overlay.jpg) 
+  -  ![MAP4DSDK](../../../../map4d-map/android/resources/v1.4/tile-overlay.jpg) 
   
 ```switf
   MFTileOverlayOptions tileOverlayOptions = new MFTileOverlayOptions().tileProvider(new MFTileProvider() {

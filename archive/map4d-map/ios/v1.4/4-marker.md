@@ -33,7 +33,7 @@ Lớp MFMarker cho phép người dùng vẽ một Marker lên map.
 
 ## 2. Tạo Marker 
 
-![MAP4DSDK](/map4d-map/ios/resources/v1.4/4-marker.png) 
+![MAP4DSDK](../../../../map4d-map/ios/resources/v1.4/4-marker.png) 
 - Tạo marker với position, title, snippet và cài đặt map cho nó như hình phía trên.
 
   ```swift

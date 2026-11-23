@@ -63,7 +63,7 @@ Lớp Circle cho phép người dùng vẽ một Circle lên map.
 
 Như ví dụ trên vẽ một hình tròn có bán kinh 100m lên bản đồ.
 
-![CocoaPods](/map4d-map/web/resources/8-circle-1.png)
+![CocoaPods](../../../../map4d-map/web/resources/8-circle-1.png)
 
 Ta có thể vẽ viền của đường tròn thông qua thuộc tính **strokeWidth** và **strokeColor**.
 **strokeWidth** sẽ quyết định kích thước của viền
@@ -83,7 +83,7 @@ Ta có thể vẽ viền của đường tròn thông qua thuộc tính **stroke
   circle.setMap(this.map)
 ```
 
-![CocoaPods](/map4d-map/web/resources/8-circle-2.png) 
+![CocoaPods](../../../../map4d-map/web/resources/8-circle-2.png) 
 
 ## 3. Xóa circle 
 

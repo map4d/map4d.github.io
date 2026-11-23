@@ -2,7 +2,7 @@
 
 > Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh lên một khu vực xác định trên bản đồ Map4D
 
-![Image Overlay](/map4d-map/flutter/resources/image-overlay.png)
+![Image Overlay](../../../../../map4d-map/flutter/resources/image-overlay.png)
 
 ## Add Image overlay
 

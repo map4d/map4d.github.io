@@ -33,7 +33,7 @@ Lớp MFBuilding cho phép người dùng vẽ một building lên map.
 
 ## 2. Tạo Building
 
-  -  ![MAP4DSDK](/map4d-map/ios/resources/v1.4/user-building.png) 
+  -  ![MAP4DSDK](../../../../map4d-map/ios/resources/v1.4/user-building.png) 
   
 ```swift
   let building = MFBuilding()

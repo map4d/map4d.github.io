@@ -43,7 +43,7 @@ Lớp TileArea cho phép người dùng thực hiện thay thế các tile tại
 
 Như ví dụ trên tất cả các tile nào nằm trong bounds sẽ được thay thế bằng tile được download từ http://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png
 
-![CocoaPods](/map4d-map/web/resources/10-tile-area-1.png) 
+![CocoaPods](../../../../map4d-map/web/resources/10-tile-area-1.png) 
 
 ## 3. Xóa tile area 
 

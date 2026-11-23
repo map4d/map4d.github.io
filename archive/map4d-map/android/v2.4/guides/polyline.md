@@ -5,7 +5,7 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
 
 ### 1. Tạo polyline
 
-![Polyline](/map4d-map/android/resources/4-polyline.png)
+![Polyline](../../../../../map4d-map/android/resources/4-polyline.png)
 
 > Tạo đối tượng polyline từ **MFPolylineOptions**
 
@@ -88,7 +88,7 @@ Ví dụ bên dưới chúng ta sẽ sử dụng pattern `MFDashPattern` cho Pol
 
 - **Result**: 
 
-![Polyline](/map4d-map/android/resources/4-polyline-dotted.jpg)
+![Polyline](../../../../../map4d-map/android/resources/4-polyline-dotted.jpg)
 
 Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 
@@ -130,7 +130,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 
 - **Result**
 
-![Polyline](/map4d-map/android/resources/4-polyline_dotpattern.png)
+![Polyline](../../../../../map4d-map/android/resources/4-polyline_dotpattern.png)
 
 - Với `MFIconPattern` chúng ta sử dụng như sau:
 
@@ -176,7 +176,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 
 - **Result**
 
-![Polyline](/map4d-map/android/resources/4-polyline_iconpattern.png)
+![Polyline](../../../../../map4d-map/android/resources/4-polyline_iconpattern.png)
 
 ### 2. Xóa Polyline
 

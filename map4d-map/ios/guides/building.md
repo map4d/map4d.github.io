@@ -36,7 +36,7 @@ MFBuilding *building = [[MFBuilding alloc] init];
 
 <!-- tabs:end -->
 
--  ![Building](/map4d-map/ios/resources/v1.5/createBuilding.png) 
+-  ![Building](../resources/v1.5/createBuilding.png) 
 
 
 ### 2. Xóa Building khỏi bản đồ
@@ -95,4 +95,4 @@ building.texture = "https://sw-hcm-1.vinadata.vn/v1/AUTH_4486f66f671c41bab0d3dea
 
 <!-- tabs:end -->
 
--  ![Building](/map4d-map/ios/resources/v1.5/customizeBuilding.png) 
+-  ![Building](../resources/v1.5/customizeBuilding.png) 

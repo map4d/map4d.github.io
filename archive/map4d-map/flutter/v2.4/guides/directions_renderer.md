@@ -2,7 +2,7 @@
 
 > Map4dMap Flutter SDK cung cấp lớp **MFDirectionsRenderer** để dễ dàng hiển thị các chỉ đường lên bản đồ.
 
-![Directions Renderer](/map4d-map/flutter/resources/directions-renderer.png)
+![Directions Renderer](../../../../../map4d-map/flutter/resources/directions-renderer.png)
 
 ## MFDirectionsRenderer
 

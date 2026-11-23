@@ -25,7 +25,7 @@ Lớp MFGroundOverlay cho phép người dùng vẽ raster tile chồng lên map
 
 ## 2. Tạo Ground Overlay
 
-  -  ![MAP4DSDK](/map4d-map/ios/resources/v1.4/ground-overlay.png) 
+  -  ![MAP4DSDK](../../../../map4d-map/ios/resources/v1.4/ground-overlay.png) 
   
 ```swift
     let bounds = MFCoordinateBounds(coordinate: CLLocationCoordinate2DMake(16.057814922971613, 108.22065353393553),
