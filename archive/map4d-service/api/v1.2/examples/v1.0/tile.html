@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+
+<body class="bodyrange">
+<p>Key (*):<input class="input" id="inputKey" placeholder="Nhập key"/></p>
+<p>Z (*): <input class="input" id="inputZ" placeholder="Nhập mức zoom"></p>
+<p>X (*): <input class="input" id="inputX" placeholder="Nhập giá trị X"></p>
+<p>Y (*): <input class="input" id="inputY" placeholder="Nhập giá trị Y"></p>
+<p>Model (*): <select  class="input" id="inputModel">
+    <option value="2d">2d</option>
+    <option value="3d">3d</option>
+</select></p>
+<p><button onclick="autoSuggest_Run();">Submit</button></p>
+<pre id="displayResult"></pre>
+
+<script src="../js/jquery-3.4.1.min.js"></script>
+<script>
+    var displayResult = document.getElementById("displayResult");
+    function autoSuggest_Run() {
+        var key= document.getElementById("inputKey").value;
+        var inputZ = document.getElementById("inputZ").value;
+        var inputX = document.getElementById("inputX").value;
+        var inputY = document.getElementById("inputY").value;
+        var inputModel = document.getElementById("inputModel");
+        let selectedModel = inputModel.options[inputModel.selectedIndex].value;
+        
+        if ( key=="" || key==null || inputX=="" || inputX==null || inputY=="" || inputY==null|| inputZ=="" || inputZ==null){
+            displayResult.innerHTML = "(*) là bắt buộc";
+            return;
+        }
+        $.getJSON('https://api.map4d.vn/sdk/tile/raster/'+inputZ+'/'+inputX+'/'+inputY+ '?key='+key+'&model='+ selectedModel, function(data) {
+            displayResult.innerHTML = data;
+        })
+    }
+
+</script>
+
+</body>
+</html>
