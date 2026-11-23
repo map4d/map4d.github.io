@@ -2,13 +2,13 @@
 
 `MFTravelMode` enum
 
-```objc
-typedef NS_ENUM(NSUInteger, MFTravelMode) {
-  MFTravelModeCar,
-  MFTravelModeBike,
-  MFTravelModeFoot,
-  MFTravelModeMotorcycle
-};
+```swift
+enum MFTravelMode: UInt {
+    case car
+    case bike
+    case foot
+    case motorcycle
+}
 ```
 
 Định nghĩa các phương thức di chuyển được hỗ trợ:

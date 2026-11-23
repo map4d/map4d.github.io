@@ -6,62 +6,62 @@
 
 #### MFDirectionsCallback :id=api-directions-service-mfdirectionscallback
 
-```objc
-typedef void(^MFDirectionsCallback)(id<MFDirectionsResult> _Nullable result, id<MFServiceError> _Nullable error);
+```swift
+typealias MFDirectionsCallback = (MFDirectionsResult?, MFServiceError?) -> Void
 ```
 
 #### MFDistanceMatrixCallback :id=api-directions-service-mfdistancematrixcallback
 
-```objc
-typedef void(^MFDistanceMatrixCallback)(id<MFDistanceMatrixResult> _Nullable result, id<MFServiceError> _Nullable error);
+```swift
+typealias MFDistanceMatrixCallback = (MFDistanceMatrixResult?, MFServiceError?) -> Void
 ```
 
 #### MFGraphRouteCallback :id=api-directions-service-mfgraphroutecallback
 
-```objc
-typedef void(^MFGraphRouteCallback)(NSArray<id<MFGraphRouteResult>> *_Nullable results, id<MFServiceError> _Nullable error);
+```swift
+typealias MFGraphRouteCallback = ([MFGraphRouteResult]?, MFServiceError?) -> Void
 ```
 
 #### MFRouteETACallback :id=api-directions-service-mfrouteetacallback
 
-```objc
-typedef void(^MFRouteETACallback)(NSArray<id<MFRouteETAResult>> *_Nullable results, id<MFServiceError> _Nullable error);
+```swift
+typealias MFRouteETACallback = ([MFRouteETAResult]?, MFServiceError?) -> Void
 ```
 
 ### Public Member Functions :id=api-directions-service-public-member-functions
 
 #### fetchDirectionsWithParams: completionHandler: :id=api-directions-service-fetchdirectionswithparams-completionhandler
 
-```objc
-- (id<MFServiceTask>)fetchDirectionsWithParams:(MFDirectionsParams *)params
-                             completionHandler:(MFDirectionsCallback)completionHandler;
+```swift
+func fetchDirections(with params: MFDirectionsParams,
+                     completionHandler: @escaping MFDirectionsCallback) -> MFServiceTask
 ```
 
 Tìm kiếm chỉ đường giữa các địa điểm.
 
 #### fetchRouteETAWithParams: completionHandler: :id=api-directions-service-fetchrouteetawithparams-completionhandler
 
-```objc
-- (id<MFServiceTask>)fetchRouteETAWithParams:(MFRouteETAParams *)params
-                           completionHandler:(MFRouteETACallback)completionHandler;
+```swift
+func fetchRouteETA(with params: MFRouteETAParams,
+                   completionHandler: @escaping MFRouteETACallback) -> MFServiceTask
 ```
 
 Tính toán thời gian di chuyển giữa các địa điểm.
 
 #### fetchDistanceMatrixWithParams: completionHandler: :id=api-directions-service-fetchdistancematrixwithparams-completionhandler
 
-```objc
-- (id<MFServiceTask>)fetchDistanceMatrixWithParams:(MFDistanceMatrixParams *)params
-                                 completionHandler:(MFDistanceMatrixCallback)completionHandler;
+```swift
+func fetchDistanceMatrix(with params: MFDistanceMatrixParams,
+                         completionHandler: @escaping MFDistanceMatrixCallback) -> MFServiceTask
 ```
 
 Tính toán ma trận khoảng cách giữa các địa điểm.
 
 #### fetchGraphRouteWithParams: completionHandler: :id=api-directions-service-fetchgraphroutewithparams-completionhandler
 
-```objc
-- (id<MFServiceTask>)fetchGraphRouteWithParams:(MFGraphRouteParams *)params
-                             completionHandler:(MFGraphRouteCallback)completionHandler;
+```swift
+func fetchGraphRoute(with params: MFGraphRouteParams,
+                     completionHandler: @escaping MFGraphRouteCallback) -> MFServiceTask
 ```
 
 Tính toán biểu đồ giữa các địa điểm.

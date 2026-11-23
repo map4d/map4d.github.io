@@ -15,8 +15,6 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_geocode_
 
 ### Example
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let params = MFGeocodeParams(location: MFLocationComponent(latitude: 16.024634, longitude: 108.209217))
 let service = MFPlacesService()
@@ -30,22 +28,6 @@ service.geocoding(with: params) { results, error in
 }
 ```
 
-#### ** Objective-C **
-```objc
-MFGeocodeParams *params = [[MFGeocodeParams alloc] initWithAddress:@"271 Tran Hung Dao, Da Nang"];
-MFPlacesService* service = [[MFPlacesService alloc] init];
-[service geocodingWithParams:params completionHandler:^(NSArray<id<MFGeocodeResult>> * _Nullable results, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"Error code: %@, message: %@", error.code, error.message);
-  }
-  
-  if (results != nil) {
-    NSLog(@"Results count: %lu", results.count);
-  }
-}];
-```
-<!-- tabs:end -->
-
 ---
 
 ## Geocode Params :id=api-geocode-params
@@ -56,16 +38,16 @@ MFPlacesService* service = [[MFPlacesService alloc] init];
 
 ##### initWithLocation: :id=api-geocode-params-initwithlocation
 
-```objc
-- (instancetype)initWithLocation:(MFLocationComponent *)location;
+```swift
+init(location: MFLocationComponent)
 ```
 
 Tạo đối tượng `MFGeocodeParams` với địa điểm.
 
 ##### initWithAddress: :id=api-geocode-params-initwithaddress
 
-```objc
-- (instancetype)initWithAddress:(NSString *)address;
+```swift
+init(address: String)
 ```
 
 Tạo đối tượng `MFDirectionsParams` với địa chỉ.

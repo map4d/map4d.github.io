@@ -21,18 +21,7 @@ Map4D Map SDK hiện cung cấp 3 loại bản đồ tùy chỉnh:
 Để thay đổi loại bản đồ, ta gán một giá trị cho property `mapType` của class [MFMapView](/guides/map.md?id=api-map-mfmapview)  
 Ví dụ: để hiển thị bản đồ dạng kết hợp ảnh vệ tinh và thông tin đường sá:
 
-<!-- tabs:start -->
-
-#### ** Swift **
-
 ```swift 
 mapView.mapType = .hybrid
 ```
 
-#### ** Objective C **
-
-```objc 
-mapView.mapType = MFMapTypeHybrid;
-```
-
-<!-- tabs:end -->

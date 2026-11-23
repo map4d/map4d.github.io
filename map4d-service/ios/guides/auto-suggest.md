@@ -15,8 +15,6 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_autosugg
 
 ### Example
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let params = MFSuggestionParams(text: "Đà Nẵng")
 let service = MFPlacesService()
@@ -30,23 +28,6 @@ service.fetchSuggestion(with: params) { results, error in
 }
 ```
 
-#### ** Objective-C **
-```objc
-MFSuggestionParams* params = [[MFSuggestionParams alloc] initWithText:text location:location];
-MFPlacesService* service = [[MFPlacesService alloc] init];
-[service fetchSuggestionWithParams:params
-                 completionHandler:^(NSArray<id<MFSuggestionResult>> * _Nullable results, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"Error code: %@, message: %@", error.code, error.message);
-  }
-  
-  if (results != nil) {
-    NSLog(@"Results count: %lu", results.count);
-  }
-}];
-```
-<!-- tabs:end -->
-
 ---
 
 ## Suggestion Params :id=api-suggestion-params
@@ -57,31 +38,31 @@ MFPlacesService* service = [[MFPlacesService alloc] init];
 
 ##### initWithText: :id=api-suggestion-params-initwithtext
 
-```objc
-- (instancetype)initWithText:(NSString *)text;
+```swift
+init(text: String)
 ```
 
 Tạo đối tượng `MFSuggestionParams` với từ khóa tìm kiếm,.
 
 ##### initWithText: location: :id=api-suggestion-params-initwithtext-location
 
-```objc
-- (instancetype)initWithText:(NSString *)text location:(MFLocationComponent *)location;
+```swift
+init(text: String, location: MFLocationComponent)
 ```
 
 Tạo đối tượng `MFSuggestionParams` với từ khóa tìm kiếm, vị trí ưu tiên tìm kiếm.
 
 ##### initWithText: acronym: :id=api-suggestion-params-initwithtext-acronym
 
-```objc
-- (instancetype)initWithText:(NSString *)text acronym:(BOOL)acronym;
+```swift
+init(text: String, acronym: Bool)
 ```
 Tạo đối tượng `MFSuggestionParams` với từ khóa tìm kiếm và xác định từ khóa có phải từ viết tắt.
 
 ##### initWithText: location: acronym: :id=api-suggestion-params-initwithtext-location-acronym
 
-```objc
-- (instancetype)initWithText:(NSString *)text location:(MFLocationComponent *)location acronym:(BOOL)acronym;
+```swift
+init(text: String, location: MFLocationComponent, acronym: Bool)
 ```
 
 Tạo đối tượng `MFSuggestionParams` với từ khóa tìm kiếm, vị trí ưu tiên tìm kiếm và xác định từ khóa có phải từ viết tắt.

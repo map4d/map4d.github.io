@@ -15,8 +15,6 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_text_sea
 
 ### Example
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let params = MFTextSearchParams(text: "Vietcombank")
 let service = MFPlacesService()
@@ -30,22 +28,6 @@ service.searchText(with: params) { results, error in
 }
 ```
 
-#### ** Objective-C **
-```objc
-MFTextSearchParams *params = [[MFTextSearchParams alloc] initWithText:@"Vietcombank"];
-MFPlacesService* service = [[MFPlacesService alloc] init];
-[service searchTextWithParams:params completionHandler:^(NSArray<id<MFPlaceResult>> * _Nullable results, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"Error code: %@, message: %@", error.code, error.message);
-  }
-  
-  if (results != nil) {
-    NSLog(@"Results count: %lu", results.count);
-  }
-}];
-```
-<!-- tabs:end -->
-
 ---
 
 ## Text Search Params :id=api-text-search-params
@@ -56,8 +38,8 @@ MFPlacesService* service = [[MFPlacesService alloc] init];
 
 ##### initWithText: :id=api-text-search-params-initwithtext
 
-```objc
-- (instancetype)initWithText:(NSString *)text;
+```swift
+init(text: String)
 ```
 
 Tạo đối tượng `MFTextSearchParams` với text tìm kiếm.

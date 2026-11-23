@@ -9,10 +9,6 @@ những điểm có sẵn đó thì bạn có thể dùng lớp **MFPOI**. Các 
 
 Chúng ta thử tạo **POI** như sau:
 
-<!-- tabs:start -->
-
-#### ** Swift **
-
 ```swift 
 let poi = MFPOI()
 poi.position = CLLocationCoordinate2D(latitude: 16.071575666602996, longitude: 108.22781709595301)
@@ -23,40 +19,15 @@ poi.color = red
 poi.map = mapView
 ```
 
-#### ** Objective C **
-
-```objc 
-MFPOI *poi = [[MFPOI alloc] init];
-[poi setPosition:CLLocationCoordinate2DMake(16.071575666602996, 108.22781709595301)];
-[poi setTitle: @"Map4D Cafe"];
-[poi setZIndex: 1];
-[poi setType: @"cafe"];
-[poi setColor: [UIColor redColor]];
-[poi setMap: mapView];
-```
-
-<!-- tabs:end -->
-
 ![POI](../resources/v1.5/createPOI.png) 
-
 
 ### 2. Xóa POI khỏi bản đồ
 
 Để xóa **POI** khỏi bản đồ, chúng ta **set** thuộc tính **map** bằng **nil**
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 poi.map = nil
 ```
-
-#### ** Objective C **
-
-```objc 
-[poi setMap: Nil];
-```
-<!-- tabs:end -->
 
 Nếu bạn muốn quản lý một danh sách các **POI**, bạn nên tạo một **mảng** để chứa các **POI** đó. 
 
@@ -66,7 +37,6 @@ Sử dụng mảng này bạn có thể  **set** lần lượt thuộc tính **m
 
 Bạn có thể dễ dàng tuỳ chỉnh **POI** thông qua các thuộc tính mà **MFPOI** cung cấp như:
 
-  
 | Name                       |Description                                                                                                                                       |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | **position**               | Tuỳ chỉnh vị trí của **POI** được vẽ trên bản đồ                                                                                                 |
@@ -83,25 +53,11 @@ Bạn có thể dễ dàng tuỳ chỉnh **POI** thông qua các thuộc tính m
     + ***Sử dụng 1 hình ảnh làm icon dùng hàm setIcon***
     + ***Set type cho POI***
 
-<!-- tabs:start -->
-
-#### ** Swift **
-
 ```swift 
 poi.title = "ATM Vietcombank"
 poi.type = "atm"
 poi.color = .blue
 ```
-
-#### ** Objective C **
-
-```objc 
-[poi setTitle: @"ATM Vietcombank"];
-[poi setType: @"atm"];
-[poi setColor: [UIColor blueColor]];
-```
-
-<!-- tabs:end -->
 
 ![POI](../resources/v1.5/customizePOI.png)
 
@@ -113,21 +69,9 @@ poi.color = .blue
 
 #### 1 Constructor :id=api-poi-_1-constructor
 
-
-<!-- tabs:start -->
-#### ** Swift ** :id=api-poi-swift-
-
 ```swift 
 let poi = MFPOI()
 ```
-
-#### ** Objective C ** :id=api-poi-objective-c-
-
-```objc 
-MFPOI *poi = [[MFPOI alloc] init];
-```
-
-<!-- tabs:end -->
 
 ##### Properties :id=api-poi-properties
 
@@ -151,7 +95,6 @@ MFPOI *poi = [[MFPOI alloc] init];
 
 **Ghi chú:** Hiện tại Map4D hỗ trợ cái kiểu sau: **point**, **cafe**, **bus_station**, **electronics**, **shop**, **bakery**, **fuel**, **restaurant**, **police**, **payment_centre**, **museum**, **university**, **school**, **airport**, **bank**, **clothes**, **motel**, **insurance**, **furniture**, **atm**, **hospital**, **bar**, **books**, **theatre**, **car**, **goverment**, **townhall**, **apartment**, **park**, **stadium**, **nightclub**. Kiểu mặc định sẽ là **point**.
 
-
 ##### Delegate :id=api-poi-delegate
 
   > **Chú ý**: Để sử dụng các sự kiện của **POI** phải **set** thuộc tính **userInteractionEnabled** = **true**
@@ -161,18 +104,7 @@ MFPOI *poi = [[MFPOI alloc] init];
   Phát sinh khi người dùng **touch** vào **POI**
   </br>Cung cấp thông tin của **POI** cho người dùng
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift 
   func mapView(_ mapView: MFMapView!, didTap poi: MFPOI!) {}
     ```
 
-  #### ** Objective C **
-
-  ```objc 
-  - (void)mapView: (MFMapView*)  mapView didTapPOI: (MFPOI*) poi{}
-  ```
-
-  <!-- tabs:end -->

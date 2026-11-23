@@ -19,8 +19,6 @@ Trong đó:
 
 Đoạn code bên dưới hướng dẫn cách implement [MFBuildingURLConstructor](/guides/building-overlay.md?id=api-building-overlay-mfbuildingurlconstructor-protocol) và tạo đối tượng [MFURLBuildingLayer](/guides/building-overlay.md?id=api-building-overlay-mfurlbuildinglayer-class)
 
-<!-- tabs:start -->
-#### ** Swift **
 Implement **MFBuildingURLConstructor**
 ```swift
 class BuildingURLConstructor : NSObject, MFBuildingURLConstructor {
@@ -60,142 +58,39 @@ Tạo đối tượng **MFURLBuildingLayer**
 let urlConstructor = BuildingURLConstructor()
 let buildingOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor, prefixId: "building-layer-")
 ```
-#### ** Objective-C **
-Implement **MFBuildingURLConstructor**
-```objc
-#import <Map4dMap/Map4dMap.h>
-@interface BuildingURLConstructor : NSObject <MFBuildingURLConstructor>
-@end
-
-@implementation BuildingURLConstructor
-
-- (NSURL * _Nullable)getBuildingUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom {
-  NSString *url = [NSString stringWithFormat:@"https://poi-random.herokuapp.com/poi/%lu/%lu/%lu", zoom, x, y];
-  return [NSURL URLWithString:url];
-}
-
-- (NSArray<MFBuildingData *> * _Nullable)parserBuildingData:(NSString * _Nonnull)data {
-  @try {
-    NSData* jsonData = [data dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *jsonError;
-    NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&jsonError];
-    
-    if (jsonObject != nil) {
-      NSArray *places = [jsonObject valueForKey:@"pois"];
-
-      if (places != nil && places.count > 0) {
-        NSMutableArray *buildingDatas = [[NSMutableArray alloc] init];
-        
-        for (int i = 0; i < places.count; i++) {
-          NSDictionary *place = [places objectAtIndex:i];
-          if (place == nil) {
-            continue;
-          }
-          
-          NSString *placeId = [place valueForKey:@"id"];
-          NSString *title = [place valueForKey:@"title"];
-          NSDictionary *positionObject = [place valueForKey:@"position"];
-          if (placeId == nil || title == nil || positionObject == nil) {
-            continue;
-          }
-          
-          NSNumber *latObject = [positionObject valueForKey:@"lat"];
-          NSNumber *lngObject = [positionObject valueForKey:@"lng"];
-          if (latObject == nil || lngObject == nil) {
-            continue;
-          }
-          
-          MFBuildingData *buildingData = [[MFBuildingData alloc] init];
-          buildingData.id = placeId;
-          buildingData.name = title;
-          buildingData.position = CLLocationCoordinate2DMake(latObject.doubleValue, lngObject.doubleValue);
-          buildingData.model = @"https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/models/5db6b4798b4711141457d8a9.obj";
-          buildingData.texture = @"https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/textures/5db6b4798b4711141457d8ab.jpg";
-          [buildingDatas addObject:buildingData];
-          break;
-        }
-        
-        return buildingDatas;
-      }
-    }
-
-    return nil;
-  }
-  @catch (NSException *exception) {
-    return nil;
-  }
-}
-
-@end
-```
-
-Tạo đối tượng **MFURLBuildingLayer**
-```objc
-BuildingURLConstructor *urlConstructor = [[BuildingURLConstructor alloc] init];
-MFURLBuildingLayer *buildingOverlay = [MFURLBuildingLayer buildingLayerWithURLConstructor:urlConstructor prefixId:@"building-"];
-```
-<!-- tabs:end -->
 
 ### Add Building overlay lên Map
 
 Để vẽ building overlay lên map, ta set map view cho property `map` của đối tượng **MFURLBuildingLayer**
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 buildingOverlay.map = mapView
 ```
-#### ** Objective-C **
-```objc
-buildingOverlay.map = self.mapView;
-```
-<!-- tabs:end -->
 
 ### Remove Building overlay
 
 Để xóa building overlay khỏi map, ta set property `map` của đối tượng **MFURLBuildingLayer** thành `nil`
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 buildingOverlay.map = nil
 ```
-#### ** Objective-C **
-```objc
-buildingOverlay.map = nil;
-```
-<!-- tabs:end -->
 
 ### Ẩn/Hiện Building Overlay
 
 Set giá trị cho property `isHidden` để ẩn/hiện building overlay.  
 **Chú ý**: Mặc dù building overlay không hiển thị nhưng quá trình tải các building vẫn diễn ra
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 buildingOverlay.isHidden = true
 ```
-#### ** Objective-C **
-```objc
-buildingOverlay.isHidden = YES;
-```
-<!-- tabs:end -->
 
 ## Sự kiện đối với building thuộc building overlay
 
 Các sự kiện đối với building thuộc building overlay phát sinh tương tự với building của Map4D, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của Map4D.
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 func mapView(_ mapView: MFMapView!, didTapBuildingWithBuildingID buildingID: String!, name: String!, location: CLLocationCoordinate2D)
 ```
-#### ** Objective-C **
-```objc
-- (void)mapView: (MFMapView*)  mapView didTapBuildingWithBuildingID: (NSString*) buildingID name: (NSString*) name location: (CLLocationCoordinate2D) location;
-```
-<!-- tabs:end -->
 
 ---
 
@@ -207,9 +102,9 @@ func mapView(_ mapView: MFMapView!, didTapBuildingWithBuildingID buildingID: Str
 **Constructor** 
 
 Lớp `MFURLBuildingLayer` cung cấp một số phương thức static để tạo đối tượng *MFURLBuildingLayer* một cách tiện lợi
-```objc
-+ (instancetype _Nonnull) buildingLayerWithURLConstructor:(id<MFBuildingURLConstructor> _Nonnull)constructor;
-+ (instancetype _Nonnull) buildingLayerWithURLConstructor:(id<MFBuildingURLConstructor> _Nonnull)constructor prefixId:(NSString* _Nullable)prefixId;
+```swift
+convenience init(urlConstructor: MFBuildingURLConstructor)
+convenience init(urlConstructor: MFBuildingURLConstructor, prefixId: String?)
 ```
 
 - Parameters:
@@ -217,16 +112,10 @@ Lớp `MFURLBuildingLayer` cung cấp một số phương thức static để t�
   - prefixId: [NSString](https://developer.apple.com/documentation/foundation/nsstring)
 
 Sử dụng
-<!-- tabs:start -->
-#### ** Swift ** :id=api-building-overlay-swift-
+
 ```swift
 let buildingOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor, prefixId: "building-layer-")
 ```
-#### ** Objective-C ** :id=api-building-overlay-objective-c-
-```objc
-MFURLBuildingLayer *buildingOverlay = [MFURLBuildingLayer buildingLayerWithURLConstructor:urlConstructor prefixId:@"building-"];
-```
-<!-- tabs:end -->
 
 **Methods**
 
@@ -247,9 +136,9 @@ MFURLBuildingLayer *buildingOverlay = [MFURLBuildingLayer buildingLayerWithURLCo
 
 MFBuildingURLConstructor là một protocol, định nghĩa sẵn 2 phương thức dùng để xác định URL api lấy dữ liệu building và xử lý parser data được lấy từ api.
 
-```objc
-- (NSURL* _Nullable) getBuildingUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom;
-- (NSArray<MFBuildingData*>* _Nullable) parserBuildingData:(NSString* _Nonnull)data;
+```swift
+func getBuildingUrlWith(x: UInt, y: UInt, zoom: UInt) -> URL?
+func parserBuildingData(_ data: String) -> [MFBuildingData]?
 ```
 
 Cần phải implement protocol này trước khi tạo đối tượng `MFURLBuildingLayer`

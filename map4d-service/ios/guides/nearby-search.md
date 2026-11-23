@@ -15,8 +15,6 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_nearby_s
 
 ### Example
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let params = MFNearbySearchParams(location: MFLocationComponent(latitude: 16.036461, longitude: 108.218159), radius: 500, text: "coffe")
 let service = MFPlacesService()
@@ -30,23 +28,6 @@ service.searchNearby(with: params) { results, error in
 }
 ```
 
-#### ** Objective-C **
-```objc
-MFLocationComponent *location = [[MFLocationComponent alloc] initWithCoordinate:CLLocationCoordinate2DMake(16.036461,108.218159)];
-MFNearbySearchParams *params = [[MFNearbySearchParams alloc] initWithLocation:location radius:5000 text:@"abc"];
-MFPlacesService* service = [[MFPlacesService alloc] init];
-[service searchNearbyWithParams:params completionHandler:^(NSArray<id<MFPlaceResult>> * _Nullable results, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"Error code: %@, message: %@", error.code, error.message);
-  }
-  
-  if (results != nil) {
-    NSLog(@"Results count: %lu", results.count);
-  }
-}];
-```
-<!-- tabs:end -->
-
 ---
 
 ## Nearby Search Params :id=api-nearby-search-params
@@ -57,24 +38,24 @@ MFPlacesService* service = [[MFPlacesService alloc] init];
 
 ##### initWithLocation: radius: text: :id=api-nearby-search-params-initwithlocation-radius-text
 
-```objc
-- (instancetype)initWithLocation:(MFLocationComponent *)location radius:(NSUInteger)radius text:(NSString *)text;
+```swift
+init(location: MFLocationComponent, radius: UInt, text: String)
 ```
 
 Tạo đối tượng `MFNearbySearchParams` với địa điểm, bán kính và text.
 
 ##### initWithLocation: radius: types: :id=api-nearby-search-params-initwithlocation-radius-types
 
-```objc
-- (instancetype)initWithLocation:(MFLocationComponent *)location radius:(NSUInteger)radius types:(NSArray<NSString *> *)types;
+```swift
+init(location: MFLocationComponent, radius: UInt, types: [String])
 ```
 
 Tạo đối tượng `MFNearbySearchParams` với địa điểm, bán kính và types.
 
 ##### initWithLocation: radius: tags: :id=api-nearby-search-params-initwithlocation-radius-tags
 
-```objc
-- (instancetype)initWithLocation:(MFLocationComponent *)location radius:(NSUInteger)radius tags:(NSArray<NSString *> *)tags;
+```swift
+init(location: MFLocationComponent, radius: UInt, tags: [String])
 ```
 
 Tạo đối tượng `MFNearbySearchParams` với địa điểm, bán kính và tags.

@@ -31,26 +31,13 @@ pod 'Map4dServices'
 
 2. Import
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 import Map4dServices
 ```
 
-#### ** Objective C **
-
-```objc
-#import <Map4dServices/Map4dServices.h>
-```
-<!-- tabs:end -->
-
 ## Example
 
 Get place detail
-
-<!-- tabs:start -->
-#### ** Swift **
 
 ```swift
 let service = MFPlacesService()
@@ -63,17 +50,3 @@ service.fetchPlaceDetail(withPlaceId: "60dd3850f81cb14bc880ed52") { result, erro
 }
 ```
 
-#### ** Objective C **
-
-```objc
-MFPlacesService* service = [[MFPlacesService alloc] init];
-[service fetchPlaceDetailWithPlaceId:placeId completionHandler:^(id<MFPlaceDetailResult> _Nullable result, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"code: %@, message: %@", error.code, error.message);
-  }
-  else {
-    NSLog(@"name: %@", result.name);
-  }
-}];
-```
-<!-- tabs:end -->

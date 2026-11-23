@@ -4,21 +4,10 @@
 
 ### 1. Constructor  :id=api-map-_1-constructor
 
-<!-- tabs:start -->
-#### ** Swift ** :id=api-map-swift-
-
 ```swift
 let mapView = MFMapView(frame: self.view.frame)
 let mapView = MFMapView(frame: self.view.frame, mapID: MFMapID(identifier: "map_id"))
 ```
-
-#### ** Objective C ** :id=api-map-objective-c-
-
-```objc
-MFMapView *mapView = [[MFMapView alloc] initWithFrame:self.view.frame];
-MFMapView *mapView = [[MFMapView alloc] initWithFrame:self.view.frame identifier:[MFMapID mapIDWithIdentifier:@"map_id"]];
-```
-<!-- tabs:end -->
 
 ### 2. Properties :id=api-map-_2-properties
 
@@ -30,7 +19,6 @@ MFMapView *mapView = [[MFMapView alloc] initWithFrame:self.view.frame identifier
 | **settings**               | [MFUISettings](/guides/map.md?id=api-map-mfuisettings)                                  |
 | **mapType**                | [MFMapType](/guides/map.md?id=api-map-mfmaptype)                                  |
 | **nativeScale**            | CGFloat                                                                         |
-
 
 ### 3. Methods :id=api-map-_3-methods
 
@@ -62,25 +50,12 @@ MFMapView *mapView = [[MFMapView alloc] initWithFrame:self.view.frame identifier
 
 #### 1. Constructor  :id=api-map-_1-constructor-1
 
-<!-- tabs:start -->
-#### ** Swift ** :id=api-map-swift-1
-
 ```swift
 init(target: CLLocationCoordinate2D, zoom: Double) {}
 init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double) {}
 init(target: CLLocationCoordinate2D, zoom: Double, bearing: Double) {}
 init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double) {}
 ```
-
-#### ** Objective C ** :id=api-map-objective-c-1
-
-```objc  
-- (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
-- (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt ;
-- (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (double) bearing;
-- (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (double) bearing;
-```
-<!-- tabs:end -->
 
 #### 2. Properties :id=api-map-_2-properties-1
 
@@ -95,9 +70,6 @@ init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double
 
 #### Public static member functions  :id=api-map-public-static-member-functions
 
-<!-- tabs:start -->
-#### ** Swift ** :id=api-map-swift-2
-
 ```swift
 class func fit(_ bounds: MFCoordinateBounds?) -> MFCameraUpdate? {}
 class func fit(_ bounds: MFCoordinateBounds?, with edgeInsets: UIEdgeInsets) -> MFCameraUpdate? {}
@@ -108,20 +80,6 @@ class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, bearing: Do
 class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double) -> MFCameraUpdate? {}
 class func setCamera(_ camera: MFCameraPosition?) -> MFCameraUpdate? {}
 ```
-
-#### ** Objective C ** :id=api-map-objective-c-2
-
-```objc  
-+ (MFCameraUpdate *) fitBounds: (MFCoordinateBounds *) _bounds;
-+ (MFCameraUpdate *) fitBounds:(MFCoordinateBounds *) _bounds withEdgeInsets:(UIEdgeInsets) _edgeInsets;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (double) bearing;
-+ (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (double) bearing;
-+ (MFCameraUpdate *)setCamera:(MFCameraPosition *) camera;
-```
-<!-- tabs:end -->
 
 ### MFUISettings :id=api-map-mfuisettings
 
@@ -157,7 +115,7 @@ class func setCamera(_ camera: MFCameraPosition?) -> MFCameraUpdate? {}
 
 #### Public static member functions :id=api-map-public-static-member-functions-1
 
-```objc
-/** Creates a new mapID with the given string value. */
-+ (instancetype)mapIDWithIdentifier:(NSString *)identifier NS_SWIFT_UNAVAILABLE("Use initializer instead");
+```swift
+// Creates a new map ID with the given string value.
+init(identifier: String)
 ```

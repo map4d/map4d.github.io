@@ -15,8 +15,6 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_viewbox_
 
 ### Example
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let viewbox = MFViewboxComponent(southwest: CLLocationCoordinate2DMake(16.056453967981348,108.19387435913086),
                                  northeast: CLLocationCoordinate2DMake(16.093031550262133,108.25927734375))
@@ -33,25 +31,6 @@ service.searchViewbox(with: params) { results, error in
 }
 ```
 
-#### ** Objective-C **
-```objc
-MFViewboxComponent *viewbox = [[MFViewboxComponent alloc] initWithSouthwest:CLLocationCoordinate2DMake(16.056453967981348,108.19387435913086)
-                                                                  northeast:CLLocationCoordinate2DMake(16.093031550262133,108.25927734375)];
-MFViewboxSearchParams *params = [[MFViewboxSearchParams alloc] initWithViewbox:viewbox text:@"atm"];
-MFPlacesService* service = [[MFPlacesService alloc] init];
-
-[service searchViewboxWithParams:params completionHandler:^(NSArray<id<MFPlaceResult>> * _Nullable results, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"Error code: %@, message: %@", error.code, error.message);
-  }
-  
-  if (results != nil) {
-    NSLog(@"Results count: %lu", results.count);
-  }
-}];
-```
-<!-- tabs:end -->
-
 ---
 
 ## Viewbox Search Params :id=api-viewbox-search-params
@@ -62,24 +41,24 @@ MFPlacesService* service = [[MFPlacesService alloc] init];
 
 ##### initWithViewbox: text: :id=api-viewbox-search-params-initwithviewbox-text
 
-```objc
-- (instancetype)initWithViewbox:(MFViewboxComponent *)viewbox text:(NSString *)text;
+```swift
+init(viewbox: MFViewboxComponent, text: String)
 ```
 
 Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và text.
 
 ##### initWithViewbox: types: :id=api-viewbox-search-params-initwithviewbox-types
 
-```objc
-- (instancetype)initWithViewbox:(MFViewboxComponent *)viewbox types:(NSArray<NSString *> *)types;
+```swift
+init(viewbox: MFViewboxComponent, types: [String])
 ```
 
 Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và types.
 
 ##### initWithViewbox: tags: :id=api-viewbox-search-params-initwithviewbox-tags
 
-```objc
-- (instancetype)initWithViewbox:(MFViewboxComponent *)viewbox tags:(NSArray<NSString *> *)tags;
+```swift
+init(viewbox: MFViewboxComponent, tags: [String])
 ```
 
 Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và tags.

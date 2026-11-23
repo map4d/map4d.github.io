@@ -6,8 +6,8 @@
 
 #### initWithSouthwest: northeast: :id=api-viewbox-component-initwithsouthwest-northeast
 
-```objc
-- (instancetype)initWithSouthwest:(CLLocationCoordinate2D)southwest northeast:(CLLocationCoordinate2D)northeast;
+```swift
+init(southwest: CLLocationCoordinate2D, northeast: CLLocationCoordinate2D)
 ```
 
 Tạo đối tượng `MFViewboxComponent` bằng 2 vị trí southwest và northeast.

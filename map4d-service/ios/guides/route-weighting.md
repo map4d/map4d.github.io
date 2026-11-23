@@ -2,12 +2,12 @@
 
 `MFRouteWeighting` enum
 
-```objc
-typedef NS_ENUM(NSUInteger, MFRouteWeighting) {
-  MFRouteWeightingShortest = 0,
-  MFRouteWeightingFastest = 1,
-  MFRouteWeightingBalance = 2,
-};
+```swift
+enum MFRouteWeighting: UInt {
+    case shortest = 0
+    case fastest = 1
+    case balance = 2
+}
 ```
 
 Định nghĩa các thuộc tính dùng để tìm đường:

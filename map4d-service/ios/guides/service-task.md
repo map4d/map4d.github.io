@@ -6,8 +6,8 @@
 
 #### abort :id=api-service-task-abort
 
-```objc
-- (void)abort;
+```swift
+func abort()
 ```
 
 Hủy bỏ task đang thực hiện.

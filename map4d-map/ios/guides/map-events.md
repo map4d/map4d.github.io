@@ -8,10 +8,6 @@
 
   #### Các sự kiện thao tác trên map
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   func mapView(_ mapView: MFMapView?, willMove gesture: Bool)
   func mapView(_ mapView: MFMapView?, moving position: MFCameraPosition?)
@@ -19,20 +15,6 @@
   func mapView(_ mapView: MFMapView?, idleAt position: MFCameraPosition?)
     func mapView(_ mapView: MFMapView?, didTapAtCoordinate coordinate: CLLocationCoordinate2D)
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  - (void)mapView: (MFMapView*)  mapView willMove: (BOOL) gesture;
-  - (void)mapView: (MFMapView*)  mapView movingCameraPosition: (MFCameraPosition*) position;
-  - (void)mapView: (MFMapView*)  mapView didChangeCameraPosition:(MFCameraPosition*) position;
-  - (void)mapView: (MFMapView*)  mapView idleAtCameraPosition: (MFCameraPosition *) position;
-  - (void)mapView: (MFMapView*)  mapView didTapAtCoordinate: (CLLocationCoordinate2D) coordinate;
-
-  ```
-
-  <!-- tabs:end -->
-
 
   | No       | Event name                            | Description                                                                                                                |
   |:--------:|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -43,10 +25,6 @@
   | **5**    | **didTapAtCoordinate**                | Phát sinh khi người dùng touch vào **Coordinate** trên **map**                                                             |
 
   Chúng ta thử một ví dụ đánh dấu một **Marker** lên **map** tại vị trí chỉ định dùng sự kiện **didTapAtCoordinate**
-
-  <!-- tabs:start -->
-
-  #### ** Swift **
 
   ```swift
   func mapView(_ mapView: MFMapView!, didTapAt coordinate: CLLocationCoordinate2D) {
@@ -60,27 +38,7 @@
   }
   ```
 
-  #### ** Objective C **
-
-  ```objc
-  - (void)mapView:(MFMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
-    MFMarker *marker = [[MFMarker alloc] init];
-    [marker setPosition: coordinate];
-    [marker setGroundAnchor: CGPointMake(0.5, 1.0)];
-    [marker setIcon: [UIImage imageNamed:@"iconLocation"]];
-    [marker setTitle: @"Map4D"];
-    [marker setSnippet: @"An Hải Bắc, Sơn Trà, Đà Nẵng"];
-    [marker setMap:mapView];
-  }
-  ```
-
-  <!-- tabs:end -->
-  
   #### Các sự kiện thao tác trên Annotation
-
-  <!-- tabs:start -->
-
-  #### ** Swift **
 
   ```swift
   func mapView(_ mapView: MFMapView?, didTap marker: MFMarker?) -> Bool
@@ -95,25 +53,6 @@
   func didTapMyLocationButton(for mapView: MFMapView?) -> Bool
   func mapView(_ mapView: MFMapView?, markerInfoWindow marker: MFMarker?) -> UIView?
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  - (BOOL)mapView: (MFMapView*)  mapView didTapMarker: (MFMarker*) marker;
-  - (void)mapView: (MFMapView*)  mapView didBeginDraggingMarker: (MFMarker*) marker;
-  - (void)mapView: (MFMapView*)  mapView didEndDraggingMarker: (MFMarker*) marker;
-  - (void)mapView: (MFMapView*)  mapView didDragMarker: (MFMarker*) marker;
-  - (void)mapView: (MFMapView*)  mapView didTapInfoWindowOfMarker: (MFMarker*) marker;
-  - (void)mapView: (MFMapView*)  mapView didTapPolyline: (MFPolyline*) polyline;
-  - (void)mapView: (MFMapView*)  mapView didTapPolygon: (MFPolygon*) polygon;
-  - (void)mapView: (MFMapView*)  mapView didTapCircle: (MFCircle*) circle;
-  - (void)mapView: (MFMapView*)  mapView didTapMyLocation: (CLLocationCoordinate2D) location;
-  - (BOOL)didTapMyLocationButtonForMapView: (MFMapView*) mapView;
-  - (UIView *) mapView: (MFMapView *) mapView markerInfoWindow: (MFMarker *) marker;
-  ```
-
-  <!-- tabs:end -->
-
 
   | No       | Event name                            | Description                                                                                                                |
   |----------|:-------------------:|----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -135,10 +74,6 @@
   <br/>Các **POI** xuất hiện trên map cùng với các biểu tượng tương ứng của chúng. **POI** bao gồm công viên, trường học, v.v. cũng như các **POI** kinh doanh như cửa hàng, nhà hàng và khách sạn.
   <br/>Các **Object** xuất hiên trên **map** như các toàn nhà, các khối hình hộp, ...
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   func mapView(_ mapView: MFMapView?, didTap building: MFBuilding?)
   func mapView(_ mapView: MFMapView?, didTapBuildingWithBuildingID buildingID: String?, name: String?, location: CLLocationCoordinate2D)
@@ -146,18 +81,6 @@
   func mapView(_ mapView: MFMapView?, didTapPOIWithPlaceID placeID: String?, name: String?, location: CLLocationCoordinate2D)
   func mapView(_ mapView: MFMapView?, didTapPlaceWithName name: String?, location: CLLocationCoordinate2D)
   ```
-
-  #### ** Objective C **
-
-  ```objc
-  - (void)mapView: (MFMapView*)  mapView didTapBuilding: (MFBuilding*) building;
-  - (void)mapView: (MFMapView*)  mapView didTapBuildingWithBuildingID: (NSString*) buildingID name: (NSString*) name location: (CLLocationCoordinate2D) location;
-  - (void)mapView: (MFMapView*)  mapView didTapPOI: (MFPOI*) poi;
-  - (void)mapView: (MFMapView*)  mapView didTapPOIWithPlaceID: (NSString*) placeID name: (NSString*) name location: (CLLocationCoordinate2D) location;
-  - (void)mapView: (MFMapView*)  mapView didTapPlaceWithName:(NSString*)name location:(CLLocationCoordinate2D)location;
-  ```
-
-  <!-- tabs:end -->
 
   | No    | Event name                             | Description                                                                                                               |
   |-------|:--------------------------------------:|---------------------------------------------------------------------------------------------------------------------------|

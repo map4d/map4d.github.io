@@ -6,54 +6,54 @@
 
 ####  :id=api-route-restriction-
 
-```objc
-/* Restriction point */
-- (instancetype)initWithLocation:(MFLocationComponent *)location;
+```swift
+// Restriction point
+init(location: MFLocationComponent)
 ```
 
 Tạo đối tượng `MFRouteRestriction` với vị trí cần giới hạn.
 
 ####  :id=api-route-restriction-1
 
-```objc
-/* Restriction circle area */
-- (instancetype)initWithLocation:(MFLocationComponent *)location radius:(NSUInteger)radius;
+```swift
+// Restriction circle area
+init(location: MFLocationComponent, radius: UInt)
 ```
 
 Tạo đối tượng `MFRouteRestriction` với vị trí và radius cần giới hạn.
 
 ####  :id=api-route-restriction-2
 
-```objc
-/* Restriction rectangle area */
-- (instancetype)initWithViewbox:(MFViewboxComponent *)viewbox;
+```swift
+// Restriction rectangle area
+init(viewbox: MFViewboxComponent)
 ```
 
 Tạo đối tượng `MFRouteRestriction` với khu vực hình chữ nhật cần giới hạn.
 
 ####  :id=api-route-restriction-3
 
-```objc
-/* Restriction polygon area */
-- (instancetype)initWithPath:(NSArray<MFLocationComponent *> *)path;
+```swift
+// Restriction polygon area
+init(path: [MFLocationComponent])
 ```
 
 Tạo đối tượng `MFRouteRestriction` với khu vực polygon bất kỳ cần giới hạn.
 
 ####  :id=api-route-restriction-4
 
-```objc
-/* Restriction route type */
-- (instancetype)initWithRouteType:(MFRouteType)type;
+```swift
+// Restriction route type
+init(routeType type: MFRouteType)
 ```
 
 Tạo đối tượng `MFRouteRestriction` với loại đường cần giới hạn.
 
 ####  :id=api-route-restriction-5
 
-```objc
-/* Add route type restriction */
-- (void)avoidRouteType:(MFRouteType)type;
+```swift
+// Add route type restriction
+func avoidRouteType(_ type: MFRouteType)
 ```
 
 Thêm loại đường [MFRouteType](/guides/route-type.md?id=api-route-type) giới hạn vào đối tượng `MFRouteRestriction`

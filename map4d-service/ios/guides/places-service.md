@@ -6,91 +6,91 @@
 
 #### MFSuggestionCallback :id=api-places-service-mfsuggestioncallback
 
-```objc
-typedef void(^MFSuggestionCallback)(NSArray<id<MFSuggestionResult>> *_Nullable results, id<MFServiceError> _Nullable error);
+```swift
+typealias MFSuggestionCallback = ([MFSuggestionResult]?, MFServiceError?) -> Void
 ```
 #### MFPlaceDetailCallback :id=api-places-service-mfplacedetailcallback
 
-```objc
-typedef void(^MFPlaceDetailCallback)(id<MFPlaceDetailResult> _Nullable result, id<MFServiceError> _Nullable error);
+```swift
+typealias MFPlaceDetailCallback = (MFPlaceDetailResult?, MFServiceError?) -> Void
 ```
 
 #### MFTextSearchCallback :id=api-places-service-mftextsearchcallback
 
-```objc
-typedef void(^MFTextSearchCallback)(NSArray<id<MFPlaceResult>> *_Nullable results, id<MFServiceError> _Nullable error);
+```swift
+typealias MFTextSearchCallback = ([MFPlaceResult]?, MFServiceError?) -> Void
 ```
 
 #### MFNearbySearchCallback :id=api-places-service-mfnearbysearchcallback
 
-```objc
-typedef void(^MFNearbySearchCallback)(NSArray<id<MFPlaceResult>> *_Nullable results, id<MFServiceError> _Nullable error);
+```swift
+typealias MFNearbySearchCallback = ([MFPlaceResult]?, MFServiceError?) -> Void
 ```
 
 #### MFViewboxSearchCallback :id=api-places-service-mfviewboxsearchcallback
 
-```objc
-typedef void(^MFViewboxSearchCallback)(NSArray<id<MFPlaceResult>> *_Nullable results, id<MFServiceError> _Nullable error);
+```swift
+typealias MFViewboxSearchCallback = ([MFPlaceResult]?, MFServiceError?) -> Void
 ```
 
 #### MFGeocodeCallback :id=api-places-service-mfgeocodecallback
 
-```objc
-typedef void(^MFGeocodeCallback)(NSArray<id<MFGeocodeResult>> *_Nullable results, id<MFServiceError> _Nullable error);
+```swift
+typealias MFGeocodeCallback = ([MFGeocodeResult]?, MFServiceError?) -> Void
 ```
 
 ### Public Member Functions :id=api-places-service-public-member-functions
 
 #### fetchSuggestionWithParams: completionHandler: :id=api-places-service-fetchsuggestionwithparams-completionhandler
 
-```objc
-- (id<MFServiceTask>)fetchSuggestionWithParams:(MFSuggestionParams *)params
-                             completionHandler:(MFSuggestionCallback)completionHandler;
+```swift
+func fetchSuggestion(with params: MFSuggestionParams,
+                     completionHandler: @escaping MFSuggestionCallback) -> MFServiceTask
 ```
 
 Lấy gợi ý tìm kiếm địa điểm.
 
 #### fetchSuggestionWithParams: completionHandler: :id=api-places-service-fetchsuggestionwithparams-completionhandler-1
 
-```objc
-- (id<MFServiceTask>)fetchPlaceDetailWithPlaceId:(NSString *)placeId
-                               completionHandler:(MFPlaceDetailCallback)completionHandler;
+```swift
+func fetchPlaceDetail(withPlaceId placeId: String,
+                      completionHandler: @escaping MFPlaceDetailCallback) -> MFServiceTask
 ```
 
 Lấy thông tin chi tiết của địa điểm.
 
 #### fetchSuggestionWithParams: completionHandler: :id=api-places-service-fetchsuggestionwithparams-completionhandler-2
 
-```objc
-- (id<MFServiceTask>)searchTextWithParams:(MFTextSearchParams *)params
-                        completionHandler:(MFTextSearchCallback)completionHandler;
+```swift
+func searchText(with params: MFTextSearchParams,
+                completionHandler: @escaping MFTextSearchCallback) -> MFServiceTask
 ```
 
 Tìm kiếm địa điểm bằng chuỗi ký tự.
 
 #### fetchSuggestionWithParams: completionHandler: :id=api-places-service-fetchsuggestionwithparams-completionhandler-3
 
-```objc
-- (id<MFServiceTask>)searchNearbyWithParams:(MFNearbySearchParams *)params
-                          completionHandler:(MFNearbySearchCallback)completionHandler;
+```swift
+func searchNearby(with params: MFNearbySearchParams,
+                  completionHandler: @escaping MFNearbySearchCallback) -> MFServiceTask
 ```
 
 Tìm kiếm địa điểm lân cận vị trí nào đó.
 
 #### fetchSuggestionWithParams: completionHandler: :id=api-places-service-fetchsuggestionwithparams-completionhandler-4
 
-```objc
-- (id<MFServiceTask>)searchViewboxWithParams:(MFViewboxSearchParams *)params
-                           completionHandler:(MFViewboxSearchCallback)completionHandler;
+```swift
+func searchViewbox(with params: MFViewboxSearchParams,
+                   completionHandler: @escaping MFViewboxSearchCallback) -> MFServiceTask
 ```
 
 Tìm kiếm địa điểm trong một khu vực xác định.
 
 #### fetchSuggestionWithParams: completionHandler: :id=api-places-service-fetchsuggestionwithparams-completionhandler-5
 
-```objc
-- (id<MFServiceTask>)geocodingWithParams:(MFGeocodeParams *)params
-                       completionHandler:(MFGeocodeCallback)completionHandler;
+```swift
+func geocoding(with params: MFGeocodeParams,
+               completionHandler: @escaping MFGeocodeCallback) -> MFServiceTask
 ```
 
 Phân giải địa chỉ của địa điểm.

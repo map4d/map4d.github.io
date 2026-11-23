@@ -6,40 +6,40 @@
 
 #### initWithCoordinate: :id=api-location-component-initwithcoordinate
 
-```objc
-- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate;
+```swift
+init(coordinate: CLLocationCoordinate2D)
 ```
 
 Tạo đối tượng `MFLocationComponent` bằng coordinate.
 
 #### initWithCoordinate: alias: :id=api-location-component-initwithcoordinate-alias
 
-```objc
-- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coordinate alias:(NSString *_Nullable)alias;
+```swift
+init(coordinate: CLLocationCoordinate2D, alias: String?)
 ```
 
 Tạo đối tượng `MFLocationComponent` bằng coordinate và alias.
 
 #### initWithLatitude: longitude: :id=api-location-component-initwithlatitude-longitude
 
-```objc
-- (instancetype)initWithLatitude:(CLLocationDegrees)latitude longitude:(CLLocationDegrees)longitude;
+```swift
+init(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
 ```
 
 Tạo đối tượng `MFLocationComponent` bằng latitude, longitude.
 
 #### initWithLatitude: longitude: alias: :id=api-location-component-initwithlatitude-longitude-alias
 
-```objc
-- (instancetype)initWithLatitude:(CLLocationDegrees)latitude longitude:(CLLocationDegrees)longitude alias:(NSString *_Nullable)alias;
+```swift
+init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, alias: String?)
 ```
 
 Tạo đối tượng `MFLocationComponent` bằng latitude, longitude và alias.
 
 #### isValidCoordinate :id=api-location-component-isvalidcoordinate
 
-```objc
-- (BOOL)isValidCoordinate;
+```swift
+func isValidCoordinate() -> Bool
 ```
 
 Kiểm tra location có hợp lệ hay không.

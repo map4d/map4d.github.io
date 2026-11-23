@@ -13,8 +13,6 @@ Cần phải implement [MFTileURLConstructor](/guides/tile-overlay.md?id=api-til
 
 Đoạn code bên dưới hướng dẫn cách sử dụng implement [MFTileURLConstructor](/guides/tile-overlay.md?id=api-tile-overlay-mftileurlconstructor-protocol) và sử dụng [MFURLTileLayer](/guides/tile-overlay.md?id=api-tile-overlay-mfurltilelayer-class) để hiển thị lớp tile từ `openstreetmap`
 
-<!-- tabs:start -->
-#### ** Swift **
 Implement **MFTileURLConstructor**
 ```swift
 class TileURLConstructor : NSObject, MFTileURLConstructor {
@@ -32,63 +30,21 @@ let tileOverlay = MFURLTileLayer(urlConstructor: urlConstructor)
 tileOverlay.map = mapView
 ```
 
-#### ** Objective-C **
-
-Implement **MFTileURLConstructor**
-
-```objc
-@interface TileURLConstructor : NSObject<MFTileURLConstructor>
-
-- (NSURL * _Nullable)getTileUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom;
-
-@end
-
-@implementation TileURLConstructor
-
-- (NSURL * _Nullable)getTileUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom {
-  NSString *url = [NSString stringWithFormat:@"https://tile.openstreetmap.de/%lu/%lu/%lu.png", zoom, x, y];
-  return [NSURL URLWithString:url];
-}
-
-@end
-```
-
-Tạo đối tượng **MFURLTileLayer** và set `map`
-```objc
-TileURLConstructor * urlConstructor = [[TileURLConstructor alloc] init];
-MFURLTileLayer * tileOverlay = [MFURLTileLayer tileLayerWithURLConstructor:urlConstructor];
-[tileOverlay setMap:mapView];
-```
-<!-- tabs:end -->
-
 ### Remove title overlay
 
 Để xoá tile overlay khỏi map, ta set đối tượng `map` của tile overlay về rỗng
-<!-- tabs:start -->
-#### ** Swift **
+
 ```swift
 tileOverlay.map = nil
 ```
-#### ** Objective-C **
-```objc
-tileOverlay.map = nil;
-```
-<!-- tabs:end -->
 
 ### Ẩn/Hiện Tile Overlay
 Set giá trị cho thuộc tính `isHidden` để ẩn/hiện tile overlay.  
 Chú ý: Mặc dù tile overlay không hiển thị nhưng quá trình tải các tile vẫn diễn ra
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 tileOverlay.isHidden = true
 ```
-#### ** Objective-C **
-```objc
-tileOverlay.isHidden = YES;
-```
-<!-- tabs:end -->
 
 ---
 
@@ -101,24 +57,18 @@ tileOverlay.isHidden = YES;
 **Constructor** 
 
 Lớp `MFURLTileLayer` cung cấp một phương thức static để tạo đối tượng *MFURLTileLayer* một cách tiện lợi
-```objc
-+ (instancetype _Nonnull)tileLayerWithURLConstructor:(id<MFTileURLConstructor> _Nonnull)constructor;
+```swift
+convenience init(urlConstructor: MFTileURLConstructor)
 ```
 
 - Parameters:
   - urlConstructor: [MFTileURLConstructor](/guides/tile-overlay.md?id=api-tile-overlay-mftileurlconstructor-protocol) *required*
 
 Sử dụng
-<!-- tabs:start -->
-#### ** Swift ** :id=api-tile-overlay-swift-
+
 ```swift
 let tileOverlay = MFURLTileLayer(urlConstructor: urlConstructor)
 ```
-#### ** Objective-C ** :id=api-tile-overlay-objective-c-
-```objc
-MFURLTileLayer * tileOverlay = [MFURLTileLayer tileLayerWithURLConstructor:urlConstructor];
-```
-<!-- tabs:end -->
 
 **Methods**
 
@@ -141,15 +91,8 @@ MFURLTileLayer * tileOverlay = [MFURLTileLayer tileLayerWithURLConstructor:urlCo
 
 MFTileURLConstructor là một protocol, định nghĩa sẵn phương thức dùng để xác định URL trỏ đến hình ảnh tile tương ứng với mỗi toạ độ và mức zoom
 
-<!-- tabs:start -->
-#### ** Swift ** :id=api-tile-overlay-swift-1
 ```swift
 func getTileUrlWith(x: UInt, y: UInt, zoom: UInt) -> URL?
 ```
-#### ** Objective-C ** :id=api-tile-overlay-objective-c-1
-```objc
-- (NSURL * _Nullable)getTileUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom;
-```
-<!-- tabs:end -->
 
 Cần phải implement protocol này trước khi tạo đối tượng `MFURLTileLayer`

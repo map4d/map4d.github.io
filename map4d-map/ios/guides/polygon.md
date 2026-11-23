@@ -7,9 +7,6 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
 
 Đoạn mã sau sẽ vẽ **Polygon** lên bản đồ:
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift 
 let path = MFMutablePath()
 path.add(CLLocationCoordinate2D(latitude: 16.072699584731552, longitude: 108.23020984691385))
@@ -24,24 +21,6 @@ polygon.fillColor = .blue
 polygon.map = mapView
 ```
 
-#### ** Objective C **
-
-```objc 
-MFMutablePath *path = [[MFMutablePath alloc] init];
-[path addCoordinate:CLLocationCoordinate2DMake(16.072699584731552, 108.23020984691385)];
-[path addCoordinate:CLLocationCoordinate2DMake(16.07608106276882, 108.22671224150031)];
-[path addCoordinate:CLLocationCoordinate2DMake(16.0730244298952, 108.22336243622124)];
-[path addCoordinate:CLLocationCoordinate2DMake(16.070900670809152, 108.22593736045201)];
-[path addCoordinate:CLLocationCoordinate2DMake(16.070485456927244, 108.22957624088468)];
-
-MFPolygon *polygon = [[MFPolygon alloc] init];
-[polygon setPath: path];
-[polygon setFillColor: [UIColor blueColor]];
-[polygon setMap: mapView];
-```
-
-<!-- tabs:end -->
-
 ![Polygon](../resources/v1.5/createPolygon.png) 
 
 Bạn có thể tùy chỉnh hình dáng của **Polygon** trước khi thêm nó vào bản đồ hoặc sau khi nó đã được thêm vào bản đồ.
@@ -50,19 +29,9 @@ Bạn có thể tùy chỉnh hình dáng của **Polygon** trước khi thêm n�
 
 Để xóa **Polygon** khỏi bản đồ, chúng ta **set** thuộc tính **map** bằng **nil**
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 polygon.map = nil
 ```
-
-#### ** Objective C **
-
-```objc 
-[polygon setMap: Nil];
-```
-<!-- tabs:end -->
 
 ### 3. Tùy chỉnh cho Polygon
 
@@ -75,24 +44,11 @@ Bạn có thể dễ dàng tuỳ chỉnh hình dáng của **Polygon** thông qu
 | **strokeWidth**            | Tuỳ chỉnh độ rộng **đường viền Polygon**.                                                                               |
 | **strokeColor**            | Tuỳ chỉnh màu sắc của **đường viền Polygon**.                                                                           |
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift    
 polygon.fillColor = .red
 polygon.strokeWidth = 20.0
 polygon.strokeColor = .lightGray
 ```
-
-#### ** Objective C **
-
-```objc 
-[polygon setFillColor: [UIColor redColor]];
-[polygon setStrokeWidth:20.0];
-[polygon strokeColor: [UIColor lightGrayColor]];
-```
-
-<!-- tabs:end -->
 
 ![Polygon](../resources/v1.5/customizePolygon.png) 
 
@@ -102,9 +58,6 @@ polygon.strokeColor = .lightGray
 nó có thêm các hole bên trong.
 
 Đoạn mã sau sẽ vẽ **Polygon có hole** lên bản đồ:
-
-<!-- tabs:start -->
-#### ** Swift **
 
 ```swift 
 let path = MFMutablePath()
@@ -130,37 +83,6 @@ polygon.strokeColor = .lightGray
 polygon.map = mapView
 ```
 
-#### ** Objective C **
-
-```objc 
-MFMutablePath *path = [[MFMutablePath alloc] init];
-[path addCoordinate:CLLocationCoordinate2DMake(16.072699584731552, 108.23020984691385)];
-[path addCoordinate:CLLocationCoordinate2DMake(16.07608106276882, 108.22671224150031)];
-[path addCoordinate:CLLocationCoordinate2DMake(16.0730244298952, 108.22336243622124)];
-[path addCoordinate:CLLocationCoordinate2DMake(16.070900670809152, 108.22593736045201)];
-[path addCoordinate:CLLocationCoordinate2DMake(16.070485456927244, 108.22957624088468)];
-[path addCoordinate:CLLocationCoordinate2DMake(16.072699584731552, 108.23020984691385)];
-
-MFMutablePath *hole = [[MFMutablePath alloc] init];
-[hole addCoordinate:CLLocationCoordinate2DMake(16.073472611109437, 108.22747377269246)];
-[hole addCoordinate:CLLocationCoordinate2DMake(16.071575666602996, 108.22781709595301)];
-[hole addCoordinate:CLLocationCoordinate2DMake(16.072503522154975, 108.22573569886646)];
-[hole addCoordinate:CLLocationCoordinate2DMake(16.073946844408653, 108.22612193750109)];
-
-NSMutableArray *holes = [[NSMutableArray alloc] init];
-[holes addObject: hole];
-
-MFPolygon *polygon = [[MFPolygon alloc] init];
-[polygon setPath: path];
-[polygon setHoles: holes];
-[polygon setFillColor: [UIColor lightGrayColor]];
-[polygon setStrokeWidth:20.0];
-[polygon setFillColor: [UIColor redColor]];
-[polygon setMap: mapView];
-```
-
-<!-- tabs:end -->
-
 ![Polygon](../resources/v1.5/createPolygonHole.png)
 
 ---
@@ -171,20 +93,9 @@ MFPolygon *polygon = [[MFPolygon alloc] init];
 
 #### Constructor :id=api-polygon-constructor
 
-<!-- tabs:start -->
-
-#### ** Swift ** :id=api-polygon-swift-
-
 ```swift 
 let polygon = MFPolygon()
 ```
-
-#### ** Objective C ** :id=api-polygon-objective-c-
-
-```objc 
-MFPolygon *polygon = [[MFPolygon alloc] init];
-```
-<!-- tabs:end -->
 
 #### Properties :id=api-polygon-properties
 
@@ -202,7 +113,6 @@ MFPolygon *polygon = [[MFPolygon alloc] init];
 | **map**                    | [MFMapView](/guides/map.md?id=api-map-mfmapview)              | Chỉ định hiển thị **Polygon** trên **Map** hoặc xoá **Polygon** khỏi **Map**             |
 | **Id**                     | UInt32                 | **Id** của **Polygon** **{get}**.                                                                                       |
 
-
 #### Delegate :id=api-polygon-delegate
 
   > **Chú ý**: Để sử dụng sự kiện của **Polygon** phải **set** thuộc tính **userInteractionEnabled** = **true**
@@ -212,20 +122,8 @@ MFPolygon *polygon = [[MFPolygon alloc] init];
   Phát sinh khi người dùng **touch** vào **Polygon**
   </br>Cung cấp thông tin của **Polygon** cho người dùng
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   func mapView(_ mapView: MFMapView!, didTap polygon: MFPolygon!) {}
   ```
-
-  #### ** Objective C **
-
-  ```objc 
-  - (void)mapView: (MFMapView*)  mapView didTapPolygon: (MFPolygon*) polygon {}
-  ```
-
-  <!-- tabs:end -->
 
   **Ghi chú:** **Hole** Là phần đa giác bị khuyết bên trong polygon

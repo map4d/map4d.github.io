@@ -5,21 +5,10 @@
 
 #### 1. Constructor  :id=api-coordinates-_1-constructor
 
-<!-- tabs:start -->
-#### ** Swift ** :id=api-coordinates-swift-
-
 ```swift
 init(coordinate coord: CLLocationCoordinate2D, coordinate1 coord1: CLLocationCoordinate2D) {}
 init(path: MFPath) {}
 ```
-
-#### ** Objective C ** :id=api-coordinates-objective-c-
-
-```objc  
-- (instancetype _Nonnull) initWithCoordinate:(CLLocationCoordinate2D)coord coordinate1:(CLLocationCoordinate2D)coord1;
-- (instancetype _Nonnull) initWithPath: (MFPath * _Nonnull)path;
-```
-<!-- tabs:end -->
 
 #### 2. Properties :id=api-coordinates-_2-properties
 
@@ -27,7 +16,6 @@ init(path: MFPath) {}
 |----------------------------|:--------------------------------------------------------------------------------|
 | **northEast**              | CLLocationCoordinate2D                                                          |
 | **southWest**              | CLLocationCoordinate2D                                                          |
-
 
 #### 3. Methods :id=api-coordinates-_3-methods
 
@@ -51,29 +39,15 @@ MFPath chứa một mảng các toạ độ **CLLocationCoordinate2D**
 
 MFMutablePath là MFPath nhưng cho phép thay đổi giá trị của nó
 
-<!-- tabs:start -->
-#### ** Swift ** :id=api-coordinates-swift-1
 ```swift
 class MFMutablePath: MFPath
 ```
-#### ** Objective-C ** :id=api-coordinates-objective-c-1
-```objc
-@interface MFMutablePath: MFPath
-```
-<!-- tabs:end -->
 
 #### 1. Constructor :id=api-coordinates-_1-constructor-1
-<!-- tabs:start -->
-#### ** Swift ** :id=api-coordinates-swift-2
+
 ```swift
 let path = MFMutablePath()
 ```
-#### ** Objective-C ** :id=api-coordinates-objective-c-2
-```objc
-MFMutablePath *path = [[MFMutablePath alloc] init];
-```
-<!-- tabs:end -->
-
 
 #### 2. Properties :id=api-coordinates-_2-properties-1
 

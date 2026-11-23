@@ -5,7 +5,6 @@ Bạn có thể dễ dàng vẽ các vòng tròn trên bề mặt bản đồ.
 
 Để tạo một đường tròn, bạn phải chỉ định hai thuộc tính sau:
 
-
 | Name                       |Description                                                                                                              |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | **position**               | Tâm của vị trí xác định trên bản đồ.                                                                                    |
@@ -15,9 +14,6 @@ Bạn có thể dễ dàng vẽ các vòng tròn trên bề mặt bản đồ.
 
 Đoạn mã sau sẽ vẽ một vòng tròn lên bản đồ:
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift 
 let circle = MFCircle()
 circle.radius = 100.0
@@ -25,18 +21,6 @@ circle.position = CLLocationCoordinate2D(latitude: 16.072086430034517, longitude
 circle.fillColor = .blue
 circle.map = mapView
 ```
-
-#### ** Objective C **
-
-```objc 
-MFCircle *circle = [[MFCircle alloc] init];
-[circle setRadius: 100.0];
-[circle setPosition: CLLocationCoordinate2DMake(16.072086430034517, 108.2262037173781)];
-[circle setFillColor: [UIColor blueColor]];
-[circle setMap: mapView];
-```
-
-<!-- tabs:end -->
 
 -  ![Circle](../resources/v1.5/createCircle.png) 
 
@@ -46,19 +30,9 @@ Bạn có thể tùy chỉnh hình dáng của **Circle** trước khi thêm nó
 
 Để xóa **Circle** khỏi bản đồ, chúng ta **set** thuộc tính **map** bằng **nil**
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift
 circle.map = nil
 ```
-
-#### ** Objective C **
-
-```objc 
-[circle setMap: Nil];
-```
-<!-- tabs:end -->
 
 ### 3. Tùy chỉnh cho Circle
 
@@ -71,9 +45,6 @@ Bạn có thể dễ dàng tuỳ chỉnh hình dáng của **Circle** thông qua
 - **strokeColor** : tuỳ chỉnh màu sắc của **đường viền Circle**
 - **strokeWidth** : tuỳ chỉnh độ lớn của **đường viền Circle** theo đơn vị **point**.
 
-<!-- tabs:start -->
-#### ** Swift **
-
 ```swift 
 circle.radius = 100.0
 circle.position = CLLocationCoordinate2D(latitude: 16.072086430034517, longitude: 108.2262037173781)
@@ -81,18 +52,6 @@ circle.strokeColor = .lightGray
 circle.strokeWidth = 10.0
 circle.fillColor = .red
 ```
-
-#### ** Objective C **
-
-```objc 
-[circle setRadius: 100.0];
-[circle setPosition: CLLocationCoordinate2DMake(16.072086430034517, 108.2262037173781)];
-[circle setFillColor: [UIColor blueColor]];
-[circle setStrokeColor: [UIColor lightGrayColor]];
-[circle setStrokeWidth: 10.0];
-```
-
-<!-- tabs:end -->
 
 -  ![Circle](../resources/v1.5/customizeCircle.png)
 
@@ -104,21 +63,9 @@ circle.fillColor = .red
 
 #### Constructor :id=api-circle-constructor
 
-<!-- tabs:start -->
-
-#### ** Swift ** :id=api-circle-swift-
-
 ```swift 
 let circle = MFCircle()
 ```
-
-#### ** Objective C ** :id=api-circle-objective-c-
-
-```objc 
-MFCircle *circle = [[MFCircle alloc] init];
-```
-
-<!-- tabs:end -->
 
 #### Properties :id=api-circle-properties
 
@@ -136,7 +83,6 @@ MFCircle *circle = [[MFCircle alloc] init];
 | **map**                    | [MFMapView](/guides/map.md?id=api-map-mfmapview) | Chỉ định hiển thị **Circle** trên **Map** hoặc xoá **Circle** khỏi **Map**                            |
 | **Id**                     | UInt32                 | **Id** của **Circle** **{get}**.                                                                                        |
 
-
 #### Delegate :id=api-circle-delegate
 
   > **Chú ý**: Để sử dụng sự kiện của **Circle** phải **set** thuộc tính **userInteractionEnabled** = **true**
@@ -146,18 +92,7 @@ MFCircle *circle = [[MFCircle alloc] init];
   Phát sinh khi người dùng **touch** vào **Circle**
   </br>Cung cấp thông tin của **Circle** cho người dùng
 
-  <!-- tabs:start -->
-
-  #### ** Swift **
-
   ```swift
   func mapView(_ mapView: MFMapView!, didTap circle: MFCircle!) {}
   ```
 
-  #### ** Objective C **
-
-  ```objc 
-  - (void)mapView:(MFMapView *)mapView didTapCircle:(MFCircle *)circle{}
-  ```
-
-  <!-- tabs:end -->

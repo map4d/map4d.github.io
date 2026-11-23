@@ -15,8 +15,6 @@ Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_route>
 
 ### Example
 
-<!-- tabs:start -->
-#### ** Swift **
 ```swift
 let origin = MFLocationComponent(latitude: 16.024634, longitude: 108.209217)
 let destination = MFLocationComponent(latitude: 16.020179, longitude: 108.211212)
@@ -33,26 +31,6 @@ service.fetchDirections(with: params) { result, error in
 }
 ```
 
-#### ** Objective-C **
-```objc
-MFLocationComponent *origin = [[MFLocationComponent alloc] initWithLatitude:16.073765 longitude:108.211724];
-MFLocationComponent *destination = [[MFLocationComponent alloc] initWithLatitude:16.073486 longitude:108.211813];
-MFDirectionsParams *params = [[MFDirectionsParams alloc] initWithOrigin:origin destination:destination];
-MFDirectionsService* service = [[MFDirectionsService alloc] init];
-
-[service fetchDirectionsWithParams:params
-                 completionHandler:^(id<MFDirectionsResult>  _Nullable result, id<MFServiceError>  _Nullable error) {
-  if (error != nil) {
-    NSLog(@"Error code: %@, message: %@", error.code, error.message);
-  }
-  
-  if (result != nil) {
-    // ...
-  }
-}];
-```
-<!-- tabs:end -->
-
 ---
 
 ## Directions Params :id=api-directions-params
@@ -63,19 +41,19 @@ MFDirectionsService* service = [[MFDirectionsService alloc] init];
 
 ##### initWithOrigin: destination: :id=api-directions-params-initwithorigin-destination
 
-```objc
-- (instancetype)initWithOrigin:(MFLocationComponent *)origin destination:(MFLocationComponent *)destination;
+```swift
+init(origin: MFLocationComponent, destination: MFLocationComponent)
 ```
 
 Tạo đối tượng `MFDirectionsParams` với 2 địa điểm origin và destination.
 
 ##### initWithOrigin: destination: mode: weighting: :id=api-directions-params-initwithorigin-destination-mode-weighting
 
-```objc
-- (instancetype)initWithOrigin:(MFLocationComponent *)origin
-                   destination:(MFLocationComponent *)destination
-                          mode:(MFTravelMode)mode
-                     weighting:(MFRouteWeighting)weighting;
+```swift
+init(origin: MFLocationComponent,
+     destination: MFLocationComponent,
+     mode: MFTravelMode,
+     weighting: MFRouteWeighting)
 ```
 
 Tạo đối tượng `MFDirectionsParams` với các tham số: origin, destination, mode và weighting.
@@ -145,8 +123,8 @@ Tạo đối tượng `MFDirectionsParams` với các tham số: origin, destina
 
 ##### polyline: :id=api-route-result-polyline
 
-```objc
-- (NSArray<MFLocationComponent *> *_Nonnull)polyline;
+```swift
+func polyline() -> [MFLocationComponent]
 ```
 
 Lấy mảng các vị trí của chỉ đường từ `encodedPolyline`
@@ -172,8 +150,8 @@ Lấy mảng các vị trí của chỉ đường từ `encodedPolyline`
 
 ##### polyline: :id=api-route-step-result-polyline
 
-```objc
-- (NSArray<MFLocationComponent *> *_Nonnull)polyline;
+```swift
+func polyline() -> [MFLocationComponent]
 ```
 
 Lấy mảng các vị trí của chỉ đường từ `encodedPolyline`
