@@ -15,7 +15,7 @@ Tạo đối tượng `MFViewboxComponent` bằng 2 vị trí southwest và nort
 
 ### Properties :id=api-viewbox-component-properties
 
-| Name        | Type                   | Description                                             |
-|-------------|------------------------|---------------------------------------------------------|
-| southwest   | CLLocationCoordinate2D | Tọa độ kinh độ, vĩ độ tây nam của viewbox trên bản đồ.  |
-| northeast   | CLLocationCoordinate2D | Tọa độ kinh độ, vĩ độ đông bắt của viewbox trên bản đồ. |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| southwest | CLLocationCoordinate2D | Chỉ đọc | Tọa độ kinh độ, vĩ độ tây nam của viewbox trên bản đồ. |
+| northeast | CLLocationCoordinate2D | Chỉ đọc | Tọa độ kinh độ, vĩ độ đông bắt của viewbox trên bản đồ. |

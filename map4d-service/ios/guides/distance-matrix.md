@@ -29,11 +29,15 @@ let service = MFDirectionsService()
 
 service.fetchDistanceMatrix(with: params) { result, error in
   guard let result = result else {
-    print("Error: \(error!.message)")
+    print("Error: \(error?.message ?? "Không có kết quả")")
     return
   }
 
-  // ...
+  for (originIndex, row) in (result.rows ?? []).enumerated() {
+    for (destinationIndex, element) in (row.elements ?? []).enumerated() {
+      print("\(originIndex) -> \(destinationIndex): \(element.distance.value) m, \(element.duration.value) s")
+    }
+  }
 }
 ```
 
@@ -41,14 +45,15 @@ service.fetchDistanceMatrix(with: params) { result, error in
 
 ## Distance Matrix Element Result :id=api-distance-matrix-element-result
 
-`MFDistanceMatrixElementResult` protocol
+`MFDistanceMatrixElementResult` class
 
 #### Properties :id=api-distance-matrix-element-result-properties
 
-| Name        | Type                                                                       | Description                                                                                                                              |
-|-------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| distance    | NSArray<[MFRouteDescriptionResult](/guides/directions.md?id=api-route-description-result)> | Khoảng cách về km mỗi địa điểm đi qua (khoảng cách dưới dạng text, còn value là giá trị đơn vị là mét)                                   |
-| duration    | NSArray<[MFRouteDescriptionResult](/guides/directions.md?id=api-route-description-result)> | Khoảng cách về thời gian mỗi địa điểm đi qua (thời gian dưới dạng text, còn value là thời gian khi đi trên đoạn đường đó đơn vị là giây) |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| distance | MFRouteDescriptionResult | Chỉ đọc | Khoảng cách; value tính bằng mét. |
+| duration | MFRouteDescriptionResult | Chỉ đọc | Thời gian di chuyển; value tính bằng giây. |
+| status | String? | Chỉ đọc |  |
 
 ---
 
@@ -79,31 +84,32 @@ Tạo đối tượng `MFDistanceMatrixParams` với 2 mảng các địa điể
 
 #### Properties :id=api-distance-matrix-params-properties
 
-| Name         | Type                                                            | Description                                                                        |
-|--------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| origins      | NSArray<[MFLocationComponent](/guides/location-component.md?id=api-location-component)> | Vị trí các điểm bắt đầu dùng để tính toán ma trận                                  |
-| destinations | NSArray<[MFLocationComponent](/guides/location-component.md?id=api-location-component)> | Vị trí các điểm kết thúc dùng để tính toán ma trận                                 |
-| mode         | [MFTravelMode](/guides/travel-mode.md?id=api-travel-mode)                        | Phương thức di chuyển.                                                             |
-| weighting    | [MFRouteWeighting](/guides/route-weighting.md?id=api-route-weighting)                | Thuộc tính tìm kiếm (đường ngắn nhất, nhanh nhất hay cân bằng).                    |
-| restriction  | [MFRouteRestriction](/guides/route-restriction.md?id=api-route-restriction)            | Điểm, khu vực, loại đường bị loại bỏ mà tuyến đường được tìm kiếm sẽ không đi qua. |
-| language     | [MFLanguageResult](/guides/language-result.md?id=api-language-result)                | Ngôn ngữ dùng để chỉ đường.                                                        |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| origins | [MFLocationComponent] | Chỉ đọc | Vị trí các điểm bắt đầu dùng để tính toán ma trận Tối đa 10 vị trí. |
+| destinations | [MFLocationComponent] | Chỉ đọc | Vị trí các điểm kết thúc dùng để tính toán ma trận Tối đa 10 vị trí. |
+| mode | MFTravelMode | Đọc/ghi | Phương thức di chuyển, mặc định .car. |
+| language | MFLanguageResult | Đọc/ghi | Ngôn ngữ kết quả, mặc định .vietnamese. |
+| weighting | MFRouteWeighting | Đọc/ghi | Thuộc tính tìm kiếm (.shortest, .fastest hoặc .balance), mặc định .fastest. |
+| restriction | MFRouteRestriction? | Đọc/ghi | Điểm, khu vực, loại đường bị loại bỏ mà tuyến đường được tìm kiếm sẽ không đi qua. |
+| departureTime | Date? | Đọc/ghi | Thời điểm khởi hành; nil khi không chỉ định. |
 
 ---
 
 ## Distance Matrix Result :id=api-distance-matrix-result
 
-`MFDistanceMatrixResult` protocol
+`MFDistanceMatrixResult` class
 
-| Name         | Type                                                                          | Description                                                                        |
-|--------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| rows         | NSArray<[MFDistanceMatrixRowResult](/guides/distance-matrix.md?id=api-distance-matrix-row-result)> |                                                                                    |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| rows | [CLLocation] | Chỉ đọc | Mỗi hàng ứng với một điểm xuất phát trong origins. |
 
 ---
 
 ## Distance Matrix Row Result :id=api-distance-matrix-row-result
 
-`MFDistanceMatrixRowResult` protocol
+`MFDistanceMatrixRowResult` class
 
-| Name         | Type                                                                                  | Description                                                                        |
-|--------------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| elements     | NSArray<[MFDistanceMatrixElementResult](/guides/distance-matrix.md?id=api-distance-matrix-element-result)> |                                                                                    |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| elements | [MFDistanceMatrixElementResult]? | Chỉ đọc | Các phần tử lần lượt ứng với các điểm đến trong destinations. |

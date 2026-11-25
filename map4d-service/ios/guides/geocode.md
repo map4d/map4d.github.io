@@ -1,8 +1,6 @@
 # Geocode
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_geocode_v2>
-
-> Dùng để phân giải địa điểm ra tọa độ địa lý.
+> Chuyển địa chỉ thành tọa độ (geocode) hoặc tọa độ thành địa chỉ (reverse geocode).
 
 ### Usage
 
@@ -20,13 +18,15 @@ let params = MFGeocodeParams(location: MFLocationComponent(latitude: 16.024634, 
 let service = MFPlacesService()
 service.geocoding(with: params) { results, error in
   guard let results = results else {
-    print("Error: \(error!.message)")
+    print("Error: \(error?.message ?? "Không có kết quả")")
     return
   }
 
   print("Results count: \(results.count)")
 }
 ```
+
+Để chuyển một địa chỉ thành tọa độ, tạo `MFGeocodeParams(address: "địa chỉ cần tìm")` và gọi cùng phương thức `geocoding(with:completionHandler:)`. `viewbox` cho phép giới hạn vùng tìm kiếm.
 
 ---
 
@@ -50,29 +50,31 @@ Tạo đối tượng `MFGeocodeParams` với địa điểm.
 init(address: String)
 ```
 
-Tạo đối tượng `MFDirectionsParams` với địa chỉ.
+Tạo đối tượng `MFGeocodeParams` với địa chỉ.
 
 #### Properties :id=api-geocode-params-properties
 
-| Name        | Type                                                            | Description                                       |
-|-------------|-----------------------------------------------------------------|---------------------------------------------------|
-| location    | [MFLocationComponent](/guides/location-component.md?id=api-location-component)          | Ví trí dùng để phân giải địa chỉ.                 |
-| address     | NSString                                                        | Địa chỉ của địa điểm dùng để phân giải (địa chỉ). |
-| viewbox     | [MFViewboxComponent](/guides/viewbox-component.md?id=api-viewbox-component)            | Khu vực tìm kiếm.                                 |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| location | MFLocationComponent? | Đọc/ghi | Ví trí dùng để phân giải địa chỉ. |
+| address | String? | Đọc/ghi | Địa chỉ của địa điểm dùng để phân giải (địa chỉ). |
+| viewbox | MFViewboxComponent? | Đọc/ghi | Khu vực tìm kiếm. |
 
 ---
 
 ## Geocode Result :id=api-geocode-result
 
-`MFGeocodeResult` protocol
+`MFGeocodeResult` class
 
 #### Properties :id=api-geocode-result-properties
 
-| Name              | Type                                                                                   | Description                           |
-|-------------------|----------------------------------------------------------------------------------------|---------------------------------------|
-| id                | NSString                                                                               | Mã id của địa điểm.                   |
-| location          | [MFLocationComponent](/guides/location-component.md?id=api-location-component)                                 | Ví trí của địa điểm                   |
-| name              | NSString                                                                               | Tên của địa điểm.                     |
-| address           | NSString                                                                               | Địa chỉ địa điểm.                     |
-| types             | NSArray\<NSString\>                                                                    | Loại đối tượng của địa điểm.          |
-| addressComponents | NSArray<[MFPlaceAddressComponentResult](/guides/place-detail.md?id=api-place-address-component-result)>  | Danh sách các thành phần của địa chỉ. |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| id | String? | Chỉ đọc | Mã id của địa điểm. |
+| location | MFLocationComponent | Chỉ đọc | Ví trí của địa điểm |
+| name | String | Chỉ đọc | Tên của địa điểm. |
+| address | String | Chỉ đọc | Địa chỉ địa điểm. |
+| oldAddress | String | Chỉ đọc | Địa chỉ cũ của địa điểm. |
+| types | [String] | Chỉ đọc | Loại đối tượng của địa điểm. |
+| addressComponents | [MFPlaceAddressComponentResult]? | Chỉ đọc | Danh sách các thành phần của địa chỉ. |
+| oldAddressComponents | [MFPlaceAddressComponentResult]? | Chỉ đọc | Các thành phần của địa chỉ cũ. |

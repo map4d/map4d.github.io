@@ -4,8 +4,8 @@
 
 ### Properties :id=api-service-error-properties
 
-| Name        | Type      | Description     |
-|-------------|-----------|-----------------|
-| code        | NSString  | Mã lỗi.         |
-| message     | NSString  | Nội dung lỗi.   |
-| error       | NSError   |                 |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| code | String | Chỉ đọc | Mã lỗi. |
+| message | String | Chỉ đọc | Nội dung lỗi. |
+| error | Error? | Chỉ đọc | Lỗi hệ thống bên dưới, nếu có. |

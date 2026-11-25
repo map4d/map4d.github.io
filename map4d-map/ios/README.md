@@ -4,7 +4,7 @@
 [![cocoapods](https://img.shields.io/cocoapods/v/Map4dMap)](https://cocoapods.org/pods/Map4dMap)
 
 > **Map4D iOS SDK** cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên iPhone, iPad.  
-> **Map4D iOS SDK** không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, ngoài ra còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn
+> Không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, **Map4D iOS SDK** còn cho phép tương tác và điều chỉnh các đối tượng của bạn
 
 ![Map4D iOS SDK](resources/Untitled-1_0000_Right-Mockup--phone-demo.png)
 
@@ -48,7 +48,7 @@ Sau khi cập nhật Podfile, chạy `pod install` và mở file `.xcworkspace`
 
 - iOS 12.0 trở lên.
 - Xcode 12.0 trở lên; Swift tools 5.3.
-- Map4D Access Key: Tạo tại trang nhà phát triển của [Map4D](https://map.map4d.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
+- Map4D Access Key: tạo tại trang nhà phát triển của [Map4D](https://map.map4d.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
 
 ## Using
 

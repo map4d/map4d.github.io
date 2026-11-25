@@ -4,11 +4,37 @@
 [![cocoapods](https://img.shields.io/cocoapods/v/Map4dServices)](https://cocoapods.org/pods/Map4dServices)
 
 > **Map4dServices** cung cấp [Map4D Services API](https://docs.map4d.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
-> **Map4dServices** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
+> Cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
+
+## Yêu cầu
+
+- iOS 12.0 trở lên.
+- Xcode 12 trở lên; Swift tools 5.3.
+- Services Access Key phù hợp với bundle ID của ứng dụng. Tạo tại trang nhà phát triển của [Map4D](https://map.map4d.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
 
 ## Installation
 
-Use [CocoaPods](https://cocoapods.org)
+### Swift Package Manager (SPM)
+
+Trong Xcode, chọn **File > Add Package Dependencies**, nhập URL package:
+
+```text
+https://github.com/map4d/map4d-services-ios-sdk.git
+```
+
+Chọn **Up to Next Major Version**, bắt đầu từ **2.6.0**, rồi thêm product **Map4dServices** vào app target.
+
+Với một Swift package, khai báo trong `Package.swift`:
+
+```swift
+// dependencies của Package:
+.package(url: "https://github.com/map4d/map4d-services-ios-sdk.git", from: "2.6.0")
+
+// dependencies của target dùng SDK:
+.product(name: "Map4dServices", package: "map4d-services-ios-sdk")
+```
+
+### CocoaPods
 
 1. Update your cocoapods local repo
 ```shell
@@ -17,8 +43,10 @@ pod repo update
 
 2. Add to Podfile
 ```shell
-pod 'Map4dServices'
+pod 'Map4dServices', '~> 2.6.0'
 ```
+
+Chạy `pod install` và mở file `.xcworkspace`. Chỉ sử dụng một cách cài đặt SDK cho cùng target.
 
 ## Using
 
@@ -33,20 +61,26 @@ pod 'Map4dServices'
 
 ```swift
 import Map4dServices
+import CoreLocation
 ```
 
 ## Example
 
-Get place detail
+Tìm kiếm địa điểm theo từ khóa với Text Search.
 
 ```swift
+let params = MFTextSearchParams(text: "Hà Nội")
 let service = MFPlacesService()
-service.fetchPlaceDetail(withPlaceId: "60dd3850f81cb14bc880ed52") { result, error in
-  guard let result = result else {
-    dump(error)
+service.searchText(with: params) { results, error in
+  if let error = error {
+    print("Error: \(error.message)")
     return
   }
-  print("name \(result.name)")
+  guard let places = results else { return }
+
+  for place in places {
+    print("Name: \(place.name)")
+    print("Address: \(place.address)")
+  }
 }
 ```
-

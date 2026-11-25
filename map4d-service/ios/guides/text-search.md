@@ -1,7 +1,5 @@
 # Text Search
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_text_search>
-
 > Tìm kiếm các địa điểm bằng chuỗi ký tự.
 
 ### Usage
@@ -20,7 +18,7 @@ let params = MFTextSearchParams(text: "Vietcombank")
 let service = MFPlacesService()
 service.searchText(with: params) { results, error in
   guard let results = results else {
-    print("Error: \(error!.message)")
+    print("Error: \(error?.message ?? "Không có kết quả")")
     return
   }
 
@@ -46,9 +44,12 @@ Tạo đối tượng `MFTextSearchParams` với text tìm kiếm.
 
 #### Properties :id=api-text-search-params-properties
 
-| Name        | Type                                                            | Description                                                                        |
-|-------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| text        | NSString                                                        | Nội dung muốn tìm kiếm.                                                            |
-| types       | NSArray\<NSString\>                                             | Loại đối tượng của địa điểm. VD: cafe, restaurant, ...                             |
-| datetime    | NSDate                                                          | Thời gian địa điểm vẫn còn tồn tại.                                                |
-| location    | [MFLocationComponent](/guides/location-component.md?id=api-location-component)          | Vị trí ưu tiên. Các địa điểm gần vị trí này sẽ được ưu tiên hơn.                   |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| text | String | Đọc/ghi | Nội dung muốn tìm kiếm. |
+| types | [String]? | Đọc/ghi | Loại đối tượng của địa điểm. VD: cafe, restaurant, ... |
+| typeSearchMatching | MFTypeSearchMatching | Đọc/ghi | Cách khớp types: .all (mặc định) hoặc .onlyOne. |
+| datetime | Date? | Đọc/ghi | Thời gian địa điểm vẫn còn tồn tại. |
+| location | MFLocationComponent? | Đọc/ghi | Vị trí ưu tiên. Các địa điểm gần vị trí này sẽ được ưu tiên hơn. |
+
+Thuộc tính `typeSearchMatching` áp dụng cho danh sách `types`. Xem [cách khớp loại địa điểm](type-search-matching.md) để chọn khớp tất cả hoặc ít nhất một loại.

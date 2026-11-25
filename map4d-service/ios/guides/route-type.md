@@ -1,15 +1,20 @@
 # Route Type Restriction :id=api-route-type
 
-`MFRouteType` enum
+`MFRouteType` là một `OptionSet` trong Swift, cho phép kết hợp nhiều loại đường cần tránh.
+
+| Giá trị Swift | Raw value | Loại đường |
+|---|---|---|
+| `[]` | 0 | Không giới hạn loại đường. |
+| `.motorway` | 1 | Cao tốc. |
+| `.trunk` | 2 | Trục đường chính. |
+| `.ferry` | 4 | Phà. |
+| `.bridge` | 8 | Cầu. |
+| `.tunnel` | 16 | Hầm. |
+| `.toll` | 32 | Đường có thu phí. |
 
 ```swift
-enum MFRouteType: UInt {
-    case motorway
-    case trunk
-    case ferry
-    case bridge
-    case tunnel
-}
+let restriction = MFRouteRestriction(routeTypes: [.motorway, .toll])
+restriction.routeTypes = []
 ```
 
-Định nghĩa các loại đường sử dụng cho việc giới hạn *([MFRouteRestriction](/guides/route-restriction.md?id=api-route-restriction))* tìm kiếm, tính toán chỉ đường.
+Dùng với `routeTypes` của [MFRouteRestriction](route-restriction.md).

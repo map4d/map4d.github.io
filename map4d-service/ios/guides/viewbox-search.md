@@ -1,7 +1,5 @@
 # Viewbox Search
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_viewbox_search>
-
 > Tìm các địa điểm trong khu vực địa lý hình chữ nhật.
 
 ### Usage
@@ -23,7 +21,7 @@ let params = MFViewboxSearchParams(viewbox: viewbox, text: "bank")
 let service = MFPlacesService()
 service.searchViewbox(with: params) { results, error in
   guard let results = results else {
-    print("Error: \(error!.message)")
+    print("Error: \(error?.message ?? "Không có kết quả")")
     return
   }
 
@@ -65,10 +63,13 @@ Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và ta
 
 #### Properties :id=api-viewbox-search-params-properties
 
-| Name        | Type                                                            | Description                                                                        |
-|-------------|-----------------------------------------------------------------|------------------------------------------------------------------------------------|
-| viewbox     | [MFViewboxComponent](/guides/viewbox-component.md?id=api-viewbox-component)            | Khu vực muốn tìm kiếm.                                                             |
-| text        | NSString                                                        | Nội dung muốn tìm kiếm.                                                            |
-| types       | NSArray\<NSString\>                                             | Loại đối tượng của địa điểm. VD: cafe, restaurant, ...                             |
-| tags        | NSArray\<NSString\>                                             | Nhãn của địa điểm.                                                                 |
-| datetime    | NSDate                                                          | Thời gian địa điểm vẫn còn tồn tại.                                                |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| viewbox | MFViewboxComponent | Đọc/ghi | Khu vực muốn tìm kiếm. |
+| text | String? | Đọc/ghi | Nội dung muốn tìm kiếm. |
+| types | [String]? | Đọc/ghi | Loại đối tượng của địa điểm. VD: cafe, restaurant, ... |
+| typeSearchMatching | MFTypeSearchMatching | Đọc/ghi | Cách khớp types: .all (mặc định) hoặc .onlyOne. |
+| tags | [String]? | Đọc/ghi | Nhãn của địa điểm. |
+| datetime | Date? | Đọc/ghi | Thời gian địa điểm vẫn còn tồn tại. |
+
+Thuộc tính `typeSearchMatching` áp dụng cho danh sách `types`. Xem [cách khớp loại địa điểm](type-search-matching.md) để chọn khớp tất cả hoặc ít nhất một loại.

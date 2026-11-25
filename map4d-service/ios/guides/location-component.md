@@ -44,9 +44,16 @@ func isValidCoordinate() -> Bool
 
 Kiểm tra location có hợp lệ hay không.
 
+### Lấy kinh độ và vĩ độ
+
+| Phương thức Swift | Trả về | Mô tả |
+|---|---|---|
+| `latitude()` | CLLocationDegrees | Vĩ độ của vị trí. |
+| `longitude()` | CLLocationDegrees | Kinh độ của vị trí. |
+
 ### Properties :id=api-location-component-properties
 
-| Name        | Type                   | Description                        |
-|-------------|------------------------|------------------------------------|
-| coordinate  | CLLocationCoordinate2D | Tọa độ kinh độ, vĩ độ trên bản đồ. |
-| alias       | NSString               | Biệt danh cho vị trí.              |
+| Name | Type (Swift) | Access | Description |
+|---|---|---|---|
+| coordinate | CLLocationCoordinate2D | Chỉ đọc | Tọa độ kinh độ, vĩ độ trên bản đồ. |
+| alias | String? | Chỉ đọc | Biệt danh cho vị trí. |
