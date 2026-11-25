@@ -1,18 +1,14 @@
 # Projection
 
-
-
 Lớp MFProjection được dùng để chuyển đổi giữa vị trí trên màn hình và tọa độ địa lý trên bề mặt trái đất và ngược lại.
 
 ### 1. Khởi tạo lớp Projection
 
   ```swift
-  let projection = mapView.projection
+  guard let projection = mapView.projection else { return }
   ```
-  
-### 2. Chuyển đổi từ toạ độ LatLng sang toạ độ Screen
-  
 
+### 2. Chuyển đổi từ toạ độ LatLng sang toạ độ Screen
   
   ```swift
   let coordinate = CLLocationCoordinate2D(latitude: 16.072086430034517, longitude: 108.2262037173781)
@@ -59,3 +55,4 @@ Lớp MFProjection được dùng để chuyển đổi giữa vị trí trên m
   // Chuyển đổi từ toạ độ Screen sang toạ độ LatLng với camera và elevation (meter)
   let coordinate3D = projection.coordinate(for: point, camera: camera, elevation: 10.0)
   ```
+

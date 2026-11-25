@@ -1,7 +1,6 @@
 # iPostMap iOS SDK
 [![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
-[![platform](https://img.shields.io/cocoapods/p/iPostMap)](https://www.apple.com/ios/)
-[![cocoapods](https://img.shields.io/cocoapods/v/iPostMap)](https://cocoapods.org/pods/iPostMap)
+[![platform](https://img.shields.io/cocoapods/p/iPostMap)](https://ipostmap.vn/)
 
 > **iPostMap iOS SDK** cho phép bạn tùy chỉnh bản đồ với nội dung để hiển thị trên iPhone, iPad.<br>
 > Không chỉ mang hình ảnh thực tế lên trên bản đồ 3D, **iPostMap iOS SDK** còn cho phép tương tác và điều chỉnh các đối tượng 3D của bạn
@@ -11,6 +10,7 @@
 ## Yêu cầu
 
 - iOS 12.0 trở lên.
+- Xcode 12.0 trở lên; Swift tools 5.3.
 - Access Key từ [iPostMap Developer](https://map.ipostmap.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt developer)*.
 
 ## Installation

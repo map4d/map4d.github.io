@@ -1,6 +1,6 @@
 # Map events
 
-> **iPostMap iOS SDK** cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
+> **Map iOS SDK** cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
 
   ##  Giới thiệu chung
 
@@ -13,15 +13,14 @@
   func mapView(_ mapView: MFMapView?, moving position: MFCameraPosition?)
   func mapView(_ mapView: MFMapView?, didChange position: MFCameraPosition?)
   func mapView(_ mapView: MFMapView?, idleAt position: MFCameraPosition?)
-    func mapView(_ mapView: MFMapView?, didTapAtCoordinate coordinate: CLLocationCoordinate2D)
+  func mapView(_ mapView: MFMapView?, didTapAt coordinate: CLLocationCoordinate2D)
   ```
-
 
   | No       | Event name                            | Description                                                                                                                |
   |:--------:|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
   | **1**    | **willMove**                          | Phát sinh khi người dùng tương tác bằng cử chỉ làm thay đổi các thông số camera (tâm, góc nghiêng, góc quay, mức zoom)     |
   | **2**    | **movingCameraPosition**              | Phát sinh khi một trong các thông số camera (tâm, góc nghiêng, góc quay, mức zoom) của map chuẩn bị thay đổi               |
-  | **3**    | **didChangeCameraPosition**           | Đhát sinh khi các thông số camera (tâm, góc nghiêng, góc quay, mức zoom) của map kết thúc sự thay đổi.                     |
+  | **3**    | **didChangeCameraPosition**           | Được gọi liên tục trong quá trình animation hoặc thao tác cử chỉ. |
   | **4**    | **idleAtCameraPosition**              | Phát sinh khi các thông số camera (tâm, góc nghiêng, góc quay, mức zoom) của map kết thúc sự thay đổi.                     |
   | **5**    | **didTapAtCoordinate**                | Phát sinh khi người dùng touch vào **Coordinate** trên **map**                                                             |
 
@@ -33,12 +32,12 @@
     marker.position = coordinate
     marker.icon = UIImage(named: "iconLocation")
     marker.groundAnchor = CGPoint(x: 0.5, y: 1.0)
-    marker.title = "iPostMap"
+    marker.title = "Marker title"
     marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
     marker.map = mapView
   }
   ```
-  
+
   #### Các sự kiện thao tác trên Annotation
 
   ```swift
@@ -55,7 +54,6 @@
   func mapView(_ mapView: MFMapView?, markerInfoWindow marker: MFMarker?) -> UIView?
   ```
 
-
   | No       | Event name                            | Description                                                                                                                |
   |----------|:-------------------:|----------------------------------------------------------------------------------------------------------------------------------------------|
   | **1**    | **didTapMarker**                      | Phát sinh khi người dùng touch vào **Marker** trên **map**                                                                 |
@@ -67,12 +65,12 @@
   | **7**    | **didTapPolygon**                     | Phát sinh khi người dùng touch vào **Polygon** trên **map**                                                                |
   | **8**    | **didTapCircle**                      | Phát sinh khi người dùng touch vào **Circle**  trên **map**                                                                |
   | **13**   | **didTapMyLocation**                  | Phát sinh khi người dùng touch vào **Marker my location** trên **map**                                                     |
-  | **14**   | **didTapMyLocationButtonForMapView**  | Phát sinh khi người dùng touch vào **Button my location** của iPostMap cung cấp trên **map**                                  |
+  | **14**   | **didTapMyLocationButtonForMapView**  | Phát sinh khi người dùng touch vào **Button my location** của bản đồ cung cấp trên **map**                                  |
   | **15**   | **markerInfoWindow**                  | Phát sinh khi người dùng thay đổi **bảng thông tin** của **Marker**                                                        |
 
   ####  Các sự kiện liên quan đến kinh doanh và địa điểm yêu thích
 
-  > **iPostMap iOS SDK** cung cấp cho nhà phát triển các giao thức tương tác với **POI** và **Object** cung cấp cho bạn các thông tin về địa điểm hoặc đối tượng mà bạn muốn lấy thông tin trên **map**
+  > **Map iOS SDK** cung cấp cho nhà phát triển các giao thức tương tác với **POI** và **Object** cung cấp cho bạn các thông tin về địa điểm hoặc đối tượng mà bạn muốn lấy thông tin trên **map**
   <br/>Các **POI** xuất hiện trên map cùng với các biểu tượng tương ứng của chúng. **POI** bao gồm công viên, trường học, v.v. cũng như các **POI** kinh doanh như cửa hàng, nhà hàng và khách sạn.
   <br/>Các **Object** xuất hiên trên **map** như các toàn nhà, các khối hình hộp, ...
 
@@ -91,3 +89,17 @@
   | **3** | **didTapPOI**                          | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
   | **4** | **didTapPOIWithPlaceID**               | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
   | **5** | **didTapPlaceWithName**                | Phát sinh khi người dùng touch vào **Place** trên **map** (đối với mapType là MFMapTypeRoadmap)                           |
+
+## Sự kiện layer và nguồn dữ liệu
+
+```swift
+func mapView(_ mapView: MFMapView!, didTap renderer: MFDirectionsRenderer!, routeIndex: UInt) {}
+func mapView(_ mapView: MFMapView!, didTap geoJSON: MFGeoJSON!, feature: MFGeoJSON.Feature!) {}
+func mapView(_ mapView: MFMapView!, didTapDataSourceFeature feature: MFDataSourceFeature!, location: CLLocationCoordinate2D) {}
+```
+
+- Directions Renderer: nhận renderer và chỉ số route được chạm.
+- GeoJSON: nhận layer và feature được chạm.
+- Data source: nhận feature của nguồn dữ liệu bản đồ và vị trí chạm. `MFDataSourceFeature` có `source`, `sourceLayer`, `layerType` (String) và `properties` (dictionary).
+
+Các callback tap, drag và info window sử dụng selector bắt đầu bằng `mapView:`.

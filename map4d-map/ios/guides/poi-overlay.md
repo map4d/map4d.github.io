@@ -1,38 +1,53 @@
 # POI Overlay
 
-POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ.<br>
-Các POI của POI overlay được ưu tiên hiển thị so với POI của iPostMap và chỉ hiển thị ở chế độ 2D.
+POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ.  
+Các POI của POI overlay được ưu tiên hiển thị so với POI của có sẵn của bản đồ.
 
-![POI Overlay](.././resources/poi-overlay.png)
+![POI Overlay](../resources/v1.5/poi-overlay.png)
 
 ## Add POI overlay
 
-Để thêm 1 lớp POI overlay vào map cần tạo mới 1 đối tượng của lớp [MFURLPOILayer](/guides/poi-overlay?id=mfurlpoilayer-class) sau đó set map cho POI overlay đó.
-Để tạo đối tượng [MFURLPOILayer](/guides/poi-overlay?id=mfurlpoilayer-class) thì cần phải implement [MFPOIURLConstructor](/guides/poi-overlay?id=mfurlpoilayer-class)
+Để thêm 1 lớp POI overlay vào map cần tạo mới 1 đối tượng của lớp [MFURLPOILayer](/guides/poi-overlay.md?id=api-poi-overlay-mfurlpoilayer-class) sau đó set map cho POI overlay đó.
+Để tạo đối tượng [MFURLPOILayer](/guides/poi-overlay.md?id=api-poi-overlay-mfurlpoilayer-class) thì cần phải implement [MFPOIURLConstructor](/guides/poi-overlay.md?id=api-poi-overlay-mfurlpoilayer-class)
 
-Implement **MFPOIURLConstructor** protocol yêu cầu 2 phương thức `getPOIUrlWith` và `parserPOIData`.<br>
-Trong đó:<br>
+Implement **MFPOIURLConstructor** protocol yêu cầu 2 phương thức `getPOIUrlWith` và `parserPOIData`.  
+Trong đó:  
 - getPOIUrlWith: Nhận vào các giá trị là toạ độ x, y và mức zoom của tile, kết quả là một kiểu [URL](https://developer.apple.com/documentation/foundation/url) chỉ đến rest api cung cấp dữ liệu POI theo tile.
-- parserPOIData: Nhận vào là dữ liệu được về từ api cung cấp bởi *getPOIUrlWith*, ta sẽ phải parser dữ liệu đó thành mảng các đối tượng [MFPOIData](/guides/poi-overlay?id=mfpoidata-class)
+- parserPOIData: Nhận vào là dữ liệu được về từ api cung cấp bởi *getPOIUrlWith*, ta sẽ phải parser dữ liệu đó thành mảng các đối tượng [MFPOIData](/guides/poi-overlay.md?id=api-poi-overlay-mfpoidata-class)
 
 ### Tạo mới POI overlay
 
-Đoạn code bên dưới hướng dẫn việc implement [MFPOIURLConstructor](/guides/poi-overlay?id=mfurlpoilayer-class) và sử dụng [MFURLPOILayer](/guides/poi-overlay?id=mfurlpoilayer-class) để hiển thị POI overlay lấy từ `poi-random.herokuapp.com`
+Đoạn code bên dưới hướng dẫn việc implement [MFPOIURLConstructor](/guides/poi-overlay.md?id=api-poi-overlay-mfurlpoilayer-class) và sử dụng [MFURLPOILayer](/guides/poi-overlay.md?id=api-poi-overlay-mfurlpoilayer-class) để hiển thị POI overlay lấy từ `poi-random.herokuapp.com`
 
 Implement **MFPOIURLConstructor**
 ```swift
+struct PositionJson : Codable {
+  var lat: Double = 0
+  var lng: Double = 0
+}
+
+struct POIJson : Codable {
+  var id: String?
+  var title: String?
+  var position: PositionJson?
+}
+
+struct POIsJson : Codable {
+  var pois: [POIJson]?
+}
+
 class POIURLConstructor : NSObject, MFPOIURLConstructor {
     func getPOIUrlWith(x: UInt, y: UInt, zoom: UInt) -> URL? {
         let poiApiUrl = "https://poi-random.herokuapp.com/poi/\(zoom)/\(x)/\(y)"
         return URL(string: poiApiUrl)
     }
-
+    
     func parserPOIData(_ data: String) -> [MFPOIData]? {
         do {
             var poiDatas:[MFPOIData] = []
             let decoder = JSONDecoder()
             let poisJson = try decoder.decode(POIsJson.self, from: data.data(using: .utf8)!)
-
+            
             guard let places = poisJson.pois else { return nil }
             for place in places {
                 let position = CLLocationCoordinate2DMake(place.position?.lat ?? 0, place.position?.lng ?? 0)
@@ -75,7 +90,7 @@ poiOverlay.map = nil
 
 ### Ẩn/Hiện POI Overlay
 
-Để ẩn/hiện POI overlay, ta set giá trị cho property `isHidden` của đối tượng.<br>
+Để ẩn/hiện POI overlay, ta set giá trị cho property `isHidden` của đối tượng.        
 **Chú ý:** Mặc dù POI overlay không hiển thị nhưng quá trình tải các POI vẫn diễn ra
 
 ```swift
@@ -84,7 +99,7 @@ poiOverlay.isHidden = true;
 
 ## Sự kiện đối với POI thuộc POI overlay
 
-Khi người dùng click POI thuộc POI overlay thì sẽ phát sinh sự kiện tương tự với POI của iPostMap, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của iPostMap.
+Khi người dùng click POI thuộc POI overlay thì sẽ phát sinh sự kiện tương tự với POI của bản đồ, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của bản đồ.
 
 ```swift
 func mapView(_ mapView: MFMapView!, didTapPOIWithPlaceID placeID: String!, name: String!, location: CLLocationCoordinate2D)
@@ -92,22 +107,20 @@ func mapView(_ mapView: MFMapView!, didTapPOIWithPlaceID placeID: String!, name:
 
 Xem thêm [Events](/guides/map-events)
 
-## API Reference
+---
 
-<a id="reference-poi-overlay"></a>
+## API Reference :id=api-poi-overlay
 
-## POI Overlay References
-
-## MFURLPOILayer class
+### MFURLPOILayer class :id=api-poi-overlay-mfurlpoilayer-class
 
 `MFURLPOILayer` class
 
-**Constructor**
+**Constructor** 
 
-Lớp `MFURLPOILayer` cho phép tạo đối tượng trong Swift *MFURLPOILayer* một cách tiện lợi
+Lớp `MFURLPOILayer` cung cấp một số phương thức static để tạo đối tượng *MFURLPOILayer* một cách tiện lợi
 ```swift
-let poiOverlay = MFURLPOILayer(urlConstructor: poiURLConstructor)
-let prefixedOverlay = MFURLPOILayer(urlConstructor: poiURLConstructor, prefixId: "poi-overlay-")
+convenience init(urlConstructor: MFPOIURLConstructor)
+convenience init(urlConstructor: MFPOIURLConstructor, prefixId: String?)
 ```
 
 - Parameters:
@@ -115,6 +128,7 @@ let prefixedOverlay = MFURLPOILayer(urlConstructor: poiURLConstructor, prefixId:
   - prefixId: [NSString](https://developer.apple.com/documentation/foundation/nsstring)
 
 Sử dụng
+
 ```swift
 let poiOverlay = MFURLPOILayer(urlConstructor: poiURLConstructor, prefixId: "poi-overlay-")
 ```
@@ -129,11 +143,11 @@ let poiOverlay = MFURLPOILayer(urlConstructor: poiURLConstructor, prefixId: "poi
 
 | Name         | Type      | Description                                                                            |
 |--------------|-----------|----------------------------------------------------------------------------------------|
-| **map**      | [MFMapView](/guides/map-options?id=mfmapview) | Map view sẽ hiển thị poi overlay |
+| **map**      | [MFMapView](/guides/map.md?id=api-map-mfmapview) | Map view sẽ hiển thị poi overlay |
 | **isHidden** | bool                                           | Ẩn/hiện poi overlay trên map |
 | **prefixId** | NSString                                       | Giá trị được thêm vào trước mỗi id của POI thuộc POI overlay |
 
-## MFPOIURLConstructor protocol
+### MFPOIURLConstructor protocol :id=api-poi-overlay-mfpoiurlconstructor-protocol
 
 `MFPOIURLConstructor` protocol
 
@@ -146,11 +160,11 @@ func parserPOIData(_ data: String) -> [MFPOIData]?
 
 Cần phải implement protocol này trước khi tạo đối tượng `MFURLPOILayer`
 
-## MFPOIData class
+### MFPOIData class :id=api-poi-overlay-mfpoidata-class
 
 `MFPOIData`class
 
-MFPOIData là object chứa thông tin của POI để iPostMap SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của mình thành mảng các POI data cung cấp cho iPostMap SDK hiển thị lên bản đồ.
+MFPOIData là object chứa thông tin của POI để iOS SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của mình thành mảng các POI data cung cấp cho iOS SDK hiển thị lên bản đồ.
 
 | Name             | Type      | Description                                                                            |
 |------------------|-----------|----------------------------------------------------------------------------------------|

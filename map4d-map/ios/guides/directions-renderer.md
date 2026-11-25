@@ -1,10 +1,10 @@
 # Directions Renderer
 
-> iPostMap Map SDK cung cấp lớp [MFDirectionsRenderer](/guides/directions-renderer?id=reference-directions-renderer) để dễ dàng hiển thị các chỉ đường lên bản đồ.
+> Map SDK cung cấp lớp [MFDirectionsRenderer](/guides/directions-renderer.md?id=api-directions-renderer) để dễ dàng hiển thị các chỉ đường lên bản đồ.
 
 ### 1. Thêm một Directions Renderer vào bản đồ
 
-Để thêm 1 Directions Renderer vào bản đồ, ta tạo mới một đối tượng `MFDirectionsRenderer` và set map cho đối tượng đó.<br>
+Để thêm 1 Directions Renderer vào bản đồ, ta tạo mới một đối tượng `MFDirectionsRenderer` và set map cho đối tượng đó.  
 Đoạn code sau vẽ một Directions Renderer có 2 route lên bản đồ:
 
 ```swift
@@ -31,7 +31,7 @@ renderer.destinationTitleColor = .brown
 renderer.map = mapView
 ```
 
-![Directions Renderer](.././resources/directions-renderer.jpg)
+![Directions Renderer](../resources/directions-renderer.jpg) 
 
 ### 2. Xóa Directions Renderer khỏi bản đồ
 
@@ -72,34 +72,33 @@ Bạn có thể dễ dàng tuỳ chỉnh **Directions Renderer** thông qua các
 
 ### 4. Sự kiện tap on Directions Renderer
 
-iPostMap SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.<br>
-Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.<br>
+iOS SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.  
+Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.  
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 
-  ```swift
+  ```swift 
   func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: UInt) {}
   ```
 
-## API Reference
+---
 
-<a id="reference-directions-renderer"></a>
-
-## Directions Renderer
+## API Reference :id=api-directions-renderer
 
 `MFDirectionsRenderer` class
 
-### Constructor
+#### Constructor :id=api-directions-renderer-constructor
 
-```swift
+```swift 
 let renderer = MFDirectionsRenderer()
 ```
 
-### Properties
+#### Properties :id=api-directions-renderer-properties
 
 | Name                    | Type                                                  | Description                                                                                    |
 |-------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------|
-| map                     | [MFMapView](/guides/map-options?id=mfmapview)              | Chỉ định map view sẽ hiển thị các chỉ đường hoặc xóa chỉ đường khỏi map (set bằng nil).        |
-| routes                  | [NSArray\<MFPath\>](/guides/coordinates?id=mfpath) | Mảng các MFPath xác định các chỉ đường cho Directions Renderer.                                |
+| map                     | [MFMapView](/guides/map.md?id=api-map-mfmapview)              | Chỉ định map view sẽ hiển thị các chỉ đường hoặc xóa chỉ đường khỏi map (set bằng nil).        |
+| zIndex                  | Float | Thứ tự hiển thị của Directions Renderer. |
+| routes                  | [NSArray\<MFPath\>](/guides/coordinates.md?id=api-coordinates-mfpath) | Mảng các MFPath xác định các chỉ đường cho Directions Renderer.                                |
 | activedIndex            | NSUInteger                                            | Chọn index của chỉ đường chính (trong trường hợp có nhiều chỉ đường).                          |
 | hideOriginPOI           | BOOL                                                  | Ẩn/hiện POI vị trí bắt đầu.                                                                    |
 | originPosition          | CLLocationCoordinate2D                                | Vị trí bắt đầu (nếu không thiết lập thì vị trí bắt đầu trùng với vị trí đầu của chỉ đường).    |
@@ -122,19 +121,20 @@ let renderer = MFDirectionsRenderer()
 | inactiveOutlineWidth    | CGFloat                                               | Chiều rộng viền của đường phụ.                                                                 |
 | inactiveOutlineColor    | UIColor                                               | Màu viền của đường phụ.                                                                        |
 
-### Methods
+#### Methods :id=api-directions-renderer-methods
 
 | Name              | Parameters        | Return value | Description                                                                     |
 |-------------------|-------------------|--------------|---------------------------------------------------------------------------------|
-| setRoutesWithJson | NSString          | `void`       | Set các chỉ đường bằng dữ liệu dạng json (lấy từ iPostMap API /sdk/route).         |
-| setDatas          | NSArray\<NSData\> | `void`       | Set các chỉ đường bằng mảng dữ liệu nhị phân `Data`. |
+| setRoutesWithJson | NSString          | `void`       | Set các chỉ đường bằng dữ liệu dạng json (lấy từ API /sdk/route).         |
+| setDatas          | NSArray\<NSData\> | `void`       | Set các chỉ đường bằng dữ liệu dạng binary data (lấy từ Service MFRoute). |
 
-### Delegate
+#### Delegate :id=api-directions-renderer-delegate
 
-iPostMap SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.<br>
-Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.<br>
+iOS SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.  
+Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.  
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 
-  ```swift
+  ```swift 
   func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: UInt) {}
   ```
+

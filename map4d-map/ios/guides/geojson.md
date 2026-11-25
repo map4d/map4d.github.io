@@ -1,12 +1,12 @@
 # GeoJSON Layer
 
-GeoJSON layer cho phép người dùng hiển thị dữ liệu địa lý theo định dạng [GeoJSON](https://geojson.org/) lên bản đồ iPostMap
+GeoJSON layer cho phép người dùng hiển thị dữ liệu địa lý theo định dạng [GeoJSON](https://geojson.org/) lên bản đồ
 
 ## 1. Thêm mới GeoJSON layer
 
-Để thêm 1 GeoJSON layer vào bản đồ, ta tạo 1 đối tượng [MFGeoJSON](/guides/geojson?id=reference-geojson) và set map cho đối tượng đó
+Để thêm 1 GeoJSON layer vào bản đồ, ta tạo 1 đối tượng [MFGeoJSON](/guides/geojson.md?id=api-geojson) và set map cho đối tượng đó
 
-```swift
+```swift 
 let geoJSON = MFGeoJSON(json: jsonString)
 geoJSON.map = mapView
 ```
@@ -15,64 +15,62 @@ geoJSON.map = mapView
 
 Để xóa GeoJSON layer khỏi bản đồ, ta set property `map` của đối tượng bằng `nil`
 
-```swift
+```swift 
 geoJSON.map = nil
 ```
 
 ## 3. Sự kiện trên GeoJSON layer
 
 Sự kiện trên GeoJSON layer được gọi khi người dùng tap vào vùng hiển thị của GeoJSON layer
-Giá trị trả về gồm đối tượng [MFGeoJSON](/guides/geojson?id=reference-geojson) và [Feature](/guides/geojson?id=mfgeojsonfeature-class) mà người dùng touch vào đó
+Giá trị trả về gồm đối tượng [MFGeoJSON](/guides/geojson.md?id=api-geojson) và [Feature](/guides/geojson.md?id=api-geojson-mfgeojsonfeature-class) mà người dùng touch vào đó
 
-```swift
+```swift 
 func mapView(_ mapView: MFMapView!, didTap geoJSON: MFGeoJSON!, feature: MFGeoJSON.Feature!) {}
 ```
 
 ## 4. Thay đổi icon mặc định cho Point của GeoJSON layer
 
-Để thay đổi icon mặc định cho Point của GeoJSON layer, ta set
+Để thay đổi icon mặc định cho Point của GeoJSON layer, ta set 
 
-```swift
+```swift 
 geoJSON.pointStyle.icon = UIImage(named: "image_name")
 ```
 
-## API Reference
+---
 
-<a id="reference-geojson"></a>
+## API Reference :id=api-geojson
 
-## GeoJSON reference
+### MFGeoJSON class :id=api-geojson-mfgeojson-class
 
-## MFGeoJSON class
+#### 1 Constructor :id=api-geojson-_1-constructor
 
-### 1 Constructor
-
-
-```swift
+```swift 
 let geoJSON = MFGeoJSON(json:"json string")
 ```
 
-#### Properties
+##### Properties :id=api-geojson-properties
 
 | Name            | Type                                                                   | Description                                                                  |
 |-----------------|:-----------------------------------------------------------------------|------------------------------------------------------------------------------|
-| **features**    | [MFGeoJSONFeature[]](/guides/geojson?id=mfgeojsonfeature-class)     | Danh sách các features                                                       |
-| **pointStyle**  | [MFGeoJSONPointStyle](/guides/geojson?id=mfgeojsonpointstyle-class) | Style cho points của GeoJSON                                                 |
-| **map**         | [MFMapView](/guides/map-options?id=mfmapview)                               | Chỉ định hiển thị **GeoJSON** trên **Map** hoặc xoá **GeoJSON** khỏi **Map** |
+| **features**    | [MFGeoJSONFeature[]](/guides/geojson.md?id=api-geojson-mfgeojsonfeature-class)     | Danh sách các features                                                       |
+| **pointStyle**  | [MFGeoJSONPointStyle](/guides/geojson.md?id=api-geojson-mfgeojsonpointstyle-class) | Style cho points của GeoJSON                                                 |
+| **zIndex** | Float | Thứ tự hiển thị của GeoJSON layer. |
+| **map**         | [MFMapView](/guides/map.md?id=api-map-mfmapview)                               | Chỉ định hiển thị **GeoJSON** trên **Map** hoặc xoá **GeoJSON** khỏi **Map** |
 
-## MFGeoJSONFeature class
+### MFGeoJSONFeature class :id=api-geojson-mfgeojsonfeature-class
 
-#### Properties
+##### Properties :id=api-geojson-properties-1
 
 | Name            | Type                                                                   | Description         |
 |-----------------|:-----------------------------------------------------------------------|---------------------|
-| **geometry**    | [MFGeoJSONGeometry](/guides/geojson?id=mfgeojsongeometry-interface) | Geometry            |
+| **geometry**    | [MFGeoJSONGeometry](/guides/geojson.md?id=api-geojson-mfgeojsongeometry-interface) | Geometry            |
 | **properties**  | NSDictionary                                                           | Geometry properties |
 
-## MFGeoJSONGeometry interface
+### MFGeoJSONGeometry interface :id=api-geojson-mfgeojsongeometry-interface
 
 | Name            | Type                                                                      | Description         |
 |-----------------|:--------------------------------------------------------------------------|---------------------|
-| **type    **    | [MFGeoJSONGeometryType](/guides/geojson?id=mfgeojsongeometrytype-enum) | Kiểu của geomtry, bao gồm `Point`, `MultiPoint`, `LineString`, `MultiLineString`, `Polygon`, `MultiPolygon` |
+| **type**    | [MFGeoJSONGeometryType](/guides/geojson.md?id=api-geojson-mfgeojsongeometrytype-enum) | Kiểu của geomtry, bao gồm `Point`, `MultiPoint`, `LineString`, `MultiLineString`, `Polygon`, `MultiPolygon`, `GeometryCollection` |
 
 ## MFGeoJSONGeometryType enum
 
@@ -94,4 +92,7 @@ Kiểu Swift: `MFGeoJSON.GeometryType`.
 
 | Name            | Type                                                               | Description             |
 |-----------------|:-------------------------------------------------------------------|-------------------------|
+| **rotation** | Double | Góc quay của icon. |
+| **groundAnchor** | CGPoint | Điểm neo của icon. |
+| **isFlat** | Bool | Icon nằm phẳng theo mặt đất. |
 | **icon**        | UIImage                                                            | Icon mặc định cho point |

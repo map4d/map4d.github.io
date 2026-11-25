@@ -30,14 +30,13 @@
   
   - Các điều khiển sau có thể được bật và tắt theo chương trình:
 
-    + **myLocationButton**: Điều khiển bật tắt nút myLocation mà iPostMap iOS SDK cung cấp.
+    + **myLocationButton**: Điều khiển bật tắt nút myLocation mà iOS SDK cung cấp.
     + **scrollGestures**: Điều khiển các cử chỉ cuộn được bật hay tắt. Nếu được bật, người dùng có thể vuốt để xoay **camera**.
     + **zoomGestures**: Điều khiển các cử chỉ thu phóng được bật hay tắt. Nếu được bật, người dùng có thể nhấn đúp, dùng hai ngón tay **thu hẹp hoặc mở rộng** để thay đổi mức **zoom** của **camera**.
     + **tiltGestures**: Điều khiển các cử chỉ nghiêng được bật hay tắt. Nếu được bật, người dùng có thể sử dụng hai ngón tay vuốt dọc xuống hoặc vuốt lên để nghiêng **camera**.
     + **rotateGestures**: Điều khiển xem các cử chỉ xoay được bật hay tắt. Nếu được bật, người dùng có thể sử dụng cử chỉ xoay hai ngón tay để xoay **camera**.
 
   - **Chú ý:** Bạn có thể bật hoặc tắt tất cả các điều khiển thông qua phương thức **setAllGesturesEnabled**
-
 
   ```swift
   mapView.settings.myLocationButton = true
@@ -49,7 +48,6 @@
   mapView.settings.setAllGesturesEnabled(true)
   ```
 
-
   ## 3. Các phương thức tương tác trên map
 
   #### Giới hạn mức zoom tối đa và tối thiểu
@@ -59,7 +57,7 @@
   ```swift
   mapView.setMinZoom(3.0, maxZoom: 20.0)
   ```
-  
+
     #### Lấy các tham số của camera
 
   **Lấy các tham số của camera như độ nghiêng, độ xoay, điểm quan sát, mức zoom hiện tại.**
@@ -74,7 +72,7 @@
 
   ## 4. Di chuyển map
 
-  **iPostMap iOS SDK** hỗ trợ người dùng di chuyển tới một vị trí **camera** mới thông qua 2 phương thức **animate** và **move**.
+  **iOS SDK** hỗ trợ người dùng di chuyển tới một vị trí **camera** mới thông qua 2 phương thức **animate** và **move**.
 
   **Phương thức animate**
 
@@ -88,4 +86,7 @@
   ```swift
   let cameraUpdate = MFCameraUpdate.setTarget(CLLocationCoordinate2D(latitude: 16.08795975082965, longitude: 108.22837829589844), zoom: 17)
   mapView.moveCamera(cameraUpdate)
+  mapView.moveCamera(cameraUpdate, duration: 1.0)
   ```
+
+  Có thể thiết lập `padding` trên `MFCameraPosition` hoặc khi tạo `MFCameraUpdate` để chừa vùng hiển thị cho các thành phần giao diện. `duration` có đơn vị giây.
