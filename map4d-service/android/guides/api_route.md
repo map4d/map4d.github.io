@@ -1,6 +1,6 @@
 # Directions
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_route>
+Services API: <https://docs.map4d.vn/map4d-service/api/#/api_route>
 
 > Tìm đường đi giữa các địa điểm.
 

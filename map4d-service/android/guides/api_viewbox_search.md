@@ -1,6 +1,6 @@
 # Viewbox Search
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_viewbox_search>
+Services API: <https://docs.map4d.vn/map4d-service/api/#/api_viewbox_search>
 
 > Tìm các địa điểm trong một vùng địa lý hình chữ nhật.
 

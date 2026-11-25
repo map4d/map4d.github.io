@@ -9,6 +9,6 @@ export enum MFLanguageResult {
 }
 ```
 
-Định nghĩa các loại ngôn ngữ chỉ đường mà Map4d API hỗ trợ:
+Định nghĩa các loại ngôn ngữ chỉ đường mà API hỗ trợ:
   - en: tiếng Anh
   - vi: tiếng Việt

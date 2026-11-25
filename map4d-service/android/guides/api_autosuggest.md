@@ -1,6 +1,6 @@
 # Auto Suggest
 
-Map4D Services API: <https://docs.map4d.vn/map4d-service/api/v1.0/#/api_autosuggest>
+Services API: <https://docs.map4d.vn/map4d-service/api/#/api_autosuggest>
 
 > Tự động đề xuất các địa điểm tìm kiếm khi người dùng gửi tên địa điểm không đầy đủ, hỗ trợ tìm kiếm với chuỗi kí tự viết tắt (ví dụ: nvl để tìm kiếm
 cho Nguyễn Văn Linh ...)
