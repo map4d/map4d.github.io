@@ -36,7 +36,7 @@ class BuildingURLConstructor : NSObject, MFBuildingURLConstructor {
       guard let places = poisJson.pois else { return nil }
       for place in places {
         guard let placeId = place.id else { continue }
-        let position = CLLocationCoordinate2DMake(place.position?.lat ?? 0, place.position?.lng ?? 0)
+        let position = CLLocationCoordinate2D(latitude: place.position?.lat ?? 0, longitude: place.position?.lng ?? 0)
         let model = "https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/models/5db6b4798b4711141457d8a9.obj"
         let texture = "https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/textures/5db6b4798b4711141457d8ab.jpg"
         let building = MFBuildingData(id: placeId, position: position, model: model, texture: texture)
@@ -109,7 +109,7 @@ convenience init(urlConstructor: MFBuildingURLConstructor, prefixId: String?)
 
 - Parameters:
   - urlConstructor: [MFBuildingURLConstructor](#mfbuildingurlconstructor-protocol) *required*
-  - prefixId: [NSString](https://developer.apple.com/documentation/foundation/nsstring)
+  - prefixId: [String](https://developer.apple.com/documentation/swift/string)
 
 Sử dụng
 
@@ -121,15 +121,15 @@ let buildingOverlay = MFURLBuildingLayer(urlConstructor: urlConstructor, prefixI
 
 | Name              | Parameters  | Return Value | Description                                                           |
 |-------------------|-------------|--------------|-----------------------------------------------------------------------|
-| **clearBuildingCache** | `none`      | `none`       | Xoá cache của đối tượng building overlay và load lại dữ liệu building theo tile từ server |
+| `clearBuildingCache()` | () | Void | Xoá cache của đối tượng building overlay và load lại dữ liệu building theo tile từ server |
 
 **Properties**
 
 | Name         | Type      | Description                                                                            |
 |--------------|-----------|----------------------------------------------------------------------------------------|
 | **map**      | [MFMapView](/guides/map.md?id=api-map-mfmapview) | Map view sẽ hiển thị building overlay |
-| **isHidden** | bool                                           | Ẩn/hiện building overlay trên map |
-| **prefixId** | NSString                                       | Giá trị được thêm vào trước mỗi id của Builing thuộc building overlay |
+| **isHidden** | Bool                                           | Ẩn/hiện building overlay trên map |
+| **prefixId** | String                                       | Giá trị được thêm vào trước mỗi id của Builing thuộc building overlay |
 
 ### MFBuildingURLConstructor protocol :id=api-building-overlay-mfbuildingurlconstructor-protocol
 `MFBuildingURLConstructor` protocol
@@ -150,19 +150,19 @@ MFBuildingData là object chứa thông tin của building để iOS SDK có th�
 
 | Name           | Type      | Description                                                                            |
 |----------------|-----------|----------------------------------------------------------------------------------------|
-| **id**         | NSString               | ID của building |
+| **id**         | String               | ID của building |
 | **position**   | CLLocationCoordinate2D | Vị trí hiển thị building trên bản đồ |
-| **name**       | NSString               | Tên của building  |
-| **scale**      | double                 | Tỉ lệ hiển thị của building so với kích thước thực tế |
-| **bearing**    | float                  | Góc quay của building khi được vẽ ra trên bản đồ (đơn vị: độ) |
-| **elevation**  | double                 | Độ cao của building so với mực nước biển (đơn vị: mét) |
-| **height**     | double                 | Chiều cao của building (đơn vị: mét) |
-| **model**      | NSString               | Đường dẫn URL để lấy dữ liệu model cho building |
-| **texture**    | NSString               | Đường dẫn URL để lấy dữ liệu texture cho building |
+| **name**       | String               | Tên của building  |
+| **scale**      | Double                 | Tỉ lệ hiển thị của building so với kích thước thực tế |
+| **bearing**    | Float                  | Góc quay của building khi được vẽ ra trên bản đồ (đơn vị: độ) |
+| **elevation**  | Double                 | Độ cao của building so với mực nước biển (đơn vị: mét) |
+| **height**     | Double                 | Chiều cao của building (đơn vị: mét) |
+| **model**      | String               | Đường dẫn URL để lấy dữ liệu model cho building |
+| **texture**    | String               | Đường dẫn URL để lấy dữ liệu texture cho building |
 | **coordinates**| [MFPath](/guides/coordinates.md?id=api-coordinates-mfpath)             | Một mảng vị trí CLLocationCoordinate2D để tạo một Building hình khối với mặt đáy của hình khối là mảng vị trí này. Kết hợp với height để tạo chiều cao |
-| **startDate**  | NSDate                 | Ngày bắt đầu hiển thị building |
-| **endDate**    | NSDate                 | Ngày kết thúc hiển thị building |
+| **startDate**  | Date                 | Ngày bắt đầu hiển thị building |
+| **endDate**    | Date                 | Ngày kết thúc hiển thị building |
 
 **Chú ý:**
-- Trường hợp dùng `model` nhưng `texture` là **`null`** thì building sẽ được tô màu trắng.
+- Trường hợp dùng `model` nhưng `texture` là **`nil`** thì building sẽ được tô màu trắng.
 - Trường hợp dùng `model` thì sẽ không dùng đến thuộc tính `coordinates`. Nếu set giá trị cho `coordinates` và cả `model` đồng thời thì sẽ ưu tiên lấy giá trị của `model` để tạo Building

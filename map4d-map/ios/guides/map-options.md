@@ -52,40 +52,40 @@ let styledMapView = MFMapView(frame: self.view.frame, mapID: MFMapID(identifier:
 
 | Name                       | Parameters              | Return value         | Description                                                                                                             |
 |----------------------------|-------------------------|----------------------|-------------------------------------------------------------------------------------------------------------------------|
-| **setMyLocationEnabled**   | Bool                    | void                 | Bật vị trí của thiết bị                                                                                                 |
-| **getMyLocation**          | none                    | CLLocation           | Lấy vị trí của thiết bị                                                                                                 |
-| **setPOIsEnabled**         | Bool                    | void                 | Cho phép hiển thị các **POI** có sẵn của **map** hay không                                                              |
-| **isPOIsEnabled**          | none                    | Bool                 | Kiểm tra các **POI** có sẵn của **map** được phép hiển thị hay không.                                                   |
-| **setBuildingsEnabled**    | Bool                    | void                 | Cho phép hiển thị các **Building** có sẵn của **map** trong chế độ 3D hay không.                                        |
-| **isBuildingsEnabled**     | none                    | Bool                 | Kiểm tra các **Building** có sẵn của **map** được phép hiển thị trong chế độ 3D hay không.                              |
-| **setSelectedBuildings**   | [String]?             | void                 | **Set** **high light** cho các **Building** có **id** nằm trong danh sách tham số truyền vào trong chế độ 3D.           |
-| **setMinZoom**             | Double, Double          | void                 | **Set** mức **zoom** nhỏ nhất và lớn nhất mà **map** có thể hiển thị.                                                   |
-| **clear** | none | Void | Xóa các đối tượng do ứng dụng thêm vào bản đồ. |
-| **setTime** | Date? | Void | Đặt thời gian hiển thị của bản đồ; truyền `nil` để dùng thời gian hiện tại. |
-| **enableWaterEffect** | Bool | Void | Bật hoặc tắt hiệu ứng nước. |
-| **cameraForBounds**        | [MFCoordinateBounds](/guides/coordinates?id=mfcoordinatebounds)                 | [MFCameraPosition](/guides/map-options?id=mfcameraposition)   | Tạo ra một thông tin **Camera** từ các tham số bạn truyền vào. |
-| **cameraForBounds**        | [MFCoordinateBounds](/guides/coordinates?id=mfcoordinatebounds) , UIEdgeInsets  | [MFCameraPosition](/guides/map-options?id=mfcameraposition)   | Tạo ra một thông tin **Camera** từ các tham số bạn truyền vào. |
-| **animateCamera**          | [MFCameraUpdate](/guides/map-options?id=mfcameraupdate)                         | none                 | **Animate** **camera** đến vị trí theo camera bạn truyền vào.        |
-| **moveCamera**             | [MFCameraUpdate](/guides/map-options?id=mfcameraupdate)                         | none                 | **Move** **camera** đến vị trí theo camera bạn truyền vào.           |
-| **moveCamera**             | MFCameraUpdate, duration: TimeInterval | Void | Di chuyển camera với thời gian chỉ định. |
-| **getBounds**              | none         | [MFCoordinateBounds](/guides/coordinates?id=mfcoordinatebounds)                 | Lấy khu vực hiển thị của map hiện tại.                               |
-| **metersForPoints**        | double                  | double               | Convert giá trị từ point sang mét |
-| **pointsForMeters**        | double                  | double               | Convert giá trị từ mét sang point |
-| **setBuildingsFallbackColor** | UIColor | Void | Đặt màu dự phòng cho building. |
-| **setMapID**               | [MFMapID](/guides/map-options?id=mfmapid) | void    | Set Map ID |
-| **setMapID** | MFMapID, completion: (String?, Error?) -> Void | Void | Đặt Map ID và nhận dữ liệu style hoặc lỗi qua callback. |
+| `setMyLocationEnabled(_:)`   | Bool                    | Void                 | Bật vị trí của thiết bị                                                                                                 |
+| `getMyLocation()`          | () | CLLocation? | Lấy vị trí của thiết bị                                                                                                 |
+| `setPOIsEnabled(_:)`         | Bool                    | Void                 | Cho phép hiển thị các **POI** có sẵn của **map** hay không                                                              |
+| `isPOIsEnabled()`          | () | Bool                 | Kiểm tra các **POI** có sẵn của **map** được phép hiển thị hay không.                                                   |
+| `setBuildingsEnabled(_:)`    | Bool                    | Void                 | Cho phép hiển thị các **Building** có sẵn của **map** trong chế độ 3D hay không.                                        |
+| `isBuildingsEnabled()`     | () | Bool                 | Kiểm tra các **Building** có sẵn của **map** được phép hiển thị trong chế độ 3D hay không.                              |
+| `setSelectedBuildings(_:)`   | [String]?             | Void                 | **Set** **high light** cho các **Building** có **id** nằm trong danh sách tham số truyền vào trong chế độ 3D.           |
+| `setMinZoom(_:maxZoom:)`             | Double, Double          | Void                 | **Set** mức **zoom** nhỏ nhất và lớn nhất mà **map** có thể hiển thị.                                                   |
+| `clear()` | () | Void | Xóa các đối tượng do ứng dụng thêm vào bản đồ. |
+| `setTime(_:)` | Date? | Void | Đặt thời gian hiển thị của bản đồ; truyền `nil` để dùng thời gian hiện tại. |
+| `enableWaterEffect(_:)` | Bool | Void | Bật hoặc tắt hiệu ứng nước. |
+| `camera(for:)`        | [MFCoordinateBounds](/guides/coordinates?id=mfcoordinatebounds)                 | [MFCameraPosition](/guides/map-options?id=mfcameraposition)? | Tạo ra một thông tin **Camera** từ các tham số bạn truyền vào. |
+| `camera(for:insets:)`        | [MFCoordinateBounds](/guides/coordinates?id=mfcoordinatebounds) , UIEdgeInsets  | [MFCameraPosition](/guides/map-options?id=mfcameraposition)? | Tạo ra một thông tin **Camera** từ các tham số bạn truyền vào. |
+| `animateCamera(_:)`          | [MFCameraUpdate](/guides/map-options?id=mfcameraupdate)                         | Void | **Animate** **camera** đến vị trí theo camera bạn truyền vào.        |
+| `moveCamera(_:)`             | [MFCameraUpdate](/guides/map-options?id=mfcameraupdate)                         | Void | **Move** **camera** đến vị trí theo camera bạn truyền vào.           |
+| `moveCamera(_:duration:)`             | MFCameraUpdate, duration: TimeInterval | Void | Di chuyển camera với thời gian chỉ định. |
+| `getBounds()`              | () | [MFCoordinateBounds](/guides/coordinates?id=mfcoordinatebounds)? | Lấy khu vực hiển thị của map hiện tại.                               |
+| `meters(forPoints:)`        | Double                  | Double               | Convert giá trị từ point sang mét |
+| `points(forMeters:)`        | Double                  | Double               | Convert giá trị từ mét sang point |
+| `setBuildingsFallbackColor(_:)` | UIColor | Void | Đặt màu dự phòng cho building. |
+| `setMapID(_:)`               | [MFMapID](/guides/map-options?id=mfmapid) | Void    | Set Map ID |
+| `setMapID(_:completion:)` | MFMapID, completion: (String?, Error?) -> Void | Void | Đặt Map ID và nhận dữ liệu style hoặc lỗi qua callback. |
 
 ### MFCameraPosition
 
 #### 1. Constructor
 
 ```swift
-init(target: CLLocationCoordinate2D, zoom: Double) {}
-init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double) {}
-init(target: CLLocationCoordinate2D, zoom: Double, bearing: Double) {}
-init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double) {}
-init(target: CLLocationCoordinate2D, zoom: Double, padding: UIEdgeInsets) {}
-init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double, padding: UIEdgeInsets) {}
+init(target: CLLocationCoordinate2D, zoom: Double)
+init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double)
+init(target: CLLocationCoordinate2D, zoom: Double, bearing: Double)
+init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double)
+init(target: CLLocationCoordinate2D, zoom: Double, padding: UIEdgeInsets)
+init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double, padding: UIEdgeInsets)
 ```
 
 #### 2. Properties
@@ -93,26 +93,26 @@ init(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double
 | Name                       | Type                                                                            |
 |----------------------------|:--------------------------------------------------------------------------------|
 | **target**                 | CLLocationCoordinate2D                                                          |
-| **zoom**                   | double                                                                          |
-| **bearing**                | double                                                                          |
+| **zoom**                   | Double                                                                          |
+| **bearing**                | Double                                                                          |
 | **padding**                | UIEdgeInsets |
-| **tilt**                   | double                                                                          |
+| **tilt**                   | Double                                                                          |
 
 ### MFCameraUpdate
 
 #### Public static member functions
 
 ```swift
-class func fit(_ bounds: MFCoordinateBounds?) -> MFCameraUpdate? {}
-class func fit(_ bounds: MFCoordinateBounds?, with edgeInsets: UIEdgeInsets) -> MFCameraUpdate? {}
-class func setTarget(_ target: CLLocationCoordinate2D) -> MFCameraUpdate? {}
-class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double) -> MFCameraUpdate? {}
-class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, tilt: Double) -> MFCameraUpdate? {}
-class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, bearing: Double) -> MFCameraUpdate? {}
-class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double) -> MFCameraUpdate? {}
-class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, padding: UIEdgeInsets) -> MFCameraUpdate? {}
-class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double, padding: UIEdgeInsets) -> MFCameraUpdate? {}
-class func setCamera(_ camera: MFCameraPosition?) -> MFCameraUpdate? {}
+class func fit(_ bounds: MFCoordinateBounds?) -> MFCameraUpdate?
+class func fit(_ bounds: MFCoordinateBounds?, with edgeInsets: UIEdgeInsets) -> MFCameraUpdate?
+class func setTarget(_ target: CLLocationCoordinate2D) -> MFCameraUpdate?
+class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double) -> MFCameraUpdate?
+class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, tilt: Double) -> MFCameraUpdate?
+class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, bearing: Double) -> MFCameraUpdate?
+class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double) -> MFCameraUpdate?
+class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, padding: UIEdgeInsets) -> MFCameraUpdate?
+class func setTarget(_ target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double, padding: UIEdgeInsets) -> MFCameraUpdate?
+class func setCamera(_ camera: MFCameraPosition?) -> MFCameraUpdate?
 ```
 
 ### MFUISettings
@@ -131,7 +131,7 @@ class func setCamera(_ camera: MFCameraPosition?) -> MFCameraUpdate? {}
 
 | Name                       | Parameters                | Return value         | Description                                                                         |
 |----------------------------|:-------------------------:|:--------------------:|-------------------------------------------------------------------------------------|
-| **setAllGesturesEnabled**  | Bool                      | void                 | Bật hoặc tắt tất cả cử chỉ tương tác với **map**                                    |
+| `setAllGesturesEnabled(_:)`  | Bool                      | Void                 | Bật hoặc tắt tất cả cử chỉ tương tác với **map**                                    |
 
 ### MFMapType
 

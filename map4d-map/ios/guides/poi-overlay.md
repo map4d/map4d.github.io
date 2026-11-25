@@ -50,7 +50,7 @@ class POIURLConstructor : NSObject, MFPOIURLConstructor {
             
             guard let places = poisJson.pois else { return nil }
             for place in places {
-                let position = CLLocationCoordinate2DMake(place.position?.lat ?? 0, place.position?.lng ?? 0)
+                let position = CLLocationCoordinate2D(latitude: place.position?.lat ?? 0, longitude: place.position?.lng ?? 0)
                 let poi = MFPOIData(id: place.id ?? "", position: position, title: place.title)
                 poi.color = .blue
                 poi.type = "park"
@@ -82,7 +82,7 @@ poiOverlay.map = mapView
 
 ### Remove POI overlay
 
-Để xóa POI overlay khỏi map, ta gọi hàm `setMap` và truyền vào giá trị `null`
+Để xóa POI overlay khỏi map, ta gán `nil` cho thuộc tính `map`
 
 ```swift
 poiOverlay.map = nil
@@ -125,7 +125,7 @@ convenience init(urlConstructor: MFPOIURLConstructor, prefixId: String?)
 
 - Parameters:
   - urlConstructor: [MFPOIURLConstructor](#mfpoiurlconstructor-protocol) *required*
-  - prefixId: [NSString](https://developer.apple.com/documentation/foundation/nsstring)
+  - prefixId: [String](https://developer.apple.com/documentation/swift/string)
 
 Sử dụng
 
@@ -137,15 +137,15 @@ let poiOverlay = MFURLPOILayer(urlConstructor: poiURLConstructor, prefixId: "poi
 
 | Name              | Parameters  | Return Value | Description                                                           |
 |-------------------|-------------|--------------|-----------------------------------------------------------------------|
-| **clearPOICache** | `none`      | `none`       | Xoá cache của đối tượng poi overlay và load lại dữ liệu poi từ server |
+| `clearPOICache()` | () | Void | Xoá cache của đối tượng poi overlay và load lại dữ liệu poi từ server |
 
 **Properties**
 
 | Name         | Type      | Description                                                                            |
 |--------------|-----------|----------------------------------------------------------------------------------------|
 | **map**      | [MFMapView](/guides/map.md?id=api-map-mfmapview) | Map view sẽ hiển thị poi overlay |
-| **isHidden** | bool                                           | Ẩn/hiện poi overlay trên map |
-| **prefixId** | NSString                                       | Giá trị được thêm vào trước mỗi id của POI thuộc POI overlay |
+| **isHidden** | Bool                                           | Ẩn/hiện poi overlay trên map |
+| **prefixId** | String                                       | Giá trị được thêm vào trước mỗi id của POI thuộc POI overlay |
 
 ### MFPOIURLConstructor protocol :id=api-poi-overlay-mfpoiurlconstructor-protocol
 
@@ -168,10 +168,10 @@ MFPOIData là object chứa thông tin của POI để iOS SDK có thể hiểu 
 
 | Name             | Type      | Description                                                                            |
 |------------------|-----------|----------------------------------------------------------------------------------------|
-| **id**           | NSString               | ID của POI |
+| **id**           | String               | ID của POI |
 | **position**     | CLLocationCoordinate2D | Vị trí toạ độ của POI hiển thị trên bản đồ |
-| **title**        | NSString               | Tiêu đề của POI  |
+| **title**        | String               | Tiêu đề của POI  |
 | **color**        | UIColor                | Màu cho icon (nếu sử dụng `type`) và tiêu đề của POI |
-| **type**         | NSString               | Kiểu của POI *("bank", "atm", "park", ...)*, tuỳ thuộc vào kiểu mà POI có icon tương ứng  |
-| **iconUrl**      | NSURL                  | Đường dẫn để lấy icon cho POI. Nếu option này được set giá trị thì hình ảnh của POI sẽ lấy theo URL này mà không cần quan tâm tới option type |
-| **zIndex**       | float                  | Độ ưu tiên hiển thị của POI đối với POI khác  |
+| **type**         | String               | Kiểu của POI *("bank", "atm", "park", ...)*, tuỳ thuộc vào kiểu mà POI có icon tương ứng  |
+| **iconUrl**      | URL                  | Đường dẫn để lấy icon cho POI. Nếu option này được set giá trị thì hình ảnh của POI sẽ lấy theo URL này mà không cần quan tâm tới option type |
+| **zIndex**       | Float                  | Độ ưu tiên hiển thị của POI đối với POI khác  |

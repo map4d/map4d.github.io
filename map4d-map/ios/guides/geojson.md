@@ -52,27 +52,27 @@ let geoJSON = MFGeoJSON(json:"json string")
 
 | Name            | Type                                                                   | Description                                                                  |
 |-----------------|:-----------------------------------------------------------------------|------------------------------------------------------------------------------|
-| **features**    | [MFGeoJSONFeature[]](/guides/geojson.md?id=api-geojson-mfgeojsonfeature-class)     | Danh sách các features                                                       |
-| **pointStyle**  | [MFGeoJSONPointStyle](/guides/geojson.md?id=api-geojson-mfgeojsonpointstyle-class) | Style cho points của GeoJSON                                                 |
+| **features**    | [[MFGeoJSON.Feature]](/guides/geojson.md?id=api-geojson-mfgeojsonfeature-class)     | Danh sách các features                                                       |
+| **pointStyle**  | [MFGeoJSON.PointStyle](/guides/geojson.md?id=api-geojson-mfgeojsonpointstyle-class) | Style cho points của GeoJSON                                                 |
 | **zIndex** | Float | Thứ tự hiển thị của GeoJSON layer. |
 | **map**         | [MFMapView](/guides/map.md?id=api-map-mfmapview)                               | Chỉ định hiển thị **GeoJSON** trên **Map** hoặc xoá **GeoJSON** khỏi **Map** |
 
-### MFGeoJSONFeature class :id=api-geojson-mfgeojsonfeature-class
+### MFGeoJSON.Feature class :id=api-geojson-mfgeojsonfeature-class
 
 ##### Properties :id=api-geojson-properties-1
 
 | Name            | Type                                                                   | Description         |
 |-----------------|:-----------------------------------------------------------------------|---------------------|
-| **geometry**    | [MFGeoJSONGeometry](/guides/geojson.md?id=api-geojson-mfgeojsongeometry-interface) | Geometry            |
-| **properties**  | NSDictionary                                                           | Geometry properties |
+| **geometry**    | [MFGeoJSON.Geometry](/guides/geojson.md?id=api-geojson-mfgeojsongeometry-interface) | Geometry            |
+| **properties**  | [String: NSObject]?                                                           | Geometry properties |
 
-### MFGeoJSONGeometry interface :id=api-geojson-mfgeojsongeometry-interface
+### MFGeoJSON.Geometry protocol :id=api-geojson-mfgeojsongeometry-interface
 
 | Name            | Type                                                                      | Description         |
 |-----------------|:--------------------------------------------------------------------------|---------------------|
-| **type**    | [MFGeoJSONGeometryType](/guides/geojson.md?id=api-geojson-mfgeojsongeometrytype-enum) | Kiểu của geomtry, bao gồm `Point`, `MultiPoint`, `LineString`, `MultiLineString`, `Polygon`, `MultiPolygon`, `GeometryCollection` |
+| **type**    | [MFGeoJSON.GeometryType](/guides/geojson.md?id=api-geojson-mfgeojsongeometrytype-enum) | Kiểu của geomtry, bao gồm `Point`, `MultiPoint`, `LineString`, `MultiLineString`, `Polygon`, `MultiPolygon`, `GeometryCollection` |
 
-## MFGeoJSONGeometryType enum
+## MFGeoJSON.GeometryType enum :id=api-geojson-mfgeojsongeometrytype-enum
 
 Kiểu Swift: `MFGeoJSON.GeometryType`.
 
@@ -86,7 +86,7 @@ Kiểu Swift: `MFGeoJSON.GeometryType`.
 | `.multiPolygon` | MultiPolygon |
 | `.geometryCollection` | GeometryCollection |
 
-## MFGeoJSONPointStyle class
+## MFGeoJSON.PointStyle class :id=api-geojson-mfgeojsonpointstyle-class
 
 #### Properties
 

@@ -88,7 +88,7 @@
   | **2** | **didTapBuildingWithBuildingID**       | Phát sinh khi người dùng touch vào **Building** trên **map**                                                              |
   | **3** | **didTapPOI**                          | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
   | **4** | **didTapPOIWithPlaceID**               | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
-  | **5** | **didTapPlaceWithName**                | Phát sinh khi người dùng touch vào **Place** trên **map** (đối với mapType là MFMapTypeRoadmap)                           |
+  | **5** | **didTapPlaceWithName**                | Phát sinh khi người dùng touch vào **Place** trên **map** (đối với mapType là .roadmap)                           |
 
 ## Sự kiện layer và nguồn dữ liệu
 
@@ -102,4 +102,4 @@ func mapView(_ mapView: MFMapView!, didTapDataSourceFeature feature: MFDataSourc
 - GeoJSON: nhận layer và feature được chạm.
 - Data source: nhận feature của nguồn dữ liệu bản đồ và vị trí chạm. `MFDataSourceFeature` có `source`, `sourceLayer`, `layerType` (String) và `properties` (dictionary).
 
-Các callback tap, drag và info window sử dụng selector bắt đầu bằng `mapView:`.
+Các callback tap, drag và info window được triển khai qua các phương thức `mapView(_:didTap:)`, `mapView(_:didDrag:)` và `mapView(_:didTapInfoWindowOf:)`.
