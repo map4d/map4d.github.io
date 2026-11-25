@@ -123,7 +123,7 @@ https://api.ipostmap.vn/sdk/route?key={key}&origin={origin}&destination={destina
 | snappedWaypoints | No       | Danh sách các điểm đi qua trên đường, từ địa điểm bắt đầu và điểm đi qua tới điểm kết thúc.                                                       |
 | waypointOrder    | No       | Danh sách thứ tự đi qua các điểm `points` đã được sắp xếp theo thứ tự tối ưu hóa. Số thứ tự được đếm từ 0 theo thứ tự các điểm `points` tại input.|
 
-[![Route](../resources/route.png)](https://ipostmap.vn)
+[![Route](resources/route.png)](https://ipostmap.vn)
 
 **Ví dụ**
 <iframe src="./examples/v1.0/route.html" height="600px"> </iframe>

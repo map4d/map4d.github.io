@@ -4,7 +4,7 @@ IPostMap API cung cấp dữ liệu nền địa lý ở dạng "raster".
 Phương thức: **GET**
 
 Bản đồ nền
-[![Tile](../resources/tile.png)](https://ipostmap.vn)
+[![Tile](resources/tile.png)](https://ipostmap.vn)
 
 ## 1. Input (Đầu vào)
 ```
@@ -12,7 +12,7 @@ https://api.ipostmap.vn/sdk/tile/raster/{z}/{x}/{y}?key={key}&mode={mode}
 ```
 | Parameter | Required | Description                                                                                                                                                                       |
 |-----------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. Truy cập: https://map.ipostmap.vn/user/my-access-key/add để tạo key. |
+| key       | **Yes**  | apiKey - một mã định danh để xác thực các yêu cầu liên quan đến projects dùng trong việc sử dụng và thanh toán. <br>Truy cập: https://map.ipostmap.vn/developer/key/add để tạo key. |
 | z         | **Yes**  | Mức zoom của map.                                                                                                                                                                 |
 | x         | **Yes**  | Tọa độ x (Giá trị x).                                                                                                                                                             |
 | y         | **Yes**  | Tọa độ y (Giá trị y).                                                                                                                                                             |
