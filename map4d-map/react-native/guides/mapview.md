@@ -1,6 +1,6 @@
-# iPostMap Map React Component
+# Map View React Component
 
-> iPostMap React Native cung cấp `MFMapView` dưới dạng một React Component để hiển thị ipostmap.
+> Map React Native SDK cung cấp `MFMapView` dưới dạng một React Component để hiển thị bản đồ.
 
 
 ## MFMapView Component
@@ -10,24 +10,22 @@
 | No. | Name                    | Type                        | Description                                                                                                                   |
 |:---:|-------------------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 |  1  | camera                  | [CameraShape](#CameraShape) | Vị trí của camera trên bản đồ.                                                                                                |
-|  2  | mapType                 | string                      | Kiểu hiển thị của bản đồ, `roadmap`, `raster`, `satellite` hoặc `map3d`                                                       |
-|  3 | mapID                   | string                      | Set mapID cho bản đồ. Sử dụng để tùy chỉnh [style](https://map.ipostmap.vn/developer/mapstyle).                                   |
+|  2  | mapType                 | string                      | Kiểu hiển thị của bản đồ, `roadmap`, `satellite` hoặc `hybrid`                                                                |
+|  3  | mapID                   | string                      | Set mapID cho bản đồ. Sử dụng để tùy chỉnh [style](https://map.ipostmap.vn/developer/mapstyle)                                   |
+|  3  | mapStyle                | string                      | Set map style cho bản đồ bằng json string                                                                                     |
 |  4  | showsMyLocationButton   | bool                        | Ẩn hoặc hiển thị nút vị trí của tôi                                                                                           |
 |  5  | showsMyLocation         | bool                        | Ẩn hoặc hiển thị vị trí của tôi.<br>Bật tính năng này yêu cầu thêm quyền vị trí đối với cả Android và iOS.                    |
-|  6  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D của iPostMap (ở chế độ 3D).                                                                    |
-|  7  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm của iPostMap (ở chế độ 2D).                                                                        |
+|  6  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D trên bản đồ.                                                                    |
+|  7  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm trên bản đồ.                                                                        |
 |  8  | onMapReady              | func                        | Được gọi khi bản đồ sẵn sàng để sử dụng.                                                                                      |
 |  9  | [onPress](#onPress)     | func                        | Được gọi khi người dùng tap trên bản đồ (không phải tap vào địa điểm, building hay annotations).                              |
-|  10  | [onPoiPress](#onPoiPress)                 | func      | Được gọi khi người dùng tap vào địa điểm trên bản đồ (không phải POI annotation)                                             |
+|  10 | [onPoiPress](#onPoiPress)                 | func      | Được gọi khi người dùng tap vào địa điểm trên bản đồ (không phải POI annotation)                                              |
 |  11 | [onBuildingPress](#onBuildingPress)       | func      | Được gọi khi người dùng tap vào đối tượng 3D trên bản đồ (không phải building annotation)                                     |
 |  12 | [onPlacePress](#onPlacePress)             | func      | Được gọi khi người dùng tap vào place text trên bản đồ (đối với mapType là roadmap)                                           |
-| ~13~| ~onModeChange~ *(removed)*                | ~func~    | ~Được gọi khi bản đồ chuyển từ 2D sang 3D và ngược lại.~                                                                      |
 |  14 | [onCameraMove](#onCameraMove)             | func      | Được gọi liên tục khi camera di chuyển.                                                                                       |
 |  15 | [onCameraMoveStart](#onCameraMoveStart)   | func      | Được gọi khi camera bắt đầu di chuyển.                                                                                        |
 |  16 | [onCameraIdle](#onCameraIdle)             | func      | Được gọi khi camera di chuyển kết thúc,<br>không có hoạt động nào đang chờ xử lý và người dùng đã ngừng tương tác với bản đồ. |
 |  17 | [onMyLocationButtonPress](#onMyLocationButtonPress) | func | Được gọi khi người dùng chạm vào nút vị trí của tôi                                                                      |
-| ~18~| ~onShouldChangeMapMode~ *(removed)*       | ~func~    | ~Được gọi khi mức zoom của bản đồ thay đổi từ 16-> 17 và ngược lại (mức chỉ có thể hiển thị 2D và mức có thể hiển thị 3D)~    |
-|  19 | [onReachLimitedZoom](#onReachLimitedZoom) | func      | Được gọi khi người dùng thao tác zoom trên bản đồ đạt tới mức zoom giới hạn (max zoom, min zoom hoặc mức zoom 17 ở chế độ 3D) |
 |  20 | [onDataSourceFeaturePress](#onDataSourceFeaturePress) | func | Được gọi khi người dùng tap và đối tượng data source tùy chỉnh từ style                                                |
 |  21 | zoomGesturesEnabled     | bool                        | Bật/Tắt chức năng người dùng có thể zoom map. Mặc định là `true`                                                              |
 |  22 | scrollGesturesEnabled   | bool                        | Bật/Tắt thao tác người dùng có thể di chuyển map. Mặc định là `true`                                                          |
@@ -44,8 +42,6 @@
 |  4  | cameraForBounds    | [CameraShape](#CameraShape)       | [BoundsData](#BoundsData) `bounds`   | Lấy giá trị camera đối với `bounds`                                     |
 |  5  | fitBounds          |                                   | [BoundsData](#BoundsData) `bounds`   | Di chuyển camera đến ví trí thích hợp với `bounds`                      |
 |  6  | getBounds          | [BoundsData](#BoundsData)         |                                      | Lấy vùng hiển thị hiện tại của bản đồ.                                  |
-|  7  | ~is3DMode~ *(deprecated)*     | bool                   |                                      | Kiểm tra mode hiện tại của bản đồ có phải là 3D hay không               |
-|  8  | ~enable3DMode~ *(deprecated)* |                        | bool `enable`                        | Set chế độ 2D, 3D cho bản đồ, `true` thì sẽ hiển thị bản đồ ở chế độ 3D |
 |  9  | setTime            |                                   | string                               | Set time cho bản đồ                                                     |
 |  10 | coordinateForPoint | [CoordinateData](#CoordinateData) | [PointData](#PointData)              | Convert tọa độ màn hình x,y sang tọa độ kinh độ, vĩ độ                  |
 |  11 | pointForCoordinate | [PointData](#PointData)           | [CoordinateData](#CoordinateData)    | Convert tọa độ kinh độ, vĩ độ sang tọa độ màn hình x,y                  |
@@ -189,7 +185,7 @@ Trong đó:
   - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
   - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
   - poi: object chứa thông tin địa điểm mà người dùng tap trên bản đồ:
-    + id: id của địa điểm, dùng để lấy thêm thông tin thông qua Map4d API
+    + id: id của địa điểm, dùng để lấy thêm thông tin thông qua API
     + title: tên của địa điểm
     + location: vị trí của địa điểm hiển thị trên bản đồ, theo hệ tọa độ địa lý.
 
@@ -224,7 +220,7 @@ Trong đó:
   - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
   - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
   - building: object chứa thông tin đối tượng 3d mà người dùng tap trên bản đồ:
-    + id: id của đối tượng 3d, dùng để lấy thêm thông tin thông qua Map4d API
+    + id: id của đối tượng 3d, dùng để lấy thêm thông tin thông qua API
     + name: tên của đối tượng 3d
     + location: vị trí của đối tượng 3d hiển thị trên bản đồ, theo hệ tọa độ địa lý.
 
@@ -344,17 +340,6 @@ Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện 
 ```js
 {
   action: "my-location-button-press"
-}
-```
-#### onReachLimitedZoom
-
-Được gọi khi người dùng thao tác zoom trên bản đồ đạt tới mức zoom giới hạn (max zoom, min zoom hoặc mức zoom 17 ở chế độ 3D).  
-Giá trị `nativeEvent` trả về của đối tượng event khi sự kiện `onReachLimitedZoom` được gọi là một object xác định mức zoom giới hạn, có dạng như sau:
-
-```js
-{
-  action: "limited-zoom",
-  zoom: number
 }
 ```
 

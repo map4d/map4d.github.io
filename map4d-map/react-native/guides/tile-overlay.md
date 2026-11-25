@@ -1,17 +1,17 @@
 # Tile Overlay
 
-> Tile Overlay là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của iPostMap
+> Tile Overlay là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của bản đồ
 
-![Tile Overlay](../../resources/tile-overlay.jpeg)
+![Tile Overlay](../resources/tile-overlay.jpeg)
 
 ## MFTileOverlay
 
-iPostMap SDK cung cấp một react view MFTileOverlay để hiển thị tile overlay lên bản đồ.  
+Map SDK cung cấp một react view MFTileOverlay để hiển thị tile overlay lên bản đồ.  
 
 ### Usage
-Để sử dụng, ta import `MFTileOverlay` từ thư viện `react-native-map4d-map` như sau:
+Để sử dụng, ta import `MFTileOverlay` từ thư viện `react-native-ipostmap` như sau:
 ```javascript
-import { MFTileOverlay } from 'react-native-map4d-map';
+import { MFTileOverlay } from 'react-native-ipostmap';
 ```
 Sau đó add vào [MFMapView](guides/mapview.md) như 1 subview:
 ```javascript

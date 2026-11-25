@@ -1,14 +1,14 @@
 # Directions Renderer
 
-> iPostMap Map SDK cung cấp lớp **MFDirectionsRenderer** để dễ dàng hiển thị các chỉ đường lên bản đồ.
+> Map SDK cung cấp lớp **MFDirectionsRenderer** để dễ dàng hiển thị các chỉ đường lên bản đồ.
 
 ## MFDirectionsRenderer
 
-![Directions Renderer](../../resources/directions-renderer.png)
+![Directions Renderer](../resources/directions-renderer.png)
 
 Sử dụng:
 ```javascript
-import { MFDirectionsRenderer } from 'react-native-map4d-map';
+import { MFDirectionsRenderer } from 'react-native-ipostmap';
 ```
 
 ### Add Directions Renderer
@@ -70,7 +70,7 @@ render() {
 | Name                  | Type | Description |
 |-----------------------|---|---|
 | routes                | array[array[[CoordinateData](#CoordinateData)]]      | Mảng các mảng tọa độ thể hiện chỉ đường sẽ được hiển thị lên bản đồ. |
-| directions            | string | Chuỗi json kết quả tìm đường bằng [Map4d Service API](https://api.ipostmap.vn/sdk/docs/index.html) (Get Route).<br>Nếu vừa set cả 2 props `routes` và `directions` thì sẽ ưu tiên hiển thị chỉ đường từ `routes`. |
+| directions            | string | Chuỗi json kết quả tìm đường bằng [Service API](https://api.ipostmap.vn/sdk/docs/index.html) (Get Route).<br>Nếu vừa set cả 2 props `routes` và `directions` thì sẽ ưu tiên hiển thị chỉ đường từ `routes`. |
 | activedIndex          | number                                               | Chỉ mục chính của tuyến đường trong `routes` hoặc `directions`. Mặc định là 0. |
 | activeStrokeWidth     | number                                               | Kích thước của tuyến đường chính (xác định bằng `activedIndex`). |
 | activeStrokeColor     | [ColorPropType](https://reactnative.dev/docs/colors) | Màu của tuyến đường chính. |
@@ -89,7 +89,7 @@ render() {
 | Name                       | Parameters    | Description                                                                                                                            |
 |----------------------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------|
 | **setRoutes** *void*       | routes: array[array[[CoordinateData](#CoordinateData)]] | Set các tuyến đường dưới dạng mảng các mảng tọa độ lat, lng.                                 |
-| **setDirections** *void*   | json: string  | Set các tuyến đường dưới dạng json string từ kết quả trả về từ [Map4d Service API](https://api.ipostmap.vn/sdk/docs/index.html) Get Route |
+| **setDirections** *void*   | json: string  | Set các tuyến đường dưới dạng json string từ kết quả trả về từ [Service API](https://api.ipostmap.vn/sdk/docs/index.html) Get Route |
 | **setActivedIndex** *void* | index: number | Set chỉ mục tuyến đường chính.                                                                                                         |
 
 ### Object Types

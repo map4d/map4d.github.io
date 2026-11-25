@@ -1,23 +1,23 @@
 # iPostMap React Native
 [![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-reactnative-61dafb.svg)](https://reactnative.dev/)
-[![npm](https://img.shields.io/npm/v/react-native-map4d-map)](https://www.npmjs.com/package/react-native-map4d-map)
+[![npm](https://img.shields.io/npm/v/react-native-ipostmap)](https://www.npmjs.com/package/react-native-ipostmap)
 
 
-> **iPostMap React Native** cung cấp iPostMap SDK cho cả thiết bị [Android](https://docs.ipostmap.vn/map4d-map/android/) và [iOS](https://docs.ipostmap.vn/map4d-map/android/), cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
-> iPostMap React Native dựa trên cơ chế của React Native để bổ sung các màn hình hiển thị cho Android và iOS.
+> **iPostMap React Native** cung cấp iPostMap SDK cho cả thiết bị  Android và iOS, cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
+> Thư viện dựa trên cơ chế của React Native để bổ sung các màn hình hiển thị cho Android và iOS.
 
 ## Getting Started
 
 ### Installation
 
-Để sử dụng iPostMap Rect Native, chạy lệnh sau để thêm `react-native-map4d-map` vào file package.json
+Để sử dụng iPostMap Rect Native, chạy lệnh sau để thêm `react-native-ipostmap` vào file package.json
 
 ```shell
-npm install react-native-map4d-map --save
+npm i react-native-ipostmap
 ```
 
-Import `react-native-map4d-map` vào project files.
+Import `react-native-ipostmap` vào project files.
 
 ```js
 import {
@@ -28,20 +28,20 @@ import {
   MFPolygon,
   MFPOI,
   MFDirectionsRenderer
-} from 'react-native-map4d-map'
+} from 'react-native-ipostmap'
 ```
 
 ### Phiên bản Android/iOS hỗ trợ
 
 * Android: yêu cầu `Android SDK 21` trở lên
-* iOS: yêu cầu phiên bản `iOS 11.0` trở lên
+* iOS: yêu cầu phiên bản `iOS 13.0` trở lên
 
 ### API key
 
-API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng iPostMap SDK.  
+API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng bản đồ.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
-Tạo API key tại địa chỉ: <https://map.ipostmap.vn/developer/key/>
+Tạo API key tại trang nhà phát triển của iPostMap <https://map.ipostmap.vn/developer/key/> *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
 
 #### Thiết lập API key cho Android
 
@@ -51,7 +51,7 @@ Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
         <meta-data
-            android:name="vn.ipostmap.Map.ACCESS_KEY"
+            android:name="vn.map4d.map.ACCESS_KEY"
             android:value="YOUR_KEY_HERE"/>
     </application>
 </manifest>
@@ -65,7 +65,7 @@ allprojects {
     repositories {
         // ...
         maven {
-            url = "https://packages.ipostmap.vn/repository/maven-public"
+            url = "https://packages.map4d.vn/repository/maven-public"
         }
     }
 }
@@ -90,13 +90,13 @@ android {
 Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
 
 ```xml
-<key>iPostMapAccessKey</key>
+<key>Map4dMapAccessKey</key>
 <string>YOUR_KEY_HERE</string>
 ```
 
 ### Sử dụng
 
-iPostMap React Native cung cấp component [MFMapView](./guides/mapview) để hiển thị bản đồ iPostMap. Bạn có thể thêm `MFMapView` vào view và set style cho nó để hiển thị iPostMap.
+Map React Native cung cấp component [MFMapView](./guides/mapview) để hiển thị bản đồ. Bạn có thể thêm `MFMapView` vào view và set style cho nó để hiển thị.
 
 ### Ví dụ
 
@@ -107,7 +107,7 @@ import {
   StyleSheet
 } from 'react-native';
 
-import {MFMapView} from 'react-native-map4d-map';
+import {MFMapView} from 'react-native-ipostmap';
 
 function App() {
   return (

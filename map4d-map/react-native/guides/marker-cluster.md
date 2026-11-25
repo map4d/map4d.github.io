@@ -1,17 +1,17 @@
 # Marker Cluster
 
-> iPostMap Map SDK cung cấp lớp **MFMarkerCluster** và **MFClusterItem** hỗ trợ hiển thị một số lượng lớn các marker thành từng nhóm,  
+> Map SDK cung cấp lớp **MFMarkerCluster** và **MFClusterItem** hỗ trợ hiển thị một số lượng lớn các marker thành từng nhóm,  
 theo từng mức zoom để giúp việc hiển thị nhiều marker được rõ ràng hơn, đỡ rối rắm cho người dùng
 
 ## Thêm marker cluster vào bản đồ
 
-![Marker Cluster](../../resources/marker-cluster.png)
+![Marker Cluster](../resources/marker-cluster.png)
 
-Để hiển thị marker cluster lên bản đồ iPostMap, ta sử dụng `MFMarkerCluster` trong `MFMapView` để chứa một số lượng lớn các `MFClusterItem`  
+Để hiển thị marker cluster lên bản đồ, ta sử dụng `MFMarkerCluster` trong `MFMapView` để chứa một số lượng lớn các `MFClusterItem`  
 Ví dụ bên dưới cho phép tạo các `MFClusterItem` và hiển thị `MFMarkerCluster` lên bản đồ
 
 ```js
-import {MFMapView, MFMarkerCluster, MFClusterItem} from 'react-native-map4d-map';
+import {MFMapView, MFMarkerCluster, MFClusterItem} from 'react-native-ipostmap';
 import React from 'react';
 import {
   SafeAreaView,
@@ -92,7 +92,7 @@ export default App;
 
 Sử dụng:
 ```javascript
-import { MFMarkerCluster } from 'react-native-map4d-map';
+import { MFMarkerCluster } from 'react-native-ipostmap';
 ```
 
 ### Props
@@ -128,7 +128,7 @@ Trong đó:
 
 Sử dụng:
 ```javascript
-import { MFClusterItem } from 'react-native-map4d-map';
+import { MFClusterItem } from 'react-native-ipostmap';
 ```
 
 ### Props

@@ -1,6 +1,6 @@
 # Circle
 
-Nếu bạn muốn vẽ một hình tròn lên bản đồ, thì iPostMap React Native SDK cung cấp cho bạn lớp **MFCircle** để thực hiện điều đó. 
+Nếu bạn muốn vẽ một hình tròn lên bản đồ, thì React Native SDK cung cấp cho bạn lớp **MFCircle** để thực hiện điều đó. 
 Bạn có thể dễ dàng vẽ các hình tròn lên bản đồ.
 
 > Để tạo một Circle, bạn phải chỉ định ít nhất hai thuộc tính **center** và **radius**:
@@ -21,7 +21,7 @@ Bạn có thể dễ dàng vẽ các hình tròn lên bản đồ.
 
 ### Thêm một Circle
 
-![Circle](../../resources/circle.png)
+![Circle](../resources/circle.png)
 
 ```javascript
 render() {
