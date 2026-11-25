@@ -77,7 +77,7 @@ Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện v
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 
   ```swift 
-  func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: Int) {}
+  func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: UInt) {}
   ```
 
 ---
@@ -97,6 +97,7 @@ let renderer = MFDirectionsRenderer()
 | Name                    | Type                                                  | Description                                                                                    |
 |-------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | map                     | [MFMapView](/guides/map.md?id=api-map-mfmapview)              | Chỉ định map view sẽ hiển thị các chỉ đường hoặc xóa chỉ đường khỏi map (set bằng nil).        |
+| zIndex                  | Float | Thứ tự hiển thị của Directions Renderer. |
 | routes                  | [NSArray\<MFPath\>](/guides/coordinates.md?id=api-coordinates-mfpath) | Mảng các MFPath xác định các chỉ đường cho Directions Renderer.                                |
 | activedIndex            | NSUInteger                                            | Chọn index của chỉ đường chính (trong trường hợp có nhiều chỉ đường).                          |
 | hideOriginPOI           | BOOL                                                  | Ẩn/hiện POI vị trí bắt đầu.                                                                    |
@@ -134,6 +135,6 @@ Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện v
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 
   ```swift 
-  func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: Int) {}
+  func mapView(_ mapView: MFMapView?, didTap renderer: MFDirectionsRenderer?, routeIndex: UInt) {}
   ```
 

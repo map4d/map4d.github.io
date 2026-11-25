@@ -86,7 +86,7 @@ let Building = MFBuilding()
 | **startDate**              | NSDate                 | Chỉ định thời gian tạo **Building**.                                                                                     |
 | **endDate**                | NSDate                 | Chỉ định thời gian kết thúc của **Building**.                                                                            |
 | **userInteractionEnabled** | boolean                | Cho phép người dùng có thể tương tác được với **Building** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **Building** thì tất cả các sự kiện liên quan tới **Building** từ phía người dùng sẽ không có tác dụng.                                                                          | 
-| **isHidden**               | Bool                   | Xác định **Building** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                      |
+| **isHidden**               | Bool                   | Xác định **Building** có thể ẩn hay hiện trên bản đồ. `true` để ẩn, `false` để hiện.                                      |
 | **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các Building với nhau hoặc giữa **Building** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0**                                                                                                                                                                            |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Building**.                                                                 |
 | **map**                    | [MFMapView](/guides/map.md?id=api-map-mfmapview)              | Chỉ định hiển thị **Building** trên **Map** hoặc xoá **Building** khỏi **Map**     |
@@ -98,7 +98,7 @@ let Building = MFBuilding()
 
   > **Chú ý**: Để sử dụng các sự kiện của **Building** phải **set** thuộc tính **userInteractionEnabled** = **true**
   
-  **TouchBuilding**
+  **Touch Building**
 
   Phát sinh khi người dùng **touch** vào **Building**
   </br>Cung cấp thông tin của **Building** cho người dùng

@@ -1,7 +1,7 @@
 # POI Overlay
 
 POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ.  
-Các POI của POI overlay được ưu tiên hiển thị so với POI của Map4D và chỉ hiển thị ở chế độ 2D.
+Các POI của POI overlay được ưu tiên hiển thị so với POI của Map4D .
 
 ![POI Overlay](../resources/v1.5/poi-overlay.png)
 
@@ -172,7 +172,6 @@ MFPOIData là object chứa thông tin của POI để Map4D SDK có thể hiể
 | **position**     | CLLocationCoordinate2D | Vị trí toạ độ của POI hiển thị trên bản đồ |
 | **title**        | NSString               | Tiêu đề của POI  |
 | **color**        | UIColor                | Màu cho icon (nếu sử dụng `type`) và tiêu đề của POI |
-| ~**titleColor**~ | ~UIColor~              | ~Màu hiển thị tiêu đề~  |
 | **type**         | NSString               | Kiểu của POI *("bank", "atm", "park", ...)*, tuỳ thuộc vào kiểu mà POI có icon tương ứng  |
 | **iconUrl**      | NSURL                  | Đường dẫn để lấy icon cho POI. Nếu option này được set giá trị thì hình ảnh của POI sẽ lấy theo URL này mà không cần quan tâm tới option type |
 | **zIndex**       | float                  | Độ ưu tiên hiển thị của POI đối với POI khác  |

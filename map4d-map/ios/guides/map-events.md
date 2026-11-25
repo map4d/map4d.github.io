@@ -13,14 +13,14 @@
   func mapView(_ mapView: MFMapView?, moving position: MFCameraPosition?)
   func mapView(_ mapView: MFMapView?, didChange position: MFCameraPosition?)
   func mapView(_ mapView: MFMapView?, idleAt position: MFCameraPosition?)
-    func mapView(_ mapView: MFMapView?, didTapAtCoordinate coordinate: CLLocationCoordinate2D)
+  func mapView(_ mapView: MFMapView?, didTapAt coordinate: CLLocationCoordinate2D)
   ```
 
   | No       | Event name                            | Description                                                                                                                |
   |:--------:|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
   | **1**    | **willMove**                          | Phát sinh khi người dùng tương tác bằng cử chỉ làm thay đổi các thông số camera (tâm, góc nghiêng, góc quay, mức zoom)     |
   | **2**    | **movingCameraPosition**              | Phát sinh khi một trong các thông số camera (tâm, góc nghiêng, góc quay, mức zoom) của map chuẩn bị thay đổi               |
-  | **3**    | **didChangeCameraPosition**           | Đhát sinh khi các thông số camera (tâm, góc nghiêng, góc quay, mức zoom) của map kết thúc sự thay đổi.                     |
+  | **3**    | **didChangeCameraPosition**           | Được gọi liên tục trong quá trình animation hoặc thao tác cử chỉ. |
   | **4**    | **idleAtCameraPosition**              | Phát sinh khi các thông số camera (tâm, góc nghiêng, góc quay, mức zoom) của map kết thúc sự thay đổi.                     |
   | **5**    | **didTapAtCoordinate**                | Phát sinh khi người dùng touch vào **Coordinate** trên **map**                                                             |
 
@@ -89,3 +89,17 @@
   | **3** | **didTapPOI**                          | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
   | **4** | **didTapPOIWithPlaceID**               | Phát sinh khi người dùng touch vào **Poi** trên **map**                                                                   |
   | **5** | **didTapPlaceWithName**                | Phát sinh khi người dùng touch vào **Place** trên **map** (đối với mapType là MFMapTypeRoadmap)                           |
+
+## Sự kiện layer và nguồn dữ liệu
+
+```swift
+func mapView(_ mapView: MFMapView!, didTap renderer: MFDirectionsRenderer!, routeIndex: UInt) {}
+func mapView(_ mapView: MFMapView!, didTap geoJSON: MFGeoJSON!, feature: MFGeoJSON.Feature!) {}
+func mapView(_ mapView: MFMapView!, didTapDataSourceFeature feature: MFDataSourceFeature!, location: CLLocationCoordinate2D) {}
+```
+
+- Directions Renderer: nhận renderer và chỉ số route được chạm.
+- GeoJSON: nhận layer và feature được chạm.
+- Data source: nhận feature của nguồn dữ liệu bản đồ và vị trí chạm. `MFDataSourceFeature` có `source`, `sourceLayer`, `layerType` (String) và `properties` (dictionary).
+
+Các callback tap, drag và info window sử dụng selector bắt đầu bằng `mapView:`.

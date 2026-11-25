@@ -23,6 +23,7 @@
 
 - Layers
   - [Tile Overlay](guides/tile-overlay.md)
+  - [Heatmap Overlay](guides/heatmap-overlay.md)
   - [Image Overlay](guides/image-overlay.md)
   - [POI Overlay](guides/poi-overlay.md)
   - [Building Overlay](guides/building-overlay.md)

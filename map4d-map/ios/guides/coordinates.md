@@ -6,7 +6,7 @@
 #### 1. Constructor  :id=api-coordinates-_1-constructor
 
 ```swift
-init(coordinate coord: CLLocationCoordinate2D, coordinate1 coord1: CLLocationCoordinate2D) {}
+init(coordinate coord1: CLLocationCoordinate2D, coordinate coord2: CLLocationCoordinate2D)
 init(path: MFPath) {}
 ```
 
@@ -31,7 +31,8 @@ init(path: MFPath) {}
 ## MFPath :id=api-coordinates-mfpath
 `MFPath` class
 
-MFPath chứa một mảng các toạ độ **CLLocationCoordinate2D**  
+MFPath chứa một mảng các toạ độ **CLLocationCoordinate2D**.
+`count` là thuộc tính chỉ đọc. Dùng `coordinate(at:)` để lấy tọa độ ở một vị trí, hoặc `MFPath(fromEncodedPath:)` để giải mã encoded polyline.
 Để tạo một đối tượng MFPath, ta có thể sử dụng `MFMutablePath`
 
 ## MFMutablePath :id=api-coordinates-mfmutablepath

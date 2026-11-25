@@ -48,14 +48,6 @@
   mapView.settings.setAllGesturesEnabled(true)
   ```
 
-  Để cài đặt mức **zoom** tối đa có thể **get Tile** từ **server** sử dụng phương thức **setMaxNativeZoom**
-    
-  ```swift
-  mapView.setMaxNativeZoom(19)
-  ```
-
-  Ví dụ : Nếu bạn cài đặt **nativeZoom** = 19 thì từ mức **zoom** > 19 sẽ lấy **tile** từ mức zoom 19 mà không phải **get** lại **tile** mới từ **server**.
-
   ## 3. Các phương thức tương tác trên map
 
   #### Giới hạn mức zoom tối đa và tối thiểu
@@ -93,6 +85,8 @@
 
   ```swift
   let cameraUpdate = MFCameraUpdate.setTarget(CLLocationCoordinate2D(latitude: 16.08795975082965, longitude: 108.22837829589844), zoom: 17)
-  mapView.animateCamera(cameraUpdate)
+  mapView.moveCamera(cameraUpdate)
+  mapView.moveCamera(cameraUpdate, duration: 1.0)
   ```
 
+  Có thể thiết lập `padding` trên `MFCameraPosition` hoặc khi tạo `MFCameraUpdate` để chừa vùng hiển thị cho các thành phần giao diện. `duration` có đơn vị giây.

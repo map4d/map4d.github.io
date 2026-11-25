@@ -107,7 +107,7 @@ let polygon = MFPolygon()
 | **strokeColor**            | UIColor                | Chỉ định màu sắc đường viền ngoài cùng của **Polygon**.                                                                 |
 | **strokeWidth**            | CGFloat                | Chỉ định độ rộng đường viền của Polygon theo đơn vị point.                                                              |
 | **userInteractionEnabled** | BOOl                | Cho phép người dùng có thể tương tác được với **Polygon** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **Polygon** thì tất cả các sự kiện liên quan tới **Polygon** từ phía người dùng sẽ không có tác dụng.                                                                           |
-| **isHidden**               | BOOl                   | Xác định **Polygon** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                      |
+| **isHidden**               | BOOl                   | Xác định **Polygon** có thể ẩn hay hiện trên bản đồ. `true` để ẩn, `false` để hiện.                                      |
 | **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các **Polygon** với nhau hoặc giữa **Polygon** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Polygon**.                                                                 |
 | **map**                    | [MFMapView](/guides/map.md?id=api-map-mfmapview)              | Chỉ định hiển thị **Polygon** trên **Map** hoặc xoá **Polygon** khỏi **Map**             |
@@ -117,7 +117,7 @@ let polygon = MFPolygon()
 
   > **Chú ý**: Để sử dụng sự kiện của **Polygon** phải **set** thuộc tính **userInteractionEnabled** = **true**
   
-  **TouchPolygon**
+  **Touch Polygon**
 
   Phát sinh khi người dùng **touch** vào **Polygon**
   </br>Cung cấp thông tin của **Polygon** cho người dùng
@@ -127,3 +127,5 @@ let polygon = MFPolygon()
   ```
 
   **Ghi chú:** **Hole** Là phần đa giác bị khuyết bên trong polygon
+
+Độ trong suốt của màu tô được thiết lập qua alpha: `polygon.fillColor = UIColor.blue.withAlphaComponent(0.5)`.

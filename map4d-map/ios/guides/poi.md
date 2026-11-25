@@ -1,7 +1,7 @@
 # POI
 
-> Hiện tại trên bản đồ đã có những điểm đánh dấu địa điểm có sẵn (như địa danh công cộng, quán cà phê, nhà hàng, bến xe, ...)
-và chúng chỉ hiển thị khi bản đồ ở chế độ 2D. Khi bạn cần một đối tượng để đánh dấu một địa điểm trên bản đồ tương tự như
+> Hiện tại trên bản đồ đã có những điểm đánh dấu địa điểm có sẵn (như địa danh công cộng, quán cà phê, nhà hàng, bến xe, ...).
+Khi bạn cần một đối tượng để đánh dấu một địa điểm trên bản đồ tương tự như
 những điểm có sẵn đó thì bạn có thể dùng lớp **MFPOI**. Các đối tượng **POI** bạn thêm vào bản đồ có thể hiện thị
 ở **cả 2 chế độ 2D và 3D**.
 
@@ -15,7 +15,7 @@ poi.position = CLLocationCoordinate2D(latitude: 16.071575666602996, longitude: 1
 poi.title = "Map4D Cafe"
 poi.zIndex = 1
 poi.type = "cafe"
-poi.color = red
+poi.color = .red
 poi.map = mapView
 ```
 
@@ -42,7 +42,6 @@ Bạn có thể dễ dàng tuỳ chỉnh **POI** thông qua các thuộc tính m
 | **position**               | Tuỳ chỉnh vị trí của **POI** được vẽ trên bản đồ                                                                                                 |
 | **title**                  | Tuỳ chỉnh tiểu đề của **POI**, được hiển thị bên cạnh **POI** icon                                                                               |
 | **color**                  | Tuỳ chỉnh màu cho icon (nếu sử dụng `type`) và tiêu đề của POI                                                                                   |
-| ~**titleColor**~           | ~Tuỳ chỉnh màu của tiêu đề~                                                                                                                      |
 | **type**                   | Tuỳ chỉnh kểu của **POI**, dùng để quy định icon (bank, hospital, cafe, ...)                                                                     |
 | **iconView**               | Tuỳ chỉnh icon của **POI** bằng UIView                                                                                                           |
 | **icon**                   | Tuỳ chỉnh icon của **POI** bằng hình ảnh                                                                                                         |
@@ -80,14 +79,13 @@ let poi = MFPOI()
 | **position**               | CLLocationCoordinate2D | Chỉ định một **CLLocationCoordinate2D** để xác định vị trí ban đầu của **POI**.                                         |
 | **title**                  | NSString               | Chỉ định tiêu đề của **POI**. Tiêu đề sẽ hiển thị thông tin của **POI** mà bạn muốn hiển thị cho người dùng.            |
 | **color**                  | UIColor                | Chỉ định màu cho icon (nếu sử dụng `type`) và tiêu đề của POI                                                           |
-| ~**titleColor**~           | ~UIColor~              | ~Chỉ định màu tiêu đề của **POI**.~                                                                                     |
 | **subtitle**               | NSString               | Chỉ định thông tin mô tả của **POI**.                                                                                   |
 | **type**                   | NSString               | Chỉ định kiểu của **POI**, tùy thuộc vào kiểu mà icon của **POI** sẽ có hình ảnh tương ứng.                             |
 | **iconView**               | UIView                 | Cho phép thêm biểu diễn **POI** bằng **UIView** mà người dùng tuỳ chỉnh để thay thế icon mặc định của **POI**.          |
 | **icon**                   | UIImage                | Tùy chỉnh **icon** cho **POI**. Có thể truyền vào là một **UIImage**                                                    |
 | **groundAnchor**           | CGPoint                | Xác định điểm neo cho **POI** icon                                                                                      |
 | **userInteractionEnabled** | BOOL                   | Cho phép người dùng có thể tương tác được với **POI** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **POI** thì tất cả các sự kiện liên quan tới **POI** từ phía người dùng sẽ không có tác dụng. | 
-| **isHidden**               | BOOL                   | Xác định **POI** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                          |
+| **isHidden**               | BOOL                   | Xác định **POI** có thể ẩn hay hiện trên bản đồ. `true` để ẩn, `false` để hiện.                                          |
 | **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các POI với nhau hoặc giữa **POI** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **POI**.                                                                     |
 | **map**                    | [MFMapView](/guides/map.md?id=api-map-mfmapview)             | Chỉ định hiển thị **POI** trên **Map** hoặc xoá **POI** khỏi **Map**                      |
@@ -99,7 +97,7 @@ let poi = MFPOI()
 
   > **Chú ý**: Để sử dụng các sự kiện của **POI** phải **set** thuộc tính **userInteractionEnabled** = **true**
   
-  **TouchPOI**
+  **Touch POI**
 
   Phát sinh khi người dùng **touch** vào **POI**
   </br>Cung cấp thông tin của **POI** cho người dùng

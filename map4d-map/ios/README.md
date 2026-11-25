@@ -10,21 +10,45 @@
 
 ## Installation
 
-Use [CocoaPods](https://cocoapods.org)
+### Swift Package Manager (SPM)
 
-1. Update your cocoapods local repo
+Trong Xcode, chọn **File > Add Package Dependencies**, nhập URL:
+
+```text
+https://github.com/map4d/map4d-map-ios-sdk.git
+```
+
+Chọn **Dependency Rule: Up to Next Major Version**, bắt đầu từ **3.4.0**, sau đó thêm product **Map4dMap** vào app target.
+
+Nếu khai báo dependency trong `Package.swift` của một Swift package:
+
+```swift
+// Trong dependencies của Package:
+.package(url: "https://github.com/map4d/map4d-map-ios-sdk.git", from: "3.4.0")
+
+// Trong dependencies của target sử dụng SDK:
+.product(name: "Map4dMap", package: "map4d-map-ios-sdk")
+```
+
+### CocoaPods
+
+Update your cocoapods local repo
 ```shell
 pod repo update
 ```
 
-2. Add to Podfile
+Add to Podfile
 ```shell
-pod 'Map4dMap'
+pod 'Map4dMap', '~> 3.4'
 ```
+
+Sau khi cập nhật Podfile, chạy `pod install` và mở file `.xcworkspace`
 
 ### Nền tảng được hỗ trợ
 
-- Hỗ trợ thiết bị iOS 64 bit và phiên bản iOS 12.0 trở lên
+- iOS 12.0 trở lên.
+- Xcode 12.0 trở lên; Swift tools 5.3.
+- Map4D Access Key: Tạo tại trang nhà phát triển của [Map4D](https://map.map4d.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
 
 ## Using
 
@@ -49,4 +73,3 @@ class ViewController: UIViewController {
   }
 }
 ```
-

@@ -41,7 +41,7 @@ Bạn có thể dễ dàng tuỳ chỉnh hình dáng của **Circle** thông qua
 - **position** : một điểm tọa độ **CLLocationCoordinate2D** để xác định tâm của **Circle**. 
 - **radius** : tuỳ chỉnh bán kính của **Circle** theo đơn vị **mét**.
 - **fillColor** : tuỳ chỉnh màu sắc của **Circle**.
-- **fillOpacity** : tuỳ chỉnh độ trong suốt màu của **Circle**, khoảng giá trị của nó nằm trong khoảng từ 0.0 đến 1.0.
+- Dùng alpha của **fillColor** để tùy chỉnh độ trong suốt: `circle.fillColor = UIColor.red.withAlphaComponent(0.5)`.
 - **strokeColor** : tuỳ chỉnh màu sắc của **đường viền Circle**
 - **strokeWidth** : tuỳ chỉnh độ lớn của **đường viền Circle** theo đơn vị **point**.
 
@@ -77,7 +77,7 @@ let circle = MFCircle()
 | **radius**                 | double                 | Chỉ định bán kính của **Circle** theo đơn vị mét.                                                                       |
 | **strokeWidth**            | double                 | Chỉ định độ lớn của đường viền **Circle** theo đơn vị point.                                                            |
 | **userInteractionEnabled** | BOOL                   | Cho phép người dùng có thể tương tác được với **Circle** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **Circle** thì tất cả các sự kiện liên quan tới **Circle** từ phía người dùng sẽ không có tác dụng.                                                                             |
-| **isHidden**               | BOOL                   | Xác định **Circle** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                       |
+| **isHidden**               | BOOL                   | Xác định **Circle** có thể ẩn hay hiện trên bản đồ. `true` để ẩn, `false` để hiện.                                       |
 | **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các Circle với nhau hoặc giữa **Circle** với các đối tượng khác trên bản đồ. Mặc định là **0** |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Circle**.                                                                  |
 | **map**                    | [MFMapView](/guides/map.md?id=api-map-mfmapview) | Chỉ định hiển thị **Circle** trên **Map** hoặc xoá **Circle** khỏi **Map**                            |
@@ -87,7 +87,7 @@ let circle = MFCircle()
 
   > **Chú ý**: Để sử dụng sự kiện của **Circle** phải **set** thuộc tính **userInteractionEnabled** = **true**
   
-  **TouchCircle**
+  **Touch Circle**
 
   Phát sinh khi người dùng **touch** vào **Circle**
   </br>Cung cấp thông tin của **Circle** cho người dùng

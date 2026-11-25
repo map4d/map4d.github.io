@@ -5,7 +5,7 @@ Lớp MFProjection được dùng để chuyển đổi giữa vị trí trên m
 ### 1. Khởi tạo lớp Projection
 
   ```swift
-  let projection = mapView.projection
+  guard let projection = mapView.projection else { return }
   ```
 
 ### 2. Chuyển đổi từ toạ độ LatLng sang toạ độ Screen

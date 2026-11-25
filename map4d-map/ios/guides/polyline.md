@@ -41,8 +41,7 @@ Bạn có thể dễ dàng tuỳ chỉnh hình dáng của **Polyline** thông q
 | **path**                   | Truyền vào một mảng các tọa độ **CLLocationCoordinate2D** để tạo **Polyline**.                                          |
 | **width**                  | Tuỳ chỉnh độ rộng của **Polyline**.                                                                                     |
 | **color**                  | Tuỳ chỉnh màu sắc của **Polyline**.                                                                                     |
-| ~**style**~                | ~Tuỳ chỉnh **Polyline** là loại nét liền **solid** hay nét đứt **dotted**.~                                             |
-| **strokePattern**          | Tuỳ kiểu vẽ cho polyline (có 4 kiểu là: SolidPattern, DashPattern, DotPattern và IconPattern).                          |
+| **strokePattern**          | Tuỳ kiểu vẽ cho polyline (có 4 kiểu là: solid, dash, dot và icon).                          |
 
 ```swift    
 let path = MFMutablePath()
@@ -53,7 +52,7 @@ path.add(CLLocationCoordinate2D(latitude: 16.07181296817015, longitude: 108.2239
 polyline.path = path
 polyline.width = 10.0
 polyline.color = .red
-polyline.strokePattern = MFStrokePattern.dash(length: 5 gap: 5)
+polyline.strokePattern = MFStrokePattern.dash(length: 5, gap: 5)
 ```
 
 -  ![Polyline](../resources/v1.5/customizePolyline.png)
@@ -75,12 +74,11 @@ let polyline = MFPolyline()
 | Name                       | Type                   | Description                                                                                                             |
 |----------------------------|:-----------------------|-------------------------------------------------------------------------------------------------------------------------|
 | **path**                   | MFPath                 | Truyền vào một mảng các tọa độ **CLLocationCoordinate2D** để tạo Polyline.**Polyline**.                                 |
-| **width**                  | UIColor                | Chỉ định độ rộng của **Polyline** theo đơn vị point.                                                                    |
-| ~**style**~                | ~MFPolylineStyle~      | ~Chỉ định **Polyline** là loại nét liền **solid** hay nét đứt **dotted**. Giá trị mặc định là **solid** **Polyline**.~  |
+| **width**                  | CGFloat                | Chỉ định độ rộng của **Polyline** theo đơn vị point.                                                                    |
 | **strokePattern**          | MFStrokePattern        | Chỉ định kiểu vẽ cho polyline                                                                                           |
-| **color**                  | double                 | Chỉ định màu sắc của **Polyline**.                                                                                      |
+| **color**                  | UIColor                 | Chỉ định màu sắc của **Polyline**.                                                                                      |
 | **userInteractionEnabled** | BOOL                   | Cho phép người dùng có thể tương tác được với **Polyline** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **Polyline** thì tất cả các sự kiện liên quan tới **Polyline** từ phía người dùng sẽ không có tác dụng.                                                                         |
-| **isHidden**               | BOOL                   | Xác định **Polyline** có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                     |
+| **isHidden**               | BOOL                   | Xác định **Polyline** có thể ẩn hay hiện trên bản đồ. `true` để ẩn, `false` để hiện.                                     |
 | **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các Polyline với nhau hoặc giữa **Polyline** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Polyline**.                                                                |
 | **map**                    | [MFMapView](/guides/map.md?id=api-map-mfmapview)              | Chỉ định hiển thị **Polyline** trên **Map** hoặc xoá **Polyline** khỏi **Map**           |
@@ -90,7 +88,7 @@ let polyline = MFPolyline()
 
   > **Chú ý**: Để sử dụng sự kiện của **Polyline** phải **set** thuộc tính **userInteractionEnabled** = **true**
   
-  **TouchPolyline**
+  **Touch Polyline**
 
   Phát sinh khi người dùng **touch** vào **Polyline**
   </br>Cung cấp thông tin của **Polyline** cho người dùng
@@ -99,3 +97,17 @@ let polyline = MFPolyline()
   func mapView(_ mapView: MFMapView!, didTap polyline: MFPolyline!) {}
   ```
 
+
+### MFStrokePattern
+
+```swift
+polyline.strokePattern = .solid
+polyline.strokePattern = .dash(length: 5, gap: 5)
+polyline.strokePattern = .dot(repeat: 10)
+if let image = UIImage(named: "arrow") {
+  polyline.strokePattern = .icon(image: image)
+}
+polyline.color = UIColor.red.withAlphaComponent(0.5)
+```
+
+`MFStrokePattern.type` chỉ đọc, có các giá trị `.solid`, `.dash`, `.dot`, `.icon`.
