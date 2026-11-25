@@ -33,7 +33,7 @@ import 'package:map4d_map/map4d_map.dart';
 API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng Map4dMap SDK.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
-Tạo API key tại địa chỉ: <https://map.map4d.vn/developer/key/>
+Tạo API key tại trang nhà phát triển của Map4D <https://map.map4d.vn/developer/key/> *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
 
 #### Thiết lập API key cho Android
 
@@ -60,7 +60,7 @@ Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS
 
 ### Sử dụng
 
-Map4dMap Flutter cung cấp `MFMapView` widget để hiển thị Map4d, bạn có thể thêm `MFMapView` widget vào widget tree của bạn.  
+Map Flutter plugin cung cấp `MFMapView` widget để hiển thị bản đồ, bạn có thể thêm `MFMapView` widget vào widget tree của bạn.  
 Bản đồ có thể được điều khiển với `MFMapViewController` được truyền cho `MFMapView` khi hàm `onMapCreated` được gọi lại.
 
 ### Ví dụ
@@ -78,18 +78,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Map4D Map',
-      home: Map4dSample(),
+      title: 'Bản đồ',
+      home: MapSample(),
     );
   }
 }
 
-class Map4dSample extends StatefulWidget {
+class MapSample extends StatefulWidget {
   @override
-  _Map4dSampleState createState() => _Map4dSampleState();
+  _MapSampleState createState() => _MapSampleState();
 }
 
-class _Map4dSampleState extends State<Map4dSample> {
+class _MapSampleState extends State<MapSample> {
   
   Completer<MFMapViewController> _controller = Completer();
   bool _buildingsEnabled = true;

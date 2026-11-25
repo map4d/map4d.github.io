@@ -1,7 +1,17 @@
 ## Version 3.1.0
 
-#### Changed
-
-- Xóa các phần đã cũ (deprecated) khỏi mã nguồn Java của nền tảng Android.
+- Loại bỏ deprecated api.
 - Sửa lỗi khi chạy dự án trên Xcode 16.2
 - Nâng cấp Map4dMap SDK lên phiên bản 3.3
+
+## Version 3.0.0
+
+Thay đổi cách tiếp cận chế độ 3D. Thay vì phải sử dụng map type 3D để hiển thị các đối tượng 3D thì nhà phát triển có thể chủ động bật/tắt các đối tượng 3D trên bản đồ thông qua thuộc tính `buildingsEnabled` của MFMapView widget. Hỗ trợ trên cả map type `roadmap` và `hybrid`. Giúp nhà phát triển có thể tùy chỉnh style bản đồ theo ý thích ngay cả ở chế độ 3D.
+
+- Hỗ trợ thiết lập map style thông qua thuộc tính `style` của `MFMapView` widget
+- Hỗ trợ thay đổi camera với padding
+- Thêm mới map type `hybrid`
+- Loại bỏ map type `raster`, `map3D`
+- Loại bỏ phương thức `enable3DMode` trong MFMapViewController. Sử dụng thuộc tính `buildingsEnabled` của `MFMapView` widget để ẩn/hiện đối tượng 3D
+- Loại bỏ `onModeChange` trong `MFMapView` widget
+- Loại bỏ deprecated api.

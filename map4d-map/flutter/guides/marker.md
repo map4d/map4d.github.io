@@ -70,7 +70,7 @@ const MFInfoWindow({
 
 ### Custom icon cho marker
 
-Map4dMap Flutter SDKs cung cấp class [MFBitmap](//) để thuận tiện cho việc thay đổi icon của marker bằng hình ảnh sẵn có.  
+Map Flutter plugin cung cấp class [MFBitmap](//) để thuận tiện cho việc thay đổi icon của marker bằng hình ảnh sẵn có.  
 Để tạo được đối tượng `MFBitmap` chính xác cần gọi phương thức [MFBitmap.fromAssetImage](//pub.dev/documentation/map4d_map/latest/map4d_map/MFBitmap/fromAssetImage.html) với 2 tham số quan trọng là:
 - configuration: [ImageConfiguration](//api.flutter.dev/flutter/painting/ImageConfiguration-class.html)
 - assetName: String

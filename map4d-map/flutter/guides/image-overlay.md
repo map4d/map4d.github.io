@@ -1,6 +1,6 @@
 # Image Overlay
 
-> Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh lên một khu vực xác định trên bản đồ Map4D
+> Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh lên một khu vực xác định trên bản đồ
 
 ![Image Overlay](../resources/image-overlay.png)
 
@@ -8,7 +8,7 @@
 
 Để thêm 1 image overlay vào map cần tạo mới 1 đối tượng của lớp [MFImageOverlay](//pub.dev/documentation/map4d_map/latest/map4d_map/MFImageOverlay-class.html) sau đó truyền cho [MFMapView](MFMapView).  
 
-> Đoạn code bên dưới hướng dẫn cách thêm/xóa image overlay trên Map4D.  
+> Đoạn code bên dưới hướng dẫn cách thêm/xóa image overlay trên bản đồ.  
 Asset: https://github.com/map4d/map4d-map-flutter/blob/master/example/assets/image_overlay.jpg
 
 ```dart

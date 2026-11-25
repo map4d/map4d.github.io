@@ -1,6 +1,6 @@
 # Directions Renderer
 
-> Map4dMap Flutter SDK cung cấp lớp **MFDirectionsRenderer** để dễ dàng hiển thị các chỉ đường lên bản đồ.
+> Map Flutter plugin cung cấp lớp **MFDirectionsRenderer** để dễ dàng hiển thị các chỉ đường lên bản đồ.
 
 ![Directions Renderer](../resources/directions-renderer.png)
 
@@ -33,7 +33,7 @@ const MFDirectionsRenderer({
 | Name                  | Type | Description |
 |-----------------------|---|---|
 | routes                | [List\<List\<MFLatLng\>\>](https://pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html)      | Mảng các mảng tọa độ thể hiện chỉ đường sẽ được hiển thị lên bản đồ. |
-| directions            | `string` | Chuỗi json kết quả tìm đường bằng [Map4d Service API](https://docs.map4d.vn/map4d-service/api/) (Get Route).<br>Nếu vừa set cả 2 props `routes` và `directions` thì sẽ ưu tiên hiển thị chỉ đường từ `routes`. |
+| directions            | `string` | Chuỗi json kết quả tìm đường bằng [Service API](https://api.map4d.vn/sdk/docs/index.html) (Get Route).<br>Nếu vừa set cả 2 props `routes` và `directions` thì sẽ ưu tiên hiển thị chỉ đường từ `routes`. |
 | activedIndex          | `int`                                               | Chỉ mục chính của tuyến đường trong `routes` hoặc `directions`. Mặc định là 0. |
 | activeStrokeWidth     | `int`                                               | Kích thước của tuyến đường chính (xác định bằng `activedIndex`). |
 | activeStrokeColor     | [Colors](https://api.flutter.dev/flutter/material/Colors-class.html) | Màu của tuyến đường chính. |

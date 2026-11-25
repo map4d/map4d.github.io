@@ -1,7 +1,7 @@
-# Map4D Widget
+# MapView Widget
 
-> **Map4dMap Flutter** cung cấp `MFMapView` [widget](https://flutter.dev/docs/development/ui/widgets-intro) để hiển thị Map4d.  
-> Để điều khiển Map4d widget, có thể sử dụng [MFMapViewController](./guides/controller.md) được truyền cho `MFMapView` khi hàm `onMapCreated` được gọi lại.
+> Map Flutter plugin cung cấp `MFMapView` [widget](https://flutter.dev/docs/development/ui/widgets-intro) để hiển thị bản đồ.  
+> Để điều khiển MapView widget, có thể sử dụng [MFMapViewController](./guides/controller.md) được truyền cho `MFMapView` khi hàm `onMapCreated` được gọi lại.
 
 ## Simple Usage
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Map4D Map',
+      title: 'Map View',
       home: MFMapView(),
     );
   }
@@ -77,8 +77,8 @@ const MFMapView({
 | 9 | tiltGesturesEnabled | `bool` | Cho phép nghiêng bản đồ bằng cử chỉ của người dùng. |
 | 10 | myLocationEnabled | `bool` | Ẩn hoặc hiển thị vị trí của tôi.<br>Bật tính năng này yêu cầu thêm quyền vị trí đối với cả Android và iOS. |
 | 11 | myLocationButtonEnabled | `bool` | Ẩn hoặc hiển thị nút vị trí của tôi |
-| 12 | poisEnabled | `bool` | Ẩn hoặc hiển thị các địa điểm của Map4D (ở chế độ 2D). |
-| 13 | buildingsEnabled | `bool` | Ẩn hoặc hiển thị các đối tượng 3D của Map4D (ở chế độ 3D). |
+| 12 | poisEnabled | `bool` | Ẩn hoặc hiển thị các địa điểm trên bản đồ. |
+| 13 | buildingsEnabled | `bool` | Ẩn hoặc hiển thị các đối tượng 3D trên bản đồ. |
 | 14 | onCameraMoveStarted | `VoidCallback` | Được gọi khi camera bắt đầu di chuyển. |
 | 15 | onCameraMove | [MFCameraPositionCallback](//pub.dev/documentation/map4d_map/latest/map4d_map/MFCameraPositionCallback.html) | Được gọi liên tục khi camera di chuyển. |
 | 16 | onCameraIdle | `VoidCallback` | Được gọi khi camera di chuyển kết thúc,<br>không có hoạt động nào đang chờ xử lý và người dùng đã ngừng tương tác với bản đồ. |
