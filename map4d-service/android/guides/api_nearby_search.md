@@ -1,12 +1,12 @@
 # Nearby Search
 
-iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_nearby_search>
+Services API: <https://docs.ipostmap.vn/map4d-service/api/#/api_nearby_search>
 
 > Tìm kiếm các địa điểm lân cận.
 
 ## Usage
 
-Để sử dụng Nearby Search ta sử dụng phương thức sau đây của class [MFPlacesService](guides/api_nearby_search?id=mfplacesservice)
+Để sử dụng Nearby Search ta sử dụng phương thức sau đây của class [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 **Methods**
 
@@ -59,7 +59,7 @@ placesService.searchNearby(nearbySearchOptions, new MFServiceCallback<MFPlace[]>
 
 ## MFNearBySearchOptions
 
-Đối tượng `MFNearBySearchOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](guides/api_nearby_search?id=mfplacesservice)
+Đối tượng `MFNearBySearchOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 Để tạo đối tượng `MFNearBySearchOptions` thì ta tạo thông qua class [MFNearBySearchOptions.Builder](/guides/api_nearby_search?id=mfnearbysearchoptionsbuilder)
 
@@ -106,74 +106,3 @@ MFNearBySearchOptions.Builder(@NonNull MFLocationComponent location, int radius)
 | **tags** *optional*     | String[]        | Builder      | Set mảng kiểu địa điểm cho Builder                                 |
 | **datetime** *optional* | Integer         | Builder      | Set thời gian các địa điểm muốn tìm kiếm cho Builder               |
 | **build**               | `none`          |[MFNearBySearchOptions](/guides/api_nearby_search?id=mfnearbysearchoptions)| Tạo đối tượng MFNearBySearchOptions từ Builder|
-
-## API Reference
-
-<a id="reference-places-service"></a>
-
-## Place Service
-
-## MFPlacesService
-
-**Constructor**
-
-Tạo đối tượng `MFPlacesService` với `options` được chỉ định
-
-<!-- tabs:start -->
-#### ** Kotlin **
-```kotlin
-val placesService = MFPlacesService(options)
-```
-#### ** Java **
-```java
-MFPlacesService placesService = new MFPlacesService(options);
-```
-<!-- tabs:end -->
-
-- Parameters:
-  - options: [MFServicesOptions](guides/api_nearby_search.md?id=reference-service-options) `required`
-
-<a id="reference-service-options"></a>
-
-## Service Options
-
-## MFServicesOptions
-
-Để tạo đối tượng `MFServicesOptions` thì ta tạo thông qua class [MFServicesOptions.Builder](guides/api_nearby_search?id=mfservicesoptionsbuilder)
-
-<!-- tabs:start -->
-#### ** Kotlin **
-```kotlin
-val context = this
-val serviceOptions = MFServicesOptions.Builder(context).build()
-```
-#### ** Java **
-```java
-Context context = this;
-MFServicesOptions serviceOptions = MFServicesOptions.Builder(context).build();
-```
-<!-- tabs:end -->
-
-**Methods**
-
-| Name                         | Parameters      | Return Value | Description                                                        |
-|------------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
-| **getAccessKey**             | `none`          | String       | Lấy giá trị access key của                                         |
-| **getContext**               | `none`          | String       | Lấy đối tượng context                                              |
-
-## MFServicesOptions.Builder
-
-**Constructor**
-
-Tạo đối tượng `MFServicesOptions.Builder` với đối tượng `Context`
-
-```
-MFServicesOptions.Builder(Context context)
-```
-
-**Methods**
-
-| Name                    | Parameters      | Return Value | Description                                                        |
-|-------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
-| **accessKey** *optional*| String          | Builder      | Set giá trị access key cho Builder                                 |
-| **build**               | `none`          |[MFServicesOptions](guides/api_nearby_search?id=mfservicesoptions)| Tạo đối tượng MFServicesOptions từ Builder |

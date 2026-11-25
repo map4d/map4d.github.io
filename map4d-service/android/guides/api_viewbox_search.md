@@ -1,12 +1,12 @@
 # Viewbox Search
 
-iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_viewbox_search>
+Services API: <https://docs.ipostmap.vn/map4d-service/api/#/api_viewbox_search>
 
 > Tìm các địa điểm trong một vùng địa lý hình chữ nhật.
 
 ## Usage
 
-Để sử dụng Viewbox Search ta sử dụng phương thức sau đây của class [MFPlacesService](guides/api_viewbox_search?id=mfplacesservice)
+Để sử dụng Viewbox Search ta sử dụng phương thức sau đây của class [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 **Methods**
 
@@ -61,7 +61,7 @@ placesService.searchViewbox(viewboxSearchOptions, new MFServiceCallback<MFPlace[
 
 ## MFViewboxSearchOptions
 
-Đối tượng `MFViewboxSearchOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](guides/api_viewbox_search?id=mfplacesservice)
+Đối tượng `MFViewboxSearchOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 Để tạo đối tượng `MFViewboxSearchOptions` thì ta tạo thông qua class [MFViewboxSearchOptions.Builder](/guides/api_viewbox_search?id=mfviewboxsearchoptionsbuilder)
 
@@ -110,74 +110,3 @@ MFViewboxSearchOptions.Builder(@NonNull MFLocationComponent northeast, @NonNull 
 | **tags** *optional*     | String[]        | Builder      | Set mảng tags địa điểm cho Builder                                 |
 | **datetime** *optional* | Integer         | Builder      | Set thời gian các địa điểm muốn tìm kiếm cho Builder               |
 | **build**               | `none`          |[MFViewboxSearchOptions](/guides/api_viewbox_search?id=mfviewboxsearchoptions)| Tạo đối tượng MFViewboxSearchOptions từ Builder|
-
-## API Reference
-
-<a id="reference-places-service"></a>
-
-## Place Service
-
-## MFPlacesService
-
-**Constructor**
-
-Tạo đối tượng `MFPlacesService` với `options` được chỉ định
-
-<!-- tabs:start -->
-#### ** Kotlin **
-```kotlin
-val placesService = MFPlacesService(options)
-```
-#### ** Java **
-```java
-MFPlacesService placesService = new MFPlacesService(options);
-```
-<!-- tabs:end -->
-
-- Parameters:
-  - options: [MFServicesOptions](guides/api_viewbox_search.md?id=reference-service-options) `required`
-
-<a id="reference-service-options"></a>
-
-## Service Options
-
-## MFServicesOptions
-
-Để tạo đối tượng `MFServicesOptions` thì ta tạo thông qua class [MFServicesOptions.Builder](guides/api_viewbox_search?id=mfservicesoptionsbuilder)
-
-<!-- tabs:start -->
-#### ** Kotlin **
-```kotlin
-val context = this
-val serviceOptions = MFServicesOptions.Builder(context).build()
-```
-#### ** Java **
-```java
-Context context = this;
-MFServicesOptions serviceOptions = MFServicesOptions.Builder(context).build();
-```
-<!-- tabs:end -->
-
-**Methods**
-
-| Name                         | Parameters      | Return Value | Description                                                        |
-|------------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
-| **getAccessKey**             | `none`          | String       | Lấy giá trị access key của                                         |
-| **getContext**               | `none`          | String       | Lấy đối tượng context                                              |
-
-## MFServicesOptions.Builder
-
-**Constructor**
-
-Tạo đối tượng `MFServicesOptions.Builder` với đối tượng `Context`
-
-```
-MFServicesOptions.Builder(Context context)
-```
-
-**Methods**
-
-| Name                    | Parameters      | Return Value | Description                                                        |
-|-------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
-| **accessKey** *optional*| String          | Builder      | Set giá trị access key cho Builder                                 |
-| **build**               | `none`          |[MFServicesOptions](guides/api_viewbox_search?id=mfservicesoptions)| Tạo đối tượng MFServicesOptions từ Builder |

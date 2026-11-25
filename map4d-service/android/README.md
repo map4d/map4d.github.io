@@ -26,7 +26,7 @@ Nếu dự án của bạn dùng Gradle thì trước hết cần khai báo url 
 allprojects {
   repositories {
     maven {
-      url = "https://packages.ipostmap.vn/repository/maven-public"
+      url = "https://packages.map4d.vn/repository/maven-public"
     }
   }
 }
@@ -46,7 +46,7 @@ Cung cấp access key trong file AndroidManifest:
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   <application
     <meta-data
-      android:name="vn.ipostmap.services.ACCESS_KEY"
+      android:name="vn.map4d.services.ACCESS_KEY"
       android:value="TYPE_YOUR_KEY_HERE"/>
   </application>
 </manifest>

@@ -1,12 +1,12 @@
 # Place Detail
 
-iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_place_detail>
+Services API: <https://docs.ipostmap.vn/map4d-service/api/#/api_place_detail>
 
 > Lấy thông tin chi tiết của địa điểm thông qua id của địa điểm đó.
 
 ## Usage
 
-Để sử dụng Place Detail ta sử dụng phương thức sau đây của class [MFPlacesService](guides/api_place_detail?id=mfplacesservice)
+Để sử dụng Place Detail ta sử dụng phương thức sau đây của class [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 **Methods**
 
@@ -37,7 +37,7 @@ val taskPlaceDetail = placesService.fetchPlaceDetail(placeId, object : MFService
 ```java
 MFServicesOptions options = new MFServicesOptions.Builder(this).build();
 MFPlacesService placesService = new MFPlacesService(options);
-
+    
 String placeId = "5c921929270f65bf9cd77e23";
 placesService.fetchPlaceDetail(placeId, new MFServiceCallback<MFPlaceDetail>() {
   @Override
@@ -109,74 +109,3 @@ placesService.fetchPlaceDetail(placeId, new MFServiceCallback<MFPlaceDetail>() {
 | **getCode**                  | `none`          | String       | Lấy mã của Address Component                                       |
 | **getType**                  | `none`          | String       | Lấy kiểu của Address Component                                     |
 | **getName**                  | `none`          | String       | Lấy tên của Address Component                                      |
-
-## API Reference
-
-<a id="reference-places-service"></a>
-
-## Place Service
-
-## MFPlacesService
-
-**Constructor**
-
-Tạo đối tượng `MFPlacesService` với `options` được chỉ định
-
-<!-- tabs:start -->
-#### ** Kotlin **
-```kotlin
-val placesService = MFPlacesService(options)
-```
-#### ** Java **
-```java
-MFPlacesService placesService = new MFPlacesService(options);
-```
-<!-- tabs:end -->
-
-- Parameters:
-  - options: [MFServicesOptions](guides/api_place_detail.md?id=reference-service-options) `required`
-
-<a id="reference-service-options"></a>
-
-## Service Options
-
-## MFServicesOptions
-
-Để tạo đối tượng `MFServicesOptions` thì ta tạo thông qua class [MFServicesOptions.Builder](guides/api_place_detail?id=mfservicesoptionsbuilder)
-
-<!-- tabs:start -->
-#### ** Kotlin **
-```kotlin
-val context = this
-val serviceOptions = MFServicesOptions.Builder(context).build()
-```
-#### ** Java **
-```java
-Context context = this;
-MFServicesOptions serviceOptions = MFServicesOptions.Builder(context).build();
-```
-<!-- tabs:end -->
-
-**Methods**
-
-| Name                         | Parameters      | Return Value | Description                                                        |
-|------------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
-| **getAccessKey**             | `none`          | String       | Lấy giá trị access key của                                         |
-| **getContext**               | `none`          | String       | Lấy đối tượng context                                              |
-
-## MFServicesOptions.Builder
-
-**Constructor**
-
-Tạo đối tượng `MFServicesOptions.Builder` với đối tượng `Context`
-
-```
-MFServicesOptions.Builder(Context context)
-```
-
-**Methods**
-
-| Name                    | Parameters      | Return Value | Description                                                        |
-|-------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
-| **accessKey** *optional*| String          | Builder      | Set giá trị access key cho Builder                                 |
-| **build**               | `none`          |[MFServicesOptions](guides/api_place_detail?id=mfservicesoptions)| Tạo đối tượng MFServicesOptions từ Builder |

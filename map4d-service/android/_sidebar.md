@@ -1,7 +1,7 @@
 - [Overview](/ "Map4d Android Service API")
 - [Changelog](changelog.md)
 - [Service Types](types.md)
-
+  
 - Group Places Services
   - [Auto suggest](guides/api_autosuggest.md)
   - [Geocode](guides/api_geocode.md)
@@ -13,3 +13,10 @@
 - Group Directions Services
   - [Directions](guides/api_route.md)
   - [Distance Matrix](guides/api_matrix.md)
+
+- Service Classes
+  - [Directions Service](guides/directions-service.md)
+  - [Place Service](guides/places-service.md)
+
+- Shared Types
+  - [Service Options](guides/service-options.md)

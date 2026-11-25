@@ -1,12 +1,12 @@
 # GeoCode
 
-iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_geocode_v2>
+Services API: <https://docs.ipostmap.vn/map4d-service/api/#/api_geocode_v2>
 
 > Dùng để phân giải địa điểm ra tọa độ địa lý.
 
 ## Usage
 
-Để sử dụng GeoCode ta sử dụng phương thức sau đây của class [MFPlacesService](guides/api_geocode?id=mfplacesservice)
+Để sử dụng GeoCode ta sử dụng phương thức sau đây của class [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 **Methods**
 
@@ -60,7 +60,7 @@ placesService.geocoding(mfGeocodeOptions, new MFServiceCallback<MFPlace[]>() {
 
 ## MFGeocodeOptions
 
-Đối tượng `MFGeocodeOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](guides/api_geocode?id=mfplacesservice)
+Đối tượng `MFGeocodeOptions` dùng để xác định các thuộc tính dùng cho [MFPlacesService](/guides/places-service.md?id=api-places-service-mfplacesservice)
 
 Để tạo đối tượng `MFGeocodeOptions` thì ta tạo thông qua class [MFGeocodeOptions.Builder](/guides/api_geocode?id=mfgeocodeoptionsbuilder)
 
@@ -102,74 +102,3 @@ MFGeocodeOptions.Builder()
 | **address** *optional*  | String          | Builder      | Set địa chỉ cho Builder                                            |
 | **viewbox** *optional*  | [MFLocationComponent](/types?id=mflocationcomponent), [MFLocationComponent](/types?id=mflocationcomponent) | Builder      | Set viewbox cho Builder                 |
 | **build**               | `none` |[MFGeocodeOptions](/guides/api_geocode?id=mfgeocodeoptions)| Tạo đối tượng MFGeocodeOptions từ Builder|
-
-## API Reference
-
-<a id="reference-places-service"></a>
-
-## Place Service
-
-## MFPlacesService
-
-**Constructor**
-
-Tạo đối tượng `MFPlacesService` với `options` được chỉ định
-
-<!-- tabs:start -->
-#### ** Kotlin **
-```kotlin
-val placesService = MFPlacesService(options)
-```
-#### ** Java **
-```java
-MFPlacesService placesService = new MFPlacesService(options);
-```
-<!-- tabs:end -->
-
-- Parameters:
-  - options: [MFServicesOptions](guides/api_geocode.md?id=reference-service-options) `required`
-
-<a id="reference-service-options"></a>
-
-## Service Options
-
-## MFServicesOptions
-
-Để tạo đối tượng `MFServicesOptions` thì ta tạo thông qua class [MFServicesOptions.Builder](guides/api_geocode?id=mfservicesoptionsbuilder)
-
-<!-- tabs:start -->
-#### ** Kotlin **
-```kotlin
-val context = this
-val serviceOptions = MFServicesOptions.Builder(context).build()
-```
-#### ** Java **
-```java
-Context context = this;
-MFServicesOptions serviceOptions = MFServicesOptions.Builder(context).build();
-```
-<!-- tabs:end -->
-
-**Methods**
-
-| Name                         | Parameters      | Return Value | Description                                                        |
-|------------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
-| **getAccessKey**             | `none`          | String       | Lấy giá trị access key của                                         |
-| **getContext**               | `none`          | String       | Lấy đối tượng context                                              |
-
-## MFServicesOptions.Builder
-
-**Constructor**
-
-Tạo đối tượng `MFServicesOptions.Builder` với đối tượng `Context`
-
-```
-MFServicesOptions.Builder(Context context)
-```
-
-**Methods**
-
-| Name                    | Parameters      | Return Value | Description                                                        |
-|-------------------------|:---------------:|:------------:|--------------------------------------------------------------------|
-| **accessKey** *optional*| String          | Builder      | Set giá trị access key cho Builder                                 |
-| **build**               | `none`          |[MFServicesOptions](guides/api_geocode?id=mfservicesoptions)| Tạo đối tượng MFServicesOptions từ Builder |
