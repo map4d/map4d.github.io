@@ -1,6 +1,6 @@
 # Map4dServices iOS SDK
 [![map4d](https://img.shields.io/badge/map4d-services-orange)](https://map4d.vn/)
-[![platform](https://img.shields.io/cocoapods/p/Map4dServices)](https://www.apple.com/ios/)
+[![platform](https://img.shields.io/cocoapods/p/Map4dServices)](https://map4d.vn/)
 [![cocoapods](https://img.shields.io/cocoapods/v/Map4dServices)](https://cocoapods.org/pods/Map4dServices)
 
 > **Map4dServices** cung cấp [Map4D Services API](https://docs.map4d.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
@@ -46,11 +46,11 @@ pod repo update
 pod 'Map4dServices', '~> 2.6.0'
 ```
 
-Chạy `pod install` và mở file `.xcworkspace`. Chỉ sử dụng một cách cài đặt SDK cho cùng target.
+Chạy `pod install` và mở file `.xcworkspace`
 
 ## Using
 
-1. Provide services access key from Info.plist
+Cung cấp `Map4dServicesAccessKey` tại Info.plist. Có thể tạo services access key tại [Map4D](https://map.map4d.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
 
 ```xml
 <key>Map4dServicesAccessKey</key>
@@ -61,7 +61,6 @@ Chạy `pod install` và mở file `.xcworkspace`. Chỉ sử dụng một cách
 
 ```swift
 import Map4dServices
-import CoreLocation
 ```
 
 ## Example

@@ -17,4 +17,4 @@
 ## Version 2.2.0
 
 - Loại bỏ bitcode.
-- Hỗ trợ iOS 11 trở lên ở phiên bản này.
+- Hỗ trợ iOS 11 trở lên
