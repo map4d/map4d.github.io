@@ -1,9 +1,9 @@
 # POI Overlay
 
 POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ. Các POI của
-POI Overlay được ưu tiên hiển thị so với POI của iPostMap và chỉ hiển thị ở chế độ 2D.
+POI Overlay được ưu tiên hiển thị so với POI của bản đồ.
 
-![CocoaPods](../../resources/poiOverlay.png)
+![CocoaPods](../resources/poiOverlay.png)
 
 ## Add POI overlay
 
@@ -27,7 +27,7 @@ zoom tương ứng. Sau đó bạn thêm **POI Overlay** vào Map như sau:
 3. Cung cấp một đối tượng `MFPOIOverlayOptions` với các tùy chọn:
 
     1. `poiProvider(MFPOIProvider)` : truyền vào một đối tượng MFUrlPOIProvider được tạo ở trên sử dụng cho POI Overlay.
-
+    
     2. `prefixId(String)` : xác định prefixId cho POI Overlay. Nó sẽ thêm tiền tố này vào id của tất cả các POI trong POI Overlay
 
     3. `visible(boolean)` : cho phép POI Overlay ẩn hay hiện sau khi add vào Map.
@@ -38,7 +38,7 @@ zoom tương ứng. Sau đó bạn thêm **POI Overlay** vào Map như sau:
 #### ** Java **
 
 ```java
-private iPostMap map4D;
+private iPostMap map;
 
 MFPOIProvider poiProvider = new MFUrlPOIProvider() {
     @Override
@@ -69,13 +69,13 @@ MFPOIProvider poiProvider = new MFUrlPOIProvider() {
         return list;
     }
 };
-MFPOIOverlay poiOverlay = ipostmap.addPOIOverlay(new MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"));
+MFPOIOverlay poiOverlay = map.addPOIOverlay(new MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"));
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: iPostMap
+private lateinit var map: iPostMap
 
 var poiProvider: MFPOIProvider = object : MFUrlPOIProvider() {
     override fun getPOIUrl(x: Int, y: Int, zoom: Int): String {
@@ -104,7 +104,7 @@ var poiProvider: MFPOIProvider = object : MFUrlPOIProvider() {
         return list
     }
 }
-var poiOverlay = ipostmap.addPOIOverlay(MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"))
+var poiOverlay = map.addPOIOverlay(MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"))
 ```
 <!-- tabs:end -->
 
@@ -128,7 +128,7 @@ poiOverlay.remove()
 
 ### Ẩn/Hiện POI Overlay
 
-Gọi phương thức `MFPOIOverlay.setVisible()` để ẩn/hiện POI Overlay.<br>
+Gọi phương thức `MFPOIOverlay.setVisible()` để ẩn/hiện POI Overlay.  
 **Chú ý:** Mặc dù POI Overlay không hiển thị nhưng quá trình tải các POI vẫn diễn ra.
 
 <!-- tabs:start -->
@@ -145,13 +145,11 @@ poiOverlay.setVisible(false)
 ```
 <!-- tabs:end -->
 
-## API Reference
+---
 
-<a id="reference-poi-overlay"></a>
+## API Reference :id=api-poi-overlay
 
-## POI Overlay References
-
-## POIOverlay class
+### POIOverlay class :id=api-poi-overlay-poioverlay-class
 
 `MFPOIOverlay` class
 
@@ -163,7 +161,7 @@ poiOverlay.setVisible(false)
 | **isVisible**  | `none`                                  | boolean      | Get trạng thái ẩn/hiện của POI Overlay                                                 |
 | **getPrefixId**| `none`                                  | String       | Get giá trị prefix id của POI Overlay                                                  |
 
-## MFPOIOverlayOptions class
+### MFPOIOverlayOptions class :id=api-poi-overlay-mfpoioverlayoptions-class
 
 `MFPOIOverlayOptions` class
 
@@ -172,13 +170,13 @@ poiOverlay.setVisible(false)
 Để tạo một đối tượng `MFPOIOverlayOptions` ta làm như sau:
 
 <!-- tabs:start -->
-#### ** Java **
+#### ** Java ** :id=api-poi-overlay-java-
 
 ```java
 MFPOIOverlayOptions options = new MFPOIOverlayOptions()
 ```
 
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-poi-overlay-kotlin-
 
 ```kotlin
 var options = MFPOIOverlayOptions()
@@ -194,7 +192,7 @@ var options = MFPOIOverlayOptions()
 | **prefixId**   | String                                  | MFPOIOverlayOptions| Set giá trị prefixId cho MFPOIOverlayOptions                                     |
 
 
-## MFUrlPOIProvider class
+### MFUrlPOIProvider class :id=api-poi-overlay-mfurlpoiprovider-class
 
 `MFUrlPOIProvider` abtract class
 
@@ -203,21 +201,21 @@ var options = MFPOIOverlayOptions()
 | Name           | Parameters                              | Return Value | Description                                                                            |
 |----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
 | **getPOIUrl** | int, int, int, boolean                   | String       | Trả về là một đường dẫn URL chứa dữ liệu của POI trên Tile ứng với tọa độ x, y, mức zoom và chế độ Map tương ứng|
-| **parserPOIData**| String                                |List<[MFPOIData](/guides/poi-overlay?id=mfpoidata-class)>| Biến đổi dữ liệu từ String trả về từ phương thức `getPOIUrl` sang List< MFPOIData >     |
+| **parserPOIData**| String                                |List<[MFPOIData](/guides/poi-overlay.md?id=api-poi-overlay-mfpoidata-class)>| Biến đổi dữ liệu từ String trả về từ phương thức `getPOIUrl` sang List< MFPOIData >     |
 
-## MFPOIData class
+### MFPOIData class :id=api-poi-overlay-mfpoidata-class
 
 `MFPOIData` class
 
-MFPOIData là object chứa thông tin của POI để iPostMap SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của
-mình thành mảng các POI data cung cấp cho iPostMap SDK hiển thị lên bản đồ.
+MFPOIData là object chứa thông tin của POI để Map SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của
+mình thành mảng các POI data cung cấp cho Map SDK hiển thị lên bản đồ.
 
 **Constructor**
 
 Để tạo một đối tượng `MFPOIData` ta làm như sau:
 
 <!-- tabs:start -->
-#### ** Java **
+#### ** Java ** :id=api-poi-overlay-java-1
 
 ```java
 String id = "id";
@@ -227,7 +225,7 @@ double lng = 108.228765;
 MFPOIData poiData = new MFPOIData(id, title, new MFLocationCoordinate(lat, lng));
 ```
 
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-poi-overlay-kotlin-1
 
 ```kotlin
 val id = "id"
@@ -243,7 +241,7 @@ val poiData = MFPOIData(id, title, MFLocationCoordinate(lat, lng))
 | Name           | Parameters                              | Return Value | Description                                                                            |
 |----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
 | **setId**      | String                                  | `none` | set id cho POI                                                                               |
-| **setPosition**| [MFLocationCoordinate](/guides/coordinates?id=mflocationcoordinate) | `none`| Set vị trí tọa độ của POI hiển thị trên bản đồ                 |
+| **setPosition**| [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate) | `none`| Set vị trí tọa độ của POI hiển thị trên bản đồ                 |
 | **setTitle**   | String                                  | `none`| Set title cho POI                                                                             |
 | ~**setTitleColor**~   | int                              | `none`| Set màu của title cho POI                                                                     |
 | **setColor**   | int                                     | `none`| Màu cho icon (nếu sử dụng type) và tiêu đề của POI                                            |

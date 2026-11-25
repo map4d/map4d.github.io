@@ -1,7 +1,7 @@
 # iPostMap Android SDK
 [![ipostmap](https://img.shields.io/badge/ipostmap-map-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-android-brightgreen.svg)](https://www.android.com/)
-[![maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fpackages.ipostmap.vn%2Frepository%2Fmaven-public%2Fvn%2Fmap4d%2FiPostMap%2Fmaven-metadata.xml)](https://ipostmap.vn/)
+[![maven](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fpackages.map4d.vn%2Frepository%2Fmaven-public%2Fvn%2Fmap4d%2FiPostMap%2Fmaven-metadata.xml)](https://ipostmap.vn/)
 
 iPostMap Android SDK for Android, written in C/C++, Java.  
 
@@ -18,7 +18,7 @@ Nếu dự án của bạn dùng Gradle thì trước hết cần khai báo url 
 allprojects {
     repositories {
         maven {
-            url = "https://packages.ipostmap.vn/repository/maven-public"
+            url = "https://packages.map4d.vn/repository/maven-public"
         }
     }
 }
@@ -29,7 +29,7 @@ Thêm vào dependencies:
 ```xml
 dependencies {
   implementation 'vn.map4d:Map4dTypes:1.1.0'
-  implementation 'vn.map4d:iPostMap:3.0.0'
+  implementation 'vn.map4d:iPostMap:3.1.0'
 }
 ```
 
@@ -48,7 +48,7 @@ dependencies {
   <application
     android:theme="@style/AppTheme">
     <meta-data
-      android:name="vn.ipostmap.Map.ACCESS_KEY"
+      android:name="vn.map4d.map.ACCESS_KEY"
       android:value="TYPE_YOUR_KEY_HERE"/>
   </application>
   <uses-permission android:name="android.permission.INTERNET" />
@@ -170,10 +170,6 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 ```
 <!-- tabs:end -->
 
-### Ví dụ hoàn chỉnh sử dụng MFMapView
-
-[https://github.com/ipostmap/android-samples/tree/main/simple-mapview-demo](https://github.com/map4d/android-samples/tree/main/simple-mapview-demo)
-
 ## Add a MFSupportMapFragment object
 
 Chúng ta có thể thêm đối tượng `MFSupportMapFragment` vào ứng dụng của mình bằng cách tĩnh hoặc động. Cách dơn giản nhất là thêm nó bằng cách tĩnh. Nếu chúng ta
@@ -237,6 +233,3 @@ supportFragmentManager
 ```
 <!-- tabs:end -->
 
-### Ví dụ hoàn chỉnh sử dụng MFSupportMapFragment
-
-[https://github.com/ipostmap/android-samples/tree/main/support-map-fragment-demo](https://github.com/map4d/android-samples/tree/main/support-map-fragment-demo)

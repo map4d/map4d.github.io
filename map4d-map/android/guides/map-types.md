@@ -2,21 +2,21 @@
 
 ## Giới thiệu
 
-> iPostMap Android SDK cho phép tùy chỉnh kiểu hiển thị của Tile bản đồ theo nhiều chế độ (Raster, Roadmap, Satellite hoặc Map3D).
+> Map Android SDK cho phép tùy chỉnh kiểu hiển thị của Tile bản đồ theo nhiều chế độ
 
 ### Các loại bản đồ
 
-iPostMap Map SDK hiện cung cấp 4 loại bản đồ tùy chỉnh thông qua đối tượng `MFMapType` như bên dưới:
+Map4D Map SDK hiện cung cấp 3 loại bản đồ tùy chỉnh thông qua đối tượng `MFMapType` như bên dưới:
 
 | No. | Name    | Description                                                                                                                                                            |
 |:---:|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  1  |ROADMAP  | Giá trị: `MFMapType.ROADMAP`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của iPostMap SDK |
-|  3  |SATELLITE| Giá trị: `MFMapType.SATELLITE`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh.                                                                       |
+|  1  |ROADMAP  | Giá trị: `MFMapType.ROADMAP`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của Map4dMap SDK |
+|  2  |SATELLITE| Giá trị: `MFMapType.SATELLITE`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh.                                                                       |
 |  3  |HYBRID   | Giá trị: `MFMapType.HYBRID`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh, kế hợp thông tin đường sá                                                |
 
 |                 ROADMAP                                   | SATELLITE                                                    |                 HYBRID                                   |
 |:---------------------------------------------------------:|:------------------------------------------------------------:|:--------------------------------------------------------:|
-| ![MapType](../../../ios/resources/maptype_roadmap.jpg) | ![MapType](../../../ios/resources/maptype_satelllite.jpg) | ![MapType](../../../ios/resources/maptype_hybrid.jpg) |
+| ![MapType](../../ios/resources/v3/maptype_roadmap.jpg) | ![MapType](../../ios/resources/v3/maptype_satelllite.jpg) | ![MapType](../../ios/resources/v3/maptype_hybrid.jpg) |
 
 
 ### Thay đổi kiểu bản đồ
@@ -28,17 +28,17 @@ Ví dụ: để hiển thị bản đồ dạng Raster:
 #### ** Java **
 
 ```java
-private iPostMap map4D;
+private Map4D map;
 
-ipostmap.setMapType(MFMapType.SATELLITE);
+map.setMapType(MFMapType.SATELLITE);
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: iPostMap
+private lateinit var map: Map4D
 
-ipostmap.setMapType(MFMapType.SATELLITE)
+map.setMapType(MFMapType.SATELLITE)
 ```
 <!-- tabs:end -->
 
@@ -53,17 +53,17 @@ Ví dụ:
 #### ** Java **
 
 ```java
-private iPostMap map4D;
+private iPostMap map;
 
-MFMapType mapType = ipostmap.getMapType();
+MFMapType mapType = map.getMapType();
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: iPostMap
+private lateinit var map: iPostMap
 
-val mapType = ipostmap.getMapType()
+val mapType = map.getMapType()
 ```
 <!-- tabs:end -->
 

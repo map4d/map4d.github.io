@@ -4,21 +4,21 @@ Lớp Circle cho phép người dùng vẽ một Circle lên map..
 
 ### 1. Tạo circle
 
-![Circle](../../resources/6-circle.png)
+![Circle](../resources/6-circle.png)
 
-- Tạo circle from MFCircleOptions
+- Tạo circle from MFCircleOptions 
 
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
- val circle = ipostmap.addCircle(MFCircleOptions()
+ val circle = map.addCircle(MFCircleOptions()
                         .center(MFLocationCoordinate(16.066517, 108.210354))
                         .radius(500)
                         .fillColor(ContextCompat.getColor(this, R.color.redWithAlphaThirtyPercent)))
 ```
 #### ** Java **
 ```java
- MFCircle circle = ipostmap.addCircle(new MFCircleOptions()
+ MFCircle circle = map.addCircle(new MFCircleOptions()
                         .center(new MFLocationCoordinate(16.066517, 108.210354))
                         .radius(500)
                         .fillColor(ContextCompat.getColor(this, R.color.redWithAlphaThirtyPercent)));
@@ -32,12 +32,12 @@ Như ví dụ trên thì chúng ta tạo một Circle với các tùy chỉnh nh
 
 - Tạo circle với strokeColor and strokeWidth.
 
-![Circle](../../resources/6-circle-stroke.jpg)
+![Circle](../resources/6-circle-stroke.jpg)
 
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
- val circle = ipostmap.addCircle(MFCircleOptions()
+ val circle = map.addCircle(MFCircleOptions()
                         .center(MFLocationCoordinate(16.066517, 108.210354))
                         .radius(300.0)
                         .fillColor(ContextCompat.getColor(context ?: return, R.color.green))
@@ -47,7 +47,7 @@ Như ví dụ trên thì chúng ta tạo một Circle với các tùy chỉnh nh
 
 #### ** Java **
 ```java
- java circle = ipostmap.addCircle(new MFCircleOptions()
+ java circle = map.addCircle(new MFCircleOptions()
                         .center(new MFLocationCoordinate(16.066517, 108.210354))
                         .radius(300)
                         .fillColor(ContextCompat.getColor(this, R.color.green))
@@ -60,7 +60,7 @@ Như ví dụ trên thì chúng ta tạo một Circle với các tùy chỉnh nh
 
    - Stroke width đơn vị là point tương đương dp trong android
    - Stroke width mặc định là 0.f (không vẽ)
-
+   
 ### 2. Xóa Circle
 
 > Để xóa Circle ra khỏi bản đồ ta sử dụng hàm `remove()`
@@ -90,7 +90,7 @@ map4D?.setOnCircleClickListener { mfCircle ->
 ```
 #### ** Java **
 ```java
-ipostmap.setOnCircleClickListener(new iPostMap.OnCircleClickListener() {
+map.setOnCircleClickListener(new Map4D.OnCircleClickListener() {
     @Override
     public void onCircleClick(MFCircle mfCircle) {
         Toast.makeText(getApplicationContext(), "Circle clicked:  " + mfCircle.getId(), Toast.LENGTH_SHORT).show();
@@ -109,12 +109,12 @@ ipostmap.setOnCircleClickListener(new iPostMap.OnCircleClickListener() {
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
-  val circleA = ipostmap.addCircle(MFCircleOptions()
+  val circleA = map.addCircle(MFCircleOptions()
                           .center(MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500.0)
                           .fillColor(ContextCompat.getColor(context ?: return, R.color.green))
                           .zIndex(10.0f))
-  val circleB = ipostmap.addCircle(MFCircleOptions()
+  val circleB = map.addCircle(MFCircleOptions()
                           .center(MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500.0)
                           .fillColor(ContextCompat.getColor(context ?: return, R.color.red))
@@ -123,12 +123,12 @@ ipostmap.setOnCircleClickListener(new iPostMap.OnCircleClickListener() {
 
 #### ** Java **
 ```java
-  MFCircle circleA = ipostmap.addCircle(new MFCircleOptions()
+  MFCircle circleA = map.addCircle(new MFCircleOptions()
                           .center(new MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500)
                           .fillColor(ContextCompat.getColor(this, R.color.green))
                           .zIndex(10.f));
-  MFCircle circleB = ipostmap.addCircle(new MFCircleOptions()
+  MFCircle circleB = map.addCircle(new MFCircleOptions()
                           .center(new MFLocationCoordinate(16.066517, 108.210354))
                           .radius(500)
                           .fillColor(ContextCompat.getColor(this, R.color.red))
@@ -142,22 +142,22 @@ ipostmap.setOnCircleClickListener(new iPostMap.OnCircleClickListener() {
 
 #### ** Kotlin **
 ```java
-  MFCircle circleA = ipostmap.addCircle(new MFCircleOptions()
+  MFCircle circleA = map.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor(ContextCompat.getColor(this, R.color.red)));
-  MFCircle circleB = ipostmap.addCircle(new MFCircleOptions()
+  MFCircle circleB = map.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor(ContextCompat.getColor(this, R.color.green)));
 ```
 #### ** Java **
 ```java
-  MFCircle circleA = ipostmap.addCircle(new MFCircleOptions()
+  MFCircle circleA = map.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor(ContextCompat.getColor(this, R.color.red)));
-  MFCircle circleB = ipostmap.addCircle(new MFCircleOptions()
+  MFCircle circleB = map.addCircle(new MFCircleOptions()
                             .center(new MFLocationCoordinate(16.066517, 108.210354))
                             .radius(500)
                             .fillColor(ContextCompat.getColor(this, R.color.green)));
@@ -166,13 +166,11 @@ ipostmap.setOnCircleClickListener(new iPostMap.OnCircleClickListener() {
 <!-- tabs:end -->
 - CircleB sẽ vẽ đè lên CircleA vì nó có zIndex bằng nhau. Cùng zIndex thì layer nào thêm vào sau sẽ vẽ đè lên layer trước.
 
-## API Reference
+---
 
-<a id="reference-circle"></a>
+## API Reference :id=api-circle
 
-## Circle reference
-
-## Circle Class
+### Circle Class :id=api-circle-circle-class
 
 `MFCircle` class
 
@@ -180,16 +178,16 @@ ipostmap.setOnCircleClickListener(new iPostMap.OnCircleClickListener() {
 Tạo Circle từ  MFCircleOptions:
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-circle-kotlin-
 ```kotlin
- val circle = ipostmap.addCircle(MFCircleOptions()
+ val circle = map4D.addCircle(MFCircleOptions()
                         .center(MFLocationCoordinate(16.066517, 108.210354))
                         .radius(500)
                         .fillColor(ContextCompat.getColor(this, R.color.redWithAlphaThirtyPercent)))
 ```
-#### ** Java **
+#### ** Java ** :id=api-circle-java-
 ```java
- MFCircle circle = ipostmap.addCircle(new MFCircleOptions()
+ MFCircle circle = map4D.addCircle(new MFCircleOptions()
                         .center(new MFLocationCoordinate(16.066517, 108.210354))
                         .radius(500)
                         .fillColor(ContextCompat.getColor(this, R.color.redWithAlphaThirtyPercent)));
@@ -200,8 +198,8 @@ Tạo Circle từ  MFCircleOptions:
 
 | Name                         | Parameters                              | Return Value | Description                                                                            |
 |------------------------------|:---------------------------------------:|:------------:|----------------------------------------------------------------------------------------|
-| **setCenter**                | [MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)| `none`   | Set tạo độ tâm cho circle                                    |
-| **getCenter**                | `none` |  [MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate) | Get tọa độ tâm của circle                                    |
+| **setCenter**                | [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)| `none`   | Set tạo độ tâm cho circle                                    |
+| **getCenter**                | `none` |  [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate) | Get tọa độ tâm của circle                                    |
 | **setFillColor**             | @ColorInt int                           | `none`       | Set màu cho circle kiểu ColorInt.                                                      |
 | **getFillColor**             | `none`                                  | @ColorRes int| Get màu của circle                                                                     |
 | **setRadius**                | double                                  | `none`       | Set bán kính cho circle theo đơn vị là mét                                             |
@@ -218,7 +216,7 @@ Tạo Circle từ  MFCircleOptions:
 | **isTouchable**              | `none`                                  | boolean      | Kiểm tra xem có thể tương tác được với circle trên bản đồ hay không                    |
 
 
-## Circle Options
+### Circle Options :id=api-circle-circle-options
 
 `MFCircleOptions` class
 
@@ -228,7 +226,7 @@ Tạo Circle từ  MFCircleOptions:
 
 | Name                       | Type                | Description                                                                                                                                                           |
 |----------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **center**                 |[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)| một điểm tọa độ **MFLocationCoordinate** để xác định tâm của Circle.                                                              |
+| **center**                 |[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)| một điểm tọa độ **MFLocationCoordinate** để xác định tâm của Circle.                                                              |
 | **radius**                 | double              | chỉ định bán kính của Circle theo đơn vị **mét**.                                                                                                                     |
 | **fillColor**              | string              | chỉ định màu sắc của Circle theo kiểu @ColorInt int. Giá trịn mặc định là Color.RED.                                                                                       |
 | **visible**                | boolean             | xác định Circle có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                                                                         |

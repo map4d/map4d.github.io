@@ -1,12 +1,6 @@
-# Coordinates
+# Coordinates :id=api-coordinates
 
-## API Reference
-
-<a id="reference-coordinates"></a>
-
-## Coordinates References
-
-### MFLocationCoordinate
+### MFLocationCoordinate :id=api-coordinates-mflocationcoordinate
 
 `MFLocationCoordinate` class
 
@@ -24,11 +18,11 @@ Tạo đối tượng LatLng vớ latitude and longitude
 
 <!-- tabs:start -->
 
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-coordinates-kotlin-
 ```kotlin
 val locationCoordinate = MFLocationCoordinate(latitude, longitude)
 ```
-#### ** Java **
+#### ** Java ** :id=api-coordinates-java-
 ```java
 MFLocationCoordinate locationCoordinate = new MFLocationCoordinate(latitude, longitude);
 ```
@@ -56,7 +50,7 @@ MFLocationCoordinate locationCoordinate = new MFLocationCoordinate(latitude, lon
 | **multiply**  | Double            | MFLocationCoordinate| Tích của location coordinate với 1 số                            |
 | **subtract**  | MFLocationCoordinate| MFLocationCoordinate| Hiệu của 2 location                                            |
 
-### MFCoordinateBounds
+### MFCoordinateBounds :id=api-coordinates-mfcoordinatebounds
 
 `MFCoordinateBounds` class
 
@@ -73,7 +67,7 @@ public MFCoordinateBounds(MFLocationCoordinate southwest, MFLocationCoordinate n
 - Tạo đối tượng MFCoordinateBounds với từ MFCoordinateBounds.Builder
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-coordinates-kotlin-1
 ```kotlin
     val latLngList: MutableList<MFLocationCoordinate> = ArrayList()
     latLngList.add(MFLocationCoordinate(16.067218, 108.213916))
@@ -96,7 +90,7 @@ public MFCoordinateBounds(MFLocationCoordinate southwest, MFLocationCoordinate n
     val cameraPositionForBounds = map4D?.getCameraPositionForBounds(coordinateBounds, 10)
     map4D?.moveCamera(MFCameraUpdateFactory.newCameraPosition(cameraPositionForBounds ?: return))
 ```
-#### ** Java **
+#### ** Java ** :id=api-coordinates-java-1
 ```java
     ArrayList<MFLocationCoordinate> latLngList = new ArrayList();
     latLngList.add(new MFLocationCoordinate(16.067218, 108.213916));
@@ -107,7 +101,7 @@ public MFCoordinateBounds(MFLocationCoordinate southwest, MFLocationCoordinate n
 
     for (MFLocationCoordinate latlng : latLngList ) {
         MFMarkerOptions markerOptions = new MFMarkerOptions().position(latlng);
-        ipostmap.addMarker(markerOptions);
+        map4D.addMarker(markerOptions);
     }
     MFCoordinateBounds.Builder builder = MFCoordinateBounds.builder().includes(
       Arrays.asList(new MFLocationCoordinate(16.067218, 108.213916),
@@ -116,8 +110,8 @@ public MFCoordinateBounds(MFLocationCoordinate southwest, MFLocationCoordinate n
         new MFLocationCoordinate(16.059980, 108.211137),
         new MFLocationCoordinate(16.059516, 108.208358)));
     MFCoordinateBounds coordinateBounds = builder.build();
-    MFCameraPosition cameraPositionForBounds = ipostmap.getCameraPositionForBounds(coordinateBounds, 10);
-    ipostmap.moveCamera(MFCameraUpdateFactory.newCameraPosition(cameraPositionForBounds));
+    MFCameraPosition cameraPositionForBounds = map4D.getCameraPositionForBounds(coordinateBounds, 10);
+    map4D.moveCamera(MFCameraUpdateFactory.newCameraPosition(cameraPositionForBounds));
 ```
 <!-- tabs:end -->
 
@@ -134,7 +128,7 @@ public MFCoordinateBounds(MFLocationCoordinate southwest, MFLocationCoordinate n
 | getSouthwest | `none`     | [MFLocationCoordinate](#MFLocationCoordinate)| Get vị trí phía tây nam của bounds  |
 
 
-### MFCoordinateBounds.Builder
+### MFCoordinateBounds.Builder :id=api-coordinates-mfcoordinateboundsbuilder
 
 `MFCoordinateBounds` class
 

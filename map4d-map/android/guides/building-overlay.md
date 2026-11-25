@@ -1,9 +1,9 @@
 # Building Overlay
 
 Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết
-hợp với building sẵn có của iPostMap. Building overlay chỉ hiển thị ở chế độ 3D.
+hợp với building sẵn có của bản đồ. Building overlay chỉ hiển thị ở chế độ 3D.
 
-![CocoaPods](../../resources/buildingOverlay.png)
+![CocoaPods](../resources/buildingOverlay.png)
 
 ## Add Building overlay
 
@@ -28,18 +28,18 @@ tọa độ x, y và mức zoom tương ứng. Sau đó bạn thêm **Building O
 3. Cung cấp một đối tượng `MFBuildingOverlayOptions` với các tùy chọn:
 
     1. `buildingProvider(MFBuildingProvider)` : truyền vào một đối tượng MFUrlBuildingProvider được tạo ở trên sử dụng cho Building Overlay.
-
+    
     2. `prefixId(String)` : xác định prefixId cho Building Overlay. Nó sẽ thêm tiền tố này vào id của tất cả các Building trong Building Overlay
 
     3. `visible(boolean)` : cho phép Building Overlay ẩn hay hiện sau khi add vào Map.
 
-4. Gọi `iPostMap.addBuildingOverlay()` để thêm Building Overlay vào Map.
+4. Gọi `Map4D.addBuildingOverlay()` để thêm Building Overlay vào Map.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private iPostMap map4D;
+private Map4D map;
 
 MFBuildingProvider buildingProvider = new MFUrlBuildingProvider() {
     @Override
@@ -72,13 +72,13 @@ MFBuildingProvider buildingProvider = new MFUrlBuildingProvider() {
         return buildings;
     }
 };
-MFBuildingOverlay buildingOverlay = ipostmap.addBuildingOverlay(new MFBuildingOverlayOptions().buildingProvider(buildingProvider).prefixId("buildingOverlay-"));
+MFBuildingOverlay buildingOverlay = map.addBuildingOverlay(new MFBuildingOverlayOptions().buildingProvider(buildingProvider).prefixId("buildingOverlay-"));
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: iPostMap
+private lateinit var map: Map4D
 
 var buildingProvider: MFBuildingProvider = object : MFUrlBuildingProvider() {
     override fun getBuildingUrl(x: Int, y: Int, zoom: Int): String {
@@ -109,7 +109,7 @@ var buildingProvider: MFBuildingProvider = object : MFUrlBuildingProvider() {
         return buildings
     }
 }
-var buildingOverlay = ipostmap.addBuildingOverlay(MFBuildingOverlayOptions().buildingProvider(buildingProvider).prefixId("buildingOverlay-"))
+var buildingOverlay = map.addBuildingOverlay(MFBuildingOverlayOptions().buildingProvider(buildingProvider).prefixId("buildingOverlay-"))
 ```
 <!-- tabs:end -->
 
@@ -150,13 +150,11 @@ buildingOverlay.setVisible(false)
 ```
 <!-- tabs:end -->
 
-## API Reference
+---
 
-<a id="reference-building-overlay"></a>
+## API Reference :id=api-building-overlay
 
-## Building Overlay Reference
-
-## BuildingOverlay class
+### BuildingOverlay class :id=api-building-overlay-buildingoverlay-class
 
 `MFBuildingOverlay` class
 
@@ -168,7 +166,7 @@ buildingOverlay.setVisible(false)
 | **isVisible**  | `none`                                  | boolean      | Get trạng thái ẩn/hiện của Building Overlay                                            |
 | **getPrefixId**| `none`                                  | String       | Get giá trị prefix id của Building Overlay                                             |
 
-## MFBuildingOverlayOptions class
+### MFBuildingOverlayOptions class :id=api-building-overlay-mfbuildingoverlayoptions-class
 
 `MFBuildingOverlayOptions` class
 
@@ -177,13 +175,13 @@ buildingOverlay.setVisible(false)
 Để tạo một đối tượng `MFBuildingOverlayOptions` ta làm như sau:
 
 <!-- tabs:start -->
-#### ** Java **
+#### ** Java ** :id=api-building-overlay-java-
 
 ```java
 MFBuildingOverlayOptions options = new MFBuildingOverlayOptions()
 ```
 
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-building-overlay-kotlin-
 
 ```kotlin
 var options = MFBuildingOverlayOptions()
@@ -199,7 +197,7 @@ var options = MFBuildingOverlayOptions()
 | **prefixId**   | String                                  | MFBuildingOverlayOptions| Set giá trị prefixId cho MFBuildingOverlayOptions                           |
 
 
-## MFUrlBuildingProvider class
+### MFUrlBuildingProvider class :id=api-building-overlay-mfurlbuildingprovider-class
 
 `MFUrlBuildingProvider` abtract class
 
@@ -208,21 +206,21 @@ var options = MFBuildingOverlayOptions()
 | Name           | Parameters                              | Return Value | Description                                                                            |
 |----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
 | **getBuildingUrl** | int, int, int                       | String       | Trả về là một đường dẫn URL chứa dữ liệu của POI trên Tile ứng với tọa độ x, y và mức zoom tương ứng|
-| **parserBuildingData**| String                           |List<[MFBuildingData](/guides/building-overlay?id=mfbuildingdata-class)>| Biến đổi dữ liệu từ String trả vê từ phương thức `getBuildingUrl()` sang List< MFBuildingData >|
+| **parserBuildingData**| String                           |List<[MFBuildingData](/guides/building-overlay.md?id=api-building-overlay-mfbuildingdata-class)>| Biến đổi dữ liệu từ String trả vê từ phương thức `getBuildingUrl()` sang List< MFBuildingData >|
 
-## MFBuildingData class
+### MFBuildingData class :id=api-building-overlay-mfbuildingdata-class
 
 `MFBuildingData` class
 
-MFBuildingData là object chứa thông tin của building để iPostMap SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến
-đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho iPostMap SDK hiển thị lên bản đồ.
+MFBuildingData là object chứa thông tin của building để Map4D SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến
+đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho Map4D SDK hiển thị lên bản đồ.
 
 **Constructor**
 
 Để tạo một đối tượng `MFBuildingData` ta làm như sau:
 
 <!-- tabs:start -->
-#### ** Java **
+#### ** Java ** :id=api-building-overlay-java-1
 
 ```java
 String id = "id";
@@ -234,7 +232,7 @@ MFLocationCoordinate location = new MFLocationCoordinate(lat, lng);
 MFBuildingData buildingData = new MFBuildingData(id, location, model, texture);
 ```
 
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-building-overlay-kotlin-1
 
 ```kotlin
 val id = "id"
@@ -253,13 +251,13 @@ val buildingData = MFBuildingData(id, location, model, texture)
 |----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
 | **setId**      | String                                  | `none`       | set id cho Building                                                                    |
 | **setName**    | String                                  | `none`       | set tên cho Building                                                                   |
-| **setPosition**| [MFLocationCoordinate](/guides/coordinates?id=mflocationcoordinate) | `none`| Set vị trí hiển thị của Building trên bản đồ                   |
+| **setPosition**| [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate) | `none`| Set vị trí hiển thị của Building trên bản đồ                   |
 | **setScale**   | double                                  | `none`       | Set tỉ lệ hiển thị của Building so với thực tế                                         |
 | **setBearing** | double                                  | `none`       | Set góc quay của Building khi được vẽ lên bản đồ (đơn vị: độ)                          |
 | **setElevation**| double                                 | `none`       | Set độ cao của Building so với mực nước biển                                           |
 | **setHeight**  | double                                  | `none`       | Set chiều cao của Building (đơn vị: mét)                                               |
 | **setModel**   | String                                  | `none`       | Set đường dẫn để lấy dữ liệu Model cho Building                                        |
 | **setTexture** | String                                  | `none`       | Set đường dẫn để lấy dữ liệu Texture cho Building                                      |
-| **setCoordinates** | List<[MFLocationCoordinate](/guides/coordinates?id=mflocationcoordinate)> | `none`| Set một mảng tọa độ để tạo một Building hình khối với mặt đáy là mảng vị trí này. Kết hợp với thuộc tính `height` để tạo chiều cao|
+| **setCoordinates** | List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)> | `none`| Set một mảng tọa độ để tạo một Building hình khối với mặt đáy là mảng vị trí này. Kết hợp với thuộc tính `height` để tạo chiều cao|
 | **setStartDate**   | long                                | `none`       | Set ngày bắt đầu hiển thị Building                                                     |
 | **setEndDate** | long                                    | `none`       | Set ngày kết thúc hiển thị Building                                                    |

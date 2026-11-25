@@ -5,7 +5,7 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
 
 ### 1. Tạo polyline
 
-![Polyline](../../resources/4-polyline.png)
+![Polyline](../resources/4-polyline.png)
 
 > Tạo đối tượng polyline từ **MFPolylineOptions**
 
@@ -38,7 +38,7 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
   latLngList.add(new MFLocationCoordinate(16.067218, 108.213916));
 
-  polyline = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(ContextCompat.getColor(this, R.color.red))
                 .width(8);
 ```
@@ -56,7 +56,7 @@ Ví dụ bên dưới chúng ta sẽ sử dụng pattern `MFDashPattern` cho Pol
 #### ** Kotlin **
 ```kotlin
   val latLngList: MutableList<MFLocationCoordinate> = mutableListOf()
-
+  
   latLngList.add(MFLocationCoordinate(16.067218, 108.213916))
   latLngList.add(MFLocationCoordinate(16.066496, 108.210311))
   latLngList.add(MFLocationCoordinate(16.064877, 108.210397))
@@ -79,16 +79,16 @@ Ví dụ bên dưới chúng ta sẽ sử dụng pattern `MFDashPattern` cho Pol
   latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
 
-  polyline = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(Color.RED)
                 .width(8)
                 .pattern(new MFDashPattern(8, 8)));
 ```
 <!-- tabs:end -->
 
-- **Result**:
+- **Result**: 
 
-![Polyline](../../resources/4-polyline-dotted.jpg)
+![Polyline](../resources/4-polyline-dotted.jpg)
 
 Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 
@@ -98,7 +98,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 #### ** Kotlin **
 ```kotlin
   val latLngList: MutableList<MFLocationCoordinate> = mutableListOf()
-
+  
   latLngList.add(MFLocationCoordinate(16.067218, 108.213916))
   latLngList.add(MFLocationCoordinate(16.066496, 108.210311))
   latLngList.add(MFLocationCoordinate(16.064877, 108.210397))
@@ -121,7 +121,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
   latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
 
-  polyline = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(Color.RED)
                 .width(8)
                 .pattern(new MFDotPattern(1)));
@@ -130,7 +130,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 
 - **Result**
 
-![Polyline](../../resources/4-polyline_dotpattern.png)
+![Polyline](../resources/4-polyline_dotpattern.png)
 
 - Với `MFIconPattern` chúng ta sử dụng như sau:
 
@@ -138,13 +138,13 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 #### ** Kotlin **
 ```kotlin
   val latLngList: MutableList<MFLocationCoordinate> = mutableListOf()
-
+  
   latLngList.add(MFLocationCoordinate(16.067218, 108.213916))
   latLngList.add(MFLocationCoordinate(16.066496, 108.210311))
   latLngList.add(MFLocationCoordinate(16.064877, 108.210397))
   latLngList.add(MFLocationCoordinate(16.059980, 108.211137))
   latLngList.add(MFLocationCoordinate(16.059516, 108.208358))
-
+  
   // icon có hỗ trợ alpha để tạo các khoảng hở cho hình ảnh
   val icon = MFBitmapDescriptorFactory.fromResource(R.drawable.your_icon)
 
@@ -163,11 +163,11 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
   latLngList.add(new MFLocationCoordinate(16.064877, 108.210397));
   latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
-
+  
   // icon có hỗ trợ alpha để tạo các khoảng hở cho hình ảnh
   MFBitmapDescriptor icon = MFBitmapDescriptorFactory.fromResource(R.drawable.your_icon);
 
-  polyline = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(Color.RED)
                 .width(8)
                 .pattern(new MFIconPattern(icon)));
@@ -176,7 +176,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 
 - **Result**
 
-![Polyline](../../resources/4-polyline_iconpattern.png)
+![Polyline](../resources/4-polyline_iconpattern.png)
 
 ### 2. Xóa Polyline
 
@@ -210,7 +210,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 ```
 #### ** Java **
 ```java
-  ipostmap.setOnPolylineClickListener(new iPostMap.OnPolylineClickListener() {
+  map.setOnPolylineClickListener(new Map4D.OnPolylineClickListener() {
     @Override
     public void onPolylineClick(MFPolyline polyline) {
         Toast.makeText(getApplicationContext(), "clicked Polyline: id " + polyline.getId(), Toast.LENGTH_SHORT).show();
@@ -257,13 +257,13 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
     latLngList.add(new MFLocationCoordinate(16.064877, 108.210397));
     latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
     latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
-
-    MFPolylineA polylineA = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    
+    MFPolylineA polylineA = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blue))
                     .width(20.f)
                     .zIndex(5.f));
-
-    MFPolyline polylineB = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+                    
+    MFPolyline polylineB = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blue))
                     .width(8.f)
                     .zindex(10.f));
@@ -308,13 +308,13 @@ val latLngList: MutableList<MFLocationCoordinate> = ArrayList()
     latLngList.add(new MFLocationCoordinate(16.064877, 108.210397));
     latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
     latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
-
-    MFPolylineA polylineA = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    
+    MFPolylineA polylineA = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blueWithAlpha))
                     .width(8.f)
                     .zIndex(5.f));
-
-    MFPolyline polylineB = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+                    
+    MFPolyline polylineB = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blueWithAlpha))
                     .width(20.f)
                     .zindex(5.f));
@@ -323,20 +323,18 @@ val latLngList: MutableList<MFLocationCoordinate> = ArrayList()
 
 Như ví dụ ở trên thì polylineB sẽ đè lên polylineA vì nó có zIndex bằng nhau nên được add vào sau sẽ được vẽ sau.
 
-## API Reference
+---
 
-<a id="reference-polyline"></a>
+## API Reference :id=api-polyline
 
-## Polyline reference
-
-### Polyline Class
+#### Polyline Class :id=api-polyline-polyline-class
 
 `MFPolyline` class
 
 - Tạo Polyline với các options được chỉ định
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-polyline-kotlin-
 ```kotlin
 
   val latLngList = mutableListOf<MFLocationCoordinate>()
@@ -352,7 +350,7 @@ Như ví dụ ở trên thì polylineB sẽ đè lên polylineA vì nó có zInd
     .width(8.0f))
 ```
 
-#### ** Java **
+#### ** Java ** :id=api-polyline-java-
 ```java
   private final List<MFLocationCoordinate> latLngList = new ArrayList<>();
 
@@ -363,7 +361,7 @@ Như ví dụ ở trên thì polylineB sẽ đè lên polylineA vì nó có zInd
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
   latLngList.add(new MFLocationCoordinate(16.067218, 108.213916));
 
-  polyline = ipostmap.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(ContextCompat.getColor(this, R.color.red))
                 .width(8);
 ```
@@ -373,8 +371,8 @@ Như ví dụ ở trên thì polylineB sẽ đè lên polylineA vì nó có zInd
 
 | Name                         | Parameters                              | Return Value | Description                                                                            |
 |------------------------------|:---------------------------------------:|:------------:|----------------------------------------------------------------------------------------|
-| **setPath**                  | List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>|`none`| Set mảng các điểm tọa độ của polyline                      |
-| **getPoints**                | None |List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>| Get list các điểm tọa độ của polyline                       |
+| **setPath**                  | List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>|`none`| Set mảng các điểm tọa độ của polyline                      |
+| **getPoints**                | None |List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>| Get list các điểm tọa độ của polyline                       |
 | **setWidth**                 | float                                   | `none`       | Set độ rộng cho polyline                                                               |
 | **getWidth**                 | `none`                                  | float        | Get độ rộng của polyline                                                               |
 | **setColor**                 | @ColorInt int                           | `none`       | Set màu cho polyline theo kiểu @ColorInt int                                           |
@@ -383,15 +381,15 @@ Như ví dụ ở trên thì polylineB sẽ đè lên polylineA vì nó có zInd
 | **isVisible**                | `none`                                  | boolean      | Get trạng thái ẩn/hiện của polyline                                                    |
 | ~**setStyle**~               | MFPolylineStyle                         | `none`       | Set kiểu vẽ cho polyline (có 2 kiểu là: **MFPolyline.Solid** và **MFPolylineStyle.Dotted**)|
 | ~**getStyle**~               | `none`                                  | MFPolylineStyle| Get kiểu vẽ hiện tại của polyline                                                    |
-| **setPattern**     | [PatternItem](/guides/polyline?id=patternitem-class) | `none` | Set pattern cho polyline là kiểu Solid, Dash, Dot hoặc Icon                            |
-| **getPattern**     | `none` | [PatternItem](/guides/polyline?id=patternitem-class) | Get pattern hiện tại của polyline                                                      |
+| **setPattern**     | [PatternItem](/guides/polyline.md?id=api-polyline-patternitem-class) | `none` | Set pattern cho polyline là kiểu Solid, Dash, Dot hoặc Icon                            |
+| **getPattern**     | `none` | [PatternItem](/guides/polyline.md?id=api-polyline-patternitem-class) | Get pattern hiện tại của polyline                                                      |
 | **setZIndex**                | float                                   | `none`       | Set giá trị zIndex cho polyline                                                        |
 | **getZIndex**                | `none`                                  | float        | Get giá trị zIndex hiện tại của polyline                                               |
 | **setTouchable**             | boolean                                 | `none`       | Cho phép có được tương tác với polyline trên bản đồ hay không                          |
 | **isTouchable**              | `none`                                  | boolean      | Kiểm tra xem có thể tương tác với polyline trên bản đồ hay không                       |
 
 
-### Polyline Options
+#### Polyline Options :id=api-polyline-polyline-options
 
 `MFPolylineOptions` class
 
@@ -401,17 +399,17 @@ Như ví dụ ở trên thì polylineB sẽ đè lên polylineA vì nó có zInd
 
 | Name                         | Type                | Description                                                                                                                                                           |
 |------------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **path**                     |List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>| truyền vào một mảng các tọa độ **MFLocationCoordinate** để tạo Polyline.                                       |
+| **path**                     |List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>| truyền vào một mảng các tọa độ **MFLocationCoordinate** để tạo Polyline.                                       |
 | **width**                    | float               | chỉ định độ rộng của Polyline theo đơn vị point.                                                                                                                      |
 | **color**                    | @ColorInt int       | chỉ định màu sắc của Polyline theo kiểu @ColorInt int. Giá trị mặc định là **"Color.BLACK"**.|
 | **visible**                  | boolean             | xác định Polyline có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                                                                       |
 | **touchable**                | boolean             | cho phép người dùng có thể tương tác với Polyline trên bản đồ hay không. Giá trị mặc định là **true**.                                                                |
 | **zIndex**                   | float               | chỉ định thứ tự hiển thị giữa các Polyline với nhau hoặc giữa Polyline với các đối tượng khác trên bản đồ. Giá trị mặc định là **-1.0f**.                             |
 | ~**style**~                  | MFPolylineStyle     | chỉ định Polyline là loại nét liền (**"MFPolylineStyle.Solid"**) hay nét đứt (**"MFPolylineStyle.Dotted"**). Giá trị mặc định là **"MFPolylineStyle.Solid"**          |
-| **pattern**                  | [PatternItem](/guides/polyline?id=patternitem-class)| chỉ định pattern cho Polyline là kiểu Solid, Dash, Dot hoặc Icon. Giá trị mặc định là Solid                                    |
+| **pattern**                  | [PatternItem](/guides/polyline.md?id=api-polyline-patternitem-class)| chỉ định pattern cho Polyline là kiểu Solid, Dash, Dot hoặc Icon. Giá trị mặc định là Solid                                    |
 | **userData**                 | Object              | Kiểu User Data mà người dùng muốn lưu                                                                                                                                 |
 
-### PatternItem class
+#### PatternItem class :id=api-polyline-patternitem-class
 
 `PatternItem` abstract class
 
@@ -419,10 +417,10 @@ Như ví dụ ở trên thì polylineB sẽ đè lên polylineA vì nó có zInd
 
 | Name                         | Parameters                              | Return Value | Description                                                                            |
 |------------------------------|:---------------------------------------:|:------------:|----------------------------------------------------------------------------------------|
-| **getType**                  |`none`| [MFPatternType](/guides/polyline?id=mfpatterntype) | Get kiểu của pattern                                                             |
+| **getType**                  |`none`| [MFPatternType](/guides/polyline.md?id=api-polyline-mfpatterntype) | Get kiểu của pattern                                                             |
 | **getTypeValue**             |`none`                                   | int          | Get giá trị kiểu pattern theo số nguyên                                                |
 
-### MFSolidPattern class
+#### MFSolidPattern class :id=api-polyline-mfsolidpattern-class
 
 class `MFSolidPattern` extends `PatternItem`
 
@@ -431,22 +429,22 @@ class `MFSolidPattern` extends `PatternItem`
 **Constructor**
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-polyline-kotlin-1
 ```kotlin
 val pattern = MFSolidPattern()
 ```
 
-#### ** Java **
+#### ** Java ** :id=api-polyline-java-1
 ```java
 PatternItem pattern = new MFSolidPattern();
 ```
 <!-- tabs:end -->
 
-### MFDashPattern class
+#### MFDashPattern class :id=api-polyline-mfdashpattern-class
 
 class `MFDashPattern` extends `PatternItem`
 
-> Dùng để định nghĩa pattern là nét đứt nối tiếp cho line.
+> Dùng để định nghĩa pattern là nét đứt nối tiếp cho line. 
 
 **Constructor**
 
@@ -459,22 +457,22 @@ MFDashPattern(int length, int gap)
   - gap: khoảng hở giữa các nét đứt
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-polyline-kotlin-2
 ```kotlin
 val pattern = MFDashPattern(8, 8)
 ```
 
-#### ** Java **
+#### ** Java ** :id=api-polyline-java-2
 ```java
 PatternItem pattern = new MFDashPattern(8, 8);
 ```
 <!-- tabs:end -->
 
-### MFDotPattern class
+#### MFDotPattern class :id=api-polyline-mfdotpattern-class
 
 class `MFDotPattern` extends `PatternItem`
 
-> Dùng để định nghĩa pattern là các chấm tròn nối tiếp cho line.
+> Dùng để định nghĩa pattern là các chấm tròn nối tiếp cho line. 
 
 **Constructor**
 
@@ -486,22 +484,22 @@ MFDotPattern(int repeat)
   - repeat: khoảng hở giữa các chấm tròn tính theo số lần bán kính của chấm tròn đó.
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-polyline-kotlin-3
 ```kotlin
 val pattern = MFDotPattern(0)
 ```
 
-#### ** Java **
+#### ** Java ** :id=api-polyline-java-3
 ```java
 PatternItem pattern = new MFDotPattern(0);
 ```
 <!-- tabs:end -->
 
-### MFIconPattern class
+#### MFIconPattern class :id=api-polyline-mficonpattern-class
 
 class `MFIconPattern` extends `PatternItem`
 
-> Dùng để định nghĩa pattern là hình ảnh do chúng ta chỉ định và nó được lặp đi lặp lại trên line.
+> Dùng để định nghĩa pattern là hình ảnh do chúng ta chỉ định và nó được lặp đi lặp lại trên line. 
 
 **Constructor**
 
@@ -513,20 +511,20 @@ MFIconPattern(MFBitmapDescriptor icon)
   - icon: hình ảnh mà chúng ta muốn hiển thị trên line (**có hỗ trợ alpha để tạo khoảng hở cho hình ảnh trên line**).
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-polyline-kotlin-4
 ```kotlin
 val icon = MFBitmapDescriptorFactory.fromResource(R.drawable.your_icon)
 val pattern = new MFIconPattern(icon)
 ```
 
-#### ** Java **
+#### ** Java ** :id=api-polyline-java-4
 ```java
 MFBitmapDescriptor icon = MFBitmapDescriptorFactory.fromResource(R.drawable.your_icon);
 PatternItem pattern = new MFIconPattern(icon);
 ```
 <!-- tabs:end -->
 
-### MFPatternType
+#### MFPatternType :id=api-polyline-mfpatterntype
 
 `MFPatternType` enum
 

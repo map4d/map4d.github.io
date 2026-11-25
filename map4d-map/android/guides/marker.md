@@ -3,8 +3,7 @@
 Marker dùng để xác định một vị trí trên bản đồ. Cho phép người dùng thêm một điểm ghim trên bản đồ ở một vị trí xác định.
 
 ### 1. Thêm một marker
-Hàm khởi tạo của lớp **MFMarker** cần truyền vào một đối tượng [MFMarkerOptions](/guides/marker?id=marker-options) để định nghĩa các thuộc tính ban đầu của
-Marker.
+Hàm khởi tạo của lớp **MFMarker** cần truyền vào một đối tượng [MFMarkerOptions](/guides/marker.md?id=api-marker-marker-options) để định nghĩa các thuộc tính ban đầu của Marker. 
 
 Ví dụ sau đây thêm một Marker đơn giản vào bản đồ tại Bình Thạnh, Thành phố Hồ Chí Minh:
 
@@ -12,22 +11,22 @@ Ví dụ sau đây thêm một Marker đơn giản vào bản đồ tại Bình 
 #### ** Kotlin **
 
 ```kotlin
-override fun onMapReady(map4D: iPostMap) {<br>
-    val markerOptions = MFMarkerOptions()
-    markerOptions.position(MFLocationCoordinate(10.793113, 106.720739))<br>
-    markerOptions.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh")<br>
-    ipostmap.addMarker(markerOptions)<br>
+override fun onMapReady(map: Map4D) {  
+    val markerOptions = MFMarkerOptions() 
+    markerOptions.position(MFLocationCoordinate(10.793113, 106.720739))  
+    markerOptions.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh")  
+    map.addMarker(markerOptions)  
 }
 ```
 #### ** Java **
 
 ```java
-@Override<br>
-public void onMapReady(final iPostMap map4D) {<br>
-    MFMarkerOptions marker = new MFMarkerOptions();<br>
-    marker.position(new MFLocationCoordinate(10.793113, 106.720739));<br>
-    marker.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh");<br>
-    ipostmap.addMarker(marker);<br>
+@Override  
+public void onMapReady(final Map4D map) {  
+    MFMarkerOptions marker = new MFMarkerOptions();  
+    marker.position(new MFLocationCoordinate(10.793113, 106.720739));  
+    marker.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh");  
+    map.addMarker(marker);  
 }
 ```
 <!-- tabs:end -->
@@ -50,7 +49,7 @@ public void onMapReady(final iPostMap map4D) {<br>
 ```
 <!-- tabs:end -->
 
-> Nếu bạn muốn quản lý một danh sách các Marker, bạn nên tạo một mảng để chứa các Marker đó. Sử dụng mảng này bạn<br>
+> Nếu bạn muốn quản lý một danh sách các Marker, bạn nên tạo một mảng để chứa các Marker đó. Sử dụng mảng này bạn  
 có thể gọi phương thức **remove()** lần lượt từng Marker trong mảng khi bạn cần xóa các Marker.
 
 ### 3. Tùy chỉnh hình ảnh cho Marker
@@ -77,7 +76,7 @@ public final class MFBitmapDescriptorFactory {
 #### ** Kotlin **
 
 ```kotlin
-     val marker = ipostmap.addMarker(MFMarkerOptions()
+     val marker = map.addMarker(MFMarkerOptions()
                     .position(MFLocationCoordinate(10.771666, 106.704405))
                     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_add_location_white_48d)))
 ```
@@ -85,7 +84,7 @@ public final class MFBitmapDescriptorFactory {
 #### ** Java **
 
 ```java
-     MFMarker marker = ipostmap.addMarker(new MFMarkerOptions()
+     MFMarker marker = map.addMarker(new MFMarkerOptions()
                     .position(new MFLocationCoordinate(10.771666, 106.704405))
                     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_add_location_white_48dp)));
 ```
@@ -99,7 +98,7 @@ public final class MFBitmapDescriptorFactory {
 #### ** Kotlin **
 
 ```kotlin
-ipostmap.addMarker(MFMarkerOptions()
+map.addMarker(MFMarkerOptions()
     .position(MFLocationCoordinate(10.771666, 106.704405))
     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.markerIcon))
     .title("Title")
@@ -109,7 +108,7 @@ ipostmap.addMarker(MFMarkerOptions()
 ### ** Java **
 
 ```java
-ipostmap.addMarker(new MFMarkerOptions()
+map.addMarker(new MFMarkerOptions()
     .position(new MFLocationCoordinate(10.771666, 106.704405))
     .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.markerIcon))
     .title("Title")
@@ -118,7 +117,7 @@ ipostmap.addMarker(new MFMarkerOptions()
 <!-- tabs:end -->
 
    > Chúng ta có thể tùy biến bảng hiển thị thông tin bao gồm cả layout lẫn nội dung
-
+   
 ```java
 public interface InfoWindowAdapter {
     android.view.View getInfoWindow(MFMarker marker);
@@ -179,10 +178,10 @@ public interface InfoWindowAdapter {
       }
     }
  }
-
- override fun onMapReady(map4D: iPostMap) {
+  
+ override fun onMapReady(map: Map4D) {
     this.map4D = map4D
-    ipostmap.setInfoWindowAdapter(CustomInfoWindowAdapter())
+    map.setInfoWindowAdapter(CustomInfoWindowAdapter())
  }
 ```
 
@@ -193,21 +192,21 @@ class CustomInfoWindowAdapter implements iPostMap.InfoWindowAdapter {
     private final View mWindow;
 
     CustomInfoWindowAdapter() {
-        mWindow = getLayoutInflater().inflate(R.layout.custom_info_window, null);
+        mWindow = getLayoutInflater().inflate(R.layout.custom_info_window, null); 
     }
 
     @Override
     public View getInfoWindow(MFMarker marker) {
         if (defaultInfoWindow) {
-            return null;
+            return null; 
         }
         render(marker, mWindow);
-        return mWindow;
+        return mWindow; 
     }
 
     @Override
     public View getInfoContents(MFMarker marker) {
-        return null;
+        return null; 
     }
 
     private void render(MFMarker marker, View view) {
@@ -217,9 +216,9 @@ class CustomInfoWindowAdapter implements iPostMap.InfoWindowAdapter {
             // Spannable string allows us to edit the formatting of the text.
             SpannableString titleText = new SpannableString(title);
             titleText.setSpan(new ForegroundColorSpan(Color.RED), 0, titleText.length(), 0);
-            titleUi.setText(titleText);
+            titleUi.setText(titleText); 
         } else {
-            titleUi.setText(title);
+            titleUi.setText(title); 
         }
 
         String snippet = marker.getSnippet();
@@ -228,23 +227,23 @@ class CustomInfoWindowAdapter implements iPostMap.InfoWindowAdapter {
             SpannableString snippetText = new SpannableString(snippet);
             snippetText.setSpan(new ForegroundColorSpan(Color.MAGENTA), 0, 10, 0);
             snippetText.setSpan(new ForegroundColorSpan(Color.BLUE), 12, snippet.length(), 0);
-            snippetUi.setText(snippetText);
+            snippetUi.setText(snippetText); 
         } else {
-            snippetUi.setText(snippet);
-        }
+            snippetUi.setText(snippet); 
+        } 
     }
-
+    
 }
 @Override
 
-public void onMapReady(iPostMap map4D) {
+public void onMapReady(iPostMap map) {
     this.map4D = map4D;
-    ipostmap.setInfoWindowAdapter(new CustomInfoWindowAdapter());
+    map.setInfoWindowAdapter(new CustomInfoWindowAdapter());
 }
 ```
 <!-- tabs:end -->
 
-![Marker](../../resources/3-marker.png)
+![Marker](../resources/3-marker.png)
 
 ### 4. Tạo một Marker có thể kéo được trên bản đồ
 
@@ -253,16 +252,16 @@ public void onMapReady(iPostMap map4D) {
 
 > Ngoài ra bạn có thể gọi phương thức **setDraggable()** của đối tượng **Marker** và truyền vào tham số **true** để bật
   tính năng draggable của marker hoặc truyền vào tham số **false** để tắt tính năng draggable.
-
-Để có thể drag marker thì chúng ta phải long press lên nó, sau đó mới có thể drag nó trên Map được.
-
+  
+Để có thể drag marker thì chúng ta phải long press lên nó, sau đó mới có thể drag nó trên Map được. 
+  
 <!-- tabs:start -->
 
 #### ** Kotlin  **
 ```kotlin
-var marker = ipostmap.addMarker(MFMarkerOptions()
+var marker = map.addMarker(MFMarkerOptions()
     .position(MFLocationCoordinate(10.771666, 106.704405))
-    .draggable(true))<br>
+    .draggable(true))  
 // or
 
 marker.isDraggable = true
@@ -270,9 +269,9 @@ marker.isDraggable = true
 
 #### ** Java **
 ```java
-MFMarker marker = ipostmap.addMarker(new MFMarkerOptions()
+MFMarker marker = map.addMarker(new MFMarkerOptions()
                     .position(new MFLocationCoordinate(10.771666, 106.704405))
-                    .draggable(true));<br>
+                    .draggable(true));  
 // or
 
 marker.setDraggable(true);
@@ -295,7 +294,7 @@ map4D?.setOnMarkerClickListener { marker ->
 
 #### ** Java **
 ```java
-ipostmap.setOnMarkerClickListener(new iPostMap.OnMarkerClickListener() {
+map.setOnMarkerClickListener(new Map4D.OnMarkerClickListener() {
     @Override
     public boolean onMarkerClick(MFMarker marker) {
         Toast.makeText(context, "Marker title: " + marker.getTitle(), Toast.LENGTH_SHORT).show();
@@ -333,7 +332,7 @@ map4D?.setOnMarkerDragListener(object : iPostMap.OnMarkerDragListener {
 
 #### ** Java **
 ```java
-ipostmap.setOnMarkerDragListener((new iPostMap.OnMarkerDragListener() {
+map.setOnMarkerDragListener((new Map4D.OnMarkerDragListener() {
     @Override
     public void onMarkerDrag(MFMarker marker) {
     }
@@ -356,18 +355,18 @@ ipostmap.setOnMarkerDragListener((new iPostMap.OnMarkerDragListener() {
 
 > zIndex: Marker nào có zIndex lớn hơn sẽ được vẽ sau, zIndex càng lớn càng sẽ được vẽ sau.
 
-Ví dụ:
+Ví dụ: 
 
 <!-- tabs:start -->
 
 #### ** Kotlin **
 ```kotlin
-    val markerA = ipostmap.addMarker(MFMarkerOptions()
+    val markerA = map.addMarker(MFMarkerOptions()
                       .position(MFLocationCoordinate(10.771666, 106.704405))
                       .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_default_marker))
                       .zIndex(5.f))
 
-    val markerB = ipostmap.addMarker(MFMarkerOptions()
+    val markerB = map.addMarker(MFMarkerOptions()
                         .position(MFLocationCoordinate(10.771666, 106.704405))
                         .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_my_position))
                         .zIndex(2.f))
@@ -375,12 +374,12 @@ Ví dụ:
 
 #### ** Java **
 ```java
-    MFMarker markerA = ipostmap.addMarker(new MFMarkerOptions()
+    MFMarker markerA = map.addMarker(new MFMarkerOptions()
                       .position(new MFLocationCoordinate(10.771666, 106.704405))
                       .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_default_marker))
                       .zIndex(5.f));
 
-    MFMarker markerB = ipostmap.addMarker(new MFMarkerOptions()
+    MFMarker markerB = map.addMarker(new MFMarkerOptions()
                         .position(new MFLocationCoordinate(10.771666, 106.704405))
                         .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_my_position))
                         .zIndex(2.f));
@@ -396,11 +395,11 @@ Ví dụ:
 #### ** Kotlin **
 ```kotlin
 
-    val markerA = ipostmap.addMarker(MFMarkerOptions()
+    val markerA = map.addMarker(MFMarkerOptions()
                           .position(MFLocationCoordinate(10.771666, 106.704405))
                           .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_default_marker)))
 
-    val markerB = ipostmap.addMarker(MFMarkerOptions()
+    val markerB = map.addMarker(MFMarkerOptions()
                           .position(MFLocationCoordinate(10.771666, 106.704405))
                           .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_my_position)))
 
@@ -409,11 +408,11 @@ Ví dụ:
 #### ** Java **
 ```java
 
-    MFMarker markerA = ipostmap.addMarker(new MFMarkerOptions()
+    MFMarker markerA = map.addMarker(new MFMarkerOptions()
                           .position(new MFLocationCoordinate(10.771666, 106.704405))
                           .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_default_marker)));
 
-    MFMarker markerB = ipostmap.addMarker(new MFMarkerOptions()
+    MFMarker markerB = map.addMarker(new MFMarkerOptions()
                           .position(new MFLocationCoordinate(10.771666, 106.704405))
                           .icon(MFBitmapDescriptorFactory.fromResource(R.drawable.ic_my_position)));
 
@@ -423,36 +422,34 @@ Ví dụ:
 
 ------------------------------
 
-## API Reference
+---
 
-<a id="reference-marker"></a>
+## API Reference :id=api-marker
 
-## Marker reference
-
-### MFMarker Class
+#### MFMarker Class :id=api-marker-mfmarker-class
 
 Tạo Marker với các **MFMarkerOptions** được chỉ định
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-marker-kotlin-
 
 ```kotlin
-override fun onMapReady(map4D: iPostMap) {<br>
-    val markerOptions = MFMarkerOptions()
-        .position(MFLocationCoordinate(10.793113, 106.720739))<br>
-        .snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh")<br>
-    val marker = map4D?.addMarker(markerOptions)<br>
+override fun onMapReady(map: Map4D) {  
+    val markerOptions = MFMarkerOptions() 
+        .position(MFLocationCoordinate(10.793113, 106.720739))  
+        .snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh")  
+    val marker = map?.addMarker(markerOptions)  
 }
 ```
-#### ** Java **
+#### ** Java ** :id=api-marker-java-
 
 ```java
-@Override<br>
-public void onMapReady(final iPostMap map4D) {<br>
-    MFMarkerOptions marker = new MFMarkerOptions();<br>
-    marker.position(new MFLocationCoordinate(10.793113, 106.720739));<br>
-    marker.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh");<br>
-    ipostmap.addMarker(marker);<br>
+@Override  
+public void onMapReady(final Map4D map) {  
+    MFMarkerOptions marker = new MFMarkerOptions();  
+    marker.position(new MFLocationCoordinate(10.793113, 106.720739));  
+    marker.snippet("Trung Tâm Hành Chính").title("Quận Bình Thạnh");  
+    map.addMarker(marker);  
 }
 ```
 <!-- tabs:end -->
@@ -464,9 +461,9 @@ public void onMapReady(final iPostMap map4D) {<br>
 | **getAnchorU**               | `none`                                  | double       | Get điểm neo của Marker theo chiều x                                                     |
 | **getAnchorV**               | `none`                                  | double       | Get điểm neo của Marker theo chiều y                                                     |
 | **getElevation**             | `none`                                  | double       | Get độ cao của marker                                                                  |
-| **getIcon**                  | `none`                                  |[MFBitmapDescriptor](/guides/marker?id=MFBitmapDescriptor)| Get hình ảnh đơn giản đã set cho marker trước đó|                                                                 ||
+| **getIcon**                  | `none`                                  |[MFBitmapDescriptor](/guides/marker.md?id=api-marker-mfbitmapdescriptor)| Get hình ảnh đơn giản đã set cho marker trước đó|                                                                 ||
 | **getIconView**              | `none`                                  | View         | Get hình ảnh custom đã set cho marker trước đó                                         |
-| **getPosition**              | `none`                                  | [MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)| Get vị trí của marker         |
+| **getPosition**              | `none`                                  | [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)| Get vị trí của marker         |
 | **getRotation**              | `none`                                  | double       | Get góc quay của marker trên bản đồ                                                    |
 | **getSnippet**               | `none`                                  | string       | Get mô tả của marker                                                                   |
 | **getTitle**                 | `none`                                  | string       | Get tiêu đề của maker                                                                  |
@@ -479,9 +476,9 @@ public void onMapReady(final iPostMap map4D) {<br>
 | **setVisible**               | boolean                                 | `none`       | Set ẩn hiện cho Marker                                                                 |
 | **isVisible**                | `none`                                  | boolean      | Kiểm tra xem hiện tại marker có hiển thị hay không                                     |
 | **setDraggable**             | boolean                                 | void         | Cho phép marker có được kéo trên bản đồ hay không                                      |
-| **setIcon**                  | [MFBitmapDescriptor](/guides/marker?id=MFBitmapDescriptor)|void| Set một hình ảnh đơn giản cho marker để thay cho hình ảnh mặc định          |
+| **setIcon**                  | [MFBitmapDescriptor](/guides/marker.md?id=api-marker-mfbitmapdescriptor)|void| Set một hình ảnh đơn giản cho marker để thay cho hình ảnh mặc định          |
 | **setIconView**              | View                                    | void         | Set một hình ảnh custom cho marker để thay cho icon và hình ảnh mặc định               |
-| **setPosition**              | [MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)|void| Set vị trí cho marker                                              |
+| **setPosition**              | [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)|void| Set vị trí cho marker                                              |
 | **setRotation**              | double                                  | void         | Set góc quay của marker trên bản đồ theo đơn vị độ                                     |
 | **setSnippet**               | string                                  | void         | Set mô tả của marker                                                                   |
 | **setTitle**                 | string                                  | void         | Set tiêu đề bảng thông tin của marker                                                  |
@@ -495,7 +492,7 @@ public void onMapReady(final iPostMap map4D) {<br>
 | **setFlat**                  | boolean                                 | `none`       | Set Marker có thể nghiêng và xoay theo Map không                                       |
 | **isFlat**                   | `none`                                  | boolean      | Kiểm tra xem hiện tại marker có thể nghiêng và xoay theo Map không                     |
 
-### Marker Options
+#### Marker Options :id=api-marker-marker-options
 
 `MFMarkerOptions` class
 
@@ -505,8 +502,8 @@ public void onMapReady(final iPostMap map4D) {<br>
 
 | Name                       | Type                | Description                                                                                                                                                           |
 |----------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **position**               |[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)| chỉ định một **MFLocationCoordinate** để xác định vị trí ban đầu của Marker.                                         |
-| **icon**                   |[MFBitmapDescriptor](/guides/marker?id=MFBitmapDescriptor)| Set một hình ảnh đơn giản cho marker.                                                                                         |
+| **position**               |[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)| chỉ định một **MFLocationCoordinate** để xác định vị trí ban đầu của Marker.                                         |
+| **icon**                   |[MFBitmapDescriptor](/guides/marker.md?id=api-marker-mfbitmapdescriptor)| Set một hình ảnh đơn giản cho marker.                                                                                         |
 | **iconView**               | View                | Set hình ảnh custom cho marker                                                                                                                                        |
 | **anchor**                 | float, float        | Xác định điểm neo cho Marker                                                                                                                                          |
 | **visible**                | boolean             | xác định Marker có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                                                                         |
@@ -522,7 +519,7 @@ public void onMapReady(final iPostMap map4D) {<br>
 | **flat**                   | boolean             | chỉ định Marker có thể nghiêng và xoay theo bản đồ hay không. Giá trị mặc định là **false**                                                                           |
 | **userData**               | Object              | truyền vào userData mà người dùng định nghĩa                                                                                                                          |
 
-### MFBitmapDescriptor
+#### MFBitmapDescriptor :id=api-marker-mfbitmapdescriptor
 
 Là một đối tượng lưu trữ hình ảnh.
 
@@ -531,11 +528,11 @@ Là một đối tượng lưu trữ hình ảnh.
 - Tạo MFBitmapDescriptor từ **MFBitmapDescriptorFactory**
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-marker-kotlin-1
 ```kotlin
 MFBitmapDescriptorFactory.fromResource(R.drawbable.example)
 ```
-#### ** Java **
+#### ** Java ** :id=api-marker-java-1
 ```java
 MFBitmapDescriptorFactory.fromResource(R.drawbable.example);
 ```

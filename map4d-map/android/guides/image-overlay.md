@@ -1,19 +1,19 @@
 # Image Overlay
 
-Image Overlay là một loại overlay cho phép hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên iPostMap.
+Image Overlay là một loại overlay cho phép hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên bản đồ.
 
-![CocoaPods](../../resources/imageOverlay.png)
+![CocoaPods](../resources/imageOverlay.png)
 
 ## Thêm Image Overlay
 
-Để thêm 1 image overlay vào map cần tạo 1 đối tượng của lớp [MFImageOverlayOptions](guides/image-overlay?id=mfimageoverlayoptions-class) và set các options cần thiết
-trên đối tượng đó. Sau đó gọi hàm `addImageOverlay` của lớp iPostMap.
+Để thêm 1 image overlay vào map cần tạo 1 đối tượng của lớp [MFImageOverlayOptions](/guides/image-overlay.md?id=api-image-overlay-mfimageoverlayoptions-class) và set các options cần thiết
+trên đối tượng đó. Sau đó gọi hàm `addImageOverlay` của lớp bản đồ.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private iPostMap map4D;
+private iPostMap map;
 
 MFImageOverlayOptions options = new MFImageOverlayOptions()
     .bounds(new MFCoordinateBounds(
@@ -23,13 +23,13 @@ MFImageOverlayOptions options = new MFImageOverlayOptions()
     .visible(true)
     .zIndex(2)
     .opacity(0.5f);
-MFImageOverlay imageOverlay = ipostmap.addImageOverlay(options);
+MFImageOverlay imageOverlay = map.addImageOverlay(options);
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: iPostMap
+private lateinit var map: iPostMap
 
 val options = MFImageOverlayOptions()
     .bounds(
@@ -42,7 +42,7 @@ val options = MFImageOverlayOptions()
     .visible(true)
     .zIndex(2.0)
     .opacity(0.5f)
-val imageOverlay = ipostmap.addImageOverlay(options)
+val imageOverlay = map.addImageOverlay(options)
 ```
 <!-- tabs:end -->
 
@@ -102,13 +102,11 @@ imageOverlay.opacity = 0.5f
 ```
 <!-- tabs:end -->
 
-## API Reference
+---
 
-<a id="reference-image-overlay"></a>
+## API Reference :id=api-image-overlay
 
-## Image Overlay References
-
-## MFImageOverlay class
+### MFImageOverlay class :id=api-image-overlay-mfimageoverlay-class
 
 `MFImageOverlay` class
 
@@ -121,7 +119,7 @@ imageOverlay.opacity = 0.5f
 | **setOpacity** | float                                   | `none`       | Set độ trong suốt của Image Overlay (giá trị trong khoảng từ 0 tới 1)                  |
 | **getOpacity** | `none`                                  | float        | Get độ trong suốt hiện tại của Image Overlay                                           |
 
-## MFImageOverlayOptions class
+### MFImageOverlayOptions class :id=api-image-overlay-mfimageoverlayoptions-class
 
 `MFImageOverlayOptions` class
 
@@ -130,13 +128,13 @@ imageOverlay.opacity = 0.5f
 Để tạo một đối tượng `MFImageOverlayOptions` ta làm như sau:
 
 <!-- tabs:start -->
-#### ** Java **
+#### ** Java ** :id=api-image-overlay-java-
 
 ```java
 MFImageOverlayOptions options = new MFImageOverlayOptions()
 ```
 
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-image-overlay-kotlin-
 
 ```kotlin
 var options = MFImageOverlayOptions()
@@ -148,7 +146,7 @@ var options = MFImageOverlayOptions()
 | Name           | Parameters                              | Return Value | Description                                                                             |
 |----------------|-----------------------------------------|--------------|-----------------------------------------------------------------------------------------|
 | **bounds**     | MFCoordinateBounds                      |MFImageOverlayOptions| set giá trị bounds cho MFImageOverlayOptions                                     |
-| **image**      |[MFBitmapDescriptor](/guides/marker?id=MFBitmapDescriptor)|MFImageOverlayOptions| set hình ảnh cho cho MFImageOverlayOptions                   |
+| **image**      |[MFBitmapDescriptor](/guides/marker.md?id=api-marker-mfbitmapdescriptor)|MFImageOverlayOptions| set hình ảnh cho cho MFImageOverlayOptions                   |
 | **visible**    | boolean                                 |MFImageOverlayOptions| set giá trị visible cho MFImageOverlayOptions. Giá trị mặc định là `true`        |
 | **zIndex**     | double                                  |MFImageOverlayOptions| set giá trị zIndex cho MFImageOverlayOptions, quy định zIndex giữa các Image Overlay với nhau. Giá trị mặc định là 0 |
 | **opacity**    | float                                   |MFImageOverlayOptions| set độ trong suốt cho MFImageOverlayOptions (giá trị từ 0 tới 1). Giá trị mặc định là 1|

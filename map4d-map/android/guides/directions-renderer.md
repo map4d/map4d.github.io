@@ -4,7 +4,7 @@
 
 ### 1. Tạo Directions Renderer
 
-![Directions Renderer](../../resources/7-directions-renderer.png)
+![Directions Renderer](../resources/7-directions-renderer.png)
 
 > Tạo đối tượng Directions Renderer từ **MFDirectionsRendererOptions**
 
@@ -13,7 +13,7 @@
 #### ** Kotlin **
 ```kotlin
   val directionsRendererOptions = MFDirectionsRendererOptions()
-
+  
   val paths: MutableList<List<MFLocationCoordinate>> = ArrayList()
   val path1: MutableList<MFLocationCoordinate> = ArrayList()
   path1.add(MFLocationCoordinate(16.070508, 108.221204))
@@ -45,7 +45,7 @@
 #### ** Java **
 ```java
   MFDirectionsRendererOptions directionsRendererOptions = new MFDirectionsRendererOptions();
-
+  
   List<List<MFLocationCoordinate>> paths = new ArrayList<>();
   List<MFLocationCoordinate> path1 = new ArrayList<>();
   path1.add(new MFLocationCoordinate(16.070508, 108.221204));
@@ -71,7 +71,7 @@
   directionsRendererOptions.startLabel("Start");
   directionsRendererOptions.endLocation(new MFLocationCoordinate(16.071523, 108.222960));
   directionsRendererOptions.endLabel("End");
-  directionsRenderer = ipostmap.addDirectionsRenderer(directionsRendererOptions);
+  directionsRenderer = map.addDirectionsRenderer(directionsRendererOptions);
 ```
 <!-- tabs:end -->
 
@@ -108,7 +108,7 @@ với các tùy chỉnh cơ bản.
 ```
 #### ** Java **
 ```java
-  ipostmap.setOnDirectionsClickListener(new iPostMap.OnDirectionsClickListener() {
+  map.setOnDirectionsClickListener(new Map4D.OnDirectionsClickListener() {
       @Override
       public void onDirectionsClick(MFDirectionsRenderer directionsRenderer, int index) {
           Log.e("Events", "Click on directions renderer index: " + index);
@@ -119,37 +119,35 @@ với các tùy chỉnh cơ bản.
 * Tham số directionsRenderer sẽ trả về đối tượng directionsRenderer mà người dùng click.
 * Tham số index sẽ trả về chỉ số index của list các đường đi mà người dùng click lên.
 
-## API Reference
+---
 
-<a id="reference-directions-renderer"></a>
+## API Reference :id=api-directions-renderer
 
-## Directions Renderer reference
-
-### Directions Renderer Class
+#### Directions Renderer Class :id=api-directions-renderer-directions-renderer-class
 
 `MFDirectionsRenderer` class
 
 - Tạo Directions Renderer với các options được chỉ định
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-directions-renderer-kotlin-
 ```kotlin
     val directionsRendererOptions = MFDirectionsRendererOptions()
-
+    
     val paths: MutableList<List<MFLocationCoordinate>> = ArrayList()
     val path1: MutableList<MFLocationCoordinate> = ArrayList()
     path1.add(MFLocationCoordinate(16.070508, 108.221204))
     path1.add(MFLocationCoordinate(16.071449, 108.221124))
     path1.add(MFLocationCoordinate(16.071606, 108.222706))
-
+    
     val path2: MutableList<MFLocationCoordinate> = ArrayList()
     path2.add(MFLocationCoordinate(16.070508, 108.221204))
     path2.add(MFLocationCoordinate(16.070369, 108.222870))
     path2.add(MFLocationCoordinate(16.071606, 108.222706))
-
+    
     paths.add(path1)
     paths.add(path2)
-
+    
     directionsRendererOptions.paths(paths)
     directionsRendererOptions.activeStrokeColor(resources.getColor(android.R.color.colorActiveStroke))
     directionsRendererOptions.inactiveStrokeColor(resources.getColor(android.R.color.colorInactiveStroke))
@@ -166,24 +164,24 @@ với các tùy chỉnh cơ bản.
     val directionsRenderer = map4D?.addDirectionsRenderer(directionsRendererOptions)
 ```
 
-#### ** Java **
+#### ** Java ** :id=api-directions-renderer-java-
 ```java
     MFDirectionsRendererOptions directionsRendererOptions = new MFDirectionsRendererOptions();
-
+    
     List<List<MFLocationCoordinate>> paths = new ArrayList<>();
     List<MFLocationCoordinate> path1 = new ArrayList<>();
     path1.add(new MFLocationCoordinate(16.070508, 108.221204));
     path1.add(new MFLocationCoordinate(16.071449, 108.221124));
     path1.add(new MFLocationCoordinate(16.071606, 108.222706));
-
+    
     List<MFLocationCoordinate> path2 = new ArrayList<>();
     path2.add(new MFLocationCoordinate(16.070508, 108.221204));
     path2.add(new MFLocationCoordinate(16.070369, 108.222870));
     path2.add(new MFLocationCoordinate(16.071606, 108.222706));
-
+    
     paths.add(path1);
     paths.add(path2);
-
+    
     directionsRendererOptions.paths(paths);
     directionsRendererOptions.activeStrokeColor(getResources().getColor(R.color.colorActiveStroke));
     directionsRendererOptions.inactiveStrokeColor(getResources().getColor(R.color.colorInactiveStroke));
@@ -197,7 +195,7 @@ với các tùy chỉnh cơ bản.
     directionsRendererOptions.endLocation(new MFLocationCoordinate(16.071523, 108.222960));
     directionsRendererOptions.endLabel("End");
     directionsRendererOptions.endIconAnchor(0.0f, 0.0f);
-    directionsRenderer = ipostmap.addDirectionsRenderer(directionsRendererOptions);
+    directionsRenderer = map.addDirectionsRenderer(directionsRendererOptions);
 ```
 <!-- tabs:end -->
 
@@ -205,12 +203,12 @@ với các tùy chỉnh cơ bản.
 
 | Name                         | Parameters                              | Return Value | Description                                                                            |
 |------------------------------|:---------------------------------------:|:------------:|----------------------------------------------------------------------------------------|
-| **setPaths**                 | List<List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>>|`none`| Set list các route cho Directions Renderer           |
-| **getPaths**                 |`none`|List<List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>>| Get list các route của Directions Renderer            |
-| **setStartLocation**         | [MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)| `none`       | Set tọa độ của điểm bắt đầu                              |
-| **getStartLocation**         | `none` | [MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)       | Get tọa độ của điểm bắt đầu                             |
-| **setEndLocation**           | [MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)| `none`       | Set tọa độ của điểm kết thúc                             |
-| **getEndLocation**           | `none` | [MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)       | Get tọa độ của điểm kết thúc                            |
+| **setPaths**                 | List<List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>>|`none`| Set list các route cho Directions Renderer           |
+| **getPaths**                 |`none`|List<List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>>| Get list các route của Directions Renderer            |
+| **setStartLocation**         | [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)| `none`       | Set tọa độ của điểm bắt đầu                              |
+| **getStartLocation**         | `none` | [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)       | Get tọa độ của điểm bắt đầu                             |
+| **setEndLocation**           | [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)| `none`       | Set tọa độ của điểm kết thúc                             |
+| **getEndLocation**           | `none` | [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)       | Get tọa độ của điểm kết thúc                            |
 | **setWidth**                 | float                                   | `none`       | Set độ rộng line của Directions Renderer                                               |
 | **getWidth**                 | `none`                                  | float        | Get độ rộng line của Directions Renderer                                               |
 | **setOutlineWidth**          | float                                   | `none`       | Set độ rộng outline của Directions Renderer                                            |
@@ -238,7 +236,7 @@ với các tùy chỉnh cơ bản.
 | **getEndIconAnchorV**        | `none`                                  | float        | Get anchor icon của điểm kết thúc theo chiều y                                         |
 
 
-### Directions Renderer Options
+#### Directions Renderer Options :id=api-directions-renderer-directions-renderer-options
 
 `MFDirectionsRendererOptions` class
 
@@ -248,9 +246,9 @@ với các tùy chỉnh cơ bản.
 
 | Name                         | Type                | Description                                                                                                                                                           |
 |------------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **paths**                    |List<List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>>| truyền vào một list các list tọa độ **MFLocationCoordinate** để tạo Directions Render.                   |
-| **startLocation**            |[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)| truyền vào một điểm **MFLocationCoordinate** cho điểm bắt đầu.                                                       |
-| **endLocation**              |[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)| truyền vào một điểm **MFLocationCoordinate** cho điểm kết thúc.                                                      |
+| **paths**                    |List<List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>>| truyền vào một list các list tọa độ **MFLocationCoordinate** để tạo Directions Render.                   |
+| **startLocation**            |[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)| truyền vào một điểm **MFLocationCoordinate** cho điểm bắt đầu.                                                       |
+| **endLocation**              |[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)| truyền vào một điểm **MFLocationCoordinate** cho điểm kết thúc.                                                      |
 | **jsonData**                 | String              | truyền vào dữ liệu JSON để vẽ các route cho Directions Renderer                                                            |
 | **binaryData**               | String              | truyền vào dữ liệu theo dạng nhị phân để vẽ các route cho Directions Renderer                                              |
 | **activedIndex**             | int                 | chỉ định index cho route được active trong Directions Renderer                                                             |

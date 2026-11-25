@@ -4,7 +4,7 @@ Lớp Polygon cho phép người dùng vẽ một Polygon lên map.
 
 ### 1. Tạo polygon
 
-![Polygon](../../resources/polygon.jpg)
+![Polygon](../resources/v1.4/polygon.jpg)
 
 > Tạo đối tượng polygon từ MFPolygonOptions
 
@@ -24,7 +24,7 @@ fun createPointsList() {
 
 fun addPolygonToMap() {
   createPointsList();
-  val polygon = ipostmap.addPolygon(
+  val polygon = map.addPolygon(
     MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .strokeColor(ContextCompat.getColor(context ?: return, R.color.green))
@@ -39,22 +39,22 @@ addPolygonToMap()
   private final List<MFLocationCoordinate> pointsList = new ArrayList<>();
 
   private void createPointsList() {
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
-      pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
-      pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
-      pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
-      pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
+  	pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
+  	pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
+  	pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
  }
 
   private void addPolygonToMap() {
-    createPointsList();
-    polygon = ipostmap.addPolygon(new MFPolygonOptions()
-            .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
-            .strokeColor(ContextCompat.getColor(this, R.color.green))
+	createPointsList();
+	polygon = map.addPolygon(new MFPolygonOptions()
+	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
+	        .strokeColor(ContextCompat.getColor(this, R.color.green))
             .strokeWidth(2)
-            .fillColor(ContextCompat.getColor(this, R.color.blueWithAlpha))));
-    }
+	        .fillColor(ContextCompat.getColor(this, R.color.blueWithAlpha))));
+	}
 ```
 <!-- tabs:end -->
 Như ví dụ trên thì chúng ta tạo một Polygon từ danh sách các điểm tọa độ trong danh sách `pointsList` . Các tùy chỉnh gồm:
@@ -64,7 +64,7 @@ Như ví dụ trên thì chúng ta tạo một Polygon từ danh sách các đi�
 Ngoài ra chúng ta còn có thể tạo ra các Polygon có lỗ ở bên trong bằng cách thêm danh sách cái điểm tạo thành lỗ ở phía trong
 polygon.
 
-![Polygon](../../resources/5-polygon-hole.png)
+![Polygon](../resources/5-polygon-hole.png)
 
 Ví dụ
 
@@ -95,7 +95,7 @@ fun createHole() {
 fun addPolygonToMap() {
   createHole();
   createPointsList();
-  val polygon = ipostmap.addPolygon(MFPolygonOptions()
+  val polygon = map.addPolygon(MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .addHole(*holePath.toTypedArray())
     .fillColor(ContextCompat.getColor(context ?: return, R.color.blueWithdAlphaFiftyPercent)))
@@ -109,12 +109,12 @@ addPolygonToMap()
   private final List<MFLocationCoordinate> holePath = new ArrayList<>();
 
   private void createPointsList() {
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
-      pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
-      pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
-      pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
-      pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
+  	pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
+  	pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
+  	pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
  }
 
   private void createHole() {
@@ -126,12 +126,12 @@ addPolygonToMap()
   }
 
   private void addPolygonToMap() {
-    createHole();
-    createPointsList();
-    polygon = ipostmap.addPolygon(new MFPolygonOptions()
-            .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
-            .addHole(holePath.toArray(new MFLocationCoordinate[holePath.size()]))
-            .fillColor(ContextCompat.getColor(this, R.color.blueWithdAlphaFiftyPercent)));
+	createHole();
+	createPointsList();
+	polygon = map.addPolygon(new MFPolygonOptions()
+	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
+	        .addHole(holePath.toArray(new MFLocationCoordinate[holePath.size()]))
+	        .fillColor(ContextCompat.getColor(this, R.color.blueWithdAlphaFiftyPercent)));
   }
 ```
 
@@ -194,7 +194,7 @@ map4D?.setOnPolygonClickListener {polygon ->
 
 #### ** Java **
 ```java
-ipostmap.setOnPolygonClickListener(new iPostMap.OnPolygonClickListener() {
+map.setOnPolygonClickListener(new Map4D.OnPolygonClickListener() {
     @Override
     public void onPolygonClick(MFPolygon polygon) {
         Toast.makeText(getApplicationContext(), "Clicked Polygon: ID " + polygon.getId(), Toast.LENGTH_SHORT).show();
@@ -225,12 +225,12 @@ fun createPointsList() {
 
 fun addPolygonToMap() {
   createPointsList()
-  val polygonA = ipostmap.addPolygon(MFPolygonOptions()
+  val polygonA = map.addPolygon(MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .fillColor(Color.RED)
     .zIndex(10f))
 
-  val polygonB = ipostmap.addPolygon(MFPolygonOptions()
+  val polygonB = map.addPolygon(MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .fillColor(Color.BLUE)
     .zIndex(2f))
@@ -243,25 +243,25 @@ addPolygonToMap()
   private final List<MFLocationCoordinate> pointsList = new ArrayList<>();
 
   private void createPointsList() {
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
-      pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
-      pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
-      pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
-      pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
+  	pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
+  	pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
+  	pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
  }
 
   private void addPolygonToMap() {
-    createPointsList();
-    MFPolygon polygonA = ipostmap.addPolygon(new MFPolygonOptions()
-            .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
-            .fillColor(ContextCompat.getColor(this, R.color.red))
-            .zIndex(10.f));
+	createPointsList();
+	MFPolygon polygonA = map.addPolygon(new MFPolygonOptions()
+	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
+	        .fillColor(ContextCompat.getColor(this, R.color.red))
+	        .zIndex(10.f));
 
-    MFPolygon polygonB = ipostmap.addPolygon(new MFPolygonOptions()
-            .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
-            .fillColor(ContextCompat.getColor(this, R.color.blue))
-            .zIndex(2.f);
+	MFPolygon polygonB = map.addPolygon(new MFPolygonOptions()
+	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
+	        .fillColor(ContextCompat.getColor(this, R.color.blue))
+	        .zIndex(2.f);
   }
 ```
 
@@ -299,43 +299,41 @@ addPolygonToMap()
   private final List<MFLocationCoordinate> pointsList = new ArrayList<>();
 
   private void createPointsList() {
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
-      pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
-      pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
-      pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
-      pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
+  	pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
+  	pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
+  	pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
  }
 
   private void addPolygonToMap() {
-    createPointsList();
-    MFPolygon polygonA = ipostmap.addPolygon(new MFPolygonOptions()
-            .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
-            .fillColor(ContextCompat.getColor(this, R.color.red)));
+	createPointsList();
+	MFPolygon polygonA = map.addPolygon(new MFPolygonOptions()
+	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
+	        .fillColor(ContextCompat.getColor(this, R.color.red)));
 
-    MFPolygon polygonB = ipostmap.addPolygon(new MFPolygonOptions()
-            .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
-            .fillColor(ContextCompat.getColor(this, R.color.green)));
+	MFPolygon polygonB = map.addPolygon(new MFPolygonOptions()
+	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
+	        .fillColor(ContextCompat.getColor(this, R.color.green)));
   }
 ```
 <!-- tabs:end -->
 
 - PolygonB sẽ vẽ đè lên polygonA vì nó có zIndex bằng nhau. Cùng zIndex thì layer nào thêm vào sau sẽ vẽ đè lên layer trước.
 
-## API Reference
+---
 
-<a id="reference-polygon"></a>
+## API Reference :id=api-polygon
 
-## Polygon reference
-
-### Polygon Class
+#### Polygon Class :id=api-polygon-polygon-class
 
 `MFPolygon` class
 
 Tạo Polygon với các options được chỉ định
 
 <!-- tabs:start -->
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-polygon-kotlin-
 ```kotlin
 val pointsList = mutableListOf<MFLocationCoordinate>()
 
@@ -350,7 +348,7 @@ fun createPointsList() {
 
 fun addPolygonToMap() {
   createPointsList();
-  val polygon = ipostmap.addPolygon(
+  val polygon = map.addPolygon(
     MFPolygonOptions()
     .add(*pointsList.toTypedArray())
     .strokeColor(ContextCompat.getColor(context ?: return, R.color.green))
@@ -360,41 +358,41 @@ fun addPolygonToMap() {
 }
 addPolygonToMap()
 ```
-#### ** Java **
+#### ** Java ** :id=api-polygon-java-
 ```java
   private final List<MFLocationCoordinate> pointsList = new ArrayList<>();
 
   private void createPointsList() {
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
-      pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
-      pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
-      pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
-      pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
-      pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
+  	pointsList.add(new MFLocationCoordinate(16.067243, 108.214077));
+  	pointsList.add(new MFLocationCoordinate(16.065419, 108.214576));
+  	pointsList.add(new MFLocationCoordinate(16.062815, 108.214034));
+  	pointsList.add(new MFLocationCoordinate(16.062434, 108.210772));
+  	pointsList.add(new MFLocationCoordinate(16.066517, 108.210354));
  }
 
   private void addPolygonToMap() {
-    createPointsList();
-    polygon = ipostmap.addPolygon(new MFPolygonOptions()
-            .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
-            .strokeColor(ContextCompat.getColor(this, R.color.green))
+	createPointsList();
+	polygon = map.addPolygon(new MFPolygonOptions()
+	        .add(pointsList.toArray(new MFLocationCoordinate[pointsList.size()]))
+	        .strokeColor(ContextCompat.getColor(this, R.color.green))
             .strokeWidth(2)
-            .fillColor(ContextCompat.getColor(this, R.color.blueWithAlpha))));
-    }
+	        .fillColor(ContextCompat.getColor(this, R.color.blueWithAlpha))));
+	}
 ```
 <!-- tabs:end -->
 
 - Parameters:
-  - options: [PolygonOptions](/guides/polygon?id=polygon-options) *required*
+  - options: [PolygonOptions](/guides/polygon.md?id=api-polygon-polygon-options) *required*
 
 **Methods**
 
 | Name                         | Parameters                              | Return Value | Description                                                                            |
 |------------------------------|:---------------------------------------:|:------------:|----------------------------------------------------------------------------------------|
-| **setPoints**                |List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>| `none`| Set danh sách các điểm tọa độ của polygon                  |
-| **getPoints**                | `none` | List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>| Get danh sách các điểm tọa độ của polygon                |
-| **setHoles**                 |List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>| `none`| Set danh sách các điểm tọa độ của lỗ bên trong polygon                  |
-| **getHoles**                 | `none` | List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>| Get danh sách các điểm tọa độ của lỗ bên trong polygon                |
+| **setPoints**                |List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>| `none`| Set danh sách các điểm tọa độ của polygon                  |
+| **getPoints**                | `none` | List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>| Get danh sách các điểm tọa độ của polygon                |
+| **setHoles**                 |List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>| `none`| Set danh sách các điểm tọa độ của lỗ bên trong polygon                  |
+| **getHoles**                 | `none` | List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>| Get danh sách các điểm tọa độ của lỗ bên trong polygon                |
 | **setFillColor**             | @ColorInt int                                  | `none`| Set màu cho polygon theo mã kiểu @ColorInt int                                         |
 | **getFillColor**             | `none`                                  | @ColorInt int| Get màu của polygon                                                                    |
 | **setStrokeColor**           | @ColorInt int                                  | `none`| Set màu cho đường viền của polygon theo kiểu @ColorInt int                             |
@@ -408,7 +406,7 @@ addPolygonToMap()
 | **setZIndex**                | float                                   | `none`       | Set giá trị zIndex cho polygon                                                         |
 | **getZIndex**                | `none`                                  | float        | Get giá trị zIndex hiện tại của polygon                                                |
 
-### Polygon Options
+#### Polygon Options :id=api-polygon-polygon-options
 
 `MFPolygonOptions` class
 
@@ -418,8 +416,8 @@ addPolygonToMap()
 
 | Name                         | Type                | Description                                                                                                                                                           |
 |------------------------------|:-------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **points**                   |List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>| truyền vào danh sách tọa độ **MFLocationCoordinate** để tạo Polygon                                            |
-| **holes**                    |List<[MFLocationCoordinate](/guides/coordinates?id=MFLocationCoordinate)>| truyền vào danh sách tọa độ **MFLocationCoordinate** của lỗ bên trong Polygon                                  |
+| **points**                   |List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>| truyền vào danh sách tọa độ **MFLocationCoordinate** để tạo Polygon                                            |
+| **holes**                    |List<[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate)>| truyền vào danh sách tọa độ **MFLocationCoordinate** của lỗ bên trong Polygon                                  |
 | **fillColor**                | @ColorInt int       | chỉ định màu tô phía trong của Polygon theo kiểu @ColorInt int. Giá trị mặc định là **Color.RED**                                                                     |
 | **visible**                  | boolean             | xác định Polygon có thể ẩn hay hiện trên bản đồ. Giá trị mặc định là **true**.                                                                                        |
 | **strokeColor**              | @ColorInt int       | chỉ định màu sắc đường viền ngoài cùng của Polygon theo kiểu @ColorInt int. Giá trị mặc định là **Color.BLACK**.                                                      |

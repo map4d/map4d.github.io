@@ -1,8 +1,5 @@
 - [Overview](/ "iPostMap JavaScript SDK")
 - [Changelog](changelog.md)
-- [Angular Support](guides/angular-support.md)
-- [ReactJS Support](guides/reacjs-support.md/)
-- [Vuejs Support](guides/vuejs-support.md)
 
 - Interacting with the Map
   - [Map Options](guides/map-options.md)

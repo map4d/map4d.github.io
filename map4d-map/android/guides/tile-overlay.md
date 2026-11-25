@@ -1,21 +1,20 @@
 # Tile Overlay
 
-**Tile Overlay** là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên
-tile map có sẵn của iPostMap.
+**Tile Overlay** là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của bản đồ.
 
-![CocoaPods](../../resources/tileOverlay.png)
+![CocoaPods](../resources/tileOverlay.png)
 
 ## Giới thiệu
 
-Một đối tượng **TileOverlay** sẽ xác định một tập hợp các hình ảnh của tile sẽ được vẽ lên trên các tile của bản đồ iPostMap.
+Một đối tượng **TileOverlay** sẽ xác định một tập hợp các hình ảnh của tile sẽ được vẽ lên trên các tile của bản đồ.
 
 Bạn cần phải cung cấp các tile cho từng mức zoom mà bạn muốn vẽ. Tile Overlay rất hữu ích khi bạn muốn thêm hình ảnh bao
 quát vào bản đồ, thường bao gồm các khu vực địa lý rộng lớn, hoặc những hình ảnh chi tiết hơn cho một khu vực nào đó.
 
 ## Tile coordinates và các mức Zoom
 
-Bản đồ iPostMap chia hình ảnh hiển thị thông tin bản đồ thành một tập hợp các ô bản đồ hình vuông được sắp xếp theo dạng lưới.
-Khi bản đồ di chuyển đến một vị trí mới hoặc thay đổi một mức zoom mới thì iPostMap sẽ xác định những ô nào sẽ được vẽ và request
+Bản đồ chia hình ảnh hiển thị thông tin bản đồ thành một tập hợp các ô bản đồ hình vuông được sắp xếp theo dạng lưới.
+Khi bản đồ di chuyển đến một vị trí mới hoặc thay đổi một mức zoom mới thì bản đồ sẽ xác định những ô nào sẽ được vẽ và request
 dữ liệu hình ảnh cho các ô đó.
 
 Ô có tọa độ (0, 0) luôn ở góc Tây Bắc của bản đồ, với giá trị **x** tăng từ Tây sang Đông và giá trị **y** tăng từ Bắc xuống
@@ -28,10 +27,9 @@ Nam. Các ô sẽ có từng tọa độ bằng cách sử dụng tọa đô x, 
 Ví dụ: ở mức zoom 2, toàn bộ bản đồ sẽ được chia thành 16 ô. Mỗi ô sẽ tương ứng với một cặp x, y duy nhất kết hợp với mức
 zoom:
 
-![CocoaPods](../../resources/tileCoordinates.png)
+![CocoaPods](../resources/tileCoordinates.png)
 
-Khi tạo hình ảnh cho Tile Overlay, bạn cần tạo một ảnh cho mỗi tile tại từng mức zoom mà bạn muốn vẽ. iPostMap yêu cầu kích
-thước ảnh là 256dp.
+Khi tạo hình ảnh cho Tile Overlay, bạn cần tạo một ảnh cho mỗi tile tại từng mức zoom mà bạn muốn vẽ. Map SDK yêu cầu kích thước ảnh là 256dp.
 
 ## Thêm Tile overlay
 
@@ -57,13 +55,13 @@ zoom tương ứng. Sau đó bạn thêm **Tile Overlay** vào Map như sau:
 
     3. `zIndex(double)` : xác định giá trị zIndex cho Tile Overlay.
 
-4. Gọi `iPostMap.addTileOverlay()` để thêm Tile Overlay vào Map.
+4. Gọi `addTileOverlay()` để thêm Tile Overlay vào Map.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private iPostMap map4D;
+private iPostMap map;
 
 MFTileProvider tileProvider = new MFUrlTileProvider() {
     @Override
@@ -72,13 +70,13 @@ MFTileProvider tileProvider = new MFUrlTileProvider() {
     }
 };
 
-MFTileOverlay tileOverlay = ipostmap.addTileOverlay(new MFTileOverlayOptions().tileProvider(tileProvider));
+MFTileOverlay tileOverlay = map.addTileOverlay(new MFTileOverlayOptions().tileProvider(tileProvider));
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: iPostMap
+private lateinit var map: iPostMap
 
 var tileProvider: MFTileProvider = object : MFUrlTileProvider() {
     override fun getTileUrl(x: Int, y: Int, zoom: Int): String? {
@@ -86,7 +84,7 @@ var tileProvider: MFTileProvider = object : MFUrlTileProvider() {
     }
 }
 
-val tileOverlay = ipostmap.addTileOverlay(MFTileOverlayOptions().tileProvider(tileProvider))
+val tileOverlay = map.addTileOverlay(MFTileOverlayOptions().tileProvider(tileProvider))
 ```
 <!-- tabs:end -->
 
@@ -165,13 +163,11 @@ tileOverlay.opacity = 0.5f
 ```
 <!-- tabs:end -->
 
-## API Reference
+---
 
-<a id="reference-tile-overlay"></a>
+## API Reference :id=api-tile-overlay
 
-## Tile Overlay References
-
-## MFTileOverlay class
+### MFTileOverlay class :id=api-tile-overlay-mftileoverlay-class
 
 `MFTileOverlay` class
 
@@ -186,7 +182,7 @@ tileOverlay.opacity = 0.5f
 | **setOpacity** | float                                   | `none`       | Set độ trong suốt của Tile Overlay (giá trị trong khoảng từ 0 tới 1)                   |
 | **getOpacity** | `none`                                  | float        | Get độ trong suốt hiện tại của Tile Overlay                                            |
 
-## MFTileOverlayOptions class
+### MFTileOverlayOptions class :id=api-tile-overlay-mftileoverlayoptions-class
 
 `MFTileOverlayOptions` class
 
@@ -195,13 +191,13 @@ tileOverlay.opacity = 0.5f
 Để tạo một đối tượng `MFTileOverlayOptions` ta làm như sau:
 
 <!-- tabs:start -->
-#### ** Java **
+#### ** Java ** :id=api-tile-overlay-java-
 
 ```java
 MFTileOverlayOptions options = new MFTileOverlayOptions();
 ```
 
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-tile-overlay-kotlin-
 
 ```kotlin
 var options = MFTileOverlayOptions()
@@ -217,7 +213,7 @@ var options = MFTileOverlayOptions()
 | **zIndex**     | double                                  | MFTileOverlayOptions| Set giá trị zIndex cho MFTileOverlayOptions                                     |
 | **opacity**    | float                                   | MFTileOverlayOptions| set độ trong suốt cho MFTileOverlayOptions (giá trị từ 0 tới 1). Giá trị mặc định là 1|
 
-## MFUrlTileProvider class
+### MFUrlTileProvider class :id=api-tile-overlay-mfurltileprovider-class
 
 `MFUrlTileProvider` abtract class
 

@@ -4,23 +4,23 @@
 
 >Hiệu ứng mặt nước sẽ tạo mặt nước với các gợn sóng chuyển động lăn tăn tại những nơi là sông hoặc biển. Hiệu ứng mặt nước chỉ xuất hiện ở chế độ 3D.
 
-Để kích hoạt hiệu ứng mặt nước sử dụng phương thức `iPostMap.setWaterEffectEnabled()`
+Để kích hoạt hiệu ứng mặt nước sử dụng phương thức `setWaterEffectEnabled()`
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private iPostMap map4D;
+private iPostMap map;
 
-ipostmap.setWaterEffectEnabled(false)
+map.setWaterEffectEnabled(false)
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: iPostMap
+private lateinit var map: iPostMap
 
-ipostmap.setWaterEffectEnabled(false)
+map.setWaterEffectEnabled(false)
 ```
 <!-- tabs:end -->
 

@@ -1,14 +1,14 @@
 # GeoJson Layer
 
-iPostMap Android SDK cung cấp GeoJson layer cho phép người dùng hiển thị dữ liệu địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
+Android SDK cung cấp GeoJson layer cho phép người dùng hiển thị dữ liệu địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
 
-![CocoaPods](../../resources/geojson-layer.png)
+![CocoaPods](../resources/geojson-layer.png)
 
 ### 1. Thêm một GeoJSON layer
 
-Để thêm một GeoJSON layer vào map, trước tiên cần tạo mới 1 đối tượng của lớp [MFGeoJsonOptions](/guides/geojson-layer?id=geojson-options) để
+Để thêm một GeoJSON layer vào map, trước tiên cần tạo mới 1 đối tượng của lớp [MFGeoJsonOptions](/guides/geojson-layer.md?id=api-geojson-layer-geojson-options) để
 định nghĩa các thuộc tính ban đầu của lớp GeoJSON.
-Sau đó ta gọi phương thức `addGeoJson` của lớp `iPostMap`. Đối tượng trả về sau khi gọi phương thức `addGeoJson` là một [MFGeoJson](/guides/geojson-layer?id=geojson-class)
+Sau đó ta gọi phương thức `addGeoJson` của map instance. Đối tượng trả về sau khi gọi phương thức `addGeoJson` là một [MFGeoJson](/guides/geojson-layer.md?id=api-geojson-layer-geojson-class)
 
 Ví dụ sau đây thêm một GeoJson layer vào bản đồ ở tọa độ `16.073420650938914, 108.22404093434358`
 
@@ -16,7 +16,7 @@ Ví dụ sau đây thêm một GeoJson layer vào bản đồ ở tọa độ `1
 #### ** Kotlin **
 
 ```kotlin
-override fun onMapReady(map4D: iPostMap) {<br>
+override fun onMapReady(map: Map4D) {  
     val jsonString = """{
       "type": "FeatureCollection",
       "features": [
@@ -111,17 +111,17 @@ override fun onMapReady(map4D: iPostMap) {<br>
       val geoJsonOptions = MFGeoJsonOptions()
         .geoJson(JSONObject(jsonString))
         .pointStyle(MFGeoJsonPointStyle(MFBitmapDescriptorFactory.fromResource(R.drawable.default_marker)))
-      val geoJson = ipostmap.addGeoJson(geoJsonOptions)
+      val geoJson = map.addGeoJson(geoJsonOptions)
     } catch (e: Exception) {
       e.printStackTrace()
-    }<br>
+    }  
 }
 ```
 #### ** Java **
 
 ```java
-@Override<br>
-public void onMapReady(final iPostMap map4D) {<br>
+@Override  
+public void onMapReady(final Map4D map) {  
     String jsonString = "{\n" +
 	  "  \"type\": \"FeatureCollection\",\n" +
 	  "  \"features\": [\n" +
@@ -215,10 +215,10 @@ public void onMapReady(final iPostMap map4D) {<br>
 		MFGeoJsonOptions geoJsonOptions = new MFGeoJsonOptions()
 		  .geoJson(new JSONObject(jsonString))
 		  .pointStyle(new MFGeoJsonPointStyle(MFBitmapDescriptorFactory.fromResource(R.drawable.default_marker)));
-		MFGeoJson geoJson = ipostmap.addGeoJson(geoJsonOptions);
+		MFGeoJson geoJson = map.addGeoJson(geoJsonOptions);
 	} catch (Exception e) {
 		e.printStackTrace();
-	}<br>
+	}  
 }
 ```
 <!-- tabs:end -->
@@ -269,13 +269,13 @@ option `pointStyle` của đối tượng `MFGeoJsonOptions` trước khi thêm 
 
 #### ** Kotlin **
 ```kotlin
-  ipostmap.setOnGeoJsonClickListener { geoJson, feature ->
+  map.setOnGeoJsonClickListener { geoJson, feature ->
     Log.e("Events", "GeoJson feature clicked: " + feature.id)
   }
 ```
 #### ** Java **
 ```java
-  ipostmap.setOnGeoJsonClickListener(new iPostMap.OnGeoJsonClickListener() {
+  map.setOnGeoJsonClickListener(new Map4D.OnGeoJsonClickListener() {
 	@Override
 	public void onGeoJsonClick(@NonNull MFGeoJson geoJson, @NonNull MFGeoJsonFeature feature) {
 	  Log.e("Events", "GeoJson feature clicked: " + feature.getId());
@@ -283,16 +283,14 @@ option `pointStyle` của đối tượng `MFGeoJsonOptions` trước khi thêm 
   });
 ```
 <!-- tabs:end -->
-* Tham số geoJson sẽ trả về đối tượng [MFGeoJson](/guides/geojson-layer?id=geojson-class) mà người dùng click.
-* Tham số feature sẽ trả về đối tượng [MFGeoJsonFeature](/guides/geojson-layer?id=mfgeojsonfeature) của lớp GeoJson mà người dùng click lên.
+* Tham số geoJson sẽ trả về đối tượng [MFGeoJson](/guides/geojson-layer.md?id=api-geojson-layer-geojson-class) mà người dùng click.
+* Tham số feature sẽ trả về đối tượng [MFGeoJsonFeature](/guides/geojson-layer.md?id=api-geojson-layer-mfgeojsonfeature) của lớp GeoJson mà người dùng click lên.
 
-## API Reference
+---
 
-<a id="reference-geojson-layer"></a>
+## API Reference :id=api-geojson-layer
 
-## GeoJson Layer References
-
-## GeoJson Class
+### GeoJson Class :id=api-geojson-layer-geojson-class
 
 `MFGeoJson` class
 
@@ -300,14 +298,14 @@ option `pointStyle` của đối tượng `MFGeoJsonOptions` trước khi thêm 
 
 | Name           | Parameters                              | Return Value | Description                                                                            |
 |----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
-| **getFeatures**| `none`      | LongSparseArray< [MFGeoJsonFeature](/guides/geojson-layer?id=mfgeojsonfeature) >        | Get danh sách tất cả các Feature của GeoJson layer                                     |
-| **getFeature** | `none` |[MFGeoJsonFeature](/guides/geojson-layer?id=mfgeojsonfeature)      | Get Feature với tham số là `id` của Feature trong GeoJson layer                        |
-|**getPointStyle**|`none`|[MFGeoJsonPointStyle](/guides/geojson-layer?id=mfgeojsonpointstyle-class)| Get đối tượng style của dữ liệu Point trong GeoJson layer  |
-|**setPointStyle**|[MFGeoJsonPointStyle](/guides/geojson-layer?id=mfgeojsonpointstyle-class)|`none`| Set style cho dữ liệu Point của GeoJson layer              |
+| **getFeatures**| `none`      | LongSparseArray< [MFGeoJsonFeature](/guides/geojson-layer.md?id=api-geojson-layer-mfgeojsonfeature) >        | Get danh sách tất cả các Feature của GeoJson layer                                     |
+| **getFeature** | `none` |[MFGeoJsonFeature](/guides/geojson-layer.md?id=api-geojson-layer-mfgeojsonfeature)      | Get Feature với tham số là `id` của Feature trong GeoJson layer                        |
+|**getPointStyle**|`none`|[MFGeoJsonPointStyle](/guides/geojson-layer.md?id=api-geojson-layer-mfgeojsonpointstyle-class)| Get đối tượng style của dữ liệu Point trong GeoJson layer  |
+|**setPointStyle**|[MFGeoJsonPointStyle](/guides/geojson-layer.md?id=api-geojson-layer-mfgeojsonpointstyle-class)|`none`| Set style cho dữ liệu Point của GeoJson layer              |
 | **getId**      | `none`                                  | long         | Get `id` của GeoJson layer                                                             |
 | **remove**     | `none`                                  | `none`       | Remove GeoJson layer ra khỏi Map                                                       |
 
-## GeoJson Options
+### GeoJson Options :id=api-geojson-layer-geojson-options
 
 `MFGeoJsonOptions` class
 
@@ -318,13 +316,13 @@ option `pointStyle` của đối tượng `MFGeoJsonOptions` trước khi thêm 
 Để tạo một đối tượng `MFGeoJsonOptions` ta làm như sau:
 
 <!-- tabs:start -->
-#### ** Java **
+#### ** Java ** :id=api-geojson-layer-java-
 
 ```java
 MFGeoJsonOptions options = new MFGeoJsonOptions();
 ```
 
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-geojson-layer-kotlin-
 
 ```kotlin
 var options = MFGeoJsonOptions()
@@ -336,9 +334,9 @@ var options = MFGeoJsonOptions()
 | Name                         | Type                | Description                                                                                                                                                           |
 |------------------------------|:-------------------:|----------------------------------------------------------------------------------------------------------------------|
 | **geoJson**                  | JSONObject          | chỉ định một đối tượng `JSONObject` để xác định dữ liệu cho GeoJson layer.                                           |
-| **pointStyle**               | [MFGeoJsonPointStyle](/guides/geojson-layer?id=mfgeojsonpointstyle-class) | chỉ định style cho kiểu dữ liệu Point của GeoJson layer.                                                         |
+| **pointStyle**               | [MFGeoJsonPointStyle](/guides/geojson-layer.md?id=api-geojson-layer-mfgeojsonpointstyle-class) | chỉ định style cho kiểu dữ liệu Point của GeoJson layer.                                                         |
 
-## MFGeoJsonPointStyle Class
+### MFGeoJsonPointStyle Class :id=api-geojson-layer-mfgeojsonpointstyle-class
 
 `MFGeoJsonPointStyle` class
 
@@ -349,14 +347,14 @@ var options = MFGeoJsonOptions()
 Để tạo một đối tượng `MFGeoJsonPointStyle` ta làm như sau:
 
 <!-- tabs:start -->
-#### ** Java **
+#### ** Java ** :id=api-geojson-layer-java-1
 
 ```java
 MFBitmapDescriptor icon = MFBitmapDescriptorFactory.fromResource(R.drawable.custom_icon);
 MFGeoJsonPointStyle pointStyle = new MFGeoJsonPointStyle(icon);
 ```
 
-#### ** Kotlin **
+#### ** Kotlin ** :id=api-geojson-layer-kotlin-1
 
 ```kotlin
 val icon = MFBitmapDescriptorFactory.fromResource(R.drawable.custom_icon)
@@ -368,10 +366,10 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 
 | Name           | Parameters                              | Return Value | Description                                                                            |
 |----------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------|
-| **getIcon**    |`none`|[MFBitmapDescriptor](/guides/marker?id=mfbitmapdescriptor)| Get icon của point style                                                   |
-| **setIcon**    |[MFBitmapDescriptor](/guides/marker?id=mfbitmapdescriptor)|`none`| Set icon cho point style                                                   |
+| **getIcon**    |`none`|[MFBitmapDescriptor](/guides/marker.md?id=api-marker-mfbitmapdescriptor)| Get icon của point style                                                   |
+| **setIcon**    |[MFBitmapDescriptor](/guides/marker.md?id=api-marker-mfbitmapdescriptor)|`none`| Set icon cho point style                                                   |
 
-## MFGeoJsonFeature
+### MFGeoJsonFeature :id=api-geojson-layer-mfgeojsonfeature
 
 `MFGeoJsonFeature` class
 
@@ -386,15 +384,15 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 | **getProperty**     | String            | String           | Get giá trị property tương ứng với tham số key                                         |
 | **hasProperty**     | String            | boolean          | Kiểm tra feature có thuộc tính tương ứng với key truyền vào hay không                  |
 | **hasProperties**   | `none`            | boolean          | Kiểm tra feature có bất kì property nào không                                          |
-| **getGeometry**     |`none`|[MFGeometry](/guides/geojson-layer?id=mfgeometry)| Get đối tượng Geometry của feature                                |
-| **setGeometry**     |[MFGeometry](/guides/geojson-layer?id=mfgeometry)|`none`| Set Geometry cho feature                                          |
+| **getGeometry**     |`none`|[MFGeometry](/guides/geojson-layer.md?id=api-geojson-layer-mfgeometry)| Get đối tượng Geometry của feature                                |
+| **setGeometry**     |[MFGeometry](/guides/geojson-layer.md?id=api-geojson-layer-mfgeometry)|`none`| Set Geometry cho feature                                          |
 | **hasGeometry**     | `none`            | boolean          | Kiểm tra feature có Geometry hay không                                                 |
 | **setProperty**     | String, String    | String           | Set property cho feature. Trả về giá trị property được thêm vào                        |
 | **removeProperty**  | String            | String           | Remove property tương ứng với key truyền vào. Trả về thuộc tính được remove            |
 | **getId**           | `none`            | long             | Get `id` của feature                                                                   |
 | **setId**           | long              | `none`           | Set `id` của feature                                                                   |
 
-## MFGeometry
+### MFGeometry :id=api-geojson-layer-mfgeometry
 
 `MFGeometry` interface
 
@@ -406,7 +404,7 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 - MFGeoJsonPolygon
 - MFGeoJsonMultiPolygon
 
-## MFGeoJsonPoint
+### MFGeoJsonPoint :id=api-geojson-layer-mfgeojsonpoint
 
 `MFGeoJsonPoint` class
 
@@ -414,10 +412,10 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 
 | Name                | Parameters        | Return Value     | Description                                                                            |
 |---------------------|-------------------|------------------|----------------------------------------------------------------------------------------|
-| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer?id=mfgeometrytype) | Get loại Geometry                           |
-| **getGeometryObject** | `none`          |[MFLocationCoordinate](/guides/coordinates?id=mflocationcoordinate) | Get tọa độ của Point              |
+| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer.md?id=api-geojson-layer-mfgeometrytype) | Get loại Geometry                           |
+| **getGeometryObject** | `none`          |[MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate) | Get tọa độ của Point              |
 
-## MFGeoJsonMultiPoint
+### MFGeoJsonMultiPoint :id=api-geojson-layer-mfgeojsonmultipoint
 
 `MFGeoJsonMultiPoint` class
 
@@ -425,10 +423,10 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 
 | Name                | Parameters        | Return Value     | Description                                                                            |
 |---------------------|-------------------|------------------|----------------------------------------------------------------------------------------|
-| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer?id=mfgeometrytype) | Get loại Geometry                           |
-| **getPoints**       | `none`            | List< [MFGeoJsonPoint](/guides/geojson-layer?id=mfgeojsonpoint) > | Get danh sách MFGeoJsonPoint       |
+| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer.md?id=api-geojson-layer-mfgeometrytype) | Get loại Geometry                           |
+| **getPoints**       | `none`            | List< [MFGeoJsonPoint](/guides/geojson-layer.md?id=api-geojson-layer-mfgeojsonpoint) > | Get danh sách MFGeoJsonPoint       |
 
-## MFGeoJsonLineString
+### MFGeoJsonLineString :id=api-geojson-layer-mfgeojsonlinestring
 
 `MFGeoJsonLineString` class
 
@@ -436,10 +434,10 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 
 | Name                | Parameters        | Return Value     | Description                                                                            |
 |---------------------|-------------------|------------------|----------------------------------------------------------------------------------------|
-| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer?id=mfgeometrytype) | Get loại Geometry                           |
-| **getGeometryObject** | `none`          | List< [MFLocationCoordinate](/guides/coordinates?id=mflocationcoordinate) > | Get danh sách các tọa độ của LineString |
+| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer.md?id=api-geojson-layer-mfgeometrytype) | Get loại Geometry                           |
+| **getGeometryObject** | `none`          | List< [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate) > | Get danh sách các tọa độ của LineString |
 
-## MFGeoJsonMultiLineString
+### MFGeoJsonMultiLineString :id=api-geojson-layer-mfgeojsonmultilinestring
 
 `MFGeoJsonMultiLineString` class
 
@@ -447,10 +445,10 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 
 | Name                | Parameters        | Return Value     | Description                                                                            |
 |---------------------|-------------------|------------------|----------------------------------------------------------------------------------------|
-| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer?id=mfgeometrytype) | Get loại Geometry                           |
-| **getLineStrings**  | `none`            |List< [MFGeoJsonLineString](/guides/geojson-layer?id=mfgeojsonlinestring) >| Get danh sách MFGeoJsonLineString |
+| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer.md?id=api-geojson-layer-mfgeometrytype) | Get loại Geometry                           |
+| **getLineStrings**  | `none`            |List< [MFGeoJsonLineString](/guides/geojson-layer.md?id=api-geojson-layer-mfgeojsonlinestring) >| Get danh sách MFGeoJsonLineString |
 
-## MFGeoJsonPolygon
+### MFGeoJsonPolygon :id=api-geojson-layer-mfgeojsonpolygon
 
 `MFGeoJsonPolygon` class
 
@@ -458,12 +456,12 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 
 | Name                | Parameters        | Return Value     | Description                                                                            |
 |---------------------|-------------------|------------------|----------------------------------------------------------------------------------------|
-| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer?id=mfgeometrytype) | Get loại Geometry                           |
-| **getGeometryObject** | `none`          | List< List< [MFLocationCoordinate](/guides/coordinates?id=mflocationcoordinate) >> | Get list của list các tọa độ tạo nên Polygon |
-| **getOuterBoundaryCoordinates** |`none` | List< [MFLocationCoordinate](/guides/coordinates?id=mflocationcoordinate) > | Get list tọa độ đường biên ngoài cùng của Polygon |
-| **getInnerBoundaryCoordinates** |`none` | List< List< [MFLocationCoordinate](/guides/coordinates?id=mflocationcoordinate) >> | Get list tọa độ của các hole trong Polygon |
+| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer.md?id=api-geojson-layer-mfgeometrytype) | Get loại Geometry                           |
+| **getGeometryObject** | `none`          | List< List< [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate) >> | Get list của list các tọa độ tạo nên Polygon |
+| **getOuterBoundaryCoordinates** |`none` | List< [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate) > | Get list tọa độ đường biên ngoài cùng của Polygon |
+| **getInnerBoundaryCoordinates** |`none` | List< List< [MFLocationCoordinate](/guides/coordinates.md?id=api-coordinates-mflocationcoordinate) >> | Get list tọa độ của các hole trong Polygon |
 
-## MFGeoJsonMultiPolygon
+### MFGeoJsonMultiPolygon :id=api-geojson-layer-mfgeojsonmultipolygon
 
 `MFGeoJsonMultiPolygon` class
 
@@ -471,14 +469,14 @@ var pointStyle = MFGeoJsonPointStyle(icon)
 
 | Name                | Parameters        | Return Value     | Description                                                                            |
 |---------------------|-------------------|------------------|----------------------------------------------------------------------------------------|
-| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer?id=mfgeometrytype) | Get loại Geometry                           |
-| **getPolygons**     | `none`    | List< [MFGeoJsonPolygon](/guides/geojson-layer?id=mfgeojsonpolygon) > | Get danh sách các MFGeoJsonPolygon     |
+| **getGeometryType** | `none`            |[MFGeometryType](/guides/geojson-layer.md?id=api-geojson-layer-mfgeometrytype) | Get loại Geometry                           |
+| **getPolygons**     | `none`    | List< [MFGeoJsonPolygon](/guides/geojson-layer.md?id=api-geojson-layer-mfgeojsonpolygon) > | Get danh sách các MFGeoJsonPolygon     |
 
-## MFGeometryType
+### MFGeometryType :id=api-geojson-layer-mfgeometrytype
 
 `MFGeometryType` enum
 
-Hiện tại iPostMap hỗ trợ 6 loại MFGeometryType như bên dưới:
+Hiện tại bản đồ hỗ trợ 6 loại MFGeometryType như bên dưới:
 
 | No. | Name                          | Description                                      |
 |:---:|-------------------------------|--------------------------------------------------|
