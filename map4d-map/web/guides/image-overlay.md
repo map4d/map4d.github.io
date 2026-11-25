@@ -1,6 +1,6 @@
 # Image Overlay
 
-Image Overlay là một loại overlay cho phép người dùng hiển thị một image lên trên map của Map4D trong một khu vực/vùng cụ thể gắn với kinh độ và vĩ độ.
+Image Overlay là một loại overlay cho phép người dùng hiển thị một image lên trên bản đồ trong một khu vực/vùng cụ thể gắn với kinh độ và vĩ độ.
 
 <iframe src="./html/image-overlay.html" style="min-width: 900px;" height="520px"></iframe>
 

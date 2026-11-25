@@ -1,10 +1,10 @@
 # Data Layer
 
-Map4D Web SDK cung cấp 1 data layer cho phép người dùng hiển thị dữ liệu không gian địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
+Map JS SDK cung cấp 1 data layer cho phép người dùng hiển thị dữ liệu không gian địa lý tùy ý, theo định dạng [GeoJSON](https://geojson.org/)
 
 ## Thêm feature vào data layer
 
-Có 2 cách để thêm data layer vào Map4D
+Có 2 cách để thêm data layer vào bản đồ
 - Sử dụng hàm `addGeoJson` của đối tượng [data](/guides/data-layer.md?id=api-data-layer-mapdata-class) trong [map](/guides/map.md?id=api-map-map-class)
 - Sử dụng hàm `add` của đối tượng [data](/guides/data-layer.md?id=api-data-layer-mapdata-class) trong [map](/guides/map.md?id=api-map-map-class)
 

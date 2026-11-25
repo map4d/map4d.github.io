@@ -47,14 +47,14 @@
 
 ## Các phần tử điều khiển trên bản đồ
 
-Bản đồ được hiển thị thông qua Map4D Web SDK có chứa các phần tử cho phép người dùng tương tác với bản đồ.  
+Bản đồ được hiển thị thông qua Map JS SDK có chứa các phần tử cho phép người dùng tương tác với bản đồ.  
 Các phần tử này có thể được ẩn/hiện thông qua [options](/guides/map.md?id=api-map-mapoptions-interface) khi khởi tạo bản đồ.  
 Mặc định các phần tử này sẽ không được hiển thị
 
 Dưới đây là bản đồ hiển thị bảng điều khiển nằm ở vị trí phía dưới bên trái của bản đồ:
 <iframe src="./html/map-controls.html" style="min-width: 1000px;" height="300px"></iframe>
 
-Các phần tử điều khiển được cung cấp sẵn của Map4D:
+Các phần tử điều khiển được cung cấp sẵn của bản đồ:
 - zoom: thay đổi mức zoom của map, gồm zoom in ![zoom-in](../resources/zoom-in.png) và zoom out ![zoom-out](../resources/zoom-out.png)
 - direction: hiển thị hướng của bản đồ đang hiển thị ![direct-ion](../resources/direct-icon.png)
 - geolocate: lấy vị trí hiện tại của người dùng ![location-icon](../resources/location-icon.png)
@@ -63,7 +63,7 @@ Các phần tử điều khiển được cung cấp sẵn của Map4D:
 
 - Để hiển thị bẳng điều khiển *(bao gồm **zoom**, **direction**, **3D button**)* ta set thuộc tính `controls` là `true` khi khởi tạo map
 - Để hiển thị `geolocate`, ta set thuộc tính `geolocate` là `true`
-- Để thiết lập vị trí hiển thị của bảng điều khiển, ta set giá trị cho thuộc tính `controlOptions`. Map4D Web SDK cung cấp 4 vị trí hiển thị là: `TOP_LEFT`, `TOP_RIGHT`, `BOTTOM_LEFT`, `BOTTOM_RIGHT`. Tham khảo: [ControlOptions](/guides/map.md?id=api-map-controloptions-enum)
+- Để thiết lập vị trí hiển thị của bảng điều khiển, ta set giá trị cho thuộc tính `controlOptions`. Map JS SDK cung cấp 4 vị trí hiển thị là: `TOP_LEFT`, `TOP_RIGHT`, `BOTTOM_LEFT`, `BOTTOM_RIGHT`. Tham khảo: [ControlOptions](/guides/map.md?id=api-map-controloptions-enum)
 
 ```js
 let options = {

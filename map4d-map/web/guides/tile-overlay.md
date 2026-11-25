@@ -1,6 +1,6 @@
 # Tile Overlay
 
-Tile Overlay là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của Map4D
+Tile Overlay là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của bản đồ
 
 <iframe src="./html/tile-overlay.html" style="min-width: 900px;" height="520px"></iframe>
 

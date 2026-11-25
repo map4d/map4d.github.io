@@ -4,8 +4,7 @@ Marker dùng để xác định một vị trí trên bản đồ. Cho phép ng�
 
 ### 1. Thêm một marker
 
-Hàm khởi tạo của lớp **map4d.Marker** cần truyền vào một đối tượng **map4d.MarkerOptions** để định nghĩa các thuộc tính ban đầu của
-Marker. 
+Hàm khởi tạo của lớp **map4d.Marker** cần truyền vào một đối tượng **map4d.MarkerOptions** để định nghĩa các thuộc tính ban đầu của Marker. 
 
 Đối tượng **MarkerOptions** được định nghĩa như sau:
 

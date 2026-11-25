@@ -1,14 +1,14 @@
 # Map Type
 
-> Map4D Web SDK cho phép tùy chỉnh kiểu hiển thị của bản đồ.
+> Map JS SDK cho phép tùy chỉnh kiểu hiển thị của bản đồ.
 
 ### Các loại bản đồ
 
-Map4D Web SDK  hiện cung cấp 3 loại bản đồ tùy chỉnh thông qua đối tượng `map4d.MapType` như bên dưới:
+Map JS SDK  hiện cung cấp 3 loại bản đồ tùy chỉnh thông qua đối tượng `map4d.MapType` như bên dưới:
 
 | No. | Name      | Description                                                                                                                                                                                 |
 |:---:|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  1  | ROADMAP   | Giá trị:`map4d.MapType.roadmap` hoặc `"roadmap"`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của Map4D Web SDK |
+|  1  | ROADMAP   | Giá trị:`map4d.MapType.roadmap` hoặc `"roadmap"`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của Map JS SDK |
 |  2  | SATELLITE | Giá trị:`map4d.MapType.satellite` hoặc `"satellite"`<br> Bản đồ hiển thị dưới dạng hình ảnh vệ tinh, không bao gồm đường sá, địa điểm |
 |  3  | HYBRID    | Giá trị:`map4d.MapType.hybrid` hoặc `"hybrid"`<br> Bản đồ hiển thị dưới dạng hình ảnh vệ tinh, bao gồm thông tin đường sá, địa điểm   |
 
@@ -22,7 +22,7 @@ Map4D Web SDK  hiện cung cấp 3 loại bản đồ tùy chỉnh thông qua đ
 
 #### Thiết lập khi khởi tạo bản đồ
 
-Khi khởi tạo đối tượng bản đồ map4d, có thể set giá trị `mapType` trong [map options](guides/map-options.md) để quy định kiểu bản đồ hiển thị ban đầu.
+Khi khởi tạo đối tượng bản đồ, có thể set giá trị `mapType` trong [map options](guides/map-options.md) để quy định kiểu bản đồ hiển thị ban đầu.
 
 Ví dụ: khởi tạo bản đồ với type map là satellite:
 

@@ -23,7 +23,6 @@ accessKey="__your_key___"
 onMapReady(data: {map: any, id: string}){
     console.log(`map with id = (${data.id}) is ready`)
     console.log(data)
-    //https://docs.map4d.vn/map4d-map/web/v2.6/#/guides/marker
     // Tạo đối tượng marker từ MarkerOption    
     let marker = new map4d.Marker({
       position: {lat: 16.068046, lng: 108.192189},

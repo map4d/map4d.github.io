@@ -1,6 +1,6 @@
 # Building Overlay
 
-Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết hợp với building sẵn có của Map4D.  
+Building overlay là một loại overlay cho phép người dùng hiển thị các building từ nhiều nguồn khác nhau lên bản đồ, kết hợp với building sẵn có của bản đồ.  
 Building overlay chỉ hiển thị ở chế độ 3D.
 
 ## Add Building overlay
@@ -12,7 +12,7 @@ Hàm khởi tạo của lớp [BuildingOverlay](/guides/building-overlay.md?id=a
 |:---:|------------|----------|:-------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  1  | getUrl     | function |   YES   | Hàm nhận vào 3 giá trị `x`, `y`, `zoom` và trả về đường dẫn đến Buildings                                                                                                          |
 |  2  | parserData | function |   YES   | Hàm nhận vào response data từ api của `getUrl` và parser thành mảng các [BuildingData](/guides/building-overlay.md?id=api-building-overlay-buildingdata-interface)                                 |
-|  3  | prefixId   | string   |    NO   | Giá trị được thêm vào trước id của những building thuộc building overlay.<br>Dùng để tránh nhầm lẫn trong trường hợp trùng id với building của Map4D hay các building overlay khác |
+|  3  | prefixId   | string   |    NO   | Giá trị được thêm vào trước id của những building thuộc building overlay.<br>Dùng để tránh nhầm lẫn trong trường hợp trùng id với building của bản đồ hay các building overlay khác |
 |  4  | visible    | boolean  |    NO   | Nếu `true` thì building overlay sẽ được hiển thị                                                                                                                                   |
 
 ### Tạo mới Building overlay
@@ -62,7 +62,7 @@ overlay.setVisible(false)
 
 ## Sự kiện đối với building thuộc building overlay
 
-Các sự kiện đối với building thuộc building overlay phát sinh tương tự với building của Map4D, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của Map4D. Xem [Events](/guides/map-events)
+Các sự kiện đối với building thuộc building overlay phát sinh tương tự với building của bản đồ, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của bản đồ. Xem [Events](/guides/map-events)
 
 ---
 

@@ -37,15 +37,15 @@ Map4D Web SDK có thể được tải bằng thẻ script được thêm bên t
 ```
 
 Trong đó:
-- **SDK_VERSION**: phiên bản Map4D Web SDK, phiên bản mới nhất hiện tại là: `3.0`
-- **YOUR_API_KEY**: là một mã định danh để xác thực các yêu cầu liên quan đến projects của bạn dùng trong việc sử dụng và thanh toán, tạo API key tại đây: <https://map.map4d.vn/developer/key/>
-- **CALLBACK_FUNCTION**: tên hàm mà sẽ được gọi sau khi hoàn tất việc tải Map4D Web SDK
+- **SDK_VERSION**: phiên bản JS Web SDK, phiên bản mới nhất hiện tại là: `3.3`
+- **YOUR_API_KEY**: là một mã định danh để xác thực các yêu cầu liên quan đến projects của bạn dùng trong việc sử dụng và thanh toán, tại trang nhà phát triển của Map4D <https://map.map4d.vn/developer/key/> *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
+- **CALLBACK_FUNCTION**: tên hàm mà sẽ được gọi sau khi hoàn tất việc tải JS Web SDK
 - **MAP_ID** *(optional)*: map id để lấy style, tham khảo [Map Style](https://map.map4d.vn/developer/mapstyle)
 
 
 ## Map DOM Elements
 
-Để hiển thị Map4D, cần phải chuẩn bị một vị trí cho nó. Để thực hiện việc này cần tạo 1 phần tử div được đặt tên và lấy tham chiếu bằng cách get DOM element
+Để hiển thị bản đồ, cần phải chuẩn bị một vị trí cho nó. Để thực hiện việc này cần tạo 1 phần tử div được đặt tên và lấy tham chiếu bằng cách get DOM element
 
 ```HTML
 <div id="map"></div>
@@ -59,7 +59,7 @@ map = new map4d.Map(document.getElementById("map"), options)
 
 ### Map Options
 
-[MapOptions](/guides/map-options) là object cung cấp các thiết lập ban đầu để khởi tạo đối tượng Map4D
+[MapOptions](/guides/map-options) là object cung cấp các thiết lập ban đầu để khởi tạo đối tượng bản đồ
 
 ### Samples
 

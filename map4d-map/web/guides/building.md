@@ -101,77 +101,7 @@ của lớp **map4d.Map**. Phương thức này sẽ trả về một giá trị
 let isBuildingsEnabled = map.isBuildingsEnabled()
 ```
 
-### 4. Hiển thị các building theo filter
-
-Đôi lúc bạn không muốn hiển thị tất cả các building mặc định của bản đồ mà chỉ muốn hiển thị theo một số type mà bạn muốn.
-Phương thức **setFilterBuildings()** của lớp **Map** sẽ giúp bạn thực hiện điều đó. Bạn cần truyền một mảng string chứa các
-**type** của các building mà bạn muốn hiển thị trên bản đồ.
-Hiện tại **map4d** hỗ trợ các type phổ biến sau cho building: **point, decoration, university, school, bank, bus_station,
-stadium, cafe, restaurant, doctors, motel, shop, marketplace, museum, atm, tree, theatre, bridge, payment_centre, house,
-electronics**
-
-Số lượng các type có thể tăng lên theo thời gian nhưng chúng tôi sẽ cập nhật sớm nhất có thể.
-
-Ví dụ: Để cho phép bản đồ chỉ hiển thị những Building có type là **motel**, **bridge** và **school**
-
-```javascript
-map.setFilterBuildings(["motel", "bridge", "school"])
-```
-
-Nếu bạn gọi phương thức **setFilterBuildings()** nhiều lần thì mảng danh sách mà bạn set cuối cùng sẽ được filter.
-
-Để hiển thị lại tất cả các building mặc định của bản đồ mà không filter thì bạn có thể gọi lại phương thức **setFilterBuildings()**
-với tham số truyền vào là **null** hoặc một một mảng rỗng ([])
-
-Ví dụ:
-
-```javascript
-map.setFilterBuildings(null)
-``` 
-
-hoặc
-
-```javascript
-map.setFilterBuildings([])
-```
-
-Để kiểm tra các **type** nào đang được filter bạn có thể sử dụng phương thức **getFilterBuildings()** của lớp Map. Phương
-thức này sẽ trả về một mảng string chứa các **type**
-
-Ví dụ:
-
-```javascript
-let filterTypes = map.getFilterBuildings()
-```
-
-### 5. Lấy danh sách các tile chứa Building
-
-Trong một số trường hợp bạn muốn lấy danh sách các tile chứa building (hoặc là danh sách các tile mà building vẽ đè lên trên
-bản đồ) thì hãy dùng phương thức **getTileCovers(zooms: number[], completion: Function)**. Với 2 tham số như sau:
-- zooms: number[]: mảng các mức zoom ta cần lấy danh sách tile bị đè bởi building. Nếu bạn chỉ cần lấy danh sách tile của
-1 mức zoom thì có thể dùng mảng với 1 phần tử. <br>**Chú ý: mức zoom >= 17 (chế độ 3D thì mức zoom nhỏ nhất là 17)**
-- completion: là một hàm callback để nhận kết quả trả về với cấu trúc **(tiles) => { /* Your code */ }**, trong đó **tiles**
-là danh sách các tile bị đè bởi building.
-
-```javascript
-building.getTileCovers([18], (tiles) => {
-    console.log(tiles)
-})
-```
-
-### 6. Lấy danh sách các tọa độ bao quanh mặt chân đế của Building
-
-Building sẽ có các hình dáng khác nhau (hình cong, hình uốn lượn, ...) nên mặt chân đế của nó cũng sẽ là những đường cong,
-đường uốn lượn đó. Vậy để xác định mặt chân đế của một building ta cần lấy các điểm tọa độ bằng phương thức **getBoundsCoordinates(completion: Function)**
-với 1 tham số truyền vào là:
-- completion: là một hàm callback để nhận kết quả trả về với cấu trúc **(coordinates) => {/* Your code */}**. trong đó **coordinates**
-là danh sách các điểm tọa độ bao quanh mặt chân đế của building
-
-Ví dụ sau đây ta sẽ lấy các điểm tọa độ của mặt chân đế của một cây cầu và vẽ các Marker tại những điểm đó:
-
-<iframe src="//jsfiddle.net/duydung2007/6r9L1jhu/embedded/" style="min-width: 960px;" height="710px"></iframe>
-
-### 7. Các sự kiện trên Building
+### 4. Các sự kiện trên Building
 
 Để lắng nghe các sự kiện xảy ra trên Building, bạn hãy dùng phương thức **addListener()** của lớp **Map** với tham số **EventOptions**
 là đối tượng **{building: true}** hoặc/và **{mapbuilding: true}**.

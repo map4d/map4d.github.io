@@ -1,7 +1,7 @@
 # Marker Cluster
 
 Khi bạn thêm rất nhiều marker lên bản đồ thì việc gom các marker gần nhau lại thành từng nhóm theo từng mức zoom sẽ giúp
-việc hiển thị được rõ ràng và đỡ rối rắm hơn cho người xem. Và để thực hiện điều đó thì **Map4D SDK** cung cấp cho bạn một
+việc hiển thị được rõ ràng và đỡ rối rắm hơn cho người xem. Và để thực hiện điều đó thì **JS SDK** cung cấp cho bạn một
 lớp là **MarkerClusterer**
 
 ### 1. Thêm một Marker Clusterer
