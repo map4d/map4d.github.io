@@ -2,8 +2,7 @@
 
 Hiện tại trên bản đồ đã có những điểm đánh dấu địa điểm có sẵn (như địa danh công cộng, quán cà phê, nhà hàng, bến xe, ...)
 và chúng chỉ hiển thị khi bản đồ ở chế độ 2D. Khi bạn cần một đối tượng để đánh dấu một địa điểm trên bản đồ tương tự như
-những điểm có sẵn đó thì bạn có thể dùng lớp **MFPOI**. Các đối tượng **MFPOI** bạn thêm vào bản đồ có thể hiển thị
-ở **cả 2 chế độ 2D và 3D**. 
+những điểm có sẵn đó thì bạn có thể dùng lớp **MFPOI**.
 
 ### 1. Tạo POI
 
@@ -16,7 +15,7 @@ val userPOIOptions = MFPOIOptions()
     userPOIOptions.position(MFLocationCoordinate(16.066517, 108.210354)).title("Test User POI")
       .titleColor(Color.GREEN)
       .subtitle("Da Nang")
-    val poi = map4D.addPOI(userPOIOptions)
+    val poi = map.addPOI(userPOIOptions)
 ```
 
 #### ** Java **
@@ -24,7 +23,7 @@ val userPOIOptions = MFPOIOptions()
   MFPOIOptions userPOIOptions = new MFPOIOptions();
   userPOIOptions.position(new MFLocationCoordinate(16.071876, 108.223994)).title("Test User POI")
     titleColor(Color.GREEN).subtitle("Da Nang");
-  MFPOI poi = map4D.addPOI(userPOIOptions);
+  MFPOI poi = map.addPOI(userPOIOptions);
 ```
 <!-- tabs:end -->
  - **Chú ý**:
@@ -65,7 +64,7 @@ map4D?.isPOIsEnabled = false
 ```
 #### ** Java **
 ```javascript
-map4D.setPOIsEnabled(false);
+map.setPOIsEnabled(false);
 ```
 <!-- tabs:end -->
 Ngoài ra để kiểm tra tính năng POI có sẵn có được bật hay không bạn cũng có thể sử dụng phương thức **isPOIsEnabled()**
@@ -83,7 +82,7 @@ if (!map4D?.isPOIsEnabled) {
 ```
 #### ** Java **
 ```java
-boolean isPOIsEnabled = map4D.isPOIsEnabled();
+boolean isPOIsEnabled = map.isPOIsEnabled();
 if (!isPOIsEnabled) {
   Toast.makeText( context,
     "Poi is turn off",
@@ -109,7 +108,7 @@ map4D?.setOnUserPOIClickListener {poi ->
 
 #### ** Java **
 ```java
-map4D.setOnUserPOIClickListener(new Map4D.OnUserPOIClickListener() {
+map.setOnUserPOIClickListener(new Map4D.OnUserPOIClickListener() {
     @Override
     public void onUserPOIClick(MFPOI mfpoi) {
         Toast.makeText(context , "User Poi Clicked: " + mfpoi.getTitle(), Toast.LENGTH_SHORT).show();
@@ -130,7 +129,7 @@ map4D?.setOnPOIClickListener { placeId, title, mfLocationCoordinate ->
 
 #### ** Java **
 ```java
-map4D.setOnPOIClickListener(new Map4D.OnPOIClickListener() {
+map.setOnPOIClickListener(new Map4D.OnPOIClickListener() {
     @Override
     public void onPOIClick(String placeId, String title, MFLocationCoordinate location) {
         Toast.makeText(context , "Poi Clicked: " + title, Toast.LENGTH_SHORT).show();
@@ -158,7 +157,7 @@ val userPOIOptions = MFPOIOptions()
     userPOIOptions.position(MFLocationCoordinate(16.066517, 108.210354)).title("Test User POI")
       .titleColor(Color.GREEN)
       .subtitle("Da Nang")
-    val poi = map4D.addPOI(userPOIOptions)
+    val poi = map.addPOI(userPOIOptions)
 ```
 
 #### ** Java ** :id=api-poi-java-
@@ -166,7 +165,7 @@ val userPOIOptions = MFPOIOptions()
   MFPOIOptions userPOIOptions = new MFPOIOptions();
   userPOIOptions.position(new MFLocationCoordinate(16.071876, 108.223994)).title("Test User POI")
     titleColor(Color.GREEN).subtitle("Da Nang");
-  MFPOI poi = map4D.addPOI(userPOIOptions);
+  MFPOI poi = map.addPOI(userPOIOptions);
 ```
 <!-- tabs:end -->
 

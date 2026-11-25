@@ -2,7 +2,7 @@
 
 ## Giới thiệu
 
-> Map4dMap Android SDK cho phép tùy chỉnh kiểu hiển thị của Tile bản đồ theo nhiều chế độ (Raster, Roadmap, Satellite hoặc Map3D).
+> Map Android SDK cho phép tùy chỉnh kiểu hiển thị của Tile bản đồ theo nhiều chế độ
 
 ### Các loại bản đồ
 
@@ -28,17 +28,17 @@ Ví dụ: để hiển thị bản đồ dạng Raster:
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private Map4D map;
 
-map4D.setMapType(MFMapType.SATELLITE);
+map.setMapType(MFMapType.SATELLITE);
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map: Map4D
 
-map4D.setMapType(MFMapType.SATELLITE)
+map.setMapType(MFMapType.SATELLITE)
 ```
 <!-- tabs:end -->
 
@@ -53,17 +53,17 @@ Ví dụ:
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private Map4D map;
 
-MFMapType mapType = map4D.getMapType();
+MFMapType mapType = map.getMapType();
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map: Map4D
 
-val mapType = map4D.getMapType()
+val mapType = map.getMapType()
 ```
 <!-- tabs:end -->
 

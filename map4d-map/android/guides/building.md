@@ -29,7 +29,7 @@ tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng 
      .name("Test Building")
      .model("https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/models/5db6b4798b4711141457d8a9.obj")
      .texture("https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/textures/5db6b4798b4711141457d8ab.jpg");
-    map4D.addBuilding(buildingOptions);
+    map.addBuilding(buildingOptions);
 ```
 <!-- tabs:end -->
 
@@ -52,7 +52,7 @@ tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng 
 ```
 #### ** Java **
 ```java
-    map4D.setBuildingsEnabled(true);
+    map.setBuildingsEnabled(true);
     MFBuildingOptions extrudeBuildingOptions = new MFBuildingOptions();
     extrudeBuildingOptions.location(new MFLocationCoordinate(10.774544, 106.707764))
       .name("Extrude Building")
@@ -60,8 +60,8 @@ tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng 
         new ArrayList<MFLocationCoordinate>(Arrays.asList(new MFLocationCoordinate(10.774544, 106.707764), new MFLocationCoordinate(10.773766, 106.709001),
           new MFLocationCoordinate(10.772759, 106.708627), new MFLocationCoordinate( 10.774045, 106.707806))))
       .height(100.0);
-    map4D.addBuilding(extrudeBuildingOptions);
-    map4D.moveCamera(MFCameraUpdateFactory.newCoordinate(new MFLocationCoordinate(10.774544, 106.707764)));
+    map.addBuilding(extrudeBuildingOptions);
+    map.moveCamera(MFCameraUpdateFactory.newCoordinate(new MFLocationCoordinate(10.774544, 106.707764)));
 ```
 <!-- tabs:end -->
 
@@ -130,10 +130,10 @@ map4D?.setOnBuildingClickListener { buildingId, name, location ->
 
 #### ** Java **
 ```java
-map4D.setOnBuildingClickListener(new Map4D.OnBuildingClickListener() {
+map.setOnBuildingClickListener(new Map4D.OnBuildingClickListener() {
     @Override
     public void onBuildingClick(String buildingId, String name, MFLocationCoordinate location) {
-        MarkerActivity.this.map4D.setSelectedBuildings(Arrays.asList(buildingId));
+        MarkerActivity.this.map.setSelectedBuildings(Arrays.asList(buildingId));
     }
 });
 ```
@@ -151,7 +151,7 @@ map4D?.setOnUserBuildingClickListener { building ->
 
 #### ** Java **
 ```java
-map4D.setOnUserBuildingClickListener(new Map4D.OnUserBuildingClickListener() {
+map.setOnUserBuildingClickListener(new Map4D.OnUserBuildingClickListener() {
     @Override
     public void onUserBuildingClick(MFBuilding mfBuilding) {
         mfBuilding.setSelected(true);
@@ -189,7 +189,7 @@ Tạo Building với các options được chỉ định
      .name("Test Building")
      .model("https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/models/5db6b4798b4711141457d8a9.obj")
      .texture("https://hcm03.vstorage.vngcloud.vn/v1/AUTH_b32b6bc102c44269ab7b55e7820e7116/sdk/textures/5db6b4798b4711141457d8ab.jpg");
-    map4D.addBuilding(buildingOptions);
+    map.addBuilding(buildingOptions);
 ```
 <!-- tabs:end -->
 

@@ -29,7 +29,7 @@ Thêm vào dependencies:
 ```xml
 dependencies {
   implementation 'vn.map4d:Map4dTypes:1.1.0'
-  implementation 'vn.map4d:Map4dMap:3.1.0'
+  implementation 'vn.map4d:Map4dMap:3.4.0'
 }
 ```
 

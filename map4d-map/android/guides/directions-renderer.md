@@ -71,7 +71,7 @@
   directionsRendererOptions.startLabel("Start");
   directionsRendererOptions.endLocation(new MFLocationCoordinate(16.071523, 108.222960));
   directionsRendererOptions.endLabel("End");
-  directionsRenderer = map4D.addDirectionsRenderer(directionsRendererOptions);
+  directionsRenderer = map.addDirectionsRenderer(directionsRendererOptions);
 ```
 <!-- tabs:end -->
 
@@ -108,7 +108,7 @@ với các tùy chỉnh cơ bản.
 ```
 #### ** Java **
 ```java
-  map4D.setOnDirectionsClickListener(new Map4D.OnDirectionsClickListener() {
+  map.setOnDirectionsClickListener(new Map4D.OnDirectionsClickListener() {
       @Override
       public void onDirectionsClick(MFDirectionsRenderer directionsRenderer, int index) {
           Log.e("Events", "Click on directions renderer index: " + index);
@@ -195,7 +195,7 @@ với các tùy chỉnh cơ bản.
     directionsRendererOptions.endLocation(new MFLocationCoordinate(16.071523, 108.222960));
     directionsRendererOptions.endLabel("End");
     directionsRendererOptions.endIconAnchor(0.0f, 0.0f);
-    directionsRenderer = map4D.addDirectionsRenderer(directionsRendererOptions);
+    directionsRenderer = map.addDirectionsRenderer(directionsRendererOptions);
 ```
 <!-- tabs:end -->
 

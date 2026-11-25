@@ -38,7 +38,7 @@ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình t�
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
   latLngList.add(new MFLocationCoordinate(16.067218, 108.213916));
 
-  polyline = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(ContextCompat.getColor(this, R.color.red))
                 .width(8);
 ```
@@ -79,7 +79,7 @@ Ví dụ bên dưới chúng ta sẽ sử dụng pattern `MFDashPattern` cho Pol
   latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
 
-  polyline = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(Color.RED)
                 .width(8)
                 .pattern(new MFDashPattern(8, 8)));
@@ -121,7 +121,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
   latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
 
-  polyline = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(Color.RED)
                 .width(8)
                 .pattern(new MFDotPattern(1)));
@@ -167,7 +167,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
   // icon có hỗ trợ alpha để tạo các khoảng hở cho hình ảnh
   MFBitmapDescriptor icon = MFBitmapDescriptorFactory.fromResource(R.drawable.your_icon);
 
-  polyline = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(Color.RED)
                 .width(8)
                 .pattern(new MFIconPattern(icon)));
@@ -210,7 +210,7 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
 ```
 #### ** Java **
 ```java
-  map4D.setOnPolylineClickListener(new Map4D.OnPolylineClickListener() {
+  map.setOnPolylineClickListener(new Map4D.OnPolylineClickListener() {
     @Override
     public void onPolylineClick(MFPolyline polyline) {
         Toast.makeText(getApplicationContext(), "clicked Polyline: id " + polyline.getId(), Toast.LENGTH_SHORT).show();
@@ -258,12 +258,12 @@ Ngoài ra chúng ta còn có thêm pattern `MFDotPattern` và `MFIconPattern`
     latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
     latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
     
-    MFPolylineA polylineA = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    MFPolylineA polylineA = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blue))
                     .width(20.f)
                     .zIndex(5.f));
                     
-    MFPolyline polylineB = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    MFPolyline polylineB = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blue))
                     .width(8.f)
                     .zindex(10.f));
@@ -309,12 +309,12 @@ val latLngList: MutableList<MFLocationCoordinate> = ArrayList()
     latLngList.add(new MFLocationCoordinate(16.059980, 108.211137));
     latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
     
-    MFPolylineA polylineA = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    MFPolylineA polylineA = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blueWithAlpha))
                     .width(8.f)
                     .zIndex(5.f));
                     
-    MFPolyline polylineB = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+    MFPolyline polylineB = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                     .color(ContextCompat.getColor(this, R.color.blueWithAlpha))
                     .width(20.f)
                     .zindex(5.f));
@@ -361,7 +361,7 @@ Như ví dụ ở trên thì polylineB sẽ đè lên polylineA vì nó có zInd
   latLngList.add(new MFLocationCoordinate(16.059516, 108.208358));
   latLngList.add(new MFLocationCoordinate(16.067218, 108.213916));
 
-  polyline = map4D.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
+  polyline = map.addPolyline(new MFPolylineOptions().add(latLngList.toArray(new MFLocationCoordinate[latLngList.size()]))
                 .color(ContextCompat.getColor(this, R.color.red))
                 .width(8);
 ```

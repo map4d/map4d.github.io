@@ -1,7 +1,7 @@
 # POI Overlay
 
 POI overlay là một loại overlay cho phép người dùng hiển thị các POI từ nhiều nguồn khác nhau lên bản đồ. Các POI của
-POI Overlay được ưu tiên hiển thị so với POI của Map4D và chỉ hiển thị ở chế độ 2D.
+POI Overlay được ưu tiên hiển thị so với POI của bản đồ.
 
 ![CocoaPods](../resources/poiOverlay.png)
 
@@ -38,7 +38,7 @@ zoom tương ứng. Sau đó bạn thêm **POI Overlay** vào Map như sau:
 #### ** Java **
 
 ```java
-private Map4D map4D;
+private Map4D map;
 
 MFPOIProvider poiProvider = new MFUrlPOIProvider() {
     @Override
@@ -69,13 +69,13 @@ MFPOIProvider poiProvider = new MFUrlPOIProvider() {
         return list;
     }
 };
-MFPOIOverlay poiOverlay = map4D.addPOIOverlay(new MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"));
+MFPOIOverlay poiOverlay = map.addPOIOverlay(new MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"));
 ```
 
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map4D: Map4D
+private lateinit var map: Map4D
 
 var poiProvider: MFPOIProvider = object : MFUrlPOIProvider() {
     override fun getPOIUrl(x: Int, y: Int, zoom: Int): String {
@@ -104,7 +104,7 @@ var poiProvider: MFPOIProvider = object : MFUrlPOIProvider() {
         return list
     }
 }
-var poiOverlay = map4D.addPOIOverlay(MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"))
+var poiOverlay = map.addPOIOverlay(MFPOIOverlayOptions().poiProvider(poiProvider).prefixId("poiOverlay-"))
 ```
 <!-- tabs:end -->
 
@@ -207,8 +207,8 @@ var options = MFPOIOverlayOptions()
 
 `MFPOIData` class
 
-MFPOIData là object chứa thông tin của POI để Map4D SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của
-mình thành mảng các POI data cung cấp cho Map4D SDK hiển thị lên bản đồ.
+MFPOIData là object chứa thông tin của POI để Map SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của
+mình thành mảng các POI data cung cấp cho Map SDK hiển thị lên bản đồ.
 
 **Constructor**
 
