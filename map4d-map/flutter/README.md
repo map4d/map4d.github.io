@@ -26,7 +26,7 @@ import 'package:ipostmap_flutter/ipostmap.dart';
 ### Phiên bản Android/iOS hỗ trợ
 
 * Android: yêu cầu Android SDK 21 trở lên
-* iOS: yêu cầu phiên bản iOS 12.0 trở lên
+* iOS: yêu cầu phiên bản iOS 13.0 trở lên
 
 ### API key
 
