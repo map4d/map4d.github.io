@@ -125,12 +125,12 @@ let renderer = MFDirectionsRenderer()
 
 | Name              | Parameters        | Return value | Description                                                                     |
 |-------------------|-------------------|--------------|---------------------------------------------------------------------------------|
-| setRoutesWithJson | NSString          | `void`       | Set các chỉ đường bằng dữ liệu dạng json (lấy từ Map4D API /sdk/route).         |
-| setDatas          | NSArray\<NSData\> | `void`       | Set các chỉ đường bằng dữ liệu dạng binary data (lấy từ Map4D Service MFRoute). |
+| setRoutesWithJson | NSString          | `void`       | Set các chỉ đường bằng dữ liệu dạng json (lấy từ API /sdk/route).         |
+| setDatas          | NSArray\<NSData\> | `void`       | Set các chỉ đường bằng dữ liệu dạng binary data (lấy từ Service MFRoute). |
 
 #### Delegate :id=api-directions-renderer-delegate
 
-Map4D SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.  
+iOS SDK cung cấp delegate trong `MFMapViewDelegate` để ứng dụng có thể xác định được khi nào người dùng chạm vào Directions Renderer.  
 Delegate cung cấp đối tượng Directions Renderer phát sinh sự kiện vào route index mà người dùng chạm vào.  
 Để sử dụng Directions Renderer delegate, ta implement phương thức từ protocol `MFMapViewDelegate`.
 

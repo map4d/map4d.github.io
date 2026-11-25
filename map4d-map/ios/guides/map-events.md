@@ -65,7 +65,7 @@
   | **7**    | **didTapPolygon**                     | Phát sinh khi người dùng touch vào **Polygon** trên **map**                                                                |
   | **8**    | **didTapCircle**                      | Phát sinh khi người dùng touch vào **Circle**  trên **map**                                                                |
   | **13**   | **didTapMyLocation**                  | Phát sinh khi người dùng touch vào **Marker my location** trên **map**                                                     |
-  | **14**   | **didTapMyLocationButtonForMapView**  | Phát sinh khi người dùng touch vào **Button my location** của Map4d cung cấp trên **map**                                  |
+  | **14**   | **didTapMyLocationButtonForMapView**  | Phát sinh khi người dùng touch vào **Button my location** của bản đồ cung cấp trên **map**                                  |
   | **15**   | **markerInfoWindow**                  | Phát sinh khi người dùng thay đổi **bảng thông tin** của **Marker**                                                        |
 
   ####  Các sự kiện liên quan đến kinh doanh và địa điểm yêu thích

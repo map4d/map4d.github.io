@@ -99,7 +99,7 @@ poiOverlay.isHidden = true;
 
 ## Sự kiện đối với POI thuộc POI overlay
 
-Khi người dùng click POI thuộc POI overlay thì sẽ phát sinh sự kiện tương tự với POI của Map4D, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của Map4D.
+Khi người dùng click POI thuộc POI overlay thì sẽ phát sinh sự kiện tương tự với POI của bản đồ, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của bản đồ.
 
 ```swift
 func mapView(_ mapView: MFMapView!, didTapPOIWithPlaceID placeID: String!, name: String!, location: CLLocationCoordinate2D)
@@ -164,7 +164,7 @@ Cần phải implement protocol này trước khi tạo đối tượng `MFURLPO
 
 `MFPOIData`class
 
-MFPOIData là object chứa thông tin của POI để Map4D SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của mình thành mảng các POI data cung cấp cho Map4D SDK hiển thị lên bản đồ.
+MFPOIData là object chứa thông tin của POI để iOS SDK có thể hiểu được, người sử dụng POI overlay sẽ thực hiện implement phương thức `parserPOIData` để biến đổi dữ liệu trả về từ server của mình thành mảng các POI data cung cấp cho iOS SDK hiển thị lên bản đồ.
 
 | Name             | Type      | Description                                                                            |
 |------------------|-----------|----------------------------------------------------------------------------------------|

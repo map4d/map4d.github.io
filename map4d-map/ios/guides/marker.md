@@ -76,7 +76,7 @@ marker.iconView = view
 Bạn có thể tạo **Marker** chứa bảng thông tin bằng cách chỉ định giá trị cho thuộc tính **title** và **snippet** của **Marker**
 
 ```swift
-marker.title = "Map4D"
+marker.title = "IOTLink"
 marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 ```
 

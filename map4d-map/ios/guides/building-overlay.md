@@ -86,7 +86,7 @@ buildingOverlay.isHidden = true
 
 ## Sự kiện đối với building thuộc building overlay
 
-Các sự kiện đối với building thuộc building overlay phát sinh tương tự với building của Map4D, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của Map4D.
+Các sự kiện đối với building thuộc building overlay phát sinh tương tự với building của bản đồ, việc xử lý được diễn ra ngay tại hàm xử lý sự kiện của bản đồ.
 
 ```swift
 func mapView(_ mapView: MFMapView!, didTapBuildingWithBuildingID buildingID: String!, name: String!, location: CLLocationCoordinate2D)
@@ -146,7 +146,7 @@ Cần phải implement protocol này trước khi tạo đối tượng `MFURLBu
 ### MFBuildingData class :id=api-building-overlay-mfbuildingdata-class
 `MFBuildingData` class
 
-MFBuildingData là object chứa thông tin của building để Map4D SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho Map4D SDK hiển thị lên bản đồ.
+MFBuildingData là object chứa thông tin của building để iOS SDK có thể hiểu được, người sử dụng building overlay sẽ thực hiện implement phương thức `parserBuildingData` để biến đổi dữ liệu trả về từ server của mình thành mảng các building data cung cấp cho iOS SDK hiển thị lên bản đồ.
 
 | Name           | Type      | Description                                                                            |
 |----------------|-----------|----------------------------------------------------------------------------------------|
