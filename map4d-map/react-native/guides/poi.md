@@ -30,7 +30,7 @@ let coordinate = {latitude: 10.7881732, longitude: 106.7000933}
 ###  Thêm 1 POI
 
 ```js
-class Map4dScreen extends React.Component {
+class MapScreen extends React.Component {
   constructor(props){
     super(props)
   }
@@ -52,7 +52,7 @@ class Map4dScreen extends React.Component {
       >
         <MFPOI ref={ref => this.poi = ref}
           coordinate={{latitude: 16.075671439786362, longitude: 108.22427988052367}}
-          title="Map4D React-Native"
+          title="React Native Map"
           titleColor="#FFFF00"
           poiType="park"
           onPress={this.onPressPOI}

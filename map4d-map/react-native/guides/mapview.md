@@ -1,6 +1,6 @@
-# Map4D Map React Component
+# Map View React Component
 
-> Map4dMap React Native cung cấp `MFMapView` dưới dạng một React Component để hiển thị Map4d.
+> Map React Native SDK cung cấp `MFMapView` dưới dạng một React Component để hiển thị bản đồ.
 
 
 ## MFMapView Component
@@ -15,8 +15,8 @@
 |  3  | mapStyle                | string                      | Set map style cho bản đồ bằng json string                                                                                     |
 |  4  | showsMyLocationButton   | bool                        | Ẩn hoặc hiển thị nút vị trí của tôi                                                                                           |
 |  5  | showsMyLocation         | bool                        | Ẩn hoặc hiển thị vị trí của tôi.<br>Bật tính năng này yêu cầu thêm quyền vị trí đối với cả Android và iOS.                    |
-|  6  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D của Map4D (ở chế độ 3D).                                                                    |
-|  7  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm của Map4D (ở chế độ 2D).                                                                        |
+|  6  | showsBuildings          | bool                        | Ẩn hoặc hiển thị các đối tượng 3D trên bản đồ.                                                                    |
+|  7  | showsPOIs               | bool                        | Ẩn hoặc hiển thị các địa điểm trên bản đồ.                                                                        |
 |  8  | onMapReady              | func                        | Được gọi khi bản đồ sẵn sàng để sử dụng.                                                                                      |
 |  9  | [onPress](#onPress)     | func                        | Được gọi khi người dùng tap trên bản đồ (không phải tap vào địa điểm, building hay annotations).                              |
 |  10 | [onPoiPress](#onPoiPress)                 | func      | Được gọi khi người dùng tap vào địa điểm trên bản đồ (không phải POI annotation)                                              |
@@ -185,7 +185,7 @@ Trong đó:
   - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
   - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
   - poi: object chứa thông tin địa điểm mà người dùng tap trên bản đồ:
-    + id: id của địa điểm, dùng để lấy thêm thông tin thông qua Map4d API
+    + id: id của địa điểm, dùng để lấy thêm thông tin thông qua API
     + title: tên của địa điểm
     + location: vị trí của địa điểm hiển thị trên bản đồ, theo hệ tọa độ địa lý.
 
@@ -220,7 +220,7 @@ Trong đó:
   - location: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ địa lý.
   - pixel: vị trí mà người dùng tap trên bản đồ, theo hệ tọa độ màn hình.
   - building: object chứa thông tin đối tượng 3d mà người dùng tap trên bản đồ:
-    + id: id của đối tượng 3d, dùng để lấy thêm thông tin thông qua Map4d API
+    + id: id của đối tượng 3d, dùng để lấy thêm thông tin thông qua API
     + name: tên của đối tượng 3d
     + location: vị trí của đối tượng 3d hiển thị trên bản đồ, theo hệ tọa độ địa lý.
 

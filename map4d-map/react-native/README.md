@@ -4,8 +4,8 @@
 [![npm](https://img.shields.io/npm/v/react-native-map4d-map)](https://www.npmjs.com/package/react-native-map4d-map)
 
 
-> **Map4dMap React Native** cung cấp Map4dMap SDK cho cả thiết bị [Android](https://docs.map4d.vn/map4d-map/android/) và [iOS](https://docs.map4d.vn/map4d-map/android/), cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
-> Map4dMap React Native dựa trên cơ chế của React Native để bổ sung các màn hình hiển thị cho Android và iOS.
+> **Map4dMap React Native** cung cấp Map4dMap SDK cho cả thiết bị Android và iOS, cho phép tùy chỉnh bản đồ với nội dung để hiển thị trên các thiết bị di động.  
+> Thư viện dựa trên cơ chế của React Native để bổ sung các màn hình hiển thị cho Android và iOS.
 
 ## Getting Started
 
@@ -14,7 +14,7 @@
 Để sử dụng Map4dMap Rect Native, chạy lệnh sau để thêm `react-native-map4d-map` vào file package.json
 
 ```shell
-npm install react-native-map4d-map --save
+npm i react-native-map4d-map
 ```
 
 Import `react-native-map4d-map` vào project files.
@@ -34,14 +34,14 @@ import {
 ### Phiên bản Android/iOS hỗ trợ
 
 * Android: yêu cầu `Android SDK 21` trở lên
-* iOS: yêu cầu phiên bản `iOS 11.0` trở lên
+* iOS: yêu cầu phiên bản `iOS 13.0` trở lên
 
 ### API key
 
-API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng Map4dMap SDK.  
+API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng bản đồ.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
-Tạo API key tại địa chỉ: <https://map.map4d.vn/developer/key/>
+Tạo API key tại trang nhà phát triển của Map4D <https://map.map4d.vn/developer/key/> *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
 
 #### Thiết lập API key cho Android
 
@@ -96,7 +96,7 @@ Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS
 
 ### Sử dụng
 
-Map4dMap React Native cung cấp component [MFMapView](./guides/mapview) để hiển thị bản đồ Map4D. Bạn có thể thêm `MFMapView` vào view và set style cho nó để hiển thị Map4D.
+Map React Native cung cấp component [MFMapView](./guides/mapview) để hiển thị bản đồ. Bạn có thể thêm `MFMapView` vào view và set style cho nó để hiển thị.
 
 ### Ví dụ
 
