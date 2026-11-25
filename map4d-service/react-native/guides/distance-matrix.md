@@ -4,10 +4,10 @@
 
 ### Usage
 
-Import hàm `fetchDistanceMatrix` từ thư viện `'react-native-map4d-services'`
+Import hàm `fetchDistanceMatrix` từ thư viện `'react-native-ipostmap-services'`
 
 ```js
-import { fetchDistanceMatrix } from 'react-native-map4d-services';
+import { fetchDistanceMatrix } from 'react-native-ipostmap-services';
 ```
 
 Tham số request cho `fetchDistanceMatrix` là một đối tượng có dạng:

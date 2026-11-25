@@ -1,25 +1,26 @@
-# Text Search
+# Viewbox Search
 
-iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_text_search>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/#/api_viewbox_search>
 
-> Tìm kiếm các địa điểm bằng chuỗi ký tự.
+> Tìm các địa điểm trong khu vực địa lý hình chữ nhật.
 
 ### Usage
 
-Import hàm `fetchTextSearch` từ thư viện `'react-native-map4d-services'`
+Import hàm `fetchViewboxSearch` từ thư viện `'react-native-ipostmap-services'`
 
 ```js
-import { fetchTextSearch } from 'react-native-map4d-services';
+import { fetchViewboxSearch } from 'react-native-ipostmap-services';
 ```
 
-Tham số request cho `fetchTextSearch` là một đối tượng có dạng:
+Tham số request cho `fetchViewboxSearch` là một đối tượng có dạng:
 
 ```js
-export type MFTextSearchParams = {
-  text: string,
+export type MFViewboxSearchParams = {
+  viewbox: MFViewboxComponent,
+  text?: string,
   types?: string[],
+  tags?: string[],
   datetime?: number,
-  location?: MFLocationComponent,
 }
 ```
 
@@ -27,30 +28,28 @@ Trong đó:
 
 | Name         | Type                                                        | Description                                                                        |
 |--------------|-------------------------------------------------------------|------------------------------------------------------------------------------------|
+| viewbox      | [MFViewboxComponent](components/viewbox-component.md)       | Khu vực muốn tìm kiếm.                                                             |
 | text         | string                                                      | Nội dung muốn tìm kiếm.                                                            |
 | types        | string[]                                                    | Loại đối tượng của địa điểm. VD: cafe, restaurant, ...                             |
+| tags         | string[]                                                    | Nhãn của địa điểm.                                                                 |
 | datetime     | number                                                      | Thời gian địa điểm vẫn còn tồn tại.                                                |
-| location     | [MFLocationComponent](components/location-component.md)     | Vị trí ưu tiên. Các địa điểm gần vị trí này sẽ được ưu tiên hơn.                   |
 
 
 ### Example
 
 ```js
-fetchTextSearch({
-  text: 'abc',
-  // types: ['atm', 'hotel'],
-  location: {
-    latitude: 16.036461,
-    longitude: 108.218159
+fetchViewboxSearch({
+  viewbox: {
+    southwest: { latitude: 16.056453967981348, longitude: 108.19387435913086 },
+    northeast: { latitude: 16.093031550262133, longitude: 108.25927734375 },
   },
-  datetime: date.getTime()
+  text: 'abc',
 }).then(response => {
   if (response.code == 'ok') {
-    console.log('Text Search Results:', response.result)
+    console.log('Viewbox Search Results:', response.result)
   }
   else {
     console.log(`Error code: ${response.code}, message: ${response.message}`);
   }
 })
 ```
-

@@ -1,15 +1,15 @@
 # Directions
 
-iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_route>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/#/api_route>
 
 > API đùng để tìm đường đi giữa các địa điểm.
 
 ### Usage
 
-Import hàm `fetchDirections` từ thư viện `'react-native-map4d-services'`
+Import hàm `fetchDirections` từ thư viện `'react-native-ipostmap-services'`
 
 ```js
-import { fetchDirections } from 'react-native-map4d-services';
+import { fetchDirections } from 'react-native-ipostmap-services';
 ```
 
 Tham số request cho `fetchDirections` là một đối tượng có dạng:

@@ -1,15 +1,15 @@
 # Place Detail
 
-iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_place_detail>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/#/api_place_detail>
 
 > Lấy thông tin chi tiết của địa điểm thông qua id của địa điểm đó.
 
 ### Usage
 
-Import hàm `fetchPlaceDetail` từ thư viện `'react-native-map4d-services'`
+Import hàm `fetchPlaceDetail` từ thư viện `'react-native-ipostmap-services'`
 
 ```js
-import { fetchPlaceDetail } from 'react-native-map4d-services';
+import { fetchPlaceDetail } from 'react-native-ipostmap-services';
 ```
 
 Tham số request cho `fetchTextSearch` là chuỗi ký tự ID của place

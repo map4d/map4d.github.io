@@ -1,15 +1,15 @@
 # Nearby Search
 
-iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_nearby_search>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/#/api_nearby_search>
 
 > Tìm kiếm các địa điểm lân cận.
 
 ### Usage
 
-Import hàm `fetchNearbySearch` từ thư viện `'react-native-map4d-services'`
+Import hàm `fetchNearbySearch` từ thư viện `'react-native-ipostmap-services'`
 
 ```js
-import { fetchNearbySearch } from 'react-native-map4d-services';
+import { fetchNearbySearch } from 'react-native-ipostmap-services';
 ```
 
 Tham số request cho `fetchNearbySearch` là một đối tượng có dạng:

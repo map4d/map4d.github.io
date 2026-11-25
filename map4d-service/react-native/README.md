@@ -1,7 +1,7 @@
 # iPostMapService React Native SDK
 [![ipostmap](https://img.shields.io/badge/ipostmap-services-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/badge/platform-reactnative-61dafb.svg)](https://reactnative.dev/)
-[![npm](https://img.shields.io/npm/v/react-native-map4d-services)](https://www.npmjs.com/package/react-native-map4d-services)
+[![npm](https://img.shields.io/npm/v/react-native-ipostmap-services)](https://www.npmjs.com/package/react-native-ipostmap-services)
 
 > **iPostMapService React Native** cung cấp [iPostMap Services API](https://api.ipostmap.vn/sdk/docs/index.html) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
 > **iPostMapService React Native** cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
@@ -9,20 +9,20 @@
 ## Requirement
 
 * Android: Android SDK 21+
-* iOS:iOS 11.0+
+* iOS: iOS 13.0+
 
 ## Installation
 
 ```shell
-npm i react-native-map4d-services
+npm i react-native-ipostmap-services
 ```
 
 ## API key
 
-API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng iPostMapService SDK.  
+API key là một chuỗi ký tự dùng để xác thực các yêu cầu liên quan đến project của bạn dùng cho các mục đích sử dụng Services SDK.  
 Bạn phải có ít nhất một API key liên kết với project của mình
 
-Tạo API key tại địa chỉ: <https://map.ipostmap.vn/user/>
+Tạo tại trang nhà phát triển của [iPostMap](https://map.ipostmap.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
 
 #### Thiết lập API key cho Android
 
@@ -32,7 +32,7 @@ Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application>
         <meta-data
-            android:name="vn.ipostmap.services.ACCESS_KEY"
+            android:name="vn.map4d.services.ACCESS_KEY"
             android:value="YOUR_KEY_HERE"/>
     </application>
 </manifest>
@@ -46,7 +46,7 @@ allprojects {
     repositories {
         // ...
         maven {
-            url = "https://packages.ipostmap.vn/repository/maven-public"
+            url = "https://packages.map4d.vn/repository/maven-public"
         }
     }
 }
@@ -71,13 +71,13 @@ android {
 Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
 
 ```xml
-<key>iPostMapServiceAccessKey</key>
+<key>Map4dServicesAccessKey</key>
 <string>YOUR_SERVICES_ACCESS_KEY</string>
 ```
 
 ## Using
 
-**iPostMapService React Native** cung cấp các hàm để sử dụng Map4d Web Services API:
+**Thư viện services react native** cung cấp các hàm để sử dụng Services API:
 
 - Places Services:
   + [fetchSuggestion](guides/auto-suggest.md): tự động đề xuất các địa điểm dựa trên chuỗi tìm kiếm hoàn chỉnh hoặc chưa hoàn chỉnh
@@ -96,7 +96,7 @@ Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS
 Ví dụ: Lấy tự động đề xuất với `fetchSuggestion`
 
 ```js
-import { fetchSuggestion } from "react-native-map4d-services";
+import { fetchSuggestion } from "react-native-ipostmap-services";
 
 // ...
 

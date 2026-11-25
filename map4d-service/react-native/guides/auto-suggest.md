@@ -1,15 +1,15 @@
 # Auto Suggestion
 
-iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/v1.0/#/api_autosuggest>
+iPostMap Services API: <https://docs.ipostmap.vn/map4d-service/api/#/api_autosuggest>
 
 > Auto Suggestion sẽ tự động đề xuất các địa điểm dựa trên chuỗi tìm kiếm hoàn chỉnh hoặc chưa hoàn chỉnh, hỗ trợ tìm kiếm với chuỗi ký tự viết tắt.
 
 ### Usage
 
-Import hàm `fetchSuggestion` từ thư viện `'react-native-map4d-services'`
+Import hàm `fetchSuggestion` từ thư viện `'react-native-ipostmap-services'`
 
 ```js
-import { fetchSuggestion } from 'react-native-map4d-services';
+import { fetchSuggestion } from 'react-native-ipostmap-services';
 ```
 
 Tham số request cho `fetchSuggestion` là một đối tượng có dạng:
