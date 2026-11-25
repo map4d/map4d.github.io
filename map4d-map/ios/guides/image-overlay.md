@@ -1,6 +1,6 @@
 # Image Overlay
 
-Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên Map4D.
+Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh có sẵn lên một vùng tọa độ xác định trên bản đồ.
 
 ![Image Overlay](../resources/image-overlay.png)
 
@@ -10,7 +10,7 @@ Image Overlay là một loại overlay cho phép người dùng hiển thị m�
 
 ### Tạo mới Image overlay
 
-Đoạn code bên dưới hướng dẫn cách sử dụng [MFImageOverlay](/guides/image-overlay.md?id=api-image-overlay-mfimageoverlay-class) để hiển thị một hình ảnh lên Map4D:
+Đoạn code bên dưới hướng dẫn cách sử dụng [MFImageOverlay](/guides/image-overlay.md?id=api-image-overlay-mfimageoverlay-class) để hiển thị một hình ảnh lên bản đồ:
 
 ```swift
 let bounds = MFCoordinateBounds(coordinate: CLLocationCoordinate2D(latitude: 16.066154, longitude: 108.207276),
@@ -56,12 +56,12 @@ imageOverlay.opacity = 0.5
 
 Lớp `MFImageOverlay` cung cấp một phương thức static để tạo đối tượng *MFImageOverlay* một cách tiện lợi
 ```swift
-convenience init(image: UIImage, bounds: MFCoordinateBounds)
+let imageOverlay = MFImageOverlay(image: image, bounds: bounds)
 ```
 
 - Parameters:
   - image: **UIImage**: hình ảnh dùng để hiển thị trên bản đồ
-  - bounds: [MFCoordinateBounds](/guides/coordinates.md?id=api-coordinates-mfcoordinatebounds): vùng tọa độ hiển thị hình ảnh trên Map4D
+  - bounds: [MFCoordinateBounds](/guides/coordinates.md?id=api-coordinates-mfcoordinatebounds): vùng tọa độ hiển thị hình ảnh trên bản đồ
 
 Sử dụng
 

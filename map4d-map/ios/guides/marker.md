@@ -2,7 +2,7 @@
 
 > **Marker** dùng để xác định một vị trí đơn lẻ trên bản đồ. 
 
-> Cho phép người dùng đánh dấu lên các vị trí trên bản đồ bằng các biểu tượng chung được cung cấp bởi **Map4d SDK** 
+> Cho phép người dùng đánh dấu lên các vị trí trên bản đồ bằng các biểu tượng nổi bật 
 hoặc bạn có thể tuỳ chỉnh bằng một hình ảnh khác hoặc tuỳ chỉnh các thuộc tính của **Marker**
 
 ### 1. Thêm một marker
@@ -13,7 +13,7 @@ Chúng ta thử tạo MFMarker như sau:
 let marker = MFMarker()
 marker.position = CLLocationCoordinate2D(latitude: 16.072086430034517, longitude: 108.2262037173781)
 marker.icon = UIImage(named: "iconLocation")
-marker.title = "Map4D"
+marker.title = "Marker title"
 marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
 marker.map = mapView
 ```

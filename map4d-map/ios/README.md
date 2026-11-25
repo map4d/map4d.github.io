@@ -8,9 +8,15 @@
 
 ![Map4D iOS SDK](resources/Untitled-1_0000_Right-Mockup--phone-demo.png)
 
+## Yêu cầu
+
+- iOS 12.0 trở lên.
+- Xcode 12.0 trở lên; Swift tools 5.3.
+- Access Key từ [Map4D Developer](https://map.map4d.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt developer)*.
+
 ## Installation
 
-### Swift Package Manager (SPM)
+### Swift Package Manager
 
 Trong Xcode, chọn **File > Add Package Dependencies**, nhập URL:
 
@@ -44,22 +50,17 @@ pod 'Map4dMap', '~> 3.4'
 
 Sau khi cập nhật Podfile, chạy `pod install` và mở file `.xcworkspace`
 
-### Nền tảng được hỗ trợ
-
-- iOS 12.0 trở lên.
-- Xcode 12.0 trở lên; Swift tools 5.3.
-- Map4D Access Key: tạo tại trang nhà phát triển của [Map4D](https://map.map4d.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt tính năng nhà phát triển)*
-
 ## Using
 
-1. Provide access key from Info.plist
+1. Thêm Access Key vào `Info.plist` của app target. Tên khóa cấu hình là `Map4dMapAccessKey`:  
+Key lấy từ [Map4D Developer](https://map.map4d.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt developer)*
 
 ```xml
 <key>Map4dMapAccessKey</key>
 <string>YOUR_ACCESS_KEY</string>
 ```
 
-2. Create map view
+2. Import `Map4dMap` và tạo map view:
 
 ```swift
 import UIKit

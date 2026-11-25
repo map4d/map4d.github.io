@@ -30,7 +30,7 @@
   
   - Các điều khiển sau có thể được bật và tắt theo chương trình:
 
-    + **myLocationButton**: Điều khiển bật tắt nút myLocation mà Map4d iOS SDK cung cấp.
+    + **myLocationButton**: Điều khiển bật tắt nút myLocation mà iOS SDK cung cấp.
     + **scrollGestures**: Điều khiển các cử chỉ cuộn được bật hay tắt. Nếu được bật, người dùng có thể vuốt để xoay **camera**.
     + **zoomGestures**: Điều khiển các cử chỉ thu phóng được bật hay tắt. Nếu được bật, người dùng có thể nhấn đúp, dùng hai ngón tay **thu hẹp hoặc mở rộng** để thay đổi mức **zoom** của **camera**.
     + **tiltGestures**: Điều khiển các cử chỉ nghiêng được bật hay tắt. Nếu được bật, người dùng có thể sử dụng hai ngón tay vuốt dọc xuống hoặc vuốt lên để nghiêng **camera**.
@@ -72,7 +72,7 @@
 
   ## 4. Di chuyển map
 
-  **Map4D iOS SDK** hỗ trợ người dùng di chuyển tới một vị trí **camera** mới thông qua 2 phương thức **animate** và **move**.
+  **iOS SDK** hỗ trợ người dùng di chuyển tới một vị trí **camera** mới thông qua 2 phương thức **animate** và **move**.
 
   **Phương thức animate**
 

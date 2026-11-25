@@ -12,7 +12,7 @@ Chúng ta thử tạo **POI** như sau:
 ```swift 
 let poi = MFPOI()
 poi.position = CLLocationCoordinate2D(latitude: 16.071575666602996, longitude: 108.22781709595301)
-poi.title = "Map4D Cafe"
+poi.title = "Điểm cafe"
 poi.zIndex = 1
 poi.type = "cafe"
 poi.color = .red

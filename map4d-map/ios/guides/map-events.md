@@ -1,6 +1,6 @@
 # Map events
 
-> **Map4D iOS SDK** cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
+> **Map iOS SDK** cung cấp các sự kiện của map hay tương tác của người dùng giúp cho nhà phát triển có thể lắng nghe và xử lý.
 
   ##  Giới thiệu chung
 
@@ -32,7 +32,7 @@
     marker.position = coordinate
     marker.icon = UIImage(named: "iconLocation")
     marker.groundAnchor = CGPoint(x: 0.5, y: 1.0)
-    marker.title = "Map4D"
+    marker.title = "Marker title"
     marker.snippet = "An Hải Bắc, Sơn Trà, Đà Nẵng"
     marker.map = mapView
   }
@@ -70,7 +70,7 @@
 
   ####  Các sự kiện liên quan đến kinh doanh và địa điểm yêu thích
 
-  > **Map4d iOS SDK** cung cấp cho nhà phát triển các giao thức tương tác với **POI** và **Object** cung cấp cho bạn các thông tin về địa điểm hoặc đối tượng mà bạn muốn lấy thông tin trên **map**
+  > **Map iOS SDK** cung cấp cho nhà phát triển các giao thức tương tác với **POI** và **Object** cung cấp cho bạn các thông tin về địa điểm hoặc đối tượng mà bạn muốn lấy thông tin trên **map**
   <br/>Các **POI** xuất hiện trên map cùng với các biểu tượng tương ứng của chúng. **POI** bao gồm công viên, trường học, v.v. cũng như các **POI** kinh doanh như cửa hàng, nhà hàng và khách sạn.
   <br/>Các **Object** xuất hiên trên **map** như các toàn nhà, các khối hình hộp, ...
 

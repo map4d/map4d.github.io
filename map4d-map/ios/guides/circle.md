@@ -1,6 +1,6 @@
 # Circle
 
-Nếu bạn muốn vẽ một hình tròn lên bản đồ, thì Map4D SDK cung cấp cho bạn lớp **MFCircle** để thực hiện điều đó. 
+Nếu bạn muốn vẽ một hình tròn lên bản đồ, thì iOS SDK cung cấp cho bạn lớp **MFCircle** để thực hiện điều đó. 
 Bạn có thể dễ dàng vẽ các vòng tròn trên bề mặt bản đồ.
 
 Để tạo một đường tròn, bạn phải chỉ định hai thuộc tính sau:

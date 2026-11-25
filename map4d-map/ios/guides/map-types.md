@@ -1,16 +1,16 @@
 # Map Types
 
-> Map type xác định cách hiển thị và trình bày các tiles trong bản đồ. Bạn có thể tùy chỉnh bản đồ của mình bằng một số loại mà Map4D Map SDK cung cấp
+> Map type xác định cách hiển thị và trình bày các tiles trong bản đồ. Bạn có thể tùy chỉnh bản đồ của mình bằng một số loại mà Map SDK cung cấp
 
 ### Các loại bản đồ
 
-Map4D Map SDK hiện cung cấp 3 loại bản đồ tùy chỉnh:
+Map SDK hiện cung cấp 3 loại bản đồ tùy chỉnh:
 
 | No. | Name      | Description                                                                                                                                                           |
 |:---:|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  1  | Roadmap   | Giá trị: `MFMapTypeRoadmap`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của Map4dMap SDK |
-|  2  | Satellite | Giá trị: `MFMapTypeSatellite`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh. Không có thông tin về đường sá.                                       |
-|  3  | Hybrid    | Giá trị: `MFMapTypeMap3D`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh, kết hợp thông tin về đường sá                                             |
+|  1  | Roadmap   | Giá trị: `.roadmap`<br>Các thành phần của bản đồ được vẽ dưới dạng các đường nét và hình khối, có độ phân giải cao<br>Đây là bản đồ mặc định của Map SDK |
+|  2  | Satellite | Giá trị: `.satellite`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh. Không có thông tin về đường sá.                                       |
+|  3  | Hybrid    | Giá trị: `.hybrid`<br>Các tiles của bản đồ được hiển thị dưới dạng hình ảnh vệ tinh, kết hợp thông tin về đường sá                                             |
 
 |                 ROADMAP                            | SATELLITE                                             |                 HYBRID                            |
 |:--------------------------------------------------:|:-----------------------------------------------------:|:-------------------------------------------------:|

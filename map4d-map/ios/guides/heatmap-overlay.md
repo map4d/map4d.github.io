@@ -1,6 +1,6 @@
 # Heatmap Overlay
 
-Có từ **3.4.0**, `MFHeatmapOverlay` hiển thị mật độ của các tọa độ có trọng số. Lớp này kế thừa `MFOverlay`.
+`MFHeatmapOverlay` hỗ trợ hiển thị mật độ của các tọa độ có trọng số
 
 ## Thêm và xóa Heatmap
 

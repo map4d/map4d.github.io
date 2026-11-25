@@ -1,6 +1,6 @@
 # GeoJSON Layer
 
-GeoJSON layer cho phép người dùng hiển thị dữ liệu địa lý theo định dạng [GeoJSON](https://geojson.org/) lên bản đồ Map4D
+GeoJSON layer cho phép người dùng hiển thị dữ liệu địa lý theo định dạng [GeoJSON](https://geojson.org/) lên bản đồ
 
 ## 1. Thêm mới GeoJSON layer
 
@@ -72,23 +72,23 @@ let geoJSON = MFGeoJSON(json:"json string")
 |-----------------|:--------------------------------------------------------------------------|---------------------|
 | **type**    | [MFGeoJSONGeometryType](/guides/geojson.md?id=api-geojson-mfgeojsongeometrytype-enum) | Kiểu của geomtry, bao gồm `Point`, `MultiPoint`, `LineString`, `MultiLineString`, `Polygon`, `MultiPolygon`, `GeometryCollection` |
 
-### MFGeoJSONGeometryType enum :id=api-geojson-mfgeojsongeometrytype-enum
+## MFGeoJSONGeometryType enum
 
-```
-typedef NS_ENUM(NSUInteger, MFGeoJSONGeometryType) {
-  MFGeoJSONGeometryTypePoint,
-  MFGeoJSONGeometryTypeMultiPoint,
-  MFGeoJSONGeometryTypeLineString,
-  MFGeoJSONGeometryTypeMultiLineString,
-  MFGeoJSONGeometryTypePolygon,
-  MFGeoJSONGeometryTypeMultiPolygon,
-  MFGeoJSONGeometryTypeGeometryCollection
-} NS_SWIFT_NAME(MFGeoJSON.GeometryType);
-```
+Kiểu Swift: `MFGeoJSON.GeometryType`.
 
-### MFGeoJSONPointStyle class :id=api-geojson-mfgeojsonpointstyle-class
+| Giá trị | Geometry |
+|---------|----------|
+| `.point` | Point |
+| `.multiPoint` | MultiPoint |
+| `.lineString` | LineString |
+| `.multiLineString` | MultiLineString |
+| `.polygon` | Polygon |
+| `.multiPolygon` | MultiPolygon |
+| `.geometryCollection` | GeometryCollection |
 
-##### Properties :id=api-geojson-properties-2
+## MFGeoJSONPointStyle class
+
+#### Properties
 
 | Name            | Type                                                               | Description             |
 |-----------------|:-------------------------------------------------------------------|-------------------------|
@@ -96,21 +96,3 @@ typedef NS_ENUM(NSUInteger, MFGeoJSONGeometryType) {
 | **groundAnchor** | CGPoint | Điểm neo của icon. |
 | **isFlat** | Bool | Icon nằm phẳng theo mặt đất. |
 | **icon**        | UIImage                                                            | Icon mặc định cho point |
-
-## Các kiểu geometry trong Swift
-
-`features` và `pointStyle` là thuộc tính chỉ đọc; có thể thay đổi các thuộc tính của đối tượng `pointStyle`.
-
-| Kiểu | Khởi tạo | Thuộc tính chỉ đọc |
-|---|---|---|
-| `MFGeoJSON.Feature` | `init(geometry:properties:)` | `geometry`, `properties` |
-| `MFGeoJSON.Point` | `init(coordinate:)` | `coordinate` |
-| `MFGeoJSON.MultiPoint` | `init(points:)` | `points` |
-| `MFGeoJSON.LineString` | `init(path:)` | `path` |
-| `MFGeoJSON.MultiLineString` | `init(lineStrings:)` | `lineStrings` |
-| `MFGeoJSON.Polygon` | `init(paths:)` | `paths` |
-| `MFGeoJSON.MultiPolygon` | `init(polygons:)` | `polygons` |
-| `MFGeoJSON.GeometryCollection` | `init(geometries:)` | `geometries` |
-
-Tất cả geometry tuân theo `MFGeoJSON.Geometry`, với thuộc tính chỉ đọc `type: MFGeoJSON.GeometryType`.
-
