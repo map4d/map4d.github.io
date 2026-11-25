@@ -1,9 +1,9 @@
 # Polygon
 
-> Để vẽ các đa giác trên bản đồ thì ta sử dụng đối tượng [MFPolygon](//pub.dev/documentation/map4d_map/latest/map4d_map/MFPolygon-class.html).  
-Một đối tượng [MFPolygon](//pub.dev/documentation/map4d_map/latest/map4d_map/MFPolygon-class.html) bao gồm một mảng các điểm tọa độ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình tự có thứ tự.
+> Để vẽ các đa giác trên bản đồ thì ta sử dụng đối tượng [MFPolygon](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFPolygon-class.html).  
+Một đối tượng [MFPolygon](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFPolygon-class.html) bao gồm một mảng các điểm tọa độ và tạo ra các đoạn thẳng nối các vị trí đó theo một trình tự có thứ tự.
 
-![Polygon](../../resources/polygon.png) 
+![Polygon](../resources/polygon.png) 
 
 ## MFPolygon
 
@@ -28,11 +28,11 @@ const MFPolygon({
 
 | Name             | Type                                                                                       | Description                                           |
 |------------------|--------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| polygonId        | [MFPolygonId](//pub.dev/documentation/map4d_map/latest/map4d_map/MFPolygonId-class.html)   | Id của polygon.                                       |
+| polygonId        | [MFPolygonId](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFPolygonId-class.html)   | Id của polygon.                                       |
 | consumeTapEvents | `bool` | Default: `false`. Cho phép người dùng có thể tương tác được với polygon hay không. Nếu `false` thì `onTap` callback sẽ không được gọi.    |
 | fillColor        | [Color](https://api.flutter.dev/flutter/dart-ui/Color-class.html)                          | Chỉ định màu tô phía trong của Polygon.               |
-| points           | [List\<MFLatLng\>](https://pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html)         | Mảng các tọa độ để tạo polygon.         |
-| holes            | [List\<List\<MFLatLng\>\>](https://pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html) | Nhiều mảng các tọa độ để tạo holes cho polygon. |
+| points           | [List\<MFLatLng\>](https://pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFLatLng-class.html)         | Mảng các tọa độ để tạo polygon.         |
+| holes            | [List\<List\<MFLatLng\>\>](https://pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFLatLng-class.html) | Nhiều mảng các tọa độ để tạo holes cho polygon. |
 | strokeColor      | [Color](https://api.flutter.dev/flutter/dart-ui/Color-class.html)                          | Màu sắc đường viền ngoài cùng của polygon.            |
 | strokeWidth      | `int`                              | Default: `10`. Độ rộng đường viền của polygon (đơn vị: point).                                                |
 | visible          | `bool`                             | Default: `true`. Ẩn hay hiện polygon trên bản đồ.                                                             |
@@ -43,4 +43,4 @@ const MFPolygon({
 
 Ví dụ tương tác với polygon có thể xem tại:
 
-<https://github.com/map4d/map4d-map-flutter/blob/master/example/lib/place_polygon.dart>
+<https://github.com/map4d/map4d-map-flutter/blob/ipostmap/example/lib/place_polygon.dart>

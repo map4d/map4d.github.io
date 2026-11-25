@@ -1,11 +1,11 @@
 # Tile Overlay
 
-> Tile Overlay là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của iPostMap
+> Tile Overlay là một loại overlay cho phép người dùng hiển thị các tile map khác nhau từ nhiều nguồn khác nhau lên trên tile map có sẵn của bản đồ
 
 ## Add Tile overlay
 
 Để thêm 1 tile overlay vào map cần tạo mới 1 đối tượng của lớp [MFTileOverlay](MFTileOverlay) sau đó truyền cho [MFMapView](MFMapView).  
-iPostMap plugin cung cấp sẵn một phương thức static `MFTileOverlay.newWithUrlPattern` để tạo đối tượng tile overlay với url pattern.  
+Map plugin cung cấp sẵn một phương thức static `MFTileOverlay.newWithUrlPattern` để tạo đối tượng tile overlay với url pattern.  
 Cấu trúc url pattern:
 
 ```
@@ -16,11 +16,11 @@ Trong đó:
 * zoom: là mức zoom của tile
 * x, y: là tọa độ của tile
 
-> Đoạn code bên dưới hướng dẫn cách thêm/xóa tile overlay trên ipostmap. Tile được lấy từ <https://opentopomap.org>
+> Đoạn code bên dưới hướng dẫn cách thêm/xóa tile overlay trên bản đồ. Tile được lấy từ <https://opentopomap.org>
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:map4d_map/map4d_map.dart';
+import 'package:ipostmap_flutter/ipostmap.dart';
 void main() {
   runApp(MyApp());
 }
@@ -80,7 +80,7 @@ class _TileOverlaySampleState extends State<TileOverlaySample> {
 
 | No. | Name | Type | Description |
 |:---:|------|------|-------------|
-|  1  | tileOverlayId | [MFTileOverlayId](//pub.dev/documentation/map4d_map/latest/map4d_map/MFTileOverlayId-class.html) | Id của tile overlay |
+|  1  | tileOverlayId | [MFTileOverlayId](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFTileOverlayId-class.html) | Id của tile overlay |
 |  2  | transparency  | double | Độ trong suốt của tile overlay. Giá trị mặc định: 0 (không trong suốt) |
 |  3  | visible       | bool   | Ẩn/hiện tile overlay trên map |
 |  4  | zIndex        | int    | Giá trị zIndex của tile overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |
@@ -89,6 +89,6 @@ class _TileOverlaySampleState extends State<TileOverlaySample> {
 
 | No. | Name | Return Type | Arguments | Description |
 |:-:|-|-|-|-|
-| 1 | clone | [MFTileOverlay](//pub.dev/documentation/map4d_map/latest/map4d_map/MFTileOverlay-class.html) | Clone đối tượng MFTileOverlay |
-| 2 | copyWith | [MFTileOverlay](//pub.dev/documentation/map4d_map/latest/map4d_map/MFTileOverlay-class.html) | Clone đối tượng MFTileOverlay với giá trị `zIndex`, `visible` mới. |
+| 1 | clone | [MFTileOverlay](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFTileOverlay-class.html) | Clone đối tượng MFTileOverlay |
+| 2 | copyWith | [MFTileOverlay](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFTileOverlay-class.html) | Clone đối tượng MFTileOverlay với giá trị `zIndex`, `visible` mới. |
 

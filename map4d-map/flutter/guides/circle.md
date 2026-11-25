@@ -1,8 +1,8 @@
 # Circle
 
-> iPostMap SDK cung cấp cho bạn lớp **MFCircle** để vẽ một hình tròn lên bản đồ.  
+> Map Flutter plugin cung cấp cho bạn lớp **MFCircle** để vẽ một hình tròn lên bản đồ.  
 
-![Circle](../../resources/circle.png) 
+![Circle](../resources/circle.png) 
 
 ## MFCircle
 
@@ -27,10 +27,10 @@ const MFCircle({
 
 | Name             | Type                                                                                     | Description                                           |
 |------------------|------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| circleId         | [MFCircleId](//pub.dev/documentation/map4d_map/latest/map4d_map/MFCircleId-class.html)   | Id của Circle.                                        |
+| circleId         | [MFCircleId](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFCircleId-class.html)   | Id của Circle.                                        |
 | consumeTapEvents | `bool` | Default: `false`. Cho phép người dùng có thể tương tác được với Circle hay không. Nếu `false` thì `onTap` callback sẽ không được gọi.   |
 | fillColor        | [Color](https://api.flutter.dev/flutter/dart-ui/Color-class.html)                        | Chỉ định màu sắc của Circle.                          |
-| center           | [MFLatLng](//pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html)       | Chỉ định vị trí của Circle trên bản đồ                |
+| center           | [MFLatLng](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFLatLng-class.html)       | Chỉ định vị trí của Circle trên bản đồ                |
 | radius           | `double`                                                                                 | Bán kính đường của tròn tính từ tâm.                  |
 | strokeColor      | [Color](https://api.flutter.dev/flutter/dart-ui/Color-class.html)                        | Chỉ định màu sắc đường viền của Circle.               |
 | strokeWidth      | `int`                                                                                    | Chỉ định độ lớn đường viền của Circle.                |
@@ -42,4 +42,4 @@ const MFCircle({
 
 Ví dụ tương tác với circle có thể xem tại:
 
-<https://github.com/map4d/map4d-map-flutter/blob/master/example/lib/place_circle.dart>
+<https://github.com/map4d/map4d-map-flutter/blob/ipostmap/example/lib/place_circle.dart>

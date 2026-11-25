@@ -2,7 +2,7 @@
 
 > **Marker** dùng để xác định một vị trí trên bản đồ, cho phép người dùng thêm một điểm ghim ở một vị trí xác định.
 
-![Marker](../../resources/marker.png) 
+![Marker](../resources/marker.png) 
 
 ## MFMarker
 
@@ -30,17 +30,17 @@ const MFMarker({
 
 | Name             | Type                                                                                     | Description                                           |
 |------------------|------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| markerId         | [MFMarkerId](//pub.dev/documentation/map4d_map/latest/map4d_map/MFMarkerId-class.html)   | Id của Marker.                                        |
+| markerId         | [MFMarkerId](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFMarkerId-class.html)   | Id của Marker.                                        |
 | consumeTapEvents | `bool` | Default: `false`. Cho phép người dùng có thể tương tác được với Marker hay không. Nếu `false` thì `onTap` callback sẽ không được gọi.   |
-| position         | [MFLatLng](//pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html)       | Vị trí của Marker trên bản đồ                         |
+| position         | [MFLatLng](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFLatLng-class.html)       | Vị trí của Marker trên bản đồ                         |
 | elevation        | `double`                                                        | Default: `0`. Chỉ định độ cao của Marker so với mực nước biển, đơn vị là mét.  |
 | rotation         | `double`                                                        | Default: `0`. Chỉ định góc quay của Marker theo *(đơn vị: độ)*.                |
 | anchor           | [Offset](//api.flutter.dev/flutter/dart-ui/Offset-class.html)   | Default: `(0.5, 0.5)`. Xác định điểm neo cho Marker.                           |
 | draggable        | `bool`                                                          | Default: `false`. Cho phép người dùng có thể kéo Marker trên bản đồ hay không. |
 | visible          | `bool`                                                          | Default: `true`. Ẩn hay hiện marker trên bản đồ.                               |
 | zIndex           | `double`                                                        | Default: `0`. Chỉ định thứ tự hiển thị giữa marker với các đối tượng khác trên bản đồ. |
-| icon             | [MFBitmap](//pub.dev/documentation/map4d_map/latest/map4d_map/MFBitmap-class.html)         | Tùy chỉnh icon cho Marker.                          |
-| infoWindow       | [MFInfoWindow](//pub.dev/documentation/map4d_map/latest/map4d_map/MFInfoWindow-class.html) | Tùy chỉnh thông tin hiển thị khi  người dùng tap vào marker. |
+| icon             | [MFBitmap](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFBitmap-class.html)         | Tùy chỉnh icon cho Marker.                          |
+| infoWindow       | [MFInfoWindow](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFInfoWindow-class.html) | Tùy chỉnh thông tin hiển thị khi  người dùng tap vào marker. |
 | onTap            | [VoidCallback](https://api.flutter.dev/flutter/dart-ui/VoidCallback.html)                  | Callback được gọi khi người dùng tap vào marker.    |
 | onDragEnd        | ValueChanged<MFLatLng>                                          | Callback được gọi khi người dùng kết thúc việc kéo marker trên bản đồ.         |
 
@@ -70,8 +70,8 @@ const MFInfoWindow({
 
 ### Custom icon cho marker
 
-iPostMap Flutter SDKs cung cấp class [MFBitmap](//) để thuận tiện cho việc thay đổi icon của marker bằng hình ảnh sẵn có.  
-Để tạo được đối tượng `MFBitmap` chính xác cần gọi phương thức [MFBitmap.fromAssetImage](//pub.dev/documentation/map4d_map/latest/map4d_map/MFBitmap/fromAssetImage.html) với 2 tham số quan trọng là:
+Map Flutter plugin cung cấp class [MFBitmap](//) để thuận tiện cho việc thay đổi icon của marker bằng hình ảnh sẵn có.  
+Để tạo được đối tượng `MFBitmap` chính xác cần gọi phương thức [MFBitmap.fromAssetImage](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFBitmap/fromAssetImage.html) với 2 tham số quan trọng là:
 - configuration: [ImageConfiguration](//api.flutter.dev/flutter/painting/ImageConfiguration-class.html)
 - assetName: String
 
@@ -82,4 +82,4 @@ Nếu không tạo bằng phương thức này, custom icon có thể sẽ khôn
 
 Ví dụ tương tác với marker có thể xem tại:
 
-<https://github.com/map4d/map4d-map-flutter/blob/master/example/lib/place_marker.dart>
+<https://github.com/map4d/map4d-map-flutter/blob/ipostmap/example/lib/place_marker.dart>

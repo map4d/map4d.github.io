@@ -2,9 +2,9 @@
 
 > Điểm khác biệt giữa nền tảng bản đồ iPostMap với các nền tảng bản đồ khác đó là chế độ bản đồ 3D.  
 Chế độ này sẽ có các đối tượng 3D mô phỏng lại các tòa nhà, cây cối, các cây cầu cũng như các công trình kiến trúc khác, ...  
-Ngoài những đối tượng building 3D  có sẵn của bản đồ, bạn còn có thể tự tạo và thêm đối tượng 3D của bạn lên bản đồ thông qua đối tượng [MFBuilding](//pub.dev/documentation/map4d_map/latest/map4d_map/MFBuilding-class.html)
+Ngoài những đối tượng building 3D  có sẵn của bản đồ, bạn còn có thể tự tạo và thêm đối tượng 3D của bạn lên bản đồ thông qua đối tượng [MFBuilding](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFBuilding-class.html)
 
-![Building](../../resources/textureBuilding.png) 
+![Building](../resources/textureBuilding.png) 
 
 ## MFBuilding
 
@@ -33,11 +33,11 @@ const MFBuilding({
 
 | Name             | Type                                                                                             | Description                                         |
 |------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| buildingId       | [MFBuildingId](//pub.dev/documentation/map4d_map/latest/map4d_map/MFBuildingId-class.html)       | Id của building.                                    |
+| buildingId       | [MFBuildingId](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFBuildingId-class.html)       | Id của building.                                    |
 | consumeTapEvents | `bool` | Default: `false`. Cho phép người dùng có thể tương tác được với building hay không. Nếu `false` thì `onTap` callback sẽ không được gọi.       |
 | name             | `String`                                                                                         | Tên của building.                                   |
-| position         | [MFLatLng](//pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html)               | Vị trí của building trên bản đồ                     |
-| coordinates      | [List\<MFLatLng\>](https://pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLng-class.html) | Mảng các vị trí để tạo building hình khối với mặt đáy của hình khối là mảng vị trí này.<br>Nó kết hợp với thuộc tính `height` để tạo chiều cao cho hình khối đó. |
+| position         | [MFLatLng](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFLatLng-class.html)               | Vị trí của building trên bản đồ                     |
+| coordinates      | [List\<MFLatLng\>](https://pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFLatLng-class.html) | Mảng các vị trí để tạo building hình khối với mặt đáy của hình khối là mảng vị trí này.<br>Nó kết hợp với thuộc tính `height` để tạo chiều cao cho hình khối đó. |
 | modelUrl         | `String`                                                                                         | Đường dẫn URL để lấy dữ liệu model cho building.    |
 | textureUrl       | `String` | Đường dẫn URL để lấy dữ liệu texture cho building.<br> Chỉ có giá trị khi set cùng với `modelUrl`, nếu không set thì building có màu trắng. |
 | height           | `double` | Default: `1`. Chiều cao của building (đơn vị: mét). Chỉ có tác dụng khi building của bạn được tạo từ thuộc tính `coordinates`               |
@@ -56,4 +56,4 @@ const MFBuilding({
 
 Ví dụ tương tác với building có thể xem tại:
 
-<https://github.com/map4d/map4d-map-flutter/blob/master/example/lib/place_building.dart>
+<https://github.com/map4d/map4d-map-flutter/blob/ipostmap/example/lib/place_building.dart>

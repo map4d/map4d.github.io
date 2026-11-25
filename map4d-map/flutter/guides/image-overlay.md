@@ -1,20 +1,20 @@
 # Image Overlay
 
-> Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh lên một khu vực xác định trên bản đồ iPostMap
+> Image Overlay là một loại overlay cho phép người dùng hiển thị một hình ảnh lên một khu vực xác định trên bản đồ
 
-![Image Overlay](../../resources/image-overlay.png)
+![Image Overlay](../resources/image-overlay.png)
 
 ## Add Image overlay
 
-Để thêm 1 image overlay vào map cần tạo mới 1 đối tượng của lớp [MFImageOverlay](//pub.dev/documentation/map4d_map/latest/map4d_map/MFImageOverlay-class.html) sau đó truyền cho [MFMapView](MFMapView).  
+Để thêm 1 image overlay vào map cần tạo mới 1 đối tượng của lớp [MFImageOverlay](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFImageOverlay-class.html) sau đó truyền cho [MFMapView](MFMapView).  
 
-> Đoạn code bên dưới hướng dẫn cách thêm/xóa image overlay trên iPostMap.  
+> Đoạn code bên dưới hướng dẫn cách thêm/xóa image overlay trên bản đồ.  
 Asset: https://github.com/map4d/map4d-map-flutter/blob/master/example/assets/image_overlay.jpg
 
 ```dart
 // ignore_for_file: use_key_in_widget_constructors
 import 'package:flutter/material.dart';
-import 'package:map4d_map/map4d_map.dart';
+import 'package:ipostmap_flutter/ipostmap.dart';
 
 void main() {
   runApp(MyApp());
@@ -89,9 +89,9 @@ class _ImageOverlaySampleState extends State<ImageOverlaySample> {
 
 | No. | Name | Type    | Description |
 |:---:|------|---------|-------------|
-|  1  | imageOverlayId | [MFImageOverlayId](//pub.dev/documentation/map4d_map/latest/map4d_map/MFImageOverlayId-class.html) | Id của image overlay |
-|  2  | image          | [MFBitmap](https://pub.dev/documentation/map4d_map/latest/map4d_map/MFBitmap-class.html) | Hình ảnh hiển thị trên bản đồ |
-|  2  | bounds         | [MFLatLngBounds](https://pub.dev/documentation/map4d_map/latest/map4d_map/MFLatLngBounds-class.html) | Khu vực hiển thị hình ảnh |
+|  1  | imageOverlayId | [MFImageOverlayId](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFImageOverlayId-class.html) | Id của image overlay |
+|  2  | image          | [MFBitmap](https://pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFBitmap-class.html) | Hình ảnh hiển thị trên bản đồ |
+|  2  | bounds         | [MFLatLngBounds](https://pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFLatLngBounds-class.html) | Khu vực hiển thị hình ảnh |
 |  2  | transparency   | double | Độ trong suốt của image overlay. Giá trị mặc định: 0 (không trong suốt) |
 |  3  | visible        | bool   | Ẩn/hiện image overlay trên map |
 |  4  | zIndex         | int    | Giá trị zIndex của image overlay cao hơn sẽ hiển thị trên image overlay có giá trị zIndex nhỏ hơn |
@@ -100,5 +100,5 @@ class _ImageOverlaySampleState extends State<ImageOverlaySample> {
 
 | No. | Name | Return Type | Description |
 |:-:|-|-|-|-|
-| 1 | clone | [MFImageOverlay](//pub.dev/documentation/map4d_map/latest/map4d_map/MFImageOverlay-class.html) | Clone đối tượng MFImageOverlay |
-| 2 | copyWith | [MFImageOverlay](//pub.dev/documentation/map4d_map/latest/map4d_map/MFImageOverlay-class.html) | Clone đối tượng MFImageOverlay với giá trị `zIndex`, `visible` mới. |
+| 1 | clone | [MFImageOverlay](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFImageOverlay-class.html) | Clone đối tượng MFImageOverlay |
+| 2 | copyWith | [MFImageOverlay](//pub.dev/documentation/ipostmap_flutter/latest/ipostmap_flutter/MFImageOverlay-class.html) | Clone đối tượng MFImageOverlay với giá trị `zIndex`, `visible` mới. |

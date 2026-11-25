@@ -2,7 +2,7 @@
 [![ipostmap](https://img.shields.io/badge/ipostmap-services-orange)](https://ipostmap.vn/)
 [![platform](https://img.shields.io/cocoapods/p/iPostMapServices)](https://ipostmap.vn/)
 
-> **iPostMapServices** cung cấp [iPostMap Services API](https://docs.ipostmap.vn/map4d-service/api) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
+> **iPostMapServices** cung cấp [iPostMap Services API](https://api.ipostmap.vn/sdk/docs/index.html) wrapper sử dụng cho nhiều mục đích khác nhau như tìm kiếm địa điểm, chỉ đường, phân giải địa chỉ, ...  
 > Cho phép hạn chế ứng dụng sử dụng khóa API của bạn thông qua bundle id.  
 
 ## Yêu cầu
