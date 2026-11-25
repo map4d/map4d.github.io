@@ -76,6 +76,6 @@ let imageOverlay = MFImageOverlay(image: image, bounds: bounds)
 | **image** | UIImage (chỉ đọc) | Hình ảnh của overlay. |
 | **bounds** | MFCoordinateBounds (chỉ đọc) | Vùng hiển thị overlay. |
 | **map**      | [MFMapView](/guides/map.md?id=api-map-mfmapview) | Map view sẽ hiển thị image overlay                 |
-| **isHidden** | bool                                           | Ẩn/hiện image overlay trên map                     |
+| **isHidden** | Bool                                           | Ẩn/hiện image overlay trên map                     |
 | **opacity**  | CGFloat                                          | Độ trong suốt của image (mặc đinh là: 1.0)   |
-| **zIndex**   | float                                          | Giá trị zIndex của image overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |
+| **zIndex**   | Float                                          | Giá trị zIndex của image overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |

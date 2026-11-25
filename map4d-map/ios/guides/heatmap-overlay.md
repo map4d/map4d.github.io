@@ -53,5 +53,3 @@ heatmap.setGeoJson(geoJSONString, weightProperty: "weight")
 `setGeoJson` thay thế dữ liệu bằng các geometry `Point` và `MultiPoint`. `weightProperty` chọn thuộc tính feature làm trọng số; nil dùng trọng số 1.
 
 Heatmap nằm trên nhãn, tile overlay và image overlay, dưới building 3D và marker. Trong nhóm heatmap, zIndex cao hơn được vẽ phía trên.
-
-Xem khai báo gốc của [MFHeatmapOverlay và MFWeightedLocation](api-reference.md).

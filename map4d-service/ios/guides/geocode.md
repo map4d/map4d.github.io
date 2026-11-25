@@ -36,7 +36,7 @@ service.geocoding(with: params) { results, error in
 
 #### Public Member Functions :id=api-geocode-params-public-member-functions
 
-##### initWithLocation: :id=api-geocode-params-initwithlocation
+##### `init(location:)` :id=api-geocode-params-initwithlocation
 
 ```swift
 init(location: MFLocationComponent)
@@ -44,7 +44,7 @@ init(location: MFLocationComponent)
 
 Tạo đối tượng `MFGeocodeParams` với địa điểm.
 
-##### initWithAddress: :id=api-geocode-params-initwithaddress
+##### `init(address:)` :id=api-geocode-params-initwithaddress
 
 ```swift
 init(address: String)

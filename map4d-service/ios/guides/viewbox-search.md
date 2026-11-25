@@ -14,8 +14,8 @@
 ### Example
 
 ```swift
-let viewbox = MFViewboxComponent(southwest: CLLocationCoordinate2DMake(16.056453967981348,108.19387435913086),
-                                 northeast: CLLocationCoordinate2DMake(16.093031550262133,108.25927734375))
+let viewbox = MFViewboxComponent(southwest: CLLocationCoordinate2D(latitude: 16.056453967981348, longitude: 108.19387435913086),
+                                 northeast: CLLocationCoordinate2D(latitude: 16.093031550262133, longitude: 108.25927734375))
 let params = MFViewboxSearchParams(viewbox: viewbox, text: "bank")
 
 let service = MFPlacesService()
@@ -37,7 +37,7 @@ service.searchViewbox(with: params) { results, error in
 
 #### Public Member Functions :id=api-viewbox-search-params-public-member-functions
 
-##### initWithViewbox: text: :id=api-viewbox-search-params-initwithviewbox-text
+##### `init(viewbox:text:)` :id=api-viewbox-search-params-initwithviewbox-text
 
 ```swift
 init(viewbox: MFViewboxComponent, text: String)
@@ -45,7 +45,7 @@ init(viewbox: MFViewboxComponent, text: String)
 
 Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và text.
 
-##### initWithViewbox: types: :id=api-viewbox-search-params-initwithviewbox-types
+##### `init(viewbox:types:)` :id=api-viewbox-search-params-initwithviewbox-types
 
 ```swift
 init(viewbox: MFViewboxComponent, types: [String])
@@ -53,7 +53,7 @@ init(viewbox: MFViewboxComponent, types: [String])
 
 Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và types.
 
-##### initWithViewbox: tags: :id=api-viewbox-search-params-initwithviewbox-tags
+##### `init(viewbox:tags:)` :id=api-viewbox-search-params-initwithviewbox-tags
 
 ```swift
 init(viewbox: MFViewboxComponent, tags: [String])
@@ -72,4 +72,4 @@ Tạo đối tượng `MFViewboxSearchParams` với khu vực tìm kiếm và ta
 | tags | [String]? | Đọc/ghi | Nhãn của địa điểm. |
 | datetime | Date? | Đọc/ghi | Thời gian địa điểm vẫn còn tồn tại. |
 
-Thuộc tính `typeSearchMatching` áp dụng cho danh sách `types`. Xem [cách khớp loại địa điểm](type-search-matching.md) để chọn khớp tất cả hoặc ít nhất một loại.
+Thuộc tính `typeSearchMatching` áp dụng cho danh sách `types`: `.all` khớp tất cả loại, `.onlyOne` khớp ít nhất một loại.

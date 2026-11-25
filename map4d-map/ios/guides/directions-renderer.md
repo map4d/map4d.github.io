@@ -11,18 +11,18 @@
 let renderer = MFDirectionsRenderer();
 
 let route0 = MFMutablePath()
-route0.add(CLLocationCoordinate2DMake(16.078814, 108.221592))
-route0.add(CLLocationCoordinate2DMake(16.078972, 108.223034))
-route0.add(CLLocationCoordinate2DMake(16.075353, 108.223513))
+route0.add(CLLocationCoordinate2D(latitude: 16.078814, longitude: 108.221592))
+route0.add(CLLocationCoordinate2D(latitude: 16.078972, longitude: 108.223034))
+route0.add(CLLocationCoordinate2D(latitude: 16.075353, longitude: 108.223513))
 
 let route1 = MFMutablePath()
-route1.add(CLLocationCoordinate2DMake(16.078814, 108.221592))
-route1.add(CLLocationCoordinate2DMake(16.077491, 108.221735))
-route1.add(CLLocationCoordinate2DMake(16.077659, 108.223212))
-route1.add(CLLocationCoordinate2DMake(16.075353, 108.223513))
+route1.add(CLLocationCoordinate2D(latitude: 16.078814, longitude: 108.221592))
+route1.add(CLLocationCoordinate2D(latitude: 16.077491, longitude: 108.221735))
+route1.add(CLLocationCoordinate2D(latitude: 16.077659, longitude: 108.223212))
+route1.add(CLLocationCoordinate2D(latitude: 16.075353, longitude: 108.223513))
 
 renderer.routes = [route0, route1]
-renderer.originPosition = CLLocationCoordinate2DMake(16.079264, 108.220959)
+renderer.originPosition = CLLocationCoordinate2D(latitude: 16.079264, longitude: 108.220959)
 renderer.originTitle = "Begin Location"
 renderer.originTitleColor = .red
 renderer.destinationTitle = "End Location"
@@ -98,19 +98,19 @@ let renderer = MFDirectionsRenderer()
 |-------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | map                     | [MFMapView](/guides/map.md?id=api-map-mfmapview)              | Chỉ định map view sẽ hiển thị các chỉ đường hoặc xóa chỉ đường khỏi map (set bằng nil).        |
 | zIndex                  | Float | Thứ tự hiển thị của Directions Renderer. |
-| routes                  | [NSArray\<MFPath\>](/guides/coordinates.md?id=api-coordinates-mfpath) | Mảng các MFPath xác định các chỉ đường cho Directions Renderer.                                |
-| activedIndex            | NSUInteger                                            | Chọn index của chỉ đường chính (trong trường hợp có nhiều chỉ đường).                          |
-| hideOriginPOI           | BOOL                                                  | Ẩn/hiện POI vị trí bắt đầu.                                                                    |
+| routes                  | [[MFPath]](/guides/coordinates.md?id=api-coordinates-mfpath) | Mảng các MFPath xác định các chỉ đường cho Directions Renderer.                                |
+| activedIndex            | UInt                                            | Chọn index của chỉ đường chính (trong trường hợp có nhiều chỉ đường).                          |
+| hideOriginPOI           | Bool                                                  | Ẩn/hiện POI vị trí bắt đầu.                                                                    |
 | originPosition          | CLLocationCoordinate2D                                | Vị trí bắt đầu (nếu không thiết lập thì vị trí bắt đầu trùng với vị trí đầu của chỉ đường).    |
 | originIcon              | UIImage                                               | Icon cho vị trí bắt đầu (set nil thì lấy giá trị mặc định).                                    |
 | originGroundAnchor      | CGPoint                                               | Xác định điểm neo cho icon của vị trí bắt đầu                                                  |
-| originTitle             | NSString                                              | Title cho vị trí bắt đầu.                                                                      |
+| originTitle             | String                                              | Title cho vị trí bắt đầu.                                                                      |
 | originTitleColor        | UIColor                                               | Màu sắc của title cho vị trí bắt đầu.                                                          |
-| hideDestinationPOI      | BOOL                                                  | Ẩn/hiện POI vị trí kết thúc                                                                    |
+| hideDestinationPOI      | Bool                                                  | Ẩn/hiện POI vị trí kết thúc                                                                    |
 | destinationPosition     | CLLocationCoordinate2D                                | Vị trí kết thúc (nếu không thiết lập thì vị trí kết thúc trùng với vị trí cuối của chỉ đường). |
 | destinationIcon         | UIImage                                               | Icon cho vị trí kết thúc (set nil thì lấy giá trị mặc định).                                   |
 | destinationGroundAnchor | CGPoint                                               | Xác định điểm neo cho icon của vị trí kết thúc                                                 |
-| destinationTitle        | NSString                                              | Title cho vị trí kết thúc.                                                                     |
+| destinationTitle        | String                                              | Title cho vị trí kết thúc.                                                                     |
 | destinationTitleColor   | UIColor                                               | Màu sắc của title cho vị trí kết thúc.                                                         |
 | activeStrokeWidth       | CGFloat                                               | Chiều rộng chỉ đường của đường chính (được set activeIndex).                                   |
 | activeStrokeColor       | UIColor                                               | Màu của chỉ đường chính.                                                                       |
@@ -125,8 +125,8 @@ let renderer = MFDirectionsRenderer()
 
 | Name              | Parameters        | Return value | Description                                                                     |
 |-------------------|-------------------|--------------|---------------------------------------------------------------------------------|
-| setRoutesWithJson | NSString          | `void`       | Set các chỉ đường bằng dữ liệu dạng json (lấy từ API /sdk/route).         |
-| setDatas          | NSArray\<NSData\> | `void`       | Set các chỉ đường bằng dữ liệu dạng binary data (lấy từ Service MFRoute). |
+| `setRoutesWithJson(_:)` | String          | `Void`       | Set các chỉ đường bằng dữ liệu dạng json (lấy từ API /sdk/route).         |
+| `setDatas(_:)` | [Data] | `Void`       | Set các chỉ đường bằng dữ liệu dạng binary data (lấy từ Service MFRoute). |
 
 #### Delegate :id=api-directions-renderer-delegate
 

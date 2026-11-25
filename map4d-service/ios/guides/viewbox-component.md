@@ -4,7 +4,7 @@
 
 ### Public Member Functions :id=api-viewbox-component-public-member-functions
 
-#### initWithSouthwest: northeast: :id=api-viewbox-component-initwithsouthwest-northeast
+#### `init(southwest:northeast:)` :id=api-viewbox-component-initwithsouthwest-northeast
 
 ```swift
 init(southwest: CLLocationCoordinate2D, northeast: CLLocationCoordinate2D)

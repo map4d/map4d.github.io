@@ -63,7 +63,7 @@ service.fetchDistanceMatrix(with: params) { result, error in
 
 #### Public Member Functions :id=api-distance-matrix-params-public-member-functions
 
-##### initWithOrigins: destinations: :id=api-distance-matrix-params-initwithorigins-destinations
+##### `init(origins:destinations:)` :id=api-distance-matrix-params-initwithorigins-destinations
 
 ```swift
 init(origins: [MFLocationComponent], destinations: [MFLocationComponent])
@@ -71,7 +71,7 @@ init(origins: [MFLocationComponent], destinations: [MFLocationComponent])
 
 Tạo đối tượng `MFDistanceMatrixParams` với 2 mảng các địa điểm origins và destinations
 
-##### initWithOrigins: destinations: mode: weighting: :id=api-distance-matrix-params-initwithorigins-destinations-mode-weighting
+##### `init(origins:destinations:mode:weighting:)` :id=api-distance-matrix-params-initwithorigins-destinations-mode-weighting
 
 ```swift
 init(origins: [MFLocationComponent],

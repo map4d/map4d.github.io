@@ -34,7 +34,7 @@ service.fetchSuggestion(with: params) { results, error in
 
 #### Public Member Functions :id=api-suggestion-params-public-member-functions
 
-##### initWithText: :id=api-suggestion-params-initwithtext
+##### `init(text:)` :id=api-suggestion-params-initwithtext
 
 ```swift
 init(text: String)
@@ -42,7 +42,7 @@ init(text: String)
 
 Tạo đối tượng `MFSuggestionParams` với từ khóa tìm kiếm.
 
-##### initWithText: location: :id=api-suggestion-params-initwithtext-location
+##### `init(text:location:)` :id=api-suggestion-params-initwithtext-location
 
 ```swift
 init(text: String, location: MFLocationComponent)
@@ -50,14 +50,14 @@ init(text: String, location: MFLocationComponent)
 
 Tạo đối tượng `MFSuggestionParams` với từ khóa tìm kiếm, vị trí ưu tiên tìm kiếm.
 
-##### initWithText: acronym: :id=api-suggestion-params-initwithtext-acronym
+##### `init(text:acronym:)` :id=api-suggestion-params-initwithtext-acronym
 
 ```swift
 init(text: String, acronym: Bool)
 ```
 Tạo đối tượng `MFSuggestionParams` với từ khóa tìm kiếm và xác định từ khóa có phải từ viết tắt.
 
-##### initWithText: location: acronym: :id=api-suggestion-params-initwithtext-location-acronym
+##### `init(text:location:acronym:)` :id=api-suggestion-params-initwithtext-location-acronym
 
 ```swift
 init(text: String, location: MFLocationComponent, acronym: Bool)

@@ -77,16 +77,16 @@ let polyline = MFPolyline()
 | **width**                  | CGFloat                | Chỉ định độ rộng của **Polyline** theo đơn vị point.                                                                    |
 | **strokePattern**          | MFStrokePattern        | Chỉ định kiểu vẽ cho polyline                                                                                           |
 | **color**                  | UIColor                 | Chỉ định màu sắc của **Polyline**.                                                                                      |
-| **userInteractionEnabled** | BOOL                   | Cho phép người dùng có thể tương tác được với **Polyline** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **Polyline** thì tất cả các sự kiện liên quan tới **Polyline** từ phía người dùng sẽ không có tác dụng.                                                                         |
-| **isHidden**               | BOOL                   | Xác định **Polyline** có thể ẩn hay hiện trên bản đồ. `true` để ẩn, `false` để hiện.                                     |
-| **zIndex**                 | float                  | Chỉ định thứ tự hiển thị giữa các Polyline với nhau hoặc giữa **Polyline** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
+| **isUserInteractionEnabled** | Bool                   | Cho phép người dùng có thể tương tác được với **Polyline** hay không. Giá trị mặc định là **true**. Khi không cho phép người dùng tương tác với **Polyline** thì tất cả các sự kiện liên quan tới **Polyline** từ phía người dùng sẽ không có tác dụng.                                                                         |
+| **isHidden**               | Bool                   | Xác định **Polyline** có thể ẩn hay hiện trên bản đồ. `true` để ẩn, `false` để hiện.                                     |
+| **zIndex**                 | Float                  | Chỉ định thứ tự hiển thị giữa các Polyline với nhau hoặc giữa **Polyline** với các đối tượng khác trên bản đồ. Giá trị mặc định là **0** |
 | **userData**               | NSObject               | Cho phép người dùng lưu trữ thông tin trên **Polyline**.                                                                |
 | **map**                    | [MFMapView](/guides/map.md?id=api-map-mfmapview)              | Chỉ định hiển thị **Polyline** trên **Map** hoặc xoá **Polyline** khỏi **Map**           |
 | **Id**                     | UInt32                 | **Id** của **Polyline** **{get}**.                                                                                      |
 
 #### Delegate :id=api-polyline-delegate
 
-  > **Chú ý**: Để sử dụng sự kiện của **Polyline** phải **set** thuộc tính **userInteractionEnabled** = **true**
+  > **Chú ý**: Để sử dụng sự kiện của **Polyline** phải **set** thuộc tính **isUserInteractionEnabled** = **true**
   
   **Touch Polyline**
 

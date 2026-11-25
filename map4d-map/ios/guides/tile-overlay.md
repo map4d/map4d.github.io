@@ -74,16 +74,16 @@ let tileOverlay = MFURLTileLayer(urlConstructor: urlConstructor)
 
 | Name               | Parameters  | Return Value | Description                                                              |
 |--------------------|-------------|--------------|--------------------------------------------------------------------------|
-| **clearTileCache** | `none`      | `none`       | Xoá cache của đối tượng tile overlay và load lại hình ảnh tile từ server |
+| `clearTileCache()` | () | Void | Xoá cache của đối tượng tile overlay và load lại hình ảnh tile từ server |
 
 **Properties**
 
 | Name         | Type      | Description                                                                            |
 |--------------|-----------|----------------------------------------------------------------------------------------|
 | **map**      | [MFMapView](/guides/map.md?id=api-map-mfmapview) | Map view sẽ hiển thị tile overlay                 |
-| **isHidden** | bool                                           | Ẩn/hiện tile overlay trên map                     |
+| **isHidden** | Bool                                           | Ẩn/hiện tile overlay trên map                     |
 | **opacity**  | CGFloat                                          | Độ trong suốt của tile layer (mặc đinh là: 1.0)   |
-| **zIndex**   | float                                          | Giá trị zIndex của tile overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |
+| **zIndex**   | Float                                          | Giá trị zIndex của tile overlay cao hơn sẽ hiển thị trên tile overlay có giá trị zIndex nhỏ hơn |
 
 ### MFTileURLConstructor protocol :id=api-tile-overlay-mftileurlconstructor-protocol
 

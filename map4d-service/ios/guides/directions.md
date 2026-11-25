@@ -40,7 +40,7 @@ service.fetchDirections(with: params) { result, error in
 
 #### Public Member Functions :id=api-directions-params-public-member-functions
 
-##### initWithOrigin: destination: :id=api-directions-params-initwithorigin-destination
+##### `init(origin:destination:)` :id=api-directions-params-initwithorigin-destination
 
 ```swift
 init(origin: MFLocationComponent, destination: MFLocationComponent)
@@ -48,7 +48,7 @@ init(origin: MFLocationComponent, destination: MFLocationComponent)
 
 Tạo đối tượng `MFDirectionsParams` với 2 địa điểm origin và destination.
 
-##### initWithOrigin: destination: mode: weighting: :id=api-directions-params-initwithorigin-destination-mode-weighting
+##### `init(origin:destination:mode:weighting:)` :id=api-directions-params-initwithorigin-destination-mode-weighting
 
 ```swift
 init(origin: MFLocationComponent,

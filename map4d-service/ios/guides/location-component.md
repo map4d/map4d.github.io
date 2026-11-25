@@ -4,7 +4,7 @@
 
 ### Public Member Functions :id=api-location-component-public-member-functions
 
-#### initWithCoordinate: :id=api-location-component-initwithcoordinate
+#### `init(coordinate:)` :id=api-location-component-initwithcoordinate
 
 ```swift
 init(coordinate: CLLocationCoordinate2D)
@@ -12,7 +12,7 @@ init(coordinate: CLLocationCoordinate2D)
 
 Tạo đối tượng `MFLocationComponent` bằng coordinate.
 
-#### initWithCoordinate: alias: :id=api-location-component-initwithcoordinate-alias
+#### `init(coordinate:alias:)` :id=api-location-component-initwithcoordinate-alias
 
 ```swift
 init(coordinate: CLLocationCoordinate2D, alias: String?)
@@ -20,7 +20,7 @@ init(coordinate: CLLocationCoordinate2D, alias: String?)
 
 Tạo đối tượng `MFLocationComponent` bằng coordinate và alias.
 
-#### initWithLatitude: longitude: :id=api-location-component-initwithlatitude-longitude
+#### `init(latitude:longitude:)` :id=api-location-component-initwithlatitude-longitude
 
 ```swift
 init(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
@@ -28,7 +28,7 @@ init(latitude: CLLocationDegrees, longitude: CLLocationDegrees)
 
 Tạo đối tượng `MFLocationComponent` bằng latitude, longitude.
 
-#### initWithLatitude: longitude: alias: :id=api-location-component-initwithlatitude-longitude-alias
+#### `init(latitude:longitude:alias:)` :id=api-location-component-initwithlatitude-longitude-alias
 
 ```swift
 init(latitude: CLLocationDegrees, longitude: CLLocationDegrees, alias: String?)

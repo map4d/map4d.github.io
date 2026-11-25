@@ -7,7 +7,7 @@
 
 ```swift
 init(coordinate coord1: CLLocationCoordinate2D, coordinate coord2: CLLocationCoordinate2D)
-init(path: MFPath) {}
+init(path: MFPath)
 ```
 
 #### 2. Properties :id=api-coordinates-_2-properties
@@ -21,12 +21,12 @@ init(path: MFPath) {}
 
 | Name                       | Parameters                                                  | Return value                                               | Description                                         |
 |----------------------------|:-----------------------------------------------------------:|:----------------------------------------------------------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **includingCoordinate**    | CLLocationCoordinate2D                                      | [MFCoordinateBounds](/guides/coordinates.md?id=api-coordinates-mfcoordinatebounds) | Mở rộng **bound** với một điểm truyền vào           |
-| **including**              | [MFCoordinateBounds](/guides/coordinates.md?id=api-coordinates-mfcoordinatebounds)  | [MFCoordinateBounds](/guides/coordinates.md?id=api-coordinates-mfcoordinatebounds) | Mở rộng **bound** với một **bound** truyền vào      |
-| **including**              | MFPath                                                      | [MFCoordinateBounds](/guides/coordinates.md?id=api-coordinates-mfcoordinatebounds) | Mở rộng **bound** với danh sách các điểm truyền vào |
-| **containsLatitude**       | double                                                      | BOOL                                                       | Kiểm tra vĩ độ có thuộc **bound** không             |
-| **containsLongitude**      | double                                                      | BOOL                                                       | Kiểm tra kinh độ có thuộc **bound** không           |
-| **contains**               | CLLocationCoordinate2D                                      | BOOL                                                       | Kiểm tra các điểm có thuộc **bound** kkhông.        |
+| `includingCoordinate(_ coordinate: CLLocationCoordinate2D)` | CLLocationCoordinate2D | MFCoordinateBounds | Mở rộng bounds với một tọa độ. |
+| `including(_ bounds: MFCoordinateBounds)` | MFCoordinateBounds | MFCoordinateBounds | Mở rộng bounds với một bounds khác. |
+| `including(_ path: MFPath)` | MFPath | MFCoordinateBounds | Mở rộng bounds với các tọa độ trong path. |
+| `containsLatitude(_ latitude: Double)` | Double | Bool | Kiểm tra vĩ độ có thuộc bounds không. |
+| `containsLongitude(_ longitude: Double)` | Double | Bool | Kiểm tra kinh độ có thuộc bounds không. |
+| `contains(_ coordinate: CLLocationCoordinate2D)` | CLLocationCoordinate2D | Bool | Kiểm tra tọa độ có thuộc bounds không. |
 
 ## MFPath :id=api-coordinates-mfpath
 `MFPath` class
@@ -54,17 +54,17 @@ let path = MFMutablePath()
 
 | Name      | Type       | Description                                  |
 |-----------|------------|----------------------------------------------|
-| **count** | NSUInteger | Tổng số CLLocationCoordinate2D có trong path |
+| **count** | UInt | Tổng số CLLocationCoordinate2D có trong path |
 
 #### 3. Methods :id=api-coordinates-_3-methods-1
 
 | Name              | Parameters  | Return Value | Description                                                           |
 |-------------------|-------------|--------------|-----------------------------------------------------------------------|
-| **addCoordinate:**                          | (CLLocationCoordinate2D)coord                               | `none` | Thêm coordinate vào path |
-| **addLatitude:longitude**                   | (CLLocationDegrees)latitude<br>(CLLocationDegrees)longitude | `none` | Thêm coordinate vào path bằng lat, lng |
-| **objectAtIndex:**                          | (NSUInteger)idx                             | CLLocationCoordinate2D | Lấy coordinate ở vị trí idx |
-| **insertCoordinate:atIndex**                | (CLLocationCoordinate2D)coord<br>(NSUInteger)index          | `none` | Thêm coordinate vào vị trí index |
-| **replaceCoordinateAtIndex:withCoordinate** | (NSUInteger)index<br>(CLLocationCoordinate2D)coord          | `none` | Thay thế coordinate ở vị trí index bằng coordinate khác |
-| **removeCoordinateAtIndex:**                | (NSUInteger)index                                           | `none` | Xoá coordinate ở vị trí index |
-| **removeLastCoordinate**                    | `none`                                                      | `none` | Xoá coordinate ở cuối path |
-| **removeAllCoordinates**                    | `none`                                                      | `none` | Xoá toàn bộ coordinate trong path |
+| `add(_ coordinate: CLLocationCoordinate2D)` | CLLocationCoordinate2D | Void | Thêm tọa độ vào path. |
+| `addLatitude(_ latitude: CLLocationDegrees, longitude: CLLocationDegrees)` | CLLocationDegrees, CLLocationDegrees | Void | Thêm tọa độ bằng vĩ độ và kinh độ. |
+| `object(at idx: UInt)` | UInt | CLLocationCoordinate2D | Lấy tọa độ tại chỉ số idx. |
+| `insert(_ coordinate: CLLocationCoordinate2D, at index: UInt)` | CLLocationCoordinate2D, UInt | Void | Chèn tọa độ tại chỉ số index. |
+| `replaceCoordinate(at index: UInt, with coordinate: CLLocationCoordinate2D)` | UInt, CLLocationCoordinate2D | Void | Thay tọa độ tại chỉ số index. |
+| `removeCoordinate(at index: UInt)` | UInt | Void | Xóa tọa độ tại chỉ số index. |
+| `removeLastCoordinate()` | () | Void | Xóa tọa độ cuối cùng. |
+| `removeAllCoordinates()` | () | Void | Xóa toàn bộ tọa độ. |

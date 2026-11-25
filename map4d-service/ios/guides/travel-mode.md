@@ -12,7 +12,7 @@ enum MFTravelMode: UInt {
 ```
 
 Định nghĩa các phương thức di chuyển được hỗ trợ:
-  - MFTravelModeCar: ô tô
-  - MFTravelModeBike: xe đạp
-  - MFTravelModeFoot: đi bộ
-  - MFTravelModeMotorcycle: xe máy
+  - .car: ô tô
+  - .bike: xe đạp
+  - .foot: đi bộ
+  - .motorcycle: xe máy

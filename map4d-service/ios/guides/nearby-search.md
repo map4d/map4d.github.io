@@ -34,7 +34,7 @@ service.searchNearby(with: params) { results, error in
 
 #### Public Member Functions :id=api-nearby-search-params-public-member-functions
 
-##### initWithLocation: radius: text: :id=api-nearby-search-params-initwithlocation-radius-text
+##### `init(location:radius:text:)` :id=api-nearby-search-params-initwithlocation-radius-text
 
 ```swift
 init(location: MFLocationComponent, radius: UInt, text: String)
@@ -42,7 +42,7 @@ init(location: MFLocationComponent, radius: UInt, text: String)
 
 Tạo đối tượng `MFNearbySearchParams` với địa điểm, bán kính và text.
 
-##### initWithLocation: radius: types: :id=api-nearby-search-params-initwithlocation-radius-types
+##### `init(location:radius:types:)` :id=api-nearby-search-params-initwithlocation-radius-types
 
 ```swift
 init(location: MFLocationComponent, radius: UInt, types: [String])
@@ -50,7 +50,7 @@ init(location: MFLocationComponent, radius: UInt, types: [String])
 
 Tạo đối tượng `MFNearbySearchParams` với địa điểm, bán kính và types.
 
-##### initWithLocation: radius: tags: :id=api-nearby-search-params-initwithlocation-radius-tags
+##### `init(location:radius:tags:)` :id=api-nearby-search-params-initwithlocation-radius-tags
 
 ```swift
 init(location: MFLocationComponent, radius: UInt, tags: [String])
@@ -70,4 +70,4 @@ Tạo đối tượng `MFNearbySearchParams` với địa điểm, bán kính v�
 | tags | [String]? | Đọc/ghi | Nhãn của địa điểm. |
 | datetime | Date? | Đọc/ghi | Thời gian địa điểm vẫn còn tồn tại. |
 
-Thuộc tính `typeSearchMatching` áp dụng cho danh sách `types`. Xem [cách khớp loại địa điểm](type-search-matching.md) để chọn khớp tất cả hoặc ít nhất một loại.
+Thuộc tính `typeSearchMatching` áp dụng cho danh sách `types`: `.all` khớp tất cả loại, `.onlyOne` khớp ít nhất một loại.

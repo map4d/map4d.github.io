@@ -34,7 +34,7 @@ service.searchText(with: params) { results, error in
 
 #### Public Member Functions :id=api-text-search-params-public-member-functions
 
-##### initWithText: :id=api-text-search-params-initwithtext
+##### `init(text:)` :id=api-text-search-params-initwithtext
 
 ```swift
 init(text: String)
@@ -52,4 +52,4 @@ Tạo đối tượng `MFTextSearchParams` với text tìm kiếm.
 | datetime | Date? | Đọc/ghi | Thời gian địa điểm vẫn còn tồn tại. |
 | location | MFLocationComponent? | Đọc/ghi | Vị trí ưu tiên. Các địa điểm gần vị trí này sẽ được ưu tiên hơn. |
 
-Thuộc tính `typeSearchMatching` áp dụng cho danh sách `types`. Xem [cách khớp loại địa điểm](type-search-matching.md) để chọn khớp tất cả hoặc ít nhất một loại.
+Thuộc tính `typeSearchMatching` áp dụng cho danh sách `types`: `.all` khớp tất cả loại, `.onlyOne` khớp ít nhất một loại.
