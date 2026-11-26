@@ -37,7 +37,7 @@ Tạo API key tại trang nhà phát triển của iPostMap <https://map.ipostma
 
 #### Thiết lập API key cho Android
 
-Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key của bạn cho Android:
+Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key của bạn cho Android. Khóa cấu hình là `vn.map4d.map.ACCESS_KEY`
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
@@ -49,14 +49,18 @@ Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key 
 </manifest>
 ```
 
+- *Thay thế `YOUR_KEY_HERE` bằng access lấy từ [iPostMap Developer](https://map.ipostmap.vn/developer/key)*.
+
 #### Thiết lập API key cho iOS
 
-Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
+Thêm Access Key vào `ios/Runner/Info.plist` của app target. Tên khóa cấu hình là `Map4dMapAccessKey`.
 
 ```xml
 <key>Map4dMapAccessKey</key>
 <string>YOUR_KEY_HERE</string>
 ```
+
+- *Thay thế `YOUR_KEY_HERE` bằng access lấy từ [iPostMap Developer](https://map.ipostmap.vn/developer/key)*.
 
 ### Sử dụng
 

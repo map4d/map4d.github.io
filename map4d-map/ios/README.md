@@ -47,15 +47,16 @@ Sau đó mở file `.xcworkspace` để làm việc.
 
 ## Using
 
-1. Thêm Access Key vào `Info.plist` của app target. Tên khóa cấu hình là `Map4dMapAccessKey`:  
-Key lấy từ [iPostMap Developer](https://map.ipostmap.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt developer)*
+Thêm Access Key vào `Info.plist` của app target. Tên khóa cấu hình là `Map4dMapAccessKey`.
 
 ```xml
 <key>Map4dMapAccessKey</key>
 <string>YOUR_ACCESS_KEY</string>
 ```
 
-2. Import `iPostMap` và tạo map view:
+- *Thay thế `YOUR_ACCESS_KEY` bằng access lấy từ [iPostMap Developer](https://map.ipostmap.vn/developer/key)* *(yêu cầu tài khoản đã kích hoạt developer)*.
+
+Import `iPostMap` và tạo map view:
 
 ```swift
 import UIKit
