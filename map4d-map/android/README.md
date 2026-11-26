@@ -37,9 +37,12 @@ dependencies {
 
 ## Requirements
 
-- Ứng dụng xây dựng với Android SDK 21 hoặc cao hơn
+- Android SDK 21 hoặc cao hơn
+- Access Key từ [Map4D Developer](https://map.map4d.vn/developer/key) *(yêu cầu tài khoản đã kích hoạt developer)*.
 
 ## Provide access key
+
+Bổ sung meta data access key ở `AndroidManifest.xml`. Khóa cấu hình là `vn.map4d.map.ACCESS_KEY`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -56,6 +59,7 @@ dependencies {
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 </manifest>
 ```
+- *Thay thế `TYPE_YOUR_KEY_HERE` bằng access lấy từ [Map4D Developer](https://map.map4d.vn/developer/key)* *(yêu cầu tài khoản đã kích hoạt developer)*.
 
 ## Add a map with MFMapView
 

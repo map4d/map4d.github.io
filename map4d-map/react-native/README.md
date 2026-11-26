@@ -45,7 +45,7 @@ Tạo API key tại trang nhà phát triển của Map4D <https://map.map4d.vn/d
 
 #### Thiết lập API key cho Android
 
-Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key của bạn cho Android:
+Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key của bạn cho Android. Khóa cấu hình là `vn.map4d.map.ACCESS_KEY`
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
@@ -56,6 +56,7 @@ Chỉnh sửa file `android/app/src/main/AndroidManifest.xml` và thêm API key 
     </application>
 </manifest>
 ```
+- *Thay thế `YOUR_KEY_HERE` bằng access lấy từ [Map4D Developer](https://map.map4d.vn/developer/key)*.
 
 ##### Chỉnh sửa file build.gradle cho Android
 
@@ -87,12 +88,13 @@ android {
 
 #### Thiết lập API key cho iOS
 
-Chỉnh sửa file `ios/Runner/Info.plist` và thêm API key của bạn cho iOS:
+Thêm Access Key vào `Info.plist` của app target. Tên khóa cấu hình là `Map4dMapAccessKey`.
 
 ```xml
 <key>Map4dMapAccessKey</key>
 <string>YOUR_KEY_HERE</string>
 ```
+- *Thay thế `YOUR_KEY_HERE` bằng access lấy từ [Map4D Developer](https://map.map4d.vn/developer/key)*.
 
 ### Sử dụng
 
