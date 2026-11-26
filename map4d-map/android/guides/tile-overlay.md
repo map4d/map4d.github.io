@@ -61,7 +61,7 @@ zoom tương ứng. Sau đó bạn thêm **Tile Overlay** vào Map như sau:
 #### ** Java **
 
 ```java
-private iPostMap map;
+private Map4D map;
 
 MFTileProvider tileProvider = new MFUrlTileProvider() {
     @Override
@@ -76,7 +76,7 @@ MFTileOverlay tileOverlay = map.addTileOverlay(new MFTileOverlayOptions().tilePr
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map: iPostMap
+private lateinit var map: Map4D
 
 var tileProvider: MFTileProvider = object : MFUrlTileProvider() {
     override fun getTileUrl(x: Int, y: Int, zoom: Int): String? {

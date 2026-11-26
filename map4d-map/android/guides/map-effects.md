@@ -10,7 +10,7 @@
 #### ** Java **
 
 ```java
-private iPostMap map;
+private Map4D map;
 
 map.setWaterEffectEnabled(false)
 ```
@@ -18,7 +18,7 @@ map.setWaterEffectEnabled(false)
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map: iPostMap
+private lateinit var map: Map4D
 
 map.setWaterEffectEnabled(false)
 ```

@@ -13,7 +13,7 @@ trên đối tượng đó. Sau đó gọi hàm `addImageOverlay` của lớp b�
 #### ** Java **
 
 ```java
-private iPostMap map;
+private Map4D map;
 
 MFImageOverlayOptions options = new MFImageOverlayOptions()
     .bounds(new MFCoordinateBounds(
@@ -29,7 +29,7 @@ MFImageOverlay imageOverlay = map.addImageOverlay(options);
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map: iPostMap
+private lateinit var map: Map4D
 
 val options = MFImageOverlayOptions()
     .bounds(

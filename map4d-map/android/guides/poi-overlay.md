@@ -32,13 +32,13 @@ zoom tương ứng. Sau đó bạn thêm **POI Overlay** vào Map như sau:
 
     3. `visible(boolean)` : cho phép POI Overlay ẩn hay hiện sau khi add vào Map.
 
-4. Gọi `iPostMap.addPOIOverlay()` để thêm POI Overlay vào Map.
+4. Gọi `Map4D.addPOIOverlay()` để thêm POI Overlay vào Map.
 
 <!-- tabs:start -->
 #### ** Java **
 
 ```java
-private iPostMap map;
+private Map4D map;
 
 MFPOIProvider poiProvider = new MFUrlPOIProvider() {
     @Override
@@ -75,7 +75,7 @@ MFPOIOverlay poiOverlay = map.addPOIOverlay(new MFPOIOverlayOptions().poiProvide
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map: iPostMap
+private lateinit var map: Map4D
 
 var poiProvider: MFPOIProvider = object : MFUrlPOIProvider() {
     override fun getPOIUrl(x: Int, y: Int, zoom: Int): String {

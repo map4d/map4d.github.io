@@ -66,7 +66,7 @@ Bổ sung meta data access key ở `AndroidManifest.xml`. Khóa cấu hình là 
 1. Create layout sử dụng MFMapView
 
 ```xml
-<vn.ipostmap.Map.core.MFMapView
+<vn.map4d.map.core.MFMapView
   android:id="@+id/mapView"
   android:layout_width="wrap_content"
   android:layout_height="wrap_content"
@@ -91,7 +91,7 @@ các hàm tương ứng của đối tượng MFMapView (như code ví dụ ở 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback{ 
     
     private MFMapView mapView;
-    private iPostMap map4D;
+    private Map4D map4D;
   
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
   
     @Override
-    public void onMapReady(iPostMap map4D) { 
+    public void onMapReady(Map4D map4D) { 
         // Your code
     }
       
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 ```kotlin
 class MainActivity : AppCompatActivity(), OnMapReadyCallback {
 
-    private var map4D: iPostMap? = null
+    private var map4D: Map4D? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -147,7 +147,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
         mapView?.getMapAsync(this)
     }
 
-    override fun onMapReady(map4D: iPostMap?) {
+    override fun onMapReady(map4D: Map4D?) {
         // Your code
     }
     
@@ -199,7 +199,7 @@ Ví dụ sau đây là file layout hoàn chỉnh bao gồm `fragment` element:
   xmlns:tools="http://schemas.android.com/tools"
   xmlns:map="http://schemas.android.com/apk/res-auto"
   android:id="@+id/map"
-  android:name="vn.ipostmap.Map.core.MFSupportMapFragment"
+  android:name="vn.map4d.map.core.MFSupportMapFragment"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   tools:context=".MainActivity" />

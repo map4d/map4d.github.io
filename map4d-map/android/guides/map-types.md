@@ -21,7 +21,7 @@ Map4D Map SDK hiện cung cấp 3 loại bản đồ tùy chỉnh thông qua đ�
 
 ### Thay đổi kiểu bản đồ
 
-Để thay kiểu bản đồ, ta gọi hàm `setMapType(MFMapType mapType)` thông qua đối tượng `iPostMap`  
+Để thay kiểu bản đồ, ta gọi hàm `setMapType(MFMapType mapType)` thông qua đối tượng `Map4D`  
 Ví dụ: để hiển thị bản đồ dạng Raster:
 
 <!-- tabs:start -->
@@ -44,7 +44,7 @@ map.setMapType(MFMapType.SATELLITE)
 
 ### Get kiểu bản đồ hiện tại
 
-Để get kiểu bản đồ hiện tại ta có thể gọi hàm `getMapType()` thông qua đối tượng `iPostMap`. Giá trị trả về sẽ là một kiểu
+Để get kiểu bản đồ hiện tại ta có thể gọi hàm `getMapType()` thông qua đối tượng `Map4D`. Giá trị trả về sẽ là một kiểu
 của `MFMapType`
 
 Ví dụ:
@@ -53,7 +53,7 @@ Ví dụ:
 #### ** Java **
 
 ```java
-private iPostMap map;
+private Map4D map;
 
 MFMapType mapType = map.getMapType();
 ```
@@ -61,7 +61,7 @@ MFMapType mapType = map.getMapType();
 #### ** Kotlin **
 
 ```kotlin
-private lateinit var map: iPostMap
+private lateinit var map: Map4D
 
 val mapType = map.getMapType()
 ```

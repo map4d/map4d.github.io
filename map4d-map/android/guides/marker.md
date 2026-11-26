@@ -135,7 +135,7 @@ public interface InfoWindowAdapter {
 ### ** Kotlin **
 
 ```kotlin
- inner class CustomInfoWindowAdapter: iPostMap.InfoWindowAdapter {
+ inner class CustomInfoWindowAdapter: Map4D.InfoWindowAdapter {
     private val mWindow: View
 
     init {
@@ -188,7 +188,7 @@ public interface InfoWindowAdapter {
 ### ** Java **
 
 ```java
-class CustomInfoWindowAdapter implements iPostMap.InfoWindowAdapter {
+class CustomInfoWindowAdapter implements Map4D.InfoWindowAdapter {
     private final View mWindow;
 
     CustomInfoWindowAdapter() {
@@ -236,7 +236,7 @@ class CustomInfoWindowAdapter implements iPostMap.InfoWindowAdapter {
 }
 @Override
 
-public void onMapReady(iPostMap map) {
+public void onMapReady(Map4D map) {
     this.map4D = map4D;
     map.setInfoWindowAdapter(new CustomInfoWindowAdapter());
 }
@@ -318,7 +318,7 @@ Khi marker được kéo thì `onMarkerDragStart(MFMarker)` sẽ được gọi 
 <!-- tabs:start -->
 #### ** Kotlin **
 ```kotlin
-map4D?.setOnMarkerDragListener(object : iPostMap.OnMarkerDragListener {
+map4D?.setOnMarkerDragListener(object : Map4D.OnMarkerDragListener {
     override fun onMarkerDrag(marker: MFMarker?) {
     }
 

@@ -179,7 +179,7 @@ Một `mapID` là một định danh duy nhất đại diện cho một instance
 Để thêm `mapId` vào ứng dụng thì chúng ta sử dụng thuộc tính `map:mapId` của lớp `MFMapView` trong file layout của activity như bên dưới:
 
 ```xml
-<vn.ipostmap.Map.core.MFMapView
+<vn.map4d.map.core.MFMapView
     xmlns:map="http://schemas.android.com/apk/res-auto"
     ....
     map:mapId="YOUR_MAP_ID" />
